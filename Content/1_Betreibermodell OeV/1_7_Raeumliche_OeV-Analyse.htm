@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen,PTV_Manual.Ready_for_translation" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI" MadCap:lastBlockDepth="6" MadCap:lastHeight="683" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>Räumliche ÖV-Analyse</h2>
+        <p class="Text">Die Räumlich ÖV-Analyse ermöglicht Fahrplanfahrtauswertungen, bei denen Informationen des Linienweges bzw. des Fahrplanfahrtabschnitts miteinander kombiniert werden. Das sind beispielsweise Auswertungen von Belastungskennziffern wie Personenkilometer oder anderen benutzerdefinierten Attributen des Fahrplanfahrtverlaufs, die nach Fahrzeugen, Verkehrstagen oder allgemein Merkmalen des Linienweges bzw. Fahrplanfahrtabschnitts differenziert ausgewertet werden sollen.</p>
+        <p class="Text">Die Auswertungen werden durch Linienroutenelement-ÖV-Detail-Objekte ermöglicht. Objekte dieses Typs werden ausschließlich durch das Verfahren Räumliche ÖV-Analyse erzeugt und in der Liste ‚Linienroutenelement-ÖV-Detail-Objekte‘ ausgewiesen. Sie enthalten höchstens einen Eintrag je Linienroutenelement und Fahrplanfahrtabschnitt und erlauben direkten Zugriff zu den Attributen von Linienroutenelementen sowie den Fahrplanfahrtabschnitten. Auf Objekte vom Typ Linienroutenelement-ÖV-Detail kann ein Filter angewendet werden. Die Objekte sind genau dann aktiv, wenn ihr Linienroutenelement und ihr Fahrplanfahrtabschnitt aktiv sind.</p>
+        <p class="Text">Damit ist in der Liste sowohl die Beschränkung der Ansicht auf die Objekte nach Merkmalen des Linienweges als auch auf die einer Fahrt oder einer Linie möglich.</p>
+        <p>Optional können durch das Verfahren Kennzahlen des Fahrplanfahrtverlaufs ausgewertet werden. Die Ergebnisse der Berechnung werden als Attribute der Objekte Linienroutenelement-ÖV-Detail gespeichert.</p>
+        <ul>
+            <LI class="List0">Vor Ausführung des Verfahrens werden die folgenden Bedingungen geprüft:</LI>
+        </ul>
+        <p class="List_Text0">Das ausgewählte Ausgangsattribut des Fahrplanfahrtelements muss numerisch sein.</p>
+        <p class="List_Text0">Hat das Ausgangsattribut ein Subattribut AHPI, muss die Ausprägung dieses Subattributs AP sein.</p>
+        <p class="List_Text0">Der Wert des Attributs wird als Länge interpretiert, d.h. ist das Ausgangsattribut nicht vom Typ Länge (z.B. Kilometer, Meter), erscheint vor Ausführung des Verfahrens ein entsprechender Hinweis.</p>
+        <p class="List_Text0">Für das Netzobjekt Linienroutenelement-ÖV-Detail wird geprüft, ob ein numerisches, editierbares, benutzerdefiniertes Attribut mit der gleichen ID wie das Ausgangsattribut existiert. Falls das nicht der Fall ist, wird ein benutzerdefiniertes Attribut mit dieser ID automatisch erzeugt. Code und Name werden ebenfalls vom Ausgangsattribut übernommen. Gleiches wird für Attribute mit dem Suffix „AH“ durchgeführt.</p>
+        <p class="List_Text0">Sofern die Ergebnisattribute bereits existieren, werden sie vor der Berechnung initialisiert, d.h. auf leer gesetzt.</p>
+        <ul>
+            <LI class="List0">Aufteilung der Attributwerte des Fahrplanfahrtelemente auf Fahrplanfahrtabschnitte</LI>
+        </ul>
+        <p class="List_Text0">Der je Fahrplanfahrtelement vorliegende Wert wird als auf die AP bezogene Länge interpretiert. Zunächst wird er längenproportional auf die benutzten Linienroutenelemente verteilt. Das Ergebnis wird je Kalendertag in der AP auf die (optional aktiven) Fahrplanfahrtabschnitte über diesem Linienroutenelement aufgeteilt. Dabei kommt eine der folgenden Regeln zur Anwendung:</p>
+        <ul>
+            <LI class="List1">Aufteilung nach Vorkommen in AP: Jeder (aktive) Fahrplanfahrtabschnitt über dem Linienroutenelement erhält ein Gewicht entsprechend der Anzahl Tage, an denen sein Verkehrstag innerhalb der AP auftritt.</LI>
+            <LI class="List1">Aufteilung nach Vorkommen in AP mit Gewichtung: Jeder (aktive) Fahrplanfahrtabschnitt über dem Linienroutenelement erhält ein Gewicht entsprechend der Anzahl Tage, an denen sein Verkehrstag innerhalb der AP auftritt, multipliziert mit einem Attribut des Fahrplanfahrtabschnitts.</LI>
+            <LI class="List1">Aufteilung je Kalendertag in AP: Jeder (aktive) Fahrplanfahrtabschnitt über dem Linienroutenelement erhält als Gewicht die Summe über 1/Anzahl (aktiver) Fahrplanfahrtabschnitte am Kalendertag, summiert über alle Kalendertage des Verkehrstags innerhalb der AP.</LI>
+            <LI class="List1">Aufteilung je Kalendertag in AP mit Gewichtung: Jeder (aktive) Fahrplanfahrtabschnitt über dem Linienroutenelement erhält als Gewicht die Summe über (Attributwert des Fahrplanfahrtabschnitts) / (Summe der Attributwerte aller (aktiven) Fahrplanfahrtabschnitte am Kalendertag), summiert über alle Kalendertage des Verkehrstags innerhalb der AP.</LI>
+        </ul>
+        <p class="Text">Damit ist der Wert je Linienroutenelement und Fahrtabschnitt berechnet.</p>
+        <ul>
+            <LI class="List0">Hochrechnung auf AH</LI>
+        </ul>
+        <p class="List_Text0">Die Hochrechnung des AP-Wertes auf AH erfolgt stets über den Hochrechnungsfaktor des Verkehrstags. Da jedes Linienroutenelement-ÖV-Detail-Objekt zu genau einem Fahrplanfahrtabschnitt gehört, ist der zu verwendende Verkehrstag eindeutig bestimmt.</p>
+        <h5>Beispiel</h5>
+        <p>Annahme:</p>
+        <ul>
+            <LI class="List0">Die Analyseperiode AP beträgt ein Jahr mit 364 Tagen.</LI>
+            <LI class="List0">Die betrachtete Fahrplanfahrt (FPF) hat zwei Fahrplanfahrtabschnitte (FFA) und hat eine Länge vom 1km.</LI>
+            <LI class="List1">FFA1 mit Fahrzeugkombination 1 (700 Sitzplätze) und Verkehrstag täglich, d.h. Anzahl Vorkommen in AP = 364 sowie</LI>
+            <LI class="List1">FFA2 mit Fahrzeugkombination 2 (500 Sitzplätze) und Verkehrstag montags, d.h. Anzahl Vorkommen in AP = 52.</LI>
+            <LI class="List0">Beide Fahrplanfahrtabschnitte erstrecken sich über die gesamte Länge der Fahrplanfahrt, d.h. Länge (FFA1) = Länge (FFA2) = Länge (FPF) = 1km.</LI>
+            <LI class="List0">Die Linienroute (LR) der FPF hat zwei Linienroutenelemente (LRE), LRE 1 = 0.4km und LRE2 = 0.6km.</LI>
+            <LI class="List0">Die Nachfrage beträgt 1000 Personen, d.h. PersKm in AP = 1000.</LI>
+        </ul>
+        <p class="Text">Die Linienroutenelemente tragen ein Attribut „Korridor“, in der die Bezeichnung des Korridors eingetragen ist. Die Auswertungen sollen je Korridor und Fahrzeugkombination erfolgen.</p>
+        <p class="Text">Die folgende Tabelle zeigt die Berechnungen für die 4 Kombinationen aus Aufteilungsregel und Gewichtung.</p>
+        <table style="caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" class="TableStyle-gui_elements1" cellspacing="0">
+            <col style="width: 121px;" class="TableStyle-gui_elements1-Column-Column1" />
+            <col style="width: 477px;" class="TableStyle-gui_elements1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1" colspan="2">
+                        <p class="CellText">nach Vorkommen in AP &amp; Gewichtung = 1.0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LRE x FFA1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= 0.4/1.0 * 364/(364+52) * 1000 = 350.0 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LRE1 x FFA2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= 0.4/1.0 * 52/(364+52) * 1000 = 50.0 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LRE2 x FFA1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= 0.6/1.0 * 364/(364+52) * 1000 = 525.0 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LRE2 x FFA2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= 0.6/1.0 * 52/(364+52) * 1000 = 75.0 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2" colspan="2">
+                        <p class="CellText">nach Vorkommen in AP &amp; Gewichtung = Fahrzeugkombination\Sitzplätze</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LRE x FFA1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= 0.4/1.0 * 364*700/(364*700+52*500) * 1000 = 362,9 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LRE1 x FFA2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= 0.4/1.0 * 52*500/(364*700+52*500) * 1000 = 37,0 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LRE2 x FFA1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= 0.6/1.0 * 364*700/(364*700+52*500) * 1000 = 544,4 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LRE2 x FFA2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= 0.6/1.0 * 52*500/(364*700+52*500) * 1000 = 55,6 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1" colspan="2">
+                        <p class="CellText">je Kalendertag in AP &amp; Gewichtung = 1.0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LRE x FFA1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= 0.4/1.0 * (312/(312+52)*1.0+52/(312+52)*0,5) * 1000 = 371,4 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LRE1 x FFA2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= 0.4/1.0 * (52/364*500/1200) * 1000 = 23,8 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LRE2 x FFA1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= 0.6/1.0 * (312/364*700/700+52/364*700/1200) * 1000 = 564,3 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LRE2 x FFA2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= 0.6/1.0 * (52/(312+52)*0,5) * 1000 = 42,9 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2" colspan="2">
+                        <p class="CellText">je Kalendertag in AP &amp; Gewichtung = Fahrzeugkombination\Sitzplätze</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LRE x FFA1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= 0.4/1.0 * (312/364*700/700+52/364*700/1200) * 1000 = 376,2 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LRE1 x FFA2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= 0.4/1.0 * (52/364*500/1200) * 1000 = 23,8 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LRE2 x FFA1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= 0.6/1.0 * (312/364*700/700+52/364*700/1200) * 1000 = 564,3 PersKm</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">LRE2 x FFA2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">= 0.6/1.0 * (52/364*500/1200) * 1000 = 35,7 PersKm</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Auswertungen je Korridor bzw. Fahrzeugkombination können in der Liste (Linienroutenelement-ÖV-Detail-Objekte) direkt vorgenommen werden, indem über das jeweilige Attribut des Linienroutenelements bzw. die Fahrzeugkombinationsnummer gruppiert wird.</p>
+    </body>
+</html>

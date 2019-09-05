@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="332" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="VorHst;EinHst;NachHst;QuellHst;ZielHst;linie;Ride;Wid;Branch;Bound;FZ;UZ;UH;Fak;timetab1;par;frueh;spaet;ΔT;gleichabständig;WID;Fzg;18min;Wid1;Wid2;P1;P2;M1;M2;A_DORF;X_STADT;UWZ;Beförd;Mittl;Bus1;$ODMATRIX;$MATRIXSINGLELISTITEM;PuT;dmd;$TIMESERIES;$TIMESERIESITEM;$VISION;VisumInst;Table;$VERSION;VERSNR;FILETYPE;LANGUAGE;UNIT;Demand;ODMATRIX;NO;CONTENT;ROUND;NUMDECPLACES;Car;HVeh;MATRIXSINGLELISTITEM;MATRIXNO;FROMZONENO;TOZONENO;VALUE;TIMESERIESDOMAINTYPE;$TIMESERIESDOMAINTYPE;DESCRIPTION;UNITYSTRING;MAXVALUE;MINVALUE;No;series;TYPENO;UNITX;NUMINTERVALS;LENGTHINTERVAL;USEVALUELIST;VALUELISTTYPE;VALUEREFTYPE;DECSEPARATOR;VALUESEPARATOR;TIMESERIESITEM;TIMESERIESNO;STARTINTERVALINDEX;ENDINTERVALINDEX;$DEMANDDESCRIPTION;DSEGCODE;DEMANDTIMESERIESNO;STARTDAYINDEX;$DEMANDTIMESERIES;description;STARTTIME">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_oev_2318507456_1030456">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_66832">
+            </a>Beispielnetz für die ÖV-Umlegungsverfahren</h2>
+        <p class="Text">Die unterschiedlichen Verfahren werden im Folgenden anhand eines Beispiels (<MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1042901">Abbildung 1</MadCap:xref>, <MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1042956">Abbildung 2</MadCap:xref>, <MadCap:xref class="Label_Image" href="1_6_Beispiele fuer Kenngroessen.htm#1_benutzermodell_oev_2318507456_1071197"></MadCap:xref>, <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1177494">Tabelle 1</MadCap:xref> und <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1246016">Tabelle 2</MadCap:xref>) beschrieben. Für das ÖV-Angebot des Beispiels sollen die Verbindungen zwischen den Verkehrsbezirken A-Dorf und X-Stadt ermittelt werden.</p>
+        <p class="Text">Für das Beispiel gelten folgende Annahmen.</p>
+        <ul>
+            <LI class="List0">Es wird kein Kalender verwendet.</LI>
+            <LI class="List0">Zu- und Abgangszeiten werden nicht berücksichtigt, also auf 0 min gesetzt.</LI>
+            <LI class="List0">Der Untersuchungszeitraum beginnt um 5:30 Uhr und endet um 7:30 Uhr.</LI>
+            <LI class="List0">Die Verkehrsnachfrage zwischen A-Dorf und X-Stadt beträgt im Untersuchungszeitraum 90 Fahrten (Tabellen $ODMATRIX und $MATRIXSINGLELISTITEM in der Nachfragedatendatei <span class="path">PuT.dmd</span>).</LI>
+            <LI class="List0">33&#160;% der Verkehrsnachfrage, das heißt 30 Fahrten, treten zwischen 5:30 und 6:30 Uhr auf, die restlichen 67 % beziehungsweise 60 Fahrten entfallen auf den Zeitraum zwischen 6:30 und 7:30 Uhr (Tabellen $TIMESERIES und $TIMESERIESITEM in der Nachfragedatendatei <span class="path">PuT.dmd</span>).</LI>
+        </ul>
+        <p class="Text">
+            <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1177494">Tabelle 1</MadCap:xref> enthält Beispieldaten der Datei <span class="path">PuT.dmd</span>, die in Englisch ausgeliefert wird.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 497px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="497px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <pre class="Input">$VISION</pre>
+                        <pre class="Input">* VisumInst</pre>
+                        <pre class="Input">* 04/11/07</pre>
+                        <pre class="Input">* </pre>
+                        <pre class="Input">* Table: VERSION</pre>
+                        <pre class="Input">$VERSION:VERSNR;FILETYPE;LANGUAGE;UNIT</pre>
+                        <pre class="Input">4.000;Demand;ENG;KM</pre>
+                        <pre class="Input">* Table: ODMATRIX</pre>
+                        <pre class="Input">$ODMATRIX:NO;CODE;NAME;CONTENT;ROUND;NUMDECPLACES</pre>
+                        <pre class="Input">1;C;Car;;0;0</pre>
+                        <pre class="Input">2;H;HVeh;;0;0</pre>
+                        <pre class="Input">3;P;PuT;;0;0</pre>
+                        <pre class="Input">* Table: MATRIXSINGLELISTITEM</pre>
+                        <pre class="Input">$MATRIXSINGLELISTITEM:MATRIXNO;FROMZONENO;TOZONENO;VALUE</pre>
+                        <pre class="Input">1;100;200;2000.000</pre>
+                        <pre class="Input">2;100;200;200.000</pre>
+                        <pre class="Input">3;100;200;90.000</pre>
+                        <pre class="Input">* Table: TIMESERIESDOMAINTYPE</pre>
+                        <pre class="Input">$TIMESERIESDOMAINTYPE:NO;DESCRIPTION;UNITYSTRING;NUMDECPLACES;MAXVALUE;MINVALUE</pre>
+                        <pre class="Input">1;Prozentuale Ganglinie;%;2;9999999999.000;0.000</pre>
+                        <pre class="Input">2;Ganglinie von Matrixnummern;No;0;999999999.000;0.000</pre>
+                        <pre class="Input">* Table: Time series</pre>
+                        <pre class="Input">$TIMESERIES:NO;NAME;TYPENO;UNITX;NUMINTERVALS;LENGTHINTERVAL;USEVALUELIST;VALUELISTTYPE;VALUEREFTYPE;DECSEPARATOR;VALUESEPARATOR</pre>
+                        <pre class="Input">1;;1;;86400;1;0;0;2;;</pre>
+                        <pre class="Input">* Table: TIMESERIESITEM</pre>
+                        <pre class="Input">$TIMESERIESITEM:TIMESERIESNO;STARTINTERVALINDEX;ENDINTERVALINDEX;VALUE</pre>
+                        <pre class="Input">1;1;19800;0.000</pre>
+                        <pre class="Input">1;19801;23400;33.000</pre>
+                        <pre class="Input">1;23401;27000;67.000</pre>
+                        <pre class="Input">* Table: Demand time series</pre>
+                        <pre class="Input">$DEMANDTIMESERIES:NO;CODE;NAME;TIMESERIESNO</pre>
+                        <pre class="Input">1;;;1</pre>
+                        <pre class="Input">* Table: Demand description</pre>
+                        <pre class="Input">$DEMANDDESCRIPTION:DSEGCODE;DEMANDTIMESERIESNO;MATRIXNO;STARTDAYINDEX;STARTTIME</pre>
+                        <pre class="Input">C;0;1;1;00:00:00</pre>
+                        <pre class="Input">H;0;2;1;00:00:00</pre>
+                        <pre class="Input">P;1;3;1;00:00:00</pre>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_oev_2318507456_1177494">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_92680">
+                    </a>Nachfragematrix und Verteilung des Fahrtenaufkommens für das Beispiel</p>
+            </caption>
+        </table>
+        <p class="Text">Das Beispielnetz ist im Verzeichnis ...<span class="path">Benutzer\Öffentlich\Öffentliche Dokumente\PTV Vision\<MadCap:variable name="PTV_Manual.Programmname_VersNr_mitPunkt" />\Example_net</span> gespeichert.</p>
+        <ul>
+            <LI class="List0">Versionsdatei <span class="path">Example.ver</span></LI>
+            <LI class="List0">Grafikparameter <span class="path">PuT.gpa</span></LI>
+            <LI class="List0">Nachfragematrix und Aufkommensverteilung <span class="path">PuT.dmd</span></LI>
+            <LI class="List0">Verfahrensparameter <span class="path">PuT.par</span></LI>
+        </ul>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Timetable.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_oev_2318507456_1042901">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_52656">
+            </a>Fahrplan</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Lines.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_oev_2318507456_1042956">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_15162">
+            </a>Linienplan</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="62px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="62px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="62px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="62px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="62px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="62px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="62px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="62px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td colspan="4" class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrplan Bus 1</p>
+                    </td>
+                    <td colspan="4" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Fahrplan Zug</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A-Dorf</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6.10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6.55</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">7.25</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Bhf</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6.25</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">7.05</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">7.45</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Bhf</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">6.22</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">7.07</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">7.37</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">X-Stadt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">6.41</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">7.21</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">8.01</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">B-Dorf</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6.42</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">7.27</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">7.57</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">X-Stadt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">6.55</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">7.40</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">8.10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td colspan="8" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Verbindungen</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="8" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">ab 6.10 Uhr, an 6.55 Uhr, Beförderungszeit 45 Min., ohne umsteigen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td colspan="8" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">ab 6.10 Uhr, an 6.41 Uhr, Beförderungszeit 31 Min., einmal umsteigen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="8" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">ab 6.55 Uhr, an 7.40 Uhr, Beförderungszeit 45 Min., ohne umsteigen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td colspan="8" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">ab 7.25 Uhr, an 8.10 Uhr, Beförderungszeit 45 Min., ohne umsteigen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="8" class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">ab 7.25 Uhr, an 8.01 Uhr, Beförderungszeit 36 Min., einmal umsteigen</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_oev_2318507456_1246016">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_30909">
+                    </a>ÖV-Angebot des Beispiels mit den Verbindungen von A-Dorf nach X-Stadt</p>
+            </caption>
+        </table>
+    </body>
+</html>

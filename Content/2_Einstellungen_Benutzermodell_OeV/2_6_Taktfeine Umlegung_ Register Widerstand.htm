@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="687" MadCap:lastWidth="510" MadCap:ignoredWords="E1;E9;V1;V9;N1;N9;G1;G9;G0;att;E2;bzw;ErhLinieName;E3;max;E5;E7;E8;V2;N2;V3;N3;NachlaufLRName;evtl;inkl;V5;N5;V6;N6;V4;N4;con;wege;RZ;UH;Wid;konst;ca;Registrierungs;Common;Misc;ProcessorInfo;angeb;empf;Abfahrts;t0;Nr;ErhFzpName;VorlaufVSysCode;VorlaufLinieName;VorlaufRichtungsCode;VorlaufLRName;VorlaufFZPName;NachlaufVSysCode;EingabeHstNr;EingabeHstAbfahrtstag;EingabeHstAbfahrtszeit;QHstNr;VorlaufHstNr;EinHstNr;AusHstNr;NachlaufHstNr;ZHstNr;AnzPassagiere;ExtHochFak;BUS1;EingabeHStNr;WID;rechenzeit;etc;Exp;interval;ATI;service;frequency;SF;4h;1h;Strategies;versch;Ber">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1035977">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_39576">
+            </a>Taktfeine Umlegung: Register Widerstand<a name="25087"></a><a name="50055"></a></h4>
+        <p class="Text">In diesem Register legen Sie die Parameter für die Aufteilung der Nachfrage auf die Wege fest. Sie können entscheiden, ob Sie die Berechnung auf der Basis von empfundener Reisezeit und Tarifpunkten oder empfundener Reisezeit und Fahrpreis durchführen <MadCap:xref class="Grundlagen" href="../1_Benutzermodell OeV/1_6_Generalisierte Kosten  als Widerstand.htm#1_benutzermodell_oev_2318507456_1026939">Siehe "Generalisierte Kosten als Widerstand"</MadCap:xref>.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="80px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="416px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Widerstand</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Der Widerstand eines Wegs ergibt sich aus der Summe der empfundenen Reisezeit (ERZ) und der Anzahl Tarifpunkte oder der Summe der ERZ und des Fahrpreises. Über die Eingabefelder können Sie einen Gewichtungsfaktor für die Summanden festlegen.</p>
+                        <p class="CellText">Wie die ERZ berechnet wird, legen Sie darunter fest. Die Tarifpunkte ergeben sich durch die Eingabedaten an den entsprechenden Netzobjekten <MadCap:xref class="sieheUeberschrSeite" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Tarifpunkte an Netzobjekten einfügen.htm#2_einstellungen_betreibermodell_oev_1111312306_1044422"><span style="color: Black;" class="mcFormatColor">(</span><u>Tarifpunkte an Netzobjekten einfügen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Der Fahrpreis ergibt sich aus den definierten ÖV-Fahrpreisen <MadCap:xref class="sieheUeberschrSeite" href="../2_Einstellungen_Betreibermodell_OeV/2_7_ÖV-Fahrpreise definieren.htm#2_einstellungen_betreibermodell_oev_1111312306_1044572"><span style="color: Black;" class="mcFormatColor">(</span><u>ÖV-Fahrpreise definieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Berechnen Sie den Widerstand unter Berücksichtigung des Fahrpreises, verwendet <MadCap:variable name="PTV_Manual.Programmname" /> automatisch als Fahrpreisbezug im Tarifsystem die Option<span class="gui_element"> jeden Teilweg einzeln </span><MadCap:xref class="sieheUeberschrSeite" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Tarifsysteme definieren.htm#2_einstellungen_betreibermodell_oev_1111312306_1123688"><span style="color: Black;" class="mcFormatColor">(</span><u>Tarifsysteme definieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">empf. Reisezeit ERZ</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Die empfundene Reisezeit ist die Summe verschiedener Zeiten und Zuschläge <MadCap:xref class="Grundlagen" href="../1_Benutzermodell OeV/1_6_Generalisierte Kosten  als Widerstand.htm#1_benutzermodell_oev_2318507456_1026939">Siehe "Generalisierte Kosten als Widerstand"</MadCap:xref>.</p>
+                        <p class="CellText">ERZ = </p>
+                        <p class="CellText">Faktor • <span class="gui_element">Fahrzeit im Fzg </span>• direktes und indirektes numerisches Attribut des Fahrzeitprofilverlaufs</p>
+                        <p class="CellText">+ Faktor • <span class="gui_element">ÖV-Zusatz-Fahrzeit</span></p>
+                        <p class="CellText">+ Faktor • <span class="gui_element">Zugangszeit</span></p>
+                        <p class="CellText">+ Faktor • <span class="gui_element">Abgangszeit</span></p>
+                        <p class="CellText">+ Faktor • <span class="gui_element">Gehzeit</span></p>
+                        <p class="CellText">+ Faktor • <span class="gui_element">Startwartezeit</span>, wobei die Startwartezeit durch eine Formel berechnet wird</p>
+                        <p class="CellText">+ Faktor • <span class="gui_element">Umsteigewartezeit </span>• direktes und indirektes numerisches Attribut des Hst-Bereichs</p>
+                        <p class="CellText">+ Faktor • <span class="gui_element">Umsteigehäufigkeit</span></p>
+                        <p class="CellText">+ <span class="gui_element">Einsteigezuschlag ÖV</span> (numerisches Attribut des Fahrzeitprofils)</p>
+                        <p class="CellText">+ <span class="gui_element">Einsteigezuschlag ÖV-Zusatz</span> (numerisches Attribut des Verkehrssystems)</p>
+                        <p class="CellText">+ <span class="gui_element">mittlere Verspätung</span> (numerisches Attribut des Fahrzeitprofilverlaufs)</p>
+                        <p class="CellText">Hinweise</p>
+                        <ul>
+                            <LI class="List0Tab">Über die Eingabefelder können Sie für die Komponenten einen Gewichtungsfaktor festlegen <MadCap:xref class="Grundlagen" href="../1_Benutzermodell OeV/1_6_Generalisierte Kosten  als Widerstand.htm#1_benutzermodell_oev_2318507456_1026939">Siehe "Generalisierte Kosten als Widerstand"</MadCap:xref>.</LI>
+                            <LI class="List0Tab">Über die durch Schaltflächen dargestellten Faktoren (bei <span class="gui_element">Fahrzeit im Fzg</span> und <span class="gui_element">Umsteigewartezeit</span>) wählen Sie ein numerisches Attribut <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Fenster_zur_Auswahl_eines_Attributs.htm#2_netz_bearbeiten_23091886_2854659"><span style="color: Black;" class="mcFormatColor">(</span><u>Fenster zur Auswahl eines Attributs</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Die Schaltflächen sind mit dem aktuell ausgewählten Attribut beschriftet. Standardmäßig ist kein Attribut ausgewählt, stattdessen wird bei Faktoren der Wert <span class="gui_element">1.0</span> und bei Summanden der Wert <span class="gui_element">0.0</span> verwendet. Als zusätzlichen Faktor für die <span class="gui_element">Fahrzeit im Fzg</span> können Sie beispielsweise den ZWert verwenden, um linienspezifische Besonderheiten (zum Beispiel Bevorzugung Tram gegenüber Bus) abzubilden.</LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Die Startwartezeit</span> wird durch eine Formel berechnet, die Sie über die Schaltfläche festlegen. Sie kann sich aus Attributen des Haltestellenbereichs und des Fahrzeitprofils zusammensetzen.</LI>
+                            <LI class="List0Tab">Der <span class="gui_element">Einsteigezuschlag ÖV</span> ist ein Fahrzeitprofilattribut und wird bei jedem Einsteigen und Umsteigen zur empfundenen Reisezeit addiert. Mit dem Einsteigezuschlag können Sie modellieren, dass bestimmte Linien generell gegenüber anderen bevorzugt werden. </LI>
+                            <LI class="List0Tab">Der <span class="gui_element">Einsteigezuschlag ÖV-Zusatz</span> ist ein Verkehrssystemattribut und wirkt nur für Verkehrssysteme des Typs ÖV-Zusatz</LI>
+                            <LI class="List0Tab">Die <span class="gui_element">mittlere Verspätung </span>wird bei jedem Einsteigen und Umsteigen zum Widerstand addiert. Die mittlere Verspätung dient zur Modellierung der Tatsache, dass bestimmte Linien (genauer: Fahrzeitprofile) an bestimmten Haltestellen häufig verspätet sind und die Fahrgäste diese Linien deshalb in geringerem Umfang nutzen, als sich aus den theoretischen Daten (Fahrzeit, Takt) der Linie ergeben würde.</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

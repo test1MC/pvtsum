@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW" MadCap:lastBlockDepth="4" MadCap:lastHeight="638" MadCap:lastWidth="582">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_oev_2318507456_1026441">
+            </a>
+            <MadCap:keyword term="Empfundene Reisezeit" />
+            <a name="1_benutzermodell_oev_2318507456_75319">
+            </a>Empfundene Reisezeit</h3>
+        <p class="Text">Die empfundene Reisezeit ERZ setzt sich aus den gewichteten Teilzeiten der Reisezeit und weiteren Komponenten zusammen.</p>
+        <p class="Text">Empfundene Reisezeit ERZ [min]</p>
+        <p class="Text">= Fahrzeit im Fzg <span class="formula">•</span> <span class="formula">FakFZ</span> <span class="formula">•</span> (in)direktes FZP-Verlauf-Attribut 2)</p>
+        <p class="Text">+ ÖV-Zusatz-Fahrzeit <span class="formula">•</span> <span class="formula">FakXZ </span>1)	 </p>
+        <p class="Text">+ Zugangszeit <span class="formula">• FakZZ</span></p>
+        <p class="Text">+ Abgangszeit <span class="formula">• FakAZ</span></p>
+        <p class="Text">+ Gehzeit <span class="formula">• FakGZ</span></p>
+        <p class="Text">+ Startwartezeit <span class="formula">• FakSZ</span></p>
+        <p class="Text">+ Umsteigewartezeit <span class="formula">•</span> <span class="formula">FakUZ</span></p>
+        <p class="Text">+ Umsteigehäufigkeit <span class="formula">•</span> <span class="formula">FakUH</span></p>
+        <p class="Text">+ Anzahl Betreiberwechsel <span class="formula">•</span> <span class="formula">FakOC</span> 1)</p>
+        <p class="Text">+ weitere Widerstandselemente <span class="formula">•</span> <span class="formula">FakEW</span> 1)</p>
+        <p class="Text2">1) nur fahrplanfeines Verfahren</p>
+        <p class="Text2">2) nur taktfein, (in)direktes Fahrtverlauf-Attribut beim fahrplanfeinen Verfahren</p>
+        <p class="Text">Die empfundene Reisezeit wird beim taktfeinen und beim fahrplanfeinen Verfahren eingesetzt, um die einzelnen Verbindungen bei der Verbindungswahl zu bewerten. Eine hohe Gewichtung der Umsteigehäufigkeit führt zum Beispiel dazu, dass Fahrgäste umsteigeminimale Verbindungen bevorzugt auswählen.</p>
+        <ul>
+            <LI class="List0">Bei beiden Verfahren können die Ein- und Umsteigevorgänge zusätzlich bewertet werden. </LI>
+            <LI class="List0">Die <span class="gui_element">taktfeine</span> Umlegung berücksichtigt noch keine ÖV-Zusatz-Fahrzeit.</LI>
+            <LI class="List0">Bei der <span class="gui_element">fahrplanfeinen</span> Umlegung bestehen folgende Optionen: </LI>
+            <LI class="List1">
+                <span class="gui_element">Anzahl Betreiberwechsel</span> kann einfließen</LI>
+            <LI class="List1">
+                <span class="gui_element">ÖV-Zusatz-Fahrzeit </span>kann mit einem VSys-Attribut gewichtet werden</LI>
+            <LI class="List1">
+                <span class="gui_element">Erweiterter Widerstand</span> kann definiert werden</LI>
+            <LI class="List1">Für jede Komponente kann ein Wert <span class="gui_element">Lambda</span> angegeben und/oder die Option <span class="gui_element">BoxCox-Transformation</span> aktiviert werden.</LI>
+        </ul>
+    </body>
+</html>

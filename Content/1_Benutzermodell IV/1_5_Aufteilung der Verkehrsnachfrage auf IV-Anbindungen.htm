@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="1144" MadCap:lastWidth="688" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="BSB;ji;id;ijA;Braess;tmodelspecial;true;armig;3a;4a;3b;4b;armige;armigen;vphpl;Within;Day;Dynamic;WDDTA;inner;CR;kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_iv_2033098965_1054187">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc175724481">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153337021">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc130891226">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__ref113165426">
+            </a>Aufteilung der Verkehrsnachfrage auf IV-Anbindungen</h2>
+        <p class="Text">
+            <MadCap:keyword term="Anbindungen:Aufteilung der Nachfrage" />
+            <MadCap:keyword term="Verkehrsnachfrage: auf IV-Anbindungen aufteilen" />
+            <MadCap:keyword term="Anbindungen: Multi Point Assignment (MPA)" />
+            <MadCap:keyword term="Anbindungen: Verkehrsnachfrage aufteilen: IV" />
+            <MadCap:keyword term="Multi Point Assignment" />Die Aufteilung des IV-Quell- und -Zielverkehrs auf die IV-Anbindungen kann entweder frei oder prozentual erfolgen. Bei der prozentualen Aufteilung werden wiederum zwei Varianten unterschieden: Aufteilung des Gesamtverkehrs oder Aufteilung jeder einzelnen Relation <MadCap:xref class="sieheUeberschrSeite" href="../1_Netzmodell/1_2_Aufteilung der Nachfrage eines Bezirks auf die Anbindungen.htm#1_netzmodell_1240632468_1026663"><span style="color: Black;" class="mcFormatColor">(</span><u>Aufteilung der Nachfrage eines Bezirks auf die Anbindungen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <h5>
+            <span class="gui_element">Freie Aufteilung</span>
+        </h5>
+        <p class="Text">Bei der Routensuche wird nur die Anbindungszeit berücksichtigt und die Verkehrsnachfrage ohne weitere Randbedingungen auf die widerstandsminimalen Routen verteilt.</p>
+        <h5>
+            <span class="gui_element">Prozentuale Aufteilung des Gesamtverkehrs</span>
+        </h5>
+        <p class="Text">Vor der Routensuche werden für jede Anbindung des Bezirks, dessen Nachfrage prozentual aufgeteilt werden soll, die Anteile des gesamten Quell- und Zielverkehr berechnet. Daraus kann dann für jede Anbindung eine virtuelle Anbindungskapazität (= Prozentanteil • Quell-/Zielverkehr) abgeleitet werden, die bei der Umlegung den Widerstand der Anbindungen so verändert, dass die prozentuale Aufteilung realisiert wird. Die Übereinstimmung der Aufteilung aus der Umlegung und der Vorgabe hängt ab vom gewählten Umlegungsverfahren und von der gewählten CR-Funktion für Anbindungen. Es sollte eine steile CR-Funktion gewählt werden. Außerdem dürfen die Anbindungszeiten nicht zu niedrig sein, damit der Anbindungswiderstand einen Einfluss auf die Routensuche hat. Bei dieser Variante ist zu beachten, dass die Aufteilung sich auf die einzelnen Relationen trotzdem sehr unterschiedlich auswirken kann. Wenn die Streckenwiderstände den dargestellten Längen entsprechen, nehmen praktisch alle Fahrten von Bezirk 1 nach Bezirk 3 den Weg über Knoten 2. Der überwiegende Teil der Fahrten von Bezirk 1 nach Bezirk 2 verläuft dagegen über Knoten 1.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Example_Connector_Cap.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1222123">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_77307">
+            </a>Beispielnetz für die prozentuale Aufteilung der Verkehrsnachfrage</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Beispiel: </span>Ermittlung der Anbindungskapazität bei prozentualer Aufteilung des Gesamtverkehrs (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1222123">Abbildung 1</MadCap:xref>)</LI>
+        </ul>
+        <p class="Text2">Bezirk 1 hat prozentuale Aufteilung</p>
+        <p class="Text2">Bezirk 2 hat prozentuale oder absolute Aufteilung</p>
+        <p class="Text2">Bezirk 3 hat prozentuale oder absolute Aufteilung</p>
+        <p class="Text2">Verkehrsnachfrage von Bezirk 1 nach Bezirk 2: 1&#160;000 Fahrten</p>
+        <p class="Text2">Verkehrsnachfrage von Bezirk 1 nach Bezirk 3: 400 Fahrten</p>
+        <p class="Text2">Quellverkehr Bezirk 1: 1&#160;400 Fahrten</p>
+        <p class="Text2">Anbindung Bez 1 <span class="_Override" style="font-family: Wingdings;">è</span> Knoten 1: 40 % Anteil</p>
+        <p class="Text2">Anbindung Bez 1 <span class="_Override" style="font-family: Wingdings;">è</span> Knoten 2: 60 % Anteil</p>
+        <p class="Text2">Kapazität der Anbindung Bez 1 <span class="_Override" style="font-family: Wingdings;">è</span> Knoten 1 ist 40 % x 1&#160;400 = 560 Fahrten</p>
+        <p class="Text2">Kapazität der Anbindung Bez 1 <span class="_Override" style="font-family: Wingdings;">è</span> Knoten 2 ist 60 % x 1&#160;400 = 840 Fahrten</p>
+        <p class="Text2">Steile CR-Funktion für Anbindungen, zum Beispiel BPR-Funktion mit <span class="formula">a</span> = 1, <span class="formula">b</span><span class="symbol">³</span> 4, <span class="formula">c</span><span class="symbol">£</span> 1</p>
+        <h5>
+            <span class="gui_element">Prozentuale Aufteilung jeder einzelnen Relation (MPA)</span>
+        </h5>
+        <p class="Text">Alternativ kann die prozentuale Aufteilung auf jede einzelne OD-Beziehung angewendet werden. Damit ergibt sich im obigen Beispiel die folgende Aufteilung:</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Beispiel: </span>Ermittlung der Anbindungskapazität bei prozentualer Aufteilung jeder einzelnen Relation</LI>
+        </ul>
+        <p class="Text2">Bez 1 <span class="_Override" style="font-family: Wingdings;">è</span> Knoten 1 <span class="_Override" style="font-family: Wingdings;">è</span> Bez 2 mit 40 % • 1&#160;000 = 400 Fahrten</p>
+        <p class="Text2">Bez 1 <span class="_Override" style="font-family: Wingdings;">è</span> Knoten 1 <span class="_Override" style="font-family: Wingdings;">è</span> Bez 3 mit 40 % • 400 = 160 Fahrten</p>
+        <p class="Text2">Bez 1 <span class="_Override" style="font-family: Wingdings;">è</span> Knoten 2 <span class="_Override" style="font-family: Wingdings;">è</span> Bez 2 mit 60 % • 1&#160;000 = 600 Fahrten</p>
+        <p class="Text2">Bez 1 <span class="_Override" style="font-family: Wingdings;">è</span> Knoten 2 <span class="_Override" style="font-family: Wingdings;">è</span> Bez 3 mit 60 % • 400 = 240 Fahrten</p>
+    </body>
+</html>

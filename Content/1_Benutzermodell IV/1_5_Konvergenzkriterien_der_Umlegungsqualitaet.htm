@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="682" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_iv_2033098965_1222416">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_63567">
+            </a>Konvergenzkriterien der Umlegungsqualität</h2>
+        <p class="Text">
+            <MadCap:keyword term="IV-Umlegungsverfahren: Konvergenzkriterien" />
+            <MadCap:keyword term="Umlegungsqualität" />Zur Beurteilung der Konvergenzgeschwindigkeit protokolliert <MadCap:variable name="PTV_Manual.Programmname" /> für alle statischen Umlegungsverfahren (außer Sukzessivumlegung) für jede Iteration Konvergenzkriterien. In der Stochastischen Umlegung werden nur die inneren Iterationen innerhalb der letzten äußeren Iteration protokolliert <MadCap:xref class="sieheUeberschrSeite" href="1_5_Stochastische Umlegung.htm#1_benutzermodell_iv_2033098965_1385331"><span style="color: Black;" class="mcFormatColor">(</span><u>Stochastische Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Diese Kriterien werden als Indikatoren der IV-Umlegungsqualität in einer Liste ausgegeben <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell IV/2_5_Konvergenzkriterien und Konvergenzgeschwindigkeit anzeigen.htm#2_einstellungen_benutzermodell_iv_1682368020_1120657"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Konvergenzkriterien und Konvergenzgeschwindigkeit anzeigen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Sie werden vor jeder Umlegung initialisiert und mit der Versionsdatei gespeichert.</p>
+        <p class="Text">
+            <MadCap:keyword term="Hypothetischer Fahrzeugwiderstand (IV-Umlegungsqualität)" />
+            <MadCap:keyword term="Gap (IV-Umlegungsqualität)" />
+            <MadCap:keyword term="Gesamter Kostenüberschuss TEC (IV-Umlegungsqualität)" />
+            <MadCap:keyword term="Mittlerer Kostenüberschuss AEC (IV-Umlegungsqualität)" />Es werden unter anderen folgende Kriterien berechnet:</p>
+        <ul>
+            <LI class="List0" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="gui_element">Hypothetischer Fahrzeugwiderstand</span>
+            </LI>
+        </ul>
+        <p class="Text2">Minimaler Widerstandswert, der für den nächsten Iterationsschritt unter der Annahme, dass alle Fahrzeuge – basierend auf den aktuellen Widerständen im Netz – den Bestweg verwenden würden, hypothetisch errechnet wird.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Gap</span> = (Fzg.-Wid. - hypothet. Fzg.-Wid) / hypothet. Fzg.-Wid</LI>
+        </ul>
+        <p class="Text2">Grad der Konvergenz für das Netz.</p>
+        <p class="Text2">Der Wert ergibt sich als die mit der Belastung gewichtete Differenz zwischen dem Fahrzeugwiderstand des Netzes der aktuellen Iteration und dem <span class="gui_element">hypothetischen Fahrzeugwiderstand</span>.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Gesamter Kostenüberschuss TEC</span> (Total Excess Cost)</LI>
+        </ul>
+        <p class="Text2">
+            <img src="../Resources/Images/7_108.jpg" />
+        </p>
+        <p class="Text2">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="43px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="434px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">TEC</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Differenz zwischen dem Gesamtwiderstand im belasteten Netz und dem hypothetischen Widerstand, wenn alle Fahrzeuge den kürzesten Weg für ihre Quelle-Ziel-Relation benutzen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">P</span>
+                            <span class="formula_subscript">ij</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Menge der Routen von <span class="formula">i</span> nach <span class="formula">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">R</span>
+                            <span class="formula_subscript">ij</span>
+                            <span class="formula_superscript">min</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">minimaler Widerstand unter allen Routen von <span class="formula">i</span> nach <span class="formula">j</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Mittlerer Kostenüberschuss AEC</span> (Average Excess Cost)</LI>
+        </ul>
+        <p class="Text2">
+            <span class="formula">AEC</span> = Kostenüberschuss pro Fahrzeug</p>
+        <p class="Text2">
+            <img src="../Resources/Images/7_234.jpg" />
+        </p>
+        <p class="Text2">Dabei gilt Folgendes:</p>
+        <p class="Text2">
+            <span class="formula">n</span> = Anzahl Fahrten: Gesamtnachfrage in der Nachfragematrix abzüglich Diagonale, also Summe der umgelegten Nachfrage, kein Binnenverkehr.</p>
+    </body>
+</html>

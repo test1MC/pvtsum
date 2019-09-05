@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="674" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:ignoredWords="Symmetrize;bzw;zeilen;$O;usw;of;gpm;Nr" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_nachfrage_modellieren_1800171850_1472455">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_54126">
+            </a>Matrizen und Attributsvektoren während des Verfahrensablaufs kombinieren</h4>
+        <p class="Text">Das Verfahren Kombination von Matrizen und Vektoren bietet umfangreiche Möglichkeiten für die Neuberechnung einzelner oder mehrere Matrizen. Insbesondere können Sie gleichartige Operationen auf mehrere Matrizen in einem Verfahrensschritt durchführen.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">
+            <MadCap:keyword term="Matrizen: Kombination berechnen" />Klicken Sie in der Symbolleiste auf das Symbol <img src="../Resources/Images_4_all/ICO_procedure_flow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000347px;margin-bottom: 0, 9983615px;" />&#160;<span class="gui_element">Verfahrensablauf öffnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Verfahrensablauf</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Fügen Sie an der gewünschten Stelle im Verfahrensablauf das Verfahren <span class="gui_element">Kombination von Matrizen und Vektoren</span> aus der Kategorie <span class="gui_element">Matrizen</span> ein <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahrensablauf festlegen und starten.htm#2_verfahrensablauf_festlegen_40480990_1019020">(siehe „Verfahrensablauf festlegen und starten“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie in der Zeile des neu eingefügten Verfahrens auf die Schaltfläche in der Spalte <span class="gui_element">Bezugsobjekt(e)</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Formel für Matrix bearbeiten</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_vor_QV.flsnp" />
+            <MadCap:xref href="2_3_Aus Formel berechnete Matrix erstellen.htm" class="sieheUeberschrSeite">
+                <span style="color: Black;" class="mcFormatColor">(</span>
+                <u>Aus Formel berechnete Matrix erstellen</u>
+                <span style="color: Black;" class="mcFormatColor">)</span>
+            </MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">Die ausgewählte Matrix wird in die Spalte <span class="gui_element">Bezugsobjekt(e)</span> übernommen.</p>
+        <p class="Step" MadCap:autonum="6. &#160;">Führen Sie das Verfahren aus <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahren im Verfahrensablauf ausführen.htm#2_verfahrensablauf_festlegen_40480990_1112524">(siehe „Verfahren im Verfahrensablauf ausführen“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Result">Die Kombination wird berechnet. Das Ergebnis wird in die ausgewählte Ergebnismatrix gespeichert.</p>
+        <p class="Text">Durch das Verfahren können Sie eine einzelne oder mehrere Matrizen berechnen.</p>
+        <p class="Text">Im Editierfeld legen Sie sowohl die Ergebnismatrix (-matrizen) selbst als auch die Einstellungen zur Berechnung fest. Ergebnis und Berechnungsanweisung werden durch den Operator <span class="input">:=</span> getrennt.</p>
+        <h5 MadCap:autonum="">Beispiel mit Ergebnismatrix und Berechnungsanweisung</h5>
+        <p class="Text">
+            <span class="input">Matrix(1):= Matrix(2) + Matrix(3)</span>
+        </p>
+        <p class="Text">Die Auswahl der Matrizen kann alternativ zur Matrixnummer auch über die Eigenschaften vorgenommen werden. Dazu wird folgende Schreibweise verwendet.</p>
+        <p class="Text">
+            <span class="input">Matrix([Attribut1] = Attributwert1 &amp; [Attribut2] = Attributwert2 &amp; …)</span>
+        </p>
+        <p class="Text">Attribute werden mit der in eckigen Klammern gesetzten eindeutigen Attributsbezeichnung (ID) angegeben. Die Attribut <span class="gui_element">ID</span> wird ohne Berücksichtigung der Groß- und Kleinschreibung interpretiert.</p>
+        <p class="Text">Außer der Verknüpfung der Attribute durch <span class="input">&amp;</span> (Und) ist alternativ eine Verknüpfung durch <span class="input">|</span> (logisches Oder) möglich. Ebenso kann die Gleichheit eines Attributwerts durch andere Operatoren, beispielsweise <span class="input">wie !=</span>, <span class="input">&gt;</span> , <span class="input">&lt;</span> ersetzt werden. Eine Beschränkung auf bestimmte Attributwerte, die aus Zeichenketten bestehen, ist durch das Schlüsselwort <span class="input">IN</span> möglich. Die Menge der Attributwerte wird in geschweifte Klammern gesetzt und durch Komma getrennt.</p>
+        <h5 MadCap:autonum="">Beispiel für die Auswahl Matrizen über Eigenschaften</h5>
+        <table style="caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');width: 495px;" class="TableStyle-gui_elements1" cellspacing="0">
+            <col style="width: 495px;" class="TableStyle-gui_elements1-Column-Column1" />
+            <col style="width: 495px;" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <th class="TableStyle-gui_elements1-HeadE-Column1-Header1">Codierung im Eingabefeld</th>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Erhaltene Matrix</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p>Matrix([NO] = 1)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt die Matrix mit der Nr. 1 
+zurück. Matrix(1) ist als Kurzschreibweise von Matrix([No] = 1) möglich.
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">Matrix([NAME] = “Car“)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">Gibt alle Matrizen mit dem Namen <span class="input">Car</span> zurück.</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">Matrix([CODE] = “TTC“ &amp; [NSEGCODE] = “C“)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p>Gibt alle Matrizen mit dem Code <span class="input">TTC</span> und dem Nachfragesegmentcode <span class="input">C</span> zurück.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">Matrix([CODE] = „TWT“ | [CODE] = “IVT“ &amp; [NSegCode] = “PT“)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p>Gibt alle Matrizen mit dem Code <span class="input">TWT</span> oder <span class="input">IVT</span> und dem Nachfragesegmentcode <span class="input">PT</span> zurück.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p>Matrix([CODE] IN {“TWT“, “IVT“} &amp; [NSEGCODE] = “PT“)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p>Gibt alle Matrizen mit dem Code “TWT oder “IVT“ und dem Nachfragesegmentcode “PT“ zurück</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">Matrix([NSEGCODE] IN {“PT“, ““} )</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Liefert alle Matrizen, deren Nachfragesegment-code entweder <span class="input">PT</span> oder leer ist, zurück</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">Matrix([NSEGCODE] != ““ )</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Liefert alle Matrizen mit nicht leerem Nachfragesegmentcode zurück.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">Matrix([NACHFRMODELLCODE] = “M01“ &amp; [NSCHICHTCODE] = “HWc“ &amp; [MODUSCODE] = "")</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Liefert alle Matrizen, deren Nachfragemodellcode <span class="input">M01</span>, Nachfrageschichtcode <span class="input">HWc</span> ist und deren Moduscode leer ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');width: 495px;" class="TableStyle-TipHint1" cellspacing="0">
+            <col style="width: 495px;" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Stellen Sie sicher, dass die verwendeten Matrizen eindeutig durch die Eigenschaften definiert sind. .Dazu kann es notwendig sein, dass Attributwerte leer sind.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Matrixattribute mit einer begrenzten Anzahl von möglichen Ausprägungen werden durch Zahlen dargestellt. Die folgende Tabelle enthält diese Matrixattribute:</p>
+        <table style="caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');width: 495px;" class="TableStyle-gui_elements1" cellspacing="0">
+            <col style="width: 495px;" class="TableStyle-gui_elements1-Column-Column1" />
+            <col style="width: 495px;" class="TableStyle-gui_elements1-Column-Column1" />
+            <col style="width: 495px;" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <th class="TableStyle-gui_elements1-HeadE-Column1-Header1">Attribut-ID</th>
+                    <th class="TableStyle-gui_elements1-HeadE-Column1-Header1">Attribut ID Englisch</th>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Ausprägung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MATRIXTYP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MATRIXTYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">1 = Extern</p>
+                        <p class="CellText">3 = Nachfrage</p>
+                        <p class="CellText">4 = Kenngröße
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">BEZUGSTYP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">OBJECTTYPEREF</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">1 = kein Netzbezug</p>
+                        <p class="CellText">2 = Bezirk</p>
+                        <p class="CellText">3 = Oberbezirk</p>
+                        <p class="CellText">4 = Haltestellenbereich
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p>DATENQUELLENTYP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">DATASOURCETYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">1 = Daten</p>
+                        <p class="CellText">2 = Formel</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Sie können direkt im Eingabefeld alle Eingaben vornehmen oder die Schaltflächen zur Auswahl der Operanden, Operatoren, Funktionen und Klammern verwenden. Einige Schlüsselwörter stehen jedoch nur über die direkte Eingabe im Editierfeld zur Verfügung.</p>
+        <table style="caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');width: 495px;" class="TableStyle-gui_elements1" cellspacing="0">
+            <col style="width: 91px;" class="TableStyle-gui_elements1-Column-Column1" />
+            <col style="width: 402px;" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <th class="TableStyle-gui_elements1-HeadE-Column1-Header1">Element</th>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="input">:=</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ergibt sich aus</p>
+                        <p class="CellText">Zuweisung einer Berechnungsanweisung </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="input">IN{}</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">enthalten in</p>
+                        <p>Definition einer Mengen von Zeichenketten, deren Elemente von geschweiften Klammern umschlossen und durch Kommas getrennt werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="input">ForEach</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">erlaubt die Berechnung mehrerer Matrizen in einem Verfahrensschritt, in dem über eine Eigenschaft mehrerer Matrizen iteriert wird</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="input">Context</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Verwendung in Zusammenhang mit <span class="input">ForEach</span>;</p>
+                        <p class="CellText">Durch das Schlüsselwort <span class="input">Context</span> wird der konkrete Attributwert des Attributs, über das iteriert wird, ausgewertet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="input">MatrixList()</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">erlaubt eine Operation mit mehreren Matrizen, deren Eigenschaften in runden Klammern festgelegt werden</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="input">Sum, Min, Max, Average, Product</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Matrixkombinationsfunktionen, die im Zusammenhang mit MatrixList verwendet werden können. Kombinationsfunktionen wirken elementweise.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Beispiele für Formeln mit der Operation MatrixList und Matrixkombinationsfunktionen</h5>
+        <p class="Text">
+            <span class="input">Matrix(9) := Sum(MatrixList([NSEGCODE] = "C" | [NSEGCODE] = "H"))</span>
+        </p>
+        <p class="Text">Die Summe über alle Matrizen, deren Nachfragesegmentcode <span class="input">C</span> oder <span class="input">H</span> ist, wird in Matrix 9 gespeichert.</p>
+        <p class="Text">
+            <span class="input">Matrix([NAME]="Min JRT") := 0.5*Min(MatrixList([CODE]="JRT" &amp; [NSEGCODE] in {"PuT", "PuT2"}))</span>
+        </p>
+        <p class="Text">Es wird das Minimum der ÖV-Kenngrößenmatrizen für die Kenngröße Reisezeit der Nachfragesegmente <span class="input">PuT</span> und <span class="input">PuT2</span> berechnet und mit 0,5 multipliziert. Das Ergebnis wird in der Matrix mit dem Namen  <span class="input">Min JRT</span> gespeichert.</p>
+        <h5 MadCap:autonum="">Beispiele für Formeln mit ForEach und Context</h5>
+        <ul>
+            <LI class="List0">
+                <span class="input">ForEach([MODUSCODE] in {"Bus", "Tram"})</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">
+            <span class="input">Matrix([NSEGCODE] = "PT" &amp; [MODUSCODE] = context[MODUSCODE]) :=</span>
+        </p>
+        <p class="List_Text0">Es wird über die Menge <span class="input">{"Bus", "Tram"}</span> iteriert. Sind Ergebnismatrizen mit den definierten Eigenschaften vorhanden, werden deren Werte entsprechend der Berechnungsanweisung (im Beispiel nicht angegeben) gefüllt. Gibt es die Matrizen noch nicht, werden sie erzeugt und mit den Attributen für <span class="gui_element">ModusCode</span> und <span class="gui_element">NSegCode</span> definiert:</p>
+        <p class="List_Text0">
+            <span class="input">Matrix([NSegCode] = "PT" &amp; [ModusCode] = "Bus")</span>  bzw.</p>
+        <p class="List_Text0">
+            <span class="input">Matrix([NSegCode] = "PT" &amp; [ModusCode] = "Tram")</span>
+        </p>
+        <ul>
+            <LI class="List0">
+                <span class="input">ForEach([NSCHICHTCODE] in {”A”,”B”})</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">
+            <span class="input">Matrix([NACHFRAGESCHICHT\NACHFRAGEMODELLCODE]=“M01“ &amp; [NSCHICHTCODE]=CONTEXT[NSCHICHTCODE]) :=</span>
+        </p>
+        <p class="List_Text0">Mit dieser Syntax ist es möglich, die Berechnung auf Nachfrageschichten eines Nachfragemodells einzuschränken. Es wird über die Menge der Nachfrageschichten <span class="input">A</span> und <span class="input">B</span> iteriert. Die Ergebnismatrizen sind nur gültig, wenn der Nachfragemodellcode an der Nachfrageschicht <span class="input">M01</span> ist.</p>
+        <ul>
+            <LI class="List0">
+                <span class="input">ForEach ([NSCHICHTCODE])</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">
+            <span class="input"> Matrix([CODE] = "Nutzen" &amp; [MODUSCODE] ="C" &amp; [NACHFRMODELLCODE] = "M01" &amp; [NSCHICHTCODE] = CONTEXT[NSCHICHTCODE] &amp; [MATRIXTYP] = 4):=</span>
+        </p>
+        <p class="List_Text0">
+            <span class="input"> Matrix([CODE] = "TTC" &amp; [MATRIXTYP] = 4 &amp; [NSEGCODE] = "C") * CONTEXT[NACHFRAGESCHICHT\C_COEFF]</span>
+        </p>
+        <p class="List_Text0">
+            <span class="input">+ CONTEXT[NACHFRAGESCHICHT\C_CONST]</span>
+        </p>
+        <p class="List_Text0">Für jede Nachfrageschicht wird eine Kenngrößenmatrix (Matrixtyp = 4) mit dem Namen „Nutzen“ erzeugt. Für diese Ergebnismatrizen werden die Attribute für den Code des Nachfragemodells (M01), den Code des Modus (C) und den Code der Nachfrageschicht definiert.</p>
+        <p class="List_Text0">Der Code für die Nachfrageschicht wird entsprechend der Berechnung ausgewertet, alle anderen Attributwerte sind fest vorgegeben. Diese Angaben werden durch die linke Seite (Text vor dem Operator <span class="input">:=</span>) festgelegt.</p>
+        <p class="List_Text0">Die Berechnung der Matrizen multipliziert die Kenngrößenmatrix mit dem Code <span class="input">TTC</span> mit einem von der Nachfrageschicht abhängigen Attributwert des benutzerdefinierten Attributs C_COEFF und addiert einen Wert, der ebenfalls von der Nachfrageschicht abhängig ist. C_COEFF und C_CONST sind benutzerdefinierte Attribute der Nachfrageschicht, auf die indirekt von Matrizen zugegriffen werden kann. Die Werte werden in Abhängigkeit von der berechneten Nachfrageschicht ausgewertet.</p>
+        <ul>
+            <LI class="List0">
+                <span class="input">ForEach ([MODUSCODE] in {"C", "Bike", "PT"})</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">
+            <span class="input">Matrix([CODE] = "TotalHomebased" &amp; [MATRIXTYP] = 3 &amp; [MODUSCODE] = CONTEXT[MODUSCODE])</span>
+        </p>
+        <p class="List_Text1">
+            <span class="input">:= SUM(MatrixList([NACHFRMODELLCODE] = "M01"</span>
+        </p>
+        <p class="List_Text1">
+            <span class="input">&amp; [MODUSCODE] = CONTEXT[MODUSCODE]</span>
+        </p>
+        <p class="List_Text1">
+            <span class="input">&amp; [MATRIXTYP] = 3</span>
+        </p>
+        <p class="List_Text1">
+            <span class="input">&amp; [NACHFRAGESCHICHT\ISHOMEBASED] = 1))</span>
+        </p>
+        <p class="List_Text0">In diesem Beispiel werden die Nachfragematrizen je Modus aufsummiert. Es entstehen drei Nachfragematrizen mit dem Code <span class="input">TotalHomebased</span> und einem Moduscode, der sich aus der konkreten Berechnung für einen Modus ergibt. Die Berechnungsanweisung auf der rechten Seite des Operators <span class="input">:=</span> summiert alle Matrizen des Nachfragemodells <span class="input">M01</span> mit dem jeweiligen Moduscode auf, wobei für die Nachfrageschicht die Bedingung <span class="input">IsHomebased = 1</span> erfüllt sein muss. Die Bedingung ist durch ein benutzerdefiniertes Attribut der Nachfrageschicht definiert.</p>
+    </body>
+</html>

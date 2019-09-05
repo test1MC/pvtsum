@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="662" MadCap:lastWidth="510" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;Control;operationControlPoints;published;kombinationen;www;vdv;wir_ueber_uns;vdv_projekte;oepnv_datenmodell;exports;ggf;etc;bzw" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <MadCap:variable name="PTV_Manual.VDV_452" />-Schnittstelle</h2>
+        <table class="TableStyle-TipHint1" style="width: 495px;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Diese Funktion ist nur verfügbar, wenn Sie die Zusatzmodule <span class="gui_element"><MadCap:variable name="PTV_Manual.VDV_452" /> Import</span> und <span class="gui_element"><MadCap:variable name="PTV_Manual.VDV_452" /> Export</span> aktiviert haben <MadCap:xref class="sieheUeberschrSeite" href="../2_Grundlagen_Programmbedienung/2_1_Zusatzmodule ein- und ausschalten.htm#2_grundlagen_programmbedienung_1644961382_1091105"><span style="color: Black;" class="mcFormatColor">(</span><u>Zusatzmodule ein- und ausschalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:keyword term="Importieren: VDV452-Daten" />
+            <MadCap:keyword term="VDV 452-Import" />
+            <MadCap:keyword term="Exportieren:VDV452" />Über die <MadCap:variable name="PTV_Manual.VDV_452" />-Schnittstelle können Sie  Daten des in der VDV-Schrift 452, Stand 03/08 beschriebenen ÖPNV-Datenmodell 5.0, die im VDV-452-Dateiformat, Version 1.4 vorliegen in <MadCap:variable name="PTV_Manual.Programmname" />einlesen. Außerdem können Sie <MadCap:variable name="PTV_Manual.Programmname" />-Daten nach <MadCap:variable name="PTV_Manual.VDV_452" /> exportieren. </p>
+        <p class="Text"> <MadCap:variable name="PTV_Manual.VDV_452" /> ist ein Dateiformat zum Datenaustausch zwischen ÖPNV-Anwendungen. Die Schnittstellenbeschreibung in den VDV Schriften 451 und 452, sowie weitere Informationen zum Verband Deutscher Verkehrsunternehmen finden Sie unter <a href="http://www.vdv.de/wir_ueber_uns/vdv_projekte/oepnv_datenmodell.html" target="_blank">http://www.vdv.de/wir_ueber_uns/vdv_projekte/oepnv_datenmodell.html</a>.</p>
+        <p class="Text">Durch den Import erhalten Sie ein <MadCap:variable name="PTV_Manual.Programmname" />-Netz inklusive Fahrplan. Der Vorgang entspricht einem (nicht-additiven) Netzlesen. Es werden nur die für die Nutzung in <MadCap:variable name="PTV_Manual.Programmname" /> relevanten Teile des <MadCap:variable name="PTV_Manual.VDV_452" />-Datenmodells inklusive eventuell dafür vorhandener zusätzlicher Attribute übernommen. Informationen zu Umläufen werden ebenfalls importiert. Beim Export werden die aus dem Datenmodell von <MadCap:variable name="PTV_Manual.Programmname" />versorgbaren Tabellen des VDV-Datenmodells geschrieben, auch hier werden Umlaufinformationen berücksichtigt.</p>
+        <p class="Text">Sie können mit der Schnittstelle das deutsche und englische Datenformat importieren. Es werden beide in VDV 451 definierten Benennungsschemata für Dateien unterstützt, d.h. sowohl Dateinamen mit Tabellennummer als auch Dateinamen mit Tabellenname. Der Export aus <MadCap:variable name="PTV_Manual.Programmname" /> in das <MadCap:variable name="PTV_Manual.VDV_452" /> Datenformat erfolgt in deutsch, wenn Sie die <MadCap:variable name="PTV_Manual.Programmname" />-Programmoberfläche deutsch eingestellt haben, in englisch bei allen anderen Sprachen <MadCap:xref href="../2_Grundlagen_Programmbedienung/2_1_Sprache der Programmoberfläche wählen.htm" class="sieheUeberschrSeite"><span style="color: Black;" class="mcFormatColor">(</span><u>Sprache der Programmoberfläche wählen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Aufgrund von Unterschieden zwischen den Datenmodellen können unter Umständen nicht alle in einem <MadCap:variable name="PTV_Manual.VDV_452" />-Datensatz vorhandenen Daten kongruent importiert bzw. alle in <MadCap:variable name="PTV_Manual.Programmname" /> gepflegten Informationen inhaltsgleich nach <MadCap:variable name="PTV_Manual.VDV_452" /> exportiert werden. Aus diesem Grund entstehen auch bei zyklischer Anwendung des <MadCap:variable name="PTV_Manual.VDV_452" />-Imports und -exports ggf. nicht wieder identische Datensätze. Beispiele für solche Fälle sind:</p>
+        <ul>
+            <LI class="List0">IDs von Verkehrstagen: die Nummern der Verkehrstage müssen beim Import gelegentlich angepasst werden, da der Verkehrstag 1 in <MadCap:variable name="PTV_Manual.Programmname" />standardmäßig&#160;vorhanden und somit belegt ist. Diese neuen Nummern werden auch beim Export verwendet <MadCap:xref href="2_13_Gegenüberstellung von VDV 452- und Visum-Datenmodell.htm#-Tabelle2" class="sieheUeberschrSeite"><span style="color: Black;" class="mcFormatColor">(</span><u>-Tabelle $CALENDARPERIOD</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Namen und IDs von Linien, Linienrouten etc.: Die Objekte der Linienhierarchie werden im ÖPNV-Datenmodell über numerische IDs identifiziert, während im <MadCap:variable name="PTV_Manual.Programmname" />-Datenmodell Schlüssel aus den Namen der beteiligten Objekte (Linie, Linienroute, Richtung, Fahrzeitprofil) zusammengesetzt werden. Die numerischen IDs werden in benutzerdefinierten Attributen gespeichert. Beim Re-Import zuvor exportierter Daten erhalten die Objekte so gelegentlich abweichende IDs bzw. Namen.</LI>
+            <LI class="List0">Anzahl an Linien etc.: Beim Export aus <MadCap:variable name="PTV_Manual.Programmname" /> werden nur die von (aktiven) Fahrplanfahrtabschnitten referenzierten Objekte der Linienhierarchie und des Netzes exportiert. Linien ohne Fahrplanfahrtabschnitte werden somit beim&#160;Export nicht berücksichtigt, so dass bei einem Re-Import weniger Linien vorhanden sind.</LI>
+            <LI class="List0" style="mc-hyphenate-shortest-prefix: 6;">Anzahl an Fahrplanfahrten: In <MadCap:variable name="PTV_Manual.Programmname" /> können Linienrouten einen Haltepunkt mehrfach bedienen (Ringlinien), was im ÖPNV-Datenmodell nicht vorgesehen ist. Beim Export in das <MadCap:variable name="PTV_Manual.VDV_452" />-Format werden diese Linienrouten somit in Teilrouten aufgespalten, wodurch eine höhere Anzahl an Linienrouten und Fahrten resultiert, die auch beim Re-Import nach <MadCap:variable name="PTV_Manual.Programmname" /> erhalten bleibt, d.h. es werden nicht automatisch wieder Ringlinien gebildet.</LI>
+        </ul>
+        <h5>Themen</h5>
+        <ul>
+            <LI class="List0">
+                <MadCap:xref href="2_13_VDV 452-Daten importieren.htm" class="themenheadings">-Daten importieren</MadCap:xref>
+            </LI>
+            <LI class="List0">
+                <MadCap:xref href="2_13_Visum-Daten nach VDV452 exportieren.htm" class="themenheadings">-Daten nach  exportieren</MadCap:xref>
+            </LI>
+            <LI class="List0">
+                <MadCap:xref href="2_13_Gegenüberstellung von VDV 452- und Visum-Datenmodell.htm" class="themenheadings">Gegenüberstellung von - und -Datenmodell</MadCap:xref>
+            </LI>
+        </ul>
+    </body>
+</html>

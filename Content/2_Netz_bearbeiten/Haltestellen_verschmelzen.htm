@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="660" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_netz_bearbeiten_23091886_1327418">
+            </a>Haltestellen verschmelzen<a name="27237"></a></h3>
+        <p class="Text">
+            <MadCap:keyword term="Haltestellen: verschmelzen" />Sie können alle oder alle aktiven durch Fußwege verbundenen Haltestellen zu einer einzigen Haltestelle zusammenfassen und gleichzeitig die alten Streckengehzeiten in die Übergangsmatrix für die neue Haltestelle übernehmen.</p>
+        <p class="Text">Das Verfahren ermittelt für jedes Verkehrssystem vom Typ ÖVFuß im Netz sämtliche gerichteten Paare (a,b) von Haltestellenbereichen, für die es im Netz einen verbindenden Fußweg mit dem jeweiligen Verkehrssystem vom Typ ÖVFuß gibt. Optional können Sie die Wegesuche auf die aktiven Strecken einschränken. </p>
+        <p class="Text">Für jedes dieser Paare sei t(a,b) die aus dem Fußweg ermittelte Gehzeit. Dann gilt Folgendes:</p>
+        <p class="Text">Bezeichnen s(a) und s(b) die a und b bisher zugeordneten Haltestellen und gilt s(a) &lt;&gt; s(b), so werden die Haltestellen verschmolzen, indem der Haltestellenbereich b an die Haltestelle s(a) umgehängt wird.</p>
+        <ul>
+            <LI class="List0">Besitzt s(b) neben b noch weitere Haltestellenbereiche b’, werden auch diese an s(a) gehängt.</LI>
+            <LI class="List0">Sämtliche innerhalb von s(a) und s(b) zuvor definierten Übergangsgehzeiten zwischen Haltestellenbereichen bleiben erhalten.</LI>
+            <LI class="List0">s(b) ist nach Ausführung dieses Schritts eine isolierte Haltestelle, d.h. sie besitzt keinen Haltestellenbereich mehr. </LI>
+            <LI class="List0">Optional können Sie s(b) automatisch löschen.</LI>
+        </ul>
+        <p class="Text">t(a,b) wird in der vergrößerten Haltestelle s(a) als Übergangsgehzeit für das jeweilige Verkehrssystem von a nach b eingetragen. Dieser Schritt entfällt, falls a und b schon vorher zu derselben Haltestelle gehörten (d.&#160;h. s(a) = s(b)) und die dort definierte Übergangsgehzeit von a nach b kleiner ist als t(a,b).</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn Sie Haltestellen verschmelzen, wird das aktuelle Umlegungsergebnis gelöscht.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Setzen Sie bei Bedarf die Haltestellen aktiv, die sie verschmelzen möchten, über</p>
+        <ul>
+            <LI class="List1">die räumliche Auswahl <MadCap:xref class="sieheUeberschrSeite" href="Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> und/oder</LI>
+            <LI class="List1">Filterkriterien <MadCap:xref class="sieheUeberschrSeite" href="Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über Filter aktiv und passiv setzen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+        </ul>
+        <p class="Stepresult">Die ausgewählten Haltestellen sind aktiv.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie im Fenster <span class="gui_element">Netz</span> mit der rechten Maustaste auf die Schaltfläche <span class="gui_element">Haltestellen</span>.</p>
+        <p class="Stepresult">Das Kontextmenü <span class="gui_element">Haltestellen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie den Eintrag <span class="gui_element">Haltestellen verschmelzen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Mehrfach-Bearbeiten Haltestellen</span> öffnet sich. </p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_stop_merge.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000074px;" />
+        </p>
+        <table class="TableStyle-TipHint2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="476px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Ist der Netzobjekttyp <span class="gui_element">Haltestellen</span> ausgewählt, können Sie das Fenster <span class="gui_element">Mehrfach-Bearbeiten Haltestellen</span> auch über das Menü <span class="gui_element">Bearbeiten&#160;&gt; Haltestellen verschmelzen</span> aufrufen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Stellen Sie sicher, dass das Register <span class="gui_element">Sonderfunktionen</span> aktiv und in der Auswahlliste der Eintrag <span class="gui_element">Haltestellen verschmelzen</span> gewählt sind.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur aktive</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden nur aktive Haltestellen, die durch Fußwege verbunden sind, verschmolzen. </p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 0, 9997805px;" /> Ist die Option nicht ausgewählt, werden aktive und passive Haltestellen, die durch Fußwege verbunden sind, verschmolzen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Fußweg-Strecken betrachten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden bei der Wegesuche nur aktive Strecken berücksichtigt. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">neu entstandene isolierte Haltestellen löschen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden nach dem Verschmelzen alle Haltestellen gelöscht, die keinen Haltestellenbereich mehr besitzen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">benutzte Fußweg-Strecken sperren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden nach dem Verschmelzen die zuvor für die Fußwegverknüpfung benutzten Fußwegstrecken für das Verkehrssystem ÖVFuß gesperrt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Ausführen</span>.</p>
+        <p class="Stepresult">Die Haltestellen werden verschmolzen.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Schließen</span>.</p>
+    </body>
+</html>

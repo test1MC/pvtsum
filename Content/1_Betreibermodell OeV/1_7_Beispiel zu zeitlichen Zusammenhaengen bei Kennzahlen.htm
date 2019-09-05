@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="689" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="Mo;Sa;horizont;24h;à;Sonn;Di">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStd_TitnoHead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1174391">
+            </a>Beispiel zu zeitlichen Zusammenhängen bei Kennzahlen</h4>
+        <p class="Text">
+            <MadCap:keyword term="Kennzahlen: zeitliche Zusammenhänge (Beispiel)" />Bei der Hochrechnung auf den Analysehorizont werden die Kennzahlen der Verkehrsnachfrage (Verkehrsleistung, Erlöse), die Kennzahlen des Verkehrsangebots (Betriebsleistung, Kosten) und die Stundenkosten mit jeweils verschiedenen Hochrechnungsfaktoren hochgerechnet. Damit wird der Tatsache Rechnung getragen, dass die Verkehrsnachfrage zum Beispiel am Wochenende stärker abnehmen kann als das Verkehrsangebot. Gleichzeitig können sich am Sonntag höhere Personalkosten, das heißt höhere Stundenkosten ergeben.</p>
+        <p class="Text">Die Hochrechnungsfaktoren für Betriebsleistung und Stundenkosten können für jeden Verkehrstag einzeln angegeben werden. Auf diese Weise können bei einer Analyseperiode von einer Woche im August nicht nur die Kennzahlen von regelmäßig auftretenden Verkehrstagscodes (zum Beispiel Mo-Fr mit Faktor&#160;52), sondern auch saisonal beschränkte Verkehrstagscodes (zum Beispiel Sa + So in den Sommerschulferien mit Faktor&#160;6) korrekt auf einen Analysehorizont von einem Jahr hochgerechnet werden. </p>
+        <p class="Text">Die Hochrechnungsfaktoren vom Umlegungszeitraum auf Analyseperiode und -horizont werden für die Verkehrsleistung getrennt bei jedem Nachfragesegment angegeben. Der Hochrechnungsfaktor von Umlegungszeitraum auf Analyseperiode orientiert sich dabei an der inhaltlichen Bedeutung der Nachfragematrix für das Nachfragesegment. </p>
+        <ul>
+            <LI class="List0">Umfassen Umlegungszeitraum und Gültigkeitsbereich der Matrix die gesamte Analyseperiode, so ist dieser Faktor gleich 1. </LI>
+            <LI class="List0">Ist der Umlegungszeitraum kürzer als die Analyseperiode, so entspricht der Hochrechnungsfaktor dem Verhältnis zwischen der Nachfrage in der Analyseperiode und derjenigen im Umlegungszeitraum. </LI>
+            <LI class="List0">Bezieht sich die Nachfrageganglinie des Nachfragesegments nur auf einen Teil des Umlegungszeitraums, so entspricht der Hochrechnungsfaktor dem Verhältnis zwischen der Nachfrage in der Analyseperiode und derjenigen im Ganglinienzeitraum. </LI>
+        </ul>
+        <p class="Text">Das nachfolgende Beispiel zeigt, wie sich diese Art der Berechnung zur Rechenzeiteinsparung bei gleichförmiger Nachfrage nutzen lässt.</p>
+        <h5>Beispiel</h5>
+        <p class="Text">Die Analyseperiode und der Umlegungszeitraum soll jeweils eine Woche (Montag bis Sonntag) umfassen. Das Fahrplanangebot ist für Mo-Fr identisch. Für das Nachfragesegment „Pendler“ möge die Nachfrage an Montag bis Freitag jeweils gleich hoch sein und jeweils der gleichen Tagesganglinie unterliegen, am Wochenende besteht in diesem Segment keine Nachfrage. Als Aufkommen wird dem Nachfragesegment die Nachfragematrix <span class="gui_element">eines</span> Tages zusammen mit der Ganglinie für 24h, beginnend Montag 0:00, zugeordnet. Bei der Umlegung werden aufgrund der Nachfrageganglinie nur die Fahrten mit Abfahrt am Montag belastet. Um dennoch korrekte Wochenwerte als Belastungen pro Analyseperiode auszuweisen, erhält das Nachfragesegment „Pendler“ folgende Hochrechnungsfaktoren.</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="330px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Hochrechnung von ... auf ...</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Faktor</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Umlegungszeitraum <span class="_Override" style="font-family: Wingdings;">à</span> AP</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Umlegungszeitraum <span class="_Override" style="font-family: Wingdings;">à</span> AH (= Jahr)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">5 • 52 = 260</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Das einfache Beispiel einer Fahrt mit zwei Fahrtabschnitten (<MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1174420">Abbildung 1</MadCap:xref>) zeigt die Berechnung ausgewählter betrieblicher Kennzahlen für folgende Analysezeiträume.</p>
+        <ul>
+            <LI class="List0">die Analyseperiode einer Woche</LI>
+            <LI class="List0">den Analysehorizont eines Jahres</LI>
+            <LI class="List0">ein Analysezeitintervall Dienstag 7:00 – 8:00&#160;Uhr</LI>
+        </ul>
+        <p class="Text">Wie in <MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1174420">Abbildung 1</MadCap:xref> und <MadCap:xref class="Label_Table" href="#1_betreibermodell_oev_1878159914_1307089">Tabelle 1</MadCap:xref> dargestellt, verkehrt Fahrtabschnitt 1 täglich, während Fahrtabschnitt&#160;2 nur an Sonn- und Feiertagen angeboten wird.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Time_distance_Diagram.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_betreibermodell_oev_1878159914_1174420">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_26770">
+            </a>Zeit-Weg-Diagramm einer Fahrt mit zwei Fahrtabschnitten</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 493px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="221px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="68px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="105px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrtabschnitt 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Fahrtabschnitt 2</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Verkehrstag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">täglich</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Sonn-+Feiertag</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hochrechnungsfaktor Analysehorizont</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">52</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">63</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Abfahrt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">6:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Ankunft</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">7:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrtlänge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">30 km</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">30 km</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrtlänge 6:30 - 7:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">10 km</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">10 km</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrtlänge 7:00 - 7:15</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">10 km</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">10 km</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrtlänge 7:15 - 7:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">10 km</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Sitzplätze</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">200</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText_right">100</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_betreibermodell_oev_1878159914_1307089">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_27420">
+            </a>Weitere Angaben für die Fahrt mit zwei Fahrtabschnitten</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Table" href="#1_betreibermodell_oev_1878159914_1307117">Tabelle 1</MadCap:xref> zeigt die Berechnung der Sitzplatzkilometer. Dabei wird die Sitzplatzkapazität mit der Fahrtlänge multipliziert und dann einfach über die Fahrtabschnitte aufsummiert.</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="198px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="297px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellCaption">Analyseperiode Mo-So</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrtabschnitt 1</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_right">200 Plätze • 20 km • 7 Tage = 28000 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrtabschnitt 2</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_right">100 Plätze • 20 km • 1 Tag =   2000 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_right">30000 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Analysehorizont</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrtabschnitt 1</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_right">28000 km • 52 = 1456000 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrtabschnitt 2</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_right">2000 km • 63 = 126000 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">&#160;</td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Analysezeitintervall Di 7:00 – 8:00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrtabschnitt 1</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_right">200 Plätze • 10 km = 2000 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrtabschnitt 2</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_right">100 Plätze •   0 km =        0 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body2">
+                        <p class="CellText">Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText_right">2000 km</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_betreibermodell_oev_1878159914_1307117">
+                    </a>
+                    <a name="1_betreibermodell_oev_1878159914_58280">
+                    </a>Berechnung der Sitzplatzkilometer</p>
+            </caption>
+        </table>
+        <p class="Text">Im Gegensatz zu den Sitzplatzkilometern ist bei der Berechnung der Servicekilometer (oft auch als Lastkilometer oder Zugkilometer bezeichnet) eine einfache Aufsummierung über die Fahrtabschnitte nicht zulässig. Hier muss berücksichtigt werden, dass überlagernde Fahrtabschnitte nur einfach gezählt werden dürfen. Das ist insbesondere für die Ermittlung eventueller Trassenkosten wichtig, die aus den Servicekilometern abgeleitet werden. Trassenkosten werden auf der Basis von Servicekilometern unabhängig von der Behängung berechnet. Bei der Hochrechnung auf den Analysehorizont können unterschiedliche Hochrechnungsfaktoren der Fahrtabschnitte auftreten. In diesem Fall findet eine Maximumbildung statt. Im Beispiel in <MadCap:xref class="Label_Table" href="#1_betreibermodell_oev_1878159914_1307141">Tabelle 4</MadCap:xref> ist das am Sonntag der Fall. Die Berechnung der Servicezeit erfolgt analog.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="116px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="119px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="112px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="148px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Analyseperiode Mo-So</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Analysehorizont</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Analysezeitraum Di 7:00-8:00</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Montag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">20 km • 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">20 km • 52</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">10 km • 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Dienstag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">20 km • 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">20 km • 52</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">10 km • 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mittwoch</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">20 km • 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">20 km • 52</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">10 km • 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Donnerstag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">20 km • 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">20 km • 52</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">10 km • 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Freitag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">20 km • 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">20 km • 52</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">10 km • 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Samstag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">20 km • 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">20 km • 52</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">10 km • 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Sonntag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">10 km • 1</p>
+                        <p class="CellText_right">+ 10 km • 1</p>
+                        <p class="CellText_right">+ 10 km • 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">10 km • 52</p>
+                        <p class="CellText_right">+ 10 km • MAX</p>
+                        <p class="CellText_right">52;63)</p>
+                        <p class="CellText_right">+ 10 km • 63</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">20 km • 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_right">150 km</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_right">8.020 km</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText_right">10 km</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+            <a name="1_betreibermodell_oev_1878159914_1307141">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_84125">
+            </a>Berechnung der Servicekilometer</p>
+    </body>
+</html>

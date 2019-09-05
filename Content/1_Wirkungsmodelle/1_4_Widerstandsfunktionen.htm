@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="Relations;ij;nullnull;bzw;etc" MadCap:lastBlockDepth="4" MadCap:lastHeight="1260" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_wirkungsmodelle_4274163066_1025999">
+            </a>
+            <MadCap:keyword term="Widerstandsfunktionen" />
+            <a name="1_wirkungsmodelle_4274163066_13156">
+            </a>Widerstandsfunktionen</h2>
+        <p class="Text">Eine Widerstandsfunktion misst ganz allgemein den Aufwand, der mit einem Verkehrsprozess verbunden ist. Zu diesem Aufwand werden alle Umstände zusammengefasst, die den Teilnehmer von der Durchführung des Prozesses abhalten und somit einen Widerstand bilden. Beispiele für Aufwände sind vor allem die für den Prozess benötigte Zeit sowie die damit verbundenen Kosten. Es können aber auch subjektive Kriterien in den Widerstand eingehen. So kann beispielsweise der Widerstand einer bestimmten Verbindung im ÖV dadurch steigen, dass bestimmte Komfort-Kriterien nicht erfüllt werden.</p>
+        <p class="Text">Widerstandsfunktionen spielen in mehreren Wirkungsmodellen eine entscheidende Rolle. In der Umlegung ordnet die Widerstandsfunktion einer Route oder Verbindung einen Aufwand zu. Im IV geht in diesen Widerstand vor allem die Reisezeit im belasteten Netz ein, es können aber auch weitere Eigenschaften wie Fahrtkosten und eine eventuelle Maut eingehen. Bei dynamischen Umlegungen kommt außerdem noch die Abweichung des Abfahrtszeitpunktes vom Wunsch-Abfahrtszeitpunkt hinzu. Im ÖV wirken neben der Reisezeit vor allem die Umsteigehäufigkeit und der Fahrpreis auf den Widerstand ein.</p>
+        <p class="Text">Problematisch ist bei Widerstandsfunktionen häufig die Tatsache, dass völlig unterschiedliche Aspekte eingehen und letztlich eine gemeinsame Bewertung in Form einer Zahl ergeben müssen. Diese unterschiedlichen Aspekte, die teils in unterschiedlichen Einheiten gemessen werden, müssen also umgerechnet und gegeneinander gewichtet werden. Im Allgemeinen ist die Gewichtung der Faktoren für verschiedene Gruppen von Bewertenden unterschiedlich. Aus diesem Grund können Widerstandsfunktionen beispielsweise bei der Umlegung pro Verkehrssystem <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell IV/2_5_Widerstandsfunktionen definieren und verwenden.htm#2_einstellungen_benutzermodell_iv_1682368020_1034717"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Widerstandsfunktionen definieren und verwenden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> und bei der Umlaufbildung pro Fahrzeugkombination definiert werden <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Parameter der Umlaufbildung.htm#2_einstellungen_betreibermodell_oev_1111312306_1064843"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Parameter der Umlaufbildung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">In <MadCap:variable name="PTV_Manual.Programmname" /> werden Widerstandsfunktionen in den folgenden Kontexten verwendet:</p>
+        <ul>
+            <LI class="List0">Umlegung (Wirkungsmodell Benutzer): Die Widerstandsfunktion ordnet jedem Weg, also je nach Art der Umlegung jeder Route oder jeder Verbindung, den Aufwand zu, den der Reisende erbringen muss, wenn er sich für diesen Weg entscheidet. Das natürlichste Kriterium ist die Reisezeit, die Einheit ist entsprechend Zeit [s]. Speziell im IV ist die Reisezeit auf einer Strecke nicht konstant, sondern hängt von der Belastung ab, wobei der Zusammenhang durch eine CR-Funktion beschrieben wird.</LI>
+            <LI class="List0">Nachfragemodelle (Wirkungsmodell Benutzer): Im Rahmen von Verkehrsverteilung, Moduswahl sowie kombinierten Verfahren für Verkehrsverteilung und Moduswahl ordnet die Widerstandsfunktion einer Quelle-Ziel-Beziehung bzw. der Auswahl eines Modus für diese Beziehung den Aufwand zu, der bei dieser Wahl zu überwinden ist. Traditionell spricht man in diesem Zusammenhang von Nutzenfunktionen. Der Nutzen ist dabei aber lediglich der negative Widerstand des Prozesses, das dahinter stehende Konzept ist völlig gleich.</LI>
+            <LI class="List0">Umlaufbildung (Wirkungsmodell Betreiber): Die Widerstandsfunktion ordnet jeder Leistung (Fahrplanfahrt, Leerfahrt, Stand etc.) in einem Umlauf den Aufwand zu, der entsteht, wenn die Leistung durch diesen Umlauf erbracht wird. Das natürlichste Kriterium sind hier die Kosten.</LI>
+        </ul>
+        <p class="Text">Trotz dieser sehr unterschiedlichen Einsatzbereiche ist die Struktur der Widerstandsfunktionen stets gleich: Jede Widerstandsfunktion besteht aus einer Summe, in der jeder Summand einen bestimmten Aspekt des Aufwands bewertet und durch einen Koeffizienten gewichtet wird (siehe <MadCap:xref class="Label_Image" href="#1_wirkungsmodelle_4274163066_1035724">Abbildung&#160;55</MadCap:xref>). Um den Widerstand eines Verkehrsprozesses zu berechnen, werden zunächst die Eigenschaften des Prozesses bezüglich eines jeden Aspekts bestimmt. Anschließend wird jeder Aspekt separat bewertet, im IV vor allem durch Auswertung der CR-Funktionen. Diese Bewertungen der Einzelaspekte werden dann mit den Gewichtungsfaktoren versehen und aufsummiert.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Impedance_Calculation_Example.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_wirkungsmodelle_4274163066_1035724">
+            </a>
+            <a name="1_wirkungsmodelle_4274163066_84235">
+            </a>Widerstandsberechnung für eine ÖV-Verbindung, zur Verdeutlichung in der Einheit [min] dargestellt</p>
+    </body>
+</html>

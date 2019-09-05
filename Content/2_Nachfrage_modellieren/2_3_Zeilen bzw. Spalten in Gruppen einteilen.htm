@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:lastBlockDepth="6" MadCap:lastHeight="881" MadCap:lastWidth="1055" MadCap:ignoredWords="Symmetrize;bzw;zeilen;$O;usw;of;gpm;bzgl;cod">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_nachfrage_modellieren_1800171850_1604609">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_18693">
+            </a>Zeilen bzw. Spalten in Gruppen einteilen</h4>
+        <p class="Text">Sie haben mehrere Möglichkeiten, die Bezirke in Gruppen einzuteilen:</p>
+        <ul>
+            <LI class="List0">Gebietszuordnung aus einer entsprechenden Parameterdatei einlesen, die Sie beim Aggregieren erzeugt haben <MadCap:xref class="sieheUeberschrSeite" href="2_3_Zeilen und Spalten für die Aggregierung auswählen.htm#2_nachfrage_modellieren_1800171850_1583483"><span style="color: Black;" class="mcFormatColor">(</span><u>Zeilen und Spalten für die Aggregierung auswählen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">Bezirke entsprechend der Attributwerte eines Attributs in Gruppen einteilen</LI>
+        </ul>
+        <p class="List_Text0">Diese Funktion steht nur für <MadCap:variable name="PTV_Manual.Programmname" />-Matrizen zur Verfügung.</p>
+        <ul>
+            <LI class="List0">Einteilung manuell festlegen</LI>
+        </ul>
+        <h5 MadCap:autonum="">Gebietszuordnung aus einer Datei einlesen</h5>
+        <p class="Text">Wenn Sie zuvor eine Gebietszuordnung als Datei <span class="path">*.xml</span> oder <span class="path">*.cod</span> gespeichert haben, beispielsweise beim Aggregieren, können Sie diese einlesen <MadCap:xref class="sieheUeberschrSeite" href="2_3_Zeilen und Spalten für die Aggregierung auswählen.htm#2_nachfrage_modellieren_1800171850_1583483"><span style="color: Black;" class="mcFormatColor">(</span><u>Zeilen und Spalten für die Aggregierung auswählen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass das Fenster <span class="gui_element">Gebietsbezogenes Hochrechnen</span> geöffnet ist.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Parameter-Datei öffnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Parameter für Matrixoperationen öffnen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie die gewünschte Datei aus.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Bestätigen Sie mit <span class="gui_element">Öffnen</span>.</p>
+        <p class="Result">Die Gebietszuordnungen werden angezeigt.</p>
+        <h5 MadCap:autonum="">Gebietszuordnung aus einem Attribut erzeugen</h5>
+        <p class="Text">Für <MadCap:variable name="PTV_Manual.Programmname" />-Matrizen können Sie die Bezirke entsprechend der Werte eines bestimmten Attributs in Gebiete einteilen. Beispielsweise können Sie das Attribut <span class="gui_element">Oberbezirks-Nummer</span> verwenden, um die Bezirke entsprechend ihrer Zugehörigkeit zu Oberbezirken in Gruppen einzuteilen.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn Sie eine Gebietszuordnung aus einem Attribut erzeugen, werden alle anderen Einträge in der Liste gelöscht.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass das Fenster <span class="gui_element">Gebietsbezogenes Hochrechnen</span> geöffnet ist.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Aus Attribut erzeugen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Attribute</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie das gewünschte Attribut aus.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Gebietszuordnungen werden erzeugt. Bezirke mit gleichem Attributwert werden gruppiert.</p>
+        <h5 MadCap:autonum="">Gebiet manuell definieren</h5>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass das Fenster <span class="gui_element">Gebietsbezogenes Hochrechnen</span> geöffnet ist.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Einfügen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Auswahl der Bezirke</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie in der Liste die Objekte aus, die Sie in eine Gruppe einteilen möchten.</p>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Über die Schaltflächen <span class="gui_element">Alle an</span> und <span class="gui_element">Alle aus</span> können Sie alle Objekte auswählen bzw. nicht auswählen. Über die Schaltfläche <span class="gui_element">Invertieren</span> können Sie die aktuelle Auswahl umkehren.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Gebietszuordnung wird als neue Zeile in der Liste angezeigt.</p>
+        <h5 MadCap:autonum="">Gebietseinteilung ändern</h5>
+        <ul>
+            <LI class="Stepone">Über die Schaltfläche <span class="gui_element">Bearbeiten</span> ändern Sie die Gebietszuordnung des aktuell ausgewählten Gebiets.</LI>
+            <LI class="Stepone">Über die Schaltfläche <span class="gui_element">Löschen</span> löschen Sie die aktuell ausgewählten Gebietszuordnungen.</LI>
+        </ul>
+    </body>
+</html>

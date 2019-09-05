@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="629" MadCap:lastWidth="510" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1180231">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_81299">
+            </a>Partitionierung</h4>
+        <p class="Text">Bei der Umlaufbildung werden die Fahrplanfahrtabschnitte des Modells verplant, die entstehenden Umläufe fahren also nacheinander Fahrplanfahrtabschnitte ab. Zu verplanen sind entweder alle oder alle aktiven oder orthogonal dazu alle oder alle noch nicht in der Zielumlaufversion in Umläufen gebundenen Fahrplanfahrtabschnitte <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Parameter der Umlaufbildung.htm#2_einstellungen_betreibermodell_oev_1111312306_1064843"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Parameter der Umlaufbildung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Vor Aufbau des Graphen wird das Problem in unabhängig zu bearbeitende Teilprobleme, sogenannte Partitionen, zerlegt. Eine Partition besteht aus allen Fahrplanfahrtabschnitten, denen dieselbe Fahrzeugkombination zugeordnet ist. Die Zerlegung in diese Teilprobleme ist möglich, da ein Umlauf immer von genau einer Fahrzeugkombination absolviert wird, also innerhalb des Umlaufs kein Wechsel des Fahrzeugs stattfindet. Auch die Fahrplanfahrtabschnitte, die keine Fahrzeugkombination besitzen, bilden zusammen eine Partition. Für jede Partition werden alle weiteren Verfahrensschritte getrennt durchgeführt. Es wird also jeweils ein eigener Graph aufgebaut, gelöst und das Ergebnis in Umläufe dekomponiert.</p>
+        <p class="Text">Optional kann die Umlaufbildung noch weiter partitioniert werden nach Betreiber, Verkehrssystem und Linie <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Parameter der Umlaufbildung.htm#2_einstellungen_betreibermodell_oev_1111312306_1064843"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Parameter der Umlaufbildung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Wird beispielsweise ein gleicher Betreiber für die Folgefahrt gefordert, wird zusätzlich nach Betreibern partitioniert. In diesem Fall enthält jedes Teilproblem und somit jeder resultierende Umlauf nur Fahrplanfahrtabschnitte einer Fahrzeugkombination und eines Betreibers, es kann also kein Betreiberwechsel innerhalb eines Umlaufs stattfinden. Innerhalb des Verfahrens wird ein eigener Graph für jede Kombination aus Fahrzeugkombination und Betreiber aufgebaut und die weiteren Verfahrensschritte separat für jeden einzelnen dieser Graphen durchgeführt. <MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1180847">Abbildung&#160;180</MadCap:xref> zeigt die Partitionierung an einem Beispiel. Hier gibt es Fahrplanfahrtabschnitte mit den Fahrzeugkombinationen Gelenkbus, Standardbus und Tram. Fahrplanfahrtabschnitte mit Gelenkbus werden von den Betreibern 1 und 2 gefahren, Fahrplanfahrtabschnitte mit der Tram nur vom Betreiber 1. Wird die Umlaufbildung zusätzlich nach Betreibern partitioniert, so werden insgesamt also fünf Graphen aufgebaut, für die jeweils getrennt das Flussproblem und die Dekomposition zu Umläufen durchgeführt wird.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Partitioning.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_betreibermodell_oev_1878159914_1180847">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_60019">
+            </a>Beispiel für Partitionierung nach Fahrzeugkombination und Betreiber</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Kapazitätsrestriktionen in Depots können nur dann berücksichtigt werden, wenn der Graph nicht weiter als nach der Fahrzeugkombination partitioniert wird, wenn also keine der Optionen <span class="path">Gleicher Betreiber für Folgefahrt</span>, <span class="path">Gleiches Verkehrssystem für Folgefahrt</span> oder <span class="path">Gleiche Linie für Folgefahrt </span>gewählt ist. Der Grund hierfür ist, dass Kapazitäten in Depots jeweils pro Fahrzeugkombination definiert werden. Erfolgt eine noch detailliertere Partitionierung zum Beispiel nach Betreibern, so hat das Verfahren keine Möglichkeit, die Kapazität noch weiter bis auf die Ebene Fahrzeugkombination x Betreiber aufzuteilen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

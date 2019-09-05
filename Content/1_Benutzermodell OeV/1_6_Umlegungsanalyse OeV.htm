@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="8" MadCap:lastHeight="677" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb;Goodness;of;UmlgAbw;ASSIGNDEVIATION;AbsRMSE;Abs;RMSE;Achsabs;ax;AnteilAkzGEH">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStd_TitnoHead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_oev_2318507456_1086574">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_34177">
+            </a>Umlegungsanalyse ÖV</h2>
+        <p class="Text">
+            <MadCap:keyword term="Umlegungsanalyse: ÖV" />Die Umlegungsanalyse dient der Berechnung der Korrelation (Goodness-of-Fit Report) zwischen berechneten und beobachteten Werten von Attributen eines ausgewählten Netzobjekttyps.</p>
+        <ul>
+            <LI class="List0">Der berechnete Wert stammt aus der Umlegung oder dem Netzmodell. </LI>
+            <LI class="List0">Der beobachtete Wert kann ein Zähl- oder Messwert sein.</LI>
+        </ul>
+        <p class="Text">Hier sind einige Anwendungsbeispiele.</p>
+        <ul>
+            <LI class="List0">Reisezeitvergleiche zwischen IV und ÖV</LI>
+            <LI class="List0">Reisezeitvergleiche verschiedener Szenarien</LI>
+            <LI class="List0">Berechnete und gezählte Belastungen (Strecken, Abbieger oder Oberabbieger)</LI>
+            <LI class="List0">Berechnete und gemessene Geschwindigkeiten</LI>
+        </ul>
+        <p class="Text">Zur Auswahl stehen alle numerischen Eingabe- und Ausgabe-Attribute der folgenden Netzobjekttypen.</p>
+        <ul>
+            <LI class="List0">Strecken</LI>
+            <LI class="List0">Knoten </LI>
+            <LI class="List0">Abbieger</LI>
+            <LI class="List0">Oberknoten</LI>
+            <LI class="List0">Oberabbieger</LI>
+            <LI class="List0">Linien </LI>
+            <LI class="List0">Linienrouten </LI>
+            <LI class="List0">Screenlines</LI>
+            <LI class="List0">Fahrzeitprofile</LI>
+            <LI class="List0">Wege</LI>
+        </ul>
+        <p class="Text">Voraussetzung ist, dass die beobachteten Werte &gt;0 sein müssen für den gewählten Netzobjekttyp.</p>
+        <p class="Text">Sie können wählen, welche Objekte Sie in die Umlegungsanalyse einbeziehen wollen. Es bestehen drei Möglichkeiten.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Alle Objekte</span> des gewählten Netzobjekttyps </LI>
+            <LI class="List0">
+                <span class="gui_element">Nur aktive Objekte</span>
+            </LI>
+            <LI class="List0">
+                <span class="gui_element">Nur Objekte mit beobachtetem Wert &gt; 0</span>.</LI>
+        </ul>
+        <p class="Text">Optional können Sie bei der Umlegungsanalyse benutzerdefinierte Toleranzen für benutzerdefinierte Werteklassen des berechneten Attributs berücksichtigen.</p>
+        <p class="Text">Die Güte der Korrelation kann auf zwei Arten ermittelt und ausgegeben werden.</p>
+        <ul>
+            <LI class="List0">Gruppiert (je Wert des Klassifizierungsattributs)</LI>
+            <LI class="List0">Insgesamt für alle einbezogenen Netzobjekte</LI>
+        </ul>
+        <p class="Text">Für die Ausgabe wurde das Datenmodell für die oben genannten Netzobjekttypen erweitert um das berechnete Attribut <span class="gui_element">Umlegungsabweichung</span> (<span class="gui_element">UmlgAbw / ASSIGNDEVIATION</span>) vom Typ <span class="gui_element">Real</span>, das wie alle anderen <MadCap:variable name="PTV_Manual.Programmname" />-Attribute für das jeweilige Netzobjekt grafisch und tabellarisch dargestellt werden kann.</p>
+        <p class="Text">Darüber hinaus werden diverse Kenngrößen (je Gruppe oder insgesamt) berechnet, die als Liste oder als Diagramm ausgegeben werden können.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Ein Umlegungsergebnis ist nicht mehr zwingend erforderlich für die Ermittlung des Korrelationskoeffizienten.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1180122">Tabelle 2</MadCap:xref> zeigt die Berechnungsvorschriften für die Ausgabeattribute der Umlegungsanalyse. In den Formeln gilt Folgendes:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Z</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Beobachtung (Zählung oder Messung)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">U</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Berechnung (Umlegung oder Netzmodell)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">N</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Anzahl Objekte mit beobachtetem Wert &gt; 0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="125px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="370px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">AbsRMSE</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">Abs RMSE</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Absolute Wurzel aus mittlerer quadrierter Abweichung</p>
+                        <p class="CellText">Stärkere Gewichtung signifikanter Differenzen zwischen beobachtetem und berechnetem Wert durch Quadrat nach</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/8_85.png" style="margin-bottom: 0, 007938385px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Achsabs</span>
+                        </p>
+                        <p class="CellText">Achsenabschnitt</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Koeffizient b bei linearer Regression 	<br />Siehe Excel, Lineare Regression (<span class="formula" style="line-height: 11pt;">y = ax + b</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">AnteilAkzGEH</span>
+                        </p>
+                        <p class="CellText">Anteil mit akzept GEH</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Anteil Objekte mit akzeptablem GEH-Wert (je Netzobjekt)</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/8_86.png" style="margin-bottom: 0, 007938385px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">AnteilAkzRelFehler</span>
+                        </p>
+                        <p class="CellText">Anteil mit akzept rel Fehler</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Anteil Objekte innerhalb der Toleranz</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/8_10.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">AnzBeob</span>
+                        </p>
+                        <p class="CellText">Anzahl Beobachtungen</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Anzahl Beobachtungen je Klasse (<span class="gui_element">Objekte mit beobachteter Wert &gt; 0</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">AnzKlasse</span>
+                        </p>
+                        <p class="CellText">Anzahl in Klasse</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Gesamtanzahl (= beobachtete + nicht-beobachtete) Objekte je Klasse</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">KlassenWert</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Wert des Klassifizierungsattributs (oder leer, falls nicht klassifiziert)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Korr</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Korrelationskoeffizient (Siehe Excel-Funktion <span class="gui_element">Pearson</span>)</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Der Wertebereich liegt zwischen -1 und 1, wobei folgendes gilt.</p>
+                        <ul>
+                            <LI class="List0Tab">- 1 = Beobachtung gegenläufig zur Berechnung</LI>
+                            <LI class="List0Tab">  0 = nicht korreliert (zufällig)</LI>
+                            <LI class="List0Tab">+1 = sehr gute Korrelation</LI>
+                        </ul>
+                        <p class="CellText">Das Verhältnis beobachteter/berechneter Wert sollte möglichst nahe 1 sein.</p>
+                        <p class="CellText">Bei nur zwei Werten &gt; 0 ist der Korrelationskoeffizient -1 oder 1.</p>
+                        <p class="CellText">Der Wert des Korrelationskoeffizienten erlaubt keine Rückschlüsse darauf, ob entweder alle beobachteten Werte größer (oder kleiner) sind als die berechneten Werte oder ob sowohl Abweichungen nach oben als auch Abweichungen nach unten vorliegen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">MittAbsFehler</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Mittlerer absoluter Fehler</p>
+                        <p class="CellText">Mittlere Abweichung der Absolutwerte(<span class="formula_symbol">d</span><span class="formula_subscript">a</span>) </p>
+                        <p class="CellText">(Differenz zwischen beobachtetem und berechnetem Wert)</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/8_87.png" style="margin-right: 0, 006240845px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">MittBeob</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="Formula">Mittlerer beobachteter Wert <img src="../Resources/Images/8_88.png" /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">MittRelFehler</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Mittlerer relativer Fehler</p>
+                        <p class="CellText">Mittlere Abweichung der Absolutwerte in % (<span class="formula_symbol">d</span><span class="formula_subscript">p</span>) nach</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/8_89.png" style="margin-right: 0, 01247406px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">R2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Bestimmtheitsmaß r<span class="_Override" style="font-size: 80%;vertical-align: super;">2	</span><br />Siehe Excel-Funktion <span class="gui_element">RSQ</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">RelRMSE</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Relative Wurzel aus mittlerer quadrierter Abweichung</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/8_90.png" style="margin-bottom: 0, 01417542px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">StdAbw</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Grad der Abweichung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Steigung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">Koeffizient a bei linearer Regression </p>
+                        <p class="CellText">Siehe Excel, <span class="gui_element">Lineare Regression</span> (<span class="formula" style="line-height: 11pt;">y = ax + b</span>)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_benutzermodell_oev_2318507456_1180122">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_28238">
+            </a>Berechnungsvorschriften für die Attribute der Umlegungsanalyse</p>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="681" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;gruppen;gruppe;ICU1;ICU2;Circular;Planning;Operations;pretimed;fully;actuated;semi;actuation;type;ICAArrivalType;14a;AnteilLKW;6b;ICAEingVerlustZVerw;ICAIstCentral;BusinessDistrict;Central;District;6e;ICASneakers;ICAZuflussFaktor;10b;14b;BusFrequenz;WDDTA;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;FS;BS;xd;KJ;k2;k1;s'';abflüssen;peak;hour;factor;LT;RT;vphpl;HV;bb;Lu;Lpb;Rpb;CBD;ST;Ui;PF;Ii;Ri;PA;bi;Volume;to;ICU;P1;P2;P3;6a;6c;6d;LUo;qr;po;ArrivalType;6j;3a;3b;pedu;pbT;rec;RTA;LTA;INRETS;Ausl;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TableStd_TitnoHead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_iv_2033098965_1058529">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_23385">
+            </a>Überblick über die IV-Umlegungsverfahren</h2>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> stellt mehrere Umlegungsverfahren für den IV zur Verfügung. Es gibt sowohl statische Umlegungsverfahren ohne explizite Modellierung der Zeit als auch Verfahren, die ein zeitdynamisches Modell des Verkehrsflusses verwenden.</p>
+        <ul>
+            <LI class="List0">Die <span class="gui_element">Sukzessivumlegung</span> teilt die Nachfragematrix prozentual in mehrere Teilmatrizen auf. Diese Teilmatrizen werden dann schrittweise auf das Netz umgelegt, wobei für die Routensuche der Widerstand berücksichtigt wird, der sich aus der Belastung des vorhergehenden Schrittes ergibt <MadCap:xref class="sieheUeberschrSeite" href="1_5_Sukzessivumlegung.htm#1_benutzermodell_iv_2033098965_1294801"><span style="color: Black;" class="mcFormatColor">(</span><u>Sukzessivumlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Die <span class="gui_element">Gleichgewichtsumlegung</span> verteilt die Nachfrage entsprechend dem ersten Wardrop’schen Prinzip, das folgendermaßen lautet: „Jeder einzelne Verkehrsteilnehmer wählt seine Route derart, dass die Fahrtdauer auf allen alternativen Routen letztlich gleich ist und jeder Wechsel auf eine andere Route die persönliche Fahrzeit erhöhen würde.“ Ausgehend von einer Sukzessivumlegung als Startlösung wird der Gleichgewichtszustand in einer mehrstufigen Iteration hergestellt. Im inneren Iterationsteilschritt werden paarweise je zwei Routen einer Beziehung durch Verlagern von Fahrzeugen ins Gleichgewicht gebracht. In der äußeren Iteration wird überprüft, ob aufgrund des aktuellen Netzzustands neue Routen mit geringeren Widerständen gefunden werden können <MadCap:xref class="sieheUeberschrSeite" href="1_5_Gleichgewichtsumlegung.htm#1_benutzermodell_iv_2033098965_1034670"><span style="color: Black;" class="mcFormatColor">(</span><u>Gleichgewichtsumlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Die <span class="gui_element">Gleichgewichtsumlegung LUCE</span> benutzt den LUCE-Algorithmus, der von Guido Gentile konzipiert wurde. Er arbeitete mit PTV zusammen, um eine praktische Umsetzung der Methode in <MadCap:variable name="PTV_Manual.Programmname" /> zu erzielen. Durch die Nutzung leicht berechenbarer Informationen, die aus den Ableitungen der Kantenkosten hinsichtlich der Kantenbelastungen gewonnen werden, erreicht LUCE eine sehr hohe Konvergenzgeschwindigkeit, indem es die Nachfrage jeder Quelle-Ziel-Beziehung gleichzeitig auf mehrere Wege umlegt <MadCap:xref class="sieheUeberschrSeite" href="1_5_Linear User Cost Equilibrium (LUCE).htm#1_benutzermodell_iv_2033098965_1297253"><span style="color: Black;" class="mcFormatColor">(</span><u>Linear User Cost Equilibrium (LUCE)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Das <span class="gui_element">Lernverfahren</span> bildet den „Lernprozess“ der Verkehrsteilnehmer bei der Benutzung des Netzes ab. Ausgehend von einer Alles-oder-Nichts-Umlegung berücksichtigen die Fahrer die Informationen der letzten Fahrt für die neue Routensuche <MadCap:xref class="sieheUeberschrSeite" href="1_5_Lernverfahren.htm#1_benutzermodell_iv_2033098965_1602281"><span style="color: Black;" class="mcFormatColor">(</span><u>Lernverfahren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Die <span class="gui_element">Umlegung mit ICA</span> legt den Fokus auf Widerstände an den Knotenpunkten. Hier werden Fahrstreifenaufteilungen und weitere Details explizit berücksichtigt. Insbesondere werden Abhängigkeiten zwischen den einzelnen Abbiegern an einem Knoten berücksichtigt. Bei anderen Umlegungsverfahren führt eine detaillierte Betrachtung der Knotenwiderstände in der Regel zu ungünstigem Konvergenzverhalten. Die Umlegung mit ICA arbeitet mit abbiegerfeinen Widerstandsfunktionen, die mittels ICA ständig neu kalibriert werden. Dies führt zu einem deutlich besseren Konvergenzverhalten <MadCap:xref class="sieheUeberschrSeite" href="1_5_Umlegung mit ICA.htm#1_benutzermodell_iv_2033098965_1379720"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlegung mit ICA</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Die <span class="gui_element">Stochastische Umlegung</span> trägt dem Umstand Rechnung, dass die für das Routenwahlverhalten relevanten Kenngrößen der einzelnen Routen (Fahrzeit, Länge, Kosten) von den Verkehrsteilnehmern subjektiv wahrgenommen werden, teilweise aufgrund unvollständiger Information. Zusätzlich hängt die Routenwahl von individuellen Präferenzen der Verkehrsteilnehmer ab, die gar nicht im Modell abgebildet werden. Beide Effekte zusammen führen dazu, dass in der Praxis auch Routen gewählt werden, die bei strenger Anwendung etwa des Wardrop’schen Prinzips nicht belastet würden, weil sie in Bezug auf die objektiven Kenngrößen suboptimal sind. In der Stochastischen Umlegung wird daher zunächst eine alternative Menge von Routen berechnet und die Nachfrage gemäß einem Aufteilungsmodell (zum Beispiel Logit) auf die Alternativen verteilt <MadCap:xref class="sieheUeberschrSeite" href="1_5_Stochastische Umlegung.htm#1_benutzermodell_iv_2033098965_1385331"><span style="color: Black;" class="mcFormatColor">(</span><u>Stochastische Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Das <span class="gui_element">TRIBUT-Verfahren</span>, das von der französischen Forschungsgesellschaft INRETS entwickelt wurde, eignet sich besonders für die Modellierung von Straßenbenutzungsgebühren. Im Gegensatz zu den klassischen Verfahren, die von einem konstanten Zeitwert (value of time) ausgehen, verwendet TRIBUT einen zufallsverteilten Zeitwert. Bei der Routensuche wird ein bikriterielles Mehrwegverfahren eingesetzt, das die Kriterien Zeit und Kosten gleichermaßen berücksichtigt. Straßenbenutzungsgebühren werden als verkehrssystemspezifischer Maut-Wert modelliert, entweder je <MadCap:variable name="PTV_Manual.Programmname" />-Strecke oder auch für Streckenfolgen zwischen benutzerdefinierten Knoten (nicht-lineare Mautsysteme) <MadCap:xref class="sieheUeberschrSeite" href="1_5_Verfahren TRIBUT.htm#1_benutzermodell_iv_2033098965_1038033"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahren TRIBUT</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">
+                <MadCap:variable name="PTV_Manual.Programmname" /> bietet in Zusammenarbeit mit der Universität Rom die <span class="gui_element">Dynamische Gleichgewichtsumlegung (DUE) </span>an. Der Algorithmus beinhaltet ein Rückstaumodell, kann zeitabhängige Kapazitäten und Mautgebühren verarbeiten und verfügt über ein Abfahrtszeitwahlmodell <MadCap:xref class="sieheUeberschrSeite" href="1_5_Dynamische Gleichgewichtsumlegung (DUE).htm#1_benutzermodell_iv_2033098965_1050702"><span style="color: Black;" class="mcFormatColor">(</span><u>Dynamische Gleichgewichtsumlegung (DUE)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Die <span class="gui_element">Dynamische Stochastische Umlegung</span> unterscheidet sich von allen bisher genannten Verfahren durch die explizite Modellierung der Zeitachse. Der Umlegungszeitraum wird in einzelne Zeitscheiben unterteilt und Belastung und Widerstand werden getrennt für jede solche Zeitscheibe ermittelt. Für jedes Abfahrtszeitintervall wird die Nachfrage auf die zur Verfügung stehenden Verbindungen (= Route + Abfahrtszeitpunkt) gemäß einem Aufteilungsmodell wie bei der Stochastischen Umlegung verteilt. Durch diese Modellierung werden vorübergehende Überlastungszustände im Netz abgebildet, es ergibt sich eine im Tagesverlauf variierende Routenwahl und eventuell auch eine Verschiebung der Abfahrtszeit gegenüber dem Wunschzeitpunkt <MadCap:xref class="sieheUeberschrSeite" href="1_5_Dynamische Stochastische Umlegung.htm#1_benutzermodell_iv_2033098965_1615475"><span style="color: Black;" class="mcFormatColor">(</span><u>Dynamische Stochastische Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. </LI>
+        </ul>
+        <p class="Text">Für jedes dieser Umlegungsverfahren kann eine beliebige Anzahl von Nachfragematrizen für die Umlegung ausgewählt werden.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Eine</span> Nachfragematrix (= Nachfragesegment) <span class="gui_element">eines</span> IV-Verkehrssystems, zum Beispiel für Pkw, wird umgelegt.</LI>
+            <LI class="List0">
+                <span class="gui_element">Mehrere</span> Nachfragematrizen, die die Nachfrage für ein oder für <span class="gui_element">mehrere</span> IV-Verkehrssysteme enthalten, zum Beispiel eine Pkw-Nachfragematrix und eine Lkw-Nachfragematrix, werden gleichzeitig umgelegt.</LI>
+        </ul>
+        <p class="Text">Abkürzungen, die im Zusammenhang mit dem Benutzermodell IV verwendet werden, zeigt die <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1531220">Tabelle 1</MadCap:xref>.</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="39px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="456px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Geschwindigkeit bei freiem Verkehrsfluss [km/h]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrzeit bei freiem Verkehrsfluss [s]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">akt</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Geschwindigkeit im belasteten Netz [km/h]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">akt</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrzeit im belasteten Netz [s]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">R</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Widerstand = <span class="formula">f </span>(<span class="formula">t</span><span class="formula_subscript">akt</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">q</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Belastung eines Netzobjektes [Pkw-E/Zeiteinheit] = Summe der Belastungen aller IV-Verkehrssysteme einschließlich Vorbelastung</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images/7_259.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">q</span>
+                            <span class="formula_subscript">max</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Kapazität [Pkw-E/Zeiteinheit]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Ausl</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Auslastung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">F</span>
+                            <span class="formula_subscript">ij</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Zahl der Fahrten [Kfz/Zeiteinheit] der Verkehrsbeziehung von Verkehrsbezirk <span class="formula">i</span> nach Verkehrsbezirk <span class="formula">j</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">F</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">Nachfragematrix, die die Nachfrage für alle Verkehrsbeziehungen enthält.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1531220">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_32176">
+            </a>Abkürzungen, die im IV-Benutzermodell verwendet werden</p>
+    </body>
+</html>

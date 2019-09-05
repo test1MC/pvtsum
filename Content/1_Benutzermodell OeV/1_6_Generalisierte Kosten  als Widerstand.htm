@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="667" MadCap:lastWidth="510" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;wahl;bzw;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;GE">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_oev_2318507456_1026939">
+            </a>
+            <MadCap:keyword term="Widerstandsfunktionen: taktfeine Umlegung" />
+            <a name="1_benutzermodell_oev_2318507456_81201">
+            </a>Generalisierte Kosten als Widerstand</h3>
+        <p class="Text">
+            <MadCap:keyword term="Taktfeine Umlegung: generalisierte Kosten" />
+            <MadCap:keyword term="Taktfeine Umlegung: Widerstand" />
+            <MadCap:keyword term="Widerstände: taktfeine Umlegung" />Für Routensuche und -wahl <MadCap:xref class="siehe_1" href="1_6_Beispiel fuer die taktfeine Umlegung.htm#1_benutzermodell_oev_2318507456_1079109"><span style="color: Black;" class="mcFormatColor">(</span><u>Routensuche</u></MadCap:xref><MadCap:xref class="siehe_2" href="1_6_Beispiel fuer die taktfeine Umlegung.htm#1_benutzermodell_oev_2318507456_1078728"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Routenwahl</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> werden Wege mit ihrem <span class="gui_element">Widerstand</span> beziehungsweise mit ihren <span class="gui_element">generalisierten Kosten</span> bewertet <MadCap:xref class="sieheUeberschrSeite" href="1_6_Widerstandsfunktionen im OeV.htm#1_benutzermodell_oev_2318507456_1066686"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstandsfunktionen im ÖV</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Diese enthalten eine empfundene Reisezeit ERZ und eine tarifbezogene Komponente (Fahrpreis bzw. Anzahl der Tarifpunkte).</p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">WID = ERZ • FakERZ + AnzahlTarifpunkte bzw. Fahrpreis  • FakTarif</span>
+        </p>
+        <h5>Empfundene Reisezeit (ERZ)</h5>
+        <p class="Text">Die empfundene Reisezeit <span class="formula">ERZ</span> hat die Einheit Minuten und setzt sich aus folgenden Zeiten zusammen:</p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">ERZ [min] = </span>
+        </p>
+        <p class="Formula">Fahrzeit im Fzg • FakFZ • Gewichtungsattribut des Fahrzeitprofilverlaufs</p>
+        <p class="Formula">+<span class="formula"> ÖV-Zusatz-Fahrzeit • FakXZ</span></p>
+        <p class="Formula">+<span class="formula"> Zugangszeit • FakZZ</span></p>
+        <p class="Formula">+<span class="formula"> Abgangszeit • FakAZ</span></p>
+        <p class="Formula">+<span class="formula"> Gehzeit • FakGZ</span></p>
+        <p class="Formula">+<span class="formula"> Startwartezeit • FakSZ </span>(wobei die Startwartezeit durch eine Formel berechnet wird)</p>
+        <p class="Formula">+ <span class="formula">Umsteigewartezeit • FakUZ • Gewichtungsattribut des Haltestellenbereichs</span></p>
+        <p class="Formula">+ <span class="formula">Umsteigehäufigkeit • FakUH</span></p>
+        <p class="Formula">+ <span class="formula">Einsteigezuschlag ÖV</span> (Attribut des Fahrzeitprofils)</p>
+        <p class="Formula">+ <span class="formula">Einsteigezuschlag ÖV-Zusatz</span> (Attribut des Verkehrssystems)</p>
+        <p class="Formula">+ <span class="formula">mittlere Verspätung</span> (Attribut des Fahrzeitprofilverlaufs)</p>
+        <p class="Text">Reisezeiten, Kosten usw. sind hierbei deterministisch. Die Startwartezeit und die Umsteigewartezeit ergeben sich aus dem zuvor bestimmten Takt der ÖV-Linie, in die der Fahrgast an der Start- oder an der Umsteigehaltestelle einsteigt. Sie hängen – außer bei Koordinierung <MadCap:xref class="sieheUeberschrSeite" href="1_6_Koordinierung.htm#1_benutzermodell_oev_2318507456_1077980"><span style="color: Black;" class="mcFormatColor">(</span><u>Koordinierung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> – im Rahmen ihres Takts auf zufällige Weise von der relativen Lage der Umsteige-Linien zueinander ab.</p>
+        <p class="Text">Um etwa bekannte Auslastungseffekte (zum Beispiel fehlende Sitzplatzgarantie) oder andere Aspekte (zum Beispiel Komfort) einer Linie zu modellieren, kann die Fahrzeit mit einem beliebigen Attribut des Fahrzeitprofilverlaufs multipliziert werden.</p>
+        <p class="Text">Andere individuelle Zuschläge und Gewichtungsfaktoren für Ein- und Umsteigevorgänge können über folgende Größen einfließen <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Taktfeine Umlegung_ Register Widerstand.htm#2_einstellungen_benutzermodell_oev_2589728191_1035977"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Taktfeine Umlegung: Register Widerstand</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <ul>
+            <LI class="List0">Wartezeitfaktoren und -zuschläge für die Startwartezeit aus beliebigen Attributen von Haltestellenbereich und/oder Fahrzeitprofil</LI>
+            <LI class="List0">Ein Wartezeitfaktor für die Umsteigewartezeit aus einem beliebigen Haltestellenbereichs-Attribut</LI>
+            <LI class="List0">Ein Einsteigezuschlag aus einem beliebigen Fahrzeitprofilattribut (für ÖV-Linien) bzw. aus einem beliebigen VSys-Attribut (für Verkehrssysteme des Typs ÖV-Zusatz)</LI>
+            <LI class="List0">Eine mittlere Verspätung aus einem beliebigen Fahrzeitprofil-Element-Attribut</LI>
+        </ul>
+        <p class="Text">Mit den Zuschlägen können Sie beispielsweise abbilden, dass manche Linien von Fahrgästen bevorzugt werden – wegen ihres höheren Reisekomforts, oder weil sie in der Regel pünktlich sind. Über die Wartezeitfaktoren und -zuschläge können Sie ausdrücken, dass Fahrgäste an manchen Haltestellen lieber verweilen als an anderen.</p>
+        <p class="Text">Im Fall der Startwartezeit können Sie durch Fahrzeitprofil-abhängige Gewichtungsfaktoren unter anderem ausdrücken, dass Fahrgäste bei niedrigem Takt (d.&#160;h. langer Fahrzeugfolgezeit) über Fahrplankenntnis verfügen und nicht mehr zufällig zugehen. Konkret können Sie die Startwartezeit zum Beispiel auf einen Höchstwert X begrenzen, indem Sie für alle Fahrzeitprofile mit einem Takt T &gt; X den Startwartezeit-Gewichtungsfaktor X / T vergeben. Fahrzeitprofile mit einem Takt T &lt; X erhalten dann den Gewichtungsfaktor 1.</p>
+        <p class="Text">Bei der Nutzung von ÖV-Zusatz-Verkehrssystemen gibt es keine Wartezeiten, da das Angebot als permanent verfügbar betrachtet wird. Durch Einsteigezuschläge für Verkehrssysteme des Typs ÖV-Zusatz können Sie dennoch eine zeitliche Verzögerung beim Übergang abbilden.</p>
+        <h5>Anzahl Tarifpunkte</h5>
+        <p class="Text">Die <span class="formula">Anzahl Tarifpunkte</span> ist die Summe aller Tarifpunkte, die entlang des Weges überfahren werden. Tarifpunkte können entweder verkehrssystemspezifisch an Strecken geschrieben werden oder an die Fahrzeitprofile. Bei Fahrzeitprofilen gibt es vier Attribute: Tarifpunkte auf einem Fahrzeitprofilelement, Tarifpunkte für den Einstieg, für die Durchfahrt und für den Ausstieg an einer Haltestelle.</p>
+        <h5>
+            <a name="1_benutzermodell_oev_2318507456_19192">
+            </a>Fahrpreis</h5>
+        <p class="Text">Alternativ zu Tarifpunkten kann auch der Fahrpreis laut <MadCap:variable name="PTV_Manual.Programmname" />-Tarifmodell verwendet werden. Es gibt dabei keinerlei Einschränkungen hinsichtlich der Anzahl oder Eigenschaften der Tarifsysteme und Fahrkartenarten. </p>
+        <p class="Text">Im Gegensatz zur fahrplanfeinen Variante, bei der der Fahrpreis des Gesamtwegs als Widerstandskomponente in das Aufteilungsmodell eingeht, enthält der Widerstand der taktfeinen Umlegung die Summe der Fahrpreise der einzelnen Teilwege. Eine exakte Entsprechung des realen Tarifmodells liegt also genau dann vor, wenn die verwendeten Tarifsysteme die Eigenschaft „Fahrpreis bezieht sich auf = jeden Teilweg einzeln” besitzen, d.h. wenn der Fahrgast bei jedem Einstieg eine neue Fahrkarte löst. In anderen Fällen, insbesondere bei degressiven Tarifen über mehrere Teilwege hinweg, kann die im Widerstand verwendete Fahrpreis-Summe vom Fahrpreis des Gesamtwegs abweichen.</p>
+        <p class="Text">Die Verwendung von Fahrpreisen im Rahmen der taktfeinen Umlegung wird in untenstehendem Beispiel deutlich. </p>
+        <p class="Text">Es besteht eine Nachfrage von A nach B von 100 Fahrten. Das Angebot besteht aus zwei alternativen Busverbindungen. Das Modell umfasst 5 Tarifzonen, für die Fahrkarten wurde als Tarifstruktur ein Zonentarif gewählt. Die Tabelle zeigt den Fahrpreis in Abhängigkeit von der Anzahl der benutzten Tarifzonen.</p>
+        <p class="Image">
+            <img src="../Resources/Images/DIAG_Example_FaresHeadway.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStandard" style="width: 163px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="79px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="84px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Tarifzonen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Preis (GE)</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_mid">5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText_mid">&gt;2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText_mid">10</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Beispiel 1</h5>
+        <p class="Text">Es besteht je eine durchgehende Linie Nord und Süd. Beide Linien von A nach B haben einen 10-minütigen Takt. Die nördliche Linie durchläuft zwei Tarifzonen, der in der Widerstandsfunktion wirksame Fahrpreis beträgt 5 GE. Die südliche Linie durchläuft fünf Tarifzonen, der Fahrpreis beträgt 10 GE. Bei einer Widerstandsdefinition von 1 • Reisezeit + 2 • Fahrpreis sind die Belastungen für Linie Nord und Süd gleich.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 491px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="189px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="151px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="151px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Nord</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Süd</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">Reisezeit (min)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">20</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption">Tarifzonen (-)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">Preis Ticket (GE)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption">WID = 1<span class="formula" style="line-height: 11pt;">• </span><span class="formula" style="font-size: 8pt;line-height: 10pt;">Startwartezeit</span>+1<span class="formula" style="line-height: 11pt;">• </span><span class="formula" style="font-size: 8pt;line-height: 10pt;">Reisezeit </span>+ 2<span class="formula" style="line-height: 11pt;">• </span><span class="formula" style="font-size: 8pt;line-height: 10pt;">Fahrpreis</span></p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">zufällig in [0,10]+1<span class="formula" style="line-height: 11pt;">• </span>20+2<span class="formula" style="line-height: 11pt;">• </span>5 = zufällig in [30,40]</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">zufällig in [0,10]+1<span class="formula" style="line-height: 11pt;">• </span>10+2<span class="formula" style="line-height: 11pt;">• </span>10 = zufällig in [30,40]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellCaption">Belastung</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">50</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">50</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Herleitung der Aufteilung der Belastung im taktfeinen Umlegungsverfahren ist an einer anderen Stelle im Handbuch erläutert <MadCap:xref class="sieheUeberschrSeite" href="1_6_Beispiel fuer die taktfeine Umlegung.htm#1_benutzermodell_oev_2318507456_1078688"><span style="color: Black;" class="mcFormatColor">(</span><u>Beispiel für die taktfeine Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Da sowohl die Takte als auch festen Widerstandsanteile beider Routen identisch sind, ergeben sich hier gleiche Belastungen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Tabledist">&#160;</p>
+        <h5>Beispiel 2</h5>
+        <p class="Text">Nun besteht die Variante Nord aus zwei separaten Linien mit Anschlusskoordinierung, die jeweils eine Reisezeit von 10 Minuten haben. Übergangszeiten werden ebenso vernachlässigt wie ein Zuschlag für Umstiege. </p>
+        <p class="Text">Da die Fahrpreise in der Widerstandsberechnung des taktfeinen Verfahrens je Teilweg berechnet werden, ergibt sich ein gegenüber dem obigen Fall veränderter Widerstand: Der Fahrpreis für den ersten Abschnitt beträgt 5 GE (2 Zonen), der für den zweiten Abschnitt 3 GE (1 Zone), in der Summe geht also ein Fahrpreis von 8 GE in den Widerstand ein. Entsprechend ändert sich die Aufteilung der Belastung:</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 491px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="189px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="151px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="151px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Nord</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Süd</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">RZ (min)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">20</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption">Tarifzonen (-)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">Preis Ticket (GE)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">5+3 = 8</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption">WID = 1*<span class="formula">Startwartezeit</span>+1*<span class="formula">Reisezeit</span>+2*<span class="formula">Fahrpreis</span></p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">zufällig in [0,10]+1<span class="formula" style="line-height: 11pt;">• </span>20+2<span class="formula" style="line-height: 11pt;">• </span>8 = zufällig in [36,46]</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">zufällig in [0,10]+1<span class="formula" style="line-height: 11pt;">• </span>10+2<span class="formula" style="line-height: 11pt;">• </span>10 = zufällig in [30,40]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellCaption">Belastung</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">8</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">92</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Zur Erläuterung der Belastungsaufteilung: Im Bereich zwischen einem Widerstand von 30 und 36 entfallen alle Anteile auf Variante Süd. Im Bereich zwischen 36 und 40 beträgt die Wahrscheinlichkeit <img src="../Resources/Images/8_3.jpg" />. Das ergibt eine Wahrscheinlichkeit für Variante Süd von <img src="../Resources/Images/8_7.jpg" />.</p>
+        <p class="Text">Die Summation der Teilwegfahrpreise im Widerstand in Beispiel 2 entspricht der Situation, dass auf jedem Teilweg eine neue Fahrkarte gelöst werden muss. Liegt in Wirklichkeit jedoch ein anderes Tarifsystem zugrunde (weil der Fahrgast den Weg zum Beispiel mit einer einzigen Karte zurücklegen darf), ergibt sich hier eine Ungenauigkeit. Diese kann durch "Umsteigerrabatte" ausgeglichen werden: Nutzen Sie die Funktion <span class="gui_element">Umstiegsfahrpreise </span>im <MadCap:variable name="PTV_Manual.Programmname" />-Tarifmodell, um Preisnachlässe für Tarifsystemwechsel zu definieren, die den zu viel berechneten Fahrpreis wieder ausgleichen. In diesem Beispiel müsste ein Umstiegsfahrpreis von 5 GE - 8 GE = -3 GE definiert werden, um den im Widerstand wirksamen Fahrpreis zu korrigieren.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Der dargestellte Unterschied besteht nur bei der Berücksichtigung der Fahrpreise in der Widerstandsfunktion. Im Nachgang wirkt immer der echte Fahrpreis, also nicht die Summe der Teilwege. Das gilt insbesondere für die Ausgabe in Listen sowie für die Kenngrößenberechnung. Das heißt, für die Analyse einer Umlegung wird für jeden Weg der tatsächliche Fahrpreis ausgegeben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Berücksichtigung von Fahrpreisen kann die Rechenzeit für die Umlegung je nach Komplexität des Tarifmodells deutlich erhöhen. Dominieren proportionale (z.&#160;B. längenabhängige) Tarife im Modell, so wird die Verwendung von Tarifpunkten empfohlen.</p>
+    </body>
+</html>

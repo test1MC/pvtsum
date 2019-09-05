@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="668" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1086223">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_51609">
+            </a>Knotenwiderstände nach der Methode Knotenwiderstandsberechnung (ICA) berechnen</h3>
+        <p class="Text">
+            <MadCap:keyword term="ICA: Knotenwiderstandsberechnung" />
+            <MadCap:keyword term="Knotenwiderstandsberechnung: ICA" />
+            <MadCap:keyword term="Intersection Capacity Analysis:siehe ICA" />CR-Funktionen werden normalerweise verwendet, um belastungsabhängige Reisezeiten auf Strecken zu modellieren. Sie können auch genutzt werden, um belastungsabhängige Wartezeiten für Abbieger oder komplette Knoten zu modellieren <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Knotenwiderstandsberechnung nach Highway Capacity Manual (Intersection Capac.htm#1_benutzermodell_iv_2033098965_1026864">Siehe "Knotenwiderstandsberechnung nach Highway Capacity Manual (Intersection Capacity Analysis, ICA)"</MadCap:xref>.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Legen Sie für die gewünschten Knoten die Methode <span class="gui_element">Knotenwiderstandsberechnung (ICA)</span> fest <MadCap:xref class="sieheUeberschrSeite" href="2_5_Methode für Knotenwiderstandsberechnung festlegen.htm#2_einstellungen_benutzermodell_iv_1682368020_1179750"><span style="color: Black;" class="mcFormatColor">(</span><u>Methode für Knotenwiderstandsberechnung festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Stellen Sie sicher, dass an den gewünschten Knoten die Eingabeattribute sinnvoll belegt sind <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Knotenwiderstandsberechnung nach Highway Capacity Manual (Intersection Capac.htm#1_benutzermodell_iv_2033098965_1026864">Siehe "Knotenwiderstandsberechnung nach Highway Capacity Manual (Intersection Capacity Analysis, ICA)"</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie im Menü <span class="gui_element">Rechnen</span> den Eintrag <span class="gui_element">Allgemeine Verfahrenseinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Allgemeine Verfahrenseinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie im Navigator den Eintrag <span class="gui_element">IV-Einstellungen&#160;&gt; Widerstände am Knoten&#160;&gt; Knotenwiderstandsberechnung (ICA)</span>.</p>
+        <p class="Step" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 479px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="97px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Behandlung von U-Turns</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">U-Turns als linkesten Linksabbieger behandeln</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, erfolgt die Berechnung abweichend vom HCM. Unter Berücksichtigung der Knotengeometrie werden auch Abbiegezeiten für U-Turns ermittelt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">U-Turns ignorieren</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, erfolgt die Berechnung HCM-konform.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Zeitintervall</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Benutzerdefinierte zeitliche Ausdehnung der Belastungsspitze</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Excel-Bericht erzeugen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden die Ergebnisse als Excel-Datei <span class="path">*.xls</span> gespeichert.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Die Datei wird in das Verzeichnis ausgegeben, das im Projektverzeichnis für ICA-Dateien festgelegt ist. Der Dateiname des Excel-Berichts wird automatisch erzeugt:</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="path">ICA&lt;Netzdateiname&gt;.xls</span> für mehrere Knoten oder</LI>
+                            <LI class="List0Tab">
+                                <span class="path">ICA&lt;Netzdateiname&gt;_&lt;Knotennummer&gt;.xls </span>für einen Knoten.</LI>
+                        </ul>
+                        <p class="CellText">Die Ausgabedatei enthält ein Übersichtsblatt und für jeden untersuchten Knoten ein Blatt mit der Nummer des Knotens und seinen Daten.</p>
+                        <p class="CellText">Ein separates Blatt enthält Fehlermeldungen und Warnungen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">Nehmen Sie auf den Seiten unter dem Navigatoreintrag <span class="gui_element">IV-Einstellungen&#160;&gt; Widerstände am Knoten&#160;&gt; Knotenwiderstandsberechnung (ICA) </span>die gewünschten Einstellungen für Knoten mit verschiedenen Steuerungstypen vor:</p>
+        <ul>
+            <LI class="List1">
+                <span class="gui_element">Signalisiert </span>
+                <MadCap:xref class="sieheUeberschrSeite" href="2_5_Signalisierte Knoten (LOS).htm#2_einstellungen_benutzermodell_iv_1682368020_1177547">
+                    <span style="color: Black;" class="mcFormatColor">(</span>
+                    <u>Signalisierte Knoten (LOS)</u>
+                    <span style="color: Black;" class="mcFormatColor">)</span>
+                </MadCap:xref>
+            </LI>
+            <LI class="List1">
+                <span class="gui_element">Geregelte Vorfahrt </span>
+                <MadCap:xref class="sieheUeberschrSeite" href="2_5_Vorfahrtsgeregelte Knoten (LOS).htm#2_einstellungen_benutzermodell_iv_1682368020_1177732">
+                    <span style="color: Black;" class="mcFormatColor">(</span>
+                    <u>Vorfahrtsgeregelte Knoten (LOS)</u>
+                    <span style="color: Black;" class="mcFormatColor">)</span>
+                </MadCap:xref>
+            </LI>
+            <LI class="List1">
+                <span class="gui_element">Kreisverkehr </span>
+                <MadCap:xref class="sieheUeberschrSeite" href="2_5_Kreisverkehr.htm#2_einstellungen_benutzermodell_iv_1682368020_1178040">
+                    <span style="color: Black;" class="mcFormatColor">(</span>
+                    <u>Kreisverkehr</u>
+                    <span style="color: Black;" class="mcFormatColor">)</span>
+                </MadCap:xref>
+            </LI>
+            <LI class="List1">
+                <span class="gui_element">All-way Stop </span>
+                <MadCap:xref class="sieheUeberschrSeite" href="2_5_All-way Stop (LOS).htm#2_einstellungen_benutzermodell_iv_1682368020_1178195">
+                    <span style="color: Black;" class="mcFormatColor">(</span>
+                    <u>All-way Stop (LOS)</u>
+                    <span style="color: Black;" class="mcFormatColor">)</span>
+                </MadCap:xref>
+            </LI>
+            <LI class="List1">
+                <span class="gui_element">Rechts vor Links </span>
+                <MadCap:xref class="sieheUeberschrSeite" href="2_5_Rechts-vor-links-geregelte Knoten (TModel).htm#2_einstellungen_benutzermodell_iv_1682368020_1088187">
+                    <span style="color: Black;" class="mcFormatColor">(</span>
+                    <u>Rechts-vor-links-geregelte Knoten (TModel)</u>
+                    <span style="color: Black;" class="mcFormatColor">)</span>
+                </MadCap:xref>
+            </LI>
+        </ul>
+        <p class="Step" MadCap:autonum="7. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="8. &#160;">Berechnen Sie die Knotenwiderstände mit einem geeigneten Verfahren <MadCap:xref class="sieheUeberschrSeite" href="2_5_Verfahren der Widerstandsberechnung am Knoten.htm#2_einstellungen_benutzermodell_iv_1682368020_1179269"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahren der Widerstandsberechnung am Knoten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+    </body>
+</html>

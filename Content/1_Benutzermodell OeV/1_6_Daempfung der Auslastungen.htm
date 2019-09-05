@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="VorHst;EinHst;NachHst;QuellHst;ZielHst;linie;Ride;Wid;Branch;Bound;FZ;UZ;UH;Fak;timetab1;par;frueh;spaet;ΔT;gleichabständig;WID;Fzg;18min;Wid1;Wid2;P1;P2;M1;M2;A_DORF;X_STADT;UWZ;Beförd;Mittl;Bus1;$ODMATRIX;$MATRIXSINGLELISTITEM;PuT;dmd;$TIMESERIES;$TIMESERIESITEM;$VISION;VisumInst;Table;$VERSION;VERSNR;FILETYPE;LANGUAGE;UNIT;Demand;ODMATRIX;NO;CONTENT;ROUND;NUMDECPLACES;Car;HVeh;MATRIXSINGLELISTITEM;MATRIXNO;FROMZONENO;TOZONENO;VALUE;TIMESERIESDOMAINTYPE;$TIMESERIESDOMAINTYPE;DESCRIPTION;UNITYSTRING;MAXVALUE;MINVALUE;No;series;TYPENO;UNITX;NUMINTERVALS;LENGTHINTERVAL;USEVALUELIST;VALUELISTTYPE;VALUEREFTYPE;DECSEPARATOR;VALUESEPARATOR;TIMESERIESITEM;TIMESERIESNO;STARTINTERVALINDEX;ENDINTERVALINDEX;$DEMANDDESCRIPTION;DSEGCODE;DEMANDTIMESERIESNO;STARTDAYINDEX;α;ß;γ;and;etc" MadCap:lastBlockDepth="2" MadCap:lastHeight="680" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1229795">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_39199">
+            </a>Dämpfung der Auslastungen</h4>
+        <p class="Text">Um starkes Schwingen der Belastungen zwischen wenigen Verbindungen zu vermeiden, kann die Auslastung der Fahrplanfahrtelemente gedämpft werden. Die Auslastung eines Fahrplanfahrtelements ergibt sich in Iteration i eigentlich durch:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_53.jpg" />
+        </p>
+        <p class="Text">Die gedämpfte Auslastung eines Fahrplanfahrtelements in Iteration <span class="formula">i</span> ergibt sich aus gedämpften und berechneten Auslastungen der zwei vorherigen Iterationen:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_39.jpg" />
+        </p>
+        <p class="Text">Diese Formel beschreibt eine Interpolation, wenn die Vorzeichen von      <img src="../Resources/Images/8_42.jpg" /> und <img src="../Resources/Images/8_55.jpg" /> unterschiedlich sind.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Smoothing_VolCapRatios.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Dämpfung der Auslastung in Iteration i</p>
+        <p class="Text">In der Abbildung entspricht <img src="../Resources/Images/8_30.jpg" /> und <img src="../Resources/Images/8_35.jpg" /> etc.</p>
+        <p class="Text">Haben beide Terme das gleiche Vorzeichen, handelt es sich um eine Extrapolation. Für die Extrapolation ergibt sich durch das Anwenden der gleichen Formel jedoch eine langsamere Konvergenz, deshalb wird dieser Fall mit folgender Formel berechnet (Dämpfung mit fixem Faktor 0,5):</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_75.jpg" />
+        </p>
+        <p class="Text">Die gedämpften Auslastungen werden dann für die innerhalb der Iteration sowie am Ende folgenden Widerstandsberechnungen verwendet.</p>
+        <p class="Text">Es kann nicht davon ausgegangen werden, dass sich zu einem Netz mit gedämpften Auslastungen auf Fahrplanfahrtelementen eine Wegemenge konstruieren lässt, die die zugehörigen Belastungen erzeugt.</p>
+    </body>
+</html>

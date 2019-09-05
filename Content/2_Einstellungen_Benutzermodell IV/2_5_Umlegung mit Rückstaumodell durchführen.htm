@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="668" MadCap:lastWidth="510" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls;max;Program;Processor;R';Factor;Stdabw;Lognormalvert;Method;Lotka;Volterra;BPR;BPR2;b’;Knotensteuerung_CR;pseudodynamic;pa;tmodelspecial;ten;Circular;Operations;Planning;ICU1;ICU;ICU2" MadCap:conditions="PTV_Manual.veraltet_EWS">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1061833">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_48121">
+            </a>Umlegung mit Rückstaumodell durchführen</h3>
+        <p class="Text">Sie können festlegen, dass gleichzeitig mit einer IV-Umlegung ein Rückstaumodell berechnet wird.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Legen Sie einen Verfahrensablauf mit dem gewünschten IV-Umlegungsverfahren fest <MadCap:xref class="sieheUeberschrSeite" href="2_5_IV-Umlegung parametrisieren und rechnen.htm#2_einstellungen_benutzermodell_iv_1682368020_1033196"><span style="color: Black;" class="mcFormatColor">(</span><u>IV-Umlegung parametrisieren und rechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Menü <span class="gui_element">Rechnen</span> den Eintrag <span class="gui_element">Allgemeine Verfahrenseinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Allgemeine Verfahrenseinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie im Navigator den Eintrag <span class="gui_element">IV-Einstellungen</span>&#160;&gt; <span class="gui_element">Rückstaumodell</span>.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Aktivieren Sie die Option <span class="gui_element">Stauberechnung aktiv</span>.</p>
+        <p class="Stepresult">Die anderen Einstellungen in diesem Fenster können jetzt verändert werden.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Nehmen Sie die gewünschte Einstellung vor.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Stauberechnung auch während der Umlegung ausführen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, wird die Stauberechnung in der äußeren Iteration der IV-Umlegung ausgeführt, wobei die Ergebnisse in den Streckenwiderstand und damit in die Routenwahl eingehen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Betriebsart wird nicht empfohlen, weil sie die Konvergenz des jeweiligen Umlegungsverfahrens deutlich verschlechtert <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Allgemeines_zum_Rueckstaumodell.htm#1_benutzermodell_iv_2033098965_1427295">Siehe "Allgemeines zum Rückstaumodell"</MadCap:xref>.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, wird das Rückstaumodell als Post-Processing im Anschluss an eine Umlegung gerechnet und beeinflusst somit die Routenwahl nicht.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">Nehmen Sie ansonsten die gewünschten Einstellungen für das Rückstaumodell vor <MadCap:xref class="sieheUeberschrSeite" href="2_5_Rückstaumodell im Anschluss an eine Umlegung durchführen.htm#2_einstellungen_benutzermodell_iv_1682368020_1061322"><span style="color: Black;" class="mcFormatColor">(</span><u>Rückstaumodell im Anschluss an eine Umlegung durchführen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Starten Sie den Verfahrensablauf.</p>
+        <p class="Result">Das gewählte Umlegungsverfahren wird in Kombination mit dem Rückstaumodell berechnet. Besteht bereits eine Umlegung für mindestens ein Nachfragesegment, welche nicht neu gerechnet wird, so wird außerdem vor Ausführung der Umlegung für die bereits umgelegten Nachfragesegmente das Rückstaumodell gerechnet.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn alle bereits umgelegten IV-Nachfragesegmente Ihres Netzes umgelegt werden sollen, kann das Rückstaumodell mit einer Umlegung mit MPA gerechnet werden <MadCap:xref class="sieheUeberschrSeite" href="2_5_Prozentuale Aufteilung der Nachfrage.htm#2_einstellungen_benutzermodell_iv_1682368020_1080611"><span style="color: Black;" class="mcFormatColor">(</span><u>Prozentuale Aufteilung der Nachfrage</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

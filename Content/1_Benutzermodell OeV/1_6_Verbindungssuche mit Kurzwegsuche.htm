@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb;AnteilAkzGEH;Abfahrts;max" MadCap:lastBlockDepth="4" MadCap:lastHeight="776" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1083273">
+            </a>
+            <MadCap:keyword term="Fahrplanfeine Umlegung: Verbindungssuche: Kurzwegsuche" />
+            <MadCap:keyword term="Kurzwegsuche" />
+            <a name="1_benutzermodell_oev_2318507456_24345">
+            </a>Verbindungssuche mit Kurzwegsuche</h4>
+        <p class="Text">Diese Variante verwendet eine Bestwegsuche auf der Grundlage der Abfahrts- und Ankunftszeiten. Wird eine Bestwegsuche für einen Zeitpunkt durchgeführt, erhält man die zu diesem Zeitpunkt beste Verbindung zwischen zwei Verkehrsbezirken. Für andere Zeitpunkte ergeben sich andere „beste“ Verbindungen, die sich in der Abfahrtszeit unterscheiden und gegebenenfalls auch andere ÖV-Linien und andere Umsteigehaltestellen benutzen. Um alle „besten“ Verbindungen innerhalb eines Untersuchungszeitraumes zu bestimmen, wird die Bestwegsuche mehrfach für alle möglichen Abfahrtszeitpunkte des Untersuchungszeitraumes durchgeführt.</p>
+        <p class="Text">Da in einigen Fällen zu einem Zeitpunkt mehrere Verbindungen möglich sind, erfordern diese Suchverfahren eine Definition der „besten Verbindung“. Diese Definition erfolgt in <MadCap:variable name="PTV_Manual.Programmname" /> über eine Widerstandsfunktion, die den Widerstand einer Verbindung für jeden Umsteigevorgang um einen Zuschlag erhöht. Ein niedriger Zuschlag bewirkt dann, dass zeitkürzeste Verbindungen bevorzugt werden, während ein hoher Zuschlag Verbindungen mit geringer Umsteigehäufigkeit den Vorrang gibt.</p>
+        <ul>
+            <LI class="List0">Ermittlung aller möglichen Startzeitpunkte für Fahrten, die im Verkehrsbezirk <span class="formula">i</span> beginnen. Die Startzeitpunkte ergeben sich aus den Abfahrtszeiten der ÖV-Linien an den Haltestellen, die vom Bezirk <span class="formula">i</span> über eine Anbindung erreichbar sind.</LI>
+        </ul>
+        <p class="Text2">Im Beispiel stimmen die Startzeitpunkte mit den Abfahrtszeiten der Buslinie 1 in A-Dorf (6.10, 6.55, 7.25) überein, da in A-Dorf nur eine Buslinie verkehrt und eine Zugangszeit von 0 Minuten angenommen wird.</p>
+        <p class="Text">Für jeden Startzeitpunkt wird einer der beiden folgenden Schritte ausgeführt.</p>
+        <ul>
+            <LI class="List0">Entweder Durchführung einer einkriterielle Bestwegsuche, die den zu diesem Zeitpunkt „besten“ Weg vom Verkehrsbezirk <span class="formula">i</span> zum Verkehrsbezirk <span class="formula">j</span> sucht. Das Suchverfahren erkennt den Weg mit dem geringsten Suchwiderstand als besten Weg. Der Suchwiderstand des Weges hat die Einheit Minuten und ist eine Linearkombination von Reisezeit und Umsteigehäufigkeit. Diese setzt sich aus folgenden Zeiten zusammen.</LI>
+            <LI class="List1">Zugangszeit [min]</LI>
+            <LI class="List1">Fahrzeit im Verkehrsmittel [min]</LI>
+            <LI class="List1">Umsteigegehzeit für Fußwege zwischen zwei Umsteigehaltestellen [min]</LI>
+            <LI class="List1">Umsteigewartezeit [min]</LI>
+            <LI class="List1">Abgangszeit [min]</LI>
+            <LI class="List1">Umsteigehäufigkeit [-] • Umsteigezuschlag [min] (einstellbar)</LI>
+        </ul>
+        <p class="Text2">Dieser hinsichtlich Suchwiderstand beste Weg stellt eine Verbindung dar, das heißt, die benutzte Linienfolge und die exakten Abfahrts- und Ankunftszeiten an Einstiegshaltestelle, Umsteigehaltestellen und Ausstiegshaltestelle sind bekannt.</p>
+        <ul>
+            <LI class="List0">Oder Berechnung eine reisezeitminimale Verbindung (so genannte bikriterielle Kurzwegsuche) für <span class="gui_element">jede</span> zulässige Umsteigehäufigkeit (das heißt für alle ganzzahligen Werte ≥ 0 und ≤ max. Anzahl Umsteigevorgänge). Ergeben sich dabei für verschiedene Umsteigehäufigkeiten gleiche Reisezeiten, so wird nur die Verbindung mit der geringsten Umsteigehäufigkeit aufgehoben (Dominanz).</LI>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:lastBlockDepth="6" MadCap:lastHeight="694" MadCap:lastWidth="510" MadCap:ignoredWords="big;endian;ves;Tmpn;bzw;behandlung;xls;usw;Projekt_XY;ergebnisse">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_grundlagen_programmbedienung_1644961382_1284628">
+            </a>
+            <a name="2_grundlagen_programmbedienung_1644961382_82409">
+            </a>Verhalten der Matrixdaten beim Öffnen und Speichern einer Versionsdatei festlegen</h4>
+        <p class="Text">
+            <MadCap:keyword term="Matrizen:Einstellungen:Einlesen" />
+            <MadCap:keyword term="Versionen:Einstellungen" />Für jede Versionsdatei können Sie festlegen, wie die in der Version enthaltenen Matrizen beim Öffnen der Versionsdatei eingelesen werden. Außerdem können Sie die Matrixdaten in eine eigene Datei auslagern.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Öffnen Sie die gewünschte Versionsdatei.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Menü <span class="gui_element">Datei</span> den Eintrag <span class="gui_element">Datei-Eigenschaften</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Datei-Eigenschaften</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Nehmen Sie die gewünschte Einstellung vor.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Keine Sonderbehandlung der Matrixdaten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden alle Matrixdaten beim Öffnen der Versionsdatei sofort eingelesen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Matrixdaten bei Bedarf aus Versionsdatei nachladen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden alle Matrixdaten beim Öffnen der Versionsdatei nicht sofort eingelesen. Sie werden erst bei Bedarf nachgeladen. So wird die Versionsdatei schneller geöffnet.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option ist nur dann wirksam, wenn die Matrizenauslagerungsdatei aktiv ist <MadCap:xref class="sieheUeberschrSeite" href="../2_Nachfrage_modellieren/2_3_Einstellungen für die Behandlung von Matrizen vornehmen.htm#2_nachfrage_modellieren_1800171850_1672712"><span style="color: Black;" class="mcFormatColor">(</span><u>Einstellungen für die Behandlung von Matrizen vornehmen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Matrixdaten in separater Matrixdatendatei speichern</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Ist diese Option ausgewählt, werden alle Matrixdaten der Version in einer eigenen Datei gespeichert. Sie wird im gleichen Verzeichnis abgelegt und erhält den gleichen Namen wie die Versionsdatei. Die Dateierweiterung lautet *.<span class="path">vmx</span>.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Diese Option ist nur dann wirksam, wenn die Matrizenauslagerungsdatei aktiv ist <MadCap:xref class="sieheUeberschrSeite" href="../2_Nachfrage_modellieren/2_3_Einstellungen für die Behandlung von Matrizen vornehmen.htm#2_nachfrage_modellieren_1800171850_1672712"><span style="color: Black;" class="mcFormatColor">(</span><u>Einstellungen für die Behandlung von Matrizen vornehmen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Die Option sollten Sie aktivieren, wenn Sie mit Versionsdateien arbeiten, die eine große Menge Matrixdaten enthalten. Sie können damit das Schreiben von Versionsdateien beschleunigen, beispielsweise wenn Sie nur Änderungen am Netz vornehmen. Die Matrizen werden nicht geändert und deshalb auch nicht neu gespeichert.</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Möchten Sie die Matrixdateien wieder in die Versionsdatei integrieren, deaktivieren Sie die Option und speichern Sie die Version.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="5. &#160;">Speichern Sie die Versionsdatei.</p>
+        <p class="Result">Die gewählte Einstellung wird in die Versionsdatei übernommen. Beim nächsten Öffnen wird sie angewendet.</p>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="690" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="ij;QZ;å;Î;FSB;0a;0r;ija;Lern;akt;ten;CR;Abbiegerkapazität;Abbiegerbelastungen;Abbiegerkapazitäten;BSB;ji;id;ijA;Braess;tmodelspecial;true;kapazitäten">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1427295">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc175724482">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153337022">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc130891227">
+            </a>Allgemeines zum Rückstaumodell</h3>
+        <p class="Text">
+            <MadCap:keyword term="Rückstaumodell" />Das Rückstaumodell ist kein eigenständiges Umlegungsverfahren, sondern verändert die Ergebnisse parallel oder zuvor ausgeführter Umlegungen. Es ist als Option zusammen mit einer Umlegung ausführbar <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell IV/2_5_Rückstaumodell einstellen und berechnen.htm#2_einstellungen_benutzermodell_iv_1682368020_1033770" target="" title="" alt=""><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Rückstaumodell einstellen und berechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Das Rückstaumodell wirkt nur auf IV-Verkehrssysteme. Dabei wird davon ausgegangen, dass ÖV-Verkehrssysteme entweder nicht von Wartezeiten durch Stau betroffen oder aber die Wartezeiten bei der Erstellung der Fahrpläne bereits berücksichtigt sind. Die Rückwirkung der durch den ÖV seinerseits hervorgerufenen Belastung gemeinsam genutzter Strecken wird vernachlässigt oder lässt sich durch eine Grundbelastung berücksichtigen.</p>
+        <p class="Text">Da die Verkehrsmengen verschiedener IV-Nachfragesegmente als Summe in die Staulänge eingehen, werden grundsätzlich alle Verkehrsmengen in PKW-Einheiten umgerechnet.</p>
+        <p>Sie können das Rückstaumodell als Post-Processing im Anschluss an eine Umlegung rechnen. Somit beeinflusst es die Routenwahl nicht.</p>
+        <ul>
+            <LI class="List0">Falls Sie Rückstaueffekte in der Routenwahl der Umlegung berücksichtigen möchten, verwenden Sie  das Verfahren „Umlegung mit ICA“ <MadCap:xref class="sieheUeberschrSeite" href="1_5_Umlegung mit ICA.htm#1_benutzermodell_iv_2033098965_1379720"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlegung mit ICA</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+        </ul>
+        <p class="Text">Die Rückstauberechnung kann mit Sukzessiv-, Gleichgewichts-, Lern-, TRIBUT- sowie stochastischen Verfahren kombiniert werden, nicht jedoch mit einem dynamischen Umlegungsverfahren.</p>
+        <p class="Text">Besteht bereits eine Umlegung für mindestens ein Nachfragesegment, welche nicht neu gerechnet wird, so wird <span class="gui_element">vor</span> Ausführung der Umlegung für die bereits umgelegten Nachfragesegmente das Rückstaumodell gerechnet, um sicherzustellen, dass die Werte für <span class="formula">t</span><span class="formula_subscript">akt</span> und <span class="formula">t</span><span class="formula_subscript">w</span> mit dem aktuellen Netzzustand konsistent sind und dass nicht Umlegungen mit und ohne Rückstaumodell-Anteil miteinander kombiniert werden.</p>
+        <h5>Begrenzende Kapazität</h5>
+        <p class="Text">Nach Regel 1 kann während der Rückstauberechnung entlang einer Route von einer Strecke auf die nächste maximal so viel Verkehr fließen, wie die Kapazität der Strecke, die Kapazität am Nach-Knoten der Strecke und die Kapazität am Abbieger zulassen. In den Parametern für das Rückstaumodell können Sie einzeln festlegen, ob hierbei Strecken-, Abbieger- und Knotenkapazitäten berücksichtigt werden sollen. Die Einstellungen haben folgende Bedeutung:</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Streckenkapazität</span> begrenzt den Abfluss von jeder Strecke. Als Grenzwert dient wahlweise das Attribut <span class="gui_element">Kapazität IV</span> der Strecke oder die Summe des Attributs <span class="gui_element">Kapazität IV</span> über alle ausgehenden Abbieger. Letztere Option besteht nur zur Abwärtskompatibilität mit früheren Versionen und wird nicht mehr empfohlen. Verwenden Sie stattdessen die Option <span class="gui_element">Abbiegerkapazität</span>.</LI>
+            <LI class="List0">
+                <span class="gui_element">Knotenkapazität</span> begrenzt den Fluss über jeden Knoten (Summe aller Abbiegerbelastungen) auf das Attribut <span class="gui_element">Kapazität IV</span> des Knotens. Knotenkapazitäten werden nur für Verkehrsströme berücksichtigt, die eine untergeordnete Strecke (tmodelspecial = true) auf den Knoten gerichtet überfahren. Somit wirken Verkehrsströme auf Hauptarmen auf kreuzende Routen auf untergeordneten Strecken.</LI>
+            <LI class="List0">
+                <span class="gui_element">Abbiegerkapazität</span> begrenzt den Fluss über jeden Abbieger auf das Attribut <span class="gui_element">Kapazität IV</span> des Abbiegers.</LI>
+        </ul>
+        <p class="Text">Die drei Optionen können beliebig kombiniert werden.</p>
+        <p class="Text">Wenn Sie die Rückstauberechnung als Post-Processing einer IV-Umlegung verwenden,  können Sie außerdem für jeden Knoten einstellen, ob die globale Einstellung aus den Parametern für das Rückstaumodell oder eine knotenspezifische Einstellung (Knotenattribut <span class="gui_element">Eingestellte Staukapazität verwenden</span> auswählen) angewendet werden soll. Die knotenspezifische Auswahl gilt für alle Abbieger des Knotens und alle Strecken, die in diesen Knoten einmünden. Wenn Sie beispielsweise nur an bestimmten Knoten die Abbiegerkapazitäten berücksichtigen möchten, dann deaktivieren Sie die Berücksichtigung von Abbiegerkapazitäten in den Parametern für das Rückstaumodell und wählen an den entsprechenden Knoten die Attribute <span class="gui_element">Eingestellte Staukapazität verwenden</span> und <span class="gui_element">Abbiegerkapazität für Rückstaumodell verwenden</span> aus.</p>
+    </body>
+</html>

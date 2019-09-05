@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="692" MadCap:lastWidth="510" MadCap:ignoredWords="Nr;No;xls;Kompl">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_netz_bearbeiten_23091886_2797794">
+            </a>Mit Relationen in Filtern arbeiten</h4>
+        <p class="Text">Sie können Filterbedingungen für indirekte Attribute definieren, die 1:n-Relationen benutzen, mit denen Netzobjekte daraufhin gefiltert werden, ob sie eine oder alle Relationen erfüllen. Dazu wählen Sie in jeder Filterbedingung eine Relation, ein Attribut des Netzobjekts am anderen Ende der Relation, eine Mengenoperation und einen Operator aus.</p>
+        <p class="Text">Beispielsweise können Sie alle Linien filtern, die eine bestimmte Strecke nicht berühren, oder Sie können alle Bezirke filtern, die an einen Knoten angebunden sind.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass das Filterfenster des gewünschten Netzobjekttyps geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="Filterfenster_öffnen.htm#2_netz_bearbeiten_23091886_1105306"><span style="color: Black;" class="mcFormatColor">(</span><u>Filterfenster öffnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie bei Bedarf das gewünschte Register (hierarchische Filter) oder in der Auswahlliste die gewünschte Kategorie (POI-Filter und GIS-Objekte-Filter).</p>
+        <p class="Stepresult">Standardmäßig ist eine Zeile zur Definition einer Filterbedingung angelegt.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie bei Bedarf die Option <span class="gui_element">Kompl. </span>in der Zeile aus, in der Sie die Filterbedingungen definieren.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn sie gewählt ist, werden genau diejenigen Netzobjekte aktiv, die sonst durch die Filterbedingung passiv würden und umgekehrt.</p>
+                        <p class="CellText">Wenn Sie die Option Komplement zusammen mit einer 1:n-Relation verwenden, beachten Sie dabei, dass sich <span class="gui_element">Kompl.</span> auf die gesamte Bedingung inklusive der Mengenoperation bezieht. Auf eine 1:n Relation angewendet bedeutet das, dass aus einer Bedingung <span class="gui_element">Alle</span> x <span class="gui_element">=Wert</span> A die Bedingung wird <span class="gui_element">Eines</span> x <span class="gui_element">≠ Wert </span>A.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">(&lt;Netzobjekttyp&gt;)</span> unter der Spaltenüberschrift <span class="gui_element">Relation</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Relationen (&lt;Netzobjekttyp&gt;)</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Wählen Sie die gewünschte Relation.</p>
+        <p class="Step" MadCap:autonum="6. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">Die gewünschte Relation wird angezeigt. </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Standardmäßig ist der erste Eintrag <span class="gui_element">(&lt;Netzobjekttyp&gt;)</span> der Auswahlliste ausgewählt, was keiner Relation entspricht.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="7. &#160;">Klicken Sie auf die leere Schaltfläche unter der Spaltenüberschrift <span class="gui_element">Attribut</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Attribute (&lt;Netzobjekttyp&gt;)</span> öffnet sich.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Im Fenster werden nicht die Attribute des aktuellen Netzobjekttyps angezeigt, sondern alle Attribute für das Ziel der ausgewählten Relation.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="8. &#160;">Wählen Sie das gewünschte Attribut.</p>
+        <p class="Step" MadCap:autonum="9. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">Das gewählte Attribut wird angezeigt. </p>
+        <p class="Step" MadCap:autonum="10. &#160;">Wählen Sie in der Spalte <span class="gui_element">Mengenoperation</span> in der Auswahlliste die gewünschte Mengenoperation aus.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Eines</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Operation wird für ein ausgewähltes Objekt durchgeführt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Alle</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Die Operation wird für alle Objekte durchgeführt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Das Feld ist leer, wenn Sie in der Spalte <span class="gui_element">Relation</span> keine 1:n-Relation ausgewählt haben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="11. &#160;">Wählen Sie für jede Zeile in der Spalte <span class="gui_element">Operation</span> den gewünschten Operator aus. </p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="141px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="336px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Ist enthalten in</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">ist enthalten in</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Zwischen (Randwerte eingeschlossen)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">größer/gleich Wert 1 und kleiner/gleich Wert 2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">&lt; Wert</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">kleiner als Wert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">&lt; Attribut</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">kleiner als Attribut</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">&gt; Wert</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">größer als Wert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">&gt; Attribut</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">größer als Attribut</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">≤ Wert</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">kleiner/gleich Wert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">≤ Attribut</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">kleiner/gleich Attribut</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">≥ Wert</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">größer/gleich Wert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">≥ Attribut</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">großer/gleich Attribut</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">= Wert</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">gleich Wert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">= Attribut</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">gleich Attribut</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">≠ Wert</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">ungleich Wert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">≠ Attribut</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">ungleich Attribut</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Ist leer</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">kein Eintrag vorhanden</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Enthält alle</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">enthält alle (beispielsweise Verkehrssysteme) </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Enthält keines</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">enthält keines (beispielsweise Verkehrssysteme)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Enthält mindestens eines</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">enthält mindestens eines (beispielsweise Verkehrssysteme)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="12. &#160;">Legen Sie den gewünschten Wertebereich fest.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Je nach ausgewähltem Attribut stehen unterschiedliche Eingabemöglichkeiten zur Verfügung.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="13. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Der Filter wird angewendet.</p>
+        <h5>Beispiel 1</h5>
+        <p class="Text">Finde alle Linien, die Strecke „A“ nicht berühren</p>
+        <ul>
+            <LI class="List0">Netzobjekt ist <span class="gui_element">Linie</span></LI>
+            <LI class="List0">
+                <span class="gui_element">Relation</span> ist <span class="gui_element">Linienrouten\Linienroutenelemente</span></LI>
+            <LI class="List0">Attribut ist <span class="gui_element">Eingangsstrecke\Name</span></LI>
+            <LI class="List0">
+                <span class="gui_element">Mengenoperation</span> ist <span class="gui_element">Alle</span></LI>
+            <LI class="List0">Operator ist <span class="gui_element">≠ Wert</span></LI>
+            <LI class="List0">
+                <span class="gui_element">Wert</span> ist <span class="input">A</span></LI>
+        </ul>
+        <h5>Beispiel 2</h5>
+        <p class="Text">Finde alle Bezirke, die an Knoten 4711 angebunden sind</p>
+        <ul>
+            <LI class="List0">Netzobjekt ist <span class="gui_element">Bezirk</span></LI>
+            <LI class="List0">
+                <span class="gui_element">Relation</span> ist <span class="gui_element">Quell-Anbindungen</span></LI>
+            <LI class="List0">Attribut ist <span class="gui_element">Knoten\Nummer</span></LI>
+            <LI class="List0">
+                <span class="gui_element">Mengenoperation</span> ist <span class="gui_element">Eines</span></LI>
+            <LI class="List0">Operator ist <span class="gui_element">= Wert</span></LI>
+            <LI class="List0">
+                <span class="gui_element">Wert</span> ist <span class="input">4711</span></LI>
+        </ul>
+        <p class="Text">Wollen Sie alle Bezirke finden, die ausschließlich an Knoten 4711 angebunden sind, müssen sie den Mengenoperator <span class="gui_element">Alle </span>auswählen.</p>
+    </body>
+</html>

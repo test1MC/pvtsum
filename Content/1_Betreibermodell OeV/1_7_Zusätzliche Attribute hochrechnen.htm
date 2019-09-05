@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="665" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen,PTV_Manual.Ready_for_translation" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km;max;Richtungs;te;LocationFault;TimeFault;LayoverTimeFault;VehicleFault;Fahrzeugeinheits;IC;Entfernungs;TP;Town">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1167322">
+            </a>Zusätzliche Attribute hochrechnen</h4>
+        <p class="Text">
+            <MadCap:keyword term="Kennzahlen: zusätzliche Attribute hochrechnen" />Zusätzlich zu den vordefinierten ÖV-betrieblichen Kennzahlen können benutzerdefinierte Attribute von der Fahrtabschnittsebene auf die höheren Ebenen der Linienhierarchie hochgerechnet und gegebenenfalls gebietsgeschnitten ausgewiesen werden. Das Vorgehen wird <span class="gui_element">Erweitertes Hochrechnen</span> genannt. Für jedes Fahrtabschnittsattribut, das für Erweitertes Hochrechnen ausgewählt ist, erfolgt die Berechnung nach folgender Logik.</p>
+        <ul>
+            <LI class="List0">Ergebnisattribute werden angelegt</LI>
+        </ul>
+        <p class="List_Text0">Für die Netzobjekte Fahrplanfahrt, Fahrzeitprofil, Linienroute, Linie, Oberlinie, VSys und GebietÖVDetail wird geprüft, ob ein numerisches, editierbares Attribut mit der gleichen ID wie das Ausgangsattribut existiert. Falls nicht, wird ein benutzerdefiniertes Attribut mit dieser ID automatisch erzeugt. Auch Code und Name werden vom Ausgangsattribut übernommen. Für die Netzobjekte Fahrplanfahrtabschnitt, Fahrplanfahrt, Fahrzeitprofil, Linienroute, Linie, Oberlinie, VSys, GebietÖVDetail wird geprüft, ob ein numerisches, editierbares Attribut mit der gleichen ID wie das Ausgangsattribut mit Suffix „AH“ (Analysehorizont) existiert. Falls nicht, wird ein benutzerdefiniertes Attribut mit dieser ID automatisch erzeugt. Auch an Code und Name wird jeweils „AH“ angehängt. Sofern die Ergebnisattribute bereits existieren, werden sie auf null gesetzt.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Sofern die Ergebnisattribute bereits existieren, jedoch nicht numerisch oder nicht editierbar sind, wird ein Fehler gemeldet und das erweiterte Hochrechnen unterbleibt. Der Rest des Verfahrens ÖV-betriebliche Kennzahlen wird unabhängig davon noch ausgeführt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Berechnung auf Fahrtabschnittsebene</LI>
+        </ul>
+        <p class="List_Text0">Es wird davon ausgegangen, dass das Ausgangsattribut einen auf AP (Analyseperiode) bezogenen Wert enthält. Am Fahrplanfahrtabschnitt wird das AH-Ergebnisattribut wie folgt belegt:</p>
+        <p class="List_Text0">
+            <span class="formula">WertAH = WertAP • HRFaktorVerkehrsangebot</span>
+        </p>
+        <p class="List_Text0">Dabei wird der Hochrechnungsfaktor des Verkehrstags des Fahrtabschnitts für das Verkehrsangebot verwendet.</p>
+        <ul>
+            <LI class="List0">Berechnung in der Linienhierarchie</LI>
+        </ul>
+        <p class="List_Text0">Die Werte des Ausgangsattributs werden entlang der Linienhierarchie aufsummiert und dort jeweils dem entsprechenden Ergebnisattribut zugewiesen. Die Werte des AH-Ergebnisattributs des Fahrplanfahrtabschnitts werden ebenso aufsummiert und auf jeder Ebene dem AH-Ergebnisattribut zugewiesen.</p>
+        <ul>
+            <LI class="List0">Gebietsschnitt</LI>
+            <LI class="List1">Handelt es sich um ein Ausgangsattribut mit Längenbezug, wird zunächst der Wert des Fahrplanfahrtabschnitts linienlängenproportional auf die überfahrenen Strecken verteilt. Die Streckenwerte werden dann wie üblich mit Gebieten geschnitten. Also wird der Wert einer Strecke mit dem Anteil (Länge der Strecke im Gebiet / Streckenlänge) im AP-Ergebnisattribut je Objekt(e) der Linienhierarchie x Gebiet aufsummiert.</LI>
+            <LI class="List1">Handelt es sich um ein Ausgangsattribut mit Zeitbezug, wird zunächst der Wert des Fahrplanfahrtabschnitts proportional zu den Fahrzeiten des Fahrzeitprofils auf die überfahrenen Strecken verteilt. Die Streckenwerte werden auch in diesem Fall längenanteilig den Gebieten zugerechnet.</LI>
+            <LI class="List1">Handelt es sich dagegen nicht um ein längenbezogenes Ausgangsattribut, wird sein Wert einfach bei jedem durchfahrenen Gebiet aufsummiert.</LI>
+            <LI class="List0">Die pro Fahrplanfahrtabschnitt berechneten Werte werden jeweils mit dem Hochrechnungsfaktor AH für das Verkehrsangebot multipliziert und dann in gleicher Weise im AH-Ergebnisattribut je Objekt(e) der Linienhierarchie x Gebiet aufsummiert.</LI>
+        </ul>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wird das Verfahren <span class="gui_element">Init ÖV-betriebliche Kennzahlen</span> ausgeführt, dann werden die benutzerdefinierten Attribute des Netzobjekts GebietÖVDetail, beispielsweise <span class="gui_element">Gebiet x VSys x Fahrzeugkombination</span>, gelöscht (dies geschieht auch, wenn aus anderem Grund die LLE-Ergebnisse verworfen werden). Die übrigen Ergebnisattribute bleiben bestehen, da sie eventuell schon vorher existierten, und müssen bei Bedarf manuell gelöscht werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Im Beispiel <span class="path">Example_LLE.ver</span> verfügt das Netzobjekt Fahrplanfahrtabschnitte über das benutzerdefinierte Attribut <span class="gui_element">Revenue_per_PersKm</span>. Dieses gibt das Verhältnis von Erlös und Personenkilometern wieder. Die Hochrechnung auf Linien erfolgt nach folgendem Schema.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Aggregate_UDAs.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000067px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Erweitertes Hochrechnen von Attributen</p>
+    </body>
+</html>

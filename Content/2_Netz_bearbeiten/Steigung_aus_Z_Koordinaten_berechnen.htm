@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="676" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="Nr;No;xls">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_netz_bearbeiten_23091886_2161062">
+            </a>Steigung aus Z-Koordinaten berechnen<a name="27313"></a></h3>
+        <p class="Text">
+            <MadCap:keyword term="Strecken: Steigung aus Z-Koordinaten berechnen" />Die Steigung ist ein Streckenattribut, das unter anderem für folgende Zwecke verwendet wird:</p>
+        <ul>
+            <LI class="List0">ANM-Export nach Vissim</LI>
+            <LI class="List0">ICA-Berechnungen</LI>
+            <LI class="List0">Emissionsberechnungen nach HBEFA</LI>
+        </ul>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> kann nur dann die Steigung einer Strecke berechnen, wenn die Z-Koordinaten des Von-Knotens und Nach-Knotens der Strecke bekannt sind <MadCap:xref class="sieheUeberschrSeite" href="Attributwerte_von_Knoten_ändern.htm#2_netz_bearbeiten_23091886_1173827"><span style="color: Black;" class="mcFormatColor">(</span><u>Attributwerte von Knoten ändern</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Die Steigung wird in Prozent angezeigt.</p>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> berechnet die Steigung für eine Streckenrichtung. Die Rückrichtung erhält den gleichen Steigungswert, allerdings mit umgekehrtem Vorzeichen.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Setzen Sie bei Bedarf die Strecken aktiv, deren Steigungen Sie berechnen möchten <MadCap:xref class="siehe_1" href="Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über Filter aktiv und passiv setzen</u></MadCap:xref><MadCap:xref class="siehe_2" href="Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie im Fenster <span class="gui_element">Netz</span> mit der rechten Maustaste auf die Schaltfläche <span class="gui_element">Strecken</span>.</p>
+        <p class="Stepresult">Das Kontextmenü <span class="gui_element">Strecken </span>öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie den Eintrag <span class="gui_element">Steigung berechnen aus Z-Koordinaten</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Mehrfach-Bearbeiten Strecken</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Stellen Sie sicher, dass das Register <span class="gui_element">Sonderfunktionen</span> aktiv und in der Auswahlliste der Eintrag <span class="gui_element">Steigung berechnen aus Z-Koordinaten</span> ausgewählt sind.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur aktive</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden nur die Steigungen der aktiven Strecken berechnet.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, werden die Steigungen aller Strecken berechnet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Bezugsattribut für Länge</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Länge (Eingabeattribut)</span>
+                        </p>
+                        <p class="CellText">Sie können dieses Streckenattribut einlesen oder von <MadCap:variable name="PTV_Manual.Programmname" /> berechnen lassen und anschließend bearbeiten. Wählen Sie es als Bezugsattribut, wenn Sie über zuverlässige Längendaten verfügen. Es liefert dann die genauesten Ergebnisse.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Länge Luftlinie</span>
+                        </p>
+                        <p class="CellText">Dieses Streckenattribut gibt die Luftlinie zwischen dem Von-Knoten und Nach-Knoten an. Es wird von <MadCap:variable name="PTV_Manual.Programmname" /> automatisch berechnet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Länge Polygon</span>
+                        </p>
+                        <p class="CellText">Dieses Streckenattribut gibt die Länge des Polygons zwischen dem Von-Knoten und Nach-Knoten an. Es wird von <MadCap:variable name="PTV_Manual.Programmname" /> automatisch berechnet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Belegen</span>.</p>
+        <p class="Result">
+            <MadCap:keyword term="Steigungen:anzeigen" />
+            <MadCap:variable name="PTV_Manual.Programmname" /> berechnet die Steigung der gewünschten Strecken. Die Steigung wird als Streckenattribut in Prozent angezeigt. Sie finden die Steigungsangabe auch im Fenster <span class="gui_element">Strecke bearbeiten</span> auf <MadCap:conditionalText MadCap:conditions="PTV_Manual.veraltet_EWS">den Registern </MadCap:conditionalText>dem Register <span class="gui_element">Umwelt</span><MadCap:conditionalText MadCap:conditions="PTV_Manual.veraltet_EWS">und <span class="gui_element">EWS-97</span></MadCap:conditionalText><MadCap:xref class="sieheUeberschrSeite" href="Attribute_und_Optionen_von_Strecken.htm#2_netz_bearbeiten_23091886_1130895"><span style="color: Black;" class="mcFormatColor">(</span><u>Attribute und Optionen von Strecken</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+    </body>
+</html>

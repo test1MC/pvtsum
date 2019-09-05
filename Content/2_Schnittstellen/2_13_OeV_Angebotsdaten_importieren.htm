@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE,MyStatusFileTagSet.In Progress" MadCap:lastBlockDepth="8" MadCap:lastHeight="676" MadCap:lastWidth="510" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;Control;operationControlPoints;published;kombinationen;Slippy;Open;Database;License">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>ÖV-Angebotsdaten importieren<a name="62011"></a><a name="62012"></a><a name="62013"></a><a name="62015"></a><a name="62016"></a><a name="62020"></a><a name="62014"></a></h3>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">
+            <MadCap:keyword term="Importieren: ÖV-Angebot aus Visum" />Wählen Sie im Menü <span class="gui_element">Datei</span> den Eintrag <span class="gui_element">Importieren</span>&#160;&gt; <span class="gui_element">ÖV-Angebot aus Visum</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Import von ÖV-Angebot</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie das Register <span class="gui_element">Grundeinstellungen</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table style="width: 477px;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" class="TableStyle-gui_elements2" cellspacing="0">
+            <col class="TableStyle-gui_elements2-Column-Column1" />
+            <col class="TableStyle-gui_elements2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p>
+                            <span class="gui_element">Import aus Datei</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">Navigieren Sie über die Schaltfläche zu der <MadCap:variable name="PTV_Manual.Programmname" />-Versionsdatei, deren ÖV-Angebot Sie in Ihr bestehendes Netz importieren möchten.</td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur aktive Fahrtabschnitte (und zugehörige Grunddaten) aus dem Quellnetz übernehmen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">Ist die Option ausgewählt, werden nur aktive Fahrtabschnitte des Quellnetzes importiert.</td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Im Zielnetz aktive Linien ersetzen oder löschen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p>Ist die Option ausgewählt, werden im Zielnetz aktiv gesetzte Linien und deren untergeordnete Objekte am Ende des Importprozesses gelöscht.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie das Register <span class="gui_element">Haltepunkte</span>.</p>
+        <p class="Text">Haltepunkte werden zunächst über einen Vergleich der zugehörigen Attribute zugeordnet. Dabei sind mehrere passende Haltepunkte im Zielnetz möglich. Außerdem können geografisch passende Haltepunkte im Zielnetz als Haltepunkte festgelegt werden.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:keyword term="Importieren: ÖV-Angebot aus Visum: Haltepunkte-Einstellungen">
+            </MadCap:keyword>
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp">
+            </MadCap:snippetText>
+        </p>
+        <table style="width: 477px;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" class="TableStyle-gui_elements2" cellspacing="0">
+            <col class="TableStyle-gui_elements2-Column-Column1" style="width: 162px;">
+            </col>
+            <col class="TableStyle-gui_elements2-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Haltepunkte über Attributvergleich zuordnen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden die Haltepunkte über einen Vergleich bestimmter Attribute zugeordnet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Vergleichsattribut im Quellnetz</span>
+                        </p>
+                        <p class="CellText" style="mc-hyphenate-shortest-prefix: 7;">Über die Schaltfläche können Sie ein Haltepunktattribut des Quellnetzes auswählen, das für den Vergleich mit dem ausgewählten Attribut des Zielnetzes verwendet wird.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Vergleichsattribut im Zielnetz</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie ein Haltepunktattribut des Zielnetzes auswählen, das für den Vergleich mit dem ausgewählten Attribut des Quellnetzes verwendet wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <span class="gui_element">Nur aktive Knoten, Strecken und Haltepunkte im Zielnetz berücksichtigen</span>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden für den Import nur aktive Knoten, Strecken und Haltepunkte im Zielnetz berücksichtigt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Nur Haltepunkte im Zielnetz unverändert verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden nur im Zielnetz vorhandene Haltepunkte verwendet. Die Haltepunkte werden nicht verändert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur Haltepunkte im Zielnetz verwenden, ggf. für das Verkehrssystem öffnen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p>Ist die Option ausgewählt, werden nur im Zielnetz vorhandene Haltepunkte verwendet. Die Haltepunkte werden jedoch das Verkehrssystem geöffnet, wenn es nötig ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Auch Haltepunkte in Zielnetz auf bestehenden Knoten einfügen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden Haltepunkte auf bestehenden Knoten in das Zielnetz eingefügt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Auch Haltepunkte in Zielnetz auf bestehenden Knoten oder Strecken einfügen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden Haltepunkte auf bestehenden Knoten oder Strecken in das Zielnetz eingefügt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Auch Knoten und Strecken in Zielnetz einfügen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden neben Haltepunkten auch Knoten und Strecken in das Zielnetz eingefügt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Bei bestehenden Haltepunkten nur ID-Bezüge verwenden, keine geographische Suche durchführen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png">
+                            </img> Ist die Option ausgewählt, werden Haltepunkte dann eingefügt, wenn Ihre ID im Zielnetz eine entsprechende ID vorhanden ist. Es werden keine geografisch passende Koordinaten zugelassen.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png">
+                            </img> Ist die Option nicht ausgewählt, werden die Haltepunkte anhand ihrer Koordinaten zugeordnet, falls kein Zuordnungsattribut ausgewählt ist und es keinen Haltepunkt-Kandidaten gibt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Mindestabstand zwischen neuen und bestehenden Streckenhaltepunkten auf der gleichen Strecke</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2" style="mc-hyphenate-shortest-prefix: 12;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">Im Eingabefeld geben Sie den Mindestabstand zwischen neuen und bestehenden Streckenhaltepunkten an.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur verfügbar, wenn die Option <span class="gui_element">Auch Haltepunkte in Zielnetz auf bestehenden Knoten oder Strecken einfügen</span> ausgewählt ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Attribut für Nummer des Quell-Haltepunktes, aus dem ein neuer Haltepunkt entstanden ist</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche öffnen Sie das Fenster zur Auswahl des Haltestellen Attributs.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur verfügbar, wenn die Option <span class="gui_element">Auch Knoten und Strecken in Zielnetz einfügen</span> ausgewählt ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">Wählen Sie das Register <span class="gui_element">Routing</span>.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">
+            <MadCap:keyword term="Importieren: ÖV-Angebot aus Visum: Routing-Einstellungen">
+            </MadCap:keyword>
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp">
+            </MadCap:snippetText>
+        </p>
+        <table style="width: 477px;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" class="TableStyle-gui_elements2" cellspacing="0">
+            <col class="TableStyle-gui_elements2-Column-Column1">
+            </col>
+            <col class="TableStyle-gui_elements2-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Zwischenpunkte</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Nur Lage der Haltepunkte berücksichtigen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden nur Haltepunkte als Routenpunkte berücksichtigt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Auch Zwischenpunkte berücksichtigen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden auch Zwischenpunkte als Routenpunkte berücksichtigt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Kurzwegsuche</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur über geöffnete Strecken routen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird nur über die Strecken geroutet, die für das entsprechende Verkehrssystem geöffnet sind.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Nur über geöffnete Abbieger routen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird nur über die Abbieger geroutet, die für das entsprechende Verkehrssystem geöffnet sind.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Kostenattribut Strecken</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche wählen Sie ein Attribut aus, das das Routenwahl-Kriterium der Strecken enthält.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Kostenattribut Abbieger</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche wählen Sie ein Attribut aus, das das Routenwahl-Kriterium der Abbieger enthält.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Kurzwegsuche wird abgebrochen, wenn Kosten im Netz &gt;</span>
+                        </p>
+                        <p class="CellText">Wert, der eine Obergrenze der Kosten angibt, ab dem die Kurzwegsuche abgebrochen wird. Geben Sie in die Felder die gewünschten Werte ein, bei der die Kurzwegsuche abgebrochen wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Map Matching</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Fangradius für geographische Kandidatensuche (Haltepunkte und Zwischenhaltepunkte)</span>
+                        </p>
+                        <p class="CellText">Der Radius gibt die Toleranz an, mit der die Koordinaten der Linienroutenverläufe des Quellnetzes den Strecken des Zielnetzes zugeordnet werden können.</p>
+                        <p class="CellText">Wert für den Fangradius in Metern (m)</p>
+                        <p class="CellText">
+                            <span class="gui_element">Maximale Anzahl Kandidaten je Halt oder Zwischenpunkt</span>
+                        </p>
+                        <p class="CellText">Maximale Anzahl der Knoten oder Haltepunkte im Quellnetz, die je Halt oder Zwischenpunkt im Zielnetz vorkommen</p>
+                        <p class="CellText">
+                            <span class="gui_element">Standardabweichung (Je größer der Wert, desto weniger genau werden Halte- und Zwischenpunkte platziert, wenn dadurch die Linienroute kürzer wird)</span>
+                        </p>
+                        <p class="CellText">Eingabe des Werts für die Standardabweichung.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Linienwege im Zielnetz bündeln</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Linienwege gebündelt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Linienwege auch mit Systemrouten im Zielnetz bündeln</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Linienwege unter Berücksichtigung der Systemrouten gebündelt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="8. &#160;">Wählen Sie das Register <span class="gui_element">Verkehrssysteme</span>.</p>
+        <p class="Step" MadCap:autonum="9. &#160;">
+            <MadCap:keyword term="Importieren: ÖV-Angebot aus Visum">
+            </MadCap:keyword>
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp">
+            </MadCap:snippetText>
+        </p>
+        <table style="width: 477px;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" class="TableStyle-gui_elements2" cellspacing="0">
+            <col class="TableStyle-gui_elements2-Column-Column1" />
+            <col class="TableStyle-gui_elements2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">VSys-Code Quellnetz</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Anzeige der Codes, der im Quellnetz vorhandenen Verkehrssysteme</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">VSys-Name Quellnetz</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Anzeige der Namen, der im Quellnetz vorhandenen Verkehrssysteme</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">VSys-Code Zielnetz</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p>Auswahlfeld für das Verkehrssystem des Zielnetzes.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">VSys-Name Zielnetz</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Anzeige der Namen, der im Zielnetz vorhandenen Verkehrssysteme</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="mc-table-style: url('../Resources/TableStyles/TipHint1.css');width: 495px;" class="TableStyle-TipHint1" cellspacing="0">
+            <col class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Ist auf dem Register <span class="gui_element">Grundeinstellungen</span> die Option <span class="gui_element">Nur aktive Fahrtabschnitte aus dem Quellnetz übernehmen</span> ausgewählt, dann werden Verkehrssysteme, die im Quellnetz keinen aktiven Fahrtabschnitt haben, in einer anderen Schriftfarbe dargestellt. Die Zuordnung kann trotzdem verändert werden.<br />Wird eine andere Quell-Versionsdatei ausgewählt, werden die darin enthaltenen Verkehrssysteme angezeigt. Öffnen Sie eine Parameterdatei, werden die zum Quellnetz passenden Zuordnungen angezeigt und bei Bedarf um noch nicht zugeordnete Verkehrssysteme aus dem Quellnetz ergänzt. Sie können keine Einträge in der Zuordnungstabelle direkt einfügen oder löschen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="10. &#160;">Wählen Sie das Register <span class="gui_element">Netzobjekte</span>.</p>
+        <p>
+            <MadCap:keyword term="Importieren: ÖV-Angebot aus Visum">
+            </MadCap:keyword>
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp">
+            </MadCap:snippetText>
+        </p>
+        <table style="mc-table-style: url('../Resources/TableStyles/gui_elements2.css');width: 495px;" class="TableStyle-gui_elements2" cellspacing="0">
+            <col class="TableStyle-gui_elements2-Column-Column1" />
+            <col class="TableStyle-gui_elements2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">Verkehrstage nach dem Import zusammenfassen</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p>Alle Verkehrstage die von einem Fahrtabschnitt im Quellnetz verwendet werden, werden in das Zielnetz übernommen. Ist die Option ausgewählt, werden die Verkehrstage nach dem Import zusammengefasst. Bei Übereinstimmung bleiben nur die im Zielnetz bereits vorhandenen Verkehrstage übrig.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">Streckentyp neu angelegter Strecken</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Wählen Sie aus der Auswahlliste den Streckentyp für neu angelegte Strecken aus. Die Option ist nur verfügbar, wenn sie auf dem Register Haltepunkte die Option <span class="gui_element">Auch Knoten und Strecken in Zielnetz einfügen</span> ausgewählt haben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">Bereich <span class="gui_element">Konfliktvermeidung</span></p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Im Bereich Konfliktvermeidung werden die Netzobjekttypen angezeigt, die importiert werden. Als Möglichkeiten zur Konfliktvermeidung stehen abhängig vom Netzobjekttyp folgende Möglichkeiten in der Spalte <span class="gui_element">Konfliktvermeidung</span> zur Verfügung:</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Versatz</span>
+                            </LI>
+                        </ul>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Komprimieren mit Versatz</span>
+                            </LI>
+                        </ul>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Präfix</span>
+                            </LI>
+                        </ul>
+                        <p class="CellText">Die Optionen entsprechen den Optionen <span class="gui_element">Offset</span>, <span class="gui_element">Komprimieren mit Offset</span> und <span class="gui_element">Präfix</span> beim Vergleichen zweier Netze mit additivem Netzlesen <MadCap:xref href="../2_Grundlagen_Programmbedienung/2_1_Einstellungen für die Konfliktvermeidung und Konfliktbehandlung festlegen.htm" class="sieheUeberschrSeite">(siehe „Einstellungen für die Konfliktvermeidung und Konfliktbehandlung festlegen“ auf Seite&#160;1)</MadCap:xref></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="11. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Einstellungen für den Import von ÖV-Angebotsdaten werden gespeichert.</p>
+        <p class="Tabledist">
+        </p>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:ignoredWords="big;endian;ves;Tmpn" MadCap:lastBlockDepth="2" MadCap:lastHeight="324" MadCap:lastWidth="697">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_grundlagen_programmbedienung_1644961382_1275609">
+            </a>
+            <a name="2_grundlagen_programmbedienung_1644961382_83739">
+            </a>Hinweise zur Eindeutigkeit von IDs in Modifikationen</h4>
+        <p class="Text">Im Rahmen des Szenariomanagements achtet <MadCap:variable name="PTV_Manual.Programmname" /> darauf, dass alle Netzobjekte innerhalb des gesamten Projekts eindeutige IDs besitzen. Die Verwaltung findet in der Datenbankdatei statt. So ist sichergestellt, dass in verschiedenen Modifikationen nicht Netzobjekte mit der gleichen ID existieren.</p>
+        <p class="Text">Wenn Sie beispielsweise ein neues Netzobjekt einfügen, schlägt <MadCap:variable name="PTV_Manual.Programmname" /> automatisch die nächste im gesamten Projekt freie Nummer als eindeutige ID vor. Aus dem gleichen Grund setzt <MadCap:variable name="PTV_Manual.Programmname" /> beim additiven Netzlesen und beim Einlesen von Modifikationsdateien für numerische Schlüssel automatisch die Einstellung <span class="gui_element">Konfliktvermeidung</span> aktiv. So ermittelt <MadCap:variable name="PTV_Manual.Programmname" /> automatisch die nächste freie ID pro Netzobjekttyp und wählt den entsprechenden Offset.</p>
+        <p class="Text">Es kann jedoch auch sinnvoll sein, diese Vorgaben zu ändern. Beispielsweise möchten Sie in mehreren Szenarien die gleiche Haltestelle mit unterschiedlicher Lage oder unterschiedlichen Eigenschaften vergleichen. In diesem Fall erzeugen Sie eine Haltestelle mit der gleichen ID in mehreren Modifikationen. Die Modifikationen schließen sich dann gegenseitig aus, Sie können aber in verschiedenen Szenarien verwendet werden. Wenn Sie die Szenarien vergleichen, können Sie die Attribute der Haltestellen (und der entsprechenden Linien) vergleichen, weil sie die gleiche ID besitzen.</p>
+    </body>
+</html>

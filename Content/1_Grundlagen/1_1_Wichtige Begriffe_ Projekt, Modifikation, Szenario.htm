@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="680" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="R2;bzw;ggf;usw;DiffNet;Be;v0IV;DIFFNET;Netz1;Netz2;steuerung;horizonte;of;Bevölkerungs;Erzeugungs;erkehr;tädten;rzeugungs;odell;24h;Wohn;S5;KapazitätIV;M1;M2;S0;UT;M3;S0_2020;U_2020;T_2020;UT_2020">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_grundlagen_des_programms_3110159993_1037122">
+            </a>Wichtige Begriffe: Projekt, Modifikation, Szenario</h3>
+        <p class="Text">Das Szenariomanagement verwendet drei wichtige Konzepte: Projekt, Modifikation und Szenario.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_ScenMgmt_Terms.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Text">Ein Projekt ist die Klammer für alle Daten zu einer Anwendung von <MadCap:variable name="PTV_Manual.Programmname" />. Es besitzt einen eindeutigen Namen und verfügt über ein Protokoll, in dem Bearbeiter Notizen über den Bearbeitungszustand hinterlassen können. Jedes Projekt baut auf einem Basismodell auf, das oft als Ausgangszustand, Analyse-Fall oder Null-Fall bezeichnet wird. Es ist in Form einer Versionsdatei gespeichert, der Basisversion. Die Basisversion wird ebenso wie andere unterstützende Dateien (Verfahrens- und Grafikparameter usw.) in einer einheitlichen Ordnerstruktur abgelegt, deren Pfad Sie frei vergeben können. Alle anderen Angaben zum Projekt, insbesondere die Definitionen der enthaltenen Modifikationen und Szenarien, sind in der <MadCap:variable name="PTV_Manual.Programmname" />-Projektdatenbank, einer speziellen Datenbankdatei, im gleichen Verzeichnisbaum gespeichert.</p>
+        <p class="Text">Eine Modifikation ist eine Gruppe von Änderungen an Angebot oder Nachfrage, die inhaltlich zusammen gehören. So könnte sich eine Modifikation auf den Bau einer Umgehungsstraße beziehen und dann eine Reihe neu einzufügender Strecken, Änderungen an einigen existierenden Strecken und Anpassungen an den betroffenen Knoten umfassen. Eine andere Modifikation könnte die Einführung eines Tempolimits auf bestimmten Straßen beschreiben. Sie bestünde aus der Änderung eines einzigen Attributs (<span class="formula">v</span><span class="formula_subscript">0</span>) für viele Netzstrecken. Modifikationen können sich ebenso auf das ÖV-Angebot beziehen und z.B. veränderte Linienführungen, Takte oder neue Haltestellen beschreiben. Auf der Nachfrageseite sind die typischsten Modifikationen Änderungen an soziodemografischen Strukturdaten, also Änderungen an Bezirksattributen. Modifikationen können auch Matrixinhalte verändern, z.B. extern vorgegebene Matrizen für den Durchgangsverkehr. Ein Projekt kann eine beliebige Anzahl von Modifikationen enthalten. Modifikationen können aufeinander aufbauen: Eine Modifikation könnte den Bau einer Umgehungsstraße beschreiben, eine weitere deren Ausbau auf zwei Fahrstreifen pro Richtung. Die zweite Modifikation ändert die Attribute <span class="gui_element">KapazitätIV</span> und <span class="gui_element">Anzahl Fahrstreifen</span> für genau die Strecken, die durch die erste Modifikation dem Basismodell hinzugefügt werden. Beim Anlegen einer Modifikation geben Sie an, auf welchen anderen Modifikationen sie aufbaut.</p>
+        <p class="Text">Ein Szenario entspricht einer zu untersuchenden Variante, oft auch als Planfall bezeichnet. Jedes Szenario ergibt sich aus der Basisversion des Projekts durch Anwendung einer oder mehrerer Modifikationen. Die Unterscheidung zwischen Modifikation und Szenario hat den Vorteil, dass Sie sehr leicht alle Kombinationen einer Menge von Maßnahmen untersuchen können. Nehmen wir an, in Ihrem Projekt geht es um den Bau einer Umgehungsstraße. Gleichzeitig wird vorgeschlagen, im Innenstadtbereich zur Verkehrsberuhigung ein Tempolimit einzuführen. Definieren Sie dazu zwei Modifikationen: eine (M1) für die Umgehungsstraße und die zweite (M2) für das Tempolimit. Mit diesen beiden Modifikationen können Sie ohne weiteren Modellierungsaufwand vier Szenarien definieren:</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="98px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="123px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="98px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="81px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="95px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Szenario-Code</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bedeutung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Basisversion</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">M1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">M2</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">S0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Null-Fall</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">U</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">nur Umgehung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">T</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">nur Tempolimit</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">UT</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Umgehung + Tempolimit</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Definition von Szenarien aus Modifikationen</p>
+        <p class="Text">Fordert der Auftraggeber zusätzlich die Untersuchung einer Nachfragevariante für das Jahr 2020, so können Sie Ihr Projekt mit minimalem Aufwand anpassen. Definieren Sie zuerst eine Modifikation M3 für die zweite Nachfragevariante. Dann duplizieren Sie alle bisherigen Szenarien und aktivieren in der Kopie zusätzlich M3. Schon sind Sie bereit, das Modell für alle acht Szenarien zu berechnen.</p>
+        <table class="TableStyle-TableStandard" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="82px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="156px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="82px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="60px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="59px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Szenario-Code</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bedeutung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Basisversion</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">M1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">M2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">M3</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">S0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Null-Fall</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">U</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">nur Umgehung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">T</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">nur Tempolimit</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">UT</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Umgehung + Tempolimit</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">S0_2020</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Null-Fall 2020</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">U_2020</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">nur Umgehung 2020</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">T_2020</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">nur Tempolimit 2020</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">o</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">UT_2020</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Umgehung + Tempolimit 2020</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">x</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Erweiterung der Szenarien für eine Nachfragevariante</p>
+        <p class="Text">Bei der Zusammenstellung von Szenarien aus Modifikationen sollten Sie beachten, dass die Modifikationen möglichst keine widersprüchlichen Angaben zum Wert des gleichen Attributs machen. <MadCap:variable name="PTV_Manual.Programmname" /> kann überprüfen, ob zwei Modifikationen in diesem Sinn problemlos kombinierbar sind. In seltenen Fällen können Überlappungen zwischen Modifikationen erwünscht sein. Beispiel: M1 beschreibt die Erweiterung einer Streckenfolge auf zwei Fahrstreifen, M2 die darüber hinaus gehende Erweiterung einiger dieser Strecken auf drei Fahrstreifen. M1 und M2 machen für einige Strecken widersprüchliche Angaben zum Attribut <span class="gui_element">Anzahl Fahrstreifen</span>. Wenn zuerst M1 und danach M2 angewendet wird, führt dies trotzdem zum gewünschten Ergebnis: Auf manchen Strecken wird das Attribut <span class="gui_element">Anzahl Fahrstreifen</span> zweimal überschrieben. Sie ersparen sich damit, eine Kopie von M1 zu definieren, in denen gerade die in M1 erwähnten Strecken fehlen. Für derartige Fälle ist es wichtig, dass Sie die Anwendungsreihenfolge für Modifikationen selbst festlegen können. Umgekehrt können Sie Konflikte bei der Zusammenstellung von Szenarien vermeiden, indem Sie schon bei der Definition der Modifikationen selbst angeben, welche davon nicht miteinander kombiniert werden dürfen.</p>
+    </body>
+</html>

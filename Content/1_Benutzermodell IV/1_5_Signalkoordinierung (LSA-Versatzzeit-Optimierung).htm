@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="271" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;gruppen;gruppe;ICU1;ICU2;Circular;Planning;Operations;pretimed;fully;actuated;semi;actuation;type;ICAArrivalType;14a;AnteilLKW;6b;ICAEingVerlustZVerw;ICAIstCentral;BusinessDistrict;Central;District;6e;ICASneakers;ICAZuflussFaktor;10b;14b;BusFrequenz;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;FS;BS;xd;KJ;k2;k1;s'';abflüssen;peak;hour;factor;LT;RT;vphpl;HV;bb;Lu;Lpb;Rpb;CBD;ST;Ui;PF;Ii;Ri;PA;bi;Volume;to;ICU;P1;P2;P3;6a;6c;6d;LUo;qr;po;ArrivalType;6j;3a;3b;pedu;pbT;rec;RTA;LTA;kgV;SG1;SC1;SG2;SC2;stop;CT;PV;Ankunfts;queue;Arrival;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_iv_2033098965_1240840">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_25969">
+            </a>Signalkoordinierung (LSA-Versatzzeit-Optimierung)</h4>
+        <p class="Text">
+            <MadCap:keyword term="Signalkoordinierung" />
+            <MadCap:keyword term="Signalanlagen:Versatzzeiten optimieren" />
+            <MadCap:keyword term="Versatzzeiten optimieren" />Grünzeit- und Umlaufzeitoptimierung beziehen sich jeweils auf einzelne Lichtsignalanlagen. Dagegen dient die LSA-Versatzzeitoptimierung dazu, den Versatz zwischen den Signalzeiten an benachbarten Knoten so zu optimieren, dass die Fahrzeuge mehrere aufeinander folgende Lichtsignalanlagen bei Grün passieren können. Allgemein ist das Ziel, die Gesamtwartezeit aller Fahrzeuge an LSAs zu minimieren.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Attribute der Knotengeometrie sind bei diesem Verfahren nicht wirksam. Insbesondere spielt die Haltelinienposition der Fahrstreifen keine Rolle.</p>
+                        <p class="Text">Signalisierte Knoten und Oberknoten, denen keine LSA zugewiesen ist, oder deren LSA abgeschaltet ist, werden bei der Signalkoordinierung nicht berücksichtigt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Beispiel</h5>
+        <p class="Text">Wir veranschaulichen die Aufgabenstellung an dem in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1215803">Abbildung 1</MadCap:xref> gezeigten Beispielnetz.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_SignalCoord_ExampleNet.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1215803">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_68967">
+            </a>Beispielnetz für Signalkoordinierung</p>
+        <p class="Text">Im Netz in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1215803">Abbildung 1</MadCap:xref> verfügen die inneren sechs Knoten über Lichtsignalanlagen, die äußeren Knoten dienen nur zur Anbindung der vier Bezirke. Durch eine Umlegung sind Strecken-und Abbiegerbelastungen vorgegeben. Die Fahrstreifenaufteilung ist grundsätzlich so gewählt, dass an jeder Zufahrt eines Knotens ein Mischfahrstreifen für Geradeausfahrer und Rechtsabbieger und eine 100&#160;m lange Aufweitung für Linksabbieger existieren. Nur an einzelnen Zufahrten mit besonders großer Verkehrsbelastung sind zusätzliche Fahrstreifen angeordnet. Alle LSA weisen die gleichen Signalzeiten auf (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1215809">Abbildung 2</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_SignalCoord_Signaltimes.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1215809">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_83139">
+            </a>Grünzeitaufteilung an allen Knoten, mit Nachlauf der Linksabbieger</p>
+        <p class="Text">Bei einer Umlaufzeit von 80&#160;s haben Geradeausfahrer und Rechtsabbieger je 30&#160;s Grünzeit, die Signalgruppen für Linksabbieger laufen 5&#160;s länger und sind in dieser Zeit geschützt.</p>
+        <p class="Text">Signalzeiten und Fahrstreifenaufteilung sind so gewählt, dass die daraus resultierende Kapazität für alle Abbieger ausreicht. Wartezeiten können sich dagegen trotzdem ergeben, wenn benachbarte LSA schlecht koordiniert sind. Für das Beispiel nehmen wir zunächst eine Versatzzeit von 0&#160;s für alle LSA an. Das durch Streckenbalken veranschaulichte Umlegungsergebnis ergibt sich als Überlagerungen von sieben Wegen, von denen einer in der <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1215816">Abbildung 3</MadCap:xref> hervorgehoben ist.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_SignalCoord_Path.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">
+            <a name="1_benutzermodell_iv_2033098965_1215816">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_44630">
+            </a>Ein Weg durch das Beispielnetz passiert LSA an Knoten 7003, 8003, 8002 und 9002</p>
+        <p class="Text">Dieser Weg passiert die signalisierten Knoten 7&#160;003, 8&#160;003, 8&#160;002 und 9&#160;002. Fahrzeuge, die Knoten 7&#160;003 in Richtung 8&#160;003 verlassen, bilden bei Abfahrt einen Pulk, der zum Beginn der Grünzeit startet, also zu Sekunde 0. Die Fahrzeit <span class="formula">t</span><span class="formula_subscript">akt</span> auf der Strecke von 7&#160;003 nach 8&#160;003 beträgt 38&#160;s. Ohne Berücksichtigung der Pulkauflösung erreicht die Spitze des Pulks den Knoten 8&#160;003 also zur Sekunde 38. Tatsächlich führt die Verteilung der von den Fahrzeugen tatsächlich gefahrenen Geschwindigkeiten zu einer Auflösung des ursprünglich kompakten Pulks (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1215822">Abbildung 4</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_SignalCoord_Arrival8003.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 4: ">
+            <a name="1_benutzermodell_iv_2033098965_1215822">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_16482">
+            </a>Koordinierungsqualität für die Zufahrt West an Knoten 8003</p>
+        <p class="Text">Das Diagramm zeigt links die Ankunftsrate in Abhängigkeit von der Umlaufsekunde. Die ersten Fahrzeuge treffen bereits zur Sekunde 30 ein, danach steigt die Ankunftsrate steil an und fällt ab Sekunde 52 wieder ab. Die Signalgruppe für die Weiterfahrt weist ebenfalls eine Grünzeit zwischen Sekunde 0 und 30 auf, also erreicht der überwiegende Teil des Pulks den Knoten bei Rot. Das zweite Diagramm zeigt die zugehörige Entwicklung der Schlangenlänge und das dritte Diagramm die resultierende Wartezeit in Fahrzeugsekunden abhängig von der Ankunftssekunde. Über alle Ankünfte summiert ergibt sich eine Gesamtwartezeit von 19&#160;069 Fahrzeugsekunden, entsprechend ein Mittelwert von 39,20&#160;s pro Fahrzeug. Dies ist ein Beispiel für schlechte Koordination.</p>
+        <p class="Text">An Knoten 8&#160;002 ist die Situation wesentlich günstiger (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1215829">Abbildung 5</MadCap:xref>).</p>
+        <p class="Text">
+            <img src="../Resources/Images/DIAG_SignalCoord_Arrival8002.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 5: ">
+            <a name="1_benutzermodell_iv_2033098965_1215829">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_88207">
+            </a>Koordinierungsqualität für die Zufahrt Nord an Knoten 8002</p>
+        <p class="Text">Wieder startet der Pulk ab Sekunde 0 und die Fahrzeit der Strecke 8&#160;003 - 8&#160;002 ist mit <span class="formula">t</span><span class="formula_subscript">akt</span>&#160;=&#160;41&#160;s ähnlich wie zuvor, doch besitzt die weiterführende Signalgruppe 4 für den Linksabbieger an Knoten 8&#160;002 eine Grünzeit von Sekunde 40 bis 75. Hier trifft der größte Teil des Pulks während der Grünzeit ein, die Schlangen sind deutlich kürzer und die Gesamtwartezeit beträgt nur 1&#160;608,80 Fahrzeugsekunden (im Mittel 4.37&#160;s pro Fahrzeug).</p>
+        <p class="Text">Ziel der Signalkoordinierung wäre in diesem einfachen Beispiel, den Versatz zwischen den Knoten 7&#160;003 und 8&#160;003 so zu verändern, dass der Pulk möglichst vollständig bei Grün an 8003 eintrifft, gleichzeitig aber den günstigen Versatz zwischen 8&#160;003 und 8&#160;002 beizubehalten. Da eine günstige Koordinierung nicht nur für einen, sondern mehrere Wege (im Beispiel sieben) gleichzeitig erreicht werden soll, minimiert die Signalkoordinierung im allgemeinen Fall durch Veränderung der Versatzzeiten die Gesamtwartezeit über alle LSA.</p>
+        <h5>Modell</h5>
+        <p class="Text">Die Signalkoordinierung in <MadCap:variable name="PTV_Manual.Programmname" /> eignet sich für die Optimierung von LSA in einem Netz, nicht nur entlang eines linearen Korridors, wie es der klassischen Optimierung grüner Wellen entspricht. Hier ist beschrieben, wie das Optimierungsmodell aufgestellt wird, das <MadCap:variable name="PTV_Manual.Programmname" /> durch Einsatz eines Standardverfahrens für gemischt-ganzzahlige lineare Optimierung löst. Anschließend sind alle Attribute zusammengefasst, die Eingabe und Ausgabe des Verfahrens beschreiben <MadCap:xref class="sieheUeberschrSeite" href="#1_benutzermodell_iv_2033098965_1215910"><span style="color: Black;" class="mcFormatColor">(</span><u>Eingabe-Attribute mit Wirkung bei der Signalkoordinierung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Eine gute Koordinierung setzt voraus, dass die LSA entweder gleiche Umlaufzeiten aufweisen oder dass die Umlaufzeiten zumindest in einem einfachen Zahlenverhältnis stehen (zum Beispiel 2/1). Außerdem müssen die LSA räumlich eng benachbart sein, weil sich andernfalls die Pulkform bis zur Ankunft an der nächsten LSA so stark auflöst, dass die Ankünfte praktisch gleichverteilt sind und die Wartezeit durch Wahl des Versatzes nicht beeinflusst werden kann. Deshalb ist es im Allgemeinen nicht sinnvoll, alle LSAs in einem Netz zu koordinieren. Sie legen fest, welche LSA koordiniert werden sollen, indem Sie Signalkoordinierungsgruppen definieren und ihnen LSAs zuordnen <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Signalkoordinierungsgruppen_verwalten.htm#2_netz_bearbeiten_23091886_1670462"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Signalkoordinierungsgruppen verwalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Standardmäßig sind LSAs keiner Signalkoordinierungsgruppe zugeordnet und werden nicht koordiniert.</p>
+        <p class="Text">Definieren Sie für jede Signalkoordinierungsgruppe die Menge der Umlaufzeiten, die für die zugehörigen LSAs erlaubt sind. Achten Sie darauf, dass die Umlaufzeiten eine Koordinierung überhaupt ermöglichen. Zwei LSAs mit Umlaufzeiten von 60 s und 65 s lassen sich prinzipiell nicht koordinieren, weil die Pulks in jedem Umlauf zu einer anderen Umlaufsekunde eintreffen. Gut geeignete Umlaufzeiten weisen deshalb ein kleines kgV (kleinstes gemeinsames Vielfaches) auf, beispielsweise die Familie { 60 s, 80 s, 120 s } mit kgV = 240 s. Die Signalkoordinierung optimiert Versatzzeiten für jede Signalkoordinierungsgruppe getrennt und berücksichtigt dabei nur diejenigen LSAs, deren Umlaufzeit zu den erlaubten Umlaufzeiten der Gruppe gehören. LSAs mit abweichender Umlaufzeit werden ignoriert und in der Meldungsdatei protokolliert.</p>
+        <p class="Text">Entscheidend für die Koordinierung ist das Verhalten der Fahrzeugpulks bei der Fahrt von einer LSA zur nächsten. <MadCap:variable name="PTV_Manual.Programmname" /> bestimmt Pulks durch Analyse des Umlegungsergebnisses für ein oder mehrere ausgewählte IV-Nachfragesegmente. Aus den gespeicherten Wegen der Umlegung bestimmt <MadCap:variable name="PTV_Manual.Programmname" />, wie viele Fahrzeuge auf ihrem Weg zunächst die Signalgruppe <span class="formula">SG1</span> der LSA <span class="formula">SC1</span> und als nächstes die Signalgruppe <span class="formula">SG2</span> der LSA <span class="formula">SC2</span> passieren. Wir bezeichnen eine solche Kombination aus zwei aufeinander folgenden Signalgruppen mit einer Belastung als Koordinierungsteilweg oder, kürzer, Teilweg.</p>
+        <p class="Text">Ein Teilweg ist relevant für die Koordinierung, wenn die folgenden Eigenschaften gelten:</p>
+        <ul>
+            <LI class="List0">Der Teilweg beginnt und endet an LSA der gleichen Koordinierungsgruppe</LI>
+            <LI class="List0">Der Teilweg enthält keine Knoten vom Steuerungstyp All-way-stop</LI>
+            <LI class="List0">Der Teilweg durchläuft Knoten vom Steuerungstyp vorfahrtsgeregelt nur in Richtung des Hauptstroms</LI>
+            <LI class="List0">Der Teilweg durchläuft keine anderen signalisierten Knoten</LI>
+            <LI class="List0">Die Fahrzeit auf dem Teilweg ist kurz genug, sodass ein signifikanter Pulk erhalten bleibt (Präzisierung unten)</LI>
+            <LI class="List0">Keine Strecke entlang des Teilwegs überschreitet einen Schwellenwert für die Auslastung</LI>
+        </ul>
+        <p class="Text">Alle Bedingungen – außer der ersten – zielen darauf ab, dass ein Pulk entlang des Teilwegs erhalten bleibt.</p>
+        <p class="Text">Die Optimierung behandelt den Verkehrsablauf auf allen Teilwegen unabhängig voneinander. In jedem Fall wird unterstellt, dass innerhalb eines Umlaufs alle Fahrzeuge als Pulk zu Beginn der Grünzeit starten. Das heißt, beginnend mit dem Grünanfang fließen Fahrzeuge mit der Sättigungsverkehrsstärke <span class="formula">q</span><span class="formula_subscript">max</span> ab, bis die Belastung pro Umlauf erschöpft ist. Dabei gilt Folgendes:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_83.jpg" />
+        </p>
+        <p class="Text">Hier ist <span class="formula">N</span> die effektive Anzahl Fahrstreifen für den Abbieger. Reicht die Grünzeit nicht aus, um die auf einen Umlauf entfallende Belastung aus der Umlegung bei <span class="formula">q</span><span class="formula_subscript">max</span> abfließen zu lassen, ignoriert <MadCap:variable name="PTV_Manual.Programmname" /> die überschießende Belastung und protokolliert dies in der Meldungsdatei.</p>
+        <p class="Text">Die allein durch unterschiedliche Fahrzeuggeschwindigkeiten bewirkte Auflösung des Pulks beschreibt die Pulkentwicklungsformel nach Robertson. Dieses Modell unterteilt die Zeit diskret in Zeitschritte (in <MadCap:variable name="PTV_Manual.Programmname" /> jeweils 1 s) und stellt die Zahl der zum Zeitpunkt <span class="formula">t‘</span> am Ende eines Teilwegs ankommenden Fahrzeuge als Funktion der Zahl zu Zeitpunkten <span class="formula">t &lt; t‘</span> am Beginn des Teilwegs abfahrenden Fahrzeuge dar.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_151.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">q‘</span>
+                            <span class="formula_subscript">t</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Zahl der am Ende des Teilwegs in Zeitschritt t ankommenden Fahrzeuge</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">q</span>
+                            <span class="formula_subscript">t</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Zahl der am Beginn des Teilwegs in Zeitschritt t abfahrenden Fahrzeuge</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">F</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/7_193.jpg" /> mit vorgegebenen Konstanten <span class="formula_symbol" style="line-height: 11pt;">a</span> und <span class="formula_symbol" style="line-height: 11pt;">b</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">T</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText"> die Fahrzeit <span class="formula">t</span><span class="formula_subscript">akt</span> auf dem Teilweg</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Für die Berechnung der Schlangenlängen wird idealisierend unterstellt, dass für getrennte Signalgruppen an einer Zufahrt getrennte Fahrstreifen ausreichender Länge existieren. Generell geht <MadCap:variable name="PTV_Manual.Programmname" /> bei der Signalkoordinierung von „vertikalen“ Schlangen aus, berücksichtigt also keinen Rückstau stromaufwärts über mehrere Strecken hinweg oder mit Auswirkungen auf die Kapazität der Abbieger anderer Signalgruppen.</p>
+        <p class="Text">Für die Bewertung der Koordinierungsqualität berechnet <MadCap:variable name="PTV_Manual.Programmname" /> eine Reihe von Kenngrößen, die in der Literatur verbreitet verwendet werden. In den nachfolgenden Formeln bezeichnet stets <span class="formula">CT</span> die Umlaufzeit, <span class="formula">GT</span> die Grünzeit und <span class="formula">q</span><span class="formula_subscript">t</span> die Zahl der am Knoten ankommenden Fahrzeuge im Zeitschritt <span class="formula">t</span>.</p>
+        <p class="Text">Pulkindex = <img src="../Resources/Images/7_167.jpg" /> wobei <img src="../Resources/Images/7_1.jpg" /></p>
+        <p class="Text">Diese Größe misst den „Abstand“ eines Belastungsprofils von einer Gleichverteilung. Der Wert variiert von 0 (Gleichverteilung) bis 2 (für einen ausgeprägten Pulk). Ein hoher Wert bedeutet, dass sich Koordinierung an diesem Knoten lohnt, weil die Fahrzeugankünfte auf einen Teil der Umlaufzeit konzentriert sind, sodass eine Chance besteht, durch Änderung der Versatzzeit die Grünzeit dorthin zu verschieben.</p>
+        <p class="Text">Fahrzeuge bei Grün = <img src="../Resources/Images/7_212.jpg" />.</p>
+        <p class="Text">Diese Größe misst unmittelbar, wie gut die Koordination wirkt. Sie ermittelt, welcher Anteil der Belastung den Knoten ohne Halt an der LSA passiert.</p>
+        <p class="Text">Pulkverhältnis = <img src="../Resources/Images/7_28.jpg" /></p>
+        <p class="Text">Diese Größe misst ebenfalls, wie gut die Koordination wirkt, wobei hohe Werte gute Koordination bedeuten. Besonders hohe Werte werden dann erzielt, wenn ein hoher Anteil von Ankünften bei Grün eintrifft, obwohl der Grünzeitanteil selbst klein ist.</p>
+        <p class="Text">Das Pulkverhältnis <span class="formula">PV</span> ist die Grundlage für die in Wartezeitberechnungen gemäß HCM wichtige Größe <span class="gui_element">ArrivalType</span> (<span class="gui_element">Ankunfts-Typ</span>).</p>
+        <p class="Text">ArrivalType = <img src="../Resources/Images/7_100.jpg" /></p>
+        <p class="Text">Die Staulänge <span class="formula">queue</span><span class="formula_subscript">t</span> an einer Signalgruppe zur Umlaufsekunde <span class="formula">t</span> ergibt sich als Differenz kumulierter Zu- und Abflüsse. <MadCap:variable name="PTV_Manual.Programmname" /> ermittelt bei dieser Berechnung auch die Verweildauer von Fahrzeiten mit gegebener Ankunftszeit in der Schlange und daraus die mittlere und Gesamtwartezeit.</p>
+        <h5>
+            <a name="1_benutzermodell_iv_2033098965_1215910">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_18980">
+            </a>Eingabe-Attribute mit Wirkung bei der Signalkoordinierung</h5>
+        <p class="Text">Die Signalkoordinierung greift auf die in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369695">Tabelle 1</MadCap:xref> dargestellten Netzobjekte und Eingabe-Attribute zu.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Attribute der Knotengeometrie, beispielsweise die Haltlinienposition, wirken bei der Signalkoordinierung nicht.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="127px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="123px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="245px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Netzobjekt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribute</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bemerkung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">IV-Wege</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Belastung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">aus Umlegung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Strecken, Abbieger, Oberabbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ein frei wählbares Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">wird als Fahrzeit interpretiert und zur Ermittlung der Fahrzeit auf einem Teilweg aufsummiert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">LSA mit allen Bestandteilen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">alle</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Signalzeiten, Umlaufzeit, Zuordnung von Signalgruppen zu Fahrstreifenabbiegern, Wahl einer Referenz-LSA, die Versatzzeit = 0 erhält.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Signalkoordinierungsgruppen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Umlaufzeitfamilie und zugeordnete LSA</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Gruppierung der gemeinsam zu koordinierenden LSA</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1369695">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_54053">
+            </a>Eingabe-Attribute mit Wirkung bei der Signalkoordinierung</p>
+        <h5>Ausgabe-Attribute bei der Signalkoordinierung</h5>
+        <p class="Text">Die Wirkung der Signalkoordinierung besteht in erster Linie darin, das Attribut <span class="gui_element">Zeitversatz</span> der koordinierten LSA mit dem optimalen Wert zu belegen.</p>
+        <p class="Text">Daneben können alle oben aufgeführten Kenngrößen zur Messung der Koordinierungsqualität berechnet werden. Ihre Definition bezieht sich zunächst auf einen einzelnen Teilweg. Damit Sie Ergebnisse leichter in einer Netzgrafik darstellen können, aggregiert <MadCap:variable name="PTV_Manual.Programmname" /> die Werte aller Kenngrößen auf Strecken und legt die Ergebnisse in Streckenattributen ab. <MadCap:variable name="PTV_Manual.Programmname" /> belegt die Attribute an allen Zufahrtsstrecken zu signalisierten Knoten, die eine Belastung &gt; 0 aufweisen. Alle Streckenattribute für Ergebnisse der Signalkoordinierung sind in der <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369751">Tabelle 2</MadCap:xref> enthalten.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="156px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="55px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="73px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="212px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Name</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Wertetyp</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Wertebereich</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bedeutung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">LSA-Koordinierung Fahrzeuge bei Grün</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Double</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0,0 .. 100,0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Anzahl Fahrzeuge, die während der Grünzeit eintreffen [%]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">LSA-Koordinierung Pulkindex</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Double</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0,0 .. 2,0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Definition s.o.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">LSA-Koordinierung Pulkverhältnis</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Double</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0,0 ..</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Definition s.o.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">LSA-Koordinierung Ankunfts-Typ</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Integer</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1 .. 6</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Definition s.o.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">LSA-Koordinierung Wartezeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Zeitdauer</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0 s ..</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gesamtwartezeit [Fahrzeugsekunden]</p>
+                        <p class="CellText">Hinweis: Bei Strecken vor überlasteten Signalgruppen wird der Wert auf 100&#160;000h gesetzt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">LSA-Koordinierung Maximale Staulänge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Double</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">0,0 ..</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">max. Anzahl wartender Fahrzeuge über alle Umlaufsekunden [Fzg]</p>
+                        <p class="CellText">Hinweis: Bei Strecken vor überlasteten Signalgruppen wird der Wert auf 100&#160;000 gesetzt.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_iv_2033098965_1369751">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_27209">
+                    </a>Ausgabe-Streckenattribute für Ergebnisse der Signalkoordinierung</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Das Attribut <span class="gui_element">LSA-Koordinierung Ankunfts-Typ </span>ist durch den Namensbestandteil LSA-Koordinierung als Ausgabe der Signalkoordinierung gekennzeichnet. Es ist nicht identisch mit dem Attribut <span class="gui_element">ICA Arrival Type</span>, das als Eingabe für die ICA-Berechnung dient. Wenn Sie die ICA-Widerstandsberechnung mit einem ArrivalType durchführen wollen, der den eingestellten Versatzzeiten entspricht, führen Sie zuvor das Verfahren <span class="gui_element">Analyse der LSA-Versatzzeit</span> aus und kopieren Sie die Werte von <span class="gui_element">LSA-Koordinierung Ankunfts-Typ</span> in das Attribut <span class="gui_element">ICA Arrival Type</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Verfahrensparameter</h5>
+        <p class="Text">Neben den Attributen der Netzobjekte steuern die in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369807">Tabelle 3</MadCap:xref> aufgeführten Verfahrensparameter die Signalkoordinierung.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="127px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="131px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="238px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Name</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Wertebereich (<span class="_Override" style="text-decoration: underline;">Standard</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bedeutung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Automatische Analyse</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Boole (<span class="_Override" style="text-decoration: underline;">True</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Nach der Signalkoordinierung werden automatisch die Ausgabe-Streckenattribute aktualisiert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Koordinierungsgruppenmenge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Menge von Koordinierungsgruppen (<span class="_Override" style="text-decoration: underline;">alle</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Die Koordinierung wird optional nur für ausgewählte Signalkoordinierungsgruppen ausgeführt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Nachfragesegmentmenge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Menge von umgelegten IV-NSeg (<span class="_Override" style="text-decoration: underline;">alle umgelegten IV-NSeg</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Die Teilwege werden optional nur aus den Umlegungswegen ausgewählter Nachfragesegmente bestimmt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">MaxAuslastung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Double &gt; 0 (<span class="_Override" style="text-decoration: underline;">80%</span>), in Prozent</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Wird diese Auslastung auf einer Strecke eines Teilwegs überschritten, wird der Teilweg für die Koordinierung ignoriert, weil bei zu hoher Auslastung kein Pulk erhalten bleibt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">MinPulkIndex</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Double &gt; 0 (<span class="_Override" style="text-decoration: underline;">0,4</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Beträgt der Pulkindex am Ende des Teilwegs weniger als dieser Schwellenwert, wird der Teilweg für die Koordinierung ignoriert, weil der Pulk zu schwach ausgeprägt ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">RobertsonAlpha</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Double &gt; 0 (<span class="_Override" style="text-decoration: underline;">0,35</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Parameter für die Pulkentwicklungsformel nach Robertson</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">RobertsonBeta</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Double &gt; 0 (<span class="_Override" style="text-decoration: underline;">0,8</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Parameter für die Pulkentwicklungsformel nach Robertson</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">FahrzeitStreckeAttr</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">numerisches Streckenattribut (<span class="_Override" style="text-decoration: underline;">ZWert1</span>)</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Bei der Berechnung der Teilwegfahrzeit wird für jede überfahrene Strecke FahrzeitStreckeFak • FahrzeitStreckeAttr aufsummiert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">FahrzeitStreckeFak</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Double &gt; 0 (<span class="_Override" style="text-decoration: underline;">1,0</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">FahrzeitAbbiegerAttr</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">numerisches Abbiegerattribut (<span class="_Override" style="text-decoration: underline;">ZWert1</span>)</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Bei der Berechnung der Teilwegfahrzeit wird für jeden überfahrenen Abbieger FahrzeitAbbiegerFak • FahrzeitAbbiegerAttr aufsummiert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">FahrzeitAbbiegerFak</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Double &gt; 0 (<span class="_Override" style="text-decoration: underline;">1,0</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">FahrzeitOberabbiegerAttr</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">numerisches Oberabbiegerattribut (<span class="_Override" style="text-decoration: underline;">ZWert1</span>)</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Bei der Berechnung der Teilwegfahrzeit wird für jeden überfahrenen Oberabbieger FahrzeitOberabbiegerFak • FahrzeitOberabbiegerAttr aufsummiert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">FahrzeitOberabbiegerFak</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Double &gt; 0 (<span class="_Override" style="text-decoration: underline;">1,0</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">MaxRechenzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Zeitdauer</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Die Rechenzeit für die Lösung des Optimierungsproblems wird begrenzt. Die beste bis zur angegebenen Zeitschranke gefundene Lösung wird zugewiesen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+            <a name="1_benutzermodell_iv_2033098965_1369807">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_21689">
+            </a>Verfahrensparameter für die Signalkoordinierung</p>
+        <h5>Lösungsverfahren</h5>
+        <p class="Text">Zur Bestimmung eines optimalen Satzes von Versatzzeiten pro LSA stellt <MadCap:variable name="PTV_Manual.Programmname" /> ein gemischt-ganzzahliges lineares Optimierungsproblem auf. Die Entscheidungsvariablen darin sind die Differenzen der Versatzzeiten benachbarter Lichtsignalanlagen, die Zielfunktion eine abschnittsweise linearisierte Näherung der Wartezeit in Abhängigkeit davon. Die Nebenbedingungen drücken aus, dass sich die Differenzen zwischen den Versatzzeiten benachbarter LSA entlang jedes Kreises im Netz zu einem ganzzahligen Vielfachen der Umlaufzeit addieren müssen.</p>
+        <p class="Text">Eine detaillierte Beschreibung des Verfahrens findet sich in Möhring, Nökel &amp; Wünsch (2006).</p>
+    </body>
+</html>

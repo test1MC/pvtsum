@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="357" MadCap:lastWidth="1018" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG;bearbeitung;Bearbeitungs;Nested;80er;sk;Method;of;verteilung;WAW;Stud">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1162569">
+            </a>
+            <a name="1_nachfragemodell_2215163117_51883">
+            </a>Nachfragesegmente</h3>
+        <p class="Text">
+            <MadCap:keyword term="Nachfragesegmente" />
+            <MadCap:keyword term="Netzobjekte: Nachfragesegmente" />Ein Nachfragesegment ist eine Gruppe oder Klasse von Verkehrsnachfrage, die in einem Schritt auf das Netz umgelegt wird, da das Verkehrsverhalten der Gruppe homogen ist. Beispiele für Nachfragesegmente könnten zum Beispiel Schüler oder Berufspendler sein. Reisezeiten von den Quellbezirken zu den Zielbezirken werden jeweils je Nachfragesegment berechnet <MadCap:xref class="sieheUeberschrSeite" href="../1_Netzmodell/1_2_Nachfragesegmente.htm#1_netzmodell_1240632468_1026260"><span style="color: Black;" class="mcFormatColor">(</span><u>Nachfragesegmente</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Nachfragesegmente unterscheiden sich von Nachfrageschichten <MadCap:xref class="sieheUeberschrSeite" href="1_3_Nachfrageschichten.htm#1_nachfragemodell_2215163117_1026101"><span style="color: Black;" class="mcFormatColor">(</span><u>Nachfrageschichten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Nachfrageschichten beinhalten Gruppen der Verkehrsnachfrage für die Schritte Verkehrserzeugung, Verkehrsverteilung und Moduswahl des Standard-Vier-Stufen-Modells. Ein weiterer wichtiger Unterschied ist, dass jedes Nachfragesegment genau einem Modus (zum Beispiel IV oder ÖV) zugeordnet ist.</p>
+        <p class="Text">Die Nachfrageschichten eines Modus werden üblicherweise zu Nachfragesegmenten aggregiert. Diese aggregierten Nachfragesegmente werden dann auf das Netz umgelegt. Eine Aggregation kann erfolgen, weil die Variablen, nach denen die Nachfrageschichten unterschieden werden, keine Auswirkung auf die Umlegung haben. So werden zum Beispiel die Nachfrageschichten häufig nach der Erwerbstätigkeit differenziert, zum Beispiel in Erwerbstätige mit Pkw und Nicht-Erwerbstätige mit Pkw. Wenn es im Untersuchungsgebiet keine mautpflichtigen Straßen gibt, spielt die Erwerbstätigkeit bei der Routenwahl in der Umlegung keine Rolle. In anderen Worten: Jeder wählt unabhängig von seinem Einkommen dieselbe Route zwischen dem Quellbezirk und dem Zielbezirk. Deswegen können die Nachfrageschichten für die Umlegung zu einem Nachfragesegment aggregiert werden.</p>
+        <p class="Text">Um eine Umlegung berechnen zu können, muss jedem Nachfragesegment genau eine Matrix zugeordnet werden <MadCap:xref class="sieheUeberschrSeite" href="1_3_Matrizen.htm#1_nachfragemodell_2215163117_1025951"><span style="color: Black;" class="mcFormatColor">(</span><u>Matrizen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Für dynamische IV-Umlegungen und alle ÖV-Umlegungen muss außerdem jedem Nachfragesegment genau eine Nachfrageganglinie zugeordnet sein <MadCap:xref class="sieheUeberschrSeite" href="1_3_Ganglinien.htm#1_nachfragemodell_2215163117_1149712"><span style="color: Black;" class="mcFormatColor">(</span><u>Ganglinien</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. So stellt <MadCap:variable name="PTV_Manual.Programmname" /> die Verknüpfung zwischen Verkehrsnachfrage und Verkehrsangebot her.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hints" MadCap:autonum="Hinweise: "> Bei statischen IV-Umlegungen wird eine eventuell angegebene Ganglinie ignoriert.</p>
+                        <p class="Text">Eine Matrix kann mehreren Nachfragesegmenten zugeordnet werden. Dasselbe gilt für Ganglinien.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

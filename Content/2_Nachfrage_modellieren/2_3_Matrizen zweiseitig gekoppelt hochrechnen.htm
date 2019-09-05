@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="674" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:ignoredWords="Symmetrize;bzw;zeilen;$O;usw;of;gpm;Anz">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_nachfrage_modellieren_1800171850_1592923">
+            </a>Matrizen zweiseitig gekoppelt hochrechnen</h4>
+        <p class="Text">Sie können Matrizen zweiseitig gekoppelt hochrechnen. Hierfür verwenden Sie ein iteratives Verfahren, auch Multi-Verfahren genannt. Dieses Verfahren sucht in einem schrittweisen Prozess die Lösung, die die Sollwerte am besten erreicht.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass ein Matrixeditorfenster mit der gewünschten Matrix geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="2_3_Matrizen öffnen.htm#2_nachfrage_modellieren_1800171850_1360914"><span style="color: Black;" class="mcFormatColor">(</span><u>Matrizen öffnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie in der Symbolleiste des Matrixfensters auf das Symbol <img src="../Resources/Images_4_all/ICO_Matrixeditor_Projection.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 011118px;margin-bottom: 1, 012818px;" />&#160;<span class="gui_element">Hochrechnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Hochrechnen</span> öffnet sich.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn Sie die Einstellungen für die Hochrechnung in einer Datei gespeichert haben (<span class="path">*.xml</span>, <span class="path">*.cod</span>), können Sie sie über die Schaltfläche <span class="gui_element">Öffnen</span> laden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie in der Auswahlliste <span class="gui_element">Hochrechnen wird durchgeführt</span> den Eintrag <span class="gui_element">zweiseitig gekoppelt (Multiverfahren)</span>.</p>
+        <p class="Step" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Allgemeine Parameter</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">mit Faktor multiplizieren</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Matrixwerte zeilen- und spaltenweise mit einem Faktor hochgerechnet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Hochrechnen auf Sollwert(e)</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Matrixwerte so hochgerechnet, dass die Zeilen- und Spaltensummen näherungsweise den angegebenen Sollwerten entsprechen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Parameter für Bezugstyp zweiseitige Kopplung (Multiverfahren)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Über die Option legen Sie fest, mit welcher Matrixsumme das Multi-Verfahren gerechnet wird, falls die Summe aller Zeilensummen und die Summe aller Spaltensummen aufgrund der verwendeten Faktoren bzw. Sollwerte voneinander abweichen.</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Summe der Quellaufkommen</span>
+                            </LI>
+                        </ul>
+                        <p class="CellText">Die Summe aller Zeilensummen wird als Matrixsumme verwendet.</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Summe der Zielaufkommen</span>
+                            </LI>
+                        </ul>
+                        <p class="CellText">Die Summe aller Spaltensummen wird als Matrixsumme verwendet.</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Mittelwert der beiden Summen</span>
+                            </LI>
+                        </ul>
+                        <p class="CellText">Der Mittelwert aus Zeilensummen und Spaltensummen wird als Matrixsumme verwendet.</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Minimum der beiden Summen</span>
+                            </LI>
+                        </ul>
+                        <p class="CellText">Der kleinere der beiden Werte (Summe aller Zeilensummen und Summe aller Spaltensummen) wird als Matrixsumme verwendet.</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Maximum der beiden Summen</span>
+                            </LI>
+                        </ul>
+                        <p class="CellText">Der größere der beiden Werte (Summe aller Zeilensummen und Summe aller Spaltensummen) wird als Matrixsumme verwendet.</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Max. Anz. Iterationen</span>
+                            </LI>
+                        </ul>
+                        <p class="CellText">Das Rechenverfahren wird abgebrochen, wenn die eingegebene Anzahl Iterationen erreicht wird.</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Gütefaktor</span>
+                            </LI>
+                        </ul>
+                        <p class="CellText">Das Rechenverfahren wird abgebrochen, wenn eine bestimmte Schranke unterschritten wird. Der Gütefaktor geht in die Berechnung die Schranke mit ein <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Hochrechnen.htm#1_nachfragemodell_2215163117_1260026"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Hochrechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Je höher der Gütefaktor, desto höher sind Rechenzeit und Genauigkeit der Berechnung.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;" MadCap:autonum="5. &#160;">Nehmen Sie im Bereich <span class="gui_element">Faktoren verwenden</span> bzw. <span class="gui_element">Sollwerte verwenden </span>die gewünschten Einstellungen vor.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">aus Bezirksattributen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur für <MadCap:variable name="PTV_Manual.Programmname" />-Matrizen aktiv.</p>
+                        <p class="CellText">Ist die Option ausgewählt, verwenden Sie für die Hochrechnung Faktoren bzw. Sollwerte, die in zwei Bezirksattributen stehen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Faktor für Zeilen aus Attribut</span> und <span class="gui_element">Faktor für Spalten aus Attribut</span></p>
+                        <p class="CellText">
+                            <span class="gui_element">Sollwert für Zeilen aus Attribut</span> und <span class="gui_element">Sollwert für Spalten aus Attribut</span></p>
+                        <p class="CellText">Über die Schaltflächen wählen Sie die Bezirksattribute mit den Faktoren bzw. Sollwerten für die Hochrechnung.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Nur diejenigen Optionen sind aktiv, die zu den Einstellungen im Bereich <span class="gui_element">Allgemeine Parameter</span> passen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Kennzeichnung eines Bezirks als „extern“ aus Attribut</span>
+                        </p>
+                        <p class="CellText">Wenn Sie mit Sollwerten hochrechnen, können Sie über dieses Bezirksattribut bestimmte Quelle-Ziel-Beziehungen von der Hochrechnung ausschließen. Die Matrixwerte aller Quelle-Ziel-Beziehungen zwischen zwei als extern gekennzeichneten Bezirken werden auf 0 gesetzt. Die Sollwerte werden auf die restlichen Matrixwerte verteilt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">aus Parametern</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, verwenden Sie für die Hochrechnung die in der Tabelle angegebenen Faktoren bzw. Sollwerte.</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">ErzeugungWert</span> und <span class="gui_element">AnziehungWert</span>: Geben Sie hier die gewünschten Faktoren bzw. Sollwerte pro Zeile und Spalte ein.</LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Extern</span>: Wenn Sie mit Sollwerten hochrechnen, können Sie über diese Kennzeichnung bestimmte Quelle-Ziel-Beziehungen von der Hochrechnung ausschließen. Die Matrixwerte aller Quelle-Ziel-Beziehungen zwischen zwei als extern gekennzeichneten Bezirken werden auf 0 gesetzt. Die Sollwerte werden auf die restlichen Matrixwerte verteilt.</LI>
+                        </ul>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Alternativ können Sie die Werte in der Tabelle über die Schaltfläche <span class="gui_element">Öffnen</span> aus einer entsprechenden Parameterdatei einlesen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Matrixwerte werden hochgerechnet.</p>
+    </body>
+</html>

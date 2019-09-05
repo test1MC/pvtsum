@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="590" MadCap:lastWidth="1018" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG;bearbeitung;Bearbeitungs;Nested;80er;sk;Method;of;verteilung;WAW;Stud">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1230573">
+            </a>
+            <a name="1_nachfragemodell_2215163117_47466">
+            </a>Objekte einer Matrix splitten (Aufweiten)</h3>
+        <p class="Text">
+            <MadCap:keyword term="Matrizen: splitten" />
+            <MadCap:keyword term="Matrizen: aufweiten: siehe Matrizen, splitten" />Mit Hilfe der Funktion Splitten lassen sich Objekte einer Matrix in kleinere Einheiten aufteilen. Durch das Splitten verändert sich die Zeilen- und Spaltenzahl der Matrix. Diese Funktion wird häufig verwendet, um grobe Verkehrsnachfragematrizen einer feineren Bezirkseinteilung im Netzmodell anzupassen.</p>
+        <ul>
+            <LI class="List0">Wird nur ein Faktor für ein beim Splitten generiertes Objekt angegeben, gilt dieser Anteilsfaktor sowohl für den Quell- als auch für den Zielverkehr in der Nachfragematrix.</LI>
+            <LI class="List0">Sollen Quell- und Zielverkehr mit unterschiedlichen Anteilen auf einen beim Splitten generierten Bezirk verteilt werden, muss nach dem Quellverkehrsfaktor auch ein Zielverkehrsfaktor angegeben werden.</LI>
+        </ul>
+        <p class="Text">Für eine Nachfragematrix wird der Matrixwert je gesplittetem Bezirk (1,0 = 100&#160;%) in der Regel auf die daraus generierten Bezirke aufgeteilt, wobei durch die Wahl geeigneter Aufteilungsfaktoren für generierte Bezirke auch erwartete Gewinne (Summe &gt; 1,0) oder Verluste (Summe &lt; 1,0) je gesplittetem Bezirk einfließen können.</p>
+        <p class="Text">Für eine Kenngrößenmatrix wird der Matrixwert je gesplittetem Bezirk in der Regel über den Faktor 1,0 den generierten Bezirken unverändert zugewiesen.</p>
+        <h5 MadCap:autonum="">Beispiel für das Splitten von Objekten einer Matrix</h5>
+        <p class="Text">Die Bezirke folgender Matrix werden gesplittet und gleichzeitig gelöscht.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/WIN_Matrixeditor_Split_Source_matrix.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997767px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Text">Dabei werden die folgenden Einstellungen getroffen:</p>
+        <table class="TableStyle_TableStandard" style="width: 427px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="104px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="108px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="111px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="104px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Bezirksnummer alt</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Bezirksnummer neu</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Faktor Quellverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Faktor Zielverkehr</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">100</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">1&#160;001</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0,3</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">0,1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">100</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">1&#160;002</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0,5</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">0,2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">100</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">1&#160;003</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0,2</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">0,7</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">200</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">2&#160;001</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0,7</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">0,7</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">200</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">2&#160;002</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">0,3</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">0,3</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Außerdem werden alle entstehenden Zellbinnenverkehre auf null gesetzt.</p>
+        <p class="Text">Daraus ergibt sich folgende Matrix:</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/WIN_Matrixeditor_Split_Result_matrix.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997805px;" />
+        </p>
+        <p class="Text">Die Summe der Matrixwerte aller Relationen von/nach 1&#160;001..1&#160;003 ist gleich 1&#160;000.</p>
+    </body>
+</html>

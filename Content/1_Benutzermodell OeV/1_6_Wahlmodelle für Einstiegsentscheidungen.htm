@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb;AnteilAkzGEH;V';β" MadCap:lastBlockDepth="4" MadCap:lastHeight="901" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_oev_2318507456_1227644">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_89478">
+            </a>Wahlmodelle für Einstiegsentscheidungen</h3>
+        <p class="Text">In der taktfeinen Umlegung wird grundsätzlich davon ausgegangen, dass Fahrgäste Takte und Fahrzeiten der Linien kennen.</p>
+        <p class="Text">Über welche Informationen sie darüber hinaus verfügen, ist entscheidend für ihr Wahlverhalten beim Ein- oder Umsteigen. <MadCap:variable name="PTV_Manual.Programmname" /> bietet dazu vier verschiedene Modelle an:</p>
+        <ul>
+            <LI class="List0">Keine Information und exponentiell verteilte Takte</LI>
+            <LI class="List0">Keine Information und konstante Takte</LI>
+            <LI class="List0">Information über die verstrichene Wartezeit</LI>
+            <LI class="List0">Information über die nächsten Abfahrtszeiten auf den Linien der Haltestelle</LI>
+        </ul>
+        <p class="Text">Der letzte Fall liegt beispielsweise dann vor, wenn dynamische Fahrgastinformationssysteme an den Haltestellen installiert sind. Die Fahrgäste können dann erkennen, welche der abfahrenden Linien in der aktuellen Situation die geringste Rest-Reisezeit zu ihrem Ziel bietet. So steigen sie beispielsweise in eine Linie <span class="gui_element">nicht</span> ein, wenn ihnen das Informationssystem die Auskunft gibt, dass kurz darauf eine andere, deutlich schnellere Linie eintreffen wird.</p>
+        <p class="Text">Im Folgenden werden die einzelnen Wahlmodelle für die Situation des an einer Haltestelle wartenden Fahrgastes vorgestellt. Zur Beschreibung der mathematischen Grundlagen benötigen wir noch einige Bezeichnungen.</p>
+        <h5>Notation</h5>
+        <p class="Text">
+            <span class="formula">L </span>= {1, ..., <span class="formula">n</span>} bezeichne die Menge der verfügbaren Linien. Jede Linie <span class="formula">i </span><span class="symbol">Î</span><span class="formula"> L</span> hat eine gewisse Rest-Reisezeit <span class="formula">s</span><span class="formula_subscript">i</span><span class="formula"></span>≥<span class="formula"> 0</span> und einen Takt <span class="formula">h</span><span class="formula_subscript">i</span><span class="formula"> &gt; 0</span>. Aus letzterem wird die Frequenz <img src="../Resources/Images/8_38.jpg" /> der Linie abgeleitet. Der Begriff „Rest“ soll verdeutlichen, dass es um die verbleibende Reisezeit vom aktuell betrachteten Halt zum Zielbezirk geht. Nur bei der Wahlsituation am Quellbezirk handelt es sich um die Reisezeit des ganzen Wegs. </p>
+        <p class="Text">Zum Zwecke einer einfacheren Darstellung nehmen wir ferner an, dass die Linien aufsteigend nach ihrer Rest-Reisezeit sortiert sind, also gilt <span class="formula">s</span><span class="formula_subscript">1 </span>≤ <span class="formula">s</span><span class="formula_subscript">2</span> ≤ ... ≤ <span class="formula">s</span><span class="formula_subscript">n</span>. Die Menge der ersten <span class="formula">i</span> Linien kürzen wir wie folgt ab: <span class="formula">L</span><span class="formula_subscript">i</span> = {1, ..., <span class="formula">i</span>}<span class="formula">.</span></p>
+        <p class="Text">Es sei angemerkt, dass die Rest-Reisezeit <span class="formula">s</span><span class="formula_subscript">i</span> in Wirklichkeit für die generalisierten Kosten der Linie <span class="formula">i</span> steht, darin sind Umsteigezuschläge und weitere Widerstands-Komponenten enthalten. Zum besseren Verständnis sprechen wir im Folgenden aber dennoch nur von „Zeiten”.</p>
+        <p class="Text">Die verschiedenen Wahlmodelle ermitteln die auf der Basis der verfügbaren Informationen <span class="gui_element">optimale Menge</span> <span class="formula">L</span><span class="formula_superscript">* </span><span class="symbol">Í </span><span class="formula">L</span> und für jede Linie <span class="formula">i</span> <span class="symbol">Î</span> <span class="formula">L</span><span class="formula_superscript">*</span> einen Anteil <span class="symbol">p</span><span class="formula_subscript">i</span> ≥<span class="formula"> 0</span> an der Nachfrage.</p>
+        <p class="Text">Es ist intuitiv klar, dass eine Linie <span class="formula">i</span> Teil von <span class="formula">L</span><span class="formula_superscript">*</span> sein muss, wenn eine andere Linie <span class="formula">j</span> in <span class="formula">L</span><span class="formula_superscript">*</span> enthalten ist, und für die Rest-Reisezeiten <span class="formula">s</span><span class="formula_subscript">i</span> &lt; <span class="formula">s</span><span class="formula_subscript">j</span> gilt. Aus der Sortierung der Zeiten folgt somit, dass ein <span class="formula">i</span><span class="formula_superscript">*</span> existiert, sodass <span class="formula">L</span><span class="formula_superscript">*</span><span class="formula"> = L</span><span class="formula_subscript">i*</span>. </p>
+        <p class="Text">Die Wartezeit, die sich bei Wahl einer beliebigen Menge <span class="formula">L‘</span> vor dem Einstieg ergibt, bezeichnen wir mit <span class="formula">W</span><span class="formula_subscript">L‘</span>. Die zugehörigen Restkosten sind folgendermaßen gegeben.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_100.jpg" />
+        </p>
+        <p class="Text">Die Größen sind Zufallsvariablen, weil sie vom zufälligen Eintreffen der Linien an der Haltestelle abhängen.</p>
+        <p class="Text">Für die optimale Menge <span class="formula">L</span><span class="formula_superscript">*</span> gilt also <span class="formula">E</span>(<span class="formula">C</span><span class="formula_subscript">L*</span>) ≤ <span class="formula">E</span>(<span class="formula">C</span><span class="formula_subscript">L‘</span>) für beliebige <span class="formula">L</span><span class="formula_superscript">‘ </span><span class="symbol">Í </span><span class="formula">L</span>.</p>
+    </body>
+</html>

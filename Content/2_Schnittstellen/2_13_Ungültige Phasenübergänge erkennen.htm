@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="640" MadCap:lastWidth="556" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;Control;operationControlPoints;published;kombinationen">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1153287">
+            </a>Ungültige Phasenübergänge erkennen</h4>
+        <p class="Text">Wenn Sie die Phasenzuordnung nachträglich bearbeiten, können Phasenübergänge ungültig werden, weil sich der Anfangs- oder Zielzustand einer Signalgruppe geändert hat. Dabei sind zwei Fälle zu unterscheiden:</p>
+        <ul>
+            <LI class="List0">Wird der Zustand einer Signalgruppe unter <span class="gui_element">Phasenzuordnung</span> von Freigegeben oder Gesperrt nach Nicht relevant geändert, bleiben die zugehörigen Phasenübergänge gültig und die Phasenübergänge werden nicht neu berechnet. </LI>
+        </ul>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Möchten Sie die Phasenübergänge nach der Änderung einer Phase neu berechnen, müssen Sie in diesem Fall zuerst eine andere Phase auswählen und anschließend die geänderte Phase. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Wird der Zustand einer Signalgruppe unter <span class="gui_element">Phasenzuordnung</span> nach Freigegeben oder Gesperrt geändert, werden die zugehörigen Phasenübergänge ungültig und ihre Namen im Navigator farbig hinterlegt.</LI>
+        </ul>
+        <p class="List_Text0">In der Bearbeitungsansicht eines ungültigen Phasenübergangs sind die schematische Darstellung der verursachenden Phase und die abweichenden Phasenzustände in der Grafik rosa hinterlegt. </p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_VISSIG_inconsistent_interstages.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Text2">Durch die explizite Auswahl der rosa hinterlegten Phase wird der Phasenübergang neu berechnet, so dass er wieder konsistent mit der veränderten Phase ist. Werden Phasenübergänge verändert, kann das dazu führen, dass zugehörige phasenbasierte Signalprogramme inkonsistent werden. Wenn das der Fall ist, wird der Name des Signalprogramms im Navigator farbig hinterlegt.</p>
+    </body>
+</html>

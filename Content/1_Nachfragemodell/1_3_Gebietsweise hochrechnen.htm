@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="308" MadCap:lastWidth="1018" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1224521">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc148165045">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc129148396">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc112739141">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc112047295">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc88627341">
+            </a>Gebietsweise hochrechnen</h3>
+        <p class="Text">
+            <MadCap:keyword term="Matrizen: Gebietsweise hochrechnen" />Mit dieser Funktion können Sie ebenfalls Matrizen hochrechnen. Dabei wird im Gegensatz zum einfachen Hochrechnen kein Faktor je Zeile oder Spalte vorgegeben, sondern die Zeilen und Spalten der Matrix werden in Gruppen eingeteilt und jeweils pro Gruppe bzw. pro Beziehung zwischen Gruppen wird ein Hochrechnungsfaktor definiert <MadCap:xref class="Benutzerhandbuch" href="../2_Nachfrage_modellieren/2_3_Matrixwerte gebietsweise hochrechnen.htm#2_nachfrage_modellieren_1800171850_1583437"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Matrixwerte gebietsweise hochrechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Man unterscheidet zwei Modi:</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Einseitig gekoppeltes gebietsweises Hochrechnen</span>: Dieses entspricht dem einseitigen Hochrechnen <MadCap:xref class="sieheUeberschrSeite" href="1_3_Hochrechnen.htm#1_nachfragemodell_2215163117_1260026"><span style="color: Black;" class="mcFormatColor">(</span><u>Hochrechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Der Unterschied besteht lediglich darin, dass beim gebietsweisen Hochrechnen die Zeilen oder Spalten der Matrix in Gruppen („Gebiete“) eingeteilt werden und pro Gruppe ein Hochrechnungsfaktor festgelegt wird.</LI>
+            <LI class="List0">
+                <span class="gui_element">Elementbezogenes Hochrechnen</span>: Bei diesem Verfahren werden die Hochrechnungsfaktoren nicht pro Zeile und Spalte festgelegt, sondern pro Zeilen-/Spaltenbeziehung. Auch hier teilen Sie bestimmte Zeilen und Spalten in Gruppen ein und legen pro „Gruppenbeziehung“ einen Hochrechnungsfaktor fest.</LI>
+        </ul>
+        <p class="Text">Wenn es sich um eine Matrix mit Netzbezug handelt, also eine Bezirks- oder Oberbezirksmatrix, so können Sie für die Gruppierung der Zeilen und/oder Spalten, also der Bezirke beziehungsweise Oberbezirke, ein Attribut des Bezirks oder Oberbezirks verwenden. Nutzt man dazu beispielsweise bei einer Bezirksmatrix das Attribut <span class="gui_element">Oberbezirks-Nummer</span>, erfolgt die Hochrechnung beim einseitig gekoppelten Hochrechnen mit einem festen Faktor je Oberbezirk. Beim Elementweisen Hochrechnen würde in diesem Anwendungsfall ein Faktor je Oberbezirks-Beziehung zur Anwendung kommen.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Der Begriff des Gebiets, der in diesem Zusammenhang benutzt wird, beschreibt lediglich eine Gruppe von Zeilen oder Spalten und ist nicht zu verwechseln mit dem Netzobjekt gleichen Namens.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

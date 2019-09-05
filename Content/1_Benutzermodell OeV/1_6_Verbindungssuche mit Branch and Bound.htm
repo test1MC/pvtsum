@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="669" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen,PTV_Manual.Ready_for_translation" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb;AnteilAkzGEH;and;SuchWID;FakRZ;UH;Wid;FakVSys;FakFahrt;branch;bound;Bounding;c’;AnzUmstiege">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1027470">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_79770">
+            </a>Verbindungssuche mit Branch and Bound</h4>
+        <p class="Text">
+            <MadCap:keyword term="Branch and Bound" />
+            <MadCap:keyword term="Fahrplanfeine Umlegung: Verbindungssuche:Branch and Bound" />Je Quellbezirk wird ein Suchbaum geeigneter Teilverbindungen generiert, in dem alle hinreichend guten Verbindungen ab diesem Quellbezirk gespeichert sind. So wird nicht nur die für eine Relation beste, sondern eine Vielzahl guter Verbindungen gefunden. Auf diese Weise ist eine sehr differenzierte Verteilung der Verkehrsnachfrage möglich.</p>
+        <ul>
+            <LI class="List0">Zur Bewertung der Qualität von Verbindungen wird ein Suchwiderstand verwendet. Der Suchwiderstand berechnet sich für alle im Laufe des Verfahrens gefundenen (Teil-)Verbindungen nach folgender Formel:</LI>
+        </ul>
+        <p class="List_Text0">
+            <span class="formula">SuchWID = RZ • FakRZ + UH • FakUH + VSys-Wid • FakVSys-Wid + Fahrt-Wid • FakFahrt-Wid</span>
+        </p>
+        <ul>
+            <LI class="List0">Neben der Reisezeit und der Umsteigehäufigkeit gehen dabei unter <span class="formula">VSys-Wid</span> nach Verkehrssystem differenzierte Zuschläge ein. So können Sie schon während der Suche einfache entfernungsabhängige Fahrpreise berücksichtigen. Das vollständige <MadCap:variable name="PTV_Manual.Programmname" />-Tarifmodell wirkt erst in der Verbindungswahl. Dies ist jedoch keine Einschränkung, denn in der Suche ist eine näherungsweise Fahrpreisberechnung ausreichend, um zwischen sinnvollen und nicht sinnvollen Verbindungen zu unterscheiden.</LI>
+            <LI class="List0">Außerdem fließt unter <span class="formula">Fahrt-Wid</span> der fahrtspezifische Widerstand über zwei frei wählbare Fahrtverlaufs-Attribute als Summanden ein – ein Einsteigezuschlag und ein allgemeiner Komfort-Term. So können einzelne Fahrplanfahrten gegenüber anderen bevorzugt oder benachteiligt werden.</LI>
+            <LI class="List0">(Teil-)Verbindungen zu einem Ziel- oder Zwischenknoten werden bewertet und mit allen anderen (Teil-)Verbindungen zum gleichen Punkt verglichen, um effizient zu entscheiden, welche Äste des Suchbaums fortgesetzt werden können („branch“) und welche abgeschnitten werden müssen („bound“) <MadCap:xref class="siehe_1" href="#1_benutzermodell_oev_2318507456_1083195"><span style="color: Black;" class="mcFormatColor">(</span><u>Dominanz</u></MadCap:xref><MadCap:xref class="siehe_2" href="#1_benutzermodell_oev_2318507456_1083208"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Bounding</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Für die Anzahl der in einer Verbindung auftretenden Umsteigevorgänge kann eine Obergrenze festgelegt werden.</LI>
+        </ul>
+        <h5>
+            <a name="1_benutzermodell_oev_2318507456_1083195">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_41880">
+            </a>Dominanz</h5>
+        <p class="Text">
+            <MadCap:keyword term="Dominanz" />Paarweise Vergleiche sind wichtig, um nicht sinnvolle Verbindungen zu identifizieren.</p>
+        <p class="Text">Wenn eine Verbindung in keiner Hinsicht besser ist als eine andere Verbindung in gleicher Zeitlage, bezeichnet man sie als dominiert und verwirft sie. Das heißt im Detail:</p>
+        <p class="Text">Eine Verbindung c’ dominiert eine Verbindung c, falls</p>
+        <ul>
+            <LI class="List0">c’ innerhalb des Zeitintervalls von c liegt</LI>
+            <LI class="List0">AnzUmstiege (c’) ≤ AnzUmstiege (c)</LI>
+            <LI class="List0">SuchWid (c’) ≤ SuchWid (c)</LI>
+            <LI class="List0">und wenn</LI>
+            <LI class="List1">in mindestens einem der drei Kriterien echte Ungleichheit gilt oder</LI>
+            <LI class="List1">beide Verbindungen äquivalent sind <MadCap:xref href="#AequivalenteVerbindungen_h5" class="sieheUeberschrSeite">(siehe „Äquivalente Verbindungen“ auf Seite&#160;1)</MadCap:xref></LI>
+        </ul>
+        <p class="Text">Für den Vergleich von zwei Verbindungen ohne definierte Zeitlage (d.h. ohne Teilwege vom Typ ÖV-Linie) wird die erste Regel in Fahrzeit (c’) ≤ Fahrzeit (c) abgeändert.</p>
+        <h5>Beispiel:</h5>
+        <ul>
+            <LI class="List0">Verbindung 1 dominiert Verbindung 2, da sie echt im Zeitintervall von Verbindung 2 enthalten ist und ihre anderen Kennzahlen gleich gut oder besser sind.</LI>
+            <LI class="List0">Verbindung 1 dominiert jedoch nicht Verbindung 3, weil diese eine andere zeitliche Lage hat und damit trotz ihrer schlechteren Kennzahlen für Fahrgäste sinnvoll ist, die später abfahren wollen.</LI>
+            <LI class="List0">Verbindung 1 dominiert ebenfalls nicht Verbindung 4, weil diese einen Umstieg weniger enthält und damit trotz ihrer langen Fahrzeit für manche Fahrgäste interessant ist.</LI>
+        </ul>
+        <table class="TableStyle-gui_elements2" style="width: 479px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="99px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="95px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="95px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="95px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="95px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Kriterium</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Verbindung 1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Verbindung 2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Verbindung 3</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Verbindung 4</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">Zeitliche Lage</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">6:00 - 7:00</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">6:00 - 7:10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">6:10 - 7:20</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">5:30 - 7:20</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">Anzahl Umstiege</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">SuchWid</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">4&#160;000</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">4&#160;200</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">4&#160;300</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">5&#160;400</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">Dominanz</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">dominiert durch Verb. 1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>
+            <a name="AequivalenteVerbindungen_h5">
+            </a>Äquivalente Verbindungen</h5>
+        <p class="Text">
+            <MadCap:keyword term="Dominanz:Äquivalente Verbindungen" />Einen Sonderfall für die Dominanz stellen äquivalente Verbindungen dar. Zwei Verbindungen sind äquivalent, wenn sie sich lediglich in der Wahl der Umsteigehalte unterscheiden, ansonsten aber Gleichheit in Bezug auf die Abfahrtszeit und Reihenfolge der benutzen Fahrzeitprofile besteht.</p>
+        <p class="Text">Wird Dominanz zwischen äquivalenten Verbindungen erlaubt, dann verbleibt nur die Verbindung mit dem frühesten möglichen Umstieg aus einem Bündel äquivalenter Verbindungen. Wenn äquivalente Verbindungen zugelassen werden, kann eine große Menge fast identischer Verbindungen entstehen. Beachten Sie, dass Hierarchien innerhalb der Verbindungsmenge im Wahlmodell nicht berücksichtigt werden können. Durch Verwendung der Eigenständigkeit kann diese Tatsache in manchen Fällen kompensiert werden.</p>
+        <table style="width: 477px;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" class="TableStyle-TipHint1" cellspacing="0">
+            <col class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Eine Deaktivierung der Eigenständigkeit kann in Kombination mit äquivalenten Verbindungen zu unrealistischen Ergebnissen führen. Es wird daher dringend empfohlen, äquivalente Verbindungen nur mit der Option <span class="gui_element">Eigenständigkeit verwenden</span> zuzulassen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Beispiel</h5>
+        <p class="Text">Betrachtet wird das in der <MadCap:xref href="#Abbildungaequvalente_Verbindungen" class="Label_Image">Abbildung 1</MadCap:xref> dargestellte Netz.</p>
+        <p class="Text">
+            <img src="../Resources/Images/DIAG_Branch_Bound_example.png" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="Abbildungaequvalente_Verbindungen">
+            </a>Beispiel äquivalente Verbindungen</p>
+        <p class="Text">Bei Nutzung der Linien 1 und 2 ergeben sich die folgenden äquivalenten Verbindungen:</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');width: 490px;" class="TableStyle-TableStand_withTitle" cellspacing="0">
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <th class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">Verbindung</th>
+                    <th class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">Von-Fahrzeitprofil</th>
+                    <th class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">Nach-Fahrzeitprofil</th>
+                    <th class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">Umsteigehaltepunkt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Bus, Linie 1&#160;&gt;, 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Bus, Linie 2&#160;&gt;, 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">11</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">A2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Bus, Linie 1&#160;&gt;, 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Bus, Linie 2&#160;&gt;, 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">20</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Bus, Linie 1&#160;&gt;, 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Bus, Linie 2&#160;&gt;, 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">21</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">A4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Bus, Linie 1&#160;&gt;, 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Bus, Linie 2&#160;&gt;, 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">30</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">A5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Bus, Linie 1&#160;&gt;, 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Bus, Linie 2&#160;&gt;, 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">31</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Wird Dominanz zwischen äquivalenten zugelassen, verbleibt nur die Verbindung A1</p>
+        <h5>Beispiel mit Eigenständigkeit:</h5>
+        <table style="mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');width: 490px;" class="TableStyle-TableStand_withTitle" cellspacing="0">
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <th class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">Verbindung</th>
+                    <th class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">Teilweg(e)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Abfahrt 6:30 mit Linie 1</p>
+                        <p class="CellText">
+Umstieg in Linie 2 im Überlappungsbereich der Halte 11, 20, 21, 30 und 31 mit UWZ = 0
+</p>
+                        <p class="CellText">Ankunft 7:00
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">B</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Abfahrt 6:35 mit Linie 3</p>
+                        <p class="CellText">Ankunft 7:05
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">C</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">Abfahrt 7:00 mit Linie 4</p>
+                        <p class="CellText">Ankunft 7:30</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Ohne Eigenständigkeit:</h5>
+        <p class="Text">Ohne äquivalente Verbindungen erhält jede der drei Verbindungen einen Anteil von 1/3, wenn die Widerstandsparameter so eingestellt sind, dass der Umstieg nicht bestraft wird.</p>
+        <p class="Text">Werden äquivalente Verbindungen zugelassen, entstehen aus Verbindung A (mit Umstieg an Halt 11) vier weitere Optionen A2 bis A5, die sich nur im Umsteigepunkt unterscheiden. Die Verbindungsmenge besteht jetzt aus sieben gleich guten Verbindungen und ohne Eigenständigkeit erhält jede Verbindung 1/7 der Nachfrage. Dieser Fall illustriert, dass ohne Eigenständigkeit unrealistische Ergebnisse beim Wahlmodell entstehen.</p>
+        <h5>Mit Eigenständigkeit:</h5>
+        <p class="Text">Mit Eigenständigkeit verschiebt sich in der Ausgangssituation einige Nachfrage auf Verbindung C, weil A1 und B eine sehr ähnliche zeitliche Lage haben. C erhält nun 47%, die beiden anderen teilen sich den Rest.</p>
+        <p class="Text">Werden äquivalente Verbindungen zugelassen, ändert sich der Anteil von C kaum, aber ein großer Teil der Nachfrage verschiebt sich von B nach A, weil sich A1 bis A5 nicht nur gegenseitig beeinflussen, sondern allesamt auch die Eigenständigkeit von B reduzieren. An diesem Fall wird deutlich, dass Sie mit Verwendung der Eigenständigkeit bessere Ergebnisse erzielen, er macht aber auch die Grenzen der Eigenständigkeit deutlich.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');width: 490px;" class="TableStyle-TableStand_withTitle" cellspacing="0">
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <th class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1" colspan="2">
+                        <p colspan="2" class="CellCaption">Eigenständigkeit ausgeschaltet</p>
+                    </th>
+                    <th class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1" colspan="2">
+                        <p colspan="2" class="CellCaption">Eigenständigkeit eingeschaltet</p>
+                    </th>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <th class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1" colspan="2">
+                        <p colspan="2" class="CellCaption">Äquivalente Verbindungen</p>
+                    </th>
+                    <th class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1" colspan="2">
+                        <p colspan="2" class="CellCaption">Äquivalente Verbindungen</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">nein</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ja</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">nein</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">ja</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">33,3&#160;%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">71,4&#160;%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">26,5&#160;%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">41,8&#160;%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">33,3&#160;%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">14,3&#160;%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">26,5&#160;%</td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">10&#160;%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">33,3&#160;%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">14,3&#160;%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">47&#160;%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">48,2&#160;%</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>
+            <a name="1_benutzermodell_oev_2318507456_1083208">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_84690">
+            </a>Bounding</h5>
+        <p class="Text">
+            <MadCap:keyword term="Bounding" />Unabhängig von der zeitlichen Lage werden folgende Regeln angewendet, um Verbindungen auszuschließen, die in einem oder mehreren Kriterien zu stark vom Optimum abweichen:</p>
+        <p class="Text">Eine (Teil-)Verbindung wird gelöscht, falls</p>
+        <ul>
+            <LI class="List0">Suchwiderstand der Verbindung &gt; minimaler Suchwiderstand • Faktor + Konstante, oder</LI>
+            <LI class="List0">Reisezeit der Verbindung &gt; minimale Reisezeit • Faktor + Konstante, oder</LI>
+            <LI class="List0">Umsteigehäufigkeit der Verbindung &gt; minimale Umsteigehäufigkeit + Konstante.</LI>
+        </ul>
+        <p class="Text">Grundsätzlich werden dabei keine Verbindungen gelöscht, die in einer der drei Dimensionen selbst optimal sind – selbst wenn sie in einer anderen Dimension die Regel verletzen.</p>
+    </body>
+</html>

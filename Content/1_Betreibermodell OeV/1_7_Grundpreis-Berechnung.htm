@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="513" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="GE;End;bzw;TZ;usw;max">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_nohead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1348284">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_75413">
+            </a>Grundpreis-Berechnung</h4>
+        <p class="Text">Die Berechnung des Grundpreises richtet sich nach der Tarifstruktur der Fahrkartenart, von der es vier verschiedene Ausprägungen gibt:</p>
+        <h5>
+            <a name="1_betreibermodell_oev_1878159914_35816">
+            </a>Tarifstruktur <span class="gui_element">„Entfernungstarif“</span></h5>
+        <p class="Text">Entfernungstarife dienen zur Abbildung von Fahrpreisen, die unmittelbar von der zurückgelegten Entfernung abhängen.</p>
+        <p class="Text">Unter „Entfernung“ ist jedoch nicht die Strecken- oder Linienroutenlänge selbst zu verstehen. Vielmehr basiert die Berechnung eines Entfernungstarifs auf der Anzahl Tarifpunkte auf dem betrachteten Weg. Die Anzahl Tarifpunkte ist eine Eigenschaft der Strecken und der Fahrzeitprofilelemente. Da dieses Attribut an Strecken – im Gegensatz zur Länge – VSys-spezifisch ist, können Sie die Befahrung einer Strecke für verschiedene ÖV-VSys unterschiedlich bepreisen.</p>
+        <p class="Text">Die überfahrenen Tarifpunkte der Strecken und Fahrzeitprofilelemente des Weges werden summiert, und der Fahrpreis in der Tabelle der Tarifelemente nachgeschlagen.</p>
+        <p class="Text">Der Fahrpreis zwischen zwei aufeinander folgenden Tarifelementen kann interpoliert werden, um einen linearen Verlauf zu modellieren.</p>
+        <p class="Text">Ein Entfernungstarif ist nicht anwendbar, falls die Preisstufe für die ermittelte Anzahl Tarifpunkte keinen Fahrpreis ausweist, sondern „leer” ist.</p>
+        <h5>
+            <span class="gui_element">Beispiel: Tarifstruktur „Entfernungstarif“ </span>
+        </h5>
+        <p class="Text">Wir betrachten eine Fahrkartenart mit folgenden Eigenschaften:</p>
+        <ul>
+            <LI class="List0">Fahrpreis konstant 10 GE für Fahrten von 1 Tarifpunkt bis einschließlich 5 Tarifpunkten,</LI>
+            <LI class="List0">Fahrpreis konstant 16 GE für Fahrten von 6 Tarifpunkten bis einschließlich 10 Tarifpunkten,</LI>
+            <LI class="List0">linearer Anstieg des Fahrpreises von 16 GE auf 24 GE im Bereich zwischen 10 Tarifpunkten und 20 Tarifpunkten,</LI>
+            <LI class="List0">Preis konstant 24 GE für Fahrten bis einschließlich 30 Tarifpunkten,</LI>
+            <LI class="List0">Fahrkarte nicht anwendbar für Fahrten mit mehr als 30 Tarifpunkten.</LI>
+        </ul>
+        <p class="Text">Als Graph ausgedrückt:</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_FareStruct_DistBased.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Beispiel für einen Entfernungstarif mit 5 Tarifstufen</p>
+        <p class="Text">In <MadCap:variable name="PTV_Manual.Programmname" /> modellieren Sie diesen Tarif als folgende Entfernungstarifstufen:</p>
+        <table class="TableStyle-TableStand_nohead" style="width: 305px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="93px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellCaption">Anzahl Tarifpunkte</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellCaption">Interpolieren</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellCaption">Preis [GE]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">≤ 5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">Nein</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">≤ 10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">Nein</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">16</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">≤ 20</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">Ja</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">24</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">≤ 30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">Nein</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">24</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">&gt; 30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">---</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyA-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">[Leeres Feld]</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Tarifstufen für das Beispiel zum Entfernungstarif</p>
+            </caption>
+        </table>
+        <h5>Tarifstruktur<span class="gui_element"> „Zonentarif“</span></h5>
+        <p class="Text">Zonentarife verwenden Sie in Situationen, wo der Fahrpreis von der Anzahl durchfahrener Tarifzonen (oft auch „Waben“ genannt) abhängt.</p>
+        <p class="Text">Eine Fahrkartenart mit Zonentarif bezieht sich auf einen bestimmten Tarifzonen-Typ. Für die Fahrkarte spielen also nicht pauschal alle Tarifzonen eine Rolle, sondern nur diejenigen, deren „Typ“ dem Tarifzonen-Typ der Fahrkarte entspricht. So können Sie insbesondere unabhängige, also zu unterschiedlichen Tarifsystemen gehörende Tarifzonen modellieren, die dennoch räumlich überlappen können.</p>
+        <p class="Text">Eine Zonentariffahrkarte ist standardmäßig nur für Wege anwendbar, die vollständig über Haltestellen verlaufen, die zu Tarifzonen des Tarifzonen-Typs der Fahrkartenart gehören. Um die Berechnungslogik bis einschließlich <MadCap:variable name="PTV_Manual.Programmname" /> 11 zu replizieren, können Sie optional Haltestellen ohne Tarifzone ignorieren lassen. Für die Erstellung neuer Modelle wird diese Einstellung jedoch nicht empfohlen.</p>
+        <p class="Text">Eine Haltestelle kann in mehreren Tarifzonen liegen und eine Tarifzone enthält in der Regel mehrere Haltestellen. Häufig ist es dennoch eindeutig, welche Tarifzonen der Fahrgast auf seinem Weg durchfährt. Daraus ergibt sich die Anzahl durchfahrener Tarifzonen und damit auch der Fahrpreis. Bei komplexerer Überlappung von Tarifzonen kann es mehrere Möglichkeiten geben, einen Weg durch Tarifzonen zu „überdecken“. <MadCap:variable name="PTV_Manual.Programmname" /> wählt dann die minimale Anzahl überdeckender Tarifzonen und somit den günstigsten Preis.</p>
+        <p class="Text">Ein Zonentarif ist auch dann nicht anwendbar, falls die Preisstufe für die ermittelte Anzahl Tarifzonen keinen Fahrpreis ausweist, sondern „leer” ist.</p>
+        <p class="Text">Tarifzonen müssen nicht alle gleichwertig sein, sondern können mit einer Kardinalität in die Zählung eingehen. Dazu wählen Sie ein numerisches, ganzzahliges Attribut und belegen es mit den erforderlichen Werten. Beispielsweise zählt eine Stadtzentrum-Wabe in vielen Tarifsystemen doppelt. Sie muss dann die Kardinalität zwei erhalten.</p>
+        <p class="Text">Start-Tarifzonen und End-Tarifzonen eines Wegs können von der Anwendung der Kardinalität explizit ausgenommen werden.</p>
+        <p class="Text">Sie können die Zählweise von auf einem Weg mehrfach durchfahrenen Tarifzonen festlegen. Entweder wird jede durchfahrene Tarifzone genau einmal gezählt, oder jedes Hineinfahren in eine Tarifzone bewirkt ihre erneute Zählung.</p>
+        <h5>
+            <span class="gui_element">Beispiel: Tarifstruktur „Zonentarif“ </span>
+        </h5>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_FareStruct_ZoneBased.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_betreibermodell_oev_1878159914_1347084">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_57554">
+            </a>Beispiel für einen Zonentarif mit drei überlappenden Tarifzonen und sechs Haltestellen</p>
+        <p class="Text">Die Tarifzonen haben in diesem Beispiel unterschiedliche Kardinalitäten - die Tarifzone 2 soll doppelt gezählt werden:</p>
+        <table class="TableStyle-TableStandard" style="width: 236px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="118px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="118px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellCaption">Tarifzone</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellCaption">Kardinalität</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Für die jeweilige Anzahl durchfahrener Tarifzonen wird folgender Grundpreis erhoben:</p>
+        <table class="TableStyle-TableStand_nohead" style="width: 226px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellCaption">Anzahl Tarifzonen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellCaption">Grundpreis [GE]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">2.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">3.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">3.50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">&gt; 3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyA-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">4.00</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Daraus ergeben sich für alle Wege im Beispielnetz die durchfahrenen Tarifzonen und damit auch der Fahrpreis:</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="141px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="112px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="179px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="63px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Weg</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Nummern der durchfahrenen Tarifzonen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Anzahl gezählter Tarifzonen (unter Berücksichtigung der Kardinalitäten)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Grundpreis [GE]</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst 1 - Hst 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">2.00 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hst 1 - Hst 3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">2.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst 1 - Hst 6 direkt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">1 und 3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">3.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hst 1 - Hst 4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">1 und 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">3.50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst 1 - Hst 5 über 3 und 4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">1 und 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">3.50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hst 1 - Hst 5 über 2 direkt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">1 und 2 <span class="gui_element">oder</span> 1 und 3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">2 (für den Weg durch 1 und 3)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">3.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst 1 - Hst 6 über 2, 3, 4, 5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">1 und 2 und 3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">4.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Hst 1 - Hst 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">2.00 </p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Beispielnetz: durchfahrene Tarifzonen und Fahrpreis</p>
+            </caption>
+        </table>
+        <h5>Tarifstruktur<span class="gui_element"> „Von-Nach-Zonentarif“</span></h5>
+        <p class="Text">Von-Nach-Zonentarife stellen einen Matrixtarif zwischen Tarifzonen dar. Der Fahrpreis hängt hierbei nur von der Start- und der End-Tarifzone des Weges ab. Unterwegs durchfahrene Tarifzonen spielen keine Rolle.</p>
+        <p class="Text">Sie können eine vollständige Fahrpreis-Matrix zwischen allen Tarifzonen erstellen. Besonders gut eignen sich Von-Nach-Zonentarife aber auch für die Definition von Ausnahmen: Wenn Fahrten von bzw. nach bestimmten Tarifzonen einer anderen Preisstruktur unterliegen als üblich, können Sie die Preise dieser Relationen durch einen Von-Nach-Zonentarif definieren, der die Standard-Fahrkarte vom Rang her übertrifft.</p>
+        <p class="Text">Ein Von-Nach-Zonentarif ist nicht anwendbar, falls die Matrix für das Paar aus Start- und End-Tarifzone des Wegs keinen Eintrag enthält.</p>
+        <p class="Text">Um einen Fahrpreis von einer festen Tarifzone x zu allen anderen Tarifzonen zu definieren, können Sie einen Eintrag für die Tarifzonennummern (x, 0) anlegen, den Wert 0 also als Platzhalter für die End-Tarifzone verwenden. Analog sind Einträge für (0, y) möglich. Spezifische Einträge überschreiben allgemeine, d.h. ein für (x, y) definierter Fahrpreis gilt für Fahrten von Tarifzone x nach Tarifzone y unabhängig davon, ob auch Preise für (x, 0), (0, y) oder (0, 0) existieren.</p>
+        <p class="Text">Liegen die Starthaltestelle beziehungsweise die Endhaltestelle der Verbindung in mehr als einer Tarifzone, müssen mehrere Tarifzonen-Paare betrachtet werden; der Fahrpreis ist dann als das Minimum aller Einträge definiert.</p>
+        <h5>
+            <span class="gui_element">Beispiel: Tarifstruktur „Von-Nach-Zonentarif“</span>
+        </h5>
+        <p class="Text">Für das Beispiel in <MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1347084">Abbildung&#160;191</MadCap:xref> kann als Alternative zum Zonentarif folgender Von-Nach-Zonentarif modelliert werden: </p>
+        <table class="TableStyle-TableStand_nohead" style="width: 420px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="133px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="93px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="95px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_right">nach Tarifzone</p>
+                        <p class="CellText">von Tarifzone</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">2.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">3.50</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">(*) 3.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">3.50</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">3.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">3.50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body2">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">3.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">3.50</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyA-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">2.00</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Ein Vergleich mit dem oben definierten Zonentarif ergibt folgende Unterschiede:</p>
+        <ul>
+            <LI class="List0">Der Preis hängt nicht mehr von dem genauen Verlauf des Wegs ab; eine Unterscheidung zwischen direktem und indirektem Weg von Haltestelle 1 nach Haltestelle 6 ist hier also nicht mehr möglich, siehe Zelle (*).</LI>
+            <LI class="List0">Dafür lassen sich für Wege mit identischer Anzahl Tarifzonen bei Bedarf unterschiedliche Preise festlegen - und diese Preise können sogar asymmetrisch sein. Beispielsweise könnten Fahrten von Tarifzone 3 nach Tarifzone 1 statt des Standardpreises für zwei Tarifzonen nur 2.80 GE kosten. Dafür wäre nur der Eintrag an Position (3, 1) zu ändern. In einem Zonentarif ließe sich dies nicht ausdrücken.</LI>
+        </ul>
+        <p class="Text">Die obige Matrix kann in <MadCap:variable name="PTV_Manual.Programmname" /> folgendermaßen modelliert werden:</p>
+        <table class="TableStyle-TableStand_nohead" style="width: 285px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="93px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="93px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellCaption">von TZ</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellCaption">nach TZ</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellCaption">Preis [GE]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">2.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">3.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">2.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">3.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">3.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyA-Column1-Body1">
+                        <p class="CellText_mid">3.50</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Der letzte Eintrag gilt als Platzhalter für alle nicht zuvor explizit genannten Tarifzonen-Paare.</p>
+        <p class="Text">Sie können auch ausdrücken, dass die Fahrkartenart für bestimmte Paare von Tarifzonen nicht anwendbar ist:</p>
+        <table class="TableStyle-TableStand_nohead" style="width: 285px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="93px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="93px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellCaption">von TZ</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellCaption">nach TZ</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellCaption">Preis [GE]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">alle</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">2.70</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid">alle</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyA-Column1-Body1">
+                        <p class="CellText_mid" style="font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">[Leeres Feld]</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Nach dieser Definition kann die Fahrkarte für alle Fahrten in die neue Tarifzone 4 nicht genutzt werden - für Fahrten in die Rückrichtung jedoch schon, und zwar zum Preis von 2.70 GE.</p>
+        <h5>Tarifstruktur<span class="gui_element"> „Kurzstreckentarif“</span></h5>
+        <p class="Text">Der Kurzstreckentarif ist ein Einheitspreis für Fahrten unterhalb bestimmter Schwellenwerte für Fahrzeit, Fahrtweite und/oder Anzahl Haltestellen. Kurzstreckentarife sind somit nur auf Wegen anwendbar, die diese Schwellenwerte einhalten.</p>
+        <p class="Text">Eine Kurzstrecken-Fahrkartenart kann auch mehr als einen Satz von Schwellenwerten (Kurzstreckentarifelementen) enthalten. So können Sie beispielsweise ausdrücken, dass es spezifische Preise für bestimmte Fahrzeiten gibt, etwa 1 GE bis zu 10 min, 2 GE bis zu 30 min, usw.</p>
+        <p class="Text">Eine Kurzstrecken-Fahrkarte ist anwendbar, sobald die Schwellenwerte mindestens eines ihrer Tarifelemente erfüllt sind. Der Fahrpreis ist als das Minimum der Preise aller Tarifelemente definiert, deren Schwellenwerte eingehalten werden.</p>
+        <h5>
+            <span class="gui_element">Beispiel: Tarifstruktur „Kurzstreckentarif“</span>
+        </h5>
+        <p class="Text">Tarifelement 1: Fahrten bis zur nächsten Haltestelle kosten nur 0.50 GE:</p>
+        <table class="TableStyle-TableStandard" style="width: 323px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="142px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="181px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">max. Fahrzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">unbegrenzt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">max. Entfernung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">unbegrenzt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">max. Anzahl Haltestellen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">Preis</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">0.50 GE</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Tarifelement 2: wie oben, aber nur für Fahrten mit maximal 5 min Fahrzeit. Der Preis beträgt dann sogar nur 0.30 GE.</p>
+        <table class="TableStyle-TableStandard" style="width: 323px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="142px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="181px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">max. Fahrzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">5 min</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">max. Entfernung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">unbegrenzt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">max. Anzahl Haltestellen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">Preis</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">0.30 GE</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Der Preis für Tarifelement 2 kann im Prinzip auch höher gewählt werden als der Preis für Tarifelement 1. Dies wäre jedoch nicht sinnvoll, denn für Fahrten bis zur nächsten Haltestelle mit maximal 5 min Fahrzeit sind stets beide Sätze von Schwellenwerten erfüllt, d.h. ihr Fahrpreis ist das Minimum der beiden Preise. Dieses Minimum wäre dann 0.50 GE, das zweite Tarifelement also wirkungslos. Dies ist bereits ein Beispiel für folgenden Aspekt:</p>
+        <h5>Konsistenz der Preisstufen</h5>
+        <p class="Text">Die Preisstufen einer Fahrkartenart (genauer gesagt die Fahrpreise an den Tarifelementen der Fahrkartenart) können frei definiert werden. Dadurch sind im Prinzip auch widersprüchliche Einträge möglich. Beispielweise kann der Preis für eine größere Entfernung geringer sein als der Preis für eine kürzere Entfernung, oder ein Kurzstreckenpreis für eine Fahrt bis zu drei Haltestellen kann teurer sein als der Kurzstreckentarif für bis zu fünf Haltestellen. Es wird jedoch empfohlen, solche widersprüchlichen Definitionen zu vermeiden.</p>
+    </body>
+</html>

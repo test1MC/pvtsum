@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="1291" MadCap:lastWidth="555" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km;max;Richtungs;te;LocationFault;TimeFault;LayoverTimeFault;VehicleFault;Fahrzeugeinheits">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1360145">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_71310">
+            </a>Umlaufversion</h4>
+        <p class="Text">
+            <MadCap:keyword term="Umlaufbildung: Umlaufversion" />
+            <MadCap:keyword term="Umlaufversion" />
+            <MadCap:keyword term="Netzobjekte: Umlaufversion" />In <MadCap:variable name="PTV_Manual.Programmname" /> können mehrere Umlaufbildungsergebnisse nebeneinander gehalten werden. Diese werden in so genannten Umlaufversionen abgelegt. So können Planungsvarianten mit unterschiedlichen Parametereinstellungen leichter miteinander verglichen werden. Zum Beispiel kann eine Umlaufversion, in der das Umsetzen erlaubt ist, und eine andere, in der dies nicht erlaubt ist, im Modell gehalten werden. Verfahren wie etwa die Berechnung ÖV-betrieblicher Kennzahlen beziehen sich immer auf die aktuell aktive Umlaufversion.</p>
+        <p class="Text">Wichtige Parameter des Verfahrens Umlaufbildung sind Attribute der Umlaufversion, damit man die Parametereinstellungen auch nachträglich noch kennt und vor allem damit die Umlaufprüfung nach Veränderungen gegen die gleichen Parameter prüfen kann. Die Attribute der Umlaufversion werden in <MadCap:xref class="Label_Table" href="#1_betreibermodell_oev_1878159914_1309268">Tabelle 1</MadCap:xref> beschrieben.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 497px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="150px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="347px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Starttag-Index</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Starttag des Umlaufbildungszeitraums. Der Umlaufbildungszeitraum muss dabei innerhalb des Kalenderzeitraums liegen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Endtag-Index</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Endtag des Umlaufbildungszeitraums.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Gültig von</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Datum des Starttages, wenn ein Kalender benutzt wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Gültig bis</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Datum des Endtages, wenn ein Kalender benutzt wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Umsetzen zulässig</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt an, ob bei der Umlaufbildung und der Umlaufprüfung <MadCap:xref class="sieheUeberschrSeite" href="1_7_Umlaufprüfung.htm#1_betreibermodell_oev_1878159914_1360122"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlaufprüfung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> Leerfahrten zum Umsetzen erzeugt werden sollen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Systemrouten-Verwendung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt an, ob Systemrouten für die Erzeugung von Leerfahrten benutzt werden sollen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Verwende nur aktive Systemrouten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt an, ob nur aktive Systemrouten oder alle Systemrouten für die Erzeugung von Leerfahrten benutzt werden sollen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Vorbereitungszeiten beachten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt an, ob Vor- und Nachbereitungszeiten bei der Umlaufbildung und der Umlaufprüfung beachtet werden sollen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Kurzwende erlaubt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt an, ob Kurzwenden bei der Umlaufbildung und der Umlaufprüfung zugelassen werden sollen. Das bedeutet, dass die Wendezeit von den Vor- und Nachbereitungszeiten abweichen darf. Die Daten für die Kurzwende werden in den Attributen für die maximale Aufenthaltszeit, die verkürzte Vorbereitungszeit und die verkürzte Nachbereitungszeit angegeben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Attribut für maximale Aufenthaltszeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt das Haltepunktattribut an, in dem die Werte für die maximale Aufenthaltszeit enthalten sind.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Attribut für verkürzte Vorbereitungszeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt das Fahrtabschnittsattribut an, in dem die Werte für die verkürzte Vorbereitungszeit enthalten sind.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Attribut für verkürzte Nachbereitungszeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt das Fahrtabschnittsattribut an, in dem die Werte für die verkürzte Nachbereitungszeit enthalten sind.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Streckenattribut für Kurzweg-Suchkriterium</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt das Streckenattribut an, das als Kriterium für die Kurzwegsuche für Leerfahrten verwendet wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrzeugbedarf gesamt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl der benötigten Instanzen von Fahrzeugkombinationen für alle Umläufe der Umlaufversion</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrzeugbedarf (pro Fahrzeugkombination)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Anzahl der benötigten Instanzen einer bestimmten Fahrzeugkombination für alle Umläufe der Umlaufversion</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrzeugbedarf für Standard-Fahrzeugkombination</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl der benötigten Instanzen der Fahrzeugkombination „keine Fahrzeugkombination“. Ist am Fahrplanfahrtabschnitt keine Fahrzeugkombination angegeben, wird diese Angabe in der Umlaufbildung wie eine eigene Fahrzeugkombination gewertet, deren Fahrzeugbedarf durch dieses Attribut ausgewiesen wird</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Fahrzeugeinheits-Bedarf (pro Fahrzeugeinheit)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">Anzahl der benötigten Instanzen einer bestimmten Fahrzeugeinheit für alle Umläufe der Umlaufversion</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_betreibermodell_oev_1878159914_1309268">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_11538">
+            </a>Attribute der Umlaufversion</p>
+    </body>
+</html>

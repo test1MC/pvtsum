@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="372" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;gruppen;gruppe;ICU1;ICU2;Circular;Planning;Operations;pretimed;fully;actuated;semi;actuation;type;ICAArrivalType;14a;AnteilLKW;6b;ICAEingVerlustZVerw;ICAIstCentral;BusinessDistrict;Central;District;6e;ICASneakers;ICAZuflussFaktor;10b;14b;BusFrequenz;WDDTA;xd;FS;ox;yo;BS;FIFO;dt;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;KJ;k2;k1;s'';abflüssen;peak;hour;factor;LT;RT;vphpl;HV;bb;Lu;Lpb;Rpb;CBD;ST;Ui;PF;Ii;Ri;PA;bi;Volume;to;ICU;P1;P2;P3;6a;6c;6d;LUo;qr;po;ArrivalType;6j;3a;3b;pedu;pbT;rec;RTA;LTA;Wardrop’schen">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1038931">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249395">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__ref152745369">
+            </a>Umlegung der Nachfrage auf das Netz (Netzbelastung)</h3>
+        <p class="Text">In diesem Abschnitt wird der Ansatz für die dynamische Netzbelastungsfunktion mit einer impliziten Wegeaufzählung im Fall eines deterministischen Routenwahlmodells erklärt. Zu diesem Zweck wird zunächst das kontinuierliche dynamische Kurzwegproblem definiert, das dem Routenwahlmodell zugrunde liegt. </p>
+        <h5>Kontinuierliches dynamisches Kurzwegproblem</h5>
+        <p class="Text">Im Gegensatz zum statischen Fall schließt das Kurzwegproblem die zeitliche Dimension im dynamischen Kontext explizit ein, da die Kosten der Kanten, die einen Weg bilden, zu unterschiedlichen Zeitpunkten ausgewertet werden, übereinstimmend mit den Fahrzeiten auf der Kante, bedingt durch die rekursive Gleichung <MadCap:xref class="Label_formula" href="1_5_Mathematischer Hintergrund der Dynamischen Gleichgewichtsumlegung.htm#1_benutzermodell_iv_2033098965_1038368">[3]</MadCap:xref>. Danach werden die minimalen Kosten <span class="formula">w</span><span class="formula_subscript">o</span><span class="formula_superscript">d</span>(<span class="formula_symbol">t</span>) zwischen jedem Knoten <span class="formula">o</span><span class="symbol">Î</span><span class="formula">N </span>und einem vorgegebenen Ziel<span class="formula"> d</span><span class="symbol">Î</span><span class="formula">Z</span> für Nutzer ermittelt, die zum Zeitpunkt <span class="formula">t</span> abfahren.</p>
+        <p class="Formula_number" MadCap:autonum=" [1]">
+            <a name="1_benutzermodell_iv_2033098965_1049260">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_82746">
+            </a>
+            <span class="formula">w</span>
+            <span class="formula_subscript">o</span>
+            <span class="formula_superscript">d</span>(<span class="formula_symbol">t</span>) = min{<span class="formula">C</span><span class="formula_subscript">k</span>(<span class="formula_symbol">t</span>): <span class="formula">k</span> <span class="symbol">Î</span> <span class="formula">K</span><span class="formula_subscript">od</span>}</p>
+        <p class="Text">Es kann bewiesen werden, dass die folgende dynamische Variante der <span class="gui_element">Bellman-Relation</span> für jeden Knoten <span class="formula">o</span><span class="symbol">Î</span><span class="formula">N </span>(<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1212463">Abbildung 1</MadCap:xref>) dem Problem <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1049260">[1]</MadCap:xref> entspricht. </p>
+        <p class="Formula_number" MadCap:autonum=" [2]">
+            <a name="1_benutzermodell_iv_2033098965_1212458">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_28873">
+            </a>
+            <span class="formula">w</span>
+            <span class="formula_subscript">o</span>
+            <span class="formula_superscript">d</span>(<span class="formula_symbol">t</span>)<span class="formula"><![CDATA[ ]]></span>= min<img src="../Resources/Images/7_135.png" style="margin-right: 0, 00793457px;" /></p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_DynamicVersion.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1212463">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_13462">
+            </a>Dynamische Variante der Bellman-Relation</p>
+        <p class="Text">Die Bellman-Relationen <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1212458">[2]</MadCap:xref> können durch einen dynamischen Programmieransatz gelöst werden, der nachfolgend beschrieben wird. </p>
+        <h5>Wegewahl- und Flusspropagierungsmodelle </h5>
+        <p class="Text">Wird davon ausgegangen, dass Verkehrsteilnehmer perfekt informierte rationale Entscheidungsträger sind, dann wählen sie ausschließlich die kürzesten Wege. Das <span class="gui_element">deterministische</span> Routenwahlmodell für Nutzer, die zum Zeitpunkt <span class="formula">t </span>von Quelle <span class="formula">o</span><span class="symbol">Î</span><span class="formula">N </span>zu Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z </span>fahren, kann dann mit folgender dynamischer Erweiterung des Wardrop’schen ersten Prinzips Folgendes formuliert werden:</p>
+        <ul>
+            <LI class="List0">Wird Weg <span class="formula">k</span>&#160;<span class="symbol">Î</span>&#160;<span class="formula">K</span><span class="formula_subscript">od</span> genutzt, das heißt seine Wahlwahrscheinlichkeit <span class="formula">P</span><span class="formula_subscript">k</span>(<span class="formula_symbol">t</span>) ist positiv, dann sind dessen Kosten <span class="formula">C</span><span class="formula_subscript">k</span>(<span class="formula_symbol">t</span>) genauso hoch wie die minimalen Kosten <span class="formula">w</span><span class="formula_subscript">o</span><span class="formula_superscript">d</span>(<span class="formula_symbol">t</span>), um zum Zeitpunkt <span class="formula">t</span> von <span class="formula">o</span> nach <span class="formula">d</span> zu fahren.</LI>
+            <LI class="List0">Wird Weg <span class="formula">k</span> umgekehrt nicht genutzt, das heißt seine Wahlwahrscheinlichkeit ist null, dann dürfen dessen Kosten nicht kleiner sein als die minimalen Kosten.</LI>
+        </ul>
+        <p class="Text">Dies kann formal wie folgt ausgedrückt werden.</p>
+        <p class="Formula_number" MadCap:autonum=" [3]">
+            <a name="1_benutzermodell_iv_2033098965_80696">
+            </a>
+            <img src="../Resources/Images/7_42.jpg" />
+        </p>
+        <p class="Text">Darüber hinaus müssen die Wahlwahrscheinlichkeiten nicht negativ sein und in der Summe 1 betragen.</p>
+        <p class="Text">Im Folgenden wird eine Gleichung entwickelt, die für Routenwahl und Flusspropagierung auf einer impliziten Wegeaufzählung basiert und den Zeitscheibenansatz anwendet, bei dem die Abflusszeit vom aktuellen Knoten den zeitlichen Rahmen bildet.</p>
+        <p class="Text">Laufen die zum Zeitpunkt <span class="formula">t </span>von Verkehrsteilnehmern genutzten Kurzwege von <span class="formula">o</span><span class="symbol">Î</span><span class="formula">N</span> nach <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span> über mehr als eine ausgehende Kante eines Zwischenknotens <span class="formula">x</span>, dann könnten die <span class="gui_element">bedingten Wahrscheinlichkeiten</span> dieser Kanten zum Zeitpunkt <span class="formula">t </span>für nach <span class="formula">d </span>fahrende Nutzer theoretisch von den zwischen <span class="formula">o</span> und<span class="formula"> x</span> genutzten Teilwegen abhängen. Aufgrund der additiven Kantenkosten wird aber stattdessen davon ausgegangen, dass die bedingten Wahrscheinlichkeiten der Kanten an jedem Knoten für alle Verkehrsteilnehmer gleich ist, die zum gleichen Ziel fahren, unabhängig von den bisher genutzten Teilwegen.</p>
+        <p class="Text">Unter dieser Annahme entspricht die Wahlwahrscheinlichkeit <span class="formula">P</span><span class="formula_subscript">k</span>(<span class="formula_symbol">t</span>) eines Wegs <span class="formula">k</span>&#160;<span class="symbol">Î</span>&#160;<span class="formula">K</span><span class="formula_subscript">od</span> von <span class="formula">o</span><span class="symbol">Î</span><span class="formula">N </span>nach <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z </span>für Nutzer, die zum Zeitpunkt <span class="formula">t </span>abfahren, dem Produkt der bedingten Wahrscheinlichkeiten seiner Kanten <span class="formula">A</span>(<span class="formula">k</span>), wovon jede auf den Zeitpunkt verweist, zu dem die Nutzer die Kante erreichen. Die Wahlwahrscheinlichkeit von <span class="formula">k</span> kann dann aus der nachfolgenden rekursiven Gleichung gewonnen werden.</p>
+        <p class="Formula_number" MadCap:autonum=" [4]">
+            <a name="1_benutzermodell_iv_2033098965_13656">
+            </a>
+            <img src="../Resources/Images/7_45.jpg" />
+        </p>
+        <p class="Text">Dabei ist (<span class="formula">o, x</span>) die erste Kante von <span class="formula">k</span> und <span class="formula">h</span>&#160;<span class="symbol">Î</span>&#160;<span class="formula">K</span><span class="formula_subscript">xd</span> der Rest des Wegs <span class="formula">k</span>.</p>
+        <p class="Text">Die dynamische Wardrop-Bedingung ist erfüllt, wenn die bedingten Wahrscheinlichkeiten der Kanten wie folgt berechnet werden. </p>
+        <p class="Formula_number" MadCap:autonum=" [5]">
+            <a name="1_benutzermodell_iv_2033098965_11073">
+            </a>
+            <img src="../Resources/Images/7_131.jpg" />
+        </p>
+        <p class="Formula_number" MadCap:autonum=" [6]">
+            <a name="1_benutzermodell_iv_2033098965_53506">
+            </a>
+            <img src="../Resources/Images/7_57.jpg" />
+        </p>
+        <p class="Formula_number" MadCap:autonum=" [7]">
+            <a name="1_benutzermodell_iv_2033098965_59790">
+            </a>
+            <img src="../Resources/Images/7_54.jpg" />
+        </p>
+        <p class="Text">Gleichung <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1049260">[1]</MadCap:xref> besagt, dass Verkehrsteilnehmer, die Knoten <span class="formula">o</span><span class="symbol">Î</span><span class="formula">N </span>zum Zeitpunkt <span class="formula">t</span> verlassen und zum Ziel<span class="formula"> d</span><span class="symbol">Î</span><span class="formula">Z</span> fahren, unter den ausgehenden Kanten <span class="formula">FS</span>(<span class="formula">o</span>) nur eine Kante (<span class="formula">o, x</span>) auswählen können, für die die Summe aus den Kantenkosten <span class="formula">C</span><span class="formula_subscript">ox</span>(<span class="formula_symbol">t</span>) und der der minimalen Kosten <span class="formula">w</span><span class="formula_subscript">x</span><span class="formula_superscript">d</span>(<span class="formula">t</span><span class="formula_subscript">ox</span>(<span class="formula_symbol">t</span>)) für den Restweg zum Ziel den minimalen Kosten <span class="formula">w</span><span class="formula_subscript">o</span><span class="formula_superscript">d</span>(<span class="formula_symbol">t</span>) entspricht. Die Durchfahrtszeit in <span class="formula">x</span> ist dabei <span class="formula">t</span><span class="formula_subscript">ox</span>(<span class="formula_symbol">t</span>).</p>
+        <p class="Text">Der Fluss <span class="formula">f</span><span class="formula_subscript">ox</span><span class="formula_superscript">d</span>(<span class="formula_symbol">t</span>) der Fahrzeuge, die zum Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z </span>fahren und die Kante (<span class="formula">o, x</span>)<span class="symbol">Î</span><span class="formula">A </span>zum Zeitpunkt <span class="formula">t </span>befahren, ergibt sich aus der bedingten Wahrscheinlichkeit <span class="formula">p</span><span class="formula_subscript">ox</span><span class="formula_superscript">d</span>(<span class="formula_symbol">t</span>) der Kanten multipliziert mit dem Fluss, der Knoten <span class="formula">o</span> zum Zeitpunkt <span class="formula">t</span> verlässt. Dieser ergibt sich wiederum aus der Summe des Abflusses <span class="formula">u</span><span class="formula_subscript">yo</span><span class="formula_superscript">d</span>(<span class="formula_symbol">t</span>) aus jeder Kante (<span class="formula">y, o</span>)<span class="symbol">Î</span><span class="formula">BS</span>(<span class="formula">o</span>),<span class="formula"><![CDATA[ ]]></span>der in <span class="formula">o </span>einfließt, und aus der Nachfrage <span class="formula">D</span><span class="formula_subscript">od</span>(<span class="formula_symbol">t</span>) von <span class="formula">o </span>nach <span class="formula">d. </span>Damit ergibt sich folgende Gleichung:</p>
+        <p class="Formula_number" MadCap:autonum=" [8]">
+            <a name="1_benutzermodell_iv_2033098965_99713">
+            </a>
+            <img src="../Resources/Images/7_138.jpg" />
+        </p>
+        <p class="Text">Werden die FIFO- und Flusserhaltungsregeln angewandt, kann der Abfluss von <span class="formula">y</span> zum Zeitpunkt <span class="symbol">t</span> anhand des Zuflusses zu <span class="formula">a</span> zum Zeitpunkt <span class="formula">t</span><span class="formula_subscript">yo</span><span class="formula_superscript">-1</span>(<span class="formula_symbol">t</span>) so ausgedrückt werden. </p>
+        <p class="Formula_number" MadCap:autonum=" [9]">
+            <a name="1_benutzermodell_iv_2033098965_23449">
+            </a>
+            <img src="../Resources/Images/7_24.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000061px;" />
+        </p>
+        <p class="Text">Dabei beruht das Gewicht <span class="formula">dt</span><span class="formula_subscript">yo</span>(<span class="formula_symbol">t</span>)<span class="formula">/d</span><span class="formula_symbol">t</span> auf der Tatsache, dass Fahrzeiten zeitlich variieren und die Abflussrate einer Kante kleiner ist als die Zuflussrate, falls die Reisezeit zunimmt (und umgekehrt).</p>
+        <p class="Text">Der gesamte Zufluss und Abfluss der Kante (<span class="formula">o, x</span>)<span class="symbol">Î</span><span class="formula">A</span> zum Zeitpunkt <span class="formula">t</span> ist dann folgendermaßen:</p>
+        <p class="Formula_number" MadCap:autonum=" [10]">
+            <a name="1_benutzermodell_iv_2033098965_35558">
+            </a>
+            <img src="../Resources/Images/7_141.jpg" />
+        </p>
+    </body>
+</html>

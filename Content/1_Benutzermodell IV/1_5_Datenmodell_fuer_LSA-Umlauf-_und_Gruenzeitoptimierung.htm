@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="588" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;v0;VOT;CR;277s;akt;321s;360s;ver;AE;ED;Fzg;BD;CF;DF;StrNr;0ij;0i;0j;ij;r1;exp;r2;MSA;Method;of;t0;tAkt;car;fma;hveh;Landstr;Str;NCHRP;Wardrop’schen;NLM;VerwendeUmlaufzeitfamilie;SignalKoordinierungsGruppe;VerwendeUmlaufzeitFamilie">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_iv_2033098965_1241527">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_49315">
+            </a>Datenmodell für LSA-Umlauf- und Grünzeitoptimierung</h4>
+        <p class="Text">
+            <MadCap:keyword term="Signalanlagen:Umlauf- und Grünzeiten optimieren" />
+            <MadCap:keyword term="Umlauf- und Grünzeiten optimieren" />
+            <MadCap:keyword term="Signalkoordinierung" />Für die Umlauf- und Grünzeitoptimierung sind die folgenden Attribute von Netzobjekten relevant:</p>
+        <table class="TableStyle-TableStandard" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="115px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="129px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="253px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Netzobjekttyp</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Signalanlage und untergeordnete Objekte</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">alle Attribute, die die Signalzeiten beschreiben</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Signalzeiten und Phasenaufteilung im Ausgangszustand</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">LSA</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verweis auf Signalkoordinierungsgruppe</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Bei Umlaufzeitoptimierung mit Verfahrensparameter VerwendeUmlaufzeitfamilie=True wird als neue Umlaufzeit nur ein Mitglied der Umlaufzeitfamilie der Koordinierungsgruppe gewählt. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">SignalKoordinierungsGruppe</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Umlaufzeitfamilie</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">LSA</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">ICA Maximale Umlaufzeit für Optimierung</p>
+                        <p class="CellText">ICA Minimale Umlaufzeit für Optimierung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Bei Umlaufzeitoptimierung mit Verfahrensparameter VerwendeUmlaufzeitfamilie=False wird die neue Umlaufzeit aus dem Intervall zwischen den beiden Attributen gewählt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">LSA</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Optimierungsmethode</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0 = keine Signalzeitoptimierung für die Signalanlage an diesem Knoten</p>
+                        <p class="CellText">1 = Nur Grünzeitoptimierung</p>
+                        <p class="CellText">2 = Umlauf- und Grünzeitoptimierung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">LSA</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Abgeschaltet</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die LSA abgeschaltet, wird für den Knoten (Oberknoten) keine Signalzeitoptimierung durchgeführt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Das in den Verfahrensparametern eingestellte Attribut für die Bemessungsverkehrsstärke</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Belastungen der Abbieger</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Knotenmodell und untergeordnete Objekte</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">alle Geometrieattribute</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">Fahrstreifenaufteilung am Knoten</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Optimierung wird durch folgende Verfahrensparameter gesteuert (Bestandteil der Verfahrensparameter für die Knotenwiderstandsberechnung):</p>
+        <table class="TableStyle-TableStandard" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="110px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="104px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="283px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Verfahrensparameter</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Datentyp (<span class="_Override" style="text-decoration: underline;">Standard</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Automatische Grünzeitanpassung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Boole (<span class="_Override" style="text-decoration: underline;">False</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Werden im Rahmen der ICA-Berechnung grundsätzlich die Signalzeiten optimiert? Falls ja, steuert das LSA-Attribut <span class="gui_element">Optimierungsmethode</span> (s.o.), welche Optimierung an welcher LSA ausgeführt wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">VerwendeUmlaufzeitFamilie</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Boole (<span class="_Override" style="text-decoration: underline;">True</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Bei Umlaufzeitoptimierung mit Verfahrensparameter VerwendeUmlaufzeitfamilie=True wird als neue Umlaufzeit nur ein Mitglied der Umlaufzeitfamilie der Koordinierungsgruppe (sofern vorhanden) gewählt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">Rechengenauigkeit</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">volle Sekunden oder Zehntelsekunden</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">Sie können über diesen Parameter steuern, ob als Grünzeit-Anfang und -Ende volle Sekunden oder Zehntelsekunden zulässig sind. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

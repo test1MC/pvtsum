@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="678" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="bzw;ServiceKm;LeerKm;Low;Floor;Train;GE;Fahrzeugeinheitenkostensatzes;KostenEntf">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1140059">
+            </a>Fahrzeugtypabhängige Kosten</h4>
+        <p class="Text">
+            <MadCap:keyword term="ÖV:betriebliche Kennzahlen: fahrzeugtypabhängige Kosten" />Die Kosten für ein Fahrzeug setzen sich zusammen aus Stundenkosten, Kilometerkosten und fixen Fahrzeugkosten. In <MadCap:variable name="PTV_Manual.Programmname" /> werden diese Kosten Fahrzeugeinheiten zugewiesen <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Fahrzeuggebundene Kosten.htm#2_einstellungen_betreibermodell_oev_1111312306_1089853"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Fahrzeuggebundene Kosten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. In der Praxis sind die Kilometer- und Fahrzeugkosten abhängig vom eingesetzten Fahrzeugtyp (zum Beispiel Standard- oder Gelenkbus bzw. Straßenbahn in Einzel- oder Mehrfachtraktion) und die Stundenkosten vom Betreiber (zum Beispiel öffentliches oder privates Verkehrsunternehmen, Art des Tarifvertrags).</p>
+        <h5>Stundenkosten (Attribut Kosten Zeit)</h5>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">Zeitkosten = Servicezeit • Stundenkostensatz der Fahrplanfahrten + Leerzeit • Stundenkostensatz der Leerfahrten</span>
+        </p>
+        <ul>
+            <LI class="List0">
+                <MadCap:keyword term="ÖV:betriebliche Kennzahlen: Stundenkosten" />Servicezeit beschreibt die Lastzeit für die Beförderung der Fahrgäste. Sie kann dem Fahrplan entnommen werden.</LI>
+            <LI class="List0">Leerzeit umfasst die Zeiten für Verspätungspuffer, Fahrerpausen oder das Umsetzen des Fahrzeugs. Für die Ermittlung der Leerzeiten ist eine Umlaufbildung erforderlich, ansonsten geht dieser Teil nicht in die Stundenkosten mit ein.</LI>
+        </ul>
+        <h5>Kilometerkosten (Attribut Kosten Entfernung)</h5>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">Entfernungskosten = ServiceKm • Kilometerkostensatz der Fahrplanfahrten + LeerKm • Kilometerkostensatz der Leerfahrten</span>
+        </p>
+        <ul>
+            <LI class="List0">
+                <MadCap:keyword term="ÖV:betriebliche Kennzahlen: Kilometerkosten" />Servicekilometer für die Beförderung der Fahrgäste errechnen sich unmittelbar aus den Fahrten des Fahrplans.</LI>
+            <LI class="List0">Leerkilometer entstehen auf Leerfahrten zwischen der Endhaltestelle einer Fahrt und der Starthaltestelle einer neuen Fahrt innerhalb eines Umlaufs.</LI>
+        </ul>
+        <h5>Fahrzeugkosten (Attribut Kosten Fahrzeug)</h5>
+        <p class="Text">
+            <MadCap:keyword term="ÖV:betriebliche Kennzahlen: Fahrzeugkosten" />Fahrzeugkosten ergeben sich aus den Fixkosten, die je Fahrzeugeinheit definiert werden können <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Attribute_und_Optionen_von_Fahrzeugeinheiten.htm#2_netz_bearbeiten_23091886_1162239"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Attribute und Optionen von Fahrzeugeinheiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> und dem in einer Umlaufbildung ermittelten Fahrzeugbedarf.</p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">Fahrzeugkosten = Fahrzeugeinheitenkostensatz • Fahrzeuganzahl</span>
+        </p>
+        <ul>
+            <LI class="List0">Kostensatz Fahrzeugeinheit enthält die Fixkosten je Fahrzeugeinheit (also etwa die Anschaffungskosten). Die Fixkosten erhöhen sich mit jedem zusätzlich notwendigen Fahrzeug. </LI>
+            <LI class="List0">Anzahl Fahrzeuge ergibt sich aus der Zahl der notwendigen Fahrzeugumläufe. Daher wird für die Berechnung der Fahrzeugkosten eine Umlaufbildung vorausgesetzt.</LI>
+        </ul>
+        <h5>Berechnungsbeispiel fahrzeugtypabhängige Kosten für Linien</h5>
+        <p class="Text">
+            <MadCap:keyword term="ÖV:betriebliche Kennzahlen: fahrzeugtypabhängige Kosten" />Für das Anwendungsbeispiel <MadCap:xref class="sieheUeberschrSeite" href="1_7_Beispiel für OeV-betriebliche Kennzahlen.htm#1_betreibermodell_oev_1878159914_1146667"><span style="color: Black;" class="mcFormatColor">(</span><u>Beispiel für ÖV-betriebliche Kennzahlen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> sind die folgenden fahrzeugtypspezifischen Kostensätze zugrunde gelegt.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="148px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">Fahrzeugeinheiten</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Standard-Bus</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Low Floor Bus</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Train</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Service</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Leer</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Service</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Leer</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Service</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Leer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Stundenkostensatz [GE/h]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">300.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">200.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">300.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">200.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">700.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">500.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Kilometerkostensatz [GE/km]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">5.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">5.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">5.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">5.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">10.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">10.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrzeugeinheitenkostensatz [GE/Fzg]</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">7000.00</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">7000.00</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_mid">20000.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Bezugszeitraum des Fahrzeugeinheitenkostensatzes</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_mid">Analyseperiode</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_mid">Analyseperiode</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText_mid">Analyseperiode</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Kostensätze für die Fahrzeugeinheiten</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="148px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">Fahrzeugkombinationen</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Standard-Bus</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Low Floor Bus</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Train</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Service</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Leer</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Service</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Leer</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Service</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Leer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Stundenkostensatz [GE/h]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">50.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">50.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Kilometerkostensatz [GE/km]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Kostensätze für die Fahrzeugkombinationen</p>
+            </caption>
+        </table>
+        <p class="Text">Für den Zug fallen folgende Entfernungen und Zeiten an:</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 494px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="193px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="75px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="75px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="75px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">Fahrzeugkombination</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">ServiceKm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">LeerKm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Servicezeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Leerzeit</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Train</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">380&#160;km</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">0&#160;km</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">10.13&#160;h</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText_right">0&#160;h</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">Entfernungen und Zeiten für die Fahrzeugkombination Zug in der Analyseperiode</p>
+            </caption>
+        </table>
+        <p class="Text">Werden die fahrzeugtypabhängigen Kosten (Entfernungskosten, Zeitkosten und Fahrzeugkosten) für Linien berechnet, so ergeben sich für die Zuglinie die folgenden Berechnungen.</p>
+        <ul>
+            <LI class="List0">Entfernungskosten Analyseperiode</LI>
+        </ul>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">KostenEntf(AP) = KostenKmService • ServiceKm(AP) + KostenKmLeer • LeerKm(AP)</span>
+        </p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">
+                <img src="../Resources/Images/9_2.jpg" />
+            </span>
+        </p>
+        <ul>
+            <LI class="List0">Zeitkosten Analyseperiode</LI>
+        </ul>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">KostenZeit(AP) = KostenZeitService • ServiceZeit(AP) + KostenZeitLeer • LeerZeit(AP)</span>
+        </p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">
+                <img src="../Resources/Images/9_14.jpg" />
+            </span>
+        </p>
+        <ul>
+            <LI class="List0">Fahrzeugkosten Analyseperiode</LI>
+        </ul>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">KostenFahrzeug(AP) = Kostensatz Fahrzeugeinheit • Anzahl Fahrzeuge</span>
+        </p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">
+                <img src="../Resources/Images/9_12.jpg" />
+            </span>
+        </p>
+    </body>
+</html>

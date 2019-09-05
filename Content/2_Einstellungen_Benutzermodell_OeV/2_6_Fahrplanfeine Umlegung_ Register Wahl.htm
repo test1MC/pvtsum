@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="657" MadCap:lastWidth="510" MadCap:ignoredWords="E1;E9;V1;V9;N1;N9;G1;G9;G0;att;E2;bzw;ErhLinieName;E3;max;E5;E7;E8;V2;N2;V3;N3;NachlaufLRName;evtl;inkl;V5;N5;V6;N6;V4;N4;con;wege;RZ;UH;Wid;konst;ca;Registrierungs;Common;Misc;ProcessorInfo;angeb;empf;Abfahrts">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1036066">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_94486">
+            </a>Fahrplanfeine Umlegung: Register Wahl<a name="25076"></a></h4>
+        <p class="Text">In diesem Register legen Sie fest, wie die Nachfrage auf die einzelnen Verbindungen verteilt wird.</p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Aufteilungsmodell</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Auswahlliste wählen Sie das Aufteilungsmodell. Dieses bestimmt die Verteilung der Nachfrage auf die einzelnen Verbindungen in Abhängigkeit vom Widerstand der Verbindungen. Für jedes Aufteilungsmodell können Sie bestimmte Parameter verändern <MadCap:xref class="Grundlagen" href="../1_Benutzermodell OeV/1_6_Eigenstaendigkeit von Verbindungen.htm#1_benutzermodell_oev_2318507456_1028012">Siehe "Eigenständigkeit von Verbindungen"</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Eigenständigkeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Eigenständigkeit verwenden</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die Eigenständigkeit der Verbindungen im gewählten Aufteilungsmodell berücksichtigt <MadCap:xref class="Grundlagen" href="../1_Benutzermodell OeV/1_6_Eigenstaendigkeit von Verbindungen.htm#1_benutzermodell_oev_2318507456_1028012">Siehe "Eigenständigkeit von Verbindungen"</MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Eigenständigkeit einer Verbindung ist eine Information darüber, ob es für potenzielle Fahrgäste interessante, zeitlich benachbarte, alternative Verbindungen gibt. Bei der Ermittlung des Wertes werden immer die Abfahrts- und Ankunftszeiten der Verbindungen berücksichtigt. Optional können auch die qualitativen Kenngrößen empfundene Reisezeit und Fahrpreis eingehen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">maximales Zeitfenster</span>
+                        </p>
+                        <p class="CellText">Maximale Zeitdauer, innerhalb der sich Verbindungen überhaupt beeinflussen können. Der Wert muss größer als null sein.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Einfluss von ERZ und Fahrpreis</span>
+                        </p>
+                        <p class="CellText">Wert für den Einfluss von empfundener Reisezeit und Fahrpreis bei der Berechnung der Eigenständigkeit (0: kein Einfluss, 1: maximaler Einfluss). Der Wert entspricht der Variablen c.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Wirkung auf Verb. mit hoher Qualität</span>
+                        </p>
+                        <p class="CellText">Wert für den Einfluss von schlechteren Verbindungen auf eine bessere.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Wirkung auf Verb. mit geringer Qualität</span>
+                        </p>
+                        <p class="CellText">Wert für den Einfluss von besseren Verbindungen auf eine schlechtere.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der Wert für die Wirkung auf Verbindungen mit hoher Qualität darf nicht höher sein als der Wert für die Wirkung auf Verbindungen mit geringer Qualität.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

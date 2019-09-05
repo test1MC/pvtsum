@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs;Ride;AnteilAnWegemengeSoll" MadCap:lastBlockDepth="4" MadCap:lastHeight="662" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1123014">
+            </a>
+            <a name="1_netzmodell_1240632468_30643">
+            </a>Wege</h3>
+        <p class="Text">
+            <MadCap:keyword term="Netzobjekte: Wege" />
+            <MadCap:keyword term="Wege" />
+            <MadCap:keyword term="IV:Wegobjekte" />Alle Umlegungen in <MadCap:variable name="PTV_Manual.Programmname" /> im IV wie im ÖV arbeiten Wege-basiert, das bedeutet in der Umlegung werden mögliche Wege für jede Quelle-Ziel-Relation ermittelt und mit einem Anteil der Nachfrage belastet. Alle anderen Ergebnisse, insbesondere die Belastungen der verschiedenen Netzobjekte und die Kenngrößenmatrizen, werden aus diesen belasteten Wegen abgeleitet. Wege sind also das zentrale Ergebnis der Umlegungsverfahren.</p>
+        <p class="Text">In <MadCap:variable name="PTV_Manual.Programmname" /> werden die Begriffe Weg (IV-Weg und ÖV-Weg), ÖV-Teilweg und IV-Wege streckenfein verwendet. ÖV-Wege werden dabei beschrieben durch eine Abfolge von ÖV-Teilwegen. Streckenfeine IV-Wege weisen alle Strecken aus, die auf einem IV-Weg liegen.</p>
+        <p class="Text">Mit Hilfe von Wegen können Sie auf Basis der Umlegungsergebnisse detaillierte Auswertungen, wie Spinnen <MadCap:xref class="sieheUeberschrSeite" href="../1_Interaktive_Auswertungen/1_11_Spinnen.htm#1_interaktive_auswertungen_949040047_1036933"><span style="color: Black;" class="mcFormatColor">(</span><u>Spinnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>, ausführen oder die Umlegungsergebnisse einer eingehenden Verifizierung unterziehen. <MadCap:variable name="PTV_Manual.Programmname" /> speichert die in der Umlegung gefundenen Wege optional <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell IV/2_5_Einstellungen zum Speichern der IV-Umlegungsergebnisse.htm#2_einstellungen_benutzermodell_iv_1682368020_1034751"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Einstellungen zum Speichern der IV-Umlegungsergebnisse</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <h5>Bearbeiten von Wegen im IV (IV-Wegobjekt)</h5>
+        <p class="Text">Im IV kann der Anwender Wege manuell bearbeiten. Es können sowohl eigene Wege eingefügt werden, als auch bestehende Wege verändert werden. Es kann sowohl der Verlauf der IV-Wege als auch deren Belastung vom Anwender verändert werden <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Attribute_und_Optionen_von_IV_Wegen.htm#2_netz_bearbeiten_23091886_1197977"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Attribute und Optionen von IV-Wegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Diese Wege stehen in den üblichen Verfahren (wie etwa ICA oder Spinnenberechnungen) genauso zur Verfügung wie die von einer <MadCap:variable name="PTV_Manual.Programmname" />-Umlegung erzeugten Wege. Sie müssen vorher allerdings noch mit dem Verfahren Wege konvertieren zu Nachfragesegment-Wegen konvertiert werden. Es können außerdem mehrere so genannte Wegemengen parallel in einem Netz gehalten werden. Wegemengen fassen dabei mehrere Wege zu einer Gruppe zusammen. So können Sie beispielsweise nebeneinander mehrere Umlegungsergebnisse im Netz vorhalten und zwischen diesen umschalten. Für die manuelle Bearbeitung von Wegen ergeben sich die folgenden Anwendungsfälle:</p>
+        <ul>
+            <LI class="List0">Aufbau eines eigenen Umlegungsergebnisses entweder durch Erstellen einer Netzdatei in einem Texteditor oder interaktiv durch Digitalisieren der Wege</LI>
+            <LI class="List0">Bearbeiten eines von <MadCap:variable name="PTV_Manual.Programmname" /> berechneten Umlegungsergebnisses. Dies kann zum einen interaktiv durch Digitalisieren des Wegeverlaufs im Netzeditor oder durch Bearbeiten der Wegebelastung in der Wegeliste erfolgen. Zum anderen können die Wege als Netzdatei geschrieben werden und diese in einem Texteditor bearbeitet werden.</LI>
+            <LI class="List0">Halten verschiedener Umlegungsergebnisse in einem Netz als Wegemengen. Jede Wegemenge enthält dann die Wege einer Umlegung.</LI>
+            <LI class="List0">Halten verschiedener Spinnenergebnisse als Wegemengen. Jede Wegemenge enthält dann das Ergebnis (also die Wege) einer Spinnenberechnung.</LI>
+            <LI class="List0">Überschreiben eines ausgewählten Teils des Umlegungsergebnisses mit externen Daten. So könnten in einer Verkehrsanalyse für eine zu planende Siedlung beispielsweise nur die Wege, die in dieser Siedlung beginnen, manuell nachbearbeitet werden und der Rest der Umlegung beibehalten werden.</LI>
+            <LI class="List0">Matrix auf Wege verteilen. Für eine gegebene Matrix und gegebene Wege werden die Matrixwerte auf die Wege verteilt. Dies ermöglicht es Ihnen die Fahrtverteilung zu wiederholen und dann schnell die manuelle Umlegung zu aktualisieren.</LI>
+        </ul>
+        <p class="Text">Für den Umgang mit IV-Wegobjekten gibt es zwei Verfahren, die in Berechnungsabläufe integriert werden können <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/IV_Wege_und_Wegemengen_verwalten.htm#2_netz_bearbeiten_23091886_1137433"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>IV-Wege und Wegemengen verwalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>:</p>
+        <ul>
+            <LI class="List0">Wege konvertieren <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Wege_konvertieren.htm#2_netz_bearbeiten_23091886_1442300"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Wege konvertieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Das Verfahren kann beispielsweise eingesetzt werden um ein Umlegungsergebnis durch ein anderes zu ersetzen. Es bietet die folgenden Möglichkeiten.</LI>
+            <LI class="List1">Konvertieren von Umlegungsergebnis nach Wegemenge</LI>
+            <LI class="List1">Konvertieren von Wegemenge nach Umlegungsergebnis</LI>
+            <LI class="List1">Konvertieren von Wegemenge nach Wegemenge</LI>
+            <LI class="List1">Konvertieren von Umlegungsergebnis nach Umlegungsergebnis</LI>
+            <LI class="List0">Matrix auf Wege verteilen <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Matrix_auf_Wege_verteilen.htm#2_netz_bearbeiten_23091886_1443821"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Matrix auf Wege verteilen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Basierend auf einer Matrix und Wegen, werden die Fahrten der Matrix auf die Wege verteilt. Dies ermöglicht es Ihnen, die Nachfrage auf der Ebene von Quelle-Ziel-Beziehungen zu verändern und danach die neue Nachfrage auf alle existierenden Wege der Beziehung proportional zu den bisherigen Anteilen zu verteilen. Die Verteilung erfolgt anhand des Attributs <span class="gui_element">AnteilAnWegemengeSoll</span>. Das Attribut ist für jeden Weg durch den Anwender definierbar. Für jede Quelle-Ziel-Relation einer Wegemenge wird zunächst das Attribut <span class="gui_element">AnteilAnWegemengeSoll</span> über alle Wege aufaddiert (Gesamtgewicht).</LI>
+        </ul>
+        <p class="Text2">
+            <img src="../Resources/Images/4_25.jpg" />
+        </p>
+        <p class="Text2">Wobei P alle Wege in einer Wegemenge von Quelle O zu Ziel D sind. Wenn also zum Beispiel fünf Wege von Bezirk A nach Bezirk B bestehen, so wird <span class="gui_element">AnteilAnWegemengeSoll</span> dieser fünf Wege aufaddiert.</p>
+        <p class="Text2">Die Belastung eines einzelnen Weges p ergibt sich dann aus folgender Gleichung.</p>
+        <p class="Text2">
+            <img src="../Resources/Images/4_62.jpg" />
+        </p>
+    </body>
+</html>

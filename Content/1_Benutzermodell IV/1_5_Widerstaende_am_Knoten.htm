@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="8" MadCap:lastHeight="682" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;gruppen;gruppe;ICU1;ICU2;Circular;Planning;Operations;pretimed;fully;actuated;semi;actuation;type;ICAArrivalType;14a;AnteilLKW;6b;ICAEingVerlustZVerw;ICAIstCentral;BusinessDistrict;Central;District;6e;ICASneakers;ICAZuflussFaktor;10b;14b;BusFrequenz;WDDTA;xd;FS;ox;yo;BS;FIFO;dt;initialize;the;solution;flows;to;zero;for;each;destination;compute;arc;costs;and;their;if;then;UmlgAbw;ASSIGNDEVIATION;AbsRMSE;Abs;RMSE;Achsabs;ax;AnteilAkzGEH;akzept;AnteilAkzRelFehler;rel;AnzBeob;AnzKlasse;KlassenWert;Korr;Pearson;MittAbsFehler;MittBeob;MittRelFehler;R2;RSQ;RelRMSE;StdAbw;VolDem;Cap;ScalingFactor;Vol;te;flow;toNode;Lj;maxFlow;propagatingFlow;Nr;tcur;cap;BPR;Bureau;Public;Roads;INRETS;recherche;sur;les;transports;leur;sécurité;sat;crit;cur;b’;BPR2;BPR3;CONICAL;CONICAL_MARGINAL;EXPONENTIAL;Ramp;Metering;SIGMOIDAL_MMF_NODES;SIGMOIDAL_MMF;SIGMOIDAL_MMF_LINKS;SIGMOIDAL_MMF2;AKCELIK;OT;OR;ToP;JT;5JR;FrP;2JL;2JLF;JTF;JRF;Geradeausfahrstreifen;vol;num;cx;cb;cHV;HV;cG;cT;3LT;fx;fb;fHV;px;mx;Fußg;ft;JL;JLF;vJL;JR;vIT;vR4;vIR;pIP;pJP;R1;95x;TModelSpezial;Bel;TModelSpecial;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;KJ;k2;k1;s'';abflüssen;peak;hour;factor;LT;RT;vphpl;bb;Lu;Lpb;Rpb;CBD;ST;Ui;PF;Ii;Ri;PA;bi;Volume;ICU;P1;P2;P3;6a;6c;6d;LUo;qr;po;ArrivalType;6j;3a;3b;pedu;pbT;rec;RTA;LTA;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_iv_2033098965_1188828">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_69616">
+            </a>Widerstände am Knoten</h2>
+        <p class="Text">
+            <MadCap:keyword term="Knoten:Widerstände" />
+            <MadCap:keyword term="Knotenwiderstände" />
+            <MadCap:keyword term="Widerstandsfunktionen: am Knoten" />Verkehrsknotenpunkte werden in <MadCap:variable name="PTV_Manual.Programmname" /> als Knoten oder als Oberknoten modelliert. Knotenpunkte, an denen Straßen und/oder Schienenwege zusammentreffen, sind in städtischen Verkehrsnetzen meist der wesentliche Engpassfaktor. An den Knotenpunkten müssen die Konfliktpunkte von den nicht-verträglichen Verkehrsströmen nacheinander passiert werden. Die Reihenfolge, in der die Verkehrsströme über die Konfliktflächen fahren, hängt von der Verkehrsregelung ab.</p>
+        <p class="Text">Für die Routenwahl innerhalb eines Umlegungsverfahrens ist der Widerstand auf den alternativen Routen entscheidend, der sich als Summe der Widerstände aller überfahrenen Netzobjekte ergibt. Der Engpasseffekt eines Knotens wird dabei für alle Varianten der Verkehrsregelung durch den Widerstand des benutzten Abbiegers abgebildet. Üblicherweise entspricht der Widerstand eines Abbiegers genau der Fahrzeit <span class="formula">t</span><span class="formula_subscript">akt</span>, also dem Zeitbedarf für das Durchqueren des Knotens in der Abbiegerichtung der Route.</p>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> bietet für die Berechnung von <span class="formula">t</span><span class="formula_subscript">akt</span> pro Abbieger drei verschiedene Modelle an, die unterschiedliche Kompromisse zwischen Dateneingabe- und Rechenaufwand einerseits und Genauigkeit und Realitätsnähe andererseits darstellen.</p>
+        <ul>
+            <LI class="List0">Abbieger CR-Funktion <MadCap:xref class="sieheUeberschrSeite" href="1_5_Widerstand von Abbiegern aus Abbieger CR-Funktion.htm#1_benutzermodell_iv_2033098965_1057995"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstand von Abbiegern aus Abbieger CR-Funktion</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">Knoten CR-Funktion <MadCap:xref class="sieheUeberschrSeite" href="1_5_Widerstand von Abbiegern aus Knoten CR-Funktion.htm#1_benutzermodell_iv_2033098965_1231166"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstand von Abbiegern aus Knoten CR-Funktion</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">Knotenwiderstandsberechnung ICA <MadCap:xref class="sieheUeberschrSeite" href="1_5_Knotenwiderstandsberechnung nach Highway Capacity Manual (Intersection Capac.htm#1_benutzermodell_iv_2033098965_1026864"><span style="color: Black;" class="mcFormatColor">(</span><u>Knotenwiderstandsberechnung nach Highway Capacity Manual (Intersection Capacity Analysis, ICA)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+        </ul>
+        <ul>
+            <LI class="List2">Möchten Sie ICA innerhalb der Umlegung verwenden, müssen Sie als Methode <span class="gui_element">Knotenwiderstandsberechnung (ICA)</span> wählen.</LI>
+        </ul>
+        <p class="Text">Die Gegenüberstellung der wichtigsten Vor- und Nachteile in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1366342">Tabelle 1</MadCap:xref> soll Ihnen bei der Wahl des angemessenen Berechnungsmodells für Ihr Projekt helfen.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 497px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="186px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="136px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="192px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Modell</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Vorteil</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Nachteil</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Abbieger CR-Funktion </span>
+                            <MadCap:xref class="sieheUeberschrSeite" href="1_5_Widerstand von Abbiegern aus Abbieger CR-Funktion.htm#1_benutzermodell_iv_2033098965_1057995">
+                                <span style="color: Black;" class="mcFormatColor">(</span>
+                                <u>Widerstand von Abbiegern aus Abbieger CR-Funktion</u>
+                                <span style="color: Black;" class="mcFormatColor">)</span>
+                            </MadCap:xref>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <ul>
+                            <LI class="List0Tab">geringer Eingabeaufwand (pro Abbieger lediglich Kapazität und <span class="formula">t</span><span class="formula_subscript">0</span>)</LI>
+                            <LI class="List0Tab">Berechnung schnell</LI>
+                            <LI class="List0Tab">Umlegung konvergiert schnell</LI>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <ul>
+                            <LI class="List0Tab">Zeitbedarf für den Abbiegevorgang berücksichtigt nur die Belastung des Abbiegers selbst, nicht die Stärke von möglichen Konfliktströmen (separable Kostenfunktion)</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Knoten CR-Funktion </span>
+                            <MadCap:xref class="sieheUeberschrSeite" href="1_5_Widerstand von Abbiegern aus Knoten CR-Funktion.htm#1_benutzermodell_iv_2033098965_1231166">
+                                <span style="color: Black;" class="mcFormatColor">(</span>
+                                <u>Widerstand von Abbiegern aus Knoten CR-Funktion</u>
+                                <span style="color: Black;" class="mcFormatColor">)</span>
+                            </MadCap:xref>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <ul>
+                            <LI class="List0Tab">Eingabeaufwand nur wenig größer als bei Abbieger-CR-Funktionen (zusätzlich Kapazität und <span class="formula">t</span><span class="formula_subscript">0</span> für den Knoten selbst sowie Kennzeichnung von untergeordneten Strecken)</LI>
+                            <LI class="List0Tab">Berechnung schnell</LI>
+                            <LI class="List0Tab">Für untergeordnete Abbieger an vorfahrtsgeregelten Knoten erhöht sich der Zeitbedarf aus der eigenen Belastung um einen weiteren Zuschlag, der von der Gesamtauslastung des Knoten und damit von der Stärke der Konfliktströme abhängt.</LI>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <ul>
+                            <LI class="List0Tab">Umlegung konvergiert wegen des nicht-separablen Zuschlags langsamer</LI>
+                            <LI class="List0Tab">Berücksichtigung der Konfliktströme ist durch den pauschalen Zuschlag gegenüber ICA stark vereinfacht</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText" style="mc-hyphenate-shortest-prefix: 18;">
+                            <span class="gui_element">Knotenwiderstandsberechnung (ICA) </span>
+                            <MadCap:xref class="sieheUeberschrSeite" href="1_5_Knotenwiderstandsberechnung nach Highway Capacity Manual (Intersection Capac.htm#1_benutzermodell_iv_2033098965_1026864">
+                                <span style="color: Black;" class="mcFormatColor">(</span>
+                                <u>Knotenwiderstandsberechnung nach Highway Capacity Manual (Intersection Capacity Analysis, ICA)</u>
+                                <span style="color: Black;" class="mcFormatColor">)</span>
+                            </MadCap:xref>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <ul>
+                            <LI class="List0Tab" style="mc-hyphenate-shortest-prefix: 12;">Die Widerstandsberechnung berücksichtigt die Fahrstreifenaufteilung und Signalsteuerung exakt, zum Beispiel wirken sich gesonderte Aufweitungen für Abbieger kapazitätssteigernd aus und abhängig von den eingegebenen Signalzeiten werden geschützte und bedingt verträgliche Abbieger korrekt berechnet</LI>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <ul>
+                            <LI class="List0Tab">Eingabeaufwand bedeutend höher, an Stelle von Kapazität und <span class="formula">t</span><span class="formula_subscript">0</span> modellieren Sie die Fahrstreifenaufteilung am Knoten und – wo vorhanden – die Lichtsignalsteuerung im Detail</LI>
+                            <LI class="List0Tab">Berechnung zeitaufwändiger</LI>
+                            <LI class="List0Tab">Umlegung konvergiert wegen des nicht-separablen Widerstandsmodells langsam, manchmal ohne zusätzliche Maßnahmen gar nicht</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1366342">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_59172">
+            </a>Vor- und Nachteile der Knotenwiderstandsmodelle</p>
+        <p class="Text">Aus den genannten Gründen geben wir folgende Empfehlungen für die Auswahl:</p>
+        <ul>
+            <LI class="List0">Für großräumige Modelle bietet sich die Modellierung mit Abbieger- oder Knoten-CR-Funktionen an. ICA ist hier nicht zu empfehlen, denn der Eingabeaufwand für die detaillierte Versorgung von Knoten mit Geometrie- und Steuerungsdaten ist in der Regel zu hoch. Außerdem wird das Ergebnis nach einer vertretbaren Rechenzeit wegen der langsamen Konvergenz der Umlegung immer noch Näherungsfehler enthalten, die mindestens in der gleichen Größenordnung liegen wie der Genauigkeitsgewinn durch ICA.</LI>
+            <LI class="List0">ICA ist dagegen die Methode der Wahl, wenn Sie für ein bereits vorliegendes Umlegungsergebnis nachträglich die Leistungsfähigkeit eines oder mehrerer Knoten detailliert ermitteln und analysieren möchten. So können Sie feststellen, welche Aspekte des Knotens zu einem hohen Widerstand beitragen. Hierzu reicht es dann auch aus, nur die näher zu untersuchenden Knoten auszumodellieren. </LI>
+        </ul>
+        <p class="Text2">Innerhalb einer klassischen Umlegung (zum Beispiel Gleichgewichtsumlegung oder Lernverfahren) empfehlen wir ICA nur sehr eingeschränkt, wegen der bekannten Konvergenzprobleme, und nur für kleinräumige Studien mit einigen 100 Knoten. Um diese Probleme zu vermeiden, wird die <span class="gui_element">Umlegung mit ICA</span> empfohlen.</p>
+        <p class="Text2">Die besten Ergebnisse bei einer Gleichgewichtsumlegung erzielen Sie, wenn Sie die Methode <span class="gui_element">Lernverfahren </span><MadCap:xref class="sieheUeberschrSeite" href="1_5_Lernverfahren.htm#1_benutzermodell_iv_2033098965_1602281"><span style="color: Black;" class="mcFormatColor">(</span><u>Lernverfahren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> einsetzen, da sie gegenüber Schwankungen der Widerstände robuster sind.</p>
+        <p class="Text">In den meisten Fällen werden Sie sich global für ein Berechnungsmodell entscheiden. Sie können jedoch auch verschiedene Berechnungsmethoden innerhalb eines Netzes kombinieren, (zum Beispiel Abbieger-CR-Funktionen als Standardmodell und ICA lediglich für besonders wichtige Knoten mit komplexer Fahrstreifenaufteilung oder großen Konfliktströmen).</p>
+        <p class="Text">Alle Berechnungsmodelle basieren auf Abbiegerbelastungen in Pkw-Einheiten pro Stunde, die je nach Einstellung durch den Anwender entweder aus der Umlegungsbelastung oder aus Zählwerten über einen Faktor bestimmt werden.</p>
+    </body>
+</html>

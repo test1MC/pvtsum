@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:lastBlockDepth="6" MadCap:lastHeight="686" MadCap:lastWidth="514" MadCap:ignoredWords="Symmetrize;bzw;zeilen;$O;usw;Method;of" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_nachfrage_modellieren_1800171850_1153279">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_29507">
+            </a>Gewichteten Mittelwert von Matrizen berechnen<a name="30115"></a></h4>
+        <p class="Text">
+            <MadCap:keyword term="Matrizen: Mittelwert: berechnen" />
+            <MadCap:keyword term="Method of Successive Averages" />
+            <MadCap:keyword term="MSA: siehe Method of Successive Averages" />Sie können den Mittelwert von zwei Matrizen (Nachfragematrizen oder Kenngrößenmatrizen) gemäß MSA (Method of Successive Averages) ermitteln <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Mittelwertbildung von Matrizen.htm#1_nachfragemodell_2215163117_1231043">(siehe Grundlagen: Kap.  0.0.0.1 , Seite&#160;1)</MadCap:xref>. Dabei wird in mehreren Iterationen jeweils der gewichtete Mittelwert ermittelt zwischen der gemittelten Matrix aus der letzten Iteration und der Matrix aus der aktuellen Iteration.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie in der Symbolleiste auf das Symbol <img src="../Resources/Images_4_all/ICO_procedure_flow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000347px;margin-bottom: 0, 9983615px;" />&#160;<span class="gui_element">Verfahrensablauf öffnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Verfahrensablauf</span> öffnet sich.</p>
+        <p class="Step" style="mc-hyphenate-shortest-prefix: 9;" MadCap:autonum="2. &#160;">Fügen Sie an der gewünschten Stelle im Verfahrensablauf das Verfahren <span class="gui_element">Mittelwertbildung (MSA) von Matrizen</span> aus der Kategorie <span class="gui_element">Matrizen</span> ein <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahrensablauf festlegen und starten.htm#2_verfahrensablauf_festlegen_40480990_1019020">(siehe „Verfahrensablauf festlegen und starten“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie in der Zeile des neu eingefügten Verfahrens auf die Schaltfläche in der Spalte <span class="gui_element">Bezugsobjekt(e)</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Matrix auswählen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie die Matrix, in die Sie die Mittelwerte schreiben möchten. Dafür stehen Ihnen zwei Methoden zur Verfügung <MadCap:xref href="2_3_Matrizen_auswaehlen.htm" class="sieheUeberschrSeite">(siehe „Fenster Matrizen auswählen“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <table style="caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" class="TableStyle-gui_elements2" cellspacing="0">
+            <col style="width: 495px;" class="TableStyle-gui_elements2-Column-Column1">
+            </col>
+            <col style="width: 495px;" class="TableStyle-gui_elements2-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <th class="TableStyle-gui_elements2-HeadE-Column1-Header1">Element</th>
+                    <th class="TableStyle-gui_elements2-HeadD-Column1-Header1">Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Matrix auswählen nach Nummer</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Wählen Sie aus der Liste aller Matrizen anhand der Nummer die gewünschte Matrix aus.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Matrix auswählen nach Eigenschaften</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">Wählen Sie anhand bestimmter Attribute und deren Werte die Matrix aus.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">Die ausgewählte Matrix wird in die Spalte <span class="gui_element">Bezugsobjekt(e)</span> übernommen.</p>
+        <p class="Step" MadCap:autonum="6. &#160;">Stellen Sie sicher, dass das eingefügte Verfahren markiert ist, und klicken Sie im Bereich <span class="gui_element">Aktionen</span> auf die Schaltfläche <span class="gui_element">Bearbeiten</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Parameter Mittelwertbildung (MSA) von Matrizen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="91px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="386px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Ergebnismatrix mit 0 initialisieren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden die Werte der Ergebnismatrix, die in der Spalte <span class="gui_element">Bezugsobjekt(e)</span> ausgewählt ist, vor Beginn des Verfahrensablaufs auf 0 gesetzt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">Schaltflächen</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über die obere Schaltfläche wählen Sie die Ergebnismatrix aus. Sie entspricht automatisch der ersten Matrix auf der rechten Seite der Gleichung <MadCap:xref href="2_3_Matrizen_auswaehlen.htm" class="sieheUeberschrSeite">(siehe „Fenster Matrizen auswählen“ auf Seite&#160;1)</MadCap:xref>.</p>
+                        <p class="CellText">Über die untere Schaltfläche wählen Sie die Matrix aus der aktuellen Iteration aus.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">Auswahlliste</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Auswahlliste wählen Sie den Gewichtungsfaktor, mit dem die Matrixwerte der Ergebnismatrix multipliziert werden.</p>
+                        <p class="CellText">
+                            <span class="gui_element">i/(i+1)</span>
+                        </p>
+                        <p class="CellText">Die Ergebnismatrix wird elementweise mit dem Iterationszähler i multipliziert und durch (i+1) dividiert. Der Gewichtungsfaktor der anderen Matrix ändert sich automatisch zu 1/(i+1). Dies ist die Standardeinstellung zur Berechnung von MSA.</p>
+                        <p class="CellText">
+                            <span class="gui_element">1/(i+1)</span>
+                        </p>
+                        <p class="CellText">Die Ergebnismatrix wird elementweise mit 1 multipliziert und durch (i+1) dividiert. Der Gewichtungsfaktor der anderen Matrix ändert sich automatisch zu i/(i+1).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Bedingter Rücksprung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Hier wird angezeigt, in welcher Zeile des Verfahrensablaufs der bedingte Rücksprung festgelegt ist, der für die iterative Berechnung zuständig ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">Iteration</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Hier wird angezeigt, in welchem Iterationsschritt sich das Verfahren aktuell befindet. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="8. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="9. &#160;">Führen Sie das Verfahren aus <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahren im Verfahrensablauf ausführen.htm#2_verfahrensablauf_festlegen_40480990_1112524">(siehe „Verfahren im Verfahrensablauf ausführen“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Result">Die ausgewählten Matrizen werden gemittelt.</p>
+    </body>
+</html>

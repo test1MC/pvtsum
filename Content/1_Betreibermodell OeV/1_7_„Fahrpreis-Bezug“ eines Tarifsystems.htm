@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="679" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="GE;max;TS">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_nohead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1347424">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_66147">
+            </a>
+            <span class="gui_element">„Fahrpreis-Bezug“ </span>eines Tarifsystems</h4>
+        <p class="Text">Die wichtigste Eigenschaft eines Tarifsystems ist die Festlegung, wie weit eine einzelne Fahrkarte gilt. Dies kann ein einzelner Teilweg sein, d.h. es wird bei jedem Einstieg neu gelöst. Eine zweite Möglichkeit ist, dass eine Fahrkarte für aufeinander folgende Teilwege innerhalb des Tarifsystems Gültigkeit hat, man also erst dann wieder neu lösen muss, wenn man das Tarifsystem verlässt und wieder betritt. Drittens kann eine Fahrkarte für sämtliche Teilwege einer Verbindung Gültigkeit besitzen, die zum gleichen Tarifsystem gehören - also auch dann, wenn Teilwege anderer Tarifsysteme dazwischen liegen. Alle drei Fälle sind praxisrelevant.</p>
+        <p class="Text">Zur Modellierung dieses Aspekts dient das zentrale Tarifsystem-Attribut <span class="gui_element">Fahrpreis-Bezug</span>, das einen der folgenden Werte annehmen kann:</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Jeder Teilweg einzeln</span>: Für jeden Teilweg des Tarifsystems ist eine eigene Fahrkarte zu lösen.</LI>
+            <LI class="List0">
+                <span class="gui_element">Jeweils zusammenhängende Teilwege</span>: Für jede zusammenhängende Folge von Teilwegen des Tarifsystems ist eine Fahrkarte zu lösen.</LI>
+            <LI class="List0">
+                <span class="gui_element">Alle Teilwege zusammen</span>: Für alle Teilwege zusammen, also für die ganze Fahrt, reicht eine Fahrkarte für dieses Tarifsystem aus.</LI>
+        </ul>
+        <p class="Text">Teilwege, die zu einem anderen Tarifsystem gehören, können niemals mit derselben Fahrkarte genutzt werden.</p>
+        <h5>
+            <a name="1_betreibermodell_oev_1878159914_1347431">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_48422">
+            </a>
+            <span class="gui_element">Beispiel: Tarifsystem-Eigenschaft „Fahrpreis-Bezug“</span>
+        </h5>
+        <p class="Text">Wir betrachten eine Verbindung mit vier Teilwegen, deren Verkehrssysteme Bus – Tram – Zug – Bus sind. Wir bleiben beim Beispiel der drei Tarifsysteme oben: Bus und Tram gehören zum gleichen Tarifsystem City, somit sind dieselben Fahrkartenarten für sie gültig. Das Verkehrssystem Zug gehört zum Tarifsystem Bahn.</p>
+        <p class="Text">Um das Beispiel einfach zu halten, nehmen wir folgende Fahrkartenarten an:</p>
+        <ul>
+            <LI class="List0">Normalpreis City: 100 GE für alle Entfernungen.</LI>
+            <LI class="List0">Kurzstrecke City: 60 GE für alle Fahrten bis max. 10 min. Im Beispiel sei nur die Fahrt auf dem ersten Bus kürzer als 10 min.</LI>
+            <LI class="List0">Normalpreis Bahn: 200 GE für alle Entfernungen.</LI>
+        </ul>
+        <p class="Text">Auch wenn die Preisstruktur stark vereinfacht ist, zeigt dieses Beispiel deutlich auf, wie sich der Gesamtfahrpreis in Abhängigkeit vom Fahrpreis-Bezug ändert. Je nach Fahrpreis-Bezug ergeben sich folgende Fahrpreise für die Verbindung:</p>
+        <table class="TableStyle-TableStand_nohead" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="73px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="74px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="84px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="112px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="154px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td colspan="3" class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">Fahrpreis bezieht sich auf ...</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Teilweg -  VSys</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Tarifsystem</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Jeden Teilweg einzeln</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Jeweils zusammenhängende Teilwege</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">Alle Teilwege zusammen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1 – Bus</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">60 <br />(Kurzstrecke)</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                        <p class="CellText_mid">100</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">100,</p>
+                        <p class="CellText_mid">schließt auch Bus am Ende ein</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">2 – Tram</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">100</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">3 – Zug</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">Bahn</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">200</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">200</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">200</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">4 – Bus</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">100</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">100</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">kein extra Preis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid">Fahrpreis-Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid">460</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid">400</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyA-Column1-Body1">
+                        <p class="CellText_mid">300</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Im ersten Fall zahlt der Fahrgast für jeden Teilweg im Tarifsystem City einzeln und darf dabei nur auf dem ersten das Kurzstreckenticket nutzen, weil alle weiteren Teilwege eine Fahrtdauer von mehr als 10 min haben.</LI>
+            <LI class="List0">Im zweiten Fall lassen sich die direkt aufeinander folgenden Teilwege 1 und 2 mit einer gemeinsamen Fahrkarte nutzen.</LI>
+            <LI class="List0">Nur im dritten Fall zahlt man nur ein einziges Mal für das ganze Tarifsystem City. </LI>
+        </ul>
+        <p class="Text">Der dritte Teilweg bleibt stets außen vor, da der Zug zu einem eigenen Tarifsystem gehört.</p>
+        <p class="Text">Nun wird das Beispiel um Anfangs- und Umstiegsfahrpreise ergänzt:</p>
+        <h5>
+            <span class="gui_element">Beispiel: Fahrpreis-Bezug und Anfangs- und Umstiegsfahrpreise</span>
+        </h5>
+        <table class="TableStyle-TableStand_withTitle" style="width: 493px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="253px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="114px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="126px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellText_mid">Zuschlag / Abschlag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellText_mid">TS City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellText_mid">TS Bahn</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">Anfangsfahrpreis</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">100</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_mid">200</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Umstiegsfahrpreis von TS City nach …</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">50</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_mid">-20</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_mid">Umstiegsfahrpreis von TS Bahn nach …</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_mid">80</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Beide Tarifsysteme verlangen also einen Anfangsfahrpreis als Sockelbetrag bei Fahrtbeginn. Umstiege innerhalb desselben Tarifsystems kosten im Fall City einen Aufschlag von 50 GE, im Fall Bahn nichts. Bei einem Umstieg von Bahn auf City fallen 80 GE extra an, umgekehrt gibt es jedoch einen Nachlass von 20 beim Umstieg von City in Bahn.</p>
+        <p class="Text">Die folgende Tabelle zeigt die Anfangs- und Umstiegsfahrpreise, die zu den oben aufgeführten Grundpreisen <span class="gui_element">addiert</span> werden:</p>
+        <table class="TableStyle-TableStand_nohead" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="73px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="74px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="84px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="112px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="154px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td colspan="3" class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">Fahrpreis bezieht sich auf ...</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Teilweg - VSys</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Tarifsystem</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Jeden Teilweg einzeln</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Jeweils zusammenhängende Teilwege</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">Alle Teilwege zusammen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1 – Bus</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">100</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                        <p class="CellText_mid">100</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">100,</p>
+                        <p class="CellText_mid">schließt auch Bus am Ende ein</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">2 – Tram</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">3 – Zug</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">Bahn</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">-20</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">-20</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">-20</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">4 – Bus</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">80</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">80</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">kein extra Preis</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">Summe Anfangs- und Umstiegs-Fahrpreise</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">210</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">160</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">80</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Fahrpreis-Summe (s.o.)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">460</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">400</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">300</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid">Gesamtpreis</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid">670</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText_mid">560</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyA-Column1-Body1">
+                        <p class="CellText_mid">380</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Auch wenn das Beispiel sehr einfach gewählt ist, erkennen Sie den großen Einfluss des „Fahrpreis-Bezugs“ auf die Preisberechnung und damit auf den Fahrpreis selbst. Es ist somit äußerst wichtig, ihn passend zu den realen Tarifbestimmungen des modellierten Netzes zu definieren.</p>
+    </body>
+</html>

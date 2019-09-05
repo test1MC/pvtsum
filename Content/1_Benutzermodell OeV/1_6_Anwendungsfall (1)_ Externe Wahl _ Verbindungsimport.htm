@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="420" MadCap:lastWidth="688" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="DeltaT;bzw">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1221037">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_25201">
+            </a>Anwendungsfall (1): Externe Wahl / Verbindungsimport</h4>
+        <p class="Text">Ziel der externen Wahl ist es, eine Menge von Verbindungen nach beliebigen Regeln selbst mit Belastungen zu versehen und diese schließlich wieder so in <MadCap:variable name="PTV_Manual.Programmname" /> zu importieren, dass ein normales Umlegungsergebnis vorliegt <MadCap:xref class="Benutzerhandbuch" href="../2_Schnittstellen/2_13_Verbindungen und Routen importieren.htm#2_daten_ueber_schnittstellen_austauschen_1567500566_1160242"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Verbindungen und Routen importieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Im Schema in <MadCap:xref class="Label_Image" href="1_6_Oeffnung der fahrplanfeinen Umlegung_ Export_Import von Verbindungen.htm#1_benutzermodell_oev_2318507456_1073273"></MadCap:xref> wird oberhalb der Netzbelastung angesetzt. Die in der Verbindungsdatei stehenden Wege werden in die interne Datenstruktur übersetzt und unterscheiden sich danach nicht mehr von innerhalb <MadCap:variable name="PTV_Manual.Programmname" /> berechneten Wegen. Somit wirkt der Verbindungsimport genau so wie eine Umlegung.</p>
+        <p class="Text">Das heißt Folgendes:</p>
+        <ul>
+            <LI class="List0">Vorhandene Umlegungen für diejenigen Nachfragesegmente, auf die der Verbindungsimport angewandt wird, werden standardmäßig gelöscht.</LI>
+            <LI class="List0">Aus den importierten Verbindungen werden gemäß der Verfahrenseinstellung <span class="gui_element">Wege speichern</span> (als Verbindungen / als Routen / nicht speichern) Wege in <MadCap:variable name="PTV_Manual.Programmname" /> erzeugt <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Einstellungen zum Speichern der ÖV-Umlegungsergebnisse.htm#2_einstellungen_benutzermodell_oev_2589728191_1033372"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Einstellungen zum Speichern der ÖV-Umlegungsergebnisse</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Bei der Verfahrenseinstellung <span class="gui_element">Wege speichern</span> als Verbindungen besteht die Option, für schon vorhandene Verbindungen die Belastungen aufzusummieren.</LI>
+            <LI class="List0">Gleichzeitig werden die eingelesenen Wegebelastungen in Netzbelastungen umgesetzt.</LI>
+            <LI class="List0">Falls laut aktuellen Verfahrenseinstellungen die Belastungen eines der beim Import ausgewählten Nachfragesegmente bei einem anderen Nachfragesegment gespeichert werden sollen, wird dieser Parameter auf den Standardwert (Speicherung beim Nachfragesegment selbst) zurückgesetzt.</LI>
+        </ul>
+    </body>
+</html>

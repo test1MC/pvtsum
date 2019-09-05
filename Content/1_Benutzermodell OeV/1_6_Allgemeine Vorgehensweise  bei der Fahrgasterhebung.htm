@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="560" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="DeltaT;bzw;Ticketing;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_oev_2318507456_1029695">
+            </a>Allgemeine Vorgehensweise bei der Fahrgasterhebung</h3>
+        <p class="Text">Der allgemeine Ablauf beim Verfahren ÖV-Fahrgastbefragung ist wie folgt. <MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1029716">Abbildung&#160;163</MadCap:xref> zeigt diesen Ablauf schematisch.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Zunächst werden Befragungsdaten aus einer Text-Datei in <MadCap:variable name="PTV_Manual.Programmname" /> eingelesen, die den Informationen der ÖV-Teilwegliste stark ähneln und für jede erhobene Fahrt folgende Informationen enthalten.</p>
+        <ul>
+            <LI class="List1">Fahrt, Einstiegs- und Ausstiegshaltepunkt des Erhebungsteilwegs</LI>
+            <LI class="List1">Quelle und Ziel des gesamten Weges</LI>
+            <LI class="List1">Informationen zu den Teilwegen, die zwischen Start- und betrachteter Einstiegshaltestelle und zwischen betrachteter Ausstiegs- und Zielhaltestelle (wenn vorhanden) zurückgelegt werden.</LI>
+        </ul>
+        <p class="Step" MadCap:autonum="2. &#160;">Im zweiten Schritt werden Befragungsdatensätze ergänzt, indem fehlende Informationen mit plausiblen Werten belegt werden.</p>
+        <ul>
+            <LI class="List1">Anschließend erfolgen Plausibilisierungsprüfungen der Befragungsdaten, für die der Anwender Regeln für das Ersetzen durch plausible Werte definieren kann (zum Beispiel für die Linien oder Abfahrtszeiten des Angebots), wenn die angegebenen Werte nicht Teil einer gültigen Verbindung sind. </LI>
+            <LI class="List1">Der Status jedes Befragungsdatensatzes, der beschreibt, welche Ersetzungen durchgeführt wurden und wie zuverlässig die resultierende Information ist, wird in eine Protokolldatei geschrieben. </LI>
+            <LI class="List1">Eine neue Version der Befragungsdatei wird geschrieben mit allen zusätzlichen Informationen, die automatisch ermittelt werden konnten.</LI>
+            <LI class="List1">Als unplausibel markierte Datensätze können überprüft und entweder verworfen oder manuell korrigiert werden. </LI>
+            <LI class="List1">Die Operation <span class="gui_element">Befragungsdaten plausibilisieren </span>kann dann wiederholt werden.</LI>
+        </ul>
+        <p class="Step" MadCap:autonum="3. &#160;">Im dritten Schritt werden erfolgreich plausibilisierte Befragungsdaten direkt in das <MadCap:variable name="PTV_Manual.Programmname" />-Netz umgelegt.</p>
+        <ul>
+            <LI class="List1">Belastungen von Verbindungen, alle Netzobjektbelastungen und zugehörige Kenngrößen werden gesetzt. </LI>
+            <LI class="List1">Eine Nachfragematrix, die die betrachteten Fahrten enthält, kann erzeugt werden.</LI>
+            <LI class="List1">ÖV-Kenngrößenmatrizen der Verbindungen können erzeugt werden.</LI>
+            <LI class="List1">Sämtliche Umlegungsanalysefunktionen können dann auf das aus den Erhebungsergebnissen resultierende Umlegungsergebnis angewendet werden.</LI>
+        </ul>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Processing_Passenger_Surveys.png" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_oev_2318507456_1029716">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_90594">
+            </a>Ablauf der Auswertung von ÖV-Fahrgasterhebungen</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">
+                            <MadCap:keyword term="E-Ticketing" />Die gleiche Funktionalität kann auch auf Daten angewendet werden, die aus so genannten E-Ticketing-Systemen stammen, sofern diese zumindest Einstiegsinformationen für jeden Teilweg mit Linienroute, Haltepunkt und Abfahrtszeit enthalten. Ein Teilweg muss dazu als Erhebungsteilweg gekennzeichnet sein.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;gruppen;gruppe;ICU1;ICU2;Circular;Planning;Operations;pretimed;fully;actuated;semi;actuation;type;ICAArrivalType;14a;AnteilLKW;6b;ICAEingVerlustZVerw;ICAIstCentral;BusinessDistrict;Central;District;6e;ICASneakers;ICAZuflussFaktor;10b;14b;BusFrequenz;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;FS;BS;xd;KJ;k2;k1;s'';abflüssen;peak;hour;factor;LT;RT;vphpl;HV;bb;Lu;Lpb;Rpb;CBD;ST;Ui;PF;Ii;Ri;PA;bi;Volume;to;ICU;P1;P2;P3;6a;6c;6d;LUo;qr;po;ArrivalType;6j;3a;3b;pedu;pbT;rec;RTA;LTA;Wardrop’schen" MadCap:lastBlockDepth="4" MadCap:lastHeight="438" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_iv_2033098965_1294801">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249364">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc130966592">
+            </a>
+            <MadCap:keyword term="IV-Umlegungsverfahren: Sukzessivumlegung" />
+            <MadCap:keyword term="Sukzessivumlegung" />Sukzessivumlegung</h2>
+        <p class="Text">Die Sukzessivumlegung bildet das allmähliche Volllaufen eines Straßennetzes nach. Zu Beginn finden die Verkehrsteilnehmer ein freies Straßennetzes vor, in dem für jede Quelle-Ziel-Beziehung genau eine kürzeste Route existiert. Das Straßennetz wird dann schrittweise belastet. Jeder Schritt belastet das Straßennetz durch zusätzliche Fahrzeuge und erhöht so den Widerstand auf den belasteten Strecken, Abbieger und Anbindungen. Durch den veränderten Widerstand können sich beim nächsten Schritt andere kürzeste Routen ergeben.</p>
+        <p class="Text">Die Matrix wird in mehreren Teilpaketen sukzessiv auf das Netz umgelegt. Dabei wird die gesamte Nachfrage prozentual auf die vom Anwender gewünschte Anzahl Teilschritte (maximal 12) verteilt. Voreingestellt ist eine Sukzessivumlegung mit 3 Teilschritten (33&#160;%, 33&#160;% und 34&#160;%).</p>
+        <ul>
+            <LI class="List0">Im ersten Schritt werden für alle nachgefragten Quelle-Ziel-Beziehungen die widerstandsminimalen Routen im aktuellen Netzzustand ermittelt, das heißt entweder im unbelasteten Netz oder aufsetzend auf einer Grundbelastung.</LI>
+            <LI class="List0">Auf diese Routen wird dann der für den ersten Sukzessivschritt festgelegte Prozentsatz der Matrix umgelegt.</LI>
+            <LI class="List0">Anschließend werden die aus diesen Belastungen resultierenden neuen Netzwiderstände über die CR-Funktionen berechnet. </LI>
+            <LI class="List0">Im nächsten Teilschritt wird auf dieser Basis wiederum eine Berechnung der widerstandsminimalen Routen durchgeführt.</LI>
+            <LI class="List0">Dieses Verfahren wird fortgesetzt, bis die gesamte Matrix auf das Netz umgelegt worden ist. </LI>
+        </ul>
+        <p class="Text">
+            <MadCap:keyword term="Bestwegumlegung" />Wird für den ersten Teilschritt 100% angegeben, ermittelt <MadCap:variable name="PTV_Manual.Programmname" /> die Widerstände im aktuellen Netzzustand und rechnet eine so genannte Bestwegumlegung.</p>
+    </body>
+</html>

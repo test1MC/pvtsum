@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG;bearbeitung;Bearbeitungs;Nested;80er;sk;Method;of" MadCap:lastBlockDepth="4" MadCap:lastHeight="680" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>
+            <a name="1_nachfragemodell_2215163117_1165446">
+            </a>
+            <a name="1_nachfragemodell_2215163117_40904">
+            </a>Nachfragemodell</h1>
+        <p class="Text">
+            <MadCap:keyword term="Verkehrsnachfrage" />
+            <MadCap:keyword term="Verkehrsnachfragemodell" />
+            <MadCap:keyword term="Nachfrage:siehe Verkehrsnachfrage" />Einer der Haupteinsatzzwecke von <MadCap:variable name="PTV_Manual.Programmname" /> ist die Modellierung von Verkehrsnachfrage. Verkehrsnachfragemodellierung beschäftigt sich mit der Prognose von Verkehr. Die am häufigsten anzutreffenden Verkehrsprognosen untersuchen das tägliche Reiseverhalten von Personen. Sie liefern somit Antworten auf die Fragen, wann, wie oft, wohin und wie Personen reisen.</p>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> bietet derzeit drei Verfahren der Nachfragemodellierung an.</p>
+        <ul>
+            <LI class="List0">
+                <MadCap:keyword term="Standard-Vier-Stufen-Modell" />Standard-Vier-Stufen-Modell <MadCap:xref class="sieheUeberschrSeite" href="1_3_Standard-Vier-Stufen-Modell.htm#1_nachfragemodell_2215163117_1154355"><span style="color: Black;" class="mcFormatColor">(</span><u>Standard-Vier-Stufen-Modell</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">
+                <MadCap:keyword term="EVA-Modell Personenverkehr" />
+                <MadCap:keyword term="EVA: siehe EVA-Modell Personenverkehr" />EVA <MadCap:xref class="sieheUeberschrSeite" href="1_3_EVA-Modell Personenverkehr.htm#1_nachfragemodell_2215163117_1153924"><span style="color: Black;" class="mcFormatColor">(</span><u>EVA-Modell Personenverkehr</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">
+                <MadCap:keyword term="VISEM-Modell" />VISEM <MadCap:xref class="sieheUeberschrSeite" href="1_3_Aktivitätenketten-basiertes Modell (VISEM).htm#1_nachfragemodell_2215163117_1087738"><span style="color: Black;" class="mcFormatColor">(</span><u>Aktivitätenketten-basiertes Modell (VISEM)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+        </ul>
+        <p class="Text">Das Ergebnis dieser Verfahren sind Matrizen, die Fahrten zwischen den Quell- und Zielbezirken des Netzes beinhalten. Diese Matrizen werden einem oder mehreren Nachfragesegmenten zugeordnet. Die Umlegung geschieht auf Basis der Nachfragesegmente <MadCap:xref class="siehe_1" href="../1_Benutzermodell IV/1_5_Benutzermodell IV.htm#1_benutzermodell_iv_2033098965_1428447"><span style="color: Black;" class="mcFormatColor">(</span><u>Benutzermodell IV</u></MadCap:xref><MadCap:xref class="siehe_2" href="../1_Benutzermodell OeV/1_6_Benutzermodell OeV.htm#1_benutzermodell_oev_2318507456_1025949"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Benutzermodell ÖV</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Es ist nicht zwingend notwendig, ein eigenes Nachfragemodell in <MadCap:variable name="PTV_Manual.Programmname" /> aufzubauen, das die Matrizen für die Umlegung berechnet. Sie können auch Matrizen aus externen Quellen verwenden und umlegen. Eine vollständige Nachfragebeschreibung, mit der die Berechnung einer Umlegung möglich ist, umfasst daher in <MadCap:variable name="PTV_Manual.Programmname" /> zunächst nur die folgenden Elemente:</p>
+        <ul>
+            <LI class="List0">die Verkehrsnachfrage in Form einer Matrix <MadCap:xref class="sieheUeberschrSeite" href="1_3_Matrizen.htm#1_nachfragemodell_2215163117_1025951"><span style="color: Black;" class="mcFormatColor">(</span><u>Matrizen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">die zeitliche Verteilung der Verkehrsnachfrage durch Angabe einer Ganglinie <MadCap:xref class="sieheUeberschrSeite" href="1_3_Ganglinien.htm#1_nachfragemodell_2215163117_1149712"><span style="color: Black;" class="mcFormatColor">(</span><u>Ganglinien</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Die Angabe einer Ganglinie ist jedoch nur notwendig bei dynamischen IV-Umlegungen und bei ÖV-Umlegungen. Bei statischen IV-Umlegungen wird die Ganglinie ignoriert.</LI>
+            <LI class="List0">die Zuordnung der Matrizen zu einem oder mehreren Nachfragesegmenten <MadCap:xref class="sieheUeberschrSeite" href="1_3_Nachfragesegmente.htm#1_nachfragemodell_2215163117_1162569"><span style="color: Black;" class="mcFormatColor">(</span><u>Nachfragesegmente</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+        </ul>
+        <p class="Text">Um die Nachfrage innerhalb des <MadCap:variable name="PTV_Manual.Programmname" />-Datenmodells abzubilden, existieren verschiedene Nachfrageobjekte <MadCap:xref class="sieheUeberschrSeite" href="1_3_Nachfrageobjekte.htm#1_nachfragemodell_2215163117_1025950"><span style="color: Black;" class="mcFormatColor">(</span><u>Nachfrageobjekte</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Welche dieser Nachfrageobjekte in Ihrem Modell zur Anwendung kommen ist abhängig von der Art der Nachfragemodellierung in Ihrem Netz.</p>
+        <h5>Themen</h5>
+        <ul>
+            <LI class="List0">
+                <MadCap:xref class="themenheadings" href="1_3_Nachfrageobjekte.htm#1_nachfragemodell_2215163117_1025950">Nachfrageobjekte</MadCap:xref>
+            </LI>
+            <LI class="List0">
+                <MadCap:xref class="themenheadings" href="1_3_Verfahren der Nachfragemodellierung.htm#1_nachfragemodell_2215163117_1193902">Verfahren der Nachfragemodellierung</MadCap:xref>
+            </LI>
+            <LI class="List0">
+                <MadCap:xref class="themenheadings" href="1_3_Matrixdarstellung und -bearbeitung.htm#1_nachfragemodell_2215163117_1042550">Matrixdarstellung und -bearbeitung</MadCap:xref>
+            </LI>
+            <LI class="List0">
+                <MadCap:xref class="themenheadings" href="1_3_Matrixkorrektur.htm#1_nachfragemodell_2215163117_1289057">Matrixkorrektur</MadCap:xref>
+            </LI>
+        </ul>
+    </body>
+</html>

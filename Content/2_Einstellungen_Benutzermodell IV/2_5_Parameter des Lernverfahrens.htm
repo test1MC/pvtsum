@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="671" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls;max;Program;Processor;R';Factor;Stdabw;Lognormalvert;Method;Lotka;Volterra">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1036407">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_28499">
+            </a>Parameter des Lernverfahrens<a name="11035"></a><a name="11034"></a><a name="11027"></a></h4>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">N = maximale Anzahl Iterationen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Das Verfahren bricht nach der eingestellten Anzahl äußerer Iterationen ab.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Routenbelastungen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Die Routenbelastung wird nach der Methode der sukzessiven gewogenen Mittelwertbildung berechnet. Hierfür legen Sie den Exponenten fest (Wertebereich 0 &#160;–&#160;4).</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Wir empfehlen zur Glättung der Routenbelastungen einen Exponenten zwischen 1 und 1.5.</p>
+                        <p class="CellText">Wenn Sie den Exponenten auf 1 setzen, entspricht die Formel der sukzessiven Mittelwertbildung (Method of Successive Averages). Mit dieser Einstellung erzielen Sie eine sichere, aber langsame Konvergenz. Ein höherer Wert verringert im Allgemeinen die Anzahl der Iterationsschritte, führt aber nicht sicher zur Konvergenz.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">geschätzte Widerstände</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Auswahlliste wählen Sie die Methode zur Glättung des geschätzten Widerstands. Je nach Verfahren stehen Ihnen verschiedene Eingabefelder zur Berechnung des Werts Delta zur Verfügung.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Wir empfehlen, die drei Verfahren zur Glättung der Widerstände vor dem eigentlichen Rechenlauf zu testen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Heuristische Regel</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">Lotka-Volterra-Regel</span>
+                        </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Das Lotka-Volterra-Verfahren ist in bestimmten Fällen schneller als das Heuristische Verfahren, die Güte der Berechnungsergebnisse jedoch hängt vom verwendeten Netz ab.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Sukzessive gewogene Mittelwertbildung</span>
+                        </p>
+                        <p class="CellText">Bei dieser Option bestimmen Sie den Exponenten (Wertebereich 0 &#160;–&#160;1).</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Wir empfehlen für den Exponenten einen Wert um 0.15.</p>
+                        <p class="CellText">Wenn Sie den Parameter auf 1 setzen, entspricht die Formel der sukzessiven Mittelwertbildung (Method of Successive Averages). Mit dieser Einstellung erzielen Sie eine sichere, aber langsame Konvergenz.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Widerstände nicht glätten</span>
+                        </p>
+                        <p class="CellText">Diese Option dient dazu, eine schnellere Konvergenz zu erzielen, wenn exponentielle Glättungen von Widerstandswerten die Konvergenz des Verfahrens verschlechtern statt verbessern.</p>
+                        <p class="CellText">Ist die Option ausgewählt, ist der aktuell geschätzte Widerstand gleich dem aktuellen Widerstand.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Abbruchbedingung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Das Verfahren bricht ab, wenn die Abweichung zwischen zwei aufeinander folgenden Iterationsschritten einen bestimmten Schwellenwert unterschreitet. Die Formel für den Schwellenwert können Sie anpassen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

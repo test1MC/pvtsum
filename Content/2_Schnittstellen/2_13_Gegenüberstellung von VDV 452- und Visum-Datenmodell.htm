@@ -1,0 +1,3041 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="651" MadCap:lastWidth="511" MadCap:fileTags="MyStatusFileTagSet.Ready for Review" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;VDV;USERATTDEF;TSYS;ORG_BEREICH_NR;NODE;bzw;REC_ORT;ORT_NR;ONR_TYP_NR;ORT_NAME;XCOORD;ORT_POS_LAENGE;YCOORD;Nr;up;End;24h">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">Gegenüberstellung von <MadCap:variable name="PTV_Manual.VDV_452" />- und <MadCap:variable name="PTV_Manual.Programmname" />-Datenmodell</h3>
+        <p class="Text">Die beim Import erzeugte Netzdatei enthält Tabellen- und Attributnamen in englischer Sprache. Die Datei enthält alle Daten, die für den Import nötig sind. Sie wird beim Import direkt in <MadCap:variable name="PTV_Manual.Programmname" /> geöffnet, dabei ergänzt <MadCap:variable name="PTV_Manual.Programmname" /> automatisch zusätzliche Tabellen und Attribute. Nach dem Import können Sie das Netz als Versionsdatei in der von Ihnen gewählten Sprache speichern.</p>
+        <p class="Text">Beim Export werden direkt aus dem <MadCap:variable name="PTV_Manual.Programmname" />-Datenmodell die entsprechenden <MadCap:variable name="PTV_Manual.VDV_452" />-Dateien generiert. Die Zuordnung der Tabellen und Attribute der Datenmodelle entspricht dabei beim Import und Export der folgenden:</p>
+        <table style="width: 495px; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" class="TableStyle-TipHint1" cellspacing="0">
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Die Tabellen und Attribute sind in der gleichen Reihenfolge aufgelistet wie in der Netzdatei. Die Bezeichnungen der <MadCap:variable name="PTV_Manual.Programmname" />-Tabellen und -Attribute entsprechen denen, die in der Netzdatei standardmäßig verwendet werden. </p>
+                        <p class="Text">Die Bezeichnungen der <MadCap:variable name="PTV_Manual.VDV_452" />-Daten entsprechen denen in der deutschen Fassung des VDV ÖV-Datenmodel 5.0.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $VERSION</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="151px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="342px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VERSNR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">8.200. Die Netzdateien sind kompatibel zu Versionen ab Versionsnummer 11.5.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FILETYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">NET</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LANGUAGE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ENG</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">UNIT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">KM</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $USERATTDEF</h5>
+        <p class="Text"> Einige Tabellenspalten des <MadCap:variable name="PTV_Manual.VDV_452" /> Formates werden nicht in Standardattribute des <MadCap:variable name="PTV_Manual.Programmname" />-Datenmodells übernommen, sondern in automatisch generierten benutzerdefinierten Attributen abgelegt. Weiterhin können in den VDV-Dateien zusätzliche Tabellenspalten enthalten sein, die nicht im <MadCap:variable name="PTV_Manual.VDV_452" />-Format definiert sind, jedoch von der schreibenden Applikation erzeugt werden. Auch diese Daten werden automatisch in benutzerdefinierten Attributen gespeichert. Die Tabelle <span class="gui_element">USERATTDEF</span> wird dynamisch beim Erzeugen der Attribute der <MadCap:variable name="PTV_Manual.Programmname" />-Tabellen angelegt. Nachfolgend sind die Einträge aufgeführt, die standardmäßig erzeugt werden, je nach vorhandenen Zusatzspalten können weitere Einträge vorhanden sein. Die Zuordnung zu den Spalten in den <MadCap:variable name="PTV_Manual.VDV_452" />-Daten ist jeweils bei den Beschreibungen der <MadCap:variable name="PTV_Manual.Programmname" />-Tabellen aufgeführt.</p>
+        <table class="TableStyle-TableStandard" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableStandard.css'); mc-table-style-original: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col class="TableStyle-TableStandard-Column-Column1" />
+            <col class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Netzobjekttyp</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Benutzerdefiniertes Attribut</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">TSYS</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">ORG_BEREICH_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">NODE</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">ORG_ORT_REF_ORT_LANGNR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">NODE</td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">ORG_ORT_NR</td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">LINEROUTE</p>
+                        <p class="CellText">LINEROUTEITEM</p>
+                        <p class="CellText">VEHJOURNEY</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">ORG_LI_NR
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">LINEROUTE</p>
+                        <p class="CellText">LINEROUTEITEM</p>
+                        <p class="CellText">VEHJOURNEY</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">ORG_STR_LI_VAR
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">LINEROUTE</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">ORG_ROUTEN_NR
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">LINEROUTE	</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">ORG_LIDNAME
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">LINEROUTEITEM</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">ORG_LI_LFD_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">LINEROUTEITEM</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">FAHRERKURZTEXT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">LINEROUTEITEM</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">SEITENTEXT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">LINEROUTEITEM</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">ZNR_TEXT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">LINEROUTEITEM</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">ZNR_CODE
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">LINEROUTEITEM</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">ANR_TEXT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">LINEROUTEITEM</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">ANR_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">TIMEPROFILE	</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">ORG_FGR_NR
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">VEHJOURNEY</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">ORG_LI_KU_NR
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">VEHJOURNEY </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">
+	ORG_FAHRTART_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">VEHJOURNEY</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">VDVNO</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">VEHJOURNEY</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">ORG_UM_UID</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">VEHJOURNEYSECTION</td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">VDVNO</td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">STOP</td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">ORG_ORT_REF_ORT</td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">STOPAREA</td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">ORG_ORT_REF_ORT</td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">STOPAREA</td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">ORG_ORT_NR</td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">STOPPOINT</td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">ORG_ORT_NR</td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">VALIDDAYS</td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">TAGESART_NR</td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">SYSTEMROUTE</td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">ORG_LI_NR</td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">SYSTEMROUTE</td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">ORG_STR_LI_VAR</td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">VEHUNIT</td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">SONDER_PLATZ</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $TSYS</h5>
+        <p class="Text">Im <MadCap:variable name="PTV_Manual.VDV_452" /> Datenformat werden nicht explizit die Verkehrsmittel des Fahrplanangebotes identifiziert. Jedoch können in der <MadCap:variable name="PTV_Manual.VDV_452" />-Tabelle <span class="gui_element">MENGE_BEREICH</span>&#160;Betriebszweige definiert und dem Angebot zugeordnet werden. Diese werden im <MadCap:variable name="PTV_Manual.Programmname" />-Netz als Verkehrssysteme sowie Modi abgebildet.</p>
+        <p class="Text">Sind in der <MadCap:variable name="PTV_Manual.VDV_452" />-Tabelle <span class="gui_element">MENGE_BEREICH</span> zusätzliche Attribute enthalten, werden sie in der <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle <span class="gui_element">$TSYS</span> als benutzerdefinierte Attribute gespeichert.</p>
+        <p class="Text">Sind in der <MadCap:variable name="PTV_Manual.VDV_452" /> Tabelle <span class="gui_element">MENGE_BEREICH</span> keine Datensätze zur ausgewählten Version vorhanden, wird der Import der Daten abgebrochen. Ohne Verkehrssystem können in <MadCap:variable name="PTV_Manual.Programmname" /> die Daten nicht sinnvoll verwendet werden.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="134px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="117px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="265px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">STR_BEREICH</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">BEREICH_TEXT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">PCU</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">1.0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">PuT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">ORG_BEREICH_NR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">BEREICH_NR</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $MODE</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="134px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="117px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="265px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">PuT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">PuT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Alle Einträge der Spalte STR_BEREICH, Die einzelnen Einträge werden mittels "," getrennt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">TYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $INFO</h5>
+        <p class="Text">Im Textfeld des ersten Datensatz wird der Text <span class="input"><MadCap:variable name="PTV_Manual.VDV_452" /> Import</span><span class="input">&lt;Importdatum&gt;</span> und zusätzlich <span class="input">&lt;Name BASIS_VERSION&gt;</span>und <span class="input">&lt;Gültigkeit BASIS_VERSION&gt;</span> eingetragen.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="135px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="140px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="265px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">INDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Beginnend bei 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">TEXT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">MENGE_BASIS_VERSION</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">BASIS_VERSION/BASIS_VERSION_TEXT/VER_GUELTIGKEIT</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $DIRECTION</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="134px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="141px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="265px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Hinrichtung = 1</p>
+                        <p class="CellText">Rückrichtung = 2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Hinrichtung = &gt;</p>
+                        <p class="CellText">Rückrichtung = &lt;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">-</td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Hinrichtung = up</p>
+                        <p class="CellText">Rückrichtung = down</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Fahrzeugeinheiten und Fahrzeugkombinationen</h5>
+        <p class="Text">Je nachdem, ob beim Import Umläufe berücksichtigt werden oder nicht, werden Fahrzeugeinheiten und Fahrzeugkombinationen unterschiedlich gehandhabt.</p>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $VEHUNIT</h5>
+        <p class="Text" style="mc-hyphenate-shortest-prefix: 6;">Werden Umläufe beim Import nicht berücksichtigt, so werden alle Fahrten mit Standardfahrzeugen hinterlegt. Für jeden Eintrag in <span class="gui_element">MENGE_BEREICH</span> wird eine Standard Fahrzeugkombination gemäß der in der folgenden Tabelle aufgeführten Zuordnungsregeln angelegt und in den entsprechenden Fahrten verwendet.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="134px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="141px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="265px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">STR_BEREICH</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">BEREICH_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">STR_BEREICH</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">BEREICH_TEXT</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Werden Umläufe beim Import berücksichtigt, so werden die in <span class="gui_element">MENGE_FZG_TYP</span> definierten Fahrzeugtypen gemäß der folgenden Tabelle direkt auf Fahrzeugeinheiten und Fahrzeugkombinationen abgebildet und in den Fahrten verwendet.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="135px" class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col width="140px" class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col width="265px" class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname">
+                            </MadCap:variable>-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">STR_BEREICH</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MENGE_FZG_TYP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">FZG_TYP_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_FZG_TYP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">STR_FZG_TYP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MENGE_FZG_TYP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">FZG_TYP_TEXT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">SEATCAP
+</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">MENGE_FZG_TYP</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">FZG_TYP_SITZ</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">TOTALCAP
+</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">MENGE_FZG_TYP</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">FZG_TYP_SITZ + FZG_TYP_STEH</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">ORG_SONDER_PLATZ</td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">MENGE_FZG_TYP</td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">SONDER_PLATZ</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $VEHCOMB</h5>
+        <p class="Text">Je nachdem, ob Umläufe berücksichtigt werden oder nicht, werden Fahrzeugeinheiten und -Fahrzeugkombinationen unterschiedlich gehandhabt.</p>
+        <p>
+            <p class="Text">Werden Umläufe nicht berücksichtigt, so werden die Fahrzeugkombinationen entsprechend den Fahrzeugeinheiten gemäß der folgenden Tabelle aus <span class="gui_element">MENGE_BEREICH</span> gebildet:</p>
+        </p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="134px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="141px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="265px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">BEREICH_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">STR_BEREICH</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">BEREICH_TEXT</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Analog zu den Fahrzeugeinheiten werden die Fahrzeugkombinationen bei Berücksichtigung von Umläufen anhand folgender Zuordnung gebildet:</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="133px" class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col width="142px" class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col width="265px" class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname">
+                            </MadCap:variable>-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_FZG_TYP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">FZG_TYP_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MENGE_FZG_TYP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">STR_FZG_TYP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">MENGE_FZG_TYP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">FZG_TYP_TEXT</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $VEHUNITTOVEHCOMB</h5>
+        <p class="Text">Fahrzeugkombinationen werden immer aus jeweils einer einzigen Fahrzeugeinheit gebildet.</p>
+        <p class="Text">Werden Umläufe nicht berücksichtigt, so erfolgt die Zuordnung der Fahrzeugeinheiten zu Fahrzeugkombinationen gemäß der folgenden Tabelle anhand <span class="gui_element">MENGE_BEREICH</span> :</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="134px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="141px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="265px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VEHCOMBNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">BEREICH_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">VEHUNITNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">BEREICH_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">NUMVEHUNITS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Werden Umläufe berücksichtigt, werden Fahrzeugkombinationen gemäß folgender Zuordnung gebildet:</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="135px" class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col width="140px" class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col width="265px" class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname">
+                            </MadCap:variable>-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VEHCOMBNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_FZG_TYP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">FZG_TYP_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">VEHUNITNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MENGE_FZG_TYP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">FZG_TYP_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">NUMVEHUNITS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="-Tabelle3">
+            </a>
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $NODE</h5>
+        <p class="Text">Das Feld <span class="gui_element">ORT_NR</span> in der Tabelle <span class="gui_element">REC_ORT</span> ist nur zusammen mit der <span class="gui_element">ONR_TYP_NR</span> eindeutig. Daher werden eindeutige Knotennummern erzeugt. Die Koordinaten müssen gemäß <MadCap:variable name="PTV_Manual.VDV_452" /> in WGS84 im Format <span class="kursiv">gggmmssnnn </span>(Gradzahl, Minuten, Sekunden mit 3 Nachkommastellen/Millisekunden angegeben sein. Kein Vorzeichen (+) bedeutet östliche Länge bzw. nördliche Breite, ein Minuszeichen (-) bedeutet westliche Länge bzw. südliche Breite. </p>
+        <p class="Text">Sind in der <MadCap:variable name="PTV_Manual.VDV_452" />-Tabelle <span class="gui_element">REC_ORT</span> Attribute enthalten, die nicht direkt in <MadCap:variable name="PTV_Manual.Programmname" />-Attribute überführt werden , werden diese als benutzerdefinierte Attribute ebenfalls in der <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle <span class="gui_element">NODE</span> gespeichert.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Quellattribut/Wert/Typ</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Beginnend bei 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">ORT_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ONR_TYP_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">ORT_NAME</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">XCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">0 (optional aus REC_ORT.ORT_POS_LAENGE)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">YCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">0 (optional aus REC_ORT.ORT_POS_BREITE)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ORG_ORT_REF_ORT_LANGNR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ORT_REF_ORT_LANGNR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">ORG_ORT_NR</td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">REC_ORT</td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">ORT_NR</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $STOP</h5>
+        <p class="Text">Für die Haltestellen sind nur die Datensätze aus <span class="gui_element">REC_ORT</span> relevant, bei denen <span class="gui_element">ORT_REF_ORT_TYP</span> den Wert 1 oder 2 haben. </p>
+        <p class="Text">Da die VDV Nummer <span class="gui_element">ORT_REF_ORT</span> der Haltestellen und Depots nicht eindeutig sind, können die <span class="gui_element">ORT_REF_ORT</span> Werte der <MadCap:variable name="PTV_Manual.VDV_452" />-Tabelle <span class="gui_element">REC_ORT</span> nicht direkt als Haltestellennummer verwendet werden. Die importierten Haltestellen/Depots bekommen daher eine neu generierte Nummer. Die originale <span class="gui_element">ORT_REF_ORT</span> Nummer wird im BDA <span class="gui_element">ORG_ORT_REF_ORT</span> gespeichert.</p>
+        <p class="Text">Die Übernahme von Koordinaten erfolgt analog zur <span class="gui_element">NODE</span>.</p>
+        <p class="Text">Die abgebildeten Haltepunkte werden zu Haltestellen zusammengefasst. Haltepunkte und Haltestellenbereiche sind 1:1-Abbildungen, n Haltestellenbereiche sind einer Haltestelle zugeordnet. Die übergeordnete Haltestelle wird gebildet aus: <span class="gui_element">Nummer</span> von <span class="gui_element">ORT_REF_ORT</span> + <span class="gui_element">Namen</span> aus <span class="gui_element">ORT_REF_ORT_NAME</span>.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle </p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Quellattribut/Wert/Typ</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Beginnend bei 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">CODE</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">ORT_REF_ORT_KUERZEL</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">NAME</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ORT_REF_ORT_NAME</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">XCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">0 (optional aus REC_ORT.ORT_POS_LAENGE)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">YCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">0 (optional aus REC_ORT.ORT_POS_BREITE)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">ORG_ORT_REF_ORT</td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">REC_ORT</td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">ORT_REF_ORT</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $STOPAREA</h5>
+        <p class="Text">Für die Haltestellenbereiche sind nur die Datensätze aus der Tabelle <span class="gui_element">REC_ORT</span> relevant, bei denen <span class="gui_element">ONR_TYP_NR</span> den Wert 1 oder 2 haben. </p>
+        <p style="mc-hyphenate-shortest-prefix: 15;">Da die VDV Nummer <span class="gui_element">ORT_REF_ORT</span> der Haltestellen und Depots nicht eindeutig sind, können die <span class="gui_element">ORT_REF_ORT</span> Werte der <MadCap:variable name="PTV_Manual.VDV_452" />-Tabelle <span class="gui_element">REC_ORT</span> nicht direkt als Haltestellenbereichsnummer verwendet werden. Die importierten Haltestellen/Depots bekommen daher eine neu generierte Nummer. Die originale <span class="gui_element">ORT_REF_ORT</span> Nummer wird im BDA <span class="gui_element">ORG_ORT_REF_ORT</span> gespeichert.</p>
+        <p class="Text">Die Übernahme von Koordinaten erfolgt analog zur <span class="gui_element">NODE</span>.</p>
+        <p class="Text">Die abgebildeten Haltepunkte werden zu Haltestellen zusammengefasst. Haltepunkte und Haltestellenbereiche sind 1:1-Abbildungen,  Haltestellenbereiche sind einer Haltestelle zugeordnet. Die übergeordnete Haltestelle wird gebildet aus: <span class="gui_element">Nummer</span> von <span class="gui_element">ORT_REF_ORT</span> + <span class="gui_element">Namen</span> aus <span class="gui_element">ORT_REF_ORT_NAME</span>.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="112px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadE-Column1-Header1">Quelltabelle</th>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Quellattribut/Wert/Typ</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Beginnend bei 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">ORT_NAME</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ORT_NAME</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">TYPENO</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">REC_ORT</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">ONR_TYP_NR</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">XCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">0 (optional aus REC_ORT.ORT_POS_LAENGE)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">YCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">0 (optional aus REC_ORT.ORT_POS_BREITE)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">STOPNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ORT_REF_ORT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">ORG_ORT_REF_ORT</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">REC_ORT</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">ORT_REF_ORT</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">ORG_ORT_NR</td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">REC_ORT</td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">ORT_NR</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $STOPPOINT</h5>
+        <p class="Text">Für die Haltepunkte sind nur die Datensätze aus der Tabelle <span class="gui_element">REC_ORT</span> relevant, bei denen <span class="gui_element">ONR_TYP_NR</span> den Wert 1 oder 2 haben.  Da die VDV Nummer <span class="gui_element">ORT_REF_ORT</span> der Haltestellen und Depots nicht eindeutig sind, können die <span class="gui_element">ORT_REF_ORT</span> Werte der <MadCap:variable name="PTV_Manual.VDV_452" />-Tabelle <span class="gui_element">REC_ORT</span> nicht direkt als Haltepunktnummer verwendet werden. Die importierten Haltestellen/Depots bekommen daher eine neu generierte Nummer. Die originale <span class="gui_element">ORT_REF_ORT</span> Nummer wird im BDA <span class="gui_element">ORG_ORT_REF_ORT</span> gespeichert.</p>
+        <p class="Text">Die Übernahme von Koordinaten erfolgt analog zur <span class="gui_element">NODE</span>.</p>
+        <p class="Text">Die abgebildeten Haltepunkte werden zu Haltestellen zusammengefasst. Haltepunkte und Haltestellenbereiche sind 1:1-Abbildungen,  Haltestellenbereiche sind einer Haltestelle zugeordnet. </p>
+        <p class="Text">Da <span class="gui_element">DIRECTED</span> beim Einlesen der generierten Netzdatei von <MadCap:variable name="PTV_Manual.Programmname" /> automatisch auf 1 gesetzt wird, wird das Feld leer gelassen.</p>
+        <p class="Text">Im <MadCap:variable name="PTV_Manual.VDV_452" />-Datenmodell bilden Haltepunkte implizit immer Knoten des Streckennetzes, während im <MadCap:variable name="PTV_Manual.Programmname" />-Datenmodell Haltepunkte auch auf Strecken liegen können. Gibt es Haltepunkte auf Strecken, wird beim Export eine Darstellung erzeugt, in der auch diese Haltepunkte Knoten des Strecknetzes sind <MadCap:xref href="#-Tabelle" class="sieheUeberschrSeite">(siehe „-Tabelle $LINK“ auf Seite&#160;8)</MadCap:xref>.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadE-Column1-Header1">Quelltabelle</th>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Quellattribut/Wert/Typ</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">beginnend bei 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Automatisch erzeugte Knotennummer <MadCap:xref href="#-Tabelle3" class="sieheUeberschrSeite">(siehe „-Tabelle $NODE“ auf Seite&#160;5)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ORT_REF_ORT_KUERZEL</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">ORT_NAME</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">STR_BEREICH (kommagetrennte Verkettung aller Werte)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">STOPAREANO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">ORT_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FROMNODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">leer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">DIRECTED</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">leer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LINKNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">leer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">DEPOTVEHCOMBSTANDARD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">FALSCH</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">RELPOS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">leer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">ISDEPOT</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">REC_ORT</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">Wenn ONR_TYP_NR = 2 dann WAHR, sonst FALSCH</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">ORG_ORT_REF_ORT</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">REC_ORT</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">ORT_REF_ORT</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">ORG_ORT_NR</td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">REC_ORT</td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">ORT_NR</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $FAREZONE</h5>
+        <p class="Text">Tarifzonen sind im <MadCap:variable name="PTV_Manual.VDV_452" />-Format nicht als eigenständiger Datentyp vorgesehen. Sie sind über Tarifzonennummern der Haltepunkte in Spalte <span class="gui_element">ZONE_WABE_NR</span> der Tabelle <span class="gui_element">REC_ORT</span> definiert. Beim Import der <MadCap:variable name="PTV_Manual.VDV_452" />-Daten nach <MadCap:variable name="PTV_Manual.Programmname" /> werden automatisch für die in den Daten vorhandenen Tarifzonennummern Tarifzonen erstellt und den Haltestellen zugewiesen. Für die Tarifzonen sind nur die Datensätze aus der Tabelle <span class="gui_element">REC_ORT</span> relevant, bei denen <span class="gui_element">ONR_TYP_NR</span> den Wert 1 haben.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ZONE_WABE_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">ZONE_WABE_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">ZONE_WABE_NR</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $STOPTOFAREZONE</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Quellattribut/Wert/Typ</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FARZONENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ZONE_WABE_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">STOPNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">ORT_REF_ORT </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $LINKTYPE</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Quellattribut/Wert/Typ</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText"> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">STR_BEREICH (kommagetrennte Verkettung aller Werte)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CAPPRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">99999</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">VMINPRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">RANK</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="-Tabelle">
+            </a>
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $LINK</h5>
+        <h5 MadCap:autonum="">Import:</h5>
+        <p class="Text">Bei der Generierung von Strecken im <MadCap:variable name="PTV_Manual.Programmname" />-Datenmodell werden die <MadCap:variable name="PTV_Manual.VDV_452" />-Tabellen <span class="gui_element">REC_SEL</span>, <span class="gui_element">REC_SEL_ZP</span> und <span class="gui_element">REC_ORT</span> berücksichtigt. Strecken werden als gerade Linien (ohne Zwischenpunkte) zwischen zwei Punkten gebildet. Die in <span class="gui_element">REC_SEL_ZP</span> definierten Zwischenpunkte werden nicht als einfache Polygonpunkte, sondern als vollwertige Knoten umgesetzt. Auch Einträge in <span class="gui_element">REC_ORT</span>, die aufgrund ihres Typs nicht als Haltepunkte umgesetzt werden, werden so als Knoten oder als Routenpunkte von Fahrzeitprofilen übernommen. Im Anschluss an den Import können bei Bedarf so entstandene zweiarmige Knoten gelöscht werden <MadCap:xref href="../2_Netz_bearbeiten/Mehrere_markierte_Knoten_löschen.htm" class="sieheUeberschrSeite">(siehe „Mehrere markierte Knoten löschen“ auf Seite&#160;1)</MadCap:xref>. Ein Knotenpaar &lt;FromNode, ToNode&gt; erhält die gleiche Streckennummer wie &lt;ToNode, FromNode&gt;.</p>
+        <p class="Text">Sind in der Tabelle <span class="gui_element">REC_SEL</span> Koordinaten angegeben, so werden diese für die Knoten übernommen und hier in den Strecken keine Länge eingetragen. Beim Einlesen der Netzdatei nach <MadCap:variable name="PTV_Manual.Programmname" /> werden die Streckenlängen dann automatisch berechnet. Das Attribute <span class="gui_element">SEL_LAENGE</span> wird dann aber als benutzerdefiniertes Attribut an die Strecke übernommen.</p>
+        <p class="Text">Sind in der Tabelle <span class="gui_element">REC_SEL</span> oder <span class="gui_element">REC_SEL_ZP</span> Attribute enthalten, die nicht direkt in <MadCap:variable name="PTV_Manual.Programmname" />-Attribute überführt werden, werden diese als benutzerdefiniertes Attribute der <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle <span class="gui_element">LINK</span> gespeichert.</p>
+        <h5 MadCap:autonum="">Export:</h5>
+        <table style="width: 100%; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" class="TableStyle-TipHint1" cellspacing="0">
+            <col class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Tabelle <span class="gui_element">REC_SEL</span> wird nicht aus <MadCap:variable name="PTV_Manual.Programmname" />-Strecken erzeugt, sondern aus Linienrouten. Es gibt deshalb beispielsweise keine Polygonpunkte.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Beim Export werden zur Erzeugung der Tabellen<span class="gui_element"> REC_SEL</span> und <span class="gui_element">REC_SEL_ZP</span> nicht die tatsächlichen Strecken des <MadCap:variable name="PTV_Manual.Programmname" />-Netzmodells zugrunde gelegt, sondern ein abstraktes Streckennetz, das aus den Linienrouten und Haltepunkten besteht. Die in den Linienrouten definierten Routenpunkte werden auf Einträge in<span class="gui_element"> REC_SEL</span> abgebildet. Zusätzlich werden auch Linienroutenelemente, die keine Routenpunkte sind, als Zwischenpunkte in <span class="gui_element">REC_SEL_ZP</span> exportiert. Die Polygonpunkte des zugrunde liegenden Streckennetzes werden nicht exportiert. Die beim Export verwendeten Angaben für die Spalte <span class="gui_element">SEL_LAENGE</span> stammen bei Routenpunkten aus dem Attribut <span class="gui_element">POSTLENGTH</span>, bei den übrigen Linienroutenelementen werden sie aus dem Attribut <span class="gui_element">LENGTH </span>der Strecken ermittelt.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Startwert 1, jeweils um 1 hochgezählt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FROMNODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_SEL/REC_SEL_ZP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Automatisch erzeugte Knotennummer <MadCap:xref href="#-Tabelle3" class="sieheUeberschrSeite">(siehe „-Tabelle $NODE“ auf Seite&#160;5)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TONODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_SEL/REC_SEL_ZP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Automatisch erzeugte Knotennummer <MadCap:xref href="#-Tabelle3" class="sieheUeberschrSeite">(siehe „-Tabelle $NODE“ auf Seite&#160;5)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TYPENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">STR_BEREICH (kommagetrennte Verkettung aller Werte)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">LENGTH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">REC_SEL</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <ul>
+                            <LI class="List0Tab">wenn keine Koordinaten in den Knoten vorhanden sind: SEL_LAENGE (in m -&gt; / 1000) .</LI>
+                            <LI class="List0Tab"> wenn Koordinaten vorhanden sind: berechnet <MadCap:variable name="PTV_Manual.Programmname" /></LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="-Tabelle2">
+            </a>
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $CALENDARPERIOD</h5>
+        <p class="Text">Sind in der Tabelle <span class="gui_element">FIRMENKALENDER</span> Attribute enthalten, die nicht direkt in <MadCap:variable name="PTV_Manual.Programmname" />-Attribute überführt werden, können diese nicht nach <MadCap:variable name="PTV_Manual.Programmname" /> übernommen werden, da an den Zielobjekten keine benutzerdefinierten Attribute verwaltet werden können.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">VALIDFROM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FIRMENKALENDER</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Betriebstag (erster Tag im Zeitbereich in der Tabelle)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VALIDUNTIL</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FIRMENKALENDER</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Betriebstag (letzter Tag im Zeitbereich in der Tabelle)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Jahreskalender (Typ 0 = 3)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_BASIS_VERSION</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">BASIS_VERSION + BASIS_VERSION_TEXT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">leer</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $VALIDDAYS</h5>
+        <p class="Text">Für jede Tagesart aus der Tabelle <span class="gui_element">MENGE_TAGESART</span> wird eine Zeile in der Tabelle <span class="gui_element">VALIDDAYS</span> erzeugt.</p>
+        <p class="Text">Der <span class="gui_element">DAYVECTOR</span> wird jeweils für die gesamte Zeitspanne der Tabelle <span class="gui_element">CALENDERPERIOD</span> erzeugt. Er wird also für alle Tage zwischen erstem und letzten Betriebstag zunächst mit dem Wert 0 belegt.</p>
+        <p class="Text">In einem folgenden Schritt werden in der Tabelle <span class="gui_element">FIRMENKALENDER</span>&#160;alle Werte der aktuellen Tagesart verglichen und bei allen dort eingetragenen Betriebstagen mit der gleichen Tagesart werden im <span class="gui_element">DAYVECTOR</span> der Wert 1 gesetzt.</p>
+        <p class="Text">Der Verkehrstag mit Nr. 1 ist in <MadCap:variable name="PTV_Manual.Programmname" /> fest mit der Bedeutung <span class="gui_element">täglich</span> vorbelegt. Ist in den <MadCap:variable name="PTV_Manual.VDV_452" />-Importdaten ein Verkehrstag mit<span class="gui_element"> TAGESART_NR</span> = 1 vorhanden, wird geprüft, ob dieser der Ausprägung <span class="gui_element">täglich</span> entspricht. Das ist der Fall, wenn ihm alle in der Tabelle <span class="gui_element">FIRMENKALENDER </span>vorkommenden Kalendertage zugeordnet sind. Dann werden die Daten mit Verkehrstag 1 übernommen. Wenn nicht, wird ein neuer Verkehrstag mit der nächsten freien Nummer generiert. In diesem Fall können sich die Nummern der darauf folgenden importierten Verkehrstage ändern, da jeweils die nächste freie eindeutige Nummer vergeben wird.</p>
+        <p class="Text">Sind in der Tabelle <span class="gui_element">MENGE_TAGESART</span> Attribute enthalten, die nicht direkt in <MadCap:variable name="PTV_Manual.Programmname" />-Attribute überführt werden, werden diese als benutzerdefinierte Attribute der <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle <span class="gui_element">VALIDDAYS</span> gespeichert.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_TAGESART</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">TAGESART_NR*(siehe Erläuterung oben)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MENGE_TAGESART</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">TAGESART_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MENGE_TAGESART</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">TAGESART_TEXT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">DAYVECTOR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Bit-Vektor, anhand der Gültigkeit eines Betriebstags in der Tabelle FIRMENKALENDER gefüllt:</p>
+                        <ul>
+                            <LI class="List0Tab">0 = findet nicht statt</LI>
+                            <LI class="List0Tab"> 1 = findet statt.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FROMSYSTEM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">ORG_TAGESART_NR</td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">MENGE_TAGESART</td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">TAGESART_NR</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $LINE</h5>
+        <p class="Text">Es werden nur reguläre Dienstfahrten (d.h. Datensätze aus <span class="gui_element">REC_LID</span> mit <span class="gui_element">ROUTEN_ART</span> = 1) betrachtet. Werden Umläufe berücksichtigt, so werden Ein-/Ausrückfahrten sowie Überläuferfahrten (d.h. Datensätze aus <span class="gui_element">REC_LID</span> mit <span class="gui_element">ROUTEN_ART</span> = 2,3 oder 4) als Leerfahrten übernommen, ansonsten werden sie ignoriert.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">LI_KUERZEL</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">VEHCOMB</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">BEREICH_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">TSYSCODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">STR_BEREICH über REC_LID.BEREICH_NR = MENGE_BEREICH.BEREICH_NR</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $LINEROUTE</h5>
+        <p class="Text">Sind in der Tabelle <span class="gui_element">REC_LID</span> Attribute enthalten, die nicht direkt in Visum Attribute überführt werden, werden diese als benutzerdefinierte Attribute in der <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle <span class="gui_element">LINEROUTE</span> gespeichert.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Quellattribut/Wert/Typ</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Startwert 1, jeweils um 1 hochgezählt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LINENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">LI_KUERZEL</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">DIRECTIONCODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">LI_RI_NR (Wert <span class="gui_element">1</span> wird durch die Richtung &gt; = <span class="gui_element">up</span> ersetzt, Wert <span class="gui_element">2</span> wird durch die Richtung &lt; = <span class="gui_element">down</span> ersetzt. Siehe. <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle DIRECTION)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ISCIRCLELINE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">-</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">0, wenn Start-Haltepunkt ungleich End-Haltepunkt; sonst 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ORG_LI_NR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">LI_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ORG_STR_LI_VAR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">STR_LI_VAR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ORG_ROUTENNR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ROUTEN_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">ORG_LIDNAME</td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">LIDNAME</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $LINEROUTEITEM</h5>
+        <p class="Text">Besonderheiten: Am letzten Linienroutenelement einer Linienroute ist der Haltepunkt gleich dem nächsten Haltepunkt, dort ist dann der Wert für <span class="gui_element">POSTLENGTH</span> = 0.</p>
+        <p class="Text">Sind in der Tabelle <span class="gui_element">LID_VERLAUF.REC_ZNR</span> Attribute enthalten, die nicht direkt in <MadCap:variable name="PTV_Manual.Programmname" />-Attribute überführt werden, werden diese als benutzerdefinierte Attribute der <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle <span class="gui_element">LINEROUTEITEM</span> gespeichert.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" style="width: 126px;" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">INDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Fortlaufender Index</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ISROUTEPOINT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">POSTLENGTH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_SEL</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">SEL_LAENGE/1000 (über REC_SEL.BEREICH_NR und REC_SEL.ORT_NR und REC_SEL.SEL_ZIEL) Wird benötigt da es keine Koordinaten gibt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LINENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">LI_KUERZEL</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">DIRECTIONCODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">LI_RI_NR (Wert <span class="gui_element">1</span> wird durch die Richtung &gt; = <span class="gui_element">up</span> ersetzt, Wert <span class="gui_element">2</span> wird durch die Richtung &lt; = <span class="gui_element">down</span> ersetzt. Siehe. <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle DIRECTION )</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LINEROUTENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Der in LINEROUTE erzeugte NAME</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">STOPPOINTNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LID_VERLAUF</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ORT_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LID_VERLAUF</p>
+                        <p class="CellText">Falls vorhanden: REC_SEL_ZP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Automatisch erzeugte Knotennummer <MadCap:xref href="#-Tabelle3" class="sieheUeberschrSeite">(siehe „-Tabelle $NODE“ auf Seite&#160;5)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FAHRERKURZTEXT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_ZNR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">FAHRERKURZTEXT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SEITENTEXT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_ZNR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">SEITENTEXT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ZNR_TEXT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_ZNR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ZNR_TEXT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">ORG_LI_LFD_NR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">LID_VERLAUF</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">LI_LFD_NR</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $TIMEPROFILE</h5>
+        <p class="Text">Sind in der Tabelle <span class="gui_element">MENGE_FGR</span> Attribute enthalten, die nicht direkt in <MadCap:variable name="PTV_Manual.Programmname" />-Attribute überführt werden, werden diese als benutzerdefinierte Attribute der <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle <span class="gui_element">TIMEPROFILE</span> gespeichert.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_FRT</p>
+                        <p class="CellText">MENGE_FGR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">LI_NR + „|“ + STR_LI_VAR + „|“ + MENGE_FGR.FGRNR + „|“ + MENGE_FGR.FGR.Text (über Fgr_Nr)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LINENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">LI_KUERZEL über REC_FRT.LI_NR = REC_LID.LI_NR und REC_FRT.STR_LI_VAR = REC_LID.STR_LI_VAR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">DIRECTIONCODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">LI_RI_NR über REC_FRT.LI_NR = REC_LID.LI_NR und REC_FRT.STR_LI_VAR = REC_LID.STR_LI_VAR; wenn LI_RI_NR = <span class="gui_element">1</span> dann <span class="gui_element">&gt;</span>, wenn LI_RI_NR = <span class="gui_element">2</span> dann <span class="gui_element">&lt;</span></td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LINEROUTENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Der in LINEROUTE erzeugte NAME</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VEHCOMBNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">REC_LID</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p>BEREICH_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">ORG_FGR_NR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">FGR_NR</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $TIMEPROFILEITEM</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">INDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Startwert 1, jeweils um 1 hochgezählt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LRITEMINDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LID_VERLAUF</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">LID_VERLAUF.LI_LFD_NR über REC_FRT.LI_NR = LID_VERLAUF.LI_NR und REC_FRT.STR_LI_VAR = LID_VERLAUF.STR_LI_VAR</p>
+                        <p class="CellText">Daraus wird der Index der zugehörigen Linienroutenelemente ermittelt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LINENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">REC_LID.LI_KUERZEL über REC_FRT.LI_NR = REC_LID.LI_NR und REC_FRT.STR_LI_VAR = REC_LID.STR_LI_VAR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">DIRECTIONCODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">LI_RI_NR über REC_FRT.LI_NR = REC_LID.LI_NR und REC_FRT.STR_LI_VAR = REC_LID.STR_LI_VAR</p>
+                        <p class="CellText">LI_RI_NR (Wert <span class="gui_element">1</span> wird durch die Richtung <span class="gui_element">&gt;</span> = <span class="gui_element">up</span> ersetzt, Wert <span class="gui_element">2</span> wird durch die Richtung <span class="gui_element">&lt;</span> = <span class="gui_element">down</span> ersetzt. Siehe. <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle DIRECTION )</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LINEROUTENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Der in LINEROUTE erzeugte NAME</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TIMEPROFILENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_FRT
+MENGE_FGR
+</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">LI_NR + „|“ + STR_LI_VAR + „|“ + MENGE_FGR.FGRNR + „|“ + MENGE_FGR.FGR_TEXT (über FGR_NR)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">BOARD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Beim letzten Datensatz eines Fahrzeitprofils ist der Wert 0, ansonsten 1.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ALIGHT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Beim ersten Datensatz eines Fahrzeitprofils ist der Wert 0, ansonsten 1.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ARR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SEL_FZT_FELD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">SEL_FZT (aufsummiert, Modulo 24h)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">DEP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">SEL_FZT_FELD + ORT_HZTF</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">SEL_FZT_Feld.SEL_FZT (aufsummiert) + ORT_HZTF.HP_HZT (Modulo 24h)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $VEHICLEJOURNEY</h5>
+        <p class="Text">Sind in der Tabelle <span class="gui_element">REC_FRT</span> Attribute enthalten, die nicht direkt in <MadCap:variable name="PTV_Manual.Programmname" />-Attribute überführt werden, werden diese als benutzerdefinierte Attribute der <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle <span class="gui_element">VEHICLEJOURNEY</span> gespeichert.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Startwert 1, jeweils um 1 hochgezählt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">DEP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">FRT_START (Modulo 24h)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LINENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">LI_KUERZEL/char(6) über REC_FRT.LI_NR = REC_LID.LI_NR und REC_FRT.STR_LI_VAR = REC_LID.STR_LI_VAR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">DIRECTIONCODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">LI_RI_NR (Wert <span class="gui_element">1</span> wird durch die Richtung <span class="gui_element">&gt;</span> = <span class="gui_element">up</span> ersetzt, Wert <span class="gui_element">2</span> wird durch die Richtung <span class="gui_element">&lt;</span> = <span class="gui_element">down</span> ersetzt. Siehe. <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle DIRECTION )</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LINEROUTENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Der in LINEROUTE erzeugte NAME</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TIMEPROFILENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_FRT
+MENGE_FGR
+</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">TIMEPROFILE.NAME (= LI_NR + „|“ + STR_LI_VAR + „|“ + MENGE_FGR.FGRNR + „|“ + MENGE_FGR.FGR_Text über FGR_NR)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FROMTPROFILITEMINDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">-</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1"> 1</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TOTPROFILITEMINDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LID_VERLAUF</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert = Anzahl der gefundenen Datensätze für die gilt:</p>
+                        <p class="CellText">REC_FRT.LI_NR =</p>
+                        <p class="CellText">LID_VERLAUF.LI_NR und RE_FRT.STR_LI_VAR = LID_VERLAUF.STR_LI_VAR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VDVNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">FRT_FID</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ORG_FAHRTART_NR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">FAHRTART_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">ORG_LI_KU_NR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">LI_KU_NR</p>
+                        <p class="CellText">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $VEHICLEJOURNEYSECTION</h5>
+        <p class="Text">Es wird zu jedem Eintrag in <span class="gui_element">VEHICLEJOURNEYS</span> genau ein Eintrag in <span class="gui_element">VEHICLEJOURNEYSECTION</span> generiert, da es genau einen Abschnitt über alle Fahrzeitprofil-Verläufe gibt. Daher ist die Nummer immer 1.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Immer 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">VALIDDAYSNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">TAGESARTNR gemäß Tabelle VALIDDAYS <MadCap:xref href="#-Tabelle2" class="sieheUeberschrSeite">(siehe „-Tabelle $CALENDARPERIOD“ auf Seite&#160;9)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VEHCOMBNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">BEREICH_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FROMTPROFILITEMINDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TOTPROFILITEMINDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LID_VERLAUF</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">1 bis N (um jeweils 1 hochgezählter Wert über Anzahl der gefundenen Datensätze in LID_VERLAUF für die gilt: LID_VERLAUF.LI_NR = REC_FRT.LI_NR und LID_VERLAUF.STR_LI_VAR = REC_FRT.STR_LI_VAR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">VEHJOURNEYNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Die in VEHJOURNEY generierte NO</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VEHCOMBSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_FRT
+MENGE_FGR
+</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Leer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">VDVNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">FRT_FID</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $SYSTEMROUTE</h5>
+        <p class="Text">Werden Umläufe berücksichtigt, so werden Ein-/Ausrückfahrten sowie Überläuferfahrten(d.h. Datensätze aus <span class="gui_element">REC_LID</span> mit <span class="gui_element">ROUTEN_ART</span> = 2,3 oder 4)  als Leerfahrten übernommen, ansonsten werden sie ignoriert. Für den Verlauf dieser Leerfahrten werden Systemrouten angelegt.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">LI_KUERZEL</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TSYSCODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">STR_BEREICH über REC_LID.BEREICH_NR = MENGE_BEREICH.BEREICH_NR</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">TNONSTOP</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">SEL_FZ_FELD, ORT_HZTF</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">ΣSEL_FZT_FELD.SEL_FZT  + ORT_HZTF.HP_HZT</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">TSTARTSTOP</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">-</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">0</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">TENDSTOP</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">-</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">0</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">LENGTH</td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">REC_SEL</td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">SEL_LAENGE / 1000 </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $SYSTEMROUTEITEM</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname">
+                            </MadCap:variable>-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">INDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Laufende Nr</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p>REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Generierte Nummer des zugeordneten Knotes aus REC_ORT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">STOPPOINTNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_ORT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">Generierte Nummer des zugeordneten Haltepunktes aus REC_ORT</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">SYSROUTENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Der in SYSROUTE erzeugte NAME</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $BLOCKVERSION</h5>
+        <p class="Text">Für jede in der Tabelle <span class="gui_element">MENGE_TAGESART</span> definierte Tagesart wird eine eigene Umlaufversion erstellt und die Umläufe entsprechend der Betriebstage ihrer Fahrten zugeordnet.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname">
+                            </MadCap:variable>-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">ID
+</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">-</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">Beginnend bei 1</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">CODE</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">MENGE_TAGESART</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">TAGESART_NR</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">NAME</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">MENGE_TAGESART</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">TAGESART_TEXT</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">STARTDAYINDEX</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">FIRMENKALENDER</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">Index des ersten Tages mit Fahrplanfahrten der Tagesart</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">ENDDAYINDEX
+</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">FIRMENKALENDER</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">Index des letzten Tages mit Fahrplanfahrten der Tagesart</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">SYSTEMROUTEUSAGE
+</td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">-</td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">3</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname">
+            </MadCap:variable>-Tabelle $BLOCK</h5>
+        <p class="Text">Die Umläufe einer Tagesart werden als Umläufe eines Kalendertages in das <MadCap:variable name="PTV_Manual.Programmname" />-Umlaufmodell konvertiert. Als Kalendertag wird derjenige verwendet, der als erster der Tagesart zugeordnet ist. In diesem Fall enthält ein Verkehrstag sämtliche Umläufe der Tagesart.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col class="TableStyle-gui_elements1-Column-Column1" style="width: 95px;">
+            </col>
+            <col class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname">
+                            </MadCap:variable>-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">ID
+</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">-</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">Beginnend bei 1</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">BLOCKVERSIONID</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">-</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">Umlaufversions ID
+passend zur Tagesart_Nr
+</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">CODE
+</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">REC_UMLAUF</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">UM_UID</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">NAME
+</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">REC_UMLAUF</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">UM_UID</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">VEHCOMBNO
+</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">REC_UMLAUF</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">FZG_TYP_NR</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">NUMBLOCKINGDAYS
+
+</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">-</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">1</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">SELFCONTAINED
+</td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">-</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">0</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">EMPTYTRIPTSYSCODE</td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">REC_FRT</td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">TSys-Code der Linienroute der ersten Fahrt des Umlaufs. </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $BLOCKITEM</h5>
+        <p class="Text">In diesem Fall enthält ein Verkehrstag sämtliche Umläufe der Tagesart.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <col class="TableStyle-gui_elements1-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname">
+                            </MadCap:variable>-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Quelltabelle</p>
+                    </td>
+                    <th class="TableStyle-gui_elements1-HeadD-Column1-Header1">Quellattribut/Wert/Typ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">BLOCKID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Umlauf-ID</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">INDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">&#160;</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Index</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">BLOCKINGDAY</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">BLOCKITEMTYPENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">1 oder 2, abhängig von REC_FRT.FAHRTART_NR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VEHJOURNEYNO
+</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wenn REC_FRT.FAHRTART_NR = 1: Nummer der Fahrplanfahrt in VehicleJourney, sonst 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">VEHJOURNEYSECTIONNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">-</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wenn REC_FRT.FAHRTART_NR = 1: 1, sonst 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">STARTDAYINDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">(REC_FRT.FRT_START / 3600 * 24) +1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">STARTTIME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">FRT_START
+(für Leerfahrten FRT_START modulo 24h!)
+</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FROMSTOPPOINTNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LID_VERLAUF</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Erster Haltepunkt der Linienroute/Systemroute der Fahrt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TOSTOPPOINTNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LID_VERLAUF</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Letzer Haltepunkt der Linienroute/Systemroute der Fahrt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">DURATION</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">-</td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">0</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">USEDSYSROUTENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">-</td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Generierter Name der verwendeten Systemroute</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

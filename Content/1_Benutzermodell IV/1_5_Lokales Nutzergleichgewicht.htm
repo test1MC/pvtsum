@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="5750" MadCap:lastWidth="512" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;J0;Wardrop’schen;Ì">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1297585">
+            </a>Lokales Nutzergleichgewicht</h3>
+        <p class="Text">In diesem Abschnitt wird eine neue Methode zur Bestimmung einer Abstiegsrichtung vorgestellt, die auf lokalen Verschiebungen von Belastungen basiert, welche die Gesamtkosten verringern und die leicht berechenbaren Informationen ausnutzen, die durch die Ableitungen der Kantenkosten nach den Kantenbelastungen zur Verfügung stehen.</p>
+        <p class="Text">Die grundlegende Idee wird sofort klar, wenn sie am Beispiel des einfachsten Netzes erklärt wird, in dem eine einzige QZ-Beziehung mit der Nachfrage <span class="formula">D</span> durch zwei Kanten mit der Kostenfunktion <span class="formula">c</span><span class="formula" style="font-size: 80%;vertical-align: sub;">1</span><span class="formula">(f</span><span class="formula" style="font-size: 80%;vertical-align: sub;">1</span><span class="formula">) </span>bzw. <span class="formula">c</span><span class="formula" style="font-size: 80%;vertical-align: sub;">2</span><span class="formula">(f</span><span class="formula" style="font-size: 80%;vertical-align: sub;">2</span><span class="formula">)</span> verbunden ist. Bei der aktuellen Belastung <span class="formula" style="font-weight: bold;">f</span><span class="formula" style="font-weight: normal;font-size: 80%;vertical-align: super;"></span><span class="_Override" style="font-family: Symbol;">¢</span><span class="_Override" style="font-family: 'Times New Roman';"> = (</span><span class="formula">D</span>/2, <span class="formula">D</span>/2) ist dies <span class="formula">c</span><span class="formula" style="font-size: 80%;vertical-align: sub;">1</span><span class="_Override" style="font-family: Symbol;">¢</span><span class="_Override" style="font-family: 'Times New Roman';"> &lt; </span><span class="formula">c</span><span class="formula" style="font-size: 80%;vertical-align: sub;">2</span> (siehe <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1297596">Abbildung 1</MadCap:xref>), sodass ein Alles-oder-Nichts-Ansatz zu einer Abstiegsrichtung (<span class="formula">D, 0</span>) führen würde, die weit entfernt ist vom Gleichgewicht <span class="vector">f</span><span class="_Override" style="font-family: 'Times New Roman';">* </span> (grauer Kreis in der Abbildung). Der LUCE-Ansatz berücksichtigt stattdessen die Näherungen erster Ordnung der Kostenfunktionen an den aktuellen Belastungen, d.h. <span class="formula">c</span><span class="formula" style="font-size: 80%;vertical-align: sub;">a</span><span class="_Override" style="font-family: Symbol;">¢</span><span class="_Override" style="font-family: 'Times New Roman';"> + </span><span class="symbol">¶</span><span class="formula">c</span><span class="formula_subscript">a</span><span class="_Override" style="font-family: 'Times New Roman';">(</span><span class="formula">f</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: sub;">a</span><span class="_Override" style="font-family: 'Times New Roman';">)/</span><span class="_Override" style="font-family: Symbol;">¶</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">f</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: sub;">a</span><span class="_Override" style="font-family: 'Times New Roman';"></span><span class="_Override" style="font-family: 'Times New Roman';font-size: 8pt;line-height: 10pt;">•</span><span class="_Override" style="font-family: 'Times New Roman';"> (</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">f</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: sub;">a</span><span class="_Override" style="font-family: 'Times New Roman';"> - </span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">f</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: sub;">a</span><span class="_Override" style="font-family: Symbol;">¢</span><span class="_Override" style="font-family: 'Times New Roman';">)</span> und ermittelt ein Nutzergleichgewicht <span class="vector">e</span> über diese Linien (weißer Kreis in der Abbildung): Diese Abstiegsrichtung nähert sich dem Gleichgewicht <span class="vector">f</span><span class="_Override" style="font-family: 'Times New Roman';">*</span> sehr schnell. In den meisten Fällen kann sogar die maximale Schrittweite <span class="formula">a=</span>1 verwendet werden.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_LUCE_between_2_paths.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1297596">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_13204">
+            </a>Linear User Cost Equilibrium zwischen zwei Wegen</p>
+        <p class="Text">Um ein Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span> zu erreichen, werden im Gleichgewicht nur Kurzwege genutzt. Da die Kantenkostenfunktionen streng monoton steigend sind, bilden sie einen azyklischen Teilgraph von <span class="formula">G</span>, d.h. einen (umgekehrten) Busch, der an <span class="formula">d</span> verwurzelt ist. Bei strenger Monotonie können Kantenkosten tatsächlich nur null sein, wenn auch die Belastung null ist. In <MadCap:variable name="PTV_Manual.Programmname" /> können Strecken und Anbindungen jedoch auch bei positiver Belastung einen Widerstand von null haben, was zweifache Konsequenzen hat: a) Die zugehörigen Kantenkostenfunktionen verlieren die strenge Monotonie, sodass die Eindeutigkeit nicht mehr garantiert ist. b) Der Teilgraph, der aus Kanten mit positiven Zielbelastungen an einigen möglichen Gleichgewichten besteht, kann zyklisch sein. Die Implementierung von LUCE in <MadCap:variable name="PTV_Manual.Programmname" /> behandelt dieses Problem gezielt und konvergiert in eins der möglichen Gleichgewichte, indem es eine azyklische Lösung erzwingt und die Belastung in solchen Fällen unter allen Alternativen mit minimalen Kosten im unbelasteten Netz aufteilt. Wir gehen auf diesen Sonderfall in der nachfolgenden Beschreibung nicht mehr besonders ein.</p>
+        <p class="Text">Suchen wir auf dieser Grundlage nach einer Abstiegsrichtung, konzentrieren wir uns im Folgenden auf den aktuellen Busch <span class="formula">B</span>(<span class="formula">d</span>) und führen einen Aktualisierungsmechanismus ein, um sicherzustellen, dass letztendlich jeder Kurzweg darin enthalten ist; nur auf diese Weise wird das Gleichgewicht wirklich erreicht. Wir betrachten die lokale Routenwahl an einem generischen Knoten <span class="formula">i</span><span class="symbol">Î</span><span class="formula">N</span> für Verkehrsteilnehmer, die das Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span> anfahren.</p>
+        <p class="Text">Für die Topologie des Busches nutzen wir folgende Schreibweise:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="139px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="357px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">FSB</span>(<span class="formula">i, d</span>) = {<span class="formula">j</span><span class="symbol">Î</span><span class="formula">N: ij</span><span class="symbol">Î</span><span class="formula">B</span>(<span class="formula">d</span>)}</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">diejenigen Knoten, die von Knoten <span class="formula" style="font-size: 8pt;line-height: 10pt;">i</span><span class="symbol">Î</span><span class="formula">N</span><span class="_Override" style="line-height: 11pt;">über Kanten des aktuellen Buschs </span><span class="formula">B</span>(<span class="formula" style="line-height: 11pt;">d</span>) zu Ziel <span class="formula" style="font-size: 8pt;line-height: 10pt;">d</span><span class="symbol">Î</span><span class="formula">Z</span><span class="_Override" style="line-height: 11pt;"> erreicht werden (Forward Star)</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="formula">BSB</span>(<span class="formula">i, d</span>) = {<span class="formula">j</span><span class="symbol">Î</span><span class="formula">N: ij</span><span class="symbol">Î</span><span class="formula">B</span>(<span class="formula">d</span>)}</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">diejenigen Knoten, von denen aus Knoten <span class="formula" style="font-size: 8pt;line-height: 10pt;">i</span><span class="symbol">Î</span><span class="formula">N</span><span class="_Override" style="line-height: 11pt;"> über Kanten des aktuellen Buschs </span><span class="formula">B</span>(<span class="formula" style="line-height: 11pt;">d</span>) zu Ziel <span class="formula" style="font-size: 8pt;line-height: 10pt;">d</span><span class="symbol">Î</span><span class="formula">Z</span> erreicht werden (Backward Star)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Für die Belastungen wird folgende Schreibweise verwendet:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="109px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="387px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">f</span>
+                            <span class="formula_subscript">ij</span>
+                            <span class="formula_superscript">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">aktuelle Belastung auf Kante <span class="formula">ij</span><span class="symbol">Î</span><span class="formula">A</span> zum Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span></p>
+                        <p class="CellText">Durch Konstruktion gilt <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">f</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: sub;">ij</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: super;">d</span><span class="_Override" style="font-family: 'Times New Roman';"></span><span class="_Override" style="font-family: 'Times New Roman';line-height: 11pt;">=</span><span class="_Override" style="font-family: 'Times New Roman';"> 0 </span>für jedes <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">j</span><span class="_Override" style="font-family: Symbol;">Ï</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">FSB</span><span class="_Override" style="font-family: 'Times New Roman';">(</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">i</span><span class="_Override" style="font-family: 'Times New Roman';">, </span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">d</span><span class="_Override" style="font-family: 'Times New Roman';">)</span>;</p>
+                        <p class="CellText">außerdem gilt eindeutig<span class="_Override" style="font-family: 'Times New Roman';">: </span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">f</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: sub;">ij</span><span class="_Override" style="font-family: 'Times New Roman';"></span><span class="_Override" style="font-family: 'Times New Roman';line-height: 11pt;">=</span><span class="_Override" style="font-family: 'Times New Roman';"></span><span class="_Override" style="font-family: Symbol;">å</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: sub;">d</span><span class="formula_symbol_subscript">Î</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: sub;">Z</span><span class="_Override" style="font-family: 'Times New Roman';"></span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">f</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: sub;">ij</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: super;">d</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="formula">f</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">d</span> = <span class="symbol">å</span><span class="formula_subscript">j</span><span class="formula_symbol_subscript">Î</span><span class="formula_subscript">FSB(i, d)</span><span class="_Override" style="font-size: 8pt;line-height: 10pt;"></span><span class="formula" style="line-height: 11pt;">f</span><span class="formula_subscript">ij</span><span class="formula_superscript">d</span></p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">aktuelle Belastung von Knoten <span class="formula">i</span><span class="symbol">Î</span><span class="formula">N</span> zum Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">y</span>
+                            <span class="formula_subscript">ij</span>
+                            <span class="formula_superscript">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula" style="line-height: 11pt;">y</span>
+                            <span class="formula_subscript">ij</span>
+                            <span class="formula_superscript">d</span>
+                            <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;line-height: 11pt;"> = </span>
+                            <span class="formula">f</span>
+                            <span class="formula_subscript">ij</span>
+                            <span class="formula_superscript">d</span>
+                            <span class="_Override" style="font-family: 'Times New Roman';"> / </span>
+                            <span class="formula" style="line-height: 11pt;">f</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">d</span>
+                            <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: super;">
+                            </span>aktueller Belastungsanteil auf Kante <span class="formula">ij</span><span class="symbol">Î</span><span class="formula">A</span> zum Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span>, wenn <span class="formula" style="line-height: 11pt;">f</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';">&#160;&gt;&#160;0, </span><span class="formula" style="line-height: 11pt;">y</span><span class="formula_subscript">ij</span><span class="formula_superscript">d</span> = 0 andernfalls</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">e</span>
+                            <span class="formula_subscript">ij</span>
+                            <span class="formula_superscript">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Abstiegsrichtung hinsichtlich der Belastung auf Kante <span class="formula">ij</span><span class="symbol">Î</span><span class="formula">A</span> zum Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">e</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Abstiegsrichtung hinsichtlich der Belastung von Knoten <span class="formula">i</span><span class="symbol">Î</span><span class="formula">N</span> zum Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">e</span>
+                            <span class="formula_subscript">ij</span>
+                            <span class="formula_superscript">d</span>
+                            <span class="formula"> = e</span>
+                            <span class="formula_subscript">ij</span>
+                            <span class="formula_superscript">d</span>
+                            <span class="formula" style="font-size: 8pt;line-height: 10pt;"> / </span>
+                            <span class="formula" style="line-height: 11pt;">e</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Abstiegsrichtung ausgedrückt als Belastungsanteil auf Kante <span class="formula">ij</span><span class="symbol">Î</span><span class="formula">A</span> zum Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Für das Kostenmuster wird folgende Schreibweise verwendet:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">C</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">durchschnittliche Kosten um Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span> von Knoten <span class="formula">i</span><span class="symbol">Î</span><span class="formula">N</span> zu erreichen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">g</span>
+                            <span class="formula_subscript">ij</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Kostenableitung der Kante <span class="formula">ij</span><span class="symbol">Î</span><span class="formula">A</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">G</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Ableitung der durchschnittlichen Kosten um Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span> von Knoten <span class="formula">i</span><span class="symbol">Î</span><span class="formula">N</span> zu erreichen</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die durchschnittlichen Kosten <span class="formula">C</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span> stellen den erwarteten Widerstand dar, auf den ein Verkehrsteilnehmer stößt, wenn er sich von Knoten <span class="formula">i</span><span class="symbol">Î</span><span class="formula">N</span> zum Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">N</span> bewegt. Hier werden sie, basierend auf den aktuellen Belastungen, rekursiv definiert:</p>
+        <p class="Formula_number2" MadCap:autonum=" [1.1]">falls <span class="formula">f</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';"> &gt; 0</span>, dann <span class="formula">C</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';"> = </span><span class="symbol">å</span><span class="formula_subscript">j</span><span class="formula_symbol_subscript">Î</span><span class="formula_subscript">FSB(i, d)</span><span class="formula"></span><span class="formula">y</span><span class="formula_subscript">ij</span><span class="formula_superscript">d</span> • <span class="_Override" style="font-family: 'Times New Roman';">(</span><span class="formula">c</span><span class="formula_subscript">ij</span><span class="_Override" style="font-family: 'Times New Roman';"> + </span><span class="formula">C</span><span class="formula_subscript">j</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';">)</span>, sonst</p>
+        <p class="Formula_number2ff" MadCap:autonum=" [1.2]">
+            <span class="formula">C</span>
+            <span class="formula_subscript">i</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> = </span>min<span class="_Override" style="font-family: 'Times New Roman';">{</span><span class="formula">c</span><span class="formula_subscript">ij</span><span class="_Override" style="font-family: 'Times New Roman';"> + </span><span class="formula">C</span><span class="formula_subscript">j</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';">: </span><span class="formula">j</span><span class="symbol">Î</span><span class="formula">FSB</span>(<span class="formula">i, d</span>)},</p>
+        <p class="Text">als ob Fahrer Wege entsprechend den aktuellen Belastungsanteilen nutzen. Im Folgenden gehen wir davon aus, dass die Kostenfunktion <span class="formula">c</span><span class="formula_subscript">ij</span><span class="_Override" style="font-family: 'Times New Roman';">(</span><span class="formula">f</span><span class="formula_subscript">ij</span>) für jede Kante <span class="formula">ij</span><span class="symbol">Î</span><span class="formula">A</span> kontinuierlich differenzierbar ist:</p>
+        <p class="Formula_number" MadCap:autonum=" [2]">
+            <span class="formula">g</span>
+            <span class="formula_subscript">ij</span> = <span class="formula_symbol">¶</span><span class="formula">c</span><span class="formula_subscript">ij</span>(<span class="formula">f</span><span class="formula_subscript">ij</span>) / <span class="formula_symbol">¶</span><span class="formula">f</span><span class="formula_subscript">ij</span></p>
+        <p class="Text">In der Annahme, dass ein infinitesimales Inkrement der Belastung von Knoten <span class="formula">i</span><span class="symbol">Î</span><span class="formula">N</span> zum Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span> sich entsprechend den aktuellen Abbiegeranteilen unter den ausgehenden Kanten aufteilen würde, ergibt sich:</p>
+        <p class="Formula_number2" MadCap:autonum=" [3.1]">falls <span class="formula">f</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';"> &gt; 0,</span> dann <span class="formula">G</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';"> = </span><span class="formula_symbol">¶</span><span class="formula">C</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';"> / </span><span class="formula_symbol">¶</span><span class="formula">f</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';"> = </span><span class="symbol">å</span><span class="formula_subscript">j</span><span class="formula_symbol_subscript">Î</span><span class="formula_subscript">FSB(i, d)</span><span class="formula">y</span><span class="formula_subscript">ij</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';font-size: 80%;vertical-align: super;">2</span><span class="_Override" style="font-family: 'Times New Roman';"></span><span class="_Override" style="font-family: 'Times New Roman';">•</span><span class="_Override" style="font-family: 'Times New Roman';"> (</span><span class="formula">g</span><span class="formula_subscript">ij</span><span class="_Override" style="font-family: 'Times New Roman';"> + </span><span class="formula">G</span><span class="formula_subscript">j</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';">)</span>, sonst</p>
+        <p class="Formula_number2ff" MadCap:autonum=" [3.2]">
+            <span class="formula">G</span>
+            <span class="formula_subscript">i</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> = </span>
+            <span class="symbol">å</span>
+            <span class="formula_subscript">j</span>
+            <span class="formula_symbol_subscript">Î</span>
+            <span class="formula_subscript">FSB(i, d)</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> [</span>
+            <span class="formula">C</span>
+            <span class="formula_subscript">i</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> = </span>
+            <span class="formula">c</span>
+            <span class="formula_subscript">ij</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> + </span>
+            <span class="formula">C</span>
+            <span class="formula_subscript">j</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">] </span>
+            <span class="_Override" style="font-family: 'Times New Roman';">•</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> (</span>
+            <span class="formula">g</span>
+            <span class="formula_subscript">ij</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> + </span>
+            <span class="formula">G</span>
+            <span class="formula_subscript">j</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">) / </span>
+            <span class="symbol">å</span>
+            <span class="formula_subscript">j</span>
+            <span class="formula_symbol_subscript">Î</span>
+            <span class="formula_subscript">FSB(i, d)</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> [</span>
+            <span class="formula">C</span>
+            <span class="formula_subscript">i</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> = </span>
+            <span class="formula">c</span>
+            <span class="formula_subscript">ij</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> + </span>
+            <span class="formula">C</span>
+            <span class="formula_subscript">j</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">],</span>
+        </p>
+        <p class="Text">wobei die Ableitungen <span class="formula">g</span><span class="formula_subscript">ij</span> + <span class="formula">G</span><span class="formula_subscript">j</span><span class="formula_superscript">d</span> mit dem Anteil <span class="formula">y</span><span class="formula_subscript">ij</span><span class="formula_superscript">d</span> von <span class="formula_symbol">¶</span><span class="formula">f</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';"></span> skaliert werden, der erst Kante <span class="formula">ij</span> und danach Knoten <span class="formula">j</span> durchfährt, was zusammen mit dem an der Mittelung beteiligten Belastungsanteil die zweite Potenz<span class="_Override" style="font-family: 'Times New Roman';font-style: italic;"></span><span class="formula">y</span><span class="formula_subscript">ij</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';font-size: 80%;vertical-align: super;">2</span> ergibt.</p>
+        <p class="Text">Die durchschnittlichen Kosten und ihre Ableitungen können berechnet werden, indem die Knoten des Buschs in umgekehrter topologischer Reihenfolge (in der Reihenfolge aufsteigender Kosten nach <span class="formula">d</span>) bearbeitet werden, beginnend mit <span class="formula">C</span><span class="formula_subscript">d</span><span class="formula_superscript">d</span> = <span class="formula">G</span><span class="formula_subscript">d</span><span class="formula_superscript">d</span> = 0.</p>
+        <p class="Text">Betrachten wir nun das lokale Nutzergleichgewicht für die Fahrer <span class="formula">e</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span> zum Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span>, deren nutzbare Alternativen die Kanten des von Knoten <span class="formula">i</span><span class="symbol">Î</span><span class="formula">N</span> ausgehenden Buschs sind. Jeder Alternative ordnen wir folgende Kostenfunktion zu: </p>
+        <p class="Formula_number" MadCap:autonum=" [4]">
+            <span class="formula">v</span>
+            <span class="formula_subscript">ij</span>
+            <span class="formula_superscript">d</span>(<span class="formula">e</span><span class="formula_subscript">ij</span><span class="formula_superscript">d</span>) = (<span class="formula">c</span><span class="formula_subscript">ij</span> + <span class="formula">C</span><span class="formula_subscript">j</span><span class="formula_superscript">d</span>) + (<span class="formula">g</span><span class="formula_subscript">ij</span> + <span class="formula">G</span><span class="formula_subscript">j</span><span class="formula_superscript">d</span>) • (<span class="formula">e</span><span class="formula_subscript">ij</span><span class="formula_superscript">d</span> - <span class="formula">y</span><span class="formula_subscript">ij</span><span class="formula_superscript">d</span> • <span class="formula">e</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span>),</p>
+        <p class="Text">resultierend aus einer Linearisierung an den aktuellen Belastungen der durchschnittlichen Kosten eines Verkehrsteilnehmers, der die Kante <span class="formula">ij</span> nutzt, mit <span class="formula">j</span><span class="symbol">Î</span><span class="formula">FSB</span>(<span class="formula">i</span>, <span class="formula">d</span>).</p>
+        <p class="Text">Analog zu <MadCap:xref class="Label_formula" href="1_5_Mathematischer Ansatz und theoretischer Rahmen.htm#1_benutzermodell_iv_2033098965_1297538">[]</MadCap:xref> bis <MadCap:xref class="Label_formula" href="1_5_Mathematischer Ansatz und theoretischer Rahmen.htm#1_benutzermodell_iv_2033098965_1297542">[]</MadCap:xref> kann dieses Problem durch das folgende System von Ungleichungen ausgedrückt werden:</p>
+        <p class="Formula_number2" MadCap:autonum=" [5.1]">
+            <a name="1_benutzermodell_iv_2033098965_1492038">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_25041">
+            </a>
+            <span class="formula">e</span>
+            <span class="formula_subscript">ij</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> •</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> [</span>
+            <span class="formula">v</span>
+            <span class="formula_subscript">ij</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">(</span>
+            <span class="formula">e</span>
+            <span class="formula_subscript">ij</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">)</span> - <span class="formula">V</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';">] = 0,           </span><span class="symbol">"</span><span class="formula">j</span><span class="symbol">Î</span><span class="formula">FSB</span>(<span class="formula">i, d</span>)<span class="_Override" style="font-family: 'Times New Roman';">,</span></p>
+        <p class="Formula_number2ff" MadCap:autonum=" [5.2]">
+            <span class="formula">v</span>
+            <span class="formula_subscript">ij</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">(</span>
+            <span class="formula">e</span>
+            <span class="formula_subscript">ij</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">) </span>
+            <span class="formula_symbol">³</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">
+            </span>
+            <span class="formula">V</span>
+            <span class="formula_subscript">i</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">,                           </span>
+            <span class="symbol">"</span>
+            <span class="formula">j</span>
+            <span class="symbol">Î</span>
+            <span class="formula">FSB</span>(<span class="formula">i, d</span>)<span class="_Override" style="font-family: 'Times New Roman';">,</span></p>
+        <p class="Formula_number2ff" MadCap:autonum=" [5.3]">
+            <span class="formula">e</span>
+            <span class="formula_subscript">ij</span>
+            <span class="formula_superscript">d</span>
+            <span class="formula_symbol">³</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">0</span>,                           <span class="symbol">"</span><span class="formula">j</span><span class="symbol">Î</span><span class="formula">FSB</span>(<span class="formula">i, d</span>),</p>
+        <p class="Formula_number2ff" MadCap:autonum=" [5.4]">
+            <a name="1_benutzermodell_iv_2033098965_1297646">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_12442">
+            </a>
+            <span class="symbol">å</span>
+            <span class="formula_subscript">j</span>
+            <span class="formula_symbol_subscript">Î</span>
+            <span class="formula_subscript">FSB(i, d)</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">
+            </span>
+            <span class="formula">e</span>
+            <span class="formula_subscript">ij</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> = </span>
+            <span class="formula">e</span>
+            <span class="formula_subscript">i</span>
+            <span class="formula_superscript">d</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">,</span>
+        </p>
+        <p class="Text">wobei gilt:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">V</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">lokale Gleichgewichtskosten, um das Ziel <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">d</span><span class="_Override" style="font-family: Symbol;">Î</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">Z</span> von Knoten <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">i</span><span class="_Override" style="font-family: Symbol;">Î</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">N</span> zu erreichen;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">ij</span>
+                            <span class="formula_superscript">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Kosten der lokalen Alternative <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">j</span><span class="_Override" style="font-family: Symbol;">Î</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">FSB</span><span class="_Override" style="font-family: 'Times New Roman';">(</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">i</span><span class="_Override" style="font-family: 'Times New Roman';">, </span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">d</span><span class="_Override" style="font-family: 'Times New Roman';">),</span> um das Ziel <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">d</span><span class="_Override" style="font-family: Symbol;">Î</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">Z</span> von Knoten <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">i</span><span class="_Override" style="font-family: Symbol;">Î</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">N</span> via<span class="formula"> j </span>zu erreichen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Wenn <span class="formula">e</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span> = 0, ist die triviale Lösung für das obige Problem: <span class="formula">e</span><span class="formula_subscript">ij</span><span class="formula_superscript">d</span> = 0, für jedes <span class="formula">j</span><span class="symbol">Î</span><span class="formula">FSB</span>(<span class="formula">i</span>, <span class="formula">d</span>). Betrachten wir nun den Fall, in dem <span class="formula">e</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span> &gt; 0. Um die Lesbarkeit zu erleichtern, nehmen wir in <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1492038">[5.1]</MadCap:xref> bis <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297646">[5.4]</MadCap:xref> folgende Umbenennungen vor:</p>
+        <p class="Formula_number2" MadCap:autonum=" [6.1]">
+            <a name="1_benutzermodell_iv_2033098965_1297658">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_55739">
+            </a>
+            <span class="formula">x</span>
+            <span class="formula_subscript">j</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> • (</span>
+            <span class="formula">a</span>
+            <span class="formula_subscript">j</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> + </span>
+            <span class="formula">b</span>
+            <span class="formula_subscript">j</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> • </span>
+            <span class="formula">x</span>
+            <span class="formula_subscript">j</span> - <span class="formula">v</span>) = 0, <span class="_Override" style="font-family: 'Times New Roman';"></span><span class="symbol">"</span><span class="formula">j</span><span class="symbol">Î</span><span class="formula">J</span><span class="_Override" style="font-family: 'Times New Roman';">,</span></p>
+        <p class="Formula_number2ff" MadCap:autonum=" [6.2]">
+            <a name="1_benutzermodell_iv_2033098965_1297660">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_23054">
+            </a>
+            <span class="formula">a</span>
+            <span class="formula_subscript">j</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> + </span>
+            <span class="formula">b</span>
+            <span class="formula_subscript">j</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">
+            </span>
+            <span class="_Override" style="font-family: 'Times New Roman';">•</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">
+            </span>
+            <span class="formula">x</span>
+            <span class="formula_subscript">j</span>
+            <span class="symbol">³</span>
+            <span class="formula">v</span>, <span class="symbol">"</span><span class="formula">j</span><span class="symbol">Î</span><span class="formula">J</span><span class="_Override" style="font-family: 'Times New Roman';">,</span></p>
+        <p class="Formula_number2ff" MadCap:autonum=" [6.3]">
+            <a name="1_benutzermodell_iv_2033098965_1297662">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_99127">
+            </a>
+            <span class="formula">x</span>
+            <span class="formula_subscript">j</span>
+            <span class="symbol">³</span> 0, <span class="symbol">"</span><span class="formula">j</span><span class="symbol">Î</span><span class="formula">J</span><span class="_Override" style="font-family: 'Times New Roman';">,</span></p>
+        <p class="Formula_number2ff" MadCap:autonum=" [6.4]">
+            <a name="1_benutzermodell_iv_2033098965_1297664">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_73803">
+            </a>
+            <span class="symbol">å</span>
+            <span class="formula_subscript">j</span>
+            <span class="formula">x</span>
+            <span class="formula_subscript">j</span> = 1,</p>
+        <p class="Text">wobei:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">J</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">{(<span class="formula">i</span>, <span class="formula">j</span>, <span class="formula">d</span>): <span class="formula" style="line-height: 11pt;">j</span><span class="symbol">Î</span><span class="formula">FSB</span><span class="_Override" style="line-height: 11pt;">(</span><span class="formula">i</span><span class="_Override" style="line-height: 11pt;">, </span><span class="formula">d</span><span class="_Override" style="line-height: 11pt;">)</span>}</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a</span>
+                            <span class="formula_subscript">j</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">(<span class="formula">c</span><span class="formula_subscript">ij</span><span class="formula"> + </span><span class="formula" style="line-height: 11pt;">C</span><span class="formula_subscript">j</span><span class="formula_superscript">d</span>) - (<span class="formula" style="line-height: 11pt;">g</span><span class="formula_subscript">ij</span><span class="formula" style="font-size: 8pt;line-height: 10pt;"> + </span><span class="formula" style="line-height: 11pt;">G</span><span class="formula_subscript">j</span><span class="formula_superscript">d</span>) • <span class="formula" style="line-height: 11pt;">e</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span><span class="formula" style="font-size: 8pt;line-height: 10pt;"> • y</span><span class="formula" style="font-size: 80%;vertical-align: sub;">ij</span><span class="formula" style="font-size: 80%;vertical-align: super;">d</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">b</span>
+                            <span class="formula_subscript">j</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">(<span class="formula" style="line-height: 11pt;">g</span><span class="formula_subscript">ij</span><span class="formula" style="font-size: 8pt;line-height: 10pt;"> + </span><span class="formula" style="line-height: 11pt;">G</span><span class="formula_subscript">j</span><span class="formula_superscript">d</span>) • <span class="formula" style="line-height: 11pt;">e</span><span class="formula_subscript">i</span><span class="formula_superscript">d</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">x</span>
+                            <span class="formula_subscript">j</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula" style="line-height: 11pt;">e</span>
+                            <span class="formula_subscript">ij</span>
+                            <span class="formula_superscript">d</span>
+                            <span class="formula" style="font-size: 8pt;line-height: 10pt;"> / </span>
+                            <span class="formula" style="line-height: 11pt;">e</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">d</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">V</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">d</span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Wird der übliche Beckmann-Ansatz angewandt, können wir das Gleichgewichtsproblem <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297658">[6.1]</MadCap:xref> bis <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297664">[6.4]</MadCap:xref> wie folgt als quadratisches Programm neu formulieren:</p>
+        <p class="Formula_number" MadCap:autonum=" [7]">
+            <a name="1_benutzermodell_iv_2033098965_1498943">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_66070">
+            </a>min{<span class="symbol">å</span><span class="formula_subscript">j</span><span class="formula_symbol_subscript">Î</span><span class="formula_subscript">J 0</span><span class="_Override" style="font-family: Symbol;font-style: italic;">ò</span><span class="_Override" style="font-size: 80%;vertical-align: super;"></span><span class="formula_superscript">xj</span>(<span class="formula">a</span><span class="formula_subscript">j</span> + <span class="formula">b</span><span class="formula_subscript">j</span> • <span class="formula">x</span>) • d<span class="formula">x</span>: <span class="_Override" style="font-weight: bold;">x</span><span class="symbol">Î</span>X} = min{<span class="symbol">å</span><span class="formula_subscript">j</span><span class="formula_symbol_subscript">Î</span><span class="formula_subscript">J</span><span class="formula">a</span><span class="formula_subscript">j</span> • <span class="formula">x</span><span class="formula_subscript">j</span> + 0.5 • <span class="formula">b</span><span class="formula_subscript">j</span> • <span class="formula">x</span><span class="formula_subscript">j</span><span class="formula_superscript">2</span>: <span class="_Override" style="font-weight: bold;">x</span><span class="symbol">Î</span>X},</p>
+        <p class="Text">wobei <span class="formula">X</span> die konvexe Menge aller Vektoren darstellt, die die Bedingungen <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297662">[6.3]</MadCap:xref> und <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297664">[6.4]</MadCap:xref> erfüllen. Der Gradient der Zielfunktion ist ein Vektor mit dem generischen Element <span class="formula">a</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';"> + </span><span class="formula">b</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';"></span><span class="_Override" style="font-family: 'Times New Roman';">•</span><span class="_Override" style="font-family: 'Times New Roman';"></span><span class="formula">x</span><span class="formula_subscript">j</span> und die Hessematrix der Zielfunktion eine diagonale Matrix mit dem generischen Element <span class="formula">b</span><span class="formula_subscript">j</span>. Sind also alle Elemente <span class="formula">b</span><span class="formula_subscript">j</span> streng positiv, ist die Hessematrix positiv definit und das Problem <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1498943">[7]</MadCap:xref> hat eine eindeutige Lösung. Um solch eine erwünschte Eigenschaft zu garantieren, gehen wir davon aus, dass die Ableitungen <span class="formula">g</span><span class="formula_subscript">ij</span> ohne Verlust der Allgemeingültigkeit für alle Kanten <span class="formula">ij</span><span class="symbol">Î</span><span class="formula">A</span> streng positiv sind. Da die Kantenkostenfunktionen streng monoton steigend sind, kann <span class="formula">g</span><span class="formula_subscript">ij</span> nur null sein, wenn auch <span class="formula">f</span><span class="formula_subscript">ij</span><span class="formula_superscript">d</span><span class="_Override" style="font-family: 'Times New Roman';"></span> null ist. Bei dem Gleichgewicht <span class="formula">b</span><span class="formula_subscript">j</span>&#160;=&#160;0 bedeutet das <span class="formula">x</span><span class="formula_subscript">j</span>&#160;=&#160;0. In der Praxis ersetzen wir jedes <span class="formula">g</span><span class="formula_subscript">ij</span> = 0 durch ein kleines <span class="symbol">e</span>.</p>
+        <p class="Text">Um das Problem <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297658">[6.1]</MadCap:xref> bis <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297664">[6.4]</MadCap:xref> zu lösen, benutzen wir folgende Methode. Um Bedingung <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297658">[6.1]</MadCap:xref> zu erfüllen, gilt entweder <span class="formula">x</span><span class="formula_subscript">j</span> = 0 (und in diesem Fall erfordert die Bedingung <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297660">[6.2]</MadCap:xref><span class="formula">a</span><span class="formula_subscript">j</span><span class="formula"></span><span class="_Override" style="font-family: Symbol;">³</span><span class="formula"></span><span class="formula">v</span>) oder es gilt <span class="formula">a</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';"> + </span><span class="formula">b</span><span class="formula_subscript">j</span> • <span class="formula">x</span><span class="formula_subscript">j</span> = <span class="formula">v</span>. Sei <span class="formula">J</span><span class="formula_subscript">0</span> <span class="symbol">Ì</span> <span class="formula">J</span> die Menge der Alternativen ohne Belastung, dann ist <span class="formula">J</span><span class="formula_subscript">0</span><span class="_Override" style="font-family: 'Times New Roman';"> = {</span><span class="formula">j</span><span class="symbol">Î</span><span class="formula">J</span><span class="_Override" style="font-family: 'Times New Roman';">: </span><span class="formula">x</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';"> = 0}</span>. Bei gegebenem <span class="formula">J</span><span class="formula_subscript">0</span> ist die Lösung sofort klar, weil basierend auf <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297664">[6.4]</MadCap:xref><span class="symbol">å</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: sub;">j</span><span class="formula_symbol_subscript">Î</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;font-size: 80%;vertical-align: sub;">J</span><span class="_Override" style="font-family: 'Times New Roman';"> (</span><span class="formula">v</span><span class="_Override" style="font-family: 'Times New Roman';"> - </span><span class="formula">a</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';">) / </span><span class="formula">b</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';"> = 1</span> gilt; daher gilt:</p>
+        <p class="Formula_number2" MadCap:autonum=" [8.1]">
+            <a name="1_benutzermodell_iv_2033098965_1491551">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_77305">
+            </a>
+            <span class="formula">v</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> = (1 + </span>
+            <span class="symbol">å</span>
+            <span class="formula_subscript">j</span>
+            <span class="formula_symbol_subscript">Î</span>
+            <span class="formula_subscript">J\J0</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">
+            </span>
+            <span class="formula">a</span>
+            <span class="formula_subscript">j</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> / </span>
+            <span class="formula">b</span>
+            <span class="formula_subscript">j</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">) / (</span>
+            <span class="symbol">å</span>
+            <span class="formula_subscript">j</span>
+            <span class="formula_symbol_subscript">Î</span>
+            <span class="formula_subscript">J\J0</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> 1 / </span>
+            <span class="formula">b</span>
+            <span class="formula_subscript">j</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">)</span>,</p>
+        <p class="Formula_number2ff" MadCap:autonum=" [8.2]">
+            <a name="1_benutzermodell_iv_2033098965_1491553">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_27059">
+            </a>
+            <span class="formula">x</span>
+            <span class="formula_subscript">j</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> = (</span>
+            <span class="formula">v</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> - </span>
+            <span class="formula">a</span>
+            <span class="formula_subscript">j</span>) / <span class="formula">b</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';">,                    </span><span class="symbol">"</span><span class="formula">j</span><span class="symbol">Î</span><span class="formula">J</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">\</span><span class="formula">J</span><span class="formula_subscript">0</span>,</p>
+        <p class="Formula_number2ff" MadCap:autonum=" [8.3]">
+            <a name="1_benutzermodell_iv_2033098965_1491555">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_81546">
+            </a>
+            <span class="formula">x</span>
+            <span class="formula_subscript">j</span>
+            <span class="_Override" style="font-family: 'Times New Roman';"> = 0,                                   </span>
+            <span class="symbol">"</span>
+            <span class="formula">j</span>
+            <span class="symbol">Î</span>
+            <span class="formula">J</span>
+            <span class="formula_subscript">0</span>
+            <span class="_Override" style="font-family: 'Times New Roman';">.</span>
+        </p>
+        <p class="Text">Die durch <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1491551">[8.1]</MadCap:xref> bis <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1491555">[8.3]</MadCap:xref> gegebenen Belastungsanteile erfüllen <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297664">[6.4]</MadCap:xref> implizit. Damit aber das ausgewählte <span class="formula">J</span><span class="formula_subscript">0</span> die Lösung von Problem <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297658">[6.1]</MadCap:xref> bis <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297664">[6.4]</MadCap:xref> liefert, müssen außerdem folgende Bedingungen gewährleistet sein: <span class="formula">a</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';"> &lt; </span><span class="formula">v</span>, für jedes <span class="formula">j</span><span class="symbol">Î</span><span class="formula">J</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">\</span><span class="formula">J</span><span class="formula_subscript">0</span> (wie durch <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297662">[6.3]</MadCap:xref> vorgeschrieben, da <span class="formula">x</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';"> = (</span><span class="formula">v</span><span class="_Override" style="font-family: 'Times New Roman';"> - </span><span class="formula">a</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';">) / </span><span class="formula">b</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';"> &gt; 0)</span>, und <span class="formula">a</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: Symbol;"> ³ </span><span class="formula">v</span>, für jedes <span class="formula">j</span><span class="_Override" style="font-family: Symbol;">Î</span><span class="formula">J</span><span class="formula_subscript">0</span><span class="_Override" style="font-family: 'Times New Roman';"></span>(wie durch <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297660">[6.2]</MadCap:xref> vorgeschrieben, da <span class="formula">x</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';"> = 0</span>). Das setzt voraus, dass bei der Lösung des Wertes v, der aus <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1491551">[8.1]</MadCap:xref> resultiert, die Menge <span class="formula">J</span> in zwei Teilmengen unterteilt wird: die Menge <span class="formula">J</span><span class="formula_subscript">0</span>, die sich aus den Alternativen<span class="formula"> j </span>ergibt, sodass <span class="formula">a</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: Symbol;"> ³ </span><span class="formula">v</span>, und ihrem Komplement <span class="formula">J</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">\</span><span class="formula">J</span><span class="formula_subscript">0</span>, das sich aus den Alternativen<span class="formula"> j </span>ergibt, sodass <span class="formula">a</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';"> &lt; </span><span class="formula">v</span>.</p>
+        <p class="Text">Zunächst mag das Problem, die Menge <span class="formula">J</span><span class="formula_subscript">0</span> zu bestimmen, kombinatorisch erscheinen. Dies ist jedoch nicht der Fall. Die Gleichung <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1491551">[8.1]</MadCap:xref> kann als rekursive Formel umschrieben werden. Sie zeigt dann die Auswirkung des Entfernens einer Alternative <span class="formula">k</span> aus der Menge <span class="formula">J</span><span class="formula_subscript">0</span>:</p>
+        <p class="Formula_number" MadCap:autonum=" [9]">
+            <a name="1_benutzermodell_iv_2033098965_1297742">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_60802">
+            </a>
+            <span class="formula">v</span>[<span class="formula">J</span><span class="formula_subscript">0</span>\{<span class="formula">k</span>}] = (<span class="formula">v</span>[<span class="formula">J</span><span class="formula_subscript">0</span>] • <span class="symbol">å</span><span class="formula_subscript">j</span><span class="formula_symbol_subscript">Î</span><span class="formula_subscript">J\J0</span> 1 / <span class="formula">b</span><span class="formula_subscript">j</span> + <span class="formula">a</span><span class="formula_subscript">k</span> / <span class="formula">b</span><span class="formula_subscript">k</span>) / (<span class="symbol">å</span><span class="formula_subscript">j</span><span class="formula_symbol_subscript">Î</span><span class="formula_subscript">J\J0</span> 1 / <span class="formula">b</span><span class="formula_subscript">j</span> + 1 / <span class="formula">b</span><span class="formula_subscript">k</span>) .</p>
+        <p class="Text">Die rechte Seite von <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1297742">[9]</MadCap:xref> kann als Mittelwert zwischen <span class="formula">v</span><span class="_Override" style="font-family: 'Times New Roman';">[</span><span class="formula">J</span><span class="formula_subscript">0</span><span class="_Override" style="font-family: 'Times New Roman';">] </span>und <span class="formula">a</span><span class="formula_subscript">k</span> interpretiert werden mit den positiven Gewichten <span class="_Override" style="font-family: Symbol;">å</span><span class="formula_subscript">j</span><span class="formula_symbol_subscript">Î</span><span class="formula_subscript">J\J0</span><span class="_Override" style="font-family: 'Times New Roman';"> 1 / </span><span class="formula">b</span><span class="formula_subscript">j</span> und <span class="_Override" style="font-family: 'Times New Roman';">1 / </span><span class="formula">b</span><span class="formula_subscript">k</span>. Die lokalen Nutzergleichgewichtskosten nehmen daher zu, wenn aus <span class="formula">J</span><span class="formula_subscript">0</span> irgendwelche Alternativen <span class="formula">k</span><span class="symbol">Î</span><span class="formula">J</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">\</span><span class="formula">J</span><span class="formula_subscript">0</span>, für die <span class="formula">a</span><span class="formula_subscript">k</span> höher ist als der aktuelle Wert <span class="formula">v</span><span class="_Override" style="font-family: 'Times New Roman';">[</span><span class="formula">J</span><span class="formula_subscript">0</span><span class="_Override" style="font-family: 'Times New Roman';">]</span>, entfernt werden. Umgekehrt nehmen sie ab, wenn solche Alternativen zu <span class="formula">J</span><span class="formula_subscript">0</span> hinzugefügt werden. Folglich ergibt sich die korrekte Teilmenge <span class="formula">J</span><span class="formula_subscript">0</span> einfach, indem jede Alternative <span class="formula">j</span><span class="symbol">Î</span><span class="formula">J</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">\</span><span class="formula">J</span><span class="formula_subscript">0</span> iterativ zur anfangs leeren Menge hinzugefügt wird, sodass <span class="formula">a</span><span class="formula_subscript">j</span><span class="_Override" style="font-family: 'Times New Roman';"> &gt; </span><span class="formula">v</span>, d.h. jede Alternative, für die <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1491553">[8.2]</MadCap:xref> einen negativen Belastungsanteil erzielt.</p>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="676" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="of;Layern;Markierung1;geographic;coordinate;systems;projected;Erd;UTM;48N;mdb;accdb;hgr;library;whitepapers;pdfs;Wavelet;ECW;sid;Multiresolution;seamless;image;database;MrSID;Scalable;Vector;Plug;Viewer;PGD;Classes;Datasets;Class">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_gis_funktionalitaet_3291278398_1031326">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_28162">
+            </a>Verbindung mit der Personal Geodatabase und GIS-Objekte</h2>
+        <p class="Text">
+            <MadCap:keyword term="Personal Geodatabase (PGD)" />
+            <MadCap:keyword term="GIS-Objekte" />
+            <MadCap:keyword term="Netzobjekte: GIS-Objekte" />
+            <MadCap:variable name="PTV_Manual.Programmname" /> kann sich temporär mit einer ESRI Personal Geodatabase (PGD) oder einer Shapedatei verbinden. Diese Funktionalität ist zum Beispiel dann nützlich, wenn sich ein mit <MadCap:variable name="PTV_Manual.Programmname" /> arbeitender Verkehrsmodellierer mit einer Personal Geodatabase auf dem Rechner eines Raumplaners verbindet. Der Verkehrsmodellierer kann dann die benötigten Daten aus der Personal Geodatabase des Raumplaners durch Verschneidung extrahieren <MadCap:xref class="sieheUeberschrSeite" href="1_10_Verschneiden.htm#1_gis_funktionalitaet_3291278398_1035632"><span style="color: Black;" class="mcFormatColor">(</span><u>Verschneiden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> und anschließend die Verbindung wieder trennen. Dieser Prozess umgeht die Notwendigkeit die Datei nach <MadCap:variable name="PTV_Manual.Programmname" /> zu importieren.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Um diese Funktionalität nutzen zu können, müssen Sie eine Lizenz für das Programm ArcGIS besitzen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Während der Verbindung mit der PGD entstehen in <MadCap:variable name="PTV_Manual.Programmname" /> so genannte GIS-Objekte. GIS-Objekte sind POI-ähnliche Netzobjekte <MadCap:xref class="sieheUeberschrSeite" href="../1_Netzmodell/1_2_Points of Interest (POI).htm#1_netzmodell_1240632468_1068906"><span style="color: Black;" class="mcFormatColor">(</span><u>Points of Interest (POI)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>, die nur während der Verbindung mit der PGD bestehen. Analog zu POIs werden GIS-Objekte organisiert in GIS-Kategorien. Ein GIS-Objekt selbst ist entweder vom Typ Punkt, Polylinie oder Polygon.</p>
+        <p class="Text">GIS-Objekte haben einen räumlichen Bezug. Damit können Sie zum Beispiel folgende Objekte im <MadCap:variable name="PTV_Manual.Programmname" />-Netz abbilden.</p>
+        <ul>
+            <LI class="List0">Schulen, Schwimmbäder, Haltestellen</LI>
+            <LI class="List0">Gewässer, landwirtschaftliche Gebiete, Planbezirke</LI>
+        </ul>
+        <p class="Text">Um GIS-Objekte in <MadCap:variable name="PTV_Manual.Programmname" /> anzulegen, müssen Sie in der PGD Feature Classes oder Feature Datasets zur Anzeige oder Bearbeitung auswählen. Dabei entstehen in <MadCap:variable name="PTV_Manual.Programmname" /> folgende Objekte.</p>
+        <ul>
+            <LI class="List0">Für jede ausgewählte Feature Class der Personal Geodatabase wird eine GIS-Kategorie angelegt.</LI>
+            <LI class="List0">Für jedes Feature ein GIS-Objekt</LI>
+        </ul>
+        <p class="Text">Sämtliche Koordinaten werden unkonvertiert nach <MadCap:variable name="PTV_Manual.Programmname" /> übernommen. Die GIS-Objekte werden wieder entfernt, sobald die Verbindung zur PGD beendet wird. Möchten Sie GIS-Objekte dauerhaft in das <MadCap:variable name="PTV_Manual.Programmname" />-Netz einbinden, können Sie wie folgt vorgehen:</p>
+        <ul>
+            <LI class="List0">Umwandeln der GIS-Objekte in eine Shape-Datei</LI>
+            <LI class="List0">Einlesen der GIS-Objekte zum Beispiel als POI</LI>
+        </ul>
+        <p class="Text">Während der Verbindung zur Personal Geodatabase gilt Folgendes:</p>
+        <ul>
+            <LI class="List0">Nur die Schlüsselinformationen der Objekte werden permanent im Speicher gehalten.</LI>
+            <LI class="List0">Informationen über Attribute der Kategorie werden in Form einer Attributschnittstelle vorgehalten.</LI>
+            <LI class="List0">Lese- und Schreibzugriffe auf die Attribute werden direkt auf die Datenbank weitergeleitet.</LI>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="679" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs;Ride">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1055699">
+            </a>
+            <a name="1_netzmodell_1240632468_77960">
+            </a>Zeitbezug der Belastungen: Analysezeiträume und Hochrechnung</h3>
+        <p class="Text">
+            <MadCap:keyword term="Analyse:Analysezeiträume" />
+            <MadCap:keyword term="Hochrechnung" />Belastungswerte haben stets einen zumindest impliziten Zeitbezug, den sie vom Zeitbezug der Nachfrage erben (enthält die Nachfragematrix zum Beispiel die Nachfrage in der Spitzenverkehrsstunde, so beziehen sich auch die Umlegungsergebnisse auf die Spitzenverkehrsstunde). Um die resultierenden Belastungen auf eine gemeinsame Zeiteinheit zu beziehen und von dort einheitlich auf längere Zeithorizonte hochzurechnen, gibt es in <MadCap:variable name="PTV_Manual.Programmname" /> die folgenden Analysezeiträume. </p>
+        <ul>
+            <LI class="List0">
+                <MadCap:keyword term="Kalenderperiode" />Die Kalenderperiode umfasst den eingestellten Kalender, also einen, sieben oder beliebig viele Tage.</LI>
+            <LI class="List0">Über den <span class="gui_element">Zeitbezug der Nachfrage</span> wird ermittelt, wie viele Fahrtwünsche innerhalb des Umlegungszeitraums bestehen. Der Zeitbezug wird hergestellt über die Startzeit des Nachfragesegments und die dem Nachfragesegment zugeordnete Nachfrageganglinie <MadCap:xref class="Benutzerhandbuch" href="../2_Nachfrage_modellieren/2_3_Nachfrageobjekte verwalten.htm#2_nachfrage_modellieren_1800171850_1305979"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Nachfrageobjekte verwalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">
+                <MadCap:keyword term="Umlegungszeitraum" />Der <span class="gui_element">Umlegungszeitraum</span> dient vor allem dazu, den Anteil der Nachfrage zu bestimmen, der umgelegt werden muss. Wichtig ist, dass der Umlegungszeitraum jeder Umlegung vollständig innerhalb der Analyseperiode liegen muss. Bei der Umlegung wird der gemäß der Ganglinie auf den <span class="gui_element" style="font-weight: normal;">Umlegungszeitraum</span> entfallende Anteil der Nachfrage auf die in diesem Zeitraum vorgefundenen Wege umgelegt. Der Umlegungszeitraum muss mit dem Zeitraum der Nachfrageganglinie(n) überlappen, da sonst keine Nachfrage in diesem Zeitraum vorliegt und daher keine Umlegung berechnet werden kann. Ein Umlegungszeitraum kann nur bei den dynamischen Umlegungen (DUE, Dynamische Stochastische Umlegung) des IV und bei der taktfeinen und fahrplanfeinen Umlegung des ÖV eingestellt werden. Der Umlegungszeitraum wird in den Parametern des Umlegungsverfahrens festgelegt. Für alle statischen IV-Umlegungen (Gleichgewichtsumlegung, Sukzessivumlegung, Lernverfahren, Stochastische Umlegung, Tribut) entspricht der Umlegungszeitraum automatisch der Analyseperiode.</LI>
+            <LI class="List0">
+                <MadCap:keyword term="Analyse:Analyseperiode" />Die <span class="gui_element">Analyseperiode (AP)</span> repräsentiert den Zeitraum, auf den alle Auswertungen bezogen sind. Wird kein Kalender benutzt, so beträgt die Analyseperiode einen Tag. Bei der Verwendung eines Wochen- oder Jahreskalenders wird die Analyseperiode bei den Verfahrensparametern festgelegt. Die Analyseperiode ist ein Zeitraum zwischen mindestens einem Tag und maximal der ganzen Kalenderperiode. Berechnungsergebnisse liegen zunächst auf die Analyseperiode bezogen vor, bevor sie auf Analysezeitintervalle oder den Analysehorizont umgerechnet werden. Die Analyseperiode muss komplett in der Kalenderperiode liegen. Die Umlegungszeiträume müssen komplett in der Analyseperiode liegen. Für die Analyseperiode können an den Nachfragesegmenten Hochrechnungsfaktoren festgelegt werden, die das Umlegungsergebnis vom Umlegungszeitraum auf die Analyseperiode hochrechnen. Sie dienen der Normierung der Nachfrage auf die Analyseperiode. Entspricht der Zeitraum der Nachfragematrix der Analyseperiode, so ist der Hochrechnungsfaktor 1. Ist die Nachfragematrix auf einen Tag bezogen, die Analyseperiode jedoch eine Woche, so müsste der Faktor auf 7 gesetzt werden (wenn man mit der Annahme arbeitet, dass der Verkehr an allen sieben Tagen der Woche gleich ist).</LI>
+            <LI class="List0">
+                <span class="gui_element" style="font-weight: normal;">
+                    <MadCap:keyword term="Analyse:Analysehorizont" />Der </span>
+                <span class="gui_element">Analysehorizont (AH)</span> ist ein längerer Zeitraum, auf den Ergebnisse hochgerechnet werden können. Er wird nicht explizit festgelegt. Stattdessen werden Hochrechnungsfaktoren auf den Analysehorizont vorgegeben. Diese können am Nachfragesegment (für die Belastungen) sowie am Verkehrstag (für das Betreibermodell) angegeben werden <MadCap:xref class="sieheUeberschrSeite" href="../1_Betreibermodell OeV/1_7_Grundlegende Berechnungsprinzipien für Kennzahlen.htm#1_betreibermodell_oev_1878159914_1162843"><span style="color: Black;" class="mcFormatColor">(</span><u>Grundlegende Berechnungsprinzipien für Kennzahlen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Üblicherweise wird ein Analysehorizont von einem Jahr betrachtet. Da der Hochrechnungsfaktor für jedes Nachfragesegment unterschiedlich vergeben werden kann, kann zum Beispiel der Hochrechnungsfaktor von Tageswerten auf ein Jahr für ein Nachfragesegment Schüler kleiner gewählt werden als für ein Nachfragesegment Pendler, da die Schüler mehr Ferientage haben, an denen Sie keinen Verkehr erzeugen. Die Belastung eines Netzobjekts bezüglich der Analyseperiode ist stets die Summe der Belastungen aller Wege, die über dieses Netzobjekt führen, multipliziert mit dem Hochrechnungsfaktor des Nachfragesegments. Dieser Hochrechnungsfaktor gleicht aus, dass der Umlegungszeitraum gegebenenfalls nur einen Teil der Analyseperiode abdeckt.</LI>
+            <LI class="List0">
+                <span class="gui_element">Analysezeitintervall (AI)</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">
+            <MadCap:keyword term="Analyse:Analysezeitintervalle" />Für eine feinere zeitliche Auswertung von Berechnungsergebnissen können optional Analysezeitintervalle definiert werden <MadCap:xref class="sieheUeberschrSeite" href="1_2_Zeitliche Differenzierung mit Analysezeitintervallen.htm#1_netzmodell_1240632468_1105392"><span style="color: Black;" class="mcFormatColor">(</span><u>Zeitliche Differenzierung mit Analysezeitintervallen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Jedes Analysezeitintervall liegt vollständig innerhalb eines Kalendertags der Analyseperiode.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Im Gegensatz zur Analyseperiode, welche den Umlegungszeitraum umfasst und somit ein Hochrechnen der Belastungswerte erfordert, weisen die Analysezeitintervalle genau die Belastung aus, die in ihrem Zeitraum anfällt. Die Hochrechnungsfaktoren der einzelnen Nachfragesegmente wirken sich daher nicht auf die Belastung pro Analysezeitintervall aus. Ist die Analyseperiode durch Analysezeitintervalle vollständig überdeckt, so entspricht das Verhältnis der Summe aller Belastungen für die Intervalle zur Belastung bezogen auf die Analyseperiode genau dem Hochrechnungsfaktor.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Relations_Analysis_Time_Intervals.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_netzmodell_1240632468_15597">
+            </a>Das Verhältnis der verschiedenen Analysezeiträume zueinander</p>
+        <h5>
+            <MadCap:keyword term="Hochrechnung: Beispiele" />Beispiel für Hochrechnungsfaktoren</h5>
+        <p class="Text">In einem Modell mit Wochenkalender sollen Belastungen pro Woche ermittelt werden. Um die Laufzeit des Umlegungsverfahrens zu verkürzen, soll dabei nicht die ganze Woche als Umlegungszeitraum genutzt werden. Es wird davon ausgegangen, dass die Nachfrage ebenso wie das Angebot an den Wochentagen Montag bis Freitag gleich ist. Nachfragedaten liegen für den Standard-Werktag, Samstag und Sonntag vor.</p>
+        <p class="Text">Dies wird auf folgende Weise gelöst. Es werden drei Nachfragesegmente eingerichtet, die jeweils die Nachfrage am Werktag, Samstag und Sonntag repräsentieren. Jedes Nachfragesegment wird mit einer passenden Ganglinie ausgestattet, wobei der Standard-Werktag auf einen der Tage Montag bis Freitag zu legen ist. Es werden drei Umlegungen gerechnet. Der Umlegungszeitraum ist dabei jeweils nur ein Tag und zwar der Dienstag (als Repräsentant für den Standard-Werktag), der Samstag und der Sonntag.</p>
+        <p class="Text">Als Analyseperiode ist eine Woche eingerichtet, als Analysehorizont ein Jahr. Um die Belastungen korrekt hochzurechnen werden die folgenden Hochrechnungsfaktoren benutzt.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Nachfragesegment</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Hochrechnungsfaktor AP</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Hochrechnungsfaktor AH</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Standard-Werktag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/4_82.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Samstag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">52</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Sonntag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">52</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Ableitung von Hochrechnungsfaktoren für AP und AH</p>
+            </caption>
+        </table>
+        <h5>Beispiel für das Zusammenspiel von Analysezeiträumen und Ganglinie</h5>
+        <p class="Text">
+            <MadCap:keyword term="Ganglinien: Beispiele" />Um eine Umlegung berechnen zu können, müssen sich der Umlegungszeitraum und die Zeiten, für die die Nachfrage gültig ist, überlappen. Im Folgenden werden drei Beispiele gezeigt. Im ersten Fall (<MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1111101">Abbildung&#160;40</MadCap:xref>) passen die Zeiträume von Nachfrage und Umlegung nicht zueinander und die Umlegung kann nicht berechnet werden. <MadCap:variable name="PTV_Manual.Programmname" /> gibt dann die Fehlermeldung <span class="gui_element">Für keine Verkehrsrelation liegt Nachfrage innerhalb des Umlegungszeitraums vor. Es wurden keine Verbindungen ermittelt</span>aus. Im zweiten (<MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1111183">Abbildung&#160;41</MadCap:xref>) und dritten Beispiel (<MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1111298">Abbildung&#160;42</MadCap:xref>) überlappen sich Umlegungszeitraum und Gültigkeitszeitraum der Nachfrage, so dass eine Umlegung berechnet werden kann. <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1181988">Tabelle&#160;16</MadCap:xref> gibt einen Überblick über die Analysezeiträume und Ganglinien der drei Beispiele.</p>
+        <table class="TableStyle-TableStand_withTitle" style="caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" style="width: 31px;" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" style="width: ;" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Kalender</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="mc-hyphenate-shortest-prefix: 9;">Umlegungszeitraum</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="mc-hyphenate-shortest-prefix: 7;">Analyseperiode</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="mc-hyphenate-shortest-prefix: 5;">NSeg Starttag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">NSeg Startzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="mc-hyphenate-shortest-prefix: 7;">Standardganglinie von</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="mc-hyphenate-shortest-prefix: 7;">Standardganglinie bis</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Umlegung kann berechnet werden</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Bsp.&#160;1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Wochenkalender</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mo. 6:30-7:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mo. - Mo.</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mo.</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="mc-hyphenate-shortest-prefix: 7;">01:00:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">00:00:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">02:00:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_mid">nein</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Bsp.&#160;2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Wochenkalender</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Mo. 6:30-7:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Mo. - Mo.</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Mo.</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">05:30:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">00:00:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">02:00:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_mid">ja</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Bsp.&#160;3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Wochenkalender</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Mo. 6:30-7:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Mo. - Mo.</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Mo.</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">00:00:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">05:30:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">07:30:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText_mid">ja</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_netzmodell_1240632468_1181988">
+                    </a>
+                    <a name="1_netzmodell_1240632468_14126">
+                    </a>Beispiele für das Zusammenspiel von Analysezeiträumen und Ganglinie</p>
+            </caption>
+        </table>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Relations_Time_Intervals_Example1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_netzmodell_1240632468_1111101">
+            </a>
+            <a name="1_netzmodell_1240632468_47871">
+            </a>Keine Umlegung möglich, da sich Gültigkeit der Nachfrage und Umlegungszeitraum nicht überlappen</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Relations_Time_Intervals_Example2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">
+            <a name="1_netzmodell_1240632468_1111183">
+            </a>
+            <a name="1_netzmodell_1240632468_50778">
+            </a>Die Nachfrage zwischen 6:30 und 7:30 Uhr wird umgelegt</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Relations_Time_Intervals_Example3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 4: ">
+            <a name="1_netzmodell_1240632468_1111298">
+            </a>
+            <a name="1_netzmodell_1240632468_15047">
+            </a>Die Nachfrage zwischen 6:30 und 7:30 Uhr wird umgelegt</p>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="1012" MadCap:lastWidth="1062" MadCap:ignoredWords="PGD;emf;sid;Projections;Well;Known;Geographic;Coordinate">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_gis_funktionalitaet_nutzen_1884258370_1054640">
+            </a>
+            <a name="2_gis_funktionalitaet_nutzen_1884258370_76236">
+            </a>Koordinatensystem wählen<a name="27277"></a></h3>
+        <p class="Text">
+            <MadCap:keyword term="Koordinatensysteme:wechseln" />Sie können für das aktuell geladene Netz ein anderes Koordinatensystem wählen. Dies ist zum Beispiel nötig, wenn Ihr aktuelles Netz das <MadCap:variable name="PTV_Manual.Programmname" />-eigene Koordinatensystem verwendet und Sie Daten importieren möchten, die in einer bestimmten Projektion vorliegen <MadCap:xref class="Grundlagen" href="../1_GIS-Funktionalitaet/1_10_Koordinatensysteme.htm#1_gis_funktionalitaet_3291278398_1031411">Siehe "Koordinatensysteme"</MadCap:xref>.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Standardmäßig verwendet <MadCap:variable name="PTV_Manual.Programmname" /> ein <MadCap:variable name="PTV_Manual.Programmname" />-eigenes Koordinatensystem.</p>
+                        <p class="Text">Ein Satz von Koordinatensystemen steht als Dateien mit Dateierweiterung <span class="path">*.prj</span> standardmäßig im Verzeichnis ...\<span class="path">Exe\Projections</span> Ihrer <MadCap:variable name="PTV_Manual.Programmname" />-Installation zur Verfügung <MadCap:xref class="sieheUeberschrSeite" href="../2_Grundlagen_Programmbedienung/2_1_Speicherort von Dateien ändern.htm#2_grundlagen_programmbedienung_1644961382_1245181"><span style="color: Black;" class="mcFormatColor">(</span><u>Speicherort von Dateien ändern</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Das Format der Dateien ist *.<span class="path">wkt</span> (Well-Known Text).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Abhängig davon, zwischen welchen Koordinatensystemen Sie wechseln, ergeben sich unterschiedliche Auswirkungen:</p>
+        <ul>
+            <LI class="List0">Wenn Sie vom <MadCap:variable name="PTV_Manual.Programmname" />-eigenen Koordinatensystem zu einem anderen Koordinatensystem wechseln, legen Sie dadurch fest, dass die bisherigen Koordinaten dem neu gewählten Koordinatensystem angehören. Die Koordinaten und die Darstellung ändern sich nicht.</LI>
+            <LI class="List0">Wenn Sie zwischen zwei vordefinierten Koordinatensystemen wechseln, transformiert <MadCap:variable name="PTV_Manual.Programmname" /> die Daten. Die Darstellung und die Koordinaten ändern sich.</LI>
+            <LI class="List0">Wenn Sie von einem vordefinierten Koordinatensystem zum <MadCap:variable name="PTV_Manual.Programmname" />-eigenen zurückwechseln, ändern sich die Koordinaten und die Darstellung nicht.</LI>
+        </ul>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Netz</span> den Eintrag <span class="gui_element">Netzeinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Netzeinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie das Register <span class="gui_element">Maßstab</span>.</p>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Über die Einstellung der Optionen<span class="gui_element"> Visum (keine Projektion) </span>und <span class="gui_element">aus Datei</span> erkennen Sie, welches Koordinatensystem aktuell ausgewählt ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie im Bereich <span class="gui_element">Koordinatensystem</span> die gewünschten Optionen.</p>
+        <table class="TableStyle_gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Visum (keine Projektion)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Ist die Option ausgewählt, wechseln Sie zum <MadCap:variable name="PTV_Manual.Programmname" />-eigenen Koordinatensystem. Die Koordinaten und die Darstellung verändern sich nicht.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">aus Datei</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Ist die Option ausgewählt, wechseln Sie zu einem vordefinierten Koordinatensystem. Wählen Sie über die danebenliegende Schaltfläche im Fenster <span class="gui_element">Projektionen</span> das gewünschte Koordinatensystem.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Stellen Sie sicher, dass das gewählte Koordinatensystem zu Ihren Daten passt.</p>
+                        <p class="CellText">Wenn Sie zwischen zwei vordefinierten Koordinatensystemen wechseln möchten, müssen Sie zuerst zum weltweit gültigen Koordinatensystem GCS WGS 84 wechseln und anschließend zu dem gewünschten System. Nur so ist sichergestellt, dass das Datum (=&#160;der Nullpunkt des Koordinatensystems) korrekt umgerechnet wird.</p>
+                        <p class="CellText">Das Koordinatensystem GCS WGS 84 finden Sie im Fenster <span class="gui_element">Projektionen</span> unter <span class="gui_element">Geographic Coordinate Systems&#160;&gt; World&#160;&gt; WGS 1984.prj</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Koordinaten bei Änderung transformieren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden die Koordinaten automatisch transformiert und die Netzdarstellung aktualisiert.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, bleiben die Koordinatenwerte beim Wechsel des Koordinatensystems gleich. Diese Einstellung ist beispielsweise sinnvoll, wenn zuvor ein für die vorhandenen Koordinatenwerte falsches Koordinatensystem eingestellt war.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Nachdem Sie das Koordinatensystem gewechselt haben, können Sie keine Arbeitsschritte mehr rückgängig machen.</p>
+                        <p class="Text">Wenn Sie das Koordinatensystem ändern, können sich dadurch auch die Längen von Linienobjekten (zum Beispiel Strecken, Anbindungen und Linienroutenverläufe) ändern. Diese müssen Sie bei Bedarf explizit neu berechnen <MadCap:xref class="sieheUeberschrSeite" href="2_10_Längen neu berechnen.htm#2_gis_funktionalitaet_nutzen_1884258370_1039020"><span style="color: Black;" class="mcFormatColor">(</span><u>Längen neu berechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Das Koordinatensystem wird gewechselt. </p>
+    </body>
+</html>

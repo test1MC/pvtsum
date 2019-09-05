@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="675" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;gruppen;gruppe;ICU1;ICU2;Circular;Planning;Operations;pretimed;fully;actuated;semi;actuation;type;ICAArrivalType;14a;AnteilLKW;6b;ICAEingVerlustZVerw;ICAIstCentral;BusinessDistrict;Central;District;6e;ICASneakers;ICAZuflussFaktor;10b;14b;BusFrequenz;WDDTA;xd;FS;ox;yo;BS;FIFO;dt;initialize;the;solution;flows;to;zero;for;each;destination;compute;arc;costs;and;their;if;then;UmlgAbw;ASSIGNDEVIATION;AbsRMSE;Abs;RMSE;Achsabs;ax;AnteilAkzGEH;akzept;AnteilAkzRelFehler;rel;AnzBeob;AnzKlasse;KlassenWert;Korr;Pearson;MittAbsFehler;MittBeob;MittRelFehler;R2;RSQ;RelRMSE;StdAbw;VolDem;Cap;ScalingFactor;Vol;te;flow;toNode;Lj;maxFlow;propagatingFlow;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;KJ;k2;k1;s'';abflüssen;peak;hour;factor;LT;RT;vphpl;HV;bb;Lu;Lpb;Rpb;CBD;ST;Ui;PF;Ii;Ri;PA;bi;Volume;ICU;P1;P2;P3;6a;6c;6d;LUo;qr;po;ArrivalType;6j;3a;3b;pedu;pbT;rec;RTA;LTA;ten;Permeability;StauAbtragen;propagatingQ;prevQ;currQ;maxOutflow;sourceVolQ;arrivedFlow;totalSourceVol;StauAbtragenPhase2;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1427350">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc175724484">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153337024">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc130891229">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__ref113177676">
+            </a>Verfahrensablauf beim Rückstaumodell</h3>
+        <p class="Text">Das Verfahren gliedert sich in folgende Bestandteile:</p>
+        <ul>
+            <LI class="List0">Bestimmung des Überstauungsfaktors</LI>
+            <LI class="List0">Stauberechnung</LI>
+            <LI class="List0">Bestimmung der Wartezeiten</LI>
+        </ul>
+        <h5>Bestimmung des Überstauungsfaktors</h5>
+        <p class="Text">Vor der eigentlichen Stausimulation wird zunächst der Überstauungsfaktor des Netzes berechnet. Dabei gehen die Belastungen und Kapazitäten derjenigen Strecken, Knoten und Abbieger ein, für die Sie eingestellt haben, dass sie berücksichtigt werden sollen.</p>
+        <p class="Text">Für eine einzelne Strecke <span class="formula">L</span> ist der Überstauungsfaktor <span class="formula_symbol">s</span><span class="formula_subscript">Strecke</span>(<span class="formula">L</span>) gegeben durch</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_104.jpg" />.</p>
+        <p class="Text">Hierbei ist <span class="formula">VolDem</span>(<span class="formula">L</span>) die Belastung der Strecke aus der Umlegung, <span class="formula">Cap</span>(<span class="formula">L</span>) die IV-Kapazität der Strecke und <span class="formula">ScalingFactor</span> der Skalierungsfaktor für Kapazitäten aus den Parametern für das Rückstaumodell. Außerdem ist <span class="formula">Vol</span><span class="formula_subscript">Grundbelastung</span>(<span class="formula">L</span>) eine Grundbelastung der Strecke, die Sie in den allgemeinen Verfahrenseinstellungen unter <span class="gui_element">IV-Einstellungen &gt; Umlegung</span> einstellen können.</p>
+        <p class="Text">Für Abbieger <span class="formula">T</span> und Knoten <span class="formula">N</span> sind analog Überstauungsfaktoren <span class="formula_symbol">s</span><span class="formula_subscript">Abbieger</span>(<span class="formula">T</span>) und <span class="formula_symbol">s</span><span class="formula_subscript">Knoten</span>(<span class="formula">N</span>) definiert. Da in <MadCap:variable name="PTV_Manual.Programmname" /> nur Grundbelastungen für Abbieger und Strecken eingestellt werden können, wird als Grundbelastung für Knoten die Summe der Grundbelastungen der Abbieger am Knoten genommen. Der Überstauungsfaktor <span class="formula_symbol">s</span> des Netzes ist nun das Maximum der Überstauungsfaktoren aller Strecken, Knoten und Abbieger, deren Kapazitäten berücksichtigt werden sollen. Er gibt an, um welchen Faktor eine (Rest-)Kapazität im Netz maximal überschritten wird.</p>
+        <p class="Text">Der dem Kehrwert des Überstauungsfaktors entsprechende Anteil des Verkehrs kann im Netz mit Sicherheit ohne Auftreten von Staueffekten fließen. Wenn <span class="formula_symbol">s</span><span class="_Override" style="font-family: Symbol;">£</span> 1 ist, wird das Verfahren nicht ausgeführt; in diesem Fall sind die korrigierten Belastungen (<span class="formula">Vol</span>) gleich den in der Umlegung ermittelten (<span class="formula">VolDem</span>), sodass kein Stau auftritt.</p>
+        <p class="Text">Falls für eine Strecke, einen Knoten oder einen Abbieger der Nenner in der Formel für den Überstauungsfaktor kleiner oder gleich 0 wird, ist keine freie Kapazität mehr vorhanden und das Verfahren bricht ab.</p>
+        <h5>Stauberechnung</h5>
+        <p class="Text">Bei der Stauberechnung werden Staulängen auf Strecken (und Anbindungen) und (gegenüber der ursprünglichen Belastung) reduzierte Belastungen für Strecken, Knoten, Abbieger und Anbindungen ausgerechnet. Dazu lassen wir schrittweise entlang den in der Umlegung ermittelten Routen Verkehr ins Netz fließen, wobei im Gegensatz zur vorher durchgeführten Umlegung die Regeln 1 bis 3 eingehalten werden. Regel 3 wird  durch den Durchlässigkeitsfaktor <span class="formula">P</span>, den Sie für jede Strecke individuell definieren können, aufgeweicht. Der Wert  beschreibt, welcher Anteil an bestehenden Staus vorbeifahren kann. Für <span class="formula">P </span>= 0 wird Regel 3 eingehalten.</p>
+        <p class="Text">Sei <span class="formula">N</span> die Anzahl der Anteile für Belastungsaufteilung . Diese Größe können Sie in den Verfahrensparametern für das Rückstaumodell einstellen. Die Einhaltung der Regeln 1 bis 3 wird erreicht, indem <span class="formula">N</span> mal für jede Route reihum der <span class="formula">N</span>-te Teil der Routenbelastung von der Quelle zum Ziel hin abgetragen wird, bis eine Strecke erreicht ist, auf der entweder bereits ein Stau vorhanden ist oder ein anderer Engpass (Strecke, Knoten oder Abbieger) bei dem die Kapazität überschritten wird. In diesem Fall wird der Teil der Belastung nicht der Streckenbelastung, sondern der Staulänge zugeschlagen.</p>
+        <p class="Text">Es folgt eine detaillierte Beschreibung der Berechnung.  Die wichtigsten in diesem Abschnitt verwendeten Bezeichner sind folgende:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">VolDem</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Belastung Nachfrage: Belastungen aus der Umlegung ohne Berücksichtigung zurückgehaltener Fahrzeuge durch das Rückstaumodell (d.h. wenn kein Rückstaumodell gerechnet wird bzw. keine Staueffekte auftreten, entspricht <span class="formula">VolDem</span> der Belastung <span class="formula">Vol</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Vol</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">(reduzierte) Belastungen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Cap</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">IV-Kapazität einer Strecke, eines Abbiegers oder eines Knotens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">K</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Standkapazität einer Strecke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Q</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Staulänge auf einer Strecke (oder Anbindung)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">P</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Stau-Durchlässigkeit (Permeabilität) einer Strecke, die beschreibt, welcher Anteil an bestehenden Staus vorbeifahren kann</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula_symbol">s</span>
+                            <span class="_Override" style="font-style: normal;">
+                            </span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Überstauungsfaktor</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Das Netz wird nun zunächst mit dem Teil der Nachfrage belastet, der noch keinen Stau verursacht. Der restliche Verkehr fließt dann schrittweise ins Netz. Als erstes wird also die größte natürliche Zahl <span class="formula">n</span> ermittelt, die <span class="formula">n/N </span><span class="_Override" style="font-family: Symbol;">£</span><span class="formula"> 1/</span><span class="formula_symbol">s</span> erfüllt. Der allgemeine Ablauf sieht dann folgendermaßen aus:</p>
+        <table class="TableStyle-TableStandard" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableStandard.css'); mc-table-style-original: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <pre class="Code" xml:space="preserve">Initialisiere Vol für alle Strecken, Abbieger, Knoten und Anbindungen mit 0.</pre>
+                        <pre class="Code" xml:space="preserve">Initialisiere Q für alle Strecken und Anbindungen mit 0.</pre>
+                        <pre class="Code" xml:space="preserve">Belaste alle Strecken L und Anbindungen C mit VolDem(L)*n/N bzw. VolDem(C)*n/N.</pre>
+                        <pre class="Code" xml:space="preserve">Für j = n+1 bis N</pre>
+                        <pre class="Code" xml:space="preserve">Für jedes Nachfragesegment</pre>
+                        <pre class="Code" xml:space="preserve">Für jede Route R des Nachfragesegments</pre>
+                        <pre class="Code" xml:space="preserve">Belaste die Route R mit VolDem(R) / N.</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Das Belasten einer Route <span class="formula">R</span> mit dem n-ten Teil von <span class="formula">VolDem</span> (<span class="formula">flow</span>) läuft folgendermaßen. Seien <span class="formula">L</span><span class="formula_subscript">0</span>, <span class="formula">L</span><span class="formula_subscript">1</span>, ..., <span class="formula">L</span><span class="formula_subscript">k</span> die verallgemeinerten Strecken einer Route, d.h. <span class="formula">L</span><span class="formula_subscript">0</span> ist Quellanbindung, <span class="formula">L</span><span class="formula_subscript">k</span> ist Zielanbindung, und dazwischen sind die echten Strecken. Es fließt jetzt Verkehr vom Quellbezirk über <span class="formula">L</span><span class="formula_subscript">0</span>, <span class="formula">L</span><span class="formula_subscript">1</span>, ...,  <span class="formula">L</span><span class="formula_subscript">k</span> zum Zielbezirk, wobei der Verkehrsfluss immer durch Kapazitäten von Strecken, Knoten und Abbiegern sowie möglicherweise vorhandene Staus begrenzt wird.</p>
+        <p class="Text">Kapazitäten wirken wie folgt begrenzend. Sei <span class="formula">toNode</span>(<span class="formula">L</span>) der Nach-Knoten einer Strecke <span class="formula">L</span> und <span class="formula">Turn</span>(<span class="formula">L</span><span class="formula_subscript">j</span><span class="formula">, L</span><span class="formula_subscript">j+1</span><span class="formula">,T</span>) der Abbieger von <span class="formula">L</span> nach <span class="formula">L</span><span class="formula_subscript">j+1</span> für Strecken <span class="formula">L</span> und <span class="formula">T</span>. Der Fluss von <span class="formula">L</span><span class="formula_subscript">j</span> nach <span class="formula">L</span><span class="formula_subscript">j+1</span> ist nun begrenzt durch die Kapazität von <span class="formula">L</span><span class="formula_subscript">j</span>, die Kapazität am Nach-Knoten von <span class="formula">L</span><span class="formula_subscript">j</span> und die Kapazität am Abbieger von <span class="formula">Lj</span> nach <span class="formula">L</span><span class="formula_subscript">j+1</span>. </p>
+        <table class="TableStyle-TipHint1" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn Sie eingestellt haben, dass eine Kapazität nicht wirken soll, wird so gerechnet, als ob die entsprechende Kapazität unendlich ist. Anbindungen haben per Definition unendliche Kapazität.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die maximale Belastung <span class="formula">maxFlow</span> von <span class="formula">L</span><span class="formula_subscript">j</span> nach <span class="formula">L</span><span class="formula_subscript">j+1</span> ist also</p>
+        <p class="Formula">
+            <span class="formula">maxFlow</span>(<span class="formula">L</span><span class="formula_subscript">j</span><span class="formula">, L</span><span class="formula_subscript">j+1</span>)<span class="formula"> = </span>min{<span class="formula">Cap</span>(<span class="formula">L</span><span class="formula_subscript">j</span>)<span class="formula"> • ScalingFactor - Vol</span><span class="formula_subscript">Grundbelastung</span>(<span class="formula">L</span><span class="formula_subscript">j</span>)<span class="formula">,</span></p>
+        <p class="Formula">
+            <span class="formula">Cap</span>(<span class="formula">toNode</span>(<span class="formula">L</span><span class="formula_subscript">j</span>))<span class="formula"> • ScalingFactor - Vol</span><span class="formula_subscript">Grundbelastung</span>(<span class="formula">toNode</span>(<span class="formula">L</span><span class="formula_subscript">j</span>))<span class="formula">,</span></p>
+        <p class="Formula">
+            <span class="formula">Cap</span>(<span class="formula">Turn</span>(<span class="formula">L</span><span class="formula_subscript">j</span><span class="formula">, L</span><span class="formula_subscript">j+1</span>))<span class="formula"> • ScalingFactor - Vol</span><span class="formula_subscript">Grundbelastung</span>(<span class="formula">Turn</span>(<span class="formula">L</span><span class="formula_subscript">j</span><span class="formula">, L</span><span class="formula_subscript">j+1</span>))}</p>
+        <p class="Text">Falls auf einer Strecke der Route mehr Verkehr ankommt, als auf die nächste Strecke fließen kann, so fließt nur so viel Verkehr weiter, wie noch freie Kapazität vorhanden ist:</p>
+        <table class="TableStyle-TableStandard" style="width: 494px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableStandard.css'); mc-table-style-original: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="494px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <pre class="Code" xml:space="preserve">Funktion Belaste(R, flow):<br />	Für j = 0 bis k-1<br />		propagatingFlow = flow<br />		Falls Q(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>) &gt; 0<br />			propagatingFlow:= propagatingFlow * Permeability(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>)<br />		propagatingFlow:= min(propagatingFlow, maxFlow(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>, L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j+1</span>))<br />		Vol(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>) := Vol(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>) + propagatingFlow<br />		Vol(toNode(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>)) := Vol(toNode(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>)) + propagatingFlow<br />		Vol(Turn(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>, L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j+1</span>)) := Vol(Turn(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>, L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j+1</span>)) + propagatingFlow<br />		Q(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>) := Q(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>) + (flow - propagatingFlow)<br />	Trage Stau rückwärts ab</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Verkehr, der nicht auf die nächste Strecke weiterfließen kann, wird zur Staulänge hinzugefügt. Überschreitet der Stau auf einer Strecke die maximale Standkapazität <span class="formula">K</span>, so bilden sich Rückstaus auf vorherigen Strecken der Route. Dabei muss der Rückstau von der Belastung der vorherige(n) Strecke(n) (und Knoten und Abbieger) wieder subtrahiert werden, denn dieser Verkehr kann gar nicht erst auf die weiter hinten liegende Strecke gelangt sein:</p>
+        <table class="TableStyle-TableStandard" style="width: 494px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableStandard.css'); mc-table-style-original: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="494px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <pre class="Code">Funktion StauAbtragen(R):<br />	propagatingQ = 0<br />	Für j = k-1 bis 1<br />		Falls Q(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>) &gt; K(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>)<br />			propagatingQ := Q(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>) - K(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>)<br />			Q(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>) := K(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>)<br />			Q(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j-1</span>) := Q(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j-1</span>) + propagatingQ<br />			Vol(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j-1</span>) = Vol(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j-1</span>) - propagatingQ<br />			Vol(toNode(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j-1</span>)) := Vol(toNode(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j-1</span>)) - propagatingQ<br />			Vol(Turn(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j-1</span>, L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>)) := Vol(Turn(L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j-1</span>, L<span class="_Override" style="font-size: 80%;vertical-align: sub;">j</span>)) - propagatingQ</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Für Knoten ist noch eine Sonderbehandlung nötig: Obwohl es an Anbindungen keine Abbieger gibt, werden im Verfahren Knoten an Anbindungen belastet. Damit an Anbindungsknoten nach dem Verfahren die Knotenbelastung gleich der Summe der Abbiegerbelastungen ist, wird an Anbindungsknoten nach dem Verfahren die Knotenbelastung neu aus den Abbiegerbelastungen berechnet.</p>
+        <p class="Text">Wir veranschaulichen das Verfahren anhand eines einfachen Beispiels mit zwei Routen. Route&#160;1 führt von A nach D, Route&#160;2 von B nach C. Beide Routen besitzen eine Belastung <span class="formula">VolDem</span> von 200&#160;Fahrzeugen. Die Belastung wird in vier Iterationsschritten mit jeweils 50&#160;Fahrzeugen auf die Routen aufgeteilt. Die Anzahl der Iterationsschritte ergibt sich aus dem Verfahrensparameter <span class="gui_element">Anzahl der Anteile für Belastungsaufteilung</span>. Zur Vereinfachung wird in dem Beispiel nur die Streckenkapazität als begrenzende Kapazität berücksichtigt. Die Route&#160;1 wird jeweils zuerst belastet. Auf der Route&#160;1 gibt es einen Engpass. Auf der Route&#160;2 kommt es im weiteren Verlauf zu einem Rückstau, obwohl sie nicht über die Engpass-Strecke führt.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_BloBackModel_1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1633159">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_13287">
+            </a>Rückstaumodell, Stauberechnung: Iterationsschritte 1 und 2.</p>
+        <p class="Text">In den ersten beiden Iterationsschritten werden die beiden Routen mit jeweils 50 Fahrzeugen belastet. Es treten noch keine Staus auf (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1633159">Abbildung 1</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_BloBackModel_2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1427401">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_26544">
+            </a>Rückstaumodell, Stauberechnung: Iterationsschritt 3, Route 1</p>
+        <p class="Text">Im Iterationsschritt 3, Route&#160;1, gibt es auf der hervorgehobenen Strecke einen Engpass. Da die Standkapazität dort nicht ausreicht, bildet sich ein Rückstau auf der davor liegenden Strecke (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1427401">Abbildung 2</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_BloBackModel_3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">
+            <a name="1_benutzermodell_iv_2033098965_1427403">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_93910">
+            </a>Rückstaumodell, Stauberechnung:: Iterationsschritt 3, Route 2</p>
+        <p class="Text">Da auf der mittleren Strecke nun ein Stau ist, bleiben auch die Fahrzeuge auf Route&#160;2 dort stecken (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1427403">Abbildung 3</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_BloBackModel_4.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 4: ">
+            <a name="1_benutzermodell_iv_2033098965_1427405">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_38408">
+            </a>Rückstaumodell,  Stauberechnung: Iterationsschritt 4, Route 1</p>
+        <p class="Text">In Iterationsschritt&#160;4, Route 1, kommen weitere 50 Fahrzeuge hinzu. Die Standkapazität auf der mittleren Strecke ist erschöpft, weshalb sich weiter Fahrzeuge zurückstauen (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1427405">Abbildung 4</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_BloBackModel_5.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 5: ">
+            <a name="1_benutzermodell_iv_2033098965_1639890">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_12739">
+            </a>Rückstaumodell, Stauberechnung: Iterationsschritt 4, Route 2</p>
+        <p class="Text">Die 50 Fahrzeuge von Route 2 gelangen gar nicht erst auf die mittlere Strecke und bleiben alle auf der ersten Strecke im Stau stecken (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1639890">Abbildung 5</MadCap:xref>).</p>
+        <p class="Text">Im Ergebnis der Stauberechnung werden die lokalen Staulängen jeder Strecke sowie die korrigierte Belastungen ausgewiesen.</p>
+        <h5>Bestimmung der Wartezeiten</h5>
+        <p class="Text"> Aus der Staulänge nach der  Stauberechnung ergibt sich die Wartezeit als Integral über die Staulänge.</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1427461">Abbildung 6</MadCap:xref> zeigt ein Beispiel für die Darstellung der Wartezeit als Integral über die Staulänge.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_BlockingBack6.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 6: ">
+            <a name="1_benutzermodell_iv_2033098965_1427461">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_59951">
+            </a>Wartezeit als Integral über die Staulänge</p>
+        <p class="Text">Dieses lässt sich als Formel direkt ausdrücken:</p>
+        <p class="Text">
+            <img src="../Resources/Images/7_149.png" />
+        </p>
+        <p class="Text">Dabei ist <span class="formula">I</span> der Umlegungszeitraum  in Sekunden. Die Wartezeit ergibt sich aus dem Umlegungszeitraum  und der Staulänge.</p>
+        <p class="Text">Die durchschnittliche Wartezeit pro Fahrzeugeinheit ergibt sich daraus:</p>
+        <p class="Text">
+            <img src="../Resources/Images/7_13.jpg" />
+        </p>
+        <p class="Text">Die effektive Kapazität ergibt sich für Strecken, auf denen ein Stau beobachtet werden kann, durch das Minimum aus dem Streckenattribut Kapazität <span class="formula">Cap</span> und der durch Rückstau reduzierten Belastung <span class="formula">Vol</span>.</p>
+    </body>
+</html>

@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="676" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;ServiceKm;LeerKm">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_betreibermodell_oev_1878159914_1114672">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_88203">
+            </a>Berechnung von Betriebskosten</h3>
+        <p class="Text">
+            <MadCap:keyword term="ÖV:betriebliche Kennzahlen: Betriebskosten" />Die Gesamtkosten lassen sich in fahrzeugtypabhängige Kosten und Infrastrukturkosten gliedern. Insgesamt stehen folgende Kostenblöcke zur Verfügung:</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="106px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="389px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Fahrzeugtypabhängige Kosten</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Stundenkosten / <span class="gui_element">Kosten Zeit</span></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Einsatzzeitabhängige Kosten für den Personaleinsatz</p>
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Zeitkosten = Servicezeit • Stundenkostensatz der Fahrplanfahrten + Leerzeit • Stundenkostensatz der Leerfahrten</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Kilometerkosten / <span class="gui_element">Kosten Entfernung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Kilometerabhängige Kosten für Kraftstoff, Reparatur, etc.</p>
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Entfernungskosten = ServiceKm • Kilometerkostensatz der Fahrplanfahrten + LeerKm • Kilometerkostensatz der Leerfahrten</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Fahrzeugkosten / <span class="gui_element">Kosten Fahrzeug</span></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">Zuteilung der fixen Kosten für ein Fahrzeug (Kapitaldienst und sonstige Fixkosten wie zum Beispiel Versicherungskosten).</p>
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Fahrzeugkosten = Fahrzeugeinheitenkostensatz • Fahrzeuganzahl</span>
+                        </p>
+                        <p class="CellText">Die Fahrzeuganzahl ist ein Ausgabeattribut der Umlaufbildung.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Fahrzeugtypabhängige Kosten</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="106px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="389px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Infrastrukturkosten</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Haltepunktkosten / <span class="gui_element">Kosten Haltepunkt</span></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Kosten für die Benutzung von Haltepunkten. Diese können sich zusammensetzen aus Abschreibungskosten (zum Beispiel Investitionskosten), laufenden Kosten (zum Beispiel Unterhaltskosten) und Benutzungskosten (zum Beispiel Gebühren für die Haltestellennutzung).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Kosten 1/2/3 Haltepunkte</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Drei Kostensätze, die in die Berechnung der Haltepunktkosten eingehen <MadCap:xref class="sieheUeberschrSeite" href="1_7_Haltepunktkosten.htm#1_betreibermodell_oev_1878159914_1165536"><span style="color: Black;" class="mcFormatColor">(</span><u>Haltepunktkosten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Streckenkosten / <span class="gui_element">Kosten Strecken</span></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Kosten für die Benutzung von Strecken (Infrastrukturkosten). Die Streckenkosten werden gleichmäßig auf die Fahrplanfahrten aufgeteilt, die die Strecke benutzen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Kosten 1/2/3 Strecken</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Drei Kostensätze, die in die Berechnung der Streckenkosten eingehen <MadCap:xref class="sieheUeberschrSeite" href="1_7_Streckenkosten.htm#1_betreibermodell_oev_1878159914_1307634"><span style="color: Black;" class="mcFormatColor">(</span><u>Streckenkosten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Betreiberkosten / <span class="gui_element">Kosten Betreiber</span></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Anteilige Kosten für allgemeine betriebliche Kosten. Diese können sich zusammensetzen aus Abschreibungskosten (zum Beispiel Investitionskosten) oder laufenden Kosten (zum Beispiel Unterhaltskosten).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Kosten 1/2/3 Betreiber</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Drei Kostensätze, die in die Berechnung der Betreiberkosten eingehen <MadCap:xref class="sieheUeberschrSeite" href="1_7_Betreiberkosten.htm#1_betreibermodell_oev_1878159914_1122029"><span style="color: Black;" class="mcFormatColor">(</span><u>Betreiberkosten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Infrastrukturkosten</p>
+            </caption>
+        </table>
+        <p class="Text">Die Gesamtkosten, die für den ÖV-Betrieb anfallen, werden in folgendem Attribut ausgegeben.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="86px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="410px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Gesamtkosten</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Kosten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Kosten = Zeitkosten + Entfernungskosten + Fahrzeugkosten + Haltepunktkosten + Streckenkosten + Betreiberkosten</span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">Gesamtkosten</p>
+            </caption>
+        </table>
+    </body>
+</html>

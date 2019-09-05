@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="688" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;Anz;Häufigkeits;S4" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1028791">
+            </a>
+            <a name="1_netzmodell_1240632468_93469">
+            </a>Indirekte Attribute</h3>
+        <p class="Text">
+            <MadCap:keyword term="Attribute: indirekte" />Neben den direkten Attributen des aktuell betrachteten Netzobjekts kann auch auf indirekte Attribute zugegriffen werden. Dies sind die direkten Attribute von Objekten anderer Netzobjekttypen, welche zum aktuell markierten Objekt in einer Netzmodell-Relation stehen. Daher stehen für ein Netzobjekt sowohl dessen direkte Attribute als auch seine Relationen zu anderen Netzobjekten und damit deren Attribute zur Auswahl.</p>
+        <p class="Text">Indirekte Attribute erlauben damit die Sicht auf andere Netzobjekte, die zum Bezugsobjekt in einer bestimmten Beziehung stehen. Denn oft kann es hilfreich sein, Netzobjekte nicht nach eigenen Eigenschaften, sondern nach Eigenschaften seiner (logischen) Nachbarobjekte zu filtern, oder diese fremden Eigenschaften neben eigenen in der gleichen Liste sichtbar zu machen, oder indirekte Attribute für die grafische Darstellung des Netzmodells zu verwenden (zum Beispiel aggregierte Werte von Attributen aller Haltepunkte, die zu einer Haltestelle gehören, in einer Liste anzuzeigen).</p>
+        <p class="Text">
+            <MadCap:keyword term="Indirekte Attribute: Relationstypen" />Hierzu werden die Relationen zwischen den Objekttypen des Netzmodells (zum Beispiel für die Relation Strecke <span class="_Override" style="font-family: Wingdings;">à</span> Von-Knoten <span class="_Override" style="font-family: Wingdings;">à</span> ausgehende Strecken) auch an der Programmoberfläche explizit angezeigt und erlauben den Durchgriff auf alle Attribute der dadurch referenzierten Fremdobjekte. Die drei möglichen Relationstypen zwischen dem aktuell selektierten Netzobjekttyp und anderen Netzobjekttypen werden folgendermaßen dargestellt.</p>
+        <ul>
+            <LI class="List0">
+                <img src="../Resources/Images_4_all/ICO_Relation_1_1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 763717px;margin-bottom: 0, 98674px;" /> genau eine Relation (1..1). Eine solche Relation besteht zum Beispiel zwischen Anbindung und Bezirk: jede Anbindung verbindet genau einen Bezirk mit dem Anbindungsknoten. Im Beispiel in <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182068">Tabelle&#160;18</MadCap:xref> wird für die Anbindungen das indirekte Attribut <span class="gui_element">Bezirk\Anzahl Anbindungen</span> ausgegeben. So können Sie für jede Anbindung sehen, wie viele weitere Anbindungen der Bezirk dieser Anbindung besitzt.</LI>
+        </ul>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/AREA_IndirectAttribute_1_1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/AREA_IndirectAttribut_1_1_List.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000067px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Auswahl des indirekten Attributs <span class="gui_element">Bezirk\Anzahl Anbindungen</span> im Attributauswahlfenster</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Darstellung des indirekten Attributs in der Liste neben direkten Attributen der Anbindung</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_netzmodell_1240632468_1182068">
+                    </a>
+                    <a name="1_netzmodell_1240632468_40392">
+                    </a>Beispiel für eine 1..1 Beziehung im <MadCap:variable name="PTV_Manual.Programmname" /> Netzmodell</p>
+            </caption>
+        </table>
+        <ul>
+            <LI class="List0">
+                <img src="../Resources/Images_4_all/ICO_Relation_0_1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9983615px;margin-bottom: 1, 011402px;" /> eine oder keine Relation (0..1). Eine solche Relation besteht zum Beispiel zwischen Knoten und Oberknoten. Ein Knoten kann einem Oberknoten zugeordnet sein, muss aber nicht. Außerdem kann jeder Knoten nur einem Oberknoten zugeordnet sein. Mit Hilfe eines indirekten Attributs können Sie, wie in <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182099">Tabelle&#160;19</MadCap:xref> dargestellt, für jeden Knoten sehen, welchem Oberknoten dieser zugeordnet ist, indem Sie den Namen des Oberknotens als indirektes Attribut auswählen (<span class="gui_element">Oberknoten\Name</span>).</LI>
+        </ul>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/AREA_IndirectAttribute_0_1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997767px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/AREA_IndirectAttribut_0_1_List.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 0, 9997767px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Auswahl des indirekten Attributs <span class="gui_element">Oberknoten\Name </span>im Attributauswahlfenster</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Darstellung des indirekten Attributs in der Liste neben direkten Attributen des Knotens</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_netzmodell_1240632468_1182099">
+                    </a>
+                    <a name="1_netzmodell_1240632468_24323">
+                    </a>Beispiel für eine 0..1 Beziehung im <MadCap:variable name="PTV_Manual.Programmname" />-Netzmodell</p>
+            </caption>
+        </table>
+        <ul>
+            <LI class="List0">
+                <img src="../Resources/Images_4_all/ICO_Relation_0_n.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9955271px;margin-bottom: 0, 9938277px;" /> mehrere Relationen (0..n). Eine solche Relation besteht zum Beispiel zwischen Haltestellenbereichen und Haltepunkten. Da hier keine 1:1 Verknüpfung zwischen den Netzobjekttypen besteht, müssen Sie eine Aggregationsfunktion auswählen, die alle in Beziehung stehenden Netzobjekte zusammenfasst (so sorgt die Aggregationsfunktion Sum zum Beispiel dafür, dass das indirekte Attribut mit der Summe zum Beispiel aller Einsteiger an allen Haltepunkten, die zum ausgewählten Haltestellenbereich in Beziehung stehen, belegt wird). Im Folgenden finden Sie ein Beispiel für jede der in <MadCap:variable name="PTV_Manual.Programmname" /> angebotenen Aggregationsfunktionen.</LI>
+        </ul>
+        <p class="Text">
+            <MadCap:keyword term="Indirekte Attribute: Aggregationsfunktionen" />
+            <MadCap:keyword term="Indirekte Attribute: Anz und AnzAktive" />Wird eine 0..n Relation an der <MadCap:variable name="PTV_Manual.Programmname" />-Oberfläche ausgewählt, dann erscheinen die Aggregationsfunktionen von jeweils allen und nur den aktiven Netzobjekten. Aggregationsfunktionen stehen nicht bei 1..1 und 0..1 Beziehungen zur Verfügung, da es in diesem Fall zum aktuellen Netzobjekt nur eine Relation zu einem anderen Netzobjekt gibt (zum Beispiel ist jeder Strecke nur genau ein Streckentyp zugeordnet). Für 0..n Beziehungen stehen folgende Aggregationsfunktionen zur Verfügung.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Anz</span> und <span class="gui_element">AnzAktive</span></LI>
+        </ul>
+        <p class="List_Text0">Ermittelt die Anzahl der in Beziehung stehenden Netzobjekte. In <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182127">Tabelle&#160;20</MadCap:xref> wird die Anzahl der zu einer Haltestelle gehörenden Haltestellenbereiche bestimmt.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/AREA_No_StopAreas.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000067px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/AREA_No_StopAreas_List.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 1, 000067px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Auswahl des indirekten Attributs<span class="gui_element"> Anz: Haltestellenbereiche</span> im Attributauswahlfenster für Haltestellen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Darstellung des indirekten Attributs in der Liste neben direkten Attributen der Haltestelle</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+                    <a name="1_netzmodell_1240632468_1182127">
+                    </a>
+                    <a name="1_netzmodell_1240632468_86730">
+                    </a>Beispiel für eine 0..n Beziehung mit der Aggregationsfunktion Anz</p>
+            </caption>
+        </table>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">
+                    <MadCap:keyword term="Indirekte Attribute: Min und MinAktive" />Min</span> und <span class="gui_element">MinAktive</span></LI>
+        </ul>
+        <p class="List_Text0">Ermittelt für das gewählte Attribut den minimalen Wert aller in Beziehung stehenden Netzobjekte. In <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182156">Tabelle&#160;21</MadCap:xref> wird für die Haltestellenbereiche die minimale Anzahl Einsteiger an allen Haltepunkten des Haltestellenbereichs ausgegeben.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/AREA_Min_StopPoints.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/AREA_Min_StopPoints_Lists.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000067px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Auswahl des indirekten Attributs <span class="gui_element">Min:Haltepunkte\Einsteiger(AP) </span>im Attributauswahlfenster</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Darstellung des indirekten Attributs in der Liste neben direkten Attributen des Haltestellenbereichs</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 4: ">
+                    <a name="1_netzmodell_1240632468_1182156">
+                    </a>
+                    <a name="1_netzmodell_1240632468_40609">
+                    </a>Beispiel für eine 0..n Beziehung mit der Aggregationsfunktion Min</p>
+            </caption>
+        </table>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">
+                    <MadCap:keyword term="Indirekte Attribute: Max und MaxAktive" />Max</span> und <span class="gui_element">MaxAktive</span></LI>
+        </ul>
+        <p class="List_Text0">Ermittelt für das gewählte Attribut den maximalen Wert aller in Beziehung stehenden Netzobjekte. <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182184">Tabelle&#160;22</MadCap:xref> zeigt für dasselbe Beispiel die maximale Anzahl Einsteiger an allen Haltepunkten des Haltestellenbereichs.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/AREA_Max_StopPoints.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997691px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/AREA_Max_StopPoints_Lists.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000067px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Auswahl des indirekten Attributs <span class="gui_element">Max:Haltepunkte\Einsteiger(AP) </span>im Attributauswahlfenster</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Darstellung des indirekten Attributs in der Liste neben direkten Attributen des Haltestellenbereichs</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 5: ">
+                    <a name="1_netzmodell_1240632468_1182184">
+                    </a>
+                    <a name="1_netzmodell_1240632468_19214">
+                    </a>Beispiel für eine 0..n Beziehung mit der Aggregationsfunktion Max</p>
+            </caption>
+        </table>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Sum</span> und <span class="gui_element">SumAktive</span></LI>
+        </ul>
+        <p class="List_Text0">
+            <MadCap:keyword term="Indirekte Attribute: Sum und SumAktive" />Bildet für das gewählte Attribut die Summe der Werte aller in Beziehung stehenden Netzobjekte. <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1100531">Tabelle&#160;</MadCap:xref> zeigt für dasselbe Beispiel die Summe der Einsteiger an allen Haltepunkten des Haltestellenbereichs.</p>
+        <p class="Tabledist">
+            <a name="1_netzmodell_1240632468_1100531">
+            </a>
+            <a name="1_netzmodell_1240632468_39766">
+            </a>
+            <a name="1_netzmodell_1240632468_1100531">
+            </a>
+        </p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/AREA_Sum_StopPoints.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH" style="text-align: center;">
+                            <img src="../Resources/Images/AREA_Sum_StopPoints_Lists.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000067px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Auswahl des indirekten Attributs <span class="gui_element">Sum:Haltepunkte\Einsteiger(AP) </span>im Attributauswahlfenster</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Darstellung des indirekten Attributs in der Liste neben direkten Attributen des Haltestellenbereichs</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 6: ">Beispiel für eine 0..n Beziehung mit der Aggregationsfunktion Sum</p>
+            </caption>
+        </table>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Durchschnitt</span> und <span class="gui_element">DurchschnittAktive</span></LI>
+        </ul>
+        <p class="List_Text0">
+            <MadCap:keyword term="Indirekte Attribute: Durchschnitt und DurchschnittAktive" />Bildet für das gewählte Attribut den Durchschnitt der Werte aller in Beziehung stehenden Netzobjekte. <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182284">Tabelle&#160;24</MadCap:xref> zeigt für dasselbe Beispiel die durchschnittliche Einsteigerzahl über alle Haltepunkte des Haltestellenbereichs.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 497px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="239px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="258px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/AREA_Avg_StopPoints.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH" style="text-align: center;">
+                            <img src="../Resources/Images/AREA_Avg_StopPoints_Lists.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000067px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Auswahl des indirekten Attributs<span class="gui_element"> Durchschnitt:Haltepunkte\Einsteiger(AP) </span>im Attributauswahlfenster</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Darstellung des indirekten Attributs in der Liste neben direkten Attributen des Haltestellenbereichs</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 7: ">
+                    <a name="1_netzmodell_1240632468_1182284">
+                    </a>
+                    <a name="1_netzmodell_1240632468_79677">
+                    </a>Beispiel für eine 0..n Beziehung mit der Aggregationsfunktion Durchschnitt</p>
+            </caption>
+        </table>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Verketten</span> und <span class="gui_element">VerkettenAktive</span></LI>
+        </ul>
+        <p class="List_Text0">
+            <MadCap:keyword term="Indirekte Attribute: Verketten und VerkettenAktive" />Reiht für das gewählte Attribut alle Werte der in Beziehung stehenden Netzobjekte hintereinander. <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182312">Tabelle&#160;25</MadCap:xref> zeigt für dasselbe Beispiel, wie viele Einsteiger es an jedem Haltepunkt des Haltestellenbereichs gibt. So steigen etwa an den Haltepunkten des Haltestellenbereichs 2012 jeweils 545 und 1046 Fahrgäste ein.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="240px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="256px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/AREA_Con_StopPoints.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH" style="text-align: center;">
+                            <img src="../Resources/Images/AREA_Con_StopPoints_Lists.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000067px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Auswahl des indirekten Attributs <span class="gui_element">Verketten:Haltepunkte\Einsteiger(AP) </span>im Attributauswahlfenster</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Darstellung des indirekten Attributs in der Liste neben direkten Attributen des Haltestellenbereichs</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 8: ">
+                    <a name="1_netzmodell_1240632468_1182312">
+                    </a>
+                    <a name="1_netzmodell_1240632468_49089">
+                    </a>Beispiel für eine 0..n Beziehung mit der Aggregationsfunktion Verketten</p>
+            </caption>
+        </table>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Häufigkeit</span> und <span class="gui_element">HäufigkeitAktive</span></LI>
+        </ul>
+        <p class="List_Text0">
+            <MadCap:keyword term="Indirekte Attribute: Häufigkeit und HäufigkeitAktive" />Im Gegensatz zur Aggregationsfunktion Verketten wird hier jeder vorkommende Wert nur einmal zusammen mit der Häufigkeit seines Vorkommens ausgegeben. Diese Ausgabe bietet eine erhöhte Übersichtlichkeit insbesondere dann, wenn es dem Anwender nur darauf ankommt, welche Werte überhaupt und wie oft vorkommen. <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182340">Tabelle&#160;26</MadCap:xref> zeigt den Unterschied zwischen dem Verketten und der Häufigkeits-Darstellung. Hier wird für jede Linie die Anzahl Haltepunkte der zugehörigen Linienrouten dargestellt. So gehören zur Linie S4 etwa 13 Linienrouten. Zwei der Linienrouten besitzen dabei 10 Haltepunkte, 4 Linienrouten davon besitzen 20 Haltepunkte, und 7 Linienrouten besitzen 21 Haltepunkte.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="225px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="271px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/AREA_Hist_Linienrouten.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000074px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH" style="text-align: center;">
+                            <img src="../Resources/Images/AREA_Hist_Linienrouten_Lists.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997767px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Auswahl des indirekten Attributs<span class="gui_element"> Häufigkeit:Linienrouten\Anzahl Haltepunkte </span>im Attributauswahlfenster</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Darstellung des indirekten Attributs in der Liste neben direkten Attributen der Linie</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 9: ">
+                    <a name="1_netzmodell_1240632468_1182340">
+                    </a>
+                    <a name="1_netzmodell_1240632468_71267">
+                    </a>Beispiel für eine 0..n Beziehung mit der Aggregationsfunktion Histogramm</p>
+            </caption>
+        </table>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Verschiedene </span> und <span class="gui_element">VerschiedeneAktive</span></LI>
+        </ul>
+        <p class="List_Text0">
+            <MadCap:keyword term="Indirekte Attribute: Verschiedene und VerschiedneAktive" />Im Gegensatz zur Aggregationsfunktion Häufigkeit wird hier jeder vorkommende Wert nur einmal unabhängig von der Häufigkeit seines Vorkommens ausgegeben. Diese Ausgabe bietet eine erhöhte Übersichtlichkeit insbesondere dann, wenn es dem Anwender nur darauf ankommt, welche Werte überhaupt vorkommen. <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182340">Tabelle&#160;26</MadCap:xref> zeigt den Unterschied zwischen der Häufigkeits-Darstellung und der Darstellung Verschiedene. Hier wird für jede Strecke die Kapazität IV der Eingangsabbieger angezeigt.</p>
+        <table class="TableStyle-TableStand_withTitle" style="caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');width: 496px;" cellspacing="0">
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" style="width: 190px;" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" style="width: 304px;" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/AREA_Distinct_Links.png" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH" style="text-align: center;">
+                            <img src="../Resources/Images/AREA_Distinct_Links_list.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997767px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Auswahl des indirekten Attributs<span class="gui_element"> Verschiedene:Eingangsabbieger\Kapazität IV</span>im Attributauswahlfenster</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Darstellung des indirekten Attributs in der Liste neben direkten Attributen der Strecke</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 10: ">
+                    <a name="1_netzmodell_1240632468_1182340">
+                    </a>
+                    <a name="1_netzmodell_1240632468_71267">
+                    </a>Beispiel für eine 0..n Beziehung mit der Aggregationsfunktion Verschiedene</p>
+            </caption>
+        </table>
+        <p class="Text">Indirekte Attribute stehen auch für die Operation <span class="gui_element" style="font-weight: normal;">Verschneiden</span> uneingeschränkt als Quellattribut zur Verfügung und ermöglichen so die Kombination von geometrischen und logischen Beziehungen <MadCap:xref class="sieheUeberschrSeite" href="../1_GIS-Funktionalitaet/1_10_Verschneiden.htm#1_gis_funktionalitaet_3291278398_1035632"><span style="color: Black;" class="mcFormatColor">(</span><u>Verschneiden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+    </body>
+</html>

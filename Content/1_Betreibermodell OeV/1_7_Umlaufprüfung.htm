@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="2396" MadCap:lastWidth="605" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km;max;Richtungs;te;LocationFault;TimeFault;LayoverTimeFault;VehicleFault;unchecked;Zeitunterschreitungs" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1360122">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_80930">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_18819">
+            </a>
+            <MadCap:keyword term="Umlaufbildung: Umlaufprüfung" />
+            <MadCap:keyword term="Umlaufprüfung" />Umlaufprüfung</h4>
+        <p class="Text">In der Umlaufbildung früherer <MadCap:variable name="PTV_Manual.Programmname" />-Versionen mussten Umläufe stets korrekt sein, das heißt, sie durften zum Beispiel weder Zeit- noch Ortsbrüche aufweisen. Dies hatte zur Folge, dass die Umläufe bei wesentlichen Änderungen im Netz (zum Beispiel an Fahrplanfahrten) gelöscht wurden. Dies ist insbesondere dann nicht tolerierbar, wenn Umläufe manuell durch einen Planer bearbeitet wurden und dadurch nicht ohne Weiteres durch erneute Ausführung der Umlaufbildung wiederherstellbar sind. In dem nun in <MadCap:variable name="PTV_Manual.Programmname" /> verfügbaren Umlauf-Datenmodell wird die Konsistenz der Umläufe zum Netz sichergestellt und dafür die jederzeitige Korrektheit des Umlaufs in sich nicht gefordert. Vielmehr haben Sie die Möglichkeit, mit Hilfe der Umlaufprüfung für jeden Umlauf einen Status mit Konsistenzinformationen zu berechnen (im Folgenden Fehlerflags genannt). Diese Fehlerflags geben Ihnen eine Information darüber, ob die Umläufe fehlerfrei sind und – falls nicht – in welchen Bereichen Inkonsistenzen auftreten. Es gibt insgesamt acht Fehlerflags.</p>
+        <p class="Text">Das Zustandsmodell in <MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1187275">Abbildung&#160;179</MadCap:xref> zeigt die möglichen Zustandsübergänge eines Umlaufs und wie die acht Fehlerflags dabei gesetzt werden.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_StateModel.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_betreibermodell_oev_1878159914_1187275">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_14640">
+            </a>Zustandsmodell für Umläufe</p>
+        <p class="Text">Ändert sich die Netzgrundlage, so reagieren die Umläufe darauf. Es werden Änderungen an der Umlaufversion, den Umlaufelementen und den Fahrplanfahrtabschnitten berücksichtigt. Außerdem reagieren Umläufe auf Änderungen der grundsätzlichen Netzeinstellungen, vor allem am Kalender.</p>
+        <ul>
+            <LI class="List0">Ortsbruch (LocationFault)</LI>
+        </ul>
+        <p class="List_Text0">Zwei in einem Umlauf aufeinander folgende Fahrten passen nicht zusammen, da die Nachfolgefahrt nicht am selben Haltepunkt beginnt, an dem die Vorgängerfahrt endet.</p>
+        <ul>
+            <LI class="List0">Zeitbruch (TimeFault)</LI>
+        </ul>
+        <p class="List_Text0">Zwei in einem Umlauf aufeinander folgende Fahrten überlappen sich zeitlich. Das bedeutet, die Vorgängerfahrt kommt später an als die Nachfolgefahrt abfährt.</p>
+        <ul>
+            <LI class="List0">Wendezeitfehler (LayoverTimeFault)</LI>
+        </ul>
+        <p class="List_Text0">Zwei in einem Umlauf aufeinander folgende Fahrten überlappen sich zeitlich nur dann, wenn bei der ankommenden Fahrt die Nachbereitungszeit und bei der abfahrenden Fahrt die Vorbereitungszeit miteinbezogen wird. Das bedeutet, dass die eingeplante Wendezeit nicht ausreichend ist. In der Praxis kann ein solcher Fehler manchmal ignoriert werden, was aber manuell zu prüfen ist. Sind die beiden Fahrten durch eine Zwangsbindung miteinander verbunden, wird die Einhaltung der Vor- und Nachbereitungszeit für diesen Übergang nicht geprüft, da die Zwangsbindung Vorrang hat.</p>
+        <ul>
+            <LI class="List0">Fahrzeug falsch (VehicleFault)</LI>
+        </ul>
+        <p class="List_Text0">Es gibt innerhalb des Umlaufs Fahrplanfahrtabschnitte, denen eine nicht zum Umlauf passende Fahrzeugkombination zugeordnet wurde. Dieser Fehler kann zum Beispiel auftreten, wenn die Umlaufbildung einen Umlauf für einen Standardbus berechnet hat und später vom Anwender manuell einem der Fahrtabschnitte ein Gelenkbus zugeordnet wird. Bei der Auswertung dieses Fehlers geht das Attribut <span class="gui_element">Hat Fahrzeugaustausch</span> ein. Dieses entscheidet, ob das Fahrplanfahrtabschnitts-Attribut <span class="gui_element">Fahrzeugkombination</span> oder <span class="gui_element">Fahrzeugkombinations-Set</span> für den Abgleich herangezogen wird.</p>
+        <ul>
+            <LI class="List0">Umlauftags-Fehler (EmptyDayFault)</LI>
+        </ul>
+        <p class="List_Text0">Gibt es einen leeren Umlauftag, so wird dieser Fehler gesetzt. Das bedeutet es gibt einen Umlauftag, an dem an keinem Kalendertag ein Umlaufelement (abgesehen von Stand-Elementen) liegt. Die Konsequenz dieses Fehlers ist, dass ein Fahrzeug zu viel eingeplant wurde.</p>
+        <ul>
+            <LI class="List0">Grenzwertfehler (LimitFault)</LI>
+        </ul>
+        <p class="List_Text0">Dieser Fehler kann nur auftreten, wenn es benutzerdefinierte Umlaufelemente mit Zeit- oder Längengrenzwerten &gt;0 gibt. Der Längengrenzwert gibt dabei die Länge an, die zwischen zwei Leistungen dieses Typs innerhalb eines Umlaufs maximal zurückgelegt werden darf. Der Zeitgrenzwert wirkt analog für Zeitdauern. Wird einer der Grenzwerte im Umlauf überschritten, wird das durch dieses Fehlerflag angezeigt.</p>
+        <ul>
+            <LI class="List0">Zwangsbindungsfehler (ForcedChainingFault)</LI>
+        </ul>
+        <p class="List_Text0">Es gibt im Umlauf einen Fahrplanfahrtabschnitt, der Ausgangspunkt einer gültigen Zwangsbindung ist, die aber im Umlauf nicht realisiert wird. Der Nachfolger dieses Fahrplanfahrtabschnitts im Umlauf ist also nicht der Ziel-Fahrplanfahrtabschnitt der Zwangsbindung.</p>
+        <ul>
+            <LI class="List0">Fahrtrichtungsfehler (DirectionFault)</LI>
+        </ul>
+        <p class="List_Text0">Es gibt im Umlauf entweder einen Fahrplanfahrtabschnitt, der an verschiedenen Tagen in umgekehrter Fahrtrichtung bedient wird, oder aber im Fall eines abgeschlossenen Umlaufs ändert sich die Fahrtrichtung des Fahrzeugs nach einem kompletten Durchlauf des Umlaufs. Dieser Fehler wird nur dann geprüft, wenn am Umlauf das Attribut <span class="gui_element">Fahrtrichtung beachten</span> wahr ist.</p>
+        <p class="Text">Besitzt ein Umlauf die Flags ungeprüft (unchecked) oder Zeitbruch oder Ortsbruch, so darf er nicht in nachfolgenden Auswertungen verwendet werden (zum Beispiel im Verfahren ÖV-betriebliche Kennzahlen). Die anderen sechs Fehlerflags hingegen schränken die Verwendbarkeit nicht ein. Dies ist notwendig, um auch Planungen aus anderen Systemen übernehmen und für die Linienleistungs- und -erfolgsrechnung im Verfahren ÖV-betriebliche Kennzahlen <MadCap:xref class="sieheUeberschrSeite" href="1_7_Verfahrensbeschreibung ÖV-Umsetzmatrix.htm#1_betreibermodell_oev_1878159914_1203440"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahrensbeschreibung ÖV-Umsetzmatrix</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> verwenden zu können, die häufig solche Fehler (teilweise gewollt) enthalten.</p>
+        <h5>
+            <MadCap:keyword term="Umlaufprüfung: forcierte" />
+            <MadCap:keyword term="Umlaufprüfung: gewöhnliche" />
+            <a name="1_betreibermodell_oev_1878159914_68865">
+            </a>Gewöhnliche und forcierte Umlaufprüfung</h5>
+        <p class="Text">Es können durch nachträgliche Netzänderungen zwei Arten von Inkonsistenzen zwischen Netzgrundlage und Umläufen entstehen, die in der gewöhnlichen Umlaufprüfung nicht gefunden werden. Um die Konsistenz in jeder Hinsicht zu prüfen, kann optional die so genannte forcierte Prüfung durchgeführt werden <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Umlaufprüfung durchführen.htm#2_einstellungen_betreibermodell_oev_1111312306_1061331"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Umlaufprüfung durchführen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Bei den beiden Inkonsistenzen handelt es sich um die folgenden:</p>
+        <ul>
+            <LI class="List0">Bei Verwendung von verkürzten Wendezeiten kann es sein, dass ein Umlauf kein Fehlerflag anzeigt, obwohl er einen Wendezeitfehler (LayoverTimeFault) enthält. Dies ist dann der Fall, wenn nachträglich ein Wert in den drei die verkürzte Wendezeit beschreibenden Attributen (vom Anwender festlegbare Attribute des Haltepunkts beziehungsweise des Fahrtabschnitts für verkürzte Vorbereitungszeit, verkürzte Nachbereitungszeit und maximale Aufenthaltsdauer) vorgenommen wurde oder die Auswahl eines dieser Attribute geändert wurde. Der Grund hierfür ist, dass diese drei Attribute vom Anwender dynamisch festgelegt werden können (insbesondere können auch indirekte oder benutzerdefinierte Attribute verwendet werden). Aus Gründen der Rechenzeit ist es nicht effizient möglich, auf Änderungen in diesen Attributen zu reagieren und das Fehlerflag automatisch zu setzen. Deswegen müssen Sie die forcierte Variante der Umlaufprüfung ausführen um sicherzustellen, dass alle Wendezeitunterschreitungen (Zeitunterschreitungs-Fehler) in den geprüften Umläufen ermittelt werden, wenn nachträgliche Änderungen stattgefunden haben. Werden keine verkürzten Wendezeiten benutzt (Eigenschaft der Umlaufversion), kann dieses Problem nicht auftreten.</LI>
+            <LI class="List0">Nachträgliche Änderungen im Netz führen nicht zu Anpassungen eventuell davon betroffener Leerfahrten (zum Beispiel bei Änderungen von ÖV-Fahrzeiten auf Strecken oder beim Sperren von Strecken für ein ÖV-Verkehrssystem). Somit können sogar Orts- oder Zeitbrüche unentdeckt bleiben. Auch hier ist aufgrund der Rechenzeit keine Reaktion der Umläufe auf die Netzänderung möglich. Deshalb kann erst durch eine forcierte Prüfung sichergestellt werden, dass solche Fehler nicht in den Umläufen enthalten sind, wenn nachträglich das für Leerfahrten benutzte Netz verändert wurde.</LI>
+        </ul>
+    </body>
+</html>

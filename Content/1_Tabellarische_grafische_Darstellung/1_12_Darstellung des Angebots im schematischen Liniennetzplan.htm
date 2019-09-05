@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="4" MadCap:lastHeight="665" MadCap:lastWidth="511" MadCap:ignoredWords="typischen';Taktfahrplangrafik';ggf;Abfahrts">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_tabellarische_und_grafische_darstellung_86324768_1055479">
+            </a>
+            <a name="1_tabellarische_und_grafische_darstellung_86324768_28637">
+            </a>Darstellung des Angebots im schematischen Liniennetzplan</h3>
+        <p class="Text">
+            <MadCap:keyword term="Schematischer Liniennetzplan:Angebot darstellen" />Die im schematischen Liniennetzplan dargestellten Kantenverläufe repräsentieren jeweils Teilmengen der zwischen den Anschlussknoten verkehrenden Fahrplanfahrten, genauer den entsprechenden Fahrplanfahrtelementen. Die Gesamtmenge der im schematischen Liniennetzplan dargestellten Fahrplanfahrtelemente ergibt sich aus den gewählten Anschlussknoten und der Fahrplanfahrtenauswahl. Diese Menge wird zwischen je zwei Anschlussknoten durch einen oder mehrere Kantenverläufe dargestellt, wobei sich die relevanten Anfangs- und Endpunkte von Kanten wahlweise aus folgenden Objekten ergeben:</p>
+        <ul>
+            <LI class="List0">allen Haltestellen, an denen Ein- oder Aussteigen erlaubt ist</LI>
+            <LI class="List0">allen Haltestellen mit Profilpunkten</LI>
+            <LI class="List0">allen Haltestellen mit Routenpunkten</LI>
+            <LI class="List0">allen Haltestellen der Linienroute </LI>
+            <LI class="List0">Linienroutenelementen mit bestimmtem Attributwert</LI>
+        </ul>
+        <p class="Text">So können unterschiedliche Sichtweisen (Fahrgastsicht, betriebliche Sicht) auf den Fahrplan realisiert werden. Die Anzahl der Kanten zwischen zwei Anschlussknoten ergibt sich aus der Aggregation der Fahrplanfahrten nach einer wählbaren Aggregationsebene <MadCap:xref class="Benutzerhandbuch" href="../2_Daten_tabellarisch_grafisch_darstellen/2_12_Layout für den schematischen Liniennetzplan einstellen.htm#2_daten_tabellarisch_und_grafisch_darstellen_4210690224_1338687"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Layout für den schematischen Liniennetzplan einstellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Neben der ‚typischen' Aggregation der Fahrplanfahrten anhand der Taktmuster oder Linien zwischen den Anschlussknoten (daher die Bezeichnung ‚Taktfahrplangrafik') stehen weitere Aggregationsebenen zur Verfügung:</p>
+        <ul>
+            <LI class="List0">Taktgruppen-Nummer (=Taktmuster)</LI>
+            <LI class="List0">Linie, ggf. ungerichtet</LI>
+            <LI class="List0">Oberlinie, ggf. ungerichtet</LI>
+            <LI class="List0">Linienroute</LI>
+            <LI class="List0">Fahrplanfahrt (keine Aggregation)</LI>
+            <LI class="List0">Fahrzeitprofil</LI>
+            <LI class="List0">Verkehrssystem, ggf. ungerichtet</LI>
+            <LI class="List0">Betreiber, ggf. ungerichtet</LI>
+        </ul>
+        <p class="Text">Bei einigen dieser Aggregationsebenen wird zusätzlich zwischen gerichtet und ungerichtet unterschieden. Damit wird gesteuert, ob für die beiden „Fahrtrichtungen“ zwischen den Anschlussknoten je ein oder lediglich ein gemeinsamer Kantenverlauf angelegt werden soll. Bei den übrigen Aggregationsebenen, die sich auf fahrtbezogene Attribute beziehen, ist eine ungerichtete Darstellung nicht sinnvoll, sodass immer gerichtete Kantenverläufe angelegt werden.</p>
+        <p class="Text">Für die Aggregation nach Taktgruppen-Nummer wird auf das entsprechende Eingabe-Attribut zurückgegriffen. Diese kann entweder manuell oder über das Verfahren <span class="gui_element">Taktfahrtengruppen ermitteln </span><MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Taktfahrtengruppen ermitteln.htm#2_einstellungen_benutzermodell_oev_2589728191_1083319"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Taktfahrtengruppen ermitteln</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> oder die entsprechende Mehrfach-Bearbeiten-Funktion für Fahrplanfahrten erfolgen. Die Algorithmen zur Ermittlung der Taktfahrtengruppen sind dort beschrieben.</p>
+        <p class="Text">Für Kantenverläufe können die üblichen Grafikparameter für Linienobjekte eingestellt werden. Als Besonderheit können Kantenverläufe nach zwei Klassifikationsebenen klassifiziert werden, beispielsweise um eine Darstellung der Bedienungshäufigkeit mit den Standardfarben für bestimmte Linien zu kombinieren. Insbesondere für die Verdeutlichung der Bedienungshäufigkeiten stehen neue Linienstile aus bis zu vier parallelen Linien zur Verfügung <MadCap:xref class="Benutzerhandbuch" href="../2_Daten_tabellarisch_grafisch_darstellen/2_12_Grafikparameter für den schematischen Liniennetzplan einstellen.htm#2_daten_tabellarisch_und_grafisch_darstellen_4210690224_1339684"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Grafikparameter für den schematischen Liniennetzplan einstellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Für gekoppelte Fahrplanfahrtabschnitte und die damit verbundenen Flügelungen ist es möglich, Verzweigungen im schematischen Liniennetzplan anzuzeigen. Weiterhin können Kantenverläufe manuell zusammengefasst werden. So können Angebote, in denen durch jeweils im Zwei-Stunden-Takt verkehrende Linien mit unterschiedlichen Zielbahnhöfen durch alternierendes Bedienen eines Hauptabschnitts dort ein Ein-Stunden-Takt erreicht wird, als solche dargestellt werden.</p>
+        <p class="Text">Die Kantenverläufe können jeweils an den Anfangs- und Endanschlussknoten und in der Verlaufsmitte mit Attributwerten beschriftet werden, für die Anschlussknoten können bis zu drei Attributwerte für die Beschriftung innerhalb oder an wählbaren Positionen außerhalb des Rechtecks verwendet werden.</p>
+        <p class="Text">Für die Klassifikation und Beschriftung der Kantenverläufe stehen einige aus den Daten der zugrunde liegenden Fahrplanfahrten aggregierte Attribute aus folgenden Bereichen zur Verfügung:</p>
+        <ul>
+            <LI class="List0">Takt </LI>
+            <LI class="List0">Abfahrts- und Ankunftszeiten</LI>
+            <LI class="List0">Anzahl Zwischenhalte</LI>
+            <LI class="List0">Fahrzeiten</LI>
+            <LI class="List0">Belastungen</LI>
+        </ul>
+        <p class="Text">Weiterhin gibt es Relationen zu Fahrplanfahrtelementen und zur Gegenrichtung, die Zugriff auf weitere Aspekte des Datenmodells geben.</p>
+    </body>
+</html>

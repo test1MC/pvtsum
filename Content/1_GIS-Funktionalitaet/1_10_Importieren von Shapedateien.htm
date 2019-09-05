@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="660" MadCap:lastWidth="556" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="of;Layern;Markierung1;Rück;STREET_NAM;LENGTH;LANE;Wohn">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_gis_funktionalitaet_3291278398_1032451">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_59018">
+            </a>Importieren von Shapedateien</h3>
+        <p class="Text">Beim Importieren von Shapedateien werden die in der Shapedatei enthaltenen Informationen in ein <MadCap:variable name="PTV_Manual.Programmname" />-Netzobjekt eingelesen. In welches Netzobjekt importiert wird, ist abhängig vom Typ der Shapedatei (Punkt, Linie oder Polygon) und vom Einlesemodus (additiv oder nicht additiv). Einen Überblick, welche Shapedatei-Typen in welche Netzobjekte importiert werden können, liefert <MadCap:xref class="Label_Table" href="#1_gis_funktionalitaet_3291278398_1066693">Tabelle&#160;262</MadCap:xref>.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 494px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="62px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="104px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="137px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="137px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="54px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Strecke, Screenline, Anbindung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk, Oberbezirk, Gebiet, Oberknoten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Knoten, Detektor, Zählstelle, Haltestelle, Haltepunkt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">POI</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Punkt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">X</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">X</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_mid">X</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Polylinie</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">X</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_mid">X</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Polygon</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_mid">X</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText_mid">X</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_gis_funktionalitaet_3291278398_1066693">
+                    </a>
+                    <a name="1_gis_funktionalitaet_3291278398_47888">
+                    </a>Einlesen von Shapedateien in <MadCap:variable name="PTV_Manual.Programmname" />-Netzobjekte</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Das Erzeugen von POIs ist nur bei additivem Einlesen der Shapedatei möglich, da eine POI-Kategorie angegeben werden muss, in der die POIs aufgenommen werden können. Daher muss auch mindestens eine POI-Kategorie im Netz enthalten sein, um Shapedateien als POIs einzulesen.</p>
+                        <p class="Text">Auch Anbindungen, Haltepunkte und Zählstellen können nur additiv eingelesen werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Wenn Sie Punktobjekte im Shapedateiformat als Haltepunkte importieren möchten, müssen Sie diese zunächst als Knoten einlesen und anschließend mit der Funktion "Isolierte Knoten aggregieren" Haltepunkte erzeugen. Dabei entstehen auch zugehörige Haltestellenbereiche und Haltestellen <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Isolierte_Knoten_aggregieren.htm#2_netz_bearbeiten_23091886_1129711"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Isolierte Knoten aggregieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Beim Einlesen von Polylinien als Strecken können Sie alternativ gerichtete Strecken oder Strecken mit Hin- und Rückrichtung erzeugen lassen. Bei ungerichteten Strecken ist zusätzlich je Attribut auszuwählen, wie es interpretiert werden soll.</p>
+        <ul>
+            <LI class="List0">Hin: in Richtung Von-Knoten .. Nach-Knoten</LI>
+            <LI class="List0">Rück: in Richtung Nach-Knoten .. Von-Knoten </LI>
+            <LI class="List0">Querschnitt: halber Wert in beide Richtungen</LI>
+            <LI class="List0">symmetrisch: gleicher Wert in beide Richtungen</LI>
+        </ul>
+        <p class="Text">Beim Importieren der Shapedatei können Sie festlegen, welches Quellattribut (aus der Shapedatei) welchem Zielattribut (ein vorhandenes oder benutzerdefiniertes Attribut des gewählten Netzobjekts) zugeordnet werden soll. <MadCap:xref class="Label_Image" href="#1_gis_funktionalitaet_3291278398_1034520">Abbildung&#160;211</MadCap:xref> zeigt ein Beispiel, in dem die Daten einer Shapedatei als Strecken eingelesen werden. Die Shapedatei enthält die Attribute STREET_NAM, LENGTH und LANE, die den <MadCap:variable name="PTV_Manual.Programmname" />-Streckenattributen <span class="gui_element">Name</span>, <span class="gui_element">Länge</span> und <span class="gui_element">Anzahl Fahrstreifen</span> zugeordnet werden. </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Beim Einlesen von Polygonen aus Shapedateien, beispielsweise als Bezirkspolygone oder als POIs zur Hintergrunddarstellung, können Sie optional das Normalisieren der eingelesenen Flächen aktivieren <MadCap:xref class="sieheUeberschrSeite" href="../1_Netzmodell/1_2_Mehrteilige Flächen.htm#1_netzmodell_1240632468_1123722"><span style="color: Black;" class="mcFormatColor">(</span><u>Mehrteilige Flächen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Dies ist erforderlich, wenn Sie mit den eingelesenen Polygonen geometrische Rechenoperationen wie Flächenberechnungen oder Verschneidungen ausführen möchten, da sonst verfälschte Ergebnisse entstehen können. Sollen die Polygone lediglich dargestellt werden, ist keine Normalisierung erforderlich.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="ImageOH">
+            <img src="../Resources/Images/WIN_Shp_ReadAttributes.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_gis_funktionalitaet_3291278398_1034520">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_78899">
+            </a>Zuordnungen von Quell- zu Zielattributen</p>
+        <h5>Beispielhafte Anwendungen</h5>
+        <ul>
+            <LI class="List0">Einlesen von Shapedateien mit einem Straßennetz als Strecken in <MadCap:variable name="PTV_Manual.Programmname" />. In <MadCap:variable name="PTV_Manual.Programmname" /> ist dann ein routingfähiges Streckennetz verfügbar. </LI>
+        </ul>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Zuvor müssen die Strecken für Verkehrssysteme freigegeben werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Einlesen von Gemeindegrenzen als Gebiete</LI>
+            <LI class="List0">Einlesen von Schulen als POIs</LI>
+            <LI class="List0">Einlesen von Flächennutzungen als POIs</LI>
+        </ul>
+        <p class="Text">Neben dem Import von Shapedateien als <MadCap:variable name="PTV_Manual.Programmname" />-Netzobjekt, können Sie Shapedateien auch als Hintergrund einfügen. So können Sie beispielsweise Flächennutzungen (beispielsweise Wohngebiete, Industriegebiete, Gewerbegebiete) für eine bessere Visualisierung Ihres Netzes einfügen. Es können dabei auch mehrere Shapedatei-Layer in das Netz eingefügt werden (zum Beispiel ein Layer für Wohngebiete und ein Layer für Industriegebiete). Die Zeichenreihenfolge der Layer und ihre Farbe können Sie verändern. <MadCap:xref class="Label_Image" href="#1_gis_funktionalitaet_3291278398_1035055">Abbildung&#160;212</MadCap:xref> zeigt ein Beispiel, in dem zwei Shapedateien mit Flächennutzungen für Wohn- und Gewerbegebiete als Hintergrund eingebunden wurden.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_Shp_Backgrounds.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 1, 000028px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_gis_funktionalitaet_3291278398_1035055">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_10434">
+            </a>Flächennutzungen aus zwei Shapedateien als Hintergrund</p>
+    </body>
+</html>

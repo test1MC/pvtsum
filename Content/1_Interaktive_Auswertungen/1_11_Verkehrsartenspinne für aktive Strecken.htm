@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="5min;en;29min;35s;26min;22min;28min;t0;10min;bzw;usw" MadCap:lastBlockDepth="4" MadCap:lastHeight="687" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_interaktive_auswertungen_949040047_1049064">
+            </a>Verkehrsartenspinne für aktive Strecken</h4>
+        <p class="Text">Verkehrsartenspinnen für aktive Strecken können Sie sowohl für Wege aus IV-Umlegungen als auch für Wege aus ÖV-Umlegungen verwenden, denn beide Arten von Wegen lassen sich als Folge von Strecken beschreiben.</p>
+        <p class="Text">Auf ÖV-Wegen können Strecken mit ÖV-Linien, ÖV-Zusatz-VSys oder ÖV-Fuß-VSys befahren werden, und alle drei Fälle werden im Rahmen der Strecken-Verkehrsartenspinne betrachtet. Übergänge innerhalb von Haltestellen oder zwischen Haltestellenbereichen und zugeordneten Knoten werden ignoriert, d.h. für die Aufteilung des Wegs in aktive und passive Bereiche zählen auch bei ÖV-Wegen nur die Strecken.</p>
+        <p class="Text">Auch in der Strecken-Verkehrsartenspinne haben Sie zusätzlich die Möglichkeit, das ÖV-Angebot einzuschränken, beispielsweise auf bestimmte Linien <MadCap:xref class="sieheUeberschrSeite" href="1_11_ÖV-Angebotsfilter.htm#1_interaktive_auswertungen_949040047_1051446"><span style="color: Black;" class="mcFormatColor">(</span><u>ÖV-Angebotsfilter</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Auf einem Weg gelten dann nur noch diejenigen Strecken als aktiv, die selbst aktiv sind und auf denen eine aktive ÖV-Linien benutzt wird.</p>
+        <p class="Text">Beispiel: Ermittlung aller Fahrgäste, die auf einem Streckenkorridor ganz oder teilweise den Fernverkehr benutzen:</p>
+        <ul>
+            <LI class="List1">Der Streckenkorridor ist aktiv, alle anderen Strecken passiv</LI>
+            <LI class="List1">Auswahl der Fernverkehrs-VSys im ÖV-Angebot</LI>
+            <LI class="List1">Auswahl der Verkehrsarten Binnenverkehr, Quellverkehr, Zielverkehr, Durchgangsverkehr und Umgehungsbinnenverkehr</LI>
+        </ul>
+        <p class="Text">Wenn Sie mehrere Bedingungen des Typs „Aktive Strecken“ innerhalb einer Spinne kombinieren möchten, kann es erforderlich sein, die Menge aktiver Strecken umzukehren, also alle passiven Strecken als für die Spinne aktiv zu betrachten und umgekehrt. Dazu können Sie die Bezugsmenge der Strecken-Verkehrsartenspinne zwischen „aktive Strecken“ und „passive Strecken“ umschalten.</p>
+        <p class="Text">Beispiel: Ermittlung aller Fahrgäste, die auf einem Streckenkorridor ganz oder teilweise den Fernverkehr benutzen, aber außerhalb des Korridors nur den Nahverkehr:</p>
+        <ul>
+            <LI class="List1">Der Streckenkorridor ist aktiv, alle anderen Strecken passiv</LI>
+            <LI class="List1">Einfügen eines Spinnen-Terms mit den Fernverkehrs-VSys als ÖV-Angebot und mit den Verkehrsarten Binnenverkehr, Quellverkehr, Zielverkehr, Durchgangsverkehr und Umgehungsbinnenverkehr</LI>
+            <LI class="List1">Einfügen eines weiteren, mit UND verknüpften Spinnen-Terms mit den Fernverkehrs-VSys als ÖV-Angebot und mit der Verkehrsart Außenverkehr, wobei die passiven Strecken als Bezugsmenge gewählt sind</LI>
+        </ul>
+        <p class="Text">Durch die Kombination zweier Terme mit unterschiedlichen Bezugsmengen können Sie somit genau solche Wege filtern, die auf den aktiven Strecken ein bestimmtes ÖV-Angebot benutzen und auf den passiven Strecken ebenfalls ein bestimmtes, aber anders definiertes ÖV-Angebot verwenden.</p>
+    </body>
+</html>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="441" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;v0;VOT;CR;277s;akt;321s;360s;ver;Braess_with_spillback;Braess;AC;AE;ED;Fzg;BD;CF;DF">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1039107">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249397">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__ref152745412">
+            </a>Beispiel für die Dynamische Gleichgewichtsumlegung</h3>
+        <p class="Text">
+            <MadCap:keyword term="Dynamische Gleichgewichtsumlegung:Beispiel" />Um das Verhalten des vorgestellten Modells zu untersuchen und die Wirkung des Rückstaus auf die Wegewahl zu zeigen, wird hier ein einfaches Beispiel analysiert. Das Beispiel wird mit <MadCap:variable name="PTV_Manual.Programmname" /> ausgeliefert und liegt im Unterverzeichnis <span class="path">DUE</span> als <span class="path">Braess_without_spillback.ver</span> und <span class="path">Braess_with_spillback.ver</span> im Ordner <span class="path">Training</span>. </p>
+        <p class="Text">Folgendes bezieht sich auf das in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1049016">Abbildung 1</MadCap:xref> dargestellte Braess-Netz. Strecken haben die in der Tabelle aufgeführten Eigenschaften und werden alle mit einem parabolischen Fundamentaldiagramm modelliert. Alle Streckenausgangskapazitäten werden den entsprechenden Eingangskapazitäten gleichgesetzt. Die Abbiegekapazitäten sind <span class="formula">Q</span><span class="formula_subscript">AC</span><span class="formula">&#160;=&#160;Q</span><span class="formula_subscript">AE</span><span class="formula">&#160;=&#160;Q</span><span class="formula_subscript">ED</span>&#160;<span class="formula">=</span>&#160;2&#160;000&#160;Fzg/h und <span class="formula">Q</span><span class="formula_subscript">BD</span><span class="formula">&#160;=&#160;Q</span><span class="formula_subscript">CF</span><span class="formula">&#160;=&#160;Q</span><span class="formula_subscript">DF</span>&#160;<span class="formula">=</span> 1&#160;000 Fzg/h.</p>
+        <table class="TableStyle-TableStandard" style="width: 498px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Strecke</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="formula">L</span>
+                            <span class="formula_subscript">a</span>[km]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="formula">Q</span>
+                            <span class="formula_subscript">a</span> [Fzg/h]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="formula">V</span>
+                            <span class="formula_subscript">a</span> [km/h]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="formula">W</span>
+                            <span class="formula_subscript">a</span> [km/h]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">1 / <span class="formula">K</span><span class="formula_subscript">a</span>[m]</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">A</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,4</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">2&#160;000</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">15</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">7,0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">B</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,6</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">2&#160;000</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">15</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">7,0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">C</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,6</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">2&#160;000</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">15</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">7,0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">D</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,4</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">2&#160;000</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">15</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">7,0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">E</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,4</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">2&#160;000</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">15</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">7,0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">F</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">0,1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">4&#160;000</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">15</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">3,5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Der Umlegungszeitraum besteht aus 100 Intervallen von je 1 Minute. Es wird von einer konstanten Nachfrage für die ersten 33 Simulationsminuten von Knoten 1 zu Knoten 5 ausgegangen, was <span class="formula">D</span><span class="formula_subscript">15</span> = 2&#160;300 Fzg/h entspricht.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_ExampleNetwork.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000067px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1049016">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_26939">
+            </a>Das Beispielnetz</p>
+        <p class="Text">Die Ergebnisse von zwei Umlegungsläufen, einer mit und einer ohne Rückstauberechnung, werden in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1665034">Abbildung 2</MadCap:xref> dargestellt. Ohne Rückstau sind nur die Abbieger CF und DF überlastet, und zwar zu gleichen Teilen (was den Fahrzeiten entnommen werden kann), sodass auf allen Wegen zwischen Knoten 1 und Knoten 5 die Warteschlangen gleich sind und Weg A-E-D-F weniger befahren wird, da er ungünstiger ist. Mit Rückstau wird der Stau jedoch von Abbieger CF auf Kante C und weiter bis hin zur Kante A propagiert, ebenso von Abbieger DF auf Kante D und weiter bis zu den Kanten B und E. Außerdem ist der Rückstaueffekt auf Kante B wegen der unterschiedlichen Kapazitäten von Abbieger ED und Abbieger BD größer als auf Kante E. Nach dem anfänglichen Anstieg bleibt die Fahrzeit auf Kante D dann konstant, da der Stau aufwärts propagiert wird, während die Fahrzeit auf Kante B schneller ansteigt als die Fahrzeit auf der Kante E, sodass der Weg A-E-D nun attraktiv wird, da er zwar einen längeren Weg, aber eine kürzere Fahrzeit bedeutet. Deshalb steigt die Belastung auf Kante E von etwa 150 Fzg/h auf 670 Fzg/h an.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_WDDTA_Results1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_WDDTA_Results2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_WDDTA_Results3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_WDDTA_Results4.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1665034">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_18130">
+            </a>Ergebnisse der Dynamischen Gleichgewichtsumlegung mit und ohne Rückstauberechnung</p>
+    </body>
+</html>

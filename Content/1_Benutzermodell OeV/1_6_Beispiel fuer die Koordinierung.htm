@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="437" MadCap:lastWidth="510" MadCap:ignoredWords="VorHst;EinHst;NachHst;QuellHst;ZielHst;linie;Ride;Wid;Branch;Bound;FZ;UZ;UH;Fak;timetab1;par;frueh;spaet;ΔT;gleichabständig">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1121145">
+            </a>Beispiel für die Koordinierung</h4>
+        <p class="Text">Eine einzelne Linienroute mit 20-Minuten-Takt bedeutet für den Fahrgast eine mittlere Wartezeit von 10 Minuten. Ob die Einführung einer zweiten Linienroute gleichen Takts eine Halbierung dieser Wartezeit bedeutet, hängt von ihrer konkreten zeitlichen Lage ab. Eine Abfolge wie 8:00 – 8:02 – 8:20 – 8:22 – ... bedeutet zum Beispiel keine nennenswerte Verbesserung.</p>
+        <p class="Text">Werden solche zwei Linienrouten jedoch koordiniert, nimmt die taktfeine Umlegung an, dass die Abfahrten gleichabständig sind, also die Form 8:00 – 8:10 – 8:20 – 8:30 – ... haben. Hierdurch wird die mittlere Wartezeit auf 5 Minuten reduziert. Ohne Koordinierung werden alle Fahrplanlagen als gleich wahrscheinlich angesehen. Dann beträgt der Erwartungswert für die Wartezeit 6:40 Minuten.</p>
+        <p class="Text">Die Koordinierung wirkt nur an solchen Haltestellen (auf dem durch Start- und Endpunkt begrenzten Abschnitt), wo die koordinierten Fahrzeitprofile tatsächlich gemeinsam halten. Hält an einer Haltestelle nur eine Untermenge des koordinierten Bündels, so werden dort auch nur diese Fahrzeitprofile als koordiniert angesehen.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Koordinierung von Fahrzeitprofilen endet an der Bis-Haltestelle, das heißt, die Ankunftszeiten der Fahrzeitprofile sind dort noch koordiniert, nicht aber die Abfahrtszeiten.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Gibt es zwischen den definierten Koordinierungsgruppen Überlappungen, so wird je Fahrzeitprofilelement nur die jeweils erste Koordinierungsgruppe berücksichtigt. In diesem Fall wird zu Beginn der Umlegung eine Warnung erzeugt.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Soll in der taktfeinen Umlegung eine netzweite Koordinierung angenommen werden, kann im Verfahren von der Option <span class="gui_element">Koordinierung überall </span>Gebrauch gemacht werden. Koordinierungsgruppen sind dann überflüssig.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

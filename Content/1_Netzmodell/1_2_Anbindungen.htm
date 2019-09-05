@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s" MadCap:lastBlockDepth="4" MadCap:lastHeight="680" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1120027">
+            </a>
+            <a name="1_netzmodell_1240632468_11482">
+            </a>Anbindungen</h3>
+        <p class="Text">
+            <MadCap:keyword term="Anbindungen" />
+            <MadCap:keyword term="Netzobjekte: Anbindungen" />Anbindungen schließen Bezirke an das Streckennetz an. Jeder Bezirk muss für die Umlegung über mindestens eine Quellanbindung und mindestens eine Zielanbindung an das Netz angebunden sein, damit die Verkehrsteilnehmer diesen Bezirk verlassen und erreichen können. Ein Bezirk kann über beliebig viele Anbindungsknoten an das Netz angebunden sein.</p>
+        <p class="Text">Eine Anbindung entspricht einem Zugangs- oder Abgangsweg zwischen dem Bezirksschwerpunkt und dem Anbindungsknoten. Eine Anbindung hat daher zwei Richtungen.</p>
+        <ul>
+            <LI class="List0">
+                <MadCap:keyword term="Anbindungen: Quellanbindung" />
+                <span class="gui_element">Quellanbindung</span> vom Bezirk zum Knoten</LI>
+        </ul>
+        <p class="List_Text0">Sie stellt den Zugangsweg zum Netz und damit den ersten Teil der Ortsveränderung dar.</p>
+        <ul>
+            <LI class="List0">
+                <MadCap:keyword term="Anbindungen: Zielanbindung" />
+                <span class="gui_element">Zielanbindung</span> vom Knoten zum Bezirk</LI>
+        </ul>
+        <p class="List_Text0">Sie stellt den Abgangsweg vom Netz und damit den letzten Teil der Ortsveränderung dar.</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1080649">Abbildung&#160;15</MadCap:xref> zeigt an einem Beispiel, wie die in der Nachfragematrix hinterlegte Verkehrsnachfrage zwischen den Bezirken über die Anbindungen in das Netz eingespeist wird.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_OD_Connectors.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_netzmodell_1240632468_1080649">
+            </a>
+            <a name="1_netzmodell_1240632468_32047">
+            </a>Einspeisung der Verkehrsnachfrage über Anbindungen ins Netz</p>
+        <p class="Text">Für jede Richtung getrennt können die <span class="gui_element">zulässigen Verkehrssysteme</span>, das bedeutet diejenigen Verkehrssysteme, die diese Anbindung benutzen dürfen, festgelegt werden. Im IV lassen sich Anbindungen für alle IV-Verkehrssysteme öffnen. Im ÖV hingegen beginnt und endet ein Weg immer mit einem per ÖV-Fuß-Verkehrssystem zurückgelegten Weg auf der Anbindung. Es wird also davon ausgegangen, dass der Zugang und Abgang von der Haltestelle immer zu Fuß erfolgt. Für Anbindungen im ÖV gibt es grundsätzlich zwei Möglichkeiten der Modellierung.</p>
+        <ul>
+            <LI class="List0">Ein oder mehrere dem Bezirksschwerpunkt nahegelegene Knoten werden angebunden. Ein ÖV-Weg beginnt und endet stets mit einem Fußweg auf der Anbindung und geht weiter auf den Strecken des Netzes bis zum Zugangsknoten des nächsten Haltestellenbereichs und von dort zum Haltepunkt, ab dem eine Fahrplanfahrt genutzt wird (diese Vorgehensweise wird nicht empfohlen).</LI>
+            <LI class="List0">Es werden nur solche Knoten angebunden, die gleichzeitig Zugangsknoten eines Haltestellenbereichs sind. In diesem Fall beginnt und endet jeder Weg lediglich mit einem Fußweg auf der Anbindung und geht weiter innerhalb der Haltestelle zum Starthaltepunkt. Strecken werden so nicht benutzt (diese Vorgehensweise wird empfohlen).</LI>
+        </ul>
+        <p class="Text">Die verkehrssystemabhängige <span class="gui_element">Anbindungszeit im unbelasteten Netz t0</span> ist die Zeitdauer, die je Verkehrssystem benötigt wird um die Anbindung zu passieren. Der Standardwert für <span class="gui_element">t0</span> je Verkehrssystem wird aus der Länge der Anbindung (Standardwert ist die Luftlinienentfernung) und der Anbindungsgeschwindigkeit, die ebenfalls als Standardwert vorliegt <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Standardwerte_für_Anbindungen_einstellen.htm#2_netz_bearbeiten_23091886_1135414"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Standardwerte für Anbindungen einstellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>, berechnet. Der Standardwert für die Anbindungsgeschwindigkeit kann getrennt für IV- und ÖV-Anbindungen vergeben werden. <span class="gui_element">t0</span> kann durch den Anwender manuell überschrieben werden.</p>
+    </body>
+</html>

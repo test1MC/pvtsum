@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="1346" MadCap:lastWidth="2496" MadCap:ignoredWords="E1;E9;V1;V9;N1;N9;G1;G9;G0;att;E2;bzw;ErhLinieName;E3;max;E5;E7;E8;V2;N2;V3;N3;NachlaufLRName;evtl;inkl;V5;N5;V6;N6;V4;N4;con;wege;RZ;UH;Wid;konst;ca;Registrierungs;Common;Misc;ProcessorInfo;angeb;empf;Abfahrts;t0;Nr;ErhFzpName;VorlaufVSysCode;VorlaufLinieName;VorlaufRichtungsCode;VorlaufLRName;VorlaufFZPName;NachlaufVSysCode;EingabeHstNr;EingabeHstAbfahrtstag;EingabeHstAbfahrtszeit;QHstNr;VorlaufHstNr;EinHstNr;AusHstNr;NachlaufHstNr;ZHstNr;AnzPassagiere;ExtHochFak;BUS1;EingabeHStNr">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1053914">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_24181">
+            </a>Format der einzeiligen Befragungsdatendatei</h4>
+        <p class="Text">Das folgende Dateibeispiel zeigt eine einzeilige Befragungsdatendatei.</p>
+        <pre class="Input">$VISION</pre>
+        <pre class="Input">* VisumInst</pre>
+        <pre class="Input">* 24.07.08</pre>
+        <pre class="Input">* </pre>
+        <pre class="Input">* </pre>
+        <pre class="Input">* Tabelle: Versionsblock</pre>
+        <pre class="Input">$VERSION:VERSNR;FILETYPE;LANGUAGE;UNIT</pre>
+        <pre class="Input">3.000;SingleRowSurveyData;DEU;KM</pre>
+        <pre class="Input">* Tabelle: Einzeilige Befragungsdaten</pre>
+        <pre class="Input">$EinzeiligeBefragungsdaten:Nr;Typ;ErhLinieName;ErhLinieRichtungsCode;ErhLRName;ErhFzpName;VorlaufVSysCode;VorlaufLinieName;VorlaufRichtungsCode;VorlaufLRName;VorlaufFZPName;NachlaufVSysCode;NachlaufLinieName;NachlaufRichtungsCode;NachlaufLRName;NachlaufFZPName;EingabeHstNr;EingabeHstAbfahrtstag;EingabeHstAbfahrtszeit;QBezNr;QHstNr;VorlaufHstNr;EinHstNr;AusHstNr;NachlaufHstNr;ZHstNr;ZBezNr;AnzPassagiere;ExtHochFak</pre>
+        <pre class="Input">1;0;ZUG;H;1;;B;BUS1;H;1;1;;;;;;;;5;1;6:26:00;;30;10;20;40;;40;;17;</pre>
+        <pre class="Input">2;0;ZUG;R;1;1;;;;;;;;;;;;;5;1;6:25:00;100;;10;20;40;;40;;29;</pre>
+        <pre class="Input">3;99;ZUG;H;1;1;B;;;;;;;;;;5;1;6:25:00;;;;10;10;20;40;;40;;33;</pre>
+        <pre class="Input">4;0;BUS1;H;1;1;B;BUS1;H;1;1;;;;;;5;1;6:15:00;;;;10;20;30;40;;40;;18;</pre>
+        <pre class="Input">5;0;BUS1;H;1;1;;;;;;Z;ZUG;R;1;1;5;1;6:05:00;1;6:10:00;;10;;10;20;;40;;15;3</pre>
+        <p class="Text">In der folgenden Tabelle sind die Pflichtattribute und die optionalen Attribute einer einzeiligen Befragungsdatendatei beschrieben. Pflichtattribute sind mit P und optionale Attribute mit O gekennzeichnet.</p>
+        <table class="TableStyle_gui_elements1" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="128px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="117px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="215px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="37px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle_gui_elements1_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td colspan="3" class="TableStyle_gui_elements1_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Nr</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Datensatznummer</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">P</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Typ</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Datensatztyp, dient zur Filterung innerhalb der Plausibilisierung (Standardwert: 0)</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">ErhLinieName</span>
+                        </p>
+                    </td>
+                    <td rowspan="4" class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Vierteiliger Schlüssel der Erhebungslinie. Die Attribute müssen konsistent zueinander sein.</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Name der Erhebungslinie</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">P</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">ErhLinieRichtungsCode</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Richtungscode der Erhebungslinie</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">ErhLRName</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Name der Erhebungslinienroute</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">ErhFZPName</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Name des Erhebungsfahrzeitprofils</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">VorlaufVSysCode</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Code des Verkehrssystems der Vorlauflinie</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">VorlaufLinieName</span>
+                        </p>
+                    </td>
+                    <td rowspan="4" class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Vierteiliger Schlüssel des Vorlaufs. Die Attribute müssen konsistent zueinander sein.</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Name der Vorlauflinie</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">VorlaufRichtungsCode</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Richtungscode der Vorlauflinie</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">VorlaufLRName</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Name der Vorlauflinienroute</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">VorlaufFZPName</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Name des Vorlauffahrzeitprofils</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">NachlaufVSysCode</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Code des Verkehrssystems der Nachlauflinie</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">NachlaufLinieName</span>
+                        </p>
+                    </td>
+                    <td rowspan="4" class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Vierteiliger Schlüssel des Nachlaufs. Die Attribute müssen konsistent zueinander sein.</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Name der Nachlauflinie</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">NachlaufRichtungscode</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Richtungscode der Nachlauflinie</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">NachlaufLRName</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Name der Nachlauflinienroute</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">NachlaufFZPName</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Name des Nachlauffahrzeitprofils</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">EingabeHstAbfahrtszeit</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Abfahrtszeit der Erhebungslinie an der Haltestelle, die unter <span class="gui_element">EingabeHStNr</span> festgelegt ist.</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">P</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">EingabeHstAbfahrtstag</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Abfahrtstag der Erhebungslinie an der Haltestelle, die unter <span class="gui_element">EingabeHStNr</span> festgelegt ist.</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">P</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">EingabeHStNr</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nummer einer beliebigen Haltestelle auf der Erhebungslinie, für die <span class="gui_element">EingabeHstAbfahrtszeit</span> und <span class="gui_element">EingabeHstAbfahrtstag</span> gelten.</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">P</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">QBezNr</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Nummer des Quellbezirks der Fahrgastfahrt. Ist auch die <span class="gui_element">QHstNr</span> definiert, müssen beide Nummern konsistent zueinander sein, d.h. ein Haltestellenbereich der Haltestelle muss mit einem am Bezirk angebundenen Knoten verknüpft sein.</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">QHstNr</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nummer der Quellhaltestelle der Fahrgastfahrt</p>
+                        <p class="CellText">Wenn <span class="gui_element">QHstNr</span> nicht vorliegt, wird <span class="gui_element">QHstNr</span> := <span class="gui_element">VorlaufHstNr</span> gesetzt.</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">VorlaufHstNr</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Nummer einer Vorlaufhaltestelle (Umstiegshaltestelle) der Fahrgastfahrt</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">EinHstNr</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nummer der Einstiegshaltestelle in die Erhebungslinie</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">P</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">AusHstNr</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Nummer der Ausstiegshaltestelle aus der Erhebungslinie</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">P</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">NachlaufHstNr</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nummer einer Nachlaufhaltestelle (Umstiegshaltestelle) der Fahrgastfahrt</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">ZHstNr</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Nummer der Zielhaltestelle der Fahrgastfahrt</p>
+                        <p class="CellText">Wenn <span class="gui_element">ZHstNr</span> nicht vorliegt, wird <span class="gui_element">ZHstNr</span> := <span class="gui_element">NachlaufHstNr</span> gesetzt.</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">ZBezNr</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nummer des Zielbezirks der Fahrgastfahrt. Ist auch die ZHstNr definiert, müssen beide Nummern konsistent zueinander sein, d.h. ein Haltestellenbereich der Haltestelle muss mit einem am Bezirk angebundenen Knoten verknüpft sein.</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">AnzPassagiere</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Zahl der eingestiegenen Personen auf einem Fahrschein </p>
+                        <p class="CellText">(= ein Datensatz, Standardwert: 1)</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">ExtHochFak</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle_gui_elements1_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Der externe Hochrechnungsfaktor dient der Berücksichtigung einer extern durchgeführten Fahrgast-Gewichtung.</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">O</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

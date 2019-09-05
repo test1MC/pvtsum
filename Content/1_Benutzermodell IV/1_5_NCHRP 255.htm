@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Cooperative;Research;Program;Furness;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;FS;BS;xd;KJ;k2;k1;Wardrop’schen" MadCap:lastBlockDepth="2" MadCap:lastHeight="373" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_iv_2033098965_1040088">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_64537">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc175724455">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153336998">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc130891203">
+            </a>NCHRP 255</h2>
+        <p class="Text">
+            <MadCap:keyword term="NCHRP 255" />Dieser Postprozessor für IV-Umlegungen ist ein Zusatzmodul für die Korrektur von Umlegungsbelastungen auf Strecken und Abbiegern im Prognosefall mittels eines Korrekturfaktors, der anhand der Differenzen zwischen Verkehrszählungen und einer Umlegung, die beide dasselbe Zeitfenster repräsentieren, berechnet wird, wie im Report 255 (National Cooperative Highway Research Program) beschrieben.</p>
+        <p class="Text">Der Verfahrensablauf umfasst folgende Schritte:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Aufsummieren der Abbiegerzählwerte für die zugehörige Von-Strecke, daraus ergeben sich die Zählwerte der eingehenden Strecken am Knoten.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Berechnen der Differenz zwischen Streckenzählwert (so wie vom Benutzer eingegeben) und Wert der Umlegungsbelastung Basisfall der jeweiligen Strecke.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Berechnen der angepassten Streckenbelastung als Wert der Umlegungsbelastung Prognosefall der jeweiligen Strecke + Anpassungsfaktor.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Ausgleich (Furness) der neuen angepassten Streckenbelastung entsprechend den gezählten Abbiegerbelastungen. Das Ergebnis besteht in Abbiegerbelastungen, deren Summe der neuen Gesamtbelastung der Strecke entspricht, aber deren prozentuale Aufteilung dem Verhältnis der Zählwerte entspricht. Das Furness-Verfahren ist ein iterativer Prozess. </p>
+        <p class="Step" MadCap:autonum="5. &#160;">Speichern der angepassten Strecken- und Abbiegerbelastungen in ein vom Benutzer gewähltes Strecken- oder Abbiegerattribut.</p>
+    </body>
+</html>

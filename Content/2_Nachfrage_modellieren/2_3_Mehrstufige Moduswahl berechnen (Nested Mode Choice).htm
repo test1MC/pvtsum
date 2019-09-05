@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="950" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:ignoredWords="Symmetrize;bzw;zeilen;$O;usw;of;gpm;Nested;Root;Entfernungs">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_nachfrage_modellieren_1800171850_1639008">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_31785">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_59002">
+            </a>Mehrstufige Moduswahl berechnen (Nested Mode Choice)<a name="30108"></a><a name="30113"></a><a name="30107"></a><a name="30105"></a></h4>
+        <p class="Text">
+            <MadCap:keyword term="Moduswahl: Standard-4-Stufen-Modell: mehrstufig" />
+            <MadCap:keyword term="Nested Mode Choice: siehe Moduswahl, Standard-4-Stufen-Modell, mehrstufige" />Alternativ zur einstufigen Moduswahl können Sie auch ein verschachteltes Moduswahl-Modell berechnen, für den Sie einen Entscheidungsbaum mit Modi an den Blättern und Nestern an den inneren Knoten konstruieren. Standardmäßig ermittelt <MadCap:variable name="PTV_Manual.Programmname" /> die sich für die Nester ergebenden Nachfragematrizen automatisch, wobei der Nutzen eines Nests der <span class="gui_element">LogSumme</span> der Nutzen seiner Unterknoten entspricht. Diese temporären Matrizen können Sie für die Überprüfung der Nestmatrizen oder zur Parametrisierung eines individuellen nicht-sequentiellen Wahlmodells überschreiben <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Mehrstufige Moduswahl (Nested Mode Choice).htm#1_nachfragemodell_2215163117_1026248"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Mehrstufige Moduswahl (Nested Mode Choice)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Image">
+            <img src="../Resources/Images/DIAG_NestedModeChoice.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie in der Symbolleiste auf das Symbol <img src="../Resources/Images_4_all/ICO_procedure_flow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000347px;margin-bottom: 0, 9983615px;" />&#160;<span class="gui_element">Verfahrensablauf öffnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Verfahrensablauf</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Fügen Sie an der gewünschten Stelle im Verfahrensablauf das Verfahren <span class="gui_element">Mehrstufige Moduswahl</span> aus der Kategorie <span class="gui_element">Nachfragemodell</span> ein <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahrensablauf festlegen und starten.htm#2_verfahrensablauf_festlegen_40480990_1019020"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahrensablauf festlegen und starten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie in der Zeile des neu eingefügten Verfahrens auf die Schaltfläche in der Spalte <span class="gui_element">Bezugsobjekt(e)</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Nachfrageschichten Auswahl</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie in der Auswahlliste <span class="gui_element">Nachfragemodell auswählen</span> das Nachfragemodell, zu dem die Nachfrageschichten gehören.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Wählen Sie in der Auswahlliste <span class="gui_element">Nachfrageschicht</span> die Nachfrageschichten, für die Sie die mehrstufige Moduswahl rechnen möchten.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Sie können mehrere Nachfrageschichten auswählen, indem Sie die Taste <span class="shortcut">Strg</span> drücken, diese gedrückt halten und auf die gewünschten Einträge klicken.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">Die ausgewählten Nachfrageschichten werden in die Spalte <span class="gui_element">Bezugsobjekt(e)</span> übernommen.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Stellen Sie sicher, dass das eingefügte Verfahren markiert ist, und klicken Sie im Bereich <span class="gui_element">Aktionen</span> auf die Schaltfläche <span class="gui_element">Bearbeiten</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Parameter Nested Mode Choice</span> öffnet sich.</p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_procedure_parameters_Nested_Mode_Choice.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997538px;margin-bottom: 1, 00009px;" />
+        </p>
+        <p class="Step" MadCap:autonum="8. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="114px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td colspan="2" class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bereich <span class="gui_element">Entscheidungsbaum</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nest einfügen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Neuen Nestknoten im Entscheidungsbaum einfügen</p>
+                        <p class="CellText">Über die Schaltfläche öffnen Sie ein separates Fenster, in dem Sie den Namen des Nests eingeben können.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wenn Sie unter der Wurzel (<span class="gui_element">Root</span>) nur Blattknoten einfügen und die Parameter entsprechend setzen, können Sie die einfache (multinominale) Moduswahl rechnen <MadCap:xref class="sieheUeberschrSeite" href="2_3_Moduswahl berechnen.htm#2_nachfrage_modellieren_1800171850_1638766"><span style="color: Black;" class="mcFormatColor">(</span><u>Moduswahl berechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Modus einfügen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Modus aus allen im Netz definierten Modi auswählen und dem Nest zuordnen</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Sie können für ein Nest Modi nur solange einfügen, bis alle im Netz definierten Modi zugeordnet sind.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Verschieben</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Neuen Vaterknoten für den markierten Eintrag und alle seiner Unterknoten wählen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Löschen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Markierten Eintrag aus dem Entscheidungsbaum löschen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Namen ändern</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Namen des aktuell markierten Eintrags in einem separaten Fenster ändern</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 12;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Alle Ergebnis-Nachfragematrizen vor der Berechnung auf 0 setzen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden alle den Nachfrageschichten zugeordneten Nachfragematrizen vor der Addition der berechneten Nachfrage auf 0 gesetzt.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Sie sollten die Option auswählen, wenn alle Paare aus Nachfrageschicht und Modus, die derselben Nachfragematrix zugeordnet sind, gemeinsam in die Moduswahl eingehen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Nachfrageschicht</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Auswahlliste können Sie die Nachfrageschicht je Nest oder Blatt wählen, für die die Einstellungen gelten sollen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Moduswahlmodell</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche können Sie eine Nutzenfunktion in einem separaten Fenster einstellen, mit der die Werte, die sich aus der Kombination ergeben, transformiert werden <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1639201"><span style="color: Black;" class="mcFormatColor">(</span><u>Parameter der Nutzenfunktion für die mehrstufige Moduswahl einstellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">markiertes Nest/markierter Modus</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Anzeige des im Entscheidungsbaum aktuell markierten Nests oder Knoten</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Input-Nachfragematrix</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Verweis auf die Nachfragematrix, die in der jeweiligen Entscheidungsstufe auf die zugehörigen Unterknoten aufgeteilt wird.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Input-Matrix entspricht der Ergebnismatrix des Vaterknotens.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Ergebnis-Nachfragematrix</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Verweis auf die Nachfragematrix, die in der jeweiligen Entscheidungsstufe je Entscheidungsbaumeintrag gespeichert wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Matrixauswahl</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche können Sie für das markierte Nest eine Ergebnismatrix in einem separaten Fenster auswählen <MadCap:xref href="2_3_Matrizen_auswaehlen.htm" class="sieheUeberschrSeite"><span style="color: Black;" class="mcFormatColor">(</span><u>Fenster Matrizen auswählen</u><span style="color: Black;" class="mcFormatColor">)</span>.</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Automatische Nutzenskalierung für Unterknoten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist für ein Nest der Koeffizient der LogSumme nicht 1 oder 0, müssen die Koeffizienten der zugehörigen Unterknoten (Spalte <span class="gui_element">Koeffizient</span>) mit dem Quotienten 1/LogSummenkoeffizient skaliert werden.</p>
+                        <p class="CellText">Über die Option stellen Sie ein, ob die Koeffizienten der Unterknoten automatisch skaliert werden sollen oder nicht.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Die Option ist nur für Nester verfügbar.</p>
+                        <p class="CellText">Wenn der LogSummenkoeffizient 0 ist, werden keine Koeffizienten der Unterknoten verändert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nutzen U</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Linearkombination von Matrizen, Attributsvektoren und/oder Konstanten je Modus oder Nest <MadCap:xref class="sieheUeberschrSeite" href="2_3_Matrizen und Attributsvektoren im Matrixfenster kombinieren.htm#2_nachfrage_modellieren_1800171850_1472372"><span style="color: Black;" class="mcFormatColor">(</span><u>Matrizen und Attributsvektoren im Matrixfenster kombinieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                        <p class="CellText">Bei Nestern beinhaltet die Nutzenfunktion außerdem die <span class="gui_element">LogSumme über alle Unterknoten</span>, die Sie mit einem beliebigen Koeffizienten glätten können, wenn als Moduswahlmodell eine Logit-Funktion eingestellt ist <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Mehrstufige Moduswahl (Nested Mode Choice).htm#1_nachfragemodell_2215163117_1026248"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Mehrstufige Moduswahl (Nested Mode Choice)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Das Ergebnis der Linearkombination wird als Nutzenmatrix interpretiert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Einfügen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Zeile in die Liste einfügen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Löschen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Markierte Zeile aus der Liste löschen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Erste Spalte</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Wenn die Liste mehr als einen Eintrag enthält, wird durch ein Plus-Zeichen angezeigt, dass die Einträge zeilenweise addiert werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Matrix / Attribut /Konstante</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche öffnet sich das Fenster <span class="gui_element">Operand auswählen</span>, in dem Sie eine <MadCap:variable name="PTV_Manual.Programmname" />-Kenngrößenmatrix, ein Bezirksattribut oder eine Konstante wählen können. Die Werte des gewählten Objekts können Sie mit einer Funktion transformieren (Spalte <span class="gui_element">Transformation</span>). Außerdem können Sie sie mit einem Faktor multiplizieren (Spalte <span class="gui_element">Koeffizient</span>).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Transformation</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Auswahlliste können Sie eine Funktion wählen, mit der die in der Spalte <span class="gui_element">Matrix / Attribut / Konstante</span> gewählten Werte umgerechnet werden <MadCap:xref class="sieheUeberschrSeite" href="2_3_Matrixwerte bearbeiten.htm#2_nachfrage_modellieren_1800171850_1069896"><span style="color: Black;" class="mcFormatColor">(</span><u>Matrixwerte bearbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Koeffizient</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Faktor, mit dem die Werte elementweise multipliziert werden</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Nutzenmatrix speichern in</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, wird der berechnete Nutzen für spätere Auswertungen in einer Kenngrößenmatrix gespeichert, die Sie in der Auswahlliste wählen können.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Für alle NSchichten übernehmen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche können Sie die Einstellungen der aktuell ausgewählten Nachfrageschicht bezüglich der Kombination von Matrizen und Attributsvektoren und der Nutzenfunktion für alle Nachfrageschichten des Nachfragemodells übernehmen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="9. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="10. &#160;">Führen Sie das Verfahren aus <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahren im Verfahrensablauf ausführen.htm#2_verfahrensablauf_festlegen_40480990_1112524"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahren im Verfahrensablauf ausführen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Result">Die mehrstufige Moduswahl wird berechnet. Die Ergebnisse werden für jedes Paar aus Nachfrageschicht und Modus in der zugeordneten Ergebnismatrix gespeichert.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Sie können die Ergebnismatrizen anzeigen und ändern <MadCap:xref class="sieheUeberschrSeite" href="2_3_Matrizen verwalten, anzeigen und analysieren.htm#2_nachfrage_modellieren_1800171850_1033444"><span style="color: Black;" class="mcFormatColor">(</span><u>Matrizen verwalten, anzeigen und analysieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>
+            <a name="2_nachfrage_modellieren_1800171850_1639201">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_88498">
+            </a>Parameter der Nutzenfunktion für die mehrstufige Moduswahl einstellen</h5>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">
+            <MadCap:keyword term="Moduswahl: Standard-4-Stufen-Modell: Nutzenfunktion mehrstufig" />Stellen Sie sicher, dass das Fenster <span class="gui_element">Parameter Nested Mode Choice</span> geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1639008"><span style="color: Black;" class="mcFormatColor">(</span><u>Mehrstufige Moduswahl berechnen (Nested Mode Choice)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Stellen Sie sicher, dass die gewünschte Nachfrageschicht ausgewählt ist.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Moduswahlmodell</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Wahlmodell für &lt;NSchicht&gt;</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie das Register <span class="gui_element">Optionen</span>.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="79px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="398px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Funktionstyp</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Typ der Nutzenfunktion für die Berechnung der mehrstufigen Moduswahl</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Parameter</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">a</span>, <span class="gui_element">b</span>, <span class="gui_element">c</span></p>
+                        <p class="CellText">Geschätzte Parameterwerte für die Nutzenfunktion, die die Reaktion der Verkehrsteilnehmer auf Entfernungs- oder Zeitverhältnisse abbilden. Die Werte können auch negativ sein.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Der Verlauf der Nutzenkurve mit den aktuellen Parametern wird im Register <span class="gui_element">Funktionsgraph</span> angezeigt.</p>
+                        <p class="CellText">Wenn die Ausgangsmatrix Widerstände enthält, beispielsweise Entfernungen oder Reisezeiten, müssen Sie negative Exponenten für die Nutzenfunktion eingeben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">Wählen Sie das Register <span class="gui_element">Funktionsgraph</span>.</p>
+        <p class="Stepresult">Der Kurvenverlauf der Nutzenfunktion wird mit den aktuell eingestellten Parametern a, b und c angezeigt.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Ändern Sie bei Bedarf im Bereich <span class="gui_element">Bereich</span> die Skalierung der X- und Y-Achse.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">X Min</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Minimaler Wert für die X-Achse (negative Werte sind erlaubt)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">X Max</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Maximaler Wert für die X-Achse</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Y Min</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Minimaler Wert für die Y-Achse (negative Werte sind erlaubt)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Y Max</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Maximaler Wert für die Y-Achse</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Setzen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche übernehmen Sie die eingegebenen Werte im Diagramm und aktualisieren den Kurvenverlauf.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="8. &#160;">Ändern Sie bei Bedarf im Bereich <span class="gui_element">Parameter</span> die Parameter <span class="gui_element">a</span>, <span class="gui_element">b</span> und <span class="gui_element">c</span> der Nutzenfunktion.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Alternativ können Sie die Parameter im Register <span class="gui_element">Optionen</span> ändern.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="9. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Setzen</span>.</p>
+        <p class="Stepresult">Die eingegebenen Parameter werden im Diagramm übernommen und der Kurvenverlauf wird aktualisiert.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Wenn Sie die Parameter der Nutzenfunktion und den Kurvenverlauf auf die Standardwerte zurücksetzen möchten, klicken Sie auf die Schaltfläche <span class="gui_element">Zurücksetzen</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="10. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Änderungen werden übernommen.</p>
+    </body>
+</html>

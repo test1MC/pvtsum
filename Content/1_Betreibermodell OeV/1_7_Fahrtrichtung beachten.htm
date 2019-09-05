@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="355" MadCap:lastWidth="510" MadCap:ignoredWords="TFS">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1423726">
+            </a>Fahrtrichtung beachten</h4>
+        <p class="Text">In vielen Fällen muss die Fahrtrichtung, mit der ein Fahrzeug eine Fahrplanfahrt bedient, nicht gesondert beachtet werden. Dies ist dann der Fall, wenn ohnehin alle Fahrten in Vorwärtsfahrt stattfinden (Einrichtungsfahrzeug, insbesondere alle Busse und einige Straßenbahnen) oder wenn die Fahrtrichtung keine Rolle spielt (Triebwageneinsatz im Nahverkehr). Es gibt aber auch Fälle, in denen es erwünscht ist, dass die Fahrtrichtung der Fahrzeugkombination immer gleich ist, beispielsweise weil der Fahrradwagen einer Zuggarnitur immer an gleicher Stelle auf dem Bahnsteig zum Stehen kommen soll oder auch weil die Fahrdynamik bei Wendezügen von der Fahrtrichtung abhängt.</p>
+        <p class="Text">Es ist daher optional möglich, die Fahrtrichtung im Rahmen der Umlaufprüfung und der manuellen Umlaufbildung in <MadCap:variable name="PTV_Manual.Programmname" /> zu beachten. Dazu wird zunächst im Netz, d.h. an allen Abbiegern, festgelegt, ob dieser Abbieger einen Fahrtrichtungswechsel bedeutet oder nicht. Zur sinnvollen Belegung können Abbiegerstandards <MadCap:xref class="sieheUeberschrSeite" href="../1_Netzmodell/1_2_Knoten und Abbieger.htm#1_netzmodell_1240632468_1026283"><span style="color: Black;" class="mcFormatColor">(</span><u>Knoten und Abbieger</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> verwendet werden, die ihrerseits auf dem Typ eines Abbiegers basieren.</p>
+        <p class="Text">Jede Bewegung im Netz erbt dadurch Information über Fahrtrichtungswechsel. Insbesondere gibt es entlang einer Linienroute und damit am Fahrtverlauf dort einen Fahrtrichtungswechsel, wo ein Abbieger mit der Eigenschaft <span class="gui_element">Ist Fahrtrichtungswechsel</span> überfahren wird. Wird die Fahrtrichtung an einem Umlauf beachtet (Attribut <span class="gui_element">Fahrtrichtung beachten</span>), so werden diese Fahrtrichtungswechsel in der Umlauf-Blockdarstellung sichtbar.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/WIN_Orientation.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Darstellung eines Fahrtrichtungswechsels im Verlauf von Fahrplanfahrt-Umlaufelementen. Die Linienroute wendet im Bahnhof „TFS“</p>
+        <p class="Text">In gleicher Weise erhalten Leerfahrt-Umlaufelemente aus dem Netz Information darüber, ob in ihrem Verlauf Fahrtrichtungswechsel stattfinden oder nicht. Liegt der Leerfahrt eine Systemroute zugrunde, sind die Fahrtrichtungswechsel genauso verortet wie bei Fahrplanfahrten und werden in gleicher Weise in der Blockdarstellung sichtbar. Gibt es keine Systemroute, dann wird bei der Suche des Wegs ermittelt, ob die Anzahl der Fahrtrichtungswechsel gerade oder ungerade ist; nur das ist für die Umlaufbildung relevant. Leerfahrt-Umlaufelemente mit ungerader Anzahl Fahrtrichtungswechsel werden daher in der Anzeige mittig unterteilt.</p>
+        <p class="Text">Bei benutzerdefinierten Umlaufelementen kann die Frage, ob sie einen Fahrtrichtungswechsel beinhalten, explizit durch das Attribut <span class="gui_element">Ist Fahrtrichtungswechsel</span> angegeben werden. Somit kann auch eine Drehfahrt (Wendefahrt, Dreiecksfahrt) als benutzerdefiniertes Umlaufelement explizit modelliert werden.</p>
+        <p class="Text">Ist die Beachtung der Fahrtrichtung am Umlauf eingeschaltet, prüft die Umlaufprüfung alle Übergänge und legt für jedes Umlaufelement die Fahrtrichtung zu Beginn der Aktivität fest. Ein Fahrtrichtungsfehler liegt dann vor, wenn es entweder einen Fahrtabschnitt gibt, der an verschiedenen Kalendertagen von diesem Umlauf in unterschiedlicher Fahrtrichtung bedient wird. Bei einem geschlossenen Umlauf liegt ein Fahrtrichtungsfehler zusätzlich auch dann vor, wenn die Fahrtrichtung nach einem kompletten Durchlauf des Umlaufs wechselt.</p>
+        <p class="Text">Die Umlaufbildung kann die Information über Fahrtrichtungswechsel nicht direkt auswerten, also nicht gezielt Umläufe bilden, die keinen Fahrtrichtungsfehler beinhalten. Das Verfahren Umlaufbildung hat einen Parameter <span class="gui_element">Fahrtrichtung beachten</span>, der wie folgt wirkt:</p>
+        <ul>
+            <LI class="List0">Fahrtrichtung beachten: Die Umläufe werden nach Ausführung des Verfahrens auf Fahrtrichtungsfehler überprüft. Gegebenenfalls wird der entsprechende Fehlerstatus gesetzt.</LI>
+            <LI class="List0">Fahrtrichtung nicht beachten: Die Umläufe bekommen im Attribut <span class="gui_element">Fahrtrichtung beachten</span> den Wert falsch.</LI>
+        </ul>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">Ist Fahrtrichtungswechsel</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Wird ein Abbieger mit Standardattributen aus diesem Abbiegerstandard belegt, bestimmt der Wert dieses Attributs über den Wert des gleichnamigen Attributs des Abbiegers. Damit kann die Standardbelegung erleichtert werden. Beispielsweise können alle Abbieger vom Typ U-Turn die Eigenschaft <span class="gui_element">Ist Fahrtrichtungswechsel</span> erhalten.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Attribute des Abbiegerstandards mit Bezug auf Fahrtrichtungen</p>
+            </caption>
+        </table>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">Ist Fahrtrichtungswechsel</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Der Wert dieses Attributs bestimmt darüber, ob die Überquerung dieses Abbiegers einen Fahrtrichtungswechsel darstellt oder nicht. Dies wirkt sich für Linien- und Systemrouten ebenso aus wie für die Bestimmung der Fahrtrichtungswechsel auf Leerfahrten während der Umlaufprüfung. Ferner wird das Attribut auch für die Übergänge zwischen Umlaufelementen innerhalb eines Umlaufs ausgewertet.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Attribute des Abbiegers mit Bezug auf Fahrtrichtungen</p>
+            </caption>
+        </table>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">Ist Fahrtrichtungswechsel</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Ist wahr, wenn das Linienroutenelement an einem Knoten liegt, an dem die Linienroute auf ihrem Weg einen Abbieger mit der Eigenschaft <span class="gui_element">Ist Fahrtrichtungswechsel</span> benutzt.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">Attribute der Linienroute mit Bezug auf Fahrtrichtungen</p>
+            </caption>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="DeltaT;bzw" MadCap:lastBlockDepth="4" MadCap:lastHeight="535" MadCap:lastWidth="688">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1074643">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_31497">
+            </a>Anwendungsfall (2): Verbindungsexport</h4>
+        <p class="Text">Mit dem Verbindungsexport erzeugen Sie Verbindungsdateien, die Rechenzeit in späteren Umlegungen einsparen helfen. Sie können damit aber auch externe Tools versorgen, in denen Sie eigene Heuristiken zur Verbindungswahl implementieren.</p>
+        <p class="Text">Der Verbindungsexport kann mit oder ohne Belastungen erfolgen. Belastungen werden für das Verfahren Verbindungsimport benötigt. Beim Verbindungsexport ohne Belastungen können Sie wählen, ob auf allen Relationen Verbindungen gesucht und exportiert werden sollen oder nur auf denjenigen, wo aktuell Nachfrage vorliegt.</p>
+        <p class="Text">Die Option <span class="gui_element">Alle Relationen betrachten</span> ist sinnvoll, wenn zum Zeitpunkt des Exports noch nicht bekannt ist, auf welchen Relationen Nachfrage vorliegt. Typischerweise ist das im Rahmen der ÖV-Kenngrößenberechnung zu Beginn eines 4-Stufen-Modells der Fall. Der Nachteil dieser Einstellung liegt in der Zunahme der Rechenzeit und der Größe der Verbindungsdatei.</p>
+        <p class="Text">Exportierte Verbindungsdateien können unabhängig von dieser Option auch folgende Daten enthalten:</p>
+        <ul>
+            <LI class="List0">Tarifpunkte der Teilwege (nicht importierbar) und/oder</LI>
+            <LI class="List0">Fahrpreise je Weg oder Teilweg für ein Nachfragesegment oder alle Nachfragesegmente (importierbar)</LI>
+            <LI class="List0">Benutzerdefinierte Attribute für ÖV-Wege</LI>
+        </ul>
+        <p class="Text">Für Fahrpreis-Berechnungen im Rahmen der externen Wahl sollte die Option <span class="gui_element">mit Tarifpunkten </span>aktiviert werden, da der Preis zumeist auf der Anzahl Tarifpunkte je Teilweg der Verbindung basiert.</p>
+        <p class="Text">Für den Verbindungsexport ohne Belastungen sind folgende Umlegungsparameter relevant:</p>
+        <ul>
+            <LI class="List0">Quellbezirks-Intervall</LI>
+            <LI class="List0">Umlegungszeitraum mit Nachlauf</LI>
+            <LI class="List0">sämtliche Suchparameter</LI>
+            <LI class="List0">sämtliche Vorauswahl-Parameter</LI>
+        </ul>
+        <p class="Text">Alle anderen Parameter wirken nur dann, wenn tatsächlich eine Umlegung gerechnet, eine Kenngrößenmatrix gespeichert oder ein Export mit Belastungen durchgeführt wird.</p>
+    </body>
+</html>

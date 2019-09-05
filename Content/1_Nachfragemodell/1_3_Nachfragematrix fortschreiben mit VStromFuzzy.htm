@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG;bearbeitung;Bearbeitungs;Nested;80er;sk;Method;of;Workflow" MadCap:lastBlockDepth="4" MadCap:lastHeight="1822" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_nachfragemodell_2215163117_1164657">
+            </a>
+            <a name="1_nachfragemodell_2215163117_23354">
+            </a>Nachfragematrix fortschreiben mit VStromFuzzy</h3>
+        <p class="Text">
+            <MadCap:keyword term="VStromFuzzy" />
+            <MadCap:keyword term="Nachfragematrizen: fortschreiben" />
+            <MadCap:keyword term="Matrixkorrektur: VStromFuzzy" />Wie alle Matrixkorrekturverfahren dient auch VStromFuzzy dazu, eine vorgegebene Nachfragematrix so anzupassen, dass ihr Umlegungsergebnis bei einem bestimmten Angebot die bei diesem Angebot tatsächlich beobachteten Belastungen, den Quell-/Zielverkehr, die Linienbeförderungsfälle bzw. die Anzahl der Ein-/Aussteiger trifft. Diese Operation ist in verschiedenen Situationen nützlich:</p>
+        <ul>
+            <LI class="List1">Eine empirisch aus einer Verkehrsbefragung gewonnene Nachfragematrix ist inzwischen veraltet und soll aktualisiert werden, ohne eine komplette neue (Quelle-Ziel-)Befragung durchzuführen. Die Aktualisierung soll ausschließlich auf Basis von Zählungen erfolgen.</LI>
+            <LI class="List1">Eine aus einem Verkehrsmodell generierte Matrix soll mithilfe tatsächlich gezählter Belastungen kalibriert werden.</LI>
+            <LI class="List1">Eine aus unvollständigen/unsicheren Befragungsdaten konstruierte Matrix soll mit gleichzeitig erhobenen vollständigeren/sichereren Belastungszählwerten verbessert werden.</LI>
+            <LI class="List1">Aus einer Befragung ist die Reiseweitenverteilung bekannt, das Modell spiegelt diese aber nicht in der gewünschten Genauigkeit wieder.</LI>
+        </ul>
+        <p class="Text">VStromFuzzy löst dieses Problem für den IV und ÖV. Die Fortschreibung betrifft nur die Nachfragematrix, nicht die Ganglinie, und bezieht sich immer auf Gesamtbelastungen (statt Belastungen pro Analysezeitintervall).</p>
+        <p class="Text">In allen Fällen folgt der Informationsfluss dem folgenden Schema.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_TFlowFuzzy.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Text">Der Workflow für die Matrixkalibrierung sieht dann wie folgt aus.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_TFlowFuzzy_Workflow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Text">Als Zählwerte kommen folgende Werte in Betracht:</p>
+        <ul>
+            <LI class="List1">Streckenbelastungen</LI>
+            <LI class="List1">Quell-/Zielverkehr pro Bezirk</LI>
+            <LI class="List1">Belastungen von Abbiegern am Knoten und von Oberabbiegern am Oberknoten (sofern definiert)</LI>
+            <LI class="List1">Belastungen über Screenlines</LI>
+            <LI class="List1">Belastungen auf Fahrstreifen</LI>
+            <LI class="List1">ÖV-Linienbeförderungsfälle pro Linie</LI>
+            <LI class="List1">ÖV-Personenkilometer pro Linie</LI>
+            <LI class="List1">Ein-/Aussteiger an Haltestellenbereichen</LI>
+            <LI class="List1">Kenngrößenverteilungen, z.&#160;B. Reiseweitenverteilung</LI>
+        </ul>
+        <p class="Text">Die Zählwerte können auch kombiniert verwendet werden.</p>
+        <p class="Text">Ein ausführlich kommentiertes Beispiel für die Verwendung von Reiseweitenverteilungen finden Sie im Verzeichnis <span class="path">...\Benutzer\Öffentlich\Öffentliche Dokumente\PTV Vision\<MadCap:variable name="PTV_Manual.Programmname_VersNr_mitPunkt" />\Training\TFlowFuzzy</span>.</p>
+        <p class="Text">Mit Belastungen an Fahrstreifen arbeiten Sie am besten dann, wenn Sie direkt die Zählwerte von Halteliniendetektoren verwenden wollen. Diese sind – anders als manuell gezählte Knotenströme – nicht bereits einem (Ober-)Abbieger zugeordnet, sondern dem Fahrstreifen, auf dem der Detektor liegt. Wenn Sie fahrstreifenbezogene Zählwerte verwenden, müssen Sie die Fahrstreifenaufteilung am betreffenden Knoten im Knoteneditor ausmodellieren. <MadCap:variable name="PTV_Manual.Programmname" /> aggregiert die fahrstreifenbezogenen Zählwerte zu Zählwerten pro Fahrstreifengruppe, d.h. die Zählwerte werden über alle (Ober-)Abbieger aufsummiert, die mindestens einen Mischfahrstreifen gemeinsam haben. VStromFuzzy vergleicht die Summe der Zählwerte mit den Belastungen aller Routen, die diese Fahrstreifengruppe nutzen.</p>
+        <p class="Text">Gelegentlich werden ÖV-Ein-/Aussteiger an Haltestellenbereichen getrennt nach Fahrtrichtung gezählt. Damit Sie in solchen Fällen den Informationsgehalt der disaggregierten Zählwerte nutzen können ohne dabei den Haltestellenbereich künstlich in mehrere Haltestellenbereiche aufzuteilen, können Sie die am Haltestellenbereich verkehrenden Linienrouten in Gruppen einteilen und für jede Gruppe getrennt Zählwerte und Toleranzen vorgeben.</p>
+        <p class="Text">Zur Fortschreibung werden die vorgegebenen Zählwerte mit den Belastungen verglichen, die sich aus einer zuvor berechneten Umlegung der bisherigen Nachfragematrix ergeben. Differenzen zwischen Zählwerten und Belastungen werden durch Anpassung der Nachfragematrix für das umgelegte Nachfragesegment ausgeglichen. Im einfachsten Fall bezieht sich die Fortschreibung auf ein einziges Nachfragesegment. Dann werden die Belastungen der ausgewählten Netzobjekte aus dem Umlegungsergebnis dieses Nachfragesegments entnommen und die Zählwerte beziehen sich ebenfalls nur auf dieses Nachfragesegment. VStromFuzzy kann auch die Nachfragematrizen mehrerer Nachfragesegmente gleichzeitig fortschreiben, wenn nur Summen-Zählwerte für alle Nachfragesegmente zusammen angegeben sind. Dann werden zunächst die angegebenen Zählwerte proportional zum Anteil des jeweiligen Nachfragesegments an der Umlegungsbelastung aufgeteilt. Anschließend wird die Nachfragematrix für jedes Nachfragesegment einzeln fortgeschrieben.</p>
+        <p class="Text">Gegenüber anderen Verfahren zeichnet sich VStromFuzzy besonders durch folgende Eigenschaften aus.</p>
+        <ul>
+            <LI class="List1">Quell-/Zielverkehr, Belastungen von Strecken, Abbiegern oder Oberabbiegern oder Screenlines, Linienbeförderungsfälle und Ein-/Aussteiger an Haltestellenbereichen und Verteilungen, beispielsweise von Reiseweiten, können in einer Korrektur kombiniert verwendet werden.</LI>
+            <LI class="List1">Zählwerte müssen nicht für alle Netzobjekte vorliegen.</LI>
+            <LI class="List1">Die Stichprobenunsicherheit der Zählwerte kann explizit modelliert werden.</LI>
+            <LI class="List1">Es kann festgelegt werden, dass die Verteilung der Ergebnismatrix derjenigen einer bestehenden Nachfragematrix entsprechen muss.</LI>
+            <LI class="List1">Es ist möglich, mit Zählwerten zu arbeiten, die nur einen Teil der ÖV-Linien abdecken. In diesem Fall gehen nur Belastungen bzw. Ein-/Aussteiger in die Berechnung ein, die aktive Linienroutenelemente betreffen.</LI>
+        </ul>
+    </body>
+</html>

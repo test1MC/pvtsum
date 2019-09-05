@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="599" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;Wardrop’schen;KIRCHHOFF’scher">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1545673">
+            </a>Lohse-Modell mit variablem Beta in der Umlegung</h3>
+        <p class="Text">
+            <MadCap:keyword term="Aufteilungsmodelle: Lohse-Modell:mit variablem Beta" />
+            <MadCap:keyword term="Lohse-Modell:mit variablem Beta" />Das Modell ist in Schnabel und Lohse (1997) beschrieben und unterscheidet sich vom Lohse-Modell dadurch, dass der Aufteilungsparameter <span class="formula_symbol">b</span> in Abhängigkeit vom Betrag des minimalen Widerstands <span class="formula">R</span><span class="formula_subscript">min</span><span class="formula_superscript">a</span> bestimmt wird. Die Berechnung kann durch drei weitere Parameter <span class="formula_symbol">t</span>, <span class="formula_symbol">l</span> und <span class="formula_symbol">k</span> feiner kalibriert werden. </p>
+        <p class="Text">Es gilt folgender Ansatz:</p>
+        <p class="Text">
+            <img src="../Resources/Images/7_247.jpg" />
+        </p>
+        <p class="Text">Daher ergibt sich Folgendes:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_256.jpg" />
+        </p>
+        <p class="Text">Dabei berechnet sich <span class="formula_symbol">b</span><span class="formula"></span>nach folgender Formel:</p>
+        <p class="Text">
+            <img src="../Resources/Images/7_260.jpg" />
+        </p>
+        <p class="Text">Der Widerstand wird zusätzlich durch einen Skalierungsdivisor geteilt.</p>
+        <p class="Text">Der variable Aufteilungsparameter <span class="formula_symbol">b</span> dient einer verbesserten Abbildung der Widerstandsempfindlichkeit. Gleiche Verhältnisse der Widerstände werden bei kurzen und bei langen Wegen unterschiedlich berücksichtigt. Bei zwei Routen, die die Widerstände 5 und 10 Minuten oder aber 50 und 100 Minuten haben, ist die Aufteilung also nicht dieselbe.</p>
+        <p class="Text">Die Wirkung des Aufteilungsmodells Lohse mit variablem Beta wird durch folgendes Beispiel illustriert. In <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1545702">Abbildung 1</MadCap:xref> werden verschiedene Bestwege (10 min, 50 min, 150 min, 300 min) mit Alternativen verglichen, die Umwege enthalten. Die Aufteilung auf die Routen erfolgt auf der Grundlage des Aufwandsverhältnisses und des Absolutbetrages des Bestweges.</p>
+        <p class="Text">Für kürzere Bestwege und ihre Alternativen wird eine geringere Umwegempfindlichkeit unterstellt als für längere Bestwege.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Lohse_with_variable_beta.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1545702">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_96533">
+            </a>Aufteilung mit variablem Beta nach modifizierter KIRCHHOFF’scher Regel (siehe Schnabel / Lohse)</p>
+        <p class="Text">Die Parameter in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1545702">Abbildung 1</MadCap:xref> sind in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1545767">Tabelle 1</MadCap:xref> beschrieben.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="font-family: Symbol;font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula_symbol">t</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="font-family: Symbol;font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula_symbol">l</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="font-family: Symbol;font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula_symbol">k</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">R</span>
+                            <span class="formula_subscript">min</span>
+                            <span class="formula_superscript">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="font-family: Symbol;font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula_symbol">b</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">0,800</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">0,010</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">10 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_mid">3,32</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">0,800</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">0,010</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">50 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_mid">4,26</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">0,800</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">0,010</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">150 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_mid">6,68</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">0,800</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">0,010</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">300 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText_mid">9,00</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_iv_2033098965_1545767">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_29804">
+                    </a>Parameter für die Aufteilung mit variablem Beta in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1545702">Abbildung 1</MadCap:xref></p>
+            </caption>
+        </table>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1545786">Abbildung 2</MadCap:xref> zeigt die Parametrierung des Lohse-Aufteilungsmodells mit variablem Beta an der Oberfläche.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_Stoch_LohseVar.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 1, 000067px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1545786">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_25293">
+            </a>Parametrierung des Lohse-Aufteilungsmodells mit variablem Beta</p>
+    </body>
+</html>

@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="618" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="comparison;of;Costs;vehicle;FFE;cap;regularity;FFA">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_betreibermodell_oev_1878159914_1355369">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_15875">
+            </a>Bewertung der Lösungen mittels Zielfunktion</h4>
+        <p class="Text">Die Umlaufbildung mit Fahrzeugaustausch verwendet eine Zielfunktion zur Bewertung der Güte einer Lösung. Die Zielfunktion misst Eigenschaften der Lösung, bei denen Verbesserungspotenzial besteht. Sie umfasst die Zielfunktion der Umlaufbildung ohne Fahrzeugaustausch <MadCap:xref class="sieheUeberschrSeite" href="1_7_Graphenaufbau.htm#1_betreibermodell_oev_1878159914_1180400"><span style="color: Black;" class="mcFormatColor">(</span><u>Graphenaufbau</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> als einen Bestandteil.</p>
+        <p class="Text">Es werden die folgenden Eigenschaften der Lösung bewertet:</p>
+        <ul>
+            <LI class="List0">Kosten: Zielfunktion der Umlaufbildung ohne Fahrzeugaustausch. Dies umfasst insbesondere die Anzahl Fahrzeuge pro Fahrzeugkombination sowie die Service- und Leer-km und Zeiten sowie die Standzeiten innerhalb und außerhalb eines Depots</LI>
+            <LI class="List0">Anzahl Fahrzeugeinheiten: Überschreitung der vorgegebenen Anzahl verfügbarer Fahrzeugeinheiten</LI>
+            <LI class="List0">Berücksichtigung von Belastungen: Zu geringe Kapazitäten (total oder Sitzplätze) in Bezug auf die Nachfrage</LI>
+            <LI class="List0">Linienreinheit, lokale Definition: Anzahl der Übergänge zwischen verschiedenen Linien</LI>
+            <LI class="List0">Linienreinheit, globale Definition: Anzahl verschiedener Linien in einem Umlauf</LI>
+            <LI class="List0">Anzahl Fahrzeugkombinationen pro Linie: Anzahl der verschiedenen auf der gleichen Linie eingesetzten Fahrzeugkombinationen</LI>
+            <LI class="List0">Gleichmäßigkeit: Anzahl der Fahrplanfahrtabschnitte, deren Fahrplanfahrtabschnitts-Vorkommen in mindestens zwei verschiedenen Umläufen bzw. Umlauftagen liegen</LI>
+            <LI class="List0">Unterschied zur Vergleichslösung (nur wenn eine Vergleichslösung vorgegeben ist): Unterschied zu dieser Vergleichslösung in Form abweichender Übergänge zwischen Fahrplanfahrtabschnitten</LI>
+        </ul>
+        <p class="Text">Als Zielfunktion (OF) wird die folgende Funktion verwendet, die auf dem Vergleich zwischen den ermittelten und geschätzten Werten für jede der Zielfunktionskomponenten basiert:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/9_58.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="99px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="397px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                            <span class="formula_subscript">i</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Einflussfaktor (Verfahrensparameter) für die Messgröße <span class="formula" style="line-height: 11pt;">i</span>, wobei <span class="symbol" style="line-height: 11pt;">S</span><span class="formula" style="font-size: 8pt;line-height: 10pt;">c</span><span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">i</span> &gt; 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">of</span>
+                            <span class="formula_subscript">i</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Zielfunktionskomponente für die Messgröße <span class="formula">i</span> gemäß obiger Liste</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">comparison</span>
+                            <span class="formula_subscript">i</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Vergleichswert für die Messgröße <span class="formula">i</span> in ähnlicher Größenordnung</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die einzelnen Eigenschaften der Komponenten ergeben sich folgendermaßen:</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 494px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="97px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="397px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Komponente</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Berechnung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Kosten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Die Zielfunktionskomponente Kosten bewertet die Lösungen nach den gleichen Kriterien wie die Umlaufbildung ohne Fahrzeugaustausch.</p>
+                        <p class="CellText">Es gilt somit</p>
+                        <p class="Formula">
+                            <span class="formula">of</span>
+                            <span class="formula_subscript">Costs</span> = <span class="symbol">S</span><span class="formula">f</span><span class="formula_subscript">e</span><span class="formula"> • Costs</span>(<span class="formula">e</span>)    (<span class="formula">f</span><span class="formula_subscript">e</span><span class="formula"> = </span>Fluss auf Kante <span class="formula">e</span>)</p>
+                        <p class="CellText">Für den Vergleichswert wird zunächst eine zufällige Wahl der Fahrzeugkombinationen getroffen und daraus eine Lösung berechnet, deren Kosten als Vergleichswert herangezogen werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Anzahl Fahrzeugeinheiten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gemessen wird die Summe über alle Fahrzeugeinheiten über die Anzahl benutzter, aber nicht verfügbarer Fahrzeuge je Fahrzeugeinheit</p>
+                        <p class="CellText">Der Vergleichswert <span class="formula">comparison</span><span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">vehicle</span> ist 1 (Hinweis: Somit erreichen Sie eine sehr starke Bestrafung, denn dieses Kriterium muss „hart“ gelten, wenn es überhaupt benutzt wird)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Berücksichtigung von Belastungen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Für die Berechnung wird zunächst für jedes Fahrplanfahrtelement (FFE) i die Differenz aus Belastung des FFE und der Kapazität (cap) wie folgt ermittelt</p>
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <img src="../Resources/Images/9_33.jpg" style="width: 380px;height: 40px;" />
+                        </p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_83.jpg" />
+                        </p>
+                        <p class="CellText">Die Kapazität ergibt sich aus der Summe der gewählten Kapazität (Sitzplatz oder Gesamt) der Fahrzeugkombinationen über alle Fahrtabschnitte, die das Fahrplanfahrtelement bedienen.</p>
+                        <p class="CellText">Je nach Parametereinstellung ergibt sich der Wert <img src="../Resources/Images/9_61.jpg" /> für eine Fahrt aus den folgenden Formeln:</p>
+                        <p class="CellText">bei Option <span class="gui_element">Durchschnitts-Belastung</span></p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_84.jpg" />
+                        </p>
+                        <p class="CellText">bei Option <span class="gui_element">Spitzen-Belastung</span></p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_87.jpg" style="width: 164px;height: 30px;" />
+                        </p>
+                        <p class="CellText">Der Wert <img src="../Resources/Images/9_86.jpg" /> ergibt aus der Summe über alle Fahrten:</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_85.jpg" />
+                        </p>
+                        <p class="CellText">Als Vergleichswert dient der Wert dieser Zielfunktionskomponente, der sich für die zur Abschätzung der Kosten benutzte Zufallslösung ergibt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Linienreinheit, lokale Definition</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gemessen wird die Anzahl der Linienwechsel zwischen aufeinander folgenden Fahrplanfahrten im Umlauf. Die Vergleichsgröße ist die Anzahl der Vorkommen von Fahrplanfahrtabschnitten insgesamt (also die Anzahl aller Übergänge zwischen aufeinander folgenden Fahrplanfahrt-Umlaufelementen).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Linienreinheit, globale Definition</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gemessen wird die Anzahl minus 1 der Linien je Umlauf, summiert über alle Umläufe.</p>
+                        <p class="CellText">Der Vergleichswert ist die Anzahl minus 1 der Linien pro Partition, summiert über alle Partitionen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Gleichmäßigkeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gemessen wird die Streuung der Vorkommen von Fahrplanfahrtabschnitten auf verschiedene Umläufe oder optional auf verschiedene Umlauftage. </p>
+                        <p class="CellText">Es gilt</p>
+                        <p class="CellText">
+                            <span class="formula">of</span>
+                            <span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">regularity</span> = Summe Fahrplanfahrtabschnitte |{Umläufe / Umlauftage, die den FFA enthalten}| - 1</p>
+                        <p class="CellText">
+                            <span class="formula">comparison</span>
+                            <span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">regularity</span> = (Summe Vorkommen des FFA im Umlaufbildungszeitraum – 1)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Abstand zur Startlösung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">Gemessen wird die Anzahl der Übergänge von Fahrplanfahrtabschnitt auf Fahrplanfahrtabschnitt, die sich von der Vergleichslösung unterscheiden.</p>
+                        <p class="CellText">Der Vergleichswert ist die Anzahl aller Übergänge von Fahrplanfahrtabschnitt auf Fahrplanfahrtabschnitt in der Vergleichslösung.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Komponenten der Zielfunktion für die Umlaufbildung mit Fahrzeugaustausch</p>
+        <table class="TableStyle-TipHint1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="496px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Zielfunktionskomponenten, die für die konkrete Planungsaufgabe keine Relevanz haben, können durch Setzen des jeweiligen Koeffizienten auf 0 abgeschaltet werden. Dies ist sogar empfehlenswert, weil die Optimierung hin zu Lösungen, die in Hinblick auf die ausgeblendeten Eigenschaften gut sind, dadurch unterdrückt wird. Das Auffinden von guten Lösungen bezüglich der verbleibenden Kriterien wird entsprechend beschleunigt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="571" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km;max;Richtungs;te;LocationFault;TimeFault;LayoverTimeFault;VehicleFault;Fahrzeugeinheits">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1355562">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_57291">
+            </a>Verfahrenssteuerung und Konvergenz</h4>
+        <p class="Text">Das Verfahren Umlaufbildung mit Fahrzeugaustausch lässt sich über mehrere Parameter steuern. Das Verfahren ist iterativ, indem es zunächst eine Menge von Lösungen erzeugt und diese Schritt für Schritt verbessert. Erfolgt innerhalb einer vorgegebenen Anzahl Iterationen keine Verbesserung mehr, ist die Konvergenz erreicht und das Verfahren wird beendet.</p>
+        <p class="Text">Als heuristisches Verfahren spielt der Zufall eine bestimmende Rolle, zumal es meistens viele gleichwertige Lösungen gibt. Durch Verwendung eines Zufallszahlengenerators ist der Ablauf deterministisch in dem Sinne, dass jede Berechnung bei gleichen Daten und Parametern das gleiche Ergebnis erzeugt. Sie können aber den Ablauf durch Veränderung des Parameters <span class="gui_element">Startwert für Zufallszahlengenerator</span> modifizieren und so bei ansonsten gleichen Daten alternative Lösungen berechnen.</p>
+        <p class="Text">Die Parameter zur Steuerung des Verfahrensablaufs sind im Einzelnen:</p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Parameter</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bedeutung und Hinweise</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">Vergleichslösung verwenden</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Eine Vergleichslösung ist eine Umlaufversion mit Umläufen darin. Wird diese Option gewählt, so wird eine Lösung gesucht, die dieser Vergleichslösung ähnlich ist. Als Vergleichslösung sollte eine andere Umlaufversion gewählt werden als die, für die aktuell Umläufe gebildet werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">Maximale Anzahl Iterationen</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl Iterationen, nach denen das Verfahren beendet wird, wenn keine Konvergenz eintritt. Dieser Wert sollte ein Vielfaches der Anzahl Iterationen ohne Verbesserung betragen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">Anzahl Iterationen ohne Verbesserung</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wenn N Iterationen lang keine Verbesserung des Zielfunktionswertes festgestellt wird, gilt das Verfahren als konvergiert und wird beendet. Sinnvolle Werte hängen von der Größe der Aufgabenstellung ab, sollten aber 10-20 nicht unterschreiten.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">Anzahl Lösungen pro Iteration</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl der pro Iteration gleichzeitig existierenden Lösungen. Je mehr Freiheitsgrade die Planungsaufgabe bietet, umso größer sollte dieser Wert sein. Der minimal zulässige Wert beträgt 10, üblich sind meist 20-100.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">Startwert für Zufallszahlengenerator</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Durch Veränderung dieses Wertes kann das Zufallselement des Verfahrens beeinflusst werden, um bei sonst gleichen Daten und Parametern zu einem anderen Ablauf und damit zu einem anderen Ergebnis zu kommen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

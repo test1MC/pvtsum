@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="687" MadCap:lastWidth="510" MadCap:ignoredWords="Nr;No;xls;End">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_netz_bearbeiten_23091886_2463029">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_28707">
+            </a>Optionen für Linienrouten auswählen</h3>
+        <p class="Text">
+            <MadCap:keyword term="Teilnetz:Optionen für Linienrouten" />Im Fenster <span class="gui_element">Teilnetzgenerator Parameter</span> können Sie unter verschiedenen Optionen wählen:</p>
+        <ul>
+            <LI class="List0" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="gui_element">Gesamte Linienroute von Start- bis End-Haltepunkt</span>
+            </LI>
+        </ul>
+        <p class="Text2">Die Linienroute wird vom Start- bis zum End-Haltepunkt in das Teilnetz übernommen.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/K6Teilnetz1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <ul>
+            <LI class="List0" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="gui_element">Linienroute an den Grenzen des Untersuchungsgebiets abschneiden</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Die Linienroute startet innerhalb des Teilnetzes am ersten Haltepunkt mit Halt und endet innerhalb des Teilnetzes am letzten Haltepunkt mit Halt.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/K6Teilnetz2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Linienroute schneiden, Kordonhaltestellen hinzunehmen</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Hat der erste oder der letzte Haltepunkt innerhalb des Teilnetzes einen Halt, so startet oder endet an diesem die Linienroute. Ansonsten wird die Linienroute bis zum nächsten Haltepunkt mit Halt verlängert.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/K6Teilnetz3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die folgenden Optionen stehen Ihnen nur zur Verfügung, wenn bereits eine ÖV-Umlegung berechnet wurde. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Haltepunktmatrix erzeugen (teilwegfein)</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Für jeden Teilweg innerhalb des Teilnetzes wird ein Kordonbezirk am Start- und End-Haltepunkt erzeugt. </p>
+        <p class="List_Text0">Die Nachfragedaten werden je Teilweg in der Matrix gespeichert <MadCap:xref class="Grundlagen" href="../1_Netzmodell/1_2_Teilnetzgenerator.htm#1_netzmodell_1240632468_1142023"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Teilnetzgenerator</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die im Ursprungsnetz vorhandenen Bezirke werden nicht in der Matrix gesichert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Haltepunktmatrix erzeugen (wegfein)</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Für jeden Weg innerhalb des Teilnetzes wird für den ersten Haltepunkt ein Kordonbezirk erzeugt (Start). Führt der Weg aus dem Teilnetz heraus oder folgt auf einen Teilweg ein Fußweg der außerhalb des Teilnetzes liegt, so wird am letzten Haltepunkt im Teilnetz ein Kordonbezirk erzeugt (Ziel). Führt der Weg wieder in das Teilnetz hinein, wird ein Kordonbezirk am ersten Haltepunkt im Teilnetz erzeugt (Start).</p>
+        <p class="Text2">Die Nachfragedaten werden je Weg in der Matrix gespeichert <MadCap:xref class="Grundlagen" href="../1_Netzmodell/1_2_Teilnetzgenerator.htm#1_netzmodell_1240632468_1142023"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Teilnetzgenerator</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die im Ursprungsnetz vorhandenen Bezirke werden nicht in der Matrix gesichert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

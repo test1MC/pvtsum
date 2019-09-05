@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="668" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs;Ride;Wohn;00h">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1109435">
+            </a>
+            <a name="1_netzmodell_1240632468_10567">
+            </a>Zeitbezug der Nachfrage (Ganglinien)</h3>
+        <p class="Text">
+            <MadCap:keyword term="Verkehrsnachfrage: Zeitbezug" />
+            <MadCap:keyword term="Ganglinien" />
+            <MadCap:keyword term="Verkehrsnachfrage: Ganglinien" />Jede Nachfrage hat genau wie das Verkehrsangebot und die Umlegung selbst einen Zeitbezug. </p>
+        <p class="Text">Bei den statischen IV-Umlegungen bezieht sich die Nachfrage automatisch auf die Analyseperiode. Die dem Nachfragesegment zugeordnete Nachfrageganglinie und der Startzeitpunkt sind hier ohne Bedeutung.</p>
+        <p class="Text">Anders verhält es sich bei den dynamischen IV-Umlegungen (DUE und Dynamische Stochastische Umlegung) und der taktfeinen und fahrplanfeinen Umlegung im ÖV. Nachfragematrizen haben hier keinen eigenen expliziten Zeitbezug, sondern dieser wird durch Angabe eines Startzeitpunkts und einer Ganglinie beschrieben. </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Um später mit diesen Verfahren eine Umlegung ausführen zu können, muss den Nachfragesegmenten eine Ganglinie zugeordnet sein.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Der Startzeitpunkt legt fest, zu welchem Zeitpunkt und – bei Verwendung eines Wochen- oder Jahreskalenders – an welchem Tag der Zeitraum beginnt, auf den sich die Nachfrage in der Matrix bezieht. Das Ende des Zeitraums ergibt sich aus der Länge der zugeordneten Ganglinie.</p>
+        <p class="Text">Es gibt zwei verschiedene Arten, so genannte Standardganglinien in <MadCap:variable name="PTV_Manual.Programmname" /> zu definieren:</p>
+        <ul>
+            <LI class="List1">Bei der prozentualen Ganglinie wird pro Zeitintervall ein Gewicht angegeben. Dieses beschreibt, welcher Anteil der gesamten Nachfrage auf dieses Zeitintervall entfällt. Wird für ein Nachfragesegment eine prozentuale Ganglinie verwendet, muss auch eine Nachfragematrix angegeben werden, deren Nachfrage mit den angegebenen Gewichten zeitlich verteilt wird. Diese Matrix muss die Anzahl der Fahrtwünsche im durch den Startzeitpunkt und die Länge der Ganglinie festgelegten Zeitraum enthalten.</LI>
+        </ul>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_OneMatrix.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <MadCap:keyword term="Ganglinien: prozentual" />Prozentuale Ganglinie</p>
+        <ul>
+            <LI class="List1">Bei der Ganglinie von Matrixnummern wird dagegen pro Zeitintervall eine eigene Nachfragematrix angegeben. Diese enthält die Fahrtwünsche nur dieses Zeitintervalls.</LI>
+        </ul>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_MultipleMatrices.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000067px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <MadCap:keyword term="Ganglinien: Matrixnummern" />Ganglinie von Matrixnummern</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Durch die Verwendung von Ganglinien von Matrixnummern ist es möglich, pro Quelle-Ziel-Relation und Zeitintervall einen Wert für die Nachfrage anzugeben. Dadurch können unsymmetrische Änderungen der Nachfrage (Lastrichtung) abgebildet werden. Bei der prozentualen Ganglinie hingegen wirkt auf jede Quelle-Ziel-Relation pro Zeitintervall der gleiche Faktor.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Ganglinien von Matrixnummern erfordern pro Zeitintervall eine volle Matrix, die erzeugt und auch gespeichert werden muss. Um diesen Aufwand zu ersparen und trotzdem eine gewisse Lastrichtung in der Nachfrage darstellen zu können, bietet <MadCap:variable name="PTV_Manual.Programmname" /> als Kompromiss Nachfrageganglinien an. Diese entstehen auf Basis einer Standardganglinie, indem pro Paar von Bezirkstypen eine abweichende Standardganglinie angegeben werden kann. Dadurch können für ausgewählte Paare von Quell- und Zielbezirken mit bekannten Strukturmerkmalen (beispielsweise reinen Wohn- oder reinen Gewerbegebieten) abweichende Ganglinien vorgegeben werden.</p>
+        <p class="Text">Pro Nachfragesegment wird entweder eine feste Nachfragematrix zusammen mit einer prozentualen Nachfrageganglinie angegeben, oder aber eine Nachfrageganglinie, die selbst eine Ganglinie von Matrizen ist. Ferner ist auch der Starttag und die Startzeit pro Nachfragesegment festzulegen.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Der Startzeitpunkt verschiebt die Zeitintervalle der Ganglinien, weil diese relativ zu diesem Startzeitpunkt angegeben sind. Definiert die Ganglinie Intervalle A von 00:00h bis 01:00h und B von 01:00h bis 02:00h, und ist der Startzeitpunkt auf Tag 2, 14:00h festgelegt, so wird der in Intervall A definierte Anteil der Nachfrage an Tag 2 von 14:00h bis 15:00h, derjenige von Intervall B an Tag 2 von 15:00h bis 16:00h anfallen. Außerhalb dieser Zeiten, also beispielsweise am ersten Tag des Kalenders, gibt es keine Nachfrage.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

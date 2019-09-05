@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:lastBlockDepth="6" MadCap:lastHeight="682" MadCap:lastWidth="510" MadCap:ignoredWords="Symmetrize;bzw;zeilen;$O;usw;Method;of">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_nachfrage_modellieren_1800171850_1153232">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_29462">
+            </a>Gewichteten Mittelwert von Attributen berechnen<a name="30142"></a></h4>
+        <p class="Text">
+            <MadCap:keyword term="Attribute: Mittelwert berechnen" />
+            <MadCap:keyword term="Method of Successive Averages" />
+            <MadCap:keyword term="MSA: siehe Method of Successive Averages" />Ähnlich wie für Matrizen können Sie Mittelwerte von Attributen gemäß MSA (Method of Successive Averages) ermitteln <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Mittelwertbildung von Attributen.htm#1_nachfragemodell_2215163117_1231064">Siehe "Mittelwertbildung von Attributen"</MadCap:xref>. Dabei wird in mehreren Iterationen jeweils der gewichtete Mittelwert ermittelt zwischen dem gemittelten Attribut aus der letzten Iteration und dem Attribut aus der aktuellen Iteration.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie in der Symbolleiste auf das Symbol <img src="../Resources/Images_4_all/ICO_procedure_flow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000347px;margin-bottom: 0, 9983615px;" />&#160;<span class="gui_element">Verfahrensablauf öffnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Verfahrensablauf</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Fügen Sie an der gewünschten Stelle im Verfahrensablauf das Verfahren <span class="gui_element">Mittelwertbildung (MSA) von Attributen</span> aus der Kategorie <span class="gui_element">Sonstiges</span> ein <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahrensablauf festlegen und starten.htm#2_verfahrensablauf_festlegen_40480990_1019020"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahrensablauf festlegen und starten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Stellen Sie sicher, dass das eingefügte Verfahren markiert ist, und klicken Sie im Bereich <span class="gui_element">Aktionen</span> auf die Schaltfläche <span class="gui_element">Bearbeiten</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Parameter Mittelwertbildung (MSA) von Attributen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="364px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Netzobjekttyp</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Netzobjekttyp der zu mittelnden Attribute</p>
+                        <p class="CellText">Über die Auswahlliste können Sie den Netzobjekttyp auswählen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Ergebnis-Attribut mit 0 initialisieren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, wird der Wert des Zielattributs vor dem Beginn des Verfahrensablaufs auf 0 gesetzt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur aktive</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, wird nur der Attributwert der aktiven Netzobjekte des ausgewählten Typs gemittelt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Abschneiden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, wird der berechnete Wert ohne Dezimalstellen als Zielattributwert übernommen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur bei Zielattributen vom Typ Ganzzahl verfügbar.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Runden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, wird der berechnete Wert gerundet und als Zielattributwert übernommen. Bei einem Dezimalwert bis inklusive 4 wird abgerundet, ab 5 wird aufgerundet.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur bei Zielattributen vom Typ Ganzzahl verfügbar.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">obere Schaltfläche (Ziel)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Attribut, in dem das Ergebnis der Mittelwertbildung gespeichert wird und das als Input für den nächsten Iterationsschritt dient</p>
+                        <p class="CellText">Über die Schaltfläche können Sie ein Attribut (und ein Subattribut, sofern vorhanden) in einem separaten Fenster auswählen <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Fenster_zur_Auswahl_eines_Attributs.htm#2_netz_bearbeiten_23091886_2854659"><span style="color: Black;" class="mcFormatColor">(</span><u>Fenster zur Auswahl eines Attributs</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">untere Schaltfläche (Quelle)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Attribut, dessen Werte in den gewichteten Mittelwert eingehen</p>
+                        <p class="CellText">Über die Schaltfläche können Sie ein Attribut (und ein Subattribut, sofern vorhanden) in einem separaten Fenster auswählen <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Fenster_zur_Auswahl_eines_Attributs.htm#2_netz_bearbeiten_23091886_2854659"><span style="color: Black;" class="mcFormatColor">(</span><u>Fenster zur Auswahl eines Attributs</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">Auswahlliste</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">i/(i+1)</span>
+                        </p>
+                        <p class="CellText">Der Wert des Ergebnis-Attributs wird mit dem Iterationszähler i multipliziert und durch (i+1) dividiert. Der Gewichtungsfaktor des anderen Attributs ändert sich automatisch zu 1/(i+1). Dies ist die Standardeinstellung zur Berechnung von MSA.</p>
+                        <p class="CellText">
+                            <span class="gui_element">1/(i+1)</span>
+                        </p>
+                        <p class="CellText">Der Wert des Ergebnis-Attributs wird mit 1 multipliziert und durch (i+1) dividiert. Der Gewichtungsfaktor des anderen Attributs ändert sich automatisch zu i/(i+1). </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Bedingter Rücksprung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Hier wird angezeigt, in welcher Zeile des Verfahrensablaufs der bedingte Rücksprung festgelegt ist, der für die iterative Berechnung zuständig ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Iteration</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Hier wird angezeigt, in welchem Iterationsschritt sich das Verfahren aktuell befindet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Das Abschneiden oder Runden der Dezimalstellen berechneter Werte kann bei der Iteration dazu führen, dass das Konvergenzkriterium erst spät oder gar nicht erfüllt wird. Wir empfehlen daher, statt eines Attributs vom Typ Ganzzahl ein benutzerdefiniertes Attribut vom Typ Gleitkommazahl zu verwenden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="6. &#160;">Führen Sie das Verfahren aus <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahren im Verfahrensablauf ausführen.htm#2_verfahrensablauf_festlegen_40480990_1112524"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahren im Verfahrensablauf ausführen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Result">Die Attributwerte werden gemittelt.</p>
+    </body>
+</html>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="685" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls;max;Program;Processor;R';Factor;Stdabw;Lognormalvert;Method;Lotka;Volterra;BPR;BPR2;b’;Knotensteuerung_CR;pseudodynamic;pa;tmodelspecial;ten;Circular;Operations;Planning;ICU1;ICU;ICU2">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1177547">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_75560">
+            </a>Signalisierte Knoten (LOS)<a name="50027"></a></h4>
+        <p class="Text">
+            <MadCap:keyword term="Level of Service (ICA): Signalisierte Knoten" />Die Methode umfasst sechs Rechenschritte <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Signalisierte Knoten.htm#1_benutzermodell_iv_2033098965_1171292"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Signalisierte Knoten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. </p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass an den Knoten mit Steuerungstyp <span class="gui_element">Signalisiert </span>die Eingabeattribute sinnvoll belegt sind <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Signalisierte Knoten.htm#1_benutzermodell_iv_2033098965_1171292"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Signalisierte Knoten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Prüfen und ändern Sie bei Bedarf die Parameter auf der Seite <span class="gui_element">Signalisiert</span>.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Berechnung gemäß</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Wählen Sie in der Auswahlliste die gewünschte Option.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Circular 212 Operations </span>und<span class="gui_element"> Circular 212 Planning</span></p>
+                        <p class="CellText">Diese Methoden entnehmen die Sättigungsverkehrsstärke einfach aus Zeile E der speziellen Tabellen für Planning beziehungsweise Operations sowie aus einer gemeinsamen Tabelle <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Signalisierte Knoten.htm#1_benutzermodell_iv_2033098965_1171292"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Signalisierte Knoten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Für die Circular-Optionen ist die Ideale Sättigungsverkehrsstärke nicht änderbar.</p>
+                        <p class="CellText">
+                            <span class="gui_element">HCM 2000</span>
+                        </p>
+                        <p class="CellText">Die Knotenwiderstände werden nach HCM 2000 berechnet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">HCM 2010</span>
+                        </p>
+                        <p class="CellText">Die Knotenwiderstände werden nach HCM 2010 berechnet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">ICU 1</span>
+                        </p>
+                        <p class="CellText">ICU1 (B/S)= (Belastung / Sättigungsverkehrsstärke) + (Knotenverlustzeit / Umlaufdauer)</p>
+                        <p class="CellText">
+                            <span class="gui_element">ICU 2</span>
+                        </p>
+                        <p class="CellText">ICU2 &#160;(B/S)= (Belastung / Sättigungsverkehrsstärke) * [ 1 + (1 / [ (Umlaufdauer / Knotenverlustzeit) – 1] ) ]</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Für ICU-Optionen wird die benutzerdefinierte Anzahl Fahrzeuge je Aufweitung berücksichtigt, wenn die Option <span class="gui_element">Verwende Anzahl Fahrzeuge</span> für diesen Fahrstreifen ausgewählt ist. Ist diese Option nicht aktiv, wird die Anzahl Fahrzeuge ermittelt aus der Länge der Aufweitung und dem Attribut Platzbedarf pro PKW-Einheit.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">maximales tAkt</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, geben Sie in das Eingabefeld einen Wert ein, der als benutzerdefinierter maximaler Abbiegezuschlag am Knoten verwendet wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Percentil der Staulänge [%]</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Wählen Sie in der Auswahlliste das Perzentil (70, 85, 90, 95 oder 98), das in das Abbiegerattribut <span class="gui_element">ICAStaulänge</span> für lichtsignalgesteuerte Knotenpunkte gespeichert werden soll</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText" style="mc-hyphenate-shortest-prefix: 8;">
+                            <span class="gui_element">Ideale Verkehrsstärke HCM[Fzge/Spur/h]</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Benutzerdefinierter Wert für die Berechnungsmethode HCM. Maximale Anzahl Fahrzeuge, die im Idealzustand fahren können.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wir empfehlen einen Wert zwischen 1600 und 2000 Fahrzeuge je Spur/h.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 8;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Ideale Verkehrsstärke ICU1 [Fzge/Spur/h]</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Benutzerdefinierter Wert für die Berechnungsmethode ICU1. Maximale Anzahl Fahrzeuge, die im Idealzustand fahren können.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wir empfehlen einen Wert zwischen 1600 und 2000 Fahrzeuge je Spur/h.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 8;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Ideale Verkehrsstärke ICU2 [Fzge/Spur/h]</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Benutzerdefinierter Wert für die Berechnungsmethode ICU2. Maximale Anzahl Fahrzeuge, die im Idealzustand fahren können.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wir empfehlen einen Wert zwischen 1600 und 2000 Fahrzeuge je Spur/h.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Aufweitungslänge für die Ermittlung verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, wird die Länge der Aufweitung berücksichtigt.</p>
+                        <p class="CellText">Ist die Option nicht ausgewählt, wird die Länge der Aufweitung nicht berücksichtigt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

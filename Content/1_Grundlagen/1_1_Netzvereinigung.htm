@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="8" MadCap:lastHeight="585" MadCap:lastWidth="510" MadCap:ignoredWords="R2;bzw;ggf;usw;DiffNet;Be;v0IV;DIFFNET;Netz1;Netz2;steuerung;horizonte">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_grundlagen_des_programms_3110159993_1035615">
+            </a>
+            <a name="1_grundlagen_des_programms_3110159993_96850">
+            </a>Netzvereinigung</h3>
+        <p class="Text">
+            <MadCap:keyword term="Netzvereinigung" />Die Netzvereinigung ermöglicht den Vergleich zweier Verkehrsnetze und die Anzeige der Differenz. Bei der Netzvereinigung können beliebige Netze miteinander kombiniert werden. Anschließend stehen Ihnen jedoch nur noch Auswertefunktionen, aber kaum noch Bearbeitungsfunktionen zur Verfügung.</p>
+        <h5>
+            <MadCap:keyword term="Netzvereinigung: Beispiele" />Anwendungsfälle für die Netzvereinigung</h5>
+        <p class="Text">Bei der Projektbearbeitung möchten Sie die Unterschiede zwischen zwei <MadCap:variable name="PTV_Manual.Programmname" />-Modellen ermitteln. Gelegentlich entstehen zu einem Projekt zwei verschiedene Versionsdateien (zum Beispiel für verschiedene Szenarien) und Sie möchten im Nachhinein nachvollziehen, worin sich die beiden Modelle unterscheiden.</p>
+        <p class="Text">Zwei Varianten eines Modells unterscheiden sich typischerweise dadurch, dass einige Netzobjekte bei manchen Attributen unterschiedliche Werte tragen. Wenn Sie in zwei Versionsdateien beispielsweise unterschiedliche Ausbaustände desselben Netzes modellieren, gibt es zum Beispiel Abweichungen in den Attributen <span class="gui_element">Anzahl Fahrstreifen</span> und <span class="gui_element">Kapazität IV</span> für einige Strecken. Zusätzlich können Netzobjekte in nur einem der beiden Modelle enthalten sein und im anderen ganz fehlen. Wenn das eine der beiden Modelle beispielsweise einen Planfall mit einer zusätzlichen Umgehungsstraße enthält, fehlen die zugehörigen Strecken im anderen Modell. </p>
+        <p class="Text">Die nachfolgenden Abbildungen zeigen beide Fälle. Netz 1 enthält gegenüber Netz 2 eine Strecke mehr, außerdem unterscheiden sich die Strecken in den Attributen <span class="gui_element">VSysSet</span> und <span class="gui_element">v0IV</span>.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_DiffNet_Network1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_grundlagen_des_programms_3110159993_1035642">
+            </a>
+            <a name="1_grundlagen_des_programms_3110159993_37260">
+            </a>Für das Vereinigungsnetz verwendetes Netz 1</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_DiffNet_Network2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_grundlagen_des_programms_3110159993_1035648">
+            </a>
+            <a name="1_grundlagen_des_programms_3110159993_56648">
+            </a>Für das Vereinigungsnetz verwendetes Netz 2</p>
+        <h5>Das Vereinigungsnetz</h5>
+        <p class="Text">
+            <MadCap:keyword term="Vereinigungsnetz" />Die beiden zu vergleichenden Modelle, Netz 1 und Netz 2, müssen als Versionsdateien vorliegen. Wenn Sie beide Versionsdateien im Netzvereinigungsmodus öffnen, zeigt <MadCap:variable name="PTV_Manual.Programmname" /> ein so genanntes Vereinigungsnetz an. Das Vereinigungsnetz wird konstruiert, indem zunächst alle Objekte identifiziert werden, die in beiden Modellen vorkommen. Zwei Objekte gelten in diesem Sinn als gleich, wenn ihre Schlüsselattribute identisch sind. Auch Pflichtverweise auf andere Netzobjekte (zum Beispiel bei Strecken die Schlüssel von Von- und Nach-Knoten) müssen übereinstimmen. Über diese Schnittmenge der Netzobjekte hinaus werden auch diejenigen Objekte ins Vereinigungsnetz aufgenommen, die nur in einem der beiden Modelle vorkommen. Dies ist der wesentliche Unterschied zum Versionsvergleich. Der hierfür in Kauf zu nehmende Nachteil ist die eingeschränkte Editierbarkeit.</p>
+        <p class="Text">Zusätzlich wird für jedes Netzobjekt ein berechnetes Attribut <span class="gui_element">DIFFNET</span> angelegt, das den Status des Netzobjekts wiedergibt.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">in Netz 1</span>: Netz 1 enthält das Objekt, aber nicht Netz 2</LI>
+            <LI class="List0">
+                <span class="gui_element">in Netz 2</span>: Netz 2 enthält das Objekt, aber nicht Netz 1</LI>
+            <LI class="List0">
+                <span class="gui_element">unterschiedlich</span>: Netz 1 und Netz 2 enthalten das Objekt, dabei hat mindestens 1 Attribut unterschiedliche Werte in beiden Netzen</LI>
+            <LI class="List0">
+                <span class="gui_element">gleich</span>: Netz 1 und Netz 2 enthalten das Objekt, alle Attributwerte sind in beiden Netzen identisch</LI>
+            <LI class="List0">
+                <span class="gui_element">in keinem Netz</span>: das Objekt existiert nur im Vereinigungsnetz und hat keine Attributwerte.</LI>
+        </ul>
+        <p class="List_Text0">Beispiel: Ein Abbieger zwischen einer Strecke aus Netz 1 und einer aus Netz 2. Solche Objekte werden in seltenen Fällen erzeugt, damit das Vereinigungsnetz ein zulässiges <MadCap:variable name="PTV_Manual.Programmname" />-Netz ist. Sie haben keine reale Entsprechung und besitzen keine Attributwerte.</p>
+        <p class="Text">Für jedes Attribut (<MadCap:variable name="PTV_Manual.Programmname" />-Attribute und benutzerdefinierte Attribute) aus Netz 1 oder Netz 2 wird im Vereinigungsnetz ein nicht-editierbares Attribut mit den folgenden Eigenschaften angelegt:</p>
+        <ul>
+            <LI class="List0">Das Attribut hat identische Eigenschaften wie in Netz 1 oder Netz 2.</LI>
+            <LI class="List0">Das Attribut hat ein Subattribut mit den Ausprägungen <span class="gui_element">Netz1</span>, <span class="gui_element">Netz2</span> und <span class="gui_element">Differenz</span>. <span class="gui_element">Netz1</span> und <span class="gui_element">Netz2</span> geben den Attributwert aus dem jeweiligen ursprünglichen Netz aus, sofern das Objekt dort existiert, andernfalls wird der Wert 0 oder ein Leereintrag angenommen.</LI>
+        </ul>
+        <ul>
+            <LI class="List0">Der Subattributwert <span class="gui_element">Differenz</span> dient zur Ausgabe der Differenz und hat folgende Werte:</LI>
+            <LI class="List1">für <span class="gui_element">numerische</span> Attribute die Differenz der Attributwerte aus Netz 1 und Netz 2</LI>
+            <LI class="List1">für <span class="gui_element">stringwertige</span> Attribute bei Gleichheit den String „==“, bei Abweichung „&lt; &gt;“, bei Objekten, die in einem der Netze nicht enthalten sind, einen Leereintrag</LI>
+        </ul>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Existiert in Netz 1 und Netz 2 ein benutzerdefiniertes Attribut mit gleicher ID, aber unterschiedlichen Wertebereichen, so werden Wertebereich und Attributwert aus Netz 1 übernommen. Für Objekte mit Koordinaten werden für die Anzeige im Netz die Koordinatenwerte aus Netz 1 übernommen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Netzvereinigung ignoriert folgende Objekte und Einstellungen:</p>
+                        <ul>
+                            <LI class="List0">Objekte der Knotengeometrie/-steuerung</LI>
+                            <LI class="List0">die gesamte Nachfragebeschreibung (Matrizen, Ganglinien)</LI>
+                            <LI class="List0">alle Wegeinformationen</LI>
+                            <LI class="List0">Analyseperioden und -horizonte</LI>
+                            <LI class="List0">Filter</LI>
+                            <LI class="List0">Umläufe</LI>
+                            <LI class="List0">Grafikparameter</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_grundlagen_des_programms_3110159993_1035703">Abbildung&#160;8</MadCap:xref> zeigt das Vereinigungsnetz von Netz 1 (<MadCap:xref class="Label_Image" href="#1_grundlagen_des_programms_3110159993_1035642">Abbildung&#160;6</MadCap:xref>) und Netz 2 (<MadCap:xref class="Label_Image" href="#1_grundlagen_des_programms_3110159993_1035648">Abbildung&#160;7</MadCap:xref>).</p>
+        <p class="ImageOH">&#160;<img src="../Resources/Images/AREA_DiffNet_Supernetwork.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997691px;" /></p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">
+            <a name="1_grundlagen_des_programms_3110159993_1035703">
+            </a>
+            <a name="1_grundlagen_des_programms_3110159993_84516">
+            </a>Vereinigungsnetz aus Netz 1 und Netz 2</p>
+        <p class="Text">Sie sehen in der Netzansicht des Vereinigungsnetzes, dass die Strecke unten links in Netz 2 eine um 20 km/h niedrigere Geschwindigkeit aufweist und sich im <span class="gui_element">VSysSet</span> unterscheidet. Die Strecke unten rechts ist dagegen in beiden Netzen identisch.</p>
+        <h5>Besonderheit: <MadCap:keyword term="Netzvereinigung: Analysezeitintervalle" />Analysezeitintervalle</h5>
+        <p class="Text">Sofern die Analysezeitintervalle in Netz 1 und Netz 2 übereinstimmen (ID und Intervallgrenzen), werden gleiche Intervalle auch im Vereinigungsnetz angelegt. Sind die Intervalle nicht völlig gleich, werden im Vereinigungsnetz <span class="gui_element">keine</span> Intervalle angelegt. Die Übereinstimmung der Analyseperioden und -horizonte wird nicht überprüft. Attributwerte, die sich auf unterschiedliche Analyseperioden oder -horizonte in Netz 1 und Netz 2 beziehen, werden trotzdem übernommen.</p>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="553" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen,PTV_Manual.Ready_for_translation" MadCap:ignoredWords="R2;bzw;ggf;usw;DiffNet;Be;v0IV;DIFFNET;Netz1;Netz2;steuerung;horizonte;xx">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">Voraussetzungen für die Nutzung des verteilten Rechnens</h3>
+        <p class="Text">
+            <MadCap:keyword term="Verteilte Berechnung:Voraussetzungen" />Die für die verteilte Berechnung vorgesehenen Rechner (Rechenknoten) müssen bestimmte Voraussetzungen erfüllen:</p>
+        <ul>
+            <LI class="List0">Auf allen Rechnern müssen passende <MadCap:variable name="PTV_Manual.Programmname"></MadCap:variable>-Versionen installiert sein, die die gleiche Binärversion haben (Beispiel: <span class="gui_element">14.00</span>-xx).</LI>
+            <LI class="List0">Auf allen Rechnern müssen die zur Berechnung erforderlichen Zusatzmodule, sowie eine ausreichende Netzgröße lizenziert sein.</LI>
+            <LI class="List0">Die verwendeten Lizenzen müssen das Modul "Verteiltes Rechnen" enthalten und der gleichen Lizenzgruppe zugeordnet sein. </LI>
+            <LI class="List0">Wenn Python-Skripte oder AddIns verwendet werden, muss auf allen Rechnern die passende Python-Version verfügbar und es müssen die verwendeten AddIns installiert sein.</LI>
+            <LI class="List0">Je nach Anwendungsfall muss sichergestellt werden, dass auf allen Rechnern zusätzliche  Ressourcen wie beispielsweise die HBEFA-Datendateien oder benutzerdefinierte CR-Funktionen verfügbar sind. Daten, die spezifisch für das Projekt sind, werden von <MadCap:variable name="PTV_Manual.Programmname"></MadCap:variable> automatisch auf die beteiligten Rechner kopiert.</LI>
+            <LI class="List0">Gleichen Sie die Programmoptionen der Rechner ab, das geschieht nicht automatisch.</LI>
+            <LI class="List0">Die Rechner müssen gegenseitig über das Netzwerk erreichbar sein. Gegebenenfalls müssen Sie die für die Kommunikation verwendeten Ports in der Firewall der Rechner freigeben und entsprechende Benutzerrechte einräumen. Die Ports sind weitgehend frei wählbar. Damit die Rechenknoten automatisch von <MadCap:variable name="PTV_Manual.Programmname" /> gefunden werden, müssen sie im gleichen Subnetz stehen. Ist dies nicht der Fall, können Sie sie trotzdem für das verteilte Rechnen nutzen, allerdings müssen Sie die Rechneradressen dann manuell eintragen.</LI>
+            <LI class="List0">Auf den Rechenknoten muss der zu der gewünschten Installation gehörende <span class="gui_element">PTV Vision Berechnungs-Server</span> laufen. Nur wenn diese Software ausgeführt wird, können Berechnungsaufträge entgegengenommen werden. Der Berechnungsserver wird bei der Installation von <MadCap:variable name="PTV_Manual.Programmname" /> automatisch installiert. Es ist nicht erforderlich, dass <MadCap:variable name="PTV_Manual.Programmname" /> selbst auf den Rechenknoten gestartet wird.</LI>
+            <LI class="List0">Der Berechnungsserver ist kein Windows-Dienst, die Software arbeitet nur, wenn ein Benutzer am Rechner angemeldet ist</LI>
+        </ul>
+        <table style="caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');width: 495px;" class="TableStyle-TipHint1" cellspacing="0">
+            <col style="width: 477px;" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Es wird eine Version von <MadCap:variable name="PTV_Manual.Programmname" /> angeboten, die unabhängig von einer Vollversion installiert wird und ausschließlich für die verteilte Berechnungen von Szenarien und Verfahren verwendet wird.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

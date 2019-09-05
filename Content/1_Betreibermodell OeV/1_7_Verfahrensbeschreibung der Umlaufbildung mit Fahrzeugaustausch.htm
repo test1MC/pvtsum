@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km;max;Richtungs;te;LocationFault;TimeFault;LayoverTimeFault;VehicleFault;Fahrzeugeinheits" MadCap:lastBlockDepth="4" MadCap:lastHeight="1011" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_betreibermodell_oev_1878159914_1320271">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_13897">
+            </a>Verfahrensbeschreibung der Umlaufbildung mit Fahrzeugaustausch</h3>
+        <p class="Text">
+            <MadCap:keyword term="Umlaufbildung:mit Fahrzeugaustausch: Verfahrensablauf" />
+            <MadCap:keyword term="Fahrzeugkombinations-Menge" />
+            <MadCap:keyword term="Fahrzeugkombinations-Set" />Die Umlaufbildung mit Fahrzeugaustausch unterscheidet sich von derjenigen ohne Fahrzeugaustausch dadurch, dass die einzusetzende Fahrzeugkombination für jeden Fahrplanfahrtabschnitt nicht fest vorgegeben ist. Vielmehr hat das Verfahren die Möglichkeit, zwischen allen im Attribut <span class="gui_element">Fahrzeugkombinations-Set</span> angegebenen Fahrzeugkombinationen die beste auszuwählen. Dabei sind unterschiedliche Kriterien möglich, die in einer übergeordneten Zielfunktion gegeneinander gewichtet werden können:</p>
+        <ul>
+            <LI class="List0">Auswahl nach Kosten: Die Wahl einer Fahrzeugkombination ist mit unterschiedlichen Kosten verbunden, die in die Zielfunktion eingehen.</LI>
+            <LI class="List0">Auswahl nach Kapazität: Für die Wahl kann ein Abgleich zwischen der Belastung der Fahrt (Umlegungsergebnis oder Zähldaten) einerseits und der (Sitzplatz-)Kapazität der Fahrzeugkombination andererseits durchgeführt werden. Nicht durch die angebotene Kapazität abgedeckte Nachfrage geht in die Zielfunktion ein.</LI>
+            <LI class="List0">Auswahl nach Verfügbarkeit: Die Anzahl der verfügbaren Fahrzeuge kann auf Einheitenebene vorgegeben werden. Die Auswahl erfolgt dann so, dass diese Restriktion eingehalten wird. Die Anzahl der über die Verfügbaren hinaus eingesetzten Fahrzeuge geht in die Zielfunktion ein.</LI>
+        </ul>
+        <p class="Text">Damit geht die Umlaufbildung mit Fahrzeugaustausch weit über den Anwendungsbereich der Umlaufbildung ohne Fahrzeugaustausch <MadCap:xref class="sieheUeberschrSeite" href="1_7_Verfahrensbeschreibung der Umlaufbildung ohne Fahrzeugaustausch.htm#1_betreibermodell_oev_1878159914_1176075"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahrensbeschreibung der Umlaufbildung ohne Fahrzeugaustausch</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> hinaus und deckt zusätzlich die folgenden Anwendungsbereiche ab:</p>
+        <ul>
+            <LI class="List0">Planung des Fahrzeugeinsatzes in Abhängigkeit von der Nachfrage bei gleichzeitiger Berücksichtigung umlaufbedingter Restriktionen</LI>
+            <LI class="List0">Reduzierung des berechneten Fahrzeugbedarfs durch Flexibilisierung des Fahrzeugeinsatzes bei (möglicherweise gerichteter) Ersetzbarkeit einer Fahrzeugkombination durch eine andere, zum Beispiel wegen technischer Einschränkungen</LI>
+            <LI class="List0">Berücksichtigung der unterschiedlichen Mindestwendezeiten abhängig von der Fahrzeugkombination</LI>
+        </ul>
+        <p class="Text">Das Verfahren baut auf der Umlaufbildung ohne Fahrzeugaustausch auf und integriert diese als einen Verfahrensschritt in seinen Gesamtablauf. Im Gegensatz zu dieser handelt es sich aber nicht um ein analytisches Verfahren, sondern um ein iteratives Suchverfahren, das zwar im Regelfall sehr gute Lösungen findet, aber niemals eine bezüglich der Zielfunktion garantiert optimale.</p>
+        <p class="Text">Als weiteres Unterscheidungsmerkmal existieren zu jedem Zeitpunkt des Verfahrens mehrere vollständige und gleichberechtigte Lösungen der gegebenen Umlaufbildungsaufgabe (Parameter <span class="gui_element">Anzahl Lösungen pro Iteration</span>). Diese werden iterativ verändert und jeweils bewertet. Kommt es zu keiner Verbesserung des Zielfunktionswerts mehr (Konvergenz) oder ist die vorgegebene maximale Anzahl Iterationen erreicht, endet das Verfahren und die beste Lösung wird ausgegeben.</p>
+        <p class="Text">Das Verfahren gliedert sich in die folgenden Schritte.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Initiale Wahl der Fahrzeugkombination aus dem vorgegebenen Fahrzeugkombinations-Set für jeden Fahrplanfahrtabschnitt und jede Lösung</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Umlaufbildung ohne Fahrzeugaustausch für diese Wahl für jede Lösung</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Bewertung der Lösungen und Prüfung auf Konvergenz</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Ermitteln und Zusammenführen von Wahlen, die zu guten Eigenschaften der Lösung geführt haben, und Neubeginn bei Schritt 2.), bis Konvergenz vorliegt oder die maximale Anzahl Iterationen erreicht wurde</p>
+        <p class="Text">Da bei festgelegter Auswahl der Fahrzeugkombinationen die Umlaufbildung selbst genau wie im Verfahren ohne Fahrzeugaustausch <MadCap:xref class="sieheUeberschrSeite" href="1_7_Verfahrensbeschreibung der Umlaufbildung ohne Fahrzeugaustausch.htm#1_betreibermodell_oev_1878159914_1176075"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahrensbeschreibung der Umlaufbildung ohne Fahrzeugaustausch</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> erfolgt, sind zum Verständnis des Verfahrens die folgenden zusätzlichen Komponenten notwendig:</p>
+        <ul>
+            <LI class="List0">Prinzipien der Wahl von Fahrzeugkombinationen</LI>
+            <LI class="List0">Bewertung der Lösungen mittels Zielfunktion</LI>
+            <LI class="List0">Verfahrenssteuerung und Konvergenz</LI>
+            <LI class="List0">Berücksichtigung unterschiedlicher Mindestwendezeiten je Fahrzeugkombination</LI>
+        </ul>
+    </body>
+</html>

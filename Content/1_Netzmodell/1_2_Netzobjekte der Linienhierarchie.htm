@@ -1,0 +1,840 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="666" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStd_TitnoHead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1070058">
+            </a>
+            <a name="1_netzmodell_1240632468_81922">
+            </a>Netzobjekte der Linienhierarchie</h4>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1089041">Abbildung&#160;23</MadCap:xref> zeigt die sechs Netzobjekte der Linienhierarchie.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_LineHierarchy.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_netzmodell_1240632468_1089041">
+            </a>
+            <a name="1_netzmodell_1240632468_12954">
+            </a>Die Linienhierarchie zur Abbildung des ÖV-Angebots</p>
+        <h5>
+            <MadCap:keyword term="Netzobjekte: Oberlinien" />
+            <MadCap:keyword term="Oberlinien" />Oberlinien</h5>
+        <p class="Text">Dieses optionale Netzobjekt dient der aggregierten Auswertung mehrerer der Oberlinie zugeordneter Linien. Es können auch Linien mit verschiedenen Verkehrssystemen zu einer Oberlinie zusammengefasst werden. Auf die Umlegung oder den Aufbau des Fahrplans hat das Netzobjekt keinen Einfluss.</p>
+        <h5>
+            <MadCap:keyword term="Netzobjekte: Linien" />
+            <MadCap:keyword term="Linien" />Linien</h5>
+        <p class="Text">Eine Linie gliedert das Verkehrsangebot des ÖV. Innerhalb des <MadCap:variable name="PTV_Manual.Programmname" />-Datenmodells dient sie vor allem dazu mehrere Linienrouten zusammenzufassen. Jede Linie besitzt mindestens eine oder mehrere Linienrouten. Die Linie selbst besitzt weder einen räumlichen Verlauf im Netz <MadCap:xref class="sieheUeberschrSeite" href="#1_netzmodell_1240632468_1089284">(siehe „Linienrouten“ auf Seite&#160;60)</MadCap:xref>, noch werden an ihr Fahrzeiten zwischen Haltepunkten definiert <MadCap:xref class="sieheUeberschrSeite" href="#1_netzmodell_1240632468_1089920">(siehe „Fahrzeitprofile“ auf Seite&#160;61)</MadCap:xref>. Jede Linie gehört zu genau einem Verkehrssystem. Optional kann einer Linie ein Standard-Betreiber und eine Standard-Fahrzeugkombination zugeordnet werden. Beim Einfügen neuer Fahrplanfahrten werden diese dann als Standardbelegung vorgeschlagen.</p>
+        <h5>
+            <a name="1_netzmodell_1240632468_1089284">
+            </a>
+            <MadCap:keyword term="Netzobjekte: Linienrouten" />
+            <MadCap:keyword term="Linienrouten" />
+            <a name="1_netzmodell_1240632468_79581">
+            </a>Linienrouten</h5>
+        <p class="Text">Eine Linienroute gehört zu genau einer Linie und beschreibt den <span class="gui_element">räumlichen Verlauf </span>eines Linienweges der Linie im Netz für eine Richtung (dieser wird im Folgenden als Linienrouten-Verlauf bezeichnet).</p>
+        <p class="Text">Der Linienrouten-Verlauf wird als geordnete Folge von Routenpunkten angegeben. Längenangaben des Linienrouten-Verlaufs werden zwischen je zwei aufeinander folgenden Routenpunkten ausgegeben. Ein Routenpunkt kann ein Knoten oder ein Haltepunkt entlang des Linienrouten-Verlaufs sein. Alle Haltepunkte entlang des Verlaufs, an denen gehalten werden kann, sind zwingend Routenpunkte. Alle Knoten entlang des Verlaufs können optional als Routenpunkt deklariert werden. Der Linienrouten-Verlauf muss mit einem Haltepunkt, der auf einem Knoten liegt, beginnen und enden. </p>
+        <p class="Text">Für gewöhnlich liegen Linienrouten einer Linie paarweise für die beiden Richtungen vor, jedoch kann eine Linie beliebig viele Linienrouten umfassen (vergleiche etwa <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1091376">Abbildung&#160;24</MadCap:xref>). Verschiedene Linienrouten(-paare) einer Linie repräsentieren unterschiedliche Linienwege, die organisatorisch unter dem Dach der Linie zusammengefasst sind.</p>
+        <p class="Text">Linienrouten können entweder manuell oder aus vorhandenen Systemrouten <MadCap:xref class="sieheUeberschrSeite" href="1_2_Systemrouten.htm#1_netzmodell_1240632468_1103894"><span style="color: Black;" class="mcFormatColor">(</span><u>Systemrouten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> erzeugt werden.</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="165px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Streckennetz</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Linienroute 1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Linienroute 2</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_Link_network.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 0, 9997538px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_Line_route1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 0, 9997844px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_Line_route2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 0, 9997844px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td colspan="3" class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_Legend_Line_routes_diagram.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000061px;" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_netzmodell_1240632468_1091376">
+            </a>
+            <a name="1_netzmodell_1240632468_17614">
+            </a>Beispiel für zwei Linienrouten einer Linie</p>
+        <h5>
+            <a name="1_netzmodell_1240632468_1089920">
+            </a>
+            <MadCap:keyword term="Netzobjekte: Fahrzeitprofile" />
+            <MadCap:keyword term="Fahrzeitprofile" />
+            <a name="1_netzmodell_1240632468_77422">
+            </a>Fahrzeitprofile</h5>
+        <p class="Text">Zu jeder Linienroute gibt es ein oder mehrere Fahrzeitprofile. Ein Fahrzeitprofil beschreibt den <span class="gui_element">zeitlichen Verlauf</span> der Linie entlang der Linienroute. Es werden dabei keine konkreten Abfahrtszeitpunkte vorgegeben, sondern Fahrzeiten zwischen den einzelnen Routenpunkten.</p>
+        <p class="Text">Analog zur Linienroute (Routenpunkte) wird das Fahrzeitprofil durch eine Folge von Profilpunkten beschrieben. Diese Folge von Profilpunkten wird als Fahrzeitprofil-Verlauf bezeichnet. Profilpunkte können beliebige Routenpunkte der unterliegenden Linienroute sein, darunter müssen sich aber der Anfangs- und Endhaltepunkt der Linienroute sowie alle Haltepunkte, an denen ein Fahrgastwechsel (Einstieg oder Ausstieg sind erlaubt) vorgesehen ist, befinden. Außerdem kann das Fahrzeitprofil für beliebige Routenpunkte der Linienroute Durchfahrzeiten enthalten, zum Beispiel für eine Konfliktprüfung der Fahrplantrassen. Profilpunkte sind die Orte im Netz, zwischen denen im Fahrzeitprofil die Fahrzeiten angegeben werden. Die Fahrzeit wird für den Abschnitt zwischen dem vorherigen und dem aktuellen Profilpunkt angegeben. Bei Haltepunkten kann zusätzlich die Haltezeit angegeben werden und das Ein- oder Aussteigen zugelassen oder verboten werden.</p>
+        <p class="Text">Mehrere Fahrzeitprofile zu einer Linienroute können sich beispielsweise in der Auswahl der Profilpunkte oder den Fahrzeiten auf den Abschnitten zwischen den Profilpunkten unterscheiden (vergleiche hierzu etwa <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1091720">Abbildung&#160;25</MadCap:xref>). Soll eine Fahrt auf einer Linienroute auf einem Unterwegshaltepunkt halten und eine andere nicht, so sind hierfür zwei verschiedene Fahrzeitprofile für die gleiche Linienroute zu definieren (nicht jedoch, wenn eine Fahrt nur einen Teil der Linienroute und damit des Fahrzeitprofils befahren soll).</p>
+        <p class="Text">Jedes Fahrzeitprofil hat darüber hinaus einen Namen und eine Zuordnung zu einer Richtung. Optional kann dem Fahrzeitprofil auch eine Standard-Fahrzeugkombination zugeordnet sein. Beim Einfügen einer neuen Fahrt wird diese dann automatisch als Vorgabewert übernommen.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Bitte beachten Sie, dass die Fahrzeugkombinationen bestehender Fahrten dadurch nicht überschrieben werden. Ist an der Linie auch eine Standard-Fahrzeugkombination hinterlegt, so wirkt sich beim Einfügen einer neuen Fahrt die Standard-Fahrzeugkombination des Fahrzeitprofils aus.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Am Fahrzeitprofil können weiterhin Tarifpunkte für jeden Profilpunkt angegeben werden. Diese können in die Berechnung von Erlösen einfließen <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Einstellungen für das Betreibermodell ÖV.htm#2_einstellungen_betreibermodell_oev_1111312306_1060810"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Einstellungen für das Betreibermodell ÖV</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. </p>
+        <p class="Text">Bei der Modellierung des ÖV sind Fahrzeitprofile für folgende weitere Anwendungsfälle von Bedeutung:</p>
+        <ul>
+            <LI class="List0">Kopplungen werden auf Fahrzeitprofile-Ebene vorgenommen <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Mehrere_Fahrzeitprofile_koppeln.htm#2_netz_bearbeiten_23091886_2796806"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Mehrere Fahrzeitprofile koppeln</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Takte für die taktfeine Umlegung werden auf Fahrzeitprofil-Ebene festgelegt <MadCap:xref class="Benutzerhandbuch" href="../1_Benutzermodell OeV/1_6_Taktfeine Umlegung.htm#1_benutzermodell_oev_2318507456_1026741"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Taktfeine Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>).</LI>
+        </ul>
+        <p class="Text">Dies hat zur Folge, dass alle Netzobjekte, die in der Linienhierarchie unter den Fahrzeitprofilen liegen (Fahrten und Fahrtabschnitte) bei Takten und Kopplungen nicht relevant sind. Wenn man also auf Fahrtebene koppeln oder Takte festlegen möchte, so muss man für die betreffenden Fahrten ein eigenes Fahrzeitprofil anlegen und dort die Kopplung oder Angabe der Takte vornehmen.</p>
+        <table class="TableStyle-TableStandard" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="145px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="49px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="39px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="44px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="44px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="49px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="39px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="44px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="44px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Linienroute 1</p>
+                    </td>
+                    <td colspan="4" class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrzeitprofil 1.1</p>
+                    </td>
+                    <td colspan="4" class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Fahrzeitprofil 1.2</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td rowspan="8" class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Line_route3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 0, 9997844px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">HPunkt</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">Halt</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">an</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">ab</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">HPunkt</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">Halt</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">an</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_mid">ab</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">M</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">ý</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">0:00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">M</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">ý</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_mid">0:00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">I</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">ý</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1:00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1:02</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">I</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">¨</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">N</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">ý</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">2:00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">2:02</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">N</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">ý</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">1:50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_mid">1:52</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">W</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">ý</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">3:00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">3:02</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">W</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">ý</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">2:50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_mid">2:52</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">H</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">ý</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">5:00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">5:02</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">H</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">ý</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">4:50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_mid">5:02</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">S</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">ý</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">6:00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">S</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="font-family: Wingdings;font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">ý</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">6:00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td colspan="4" class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td colspan="4" class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">
+            <a name="1_netzmodell_1240632468_1091720">
+            </a>
+            <a name="1_netzmodell_1240632468_46791">
+            </a>Beispiel für zwei Fahrzeitprofile einer Linienroute</p>
+        <h5>
+            <MadCap:keyword term="Netzobjekte: Servicefahrten" />
+            <MadCap:keyword term="Servicefahrten" />
+            <MadCap:keyword term="Fahrten" />Fahrplanfahrten (=Fahrten)</h5>
+        <p class="Text">Eine Fahrplanfahrt beschreibt eine geplante Fahrt eines öffentlichen Verkehrsmittels oder eine Menge geplanter Fahrten, die als eine verwaltungstechnische Einheit unter einer Nummer zusammengefasst wird. An jedem Tag des im Netz verwendeten Kalenders verkehrt dann aber höchstens eine dieser Fahrten.</p>
+        <p class="Text">Jede Fahrplanfahrt gehört zu genau einer Linienroute und zu genau einem Fahrzeitprofil. Sie besitzt außerdem Bezüge zu zwei Haltepunkten der Linienroute, die den Abschnitt definieren, auf dem die Fahrt dem Verlauf der Linienroute folgt. Fahrten können also einen beliebigen Abschnitt einer Linienroute befahren. Es ist daher nicht notwendig, für Fahrten, die eine Linienroute nur teilweise befahren, eine eigene Linienroute mit kürzerer Ausdehnung zu definieren. Jedoch können Fahrten nicht von einer Linienroute auf eine andere übergehen. Das heißt jede Fahrt kann nur auf genau einer Linienroute verkehren.</p>
+        <p class="Text">Außerdem enthält die Fahrt eine Abfahrtszeit am Starthaltepunkt aus der sich zusammen mit den relativen Zeiten des Fahrzeitprofils alle Ankunfts-, Abfahrts-, und Durchfahrzeiten der Fahrt bestimmen.</p>
+        <p class="Text">Einer Fahrplanfahrt kann optional ein Betreiber zugewiesen werden. Damit können auf Betreiberebene aggregierte Auswertungen von ÖV-betrieblichen Kennzahlen durchgeführt werden <MadCap:xref class="sieheUeberschrSeite" href="../1_Betreibermodell OeV/1_7_Betreibermodell OeV.htm#1_betreibermodell_oev_1878159914_1360628"><span style="color: Black;" class="mcFormatColor">(</span><u>Betreibermodell ÖV</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <h5>
+            <MadCap:keyword term="Netzobjekte: Servicefahrtabschnitte" />
+            <MadCap:keyword term="Servicefahrtabschnitte" />
+            <MadCap:keyword term="Fahrtabschnitte" />Fahrplanfahrtabschnitte (=Fahrtabschnitte)</h5>
+        <p class="Text">Normalerweise gibt es genau einen Fahrplanfahrtabschnitt pro Fahrplanfahrt. Dieser wird beim Einfügen einer Fahrt automatisch angelegt. Optional kann eine Fahrt in mehrere Fahrtabschnitte unterteilt werden, die sich dann in folgenden Eigenschaften unterscheiden können.</p>
+        <ul>
+            <LI class="List0">Verkehrstag</LI>
+            <LI class="List0">Fahrzeugkombination</LI>
+            <LI class="List0">Start- und Endhaltepunkt</LI>
+            <LI class="List0">Vor- und Nachbereitungszeit für die Umlaufbildung <MadCap:xref class="sieheUeberschrSeite" href="../1_Betreibermodell OeV/1_7_Umlaufbildung.htm#1_betreibermodell_oev_1878159914_1097269"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlaufbildung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+        </ul>
+        <p class="Text">Daraus ergeben sich zum Beispiel folgende Anwendungsmöglichkeiten.</p>
+        <ul>
+            <LI class="List0">Eine Fahrt, die von Montag bis Freitag von A über B nach C, am Wochenende aber nur von A nach B verkehrt, kann durch zwei Fahrplanfahrtabschnitte, die sich nur in ihren Verkehrstagen unterscheiden, abgebildet werden.</LI>
+            <LI class="List0">Ein Zug, der von A über B nach C verkehrt, im Vorlauf zwischen A und B aber mit einer geringeren Anzahl Wagen, kann durch zwei Fahrplanfahrtabschnitte, die sich in ihrer Fahrzeugkombination und den Start- und Endhaltepunkten unterscheiden, abgebildet werden.</LI>
+            <LI class="List0">Natürlich sind auch beliebige Kombinationen möglich, also zum Beispiel ein Zug, der zwischen A und B fährt und nur am Wochenende kürzerer ist.</LI>
+            <LI class="List0">Fahrplanfahrtabschnitte sind die Netzobjekte, auf deren Basis die Umlaufbildung durchgeführt wird <MadCap:xref class="sieheUeberschrSeite" href="../1_Betreibermodell OeV/1_7_Umlaufbildung.htm#1_betreibermodell_oev_1878159914_1097269"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlaufbildung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+        </ul>
+        <p class="Text">
+            <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1181734">Tabelle&#160;10</MadCap:xref> zeigt ein Beispiel mit drei Fahrplanfahrten einer Linienroute. Die Linienroute besitzt zwei Fahrzeitprofile. Die Fahrt 993 ist unterteilt in drei Fahrplanfahrtabschnitte, die sich hinsichtlich Verkehrstagen und Fahrzeugkombinationen unterscheiden.</p>
+        <table class="TableStyle-TableStandard" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="105px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="94px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="139px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrtnummer</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">von -&gt; nach</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Abfahrtszeit</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Verkehrstag</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Fahrzeugkombination</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">991</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">N <span class="_Override" style="font-family: Wingdings;">è</span> H</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">6:02 (täglich)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">täglich</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Lok + 6 Wagen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">992</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">M <span class="_Override" style="font-family: Wingdings;">è</span> H</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">5:10 (täglich)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">täglich</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Lok + 6 Wagen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td rowspan="3" class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">993</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">M <span class="_Override" style="font-family: Wingdings;">è</span> H</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">6:00 (täglich)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">täglich</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Lok + 6 Wagen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">H <span class="_Override" style="font-family: Wingdings;">è</span> S</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">11:02 (Sa + So)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Sa + So</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Lok + 6 Wagen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">M <span class="_Override" style="font-family: Wingdings;">è</span> N</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">6:00 (Mo - Fr)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">Mo - Fr</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">Verstärker 1 Wagen</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 496px;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="130px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="61px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="61px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="61px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="61px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="61px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="61px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Linie</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">IC1</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">IC1</p>
+                    </td>
+                    <td colspan="4" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">IC1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Linienroute</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td colspan="4" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrzeitprofil</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1.1</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1.2</p>
+                    </td>
+                    <td colspan="4" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">1.1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrtnummer</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">991</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">992</p>
+                    </td>
+                    <td colspan="4" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">993</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Verkehrstag</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">täglich</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">täglich</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">Mo-Fr</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">Sa+So</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">Mo-Fr</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrzeugkombination</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">L+6W</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">L+6W</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">L+6W</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">L+6W</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">1W</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">M ab</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">5:10</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">6:00</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">I an</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">|</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">7:00</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">I ab</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">|</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">7:02</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">N an</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">7:00</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">8:00</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">N ab</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">6:02</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">7:02</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">8:02</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">W an</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">7:00</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">8:00</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">9:00</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">W ab</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">7:02</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">8:02</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">9:02</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">H an</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">9:00</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">10:00</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">11:00</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">H ab</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">11:02</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">S an</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">12:00</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">·</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="7" class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <ul>
+                            <LI class="List0Tab">Fahrtnummer 991 erfordert einen Fahrplanfahrtabschnitt</LI>
+                            <LI class="List0Tab">Fahrtnummer 992 erfordert einen Fahrplanfahrtabschnitt</LI>
+                            <LI class="List0Tab">Fahrtnummer 993 erfordert drei Fahrplanfahrtabschnitte</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_netzmodell_1240632468_1181734">
+            </a>
+            <a name="1_netzmodell_1240632468_63248">
+            </a>Beispiel für drei Fahrplanfahrten</p>
+    </body>
+</html>

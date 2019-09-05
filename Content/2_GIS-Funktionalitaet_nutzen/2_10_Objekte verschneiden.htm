@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="2080" MadCap:lastWidth="1036" MadCap:ignoredWords="PGD;emf;sid;Projections;Well;Known;Geographic;Coordinate;skalierungen;skalierung;logo">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 MadCap:autonum=" 0.1 ">
+            <a name="2_gis_funktionalitaet_nutzen_1884258370_1049110">
+            </a>
+            <a name="2_gis_funktionalitaet_nutzen_1884258370_15767">
+            </a>Objekte verschneiden<a name="27240"></a></h2>
+        <p class="Text">
+            <MadCap:keyword term="Verschneiden:Netzobjekte" />
+            <MadCap:keyword term="Objekte verschneiden" />Sie können beliebige Netzobjekte vom Typ Punkt, Linie oder Fläche, die sich räumlich überschneiden, in <MadCap:variable name="PTV_Manual.Programmname" /> verschneiden.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Sie können auch GIS-Objekte mit anderen Netzobjekten verschneiden, um beispielsweise <MadCap:variable name="PTV_Manual.Programmname" />-Attribute zu erzeugen <MadCap:xref class="Grundlagen" href="../1_GIS-Funktionalitaet/1_10_Verschneiden.htm#1_gis_funktionalitaet_3291278398_1035632">Siehe "Verschneiden"</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Im folgenden Beispiel wird die Gesamtzahl der Einsteiger an den Haltestellen eines Bezirks berechnet und in das Attribut <span class="gui_element">ZWert1</span> geschrieben.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie im Fenster <span class="gui_element">Netz</span> auf das Symbol <img src="../Resources/Images_4_all/ICO_mode_edit.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 011118px;margin-bottom: 1, 012818px;" />&#160;<span class="gui_element">Modus Bearbeiten</span>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie mit der rechten Maustaste auf die Schaltfläche <span class="gui_element">Bezirke</span>.</p>
+        <p class="Stepresult">Das Kontextmenü <span class="gui_element">Bezirke</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie den Eintrag<span class="gui_element"> Mehrfach-Bearbeiten</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Mehrfach-Bearbeiten Bezirke </span>öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie im Register <span class="gui_element">Formel</span> das Attribut <span class="gui_element">ZWert 1</span>.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Verschneiden</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Attributwert durch Verschneidung mit Quellattribut belegen </span>öffnet sich.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/WIN_intersect.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Step" MadCap:autonum="6. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle_gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="364px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Zielattribut (<span class="gui_element">ZWert 1</span>)</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">In der Auswahlliste wählen Sie aus, wie aus den Quellattributwerten die Zielattributwerte ermittelt werden. Die verfügbaren Aggregationsfunktionen und ihre Wirkung sind abhängig von den Datentypen des Quell- und Zielattributs.</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Summe</span>
+                            </LI>
+                        </ul>
+                        <p class="List_Text0">Summe der Attributwerte</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Mittelwert</span>
+                            </LI>
+                        </ul>
+                        <p class="List_Text0">Durchschnitt der Attributwerte</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Anzahl</span>
+                            </LI>
+                        </ul>
+                        <p class="List_Text0">Anzahl der Attributwerte</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Minimum</span>
+                            </LI>
+                        </ul>
+                        <p class="List_Text0">kleinster Attributwert</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Maximum</span>
+                            </LI>
+                        </ul>
+                        <p class="List_Text0">größter Attributwert</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Verketten</span>
+                            </LI>
+                        </ul>
+                        <p class="List_Text0">Attributwerte der verschnittenen Attribute werden durch Trennzeichen getrennt</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Häufigkeit</span>
+                            </LI>
+                        </ul>
+                        <p class="List_Text0">Häufigkeit der verschnittenen Attributwerte, durch Trennzeichen getrennt</p>
+                        <p class="CellText">
+                            <span class="gui_element">Quellattributwert mit dem Flächenanteil der Überlappungsfläche von Quell- und Zielobjekt am Quellobjekt gewichten</span>
+                        </p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden bei sich überlappenden Quell- und Zielobjekten die Attributwerte der Quellobjekte nur anteilig berücksichtigt. Der Anteil berechnet sich über die Größe der Überlappung. Beispielsweise können Sie so die Länge aller Strecken in einem Bezirk ermitteln.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, werden bei sich überlappenden Quell- und Zielobjekten die Attributwerte der Quellobjekte ganz verwendet. Die Größe der Überlappung ist nicht relevant. Beispielsweise können Sie so die Nummer eines Bezirks ermitteln, in dem sich eine Strecke befindet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Parameter für Zielobjekte </span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive verschneiden</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden nur die aktiven Zielobjekte verschnitten.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Netzobjekt</span>
+                        </p>
+                        <p class="CellText">Ausgewähltes Zielnetzobjekt</p>
+                        <p class="CellText">
+                            <span class="gui_element">Attribut</span>
+                        </p>
+                        <p class="CellText">Ausgewähltes Zielattribut</p>
+                        <p class="CellText">
+                            <span class="gui_element">Puffergröße</span>
+                        </p>
+                        <p class="CellText">Puffergröße in Metern</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Sie können dem ausgewählten Objekt einen Puffer zuordnen, um es zu verschneiden. So können Sie beispielsweise auch zwei Punktobjekte verschneiden, denen durch den Puffer eine Fläche zugeordnet wird. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Parameter für Quellobjekte</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive verschneiden</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden nur die aktiven Quellobjekte verschnitten.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Netzobjekt</span>
+                        </p>
+                        <p class="CellText">Angabe des Quellnetzobjekts (im Beispiel <span class="gui_element">Haltestellen</span>)</p>
+                        <p class="CellText">
+                            <span class="gui_element">Attribut</span>
+                        </p>
+                        <p class="CellText">Angabe des Quellattributs (im Beispiel <span class="gui_element">Einsteiger</span>)</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Wenn Sie das Attribut <span class="gui_element">1.0 </span>auswählen, wird die Anzahl der Quellobjekte je Zielobjekt gezählt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Puffergröße</span>
+                        </p>
+                        <p class="CellText">Puffergröße in Metern</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Sie können dem ausgewählten Objekt einen Puffer zuordnen, um es zu verschneiden. So können Sie beispielsweise auch zwei Punktobjekte verschneiden, denen durch den Puffer eine Fläche zugeordnet wird. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Wert addieren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, wird der Wert zum bestehenden Attributwert addiert.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, wird der bestehende Attributwert durch den eingegebenen Wert ersetzt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Abschneiden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Ist die Option ausgewählt, entfällt beim berechneten Wert der Nachkommawert.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur bei Attributen vom Typ Ganzzahl verfügbar.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Runden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText">Ist die Option ausgewählt, wird der berechnete Wert gerundet. Bei einem Nachkommawert bis inklusive 4 wird abgerundet, ab 5 wird aufgerundet. Dies gilt auch für negative Zahlen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur bei Attributen vom Typ Ganzzahl verfügbar.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="7. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Gesamtzahl der Einsteiger an den Haltestellen wird berechnet.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Die resultierenden Verschneidungswerte werden in der Liste des Zielobjekts für das verschnittene Attribut angezeigt.</p>
+                        <p class="Text">Sie können Objekte auch während eines Verfahrensablaufs über das Menü <span class="gui_element">Rechnen &gt; Verfahrensablauf</span>, Verfahren <span class="gui_element">Sonstiges</span>&#160;&gt; <span class="gui_element">Verschneiden</span> verschneiden <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahrensablauf festlegen und starten.htm#2_verfahrensablauf_festlegen_40480990_1019020"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahrensablauf festlegen und starten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

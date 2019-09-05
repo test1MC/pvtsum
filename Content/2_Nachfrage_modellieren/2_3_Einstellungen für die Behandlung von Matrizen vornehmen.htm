@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:lastBlockDepth="6" MadCap:lastHeight="611" MadCap:lastWidth="510" MadCap:ignoredWords="Symmetrize;bzw;zeilen;$O">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_nachfrage_modellieren_1800171850_1672712">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_42402">
+            </a>Einstellungen für die Behandlung von Matrizen vornehmen<a name="20133"></a></h4>
+        <p class="Text">
+            <MadCap:keyword term="Matrizen: speichern: Einstellungen" />
+            <MadCap:keyword term="Auslagerungsdatei" />Kenngrößenmatrizen und Nachfragematrizen werden in den Arbeitsspeicher geladen, wenn auf sie zugegriffen wird. Damit der Arbeitsspeicher nicht mit Matrixdaten vollläuft, legen Sie eine maximale Größe für Matrizen im Arbeitsspeicher fest. Wenn die Daten der geladenen Matrizen diese Größe übersteigen, wird die jeweils am längsten nicht verwendete Matrix in eine Auslagerungsdatei gespeichert.</p>
+        <table class="TableStyle-TipHint1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="496px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Sie können außerdem festlegen, ob die Matrizen beim Öffnen der Versionsdatei sofort in den Arbeitsspeicher eingelesen werden oder nur bei Bedarf <MadCap:xref class="sieheUeberschrSeite" href="../2_Grundlagen_Programmbedienung/2_1_Verhalten der Matrixdaten beim Öffnen und Speichern einer Versionsdatei fest.htm#2_grundlagen_programmbedienung_1644961382_1284628"><span style="color: Black;" class="mcFormatColor">(</span><u>Verhalten der Matrixdaten beim Öffnen und Speichern einer Versionsdatei festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Bearbeiten</span> den Eintrag <span class="gui_element">Benutzereinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Benutzereinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Navigator den Eintrag <span class="gui_element">Dateien &amp; Protokolle&#160;&gt; Matrizen</span>.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText" style="mc-hyphenate-shortest-prefix: 8;">
+                            <span class="gui_element">Auslagerungsdatei aktivieren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden die geladenen Matrizen in eine Auslagerungsdatei gespeichert, sobald die für den Arbeitsspeicher festgelegte Maximalgröße überschritten ist.</p>
+                        <p class="CellText">Über das Symbol <img src="../Resources/Images_4_all/ICO_file_selection.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 011118px;margin-bottom: 1, 011118px;" /> wählen Sie das Verzeichnis für die Auslagerungsdatei aus.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Maximalgröße der im Speicher gehaltenen Matrixdaten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Maximaler Anteil des Arbeitsspeichers, der für die geladenen Matrizen verwendet wird.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Standardmäßig ist hier ein Viertel des Arbeitsspeichers ausgewählt.</p>
+                        <p class="CellText">Bei sehr großen Netzen kann es sinnvoll sein, den Wert zu verringern. Somit stellen Sie mehr Arbeitsspeicher für die anderen Daten zur Verfügung.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Auf Defaultwerte setzen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche setzen Sie den Anteil des Arbeitsspeichers, der für die geladenen Matrizen verwendet wird, auf ein Viertel des Arbeitsspeichers.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="3. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Einstellungen werden übernommen.</p>
+    </body>
+</html>

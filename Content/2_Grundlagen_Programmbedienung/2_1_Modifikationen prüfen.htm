@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:lastBlockDepth="6" MadCap:lastHeight="677" MadCap:lastWidth="510" MadCap:ignoredWords="big;endian;ves;Tmpn;bzw;behandlung;xls">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_grundlagen_programmbedienung_1644961382_1257178">
+            </a>
+            <a name="2_grundlagen_programmbedienung_1644961382_48248">
+            </a>Modifikationen prüfen</h4>
+        <p class="Text">Sie können prüfen, ob zwei Modifikationen voneinander unabhängig sind und ob zwei Modifikationen kombinierbar sind. Beispielsweise prüfen Sie die Unabhängigkeit von zwei Modifikationen, bevor sie deren Anwendungsreihenfolge ändern.</p>
+        <h5>
+            <a name="2_grundlagen_programmbedienung_1644961382_1258421">
+            </a>
+            <a name="23717">
+            </a>
+            <a name="23017">
+            </a>
+            <a name="2_grundlagen_programmbedienung_1644961382_30840">
+            </a>Unabhängigkeit von zwei Modifikationen prüfen</h5>
+        <p class="Text">Mit dieser Prüfung stellen Sie fest, ob das Ergebnis gleich ist, wenn die Anwendungsreihenfolge von zwei Modifikationen vertauscht wird. Falls die beiden Modifikationen voneinander abhängig sind, können Sie automatisch die Einträge in den Spalten <span class="gui_element">Abhängig</span> und <span class="gui_element">Ausschluss</span> anpassen.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass das gewünschte Projekt geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="2_1_Grundeinstellungen eines Projekts bearbeiten.htm#2_grundlagen_programmbedienung_1644961382_1256407"><span style="color: Black;" class="mcFormatColor">(</span><u>Grundeinstellungen eines Projekts bearbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Fenster <span class="gui_element">Projekt bearbeiten</span> das Register <span class="gui_element">Modifikationen</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie in der Liste zwei Modifikationen aus.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Klicken Sie auf das Symbol <img src="../Resources/Images_4_all/ICO_check_independence.png" style="margin-left: 0, 2684409px;margin-top: 0, 5952756px;margin-right: 0, 2687238px;margin-bottom: 0, 5955594px;" />&#160;<span class="gui_element">Unabhängigkeit prüfen</span>.</p>
+        <p class="Stepresult">Die beiden Modifikationen werden verglichen. Ein Fenster öffnet sich, das Sie darüber informiert, ob die Modifikationen unabhängig voneinander sind. Falls die Modifikationen nicht unabhängig sind, öffnet sich das Fenster <span class="gui_element">Überlappungen zwischen den Modifikationen ... und ...</span>, in dem die Überlappungen als Modelltransferdatei angezeigt werden. Außerdem öffnet sich das Fenster <span class="gui_element">Überlappungen zwischen Modifikationen</span>, in dem Sie mehrere Optionen haben.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Nehmen Sie die gewünschte Einstellung vor.</p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="161px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="316px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Abhängigkeiten und Ausschlüsse der Modifikationen ... und ... nicht verändern</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">keine Folgen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Abhängigkeiten zwischen den Modifikationen ... und ... entfernen, die Ausschlüsse unverändert lassen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Entfernt in der Liste der Modifikationen in der Spalte <span class="gui_element">Abhängig von</span> die Einträge beider Modifikationen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Abhängigkeiten zwischen den Modifikationen ... und ... entfernen, stattdessen gegenseitige Ausschlüsse hinzufügen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Entfernt in der Liste der Modifikationen in der Spalte <span class="gui_element">Abhängig von</span> die Einträge beider Modifikationen. </p>
+                        <p class="CellText">Fügt in der Spalte <span class="gui_element">Ausschluss</span> gegebenenfalls Ausschlüsse hinzu.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Abhängigkeit von Modifikationen ... auf ... hinzufügen und gegenseitige Ausschlüsse entfernen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Fügt in der ersten genannten Modifikation in der Spalte <span class="gui_element">Abhängig von</span> die zweite genannte Modifikation ein. Dabei wird, wenn nötig, auch die Ladereihenfolge vertauscht.</p>
+                        <p class="CellText">Löscht gegebenenfalls beide Einträge in der Spalte <span class="gui_element">Ausschluss</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Fertigstellen</span>.</p>
+        <p class="Result">Das Fenster <span class="gui_element">Projekt bearbeiten</span> öffnet sich wieder. Je nach gewählter Option sind die Einträge in den Spalten <span class="gui_element">Abhängig von</span> und <span class="gui_element">Ausschluss</span> verändert.</p>
+        <h5>
+            <a name="2_grundlagen_programmbedienung_1644961382_1258441">
+            </a>
+            <a name="2_grundlagen_programmbedienung_1644961382_71499">
+            </a>Kombinierbarkeit von Modifikationen prüfen</h5>
+        <p class="Text">Mit dieser Prüfung stellen Sie fest, ob Modifikationen in der gegebenen Reihenfolge im gleichen Szenario verwendet werden können.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass das gewünschte Projekt geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="2_1_Grundeinstellungen eines Projekts bearbeiten.htm#2_grundlagen_programmbedienung_1644961382_1256407"><span style="color: Black;" class="mcFormatColor">(</span><u>Grundeinstellungen eines Projekts bearbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Fenster <span class="gui_element">Projekt bearbeiten</span> das Register <span class="gui_element">Modifikationen</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie in der Liste die Modifikationen aus.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Klicken Sie auf das Symbol <img src="../Resources/Images_4_all/ICO_check_compatibility.png" style="margin-left: 0, 2684409px;margin-top: 0, 5952756px;margin-right: 0, 2687238px;margin-bottom: 0, 5955594px;" />&#160;<span class="gui_element">Kombinierbarkeit prüfen</span>.</p>
+        <p class="Result">Die beiden Modifikationen werden verglichen. Eine Meldung öffnet sich, die Sie darüber informiert, ob die Modifikationen kombinierbar sind.</p>
+    </body>
+</html>

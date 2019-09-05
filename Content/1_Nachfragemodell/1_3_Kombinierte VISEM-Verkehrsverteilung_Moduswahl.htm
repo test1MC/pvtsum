@@ -1,0 +1,2635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="8" MadCap:lastHeight="687" MadCap:lastWidth="510" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;NEmP;NEoP;PA;P1;P2;P3;PG" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_nachfragemodell_2215163117_1225822">
+            </a>
+            <a name="1_nachfragemodell_2215163117_96788">
+            </a>Kombinierte VISEM-Verkehrsverteilung/Moduswahl</h4>
+        <p class="Text">Bei der VISEM-Berechnung haben Sie die Möglichkeit, Ausgabematrizen auf verschiedenen Aggregationsniveaus zu speichern. Die resultierenden Nachfragematrizen ergeben sich aus möglichen Kombinationen von Personengruppe, Modus, Quell-, Zielaktivität und Zeitintervall. </p>
+        <h5>Verkehrsverteilung: Wegeketten durch Zielwahl nach Aktivitäten</h5>
+        <p class="Text">
+            <MadCap:keyword term="VISEM-Modell: Verkehrsverteilung: kombiniert" />
+            <MadCap:keyword term="Verkehrsverteilung: VISEM-Modell" />
+            <MadCap:keyword term="VISEM-Modell: Zielwahl" />In Abhängigkeit von der Zielaktivität jedes Weges ordnet VISEM den Wegen Zielbezirke zu. Die Wahl eines Zielbezirkes hängt von verschiedenen Faktoren ab.</p>
+        <ul>
+            <LI class="List0">von der Nutzenmatrix, die die räumliche und verkehrliche Trennung vom Quellbezirk abbildet</LI>
+        </ul>
+        <p class="List_Text0">Der Nutzen ist dabei umgekehrt proportional zu Widerstandswerten wie Fahrzeiten oder Distanzen, sodass gilt: je größer die Fahrtzeit oder Distanz zu einem Zielbezirk, desto kleiner ist dessen Nutzen. </p>
+        <p class="List_Text0">In die Nutzenmatrix kann außerdem die Log-Summe der modusspezifischen Nutzen eingehen. So gehen spezifische Kenngrößen wie IV-Reisezeit und ÖV-Umsteigehäufigkeit mit dem Anteil des jeweiligen Modus in den Gesamtnutzen ein.</p>
+        <ul>
+            <LI class="List0">vom Zielpotential der als Ziel konkurrierenden Bezirke</LI>
+            <LI class="List0">vom Einfluss des Nutzens, der in den Parametern der Nutzenfunktion für jede Gruppe und jede Zielaktivität definiert ist</LI>
+        </ul>
+        <p class="List_Text0">Diese Parameter können vorher geschätzt werden <MadCap:xref class="sieheUeberschrSeite" href="1_3_Gravitationsparameter schätzen (KALIBRI).htm#1_nachfragemodell_2215163117_1228478"><span style="color: Black;" class="mcFormatColor">(</span><u>Gravitationsparameter schätzen (KALIBRI)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+        <p class="Text">Auf diese Weise wird von jeder Aktivitätenkette eine Vielzahl von Wegeketten erzeugt. Das Ergebnis der Verkehrsverteilung ist dann nicht nur die Matrix des Gesamtverkehrs, sondern auch die Menge aller Wegeketten.</p>
+        <p class="Text">Für das Zielwahlmodell benötigt VISEM für jede Aktivität ein Zielpotential <span class="formula">Z</span><span class="formula_subscript">j</span>, das die Attraktivität jedes Bezirks quantitativ angibt. Dieses Zielpotential entspricht für jeden Bezirk <span class="formula">j</span> dem Wert der zu der Aktivität gehörenden Strukturgröße <MadCap:xref class="sieheUeberschrSeite" href="1_3_VISEM-Datenmodell.htm#1_nachfragemodell_2215163117_1165889"><span style="color: Black;" class="mcFormatColor">(</span><u>VISEM-Datenmodell</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">
+            <MadCap:keyword term="VISEM-Modell: Nutzenfunktion" />Die Nutzenfunktion <span class="formula">f</span>(<span class="formula">u</span><span class="formula_subscript">ij</span>) ist zentral im Zielwahlmodell. Sie gibt an, mit welcher Wahrscheinlichkeit <span class="formula">P</span><span class="formula_subscript">ij</span> einer der Bezirke <span class="formula">j</span> unter allen Zielalternativen als Zielbezirk von Quellbezirk <span class="formula">i</span> aus gewählt wird.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_140.jpg" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_146.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">F</span>
+                            <span class="formula_subscript">ij</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Anzahl der Wege von Bezirk <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">i</span> nach Bezirk <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Q</span>
+                            <span class="formula_subscript">i</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Quellaufkommen in Bezirk <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">P</span>
+                            <span class="formula_subscript">ij</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Wahrscheinlichkeit der Wahl des Ziels <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">j</span> für Quellbezirk <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Z</span>
+                            <span class="formula_subscript">j</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Zielpotential in Bezirk <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">k</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Index der Bezirke (mit <span class="formula">k</span><span class="_Override" style="line-height: 11pt;">=</span> 1 für die kleinste Bezirksnummer und <span class="formula">B</span> als Anzahl der Bezirke)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">wobei <span class="formula">u</span><span class="formula_subscript">ij</span> den Nutzen der Relation <span class="formula">ij</span> beschreibt, und die Nutzenfunktion <span class="formula">f</span>(<span class="formula">u</span><span class="formula_subscript">ij</span>), beispielsweise vom Typ Logit ist, also als <img src="../Resources/Images/5_12.jpg" />, definiert werden kann. Alle anderen verfügbaren Typen von Bewertungsfunktionen aus dem EVA-Nachfrageverfahren können ebenfalls als Nutzenfunktionen für VISEM verwendet werden <MadCap:xref class="sieheUeberschrSeite" href="1_3_EVA-Verkehrsverteilung und Moduswahl.htm#1_nachfragemodell_2215163117_1154337"><span style="color: Black;" class="mcFormatColor">(</span><u>EVA-Verkehrsverteilung und Moduswahl</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">In diesem Fall spielt die Wahl des Parameters <span class="formula">c</span> für jede Aktivität die entscheidende Rolle in der Zielwahl. <span class="formula">c</span> drückt den Einfluss des Nutzens gegenüber Zielen der jeweiligen Aktivität aus. Ist <span class="formula">c</span> = 0, so hat der Nutzen <span class="formula">u</span><span class="formula_subscript">ij</span> keinen Einfluss auf die Wahl des Ziels. Je größer <span class="formula">c</span> wird, desto größer wird der Einfluss des Nutzens <span class="formula">u</span><span class="formula_subscript">ij</span> auf die Wahl des Ziels <MadCap:xref class="sieheUeberschrSeite" href="1_3_Gravitationsmodell rechnen.htm#1_nachfragemodell_2215163117_1228718"><span style="color: Black;" class="mcFormatColor">(</span><u>Gravitationsmodell rechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Es werden getrennte Funktionsparameter für jede Kombination von Personengruppe und Zielaktivität definiert. </p>
+        <p class="Text">Um die drei zentralen Modellelemente der Zielwahl, nämlich Zielpotential, Nutzenfunktion und Nutzenmatrix, besser zu veranschaulichen, wird das Beispiel aus der Verkehrserzeugung fortgesetzt <MadCap:xref class="sieheUeberschrSeite" href="1_3_VISEM-Verkehrserzeugung.htm#1_nachfragemodell_2215163117_1157335"><span style="color: Black;" class="mcFormatColor">(</span><u>Beispiel für VISEM-Verkehrserzeugung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <h5>
+            <a name="1_nachfragemodell_2215163117_1157885">
+            </a>
+            <a name="1_nachfragemodell_2215163117_84793">
+            </a>Beispiel für Verkehrsverteilung</h5>
+        <p class="Text">Für die einzelnen Aktivitätenübergänge wird eine Nutzenfunktion vom Typ Logit verwendet, also <img src="../Resources/Images/5_81.jpg" />, mit dem Parameter <span class="formula">c</span> = 0,4.</p>
+        <p class="Text">Die 93,4 Wege des Aktivitätenmusters WA müssen von der Quelle (Bezirk 1) in potentielle Zielbezirke, die Arbeitsplätze enthalten, gehen. VISEM verteilt diese 93,4 Wege entsprechend dem vorher beschriebenen Zielwahl-Modell auf die Zielbezirke. </p>
+        <p class="Text">Der Einfachheit halber nehmen wir an, Bezirk 2 sei der einzige Bezirk, der Arbeitsplätze enthalte, der also ein positives Zielpotential für die Aktivität Arbeit hat. In Zahlen ausgedrückt bedeutet dies etwa <span class="formula">Z</span><span class="formula_subscript">1</span> = 0, <span class="formula">Z</span><span class="formula_subscript">2</span> = 100, <span class="formula">Z</span><span class="formula_subscript">3</span> = 0. Aus den Formeln der VISEM-Verkehrsverteilung ergibt sich <span class="formula">P</span><span class="formula_subscript">11</span> = 0, <span class="formula">P</span><span class="formula_subscript">12</span> = 1 und <span class="formula">P</span><span class="formula_subscript">13</span> = 0, und somit <span class="formula">F</span><span class="formula_subscript">11</span> = 0, <span class="formula">F</span><span class="formula_subscript">12</span> = 93,4 und <span class="formula">F</span><span class="formula_subscript">13</span> = 0. Bezirk 2 ist also das Ziel aller Wege von Bezirk 1.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Definition der Nutzenfunktion hat in diesem Fall keinen Einfluss auf die Berechnung.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Nach der Aktivität Arbeit wird dann, ausgehend von Bezirk 2, die Wahrscheinlichkeit für die Wahl von Einkaufszielen für die anschließenden Wege AE berechnet. Es sei angenommen, dass die Zielpotentiale für die Aktivität Einkauf wie folgt definiert sind: <span class="formula">Z</span><span class="formula_subscript">1</span> = 0, <span class="formula">Z</span><span class="formula_subscript">2</span> = 50, <span class="formula">Z</span><span class="formula_subscript">3</span> = 50. Der aus Fahrtzeiten und Entfernungen definierte Nutzen für den Übergang AE der Relation 2-2 sei doppelt so hoch wie der von Relation 2-3, also etwa <span class="formula">u</span><span class="formula_subscript">22</span> = 2 und <span class="formula">u</span><span class="formula_subscript">23</span> = 1. Aus den Formeln der VISEM-Verkehrsverteilung ergibt sich nun <span class="formula">P</span><span class="formula_subscript">21</span> = 0, <span class="formula">P</span><span class="formula_subscript">22</span><span class="symbol">»</span> 0,6 und <span class="formula">P</span><span class="formula_subscript">23</span><span class="symbol">»</span> 0,4, und somit <span class="formula">F</span><span class="formula_subscript">21</span> = 0, <span class="formula">F</span><span class="formula_subscript">22</span><span class="symbol">»</span> 56,0 und <span class="formula">F</span><span class="formula_subscript">23</span><span class="symbol">»</span> 37,4. Es führen also 40&#160;% der Wege nach Bezirk 3 und 60&#160;% nach Bezirk 2 (das heißt Zellbinnenverkehr).</p>
+        <p class="Text">Im System erfolgt hier eine Multiplikation der Zielwahrscheinlichkeiten der Arbeits- und Einkaufsziele. </p>
+        <p class="Text">Für das letzte Aktivitätenpaar der Kette, nämlich EW, ist keine Zielwahl mehr nötig, da Bezirk 1 als Wohnbezirk und Quelle des ersten Weges der Kette auch das Ziel des letzten Weges der Kette ist.</p>
+        <p class="Text">Es ergeben sich folgende Übergangsmatrizen.</p>
+        <ul>
+            <LI class="List0">Matrix <span class="formula">F</span><span class="formula_superscript">1</span> für den ersten Aktivitätenübergang (Zielaktivität A)</LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 265px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">93,4</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Matrix <span class="formula">F</span><span class="formula_superscript">2</span> für den zweiten Aktivitätenübergang (Zielaktivität E)</LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 265px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">56,0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">37,4</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">56,0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">37,4</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Matrix <span class="formula">F</span><span class="formula_superscript">3</span> für den dritten Aktivitätenübergang (Zielaktivität W)</LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 265px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">56,0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">56,0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">37,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">37,4</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Aufsummiert ergibt sich folgende Gesamtnachfragematrix <span class="formula">F</span><span class="formula_superscript">G</span>.</p>
+        <table class="TableStyle-TableStandard" style="width: 265px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">280,2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">280,2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">149,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">37,4</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">93,4</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">149,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">56,0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">56,0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">37,4</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">37,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">37,4</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Zusammenfassung dieses Zielwahl-Beispiels</p>
+        <ul>
+            <LI class="List0">WA: 100&#160;% verlassen Bezirk 1 mit Ziel Bezirk 2</LI>
+            <LI class="List0">AE: 60&#160;% bleiben in Bezirk 2 und 40&#160;% verlassen Bezirk 2 zu Bezirk 3</LI>
+            <LI class="List0">EW: 100&#160;% kehren zurück nach Bezirk 1</LI>
+        </ul>
+        <p class="Text">Die resultierenden Wegeketten sind folgende:</p>
+        <ul>
+            <LI class="List0">1-2-2-1: 93,4 • 100&#160;% • 60&#160;% • 100&#160;% = 56,0</LI>
+            <LI class="List0">1-2-3-1: 93,4 • 100&#160;% • 40&#160;% • 100&#160;% = 37,4</LI>
+        </ul>
+        <p class="Text">Damit sind folgende Wegeketten erzeugt worden:</p>
+        <ul>
+            <LI class="List0">56,0 Wegeketten 1-2-2-1</LI>
+            <LI class="List0">37,4 Wegeketten 1-2-3-1</LI>
+        </ul>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Folgende verhaltensorientierte Aspekte sollten bei der Definition der Nutzenparameter berücksichtigt werden:</p>
+                        <ul>
+                            <LI class="List0">Untersuchungen des Verkehrsverhaltens zeigen, dass motorisierte Personen größere Distanzen zurücklegen als Personen ohne PKW. Entsprechend muss der Absolutwert des Parameters <span class="formula">c</span> der Logitfunktion für die Gruppen EmP und NEmP kleiner sein als für die Gruppen EoP oder NEoP.</LI>
+                            <LI class="List0">Ebenso entspricht es den empirischen Erkenntnissen, der Aktivität Arbeit einen <span class="formula">c</span>-Parameter mit niedrigerem Absolutwert zu geben als zum Beispiel der Aktivität Einkauf.</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">VISEM sieht die Möglichkeit vor, für jede Aktivität spezifische Nutzenmatrizen einzulesen. Kombinationen von Entfernungen und Fahrzeiten können die Basisgröße von Nutzenmatrizen sein.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Der absolute Wert eines Zielpotentials ist zunächst einmal unerheblich, da dieses in das Zielwahl-Modell nur relativ zur Summe der Zielpotentiale aller Bezirke eingeht. So bedeutet zum Beispiel das Zielpotential Arbeitsplätze = 1&#160;000 in einem Bezirk nicht zwangsläufig, dass VISEM 1&#160;000 Wege mit Ziel-Aktivität Arbeit in diesen Bezirk führt. Vielmehr hängt der Zielverkehr vom Produkt aus Zielpotential und Wert der Nutzenfunktion im Verhältnis zu den anderen Bezirken ab.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Falls der absolute Wert des Zielpotentials einer Aktivität jedoch von großer Bedeutung ist, wie das zum Beispiel bei der Anzahl der Arbeitsplätze der Fall sein kann, kann dieser mittels der Option <span class="gui_element">Zielseitige Kopplung</span> in die Berechnung wie folgt mit einfließen. Gibt es etwa im gesamten Untersuchungsraum 6&#160;000 Arbeitsplätze, so hat der Bezirk mit 1&#160;000 Arbeitsplätzen ein relatives Zielpotential von 1&#160;000/6&#160;000 = 1/6 für die Aktivität Arbeit. Hat nun eine Nachfrageschicht ein Gesamt-Heimataufkommen von 3&#160;000, so ist das auf das Gesamt-Heimataufkommen normierte absolute Zielpotential des Bezirks für diese Nachfrageschicht = 3&#160;000 • 1/6 = 500. Dieser absolute Wert wird im beidseitig gekoppelten Gravitationsmodell als Randsumme auf Zielseite für diese Nachfrageschicht verwendet <MadCap:xref class="sieheUeberschrSeite" href="1_3_Gravitationsmodell rechnen.htm#1_nachfragemodell_2215163117_1228718"><span style="color: Black;" class="mcFormatColor">(</span><u>Gravitationsmodell rechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Die Ergebnisse der Verkehrsverteilung können in aggregierter Form in einer Gesamtnachfragematrix pro Personengruppe und zusätzlich für verschiedene Kombinationen von Zeitintervall, Modus, Quell- bzw. Zielaktivität  gespeichert werden.</p>
+        <h5>Moduswahl: diskretes Aufteilungsmodell</h5>
+        <p class="Text">
+            <MadCap:keyword term="VISEM-Modell: Moduswahl: kombiniert" />
+            <MadCap:keyword term="Moduswahl: VISEM-Modell" />Das VISEM-Nachfragemodell hat ein verhaltensorientiertes Konzept, das die folgenden Aspekte der Entscheidungssituation von Verkehrsteilnehmern abbildet:</p>
+        <ul>
+            <LI class="List0">die sozioökonomische Stellung und die Modusverfügbarkeit der entscheidenden Person (durch die Differenzierung nach Personengruppen)</LI>
+            <LI class="List0">verschiedene Attribute aller Modi (durch das Nutzenmodell)</LI>
+            <LI class="List0">Einschränkungen der Wahlfreiheit innerhalb von Wegeketten (durch die Definition austauschbarer und nicht austauschbarer Modi)</LI>
+        </ul>
+        <p class="Text">Dieses Entscheidungsproblem ist in einem diskreten Aufteilungsmodell abgebildet, das die Wahrscheinlichkeit für die Wahl eines Modus in jeder vorliegenden Wegekette angibt.</p>
+        <p class="Text">Dafür müssen die subjektiven Nutzen in Abhängigkeit von den Modus-Kenngrößen (Fahrzeit, Zu- und Abgangszeit, Fahrpreis, usw.) berechnet werden. Bei Bedarf können Sie je Zielaktivität unterschiedliche Nutzen definieren.</p>
+        <p class="Text">
+            <MadCap:keyword term="VISEM-Modell: Nutzenfunktion" />Dieses Modell hat folgende funktionale Form.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_115.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">i, j</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Indizes der Verkehrsbezirke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">m</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Index der Modi (<span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">M </span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;line-height: 11pt;">=</span><span class="_Override" style="font-family: 'Times New Roman';font-style: italic;"></span>Gesamtanzahl)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">P<span class="formula_superscript">m</span><span class="formula_subscript">ij</span></p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Wahrscheinlichkeit, bei der Fahrt von <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">i</span> nach <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">j</span> Modus <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">m</span> zu wählen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">u<span class="formula_superscript">m</span><span class="formula_subscript">ij</span></p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Nutzen bei Wahl von Modus <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">m</span> für die Fahrt von <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">i</span> nach <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">j</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Nutzenfunktion <img src="../Resources/Images/5_25.jpg" /> kann beispielsweise vom Typ Logit sein, also als <img src="../Resources/Images/5_27.jpg" /> definiert werden. Alternativ können alle verfügbaren Typen von Bewertungsfunktionen aus dem EVA-Nachfrageverfahren als Nutzenfunktionen für die VISEM-Moduswahl verwendet werden <MadCap:xref class="sieheUeberschrSeite" href="1_3_EVA-Verkehrsverteilung und Moduswahl.htm#1_nachfragemodell_2215163117_1154337"><span style="color: Black;" class="mcFormatColor">(</span><u>EVA-Verkehrsverteilung und Moduswahl</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Als Basisgröße für die Nutzenmatrizen können beliebige Kombinationen von Entfernungen und modusspezifischen Kenngrößen wie Fahrzeiten, Zu-/Abgangszeiten und Fahrpreisen verwendet werden. Ebenso können Logsummen über die modusspezifischen Nutzen als Eingangsgröße verwendet werden.</p>
+        <p class="Text">Zum Ende sei noch die Bedeutung des Wegekettenkonzeptes in der Verkehrsmittelwahl erläutert.</p>
+        <p class="Text">Die Modi sind in <MadCap:variable name="PTV_Manual.Programmname" /> folgendermaßen unterteilt:</p>
+        <ul>
+            <LI class="List0">austauschbare Modi (in der Regel Fuß, Mitfahrer, ÖPNV)</LI>
+            <LI class="List0">nicht austauschbare Modi (Pkw, Rad)</LI>
+        </ul>
+        <p class="Text">VISEM rechnet beim ersten Weg jeder Wegekette (für eine Personengruppe) ein diskretes Aufteilungsmodell (zum Beispiel Logit) und wählt aus allen Modi einen aus. Falls es sich bei diesem ersten Modus um einen nicht-austauschbaren handelt, so wird er die gesamte Wegekette beibehalten, unabhängig von den Attributen dieses Modus auf den Folgewegen. Falls beim ersten Weg ein austauschbarer Modus gewählt wurde, so wird für die restlichen Wege der Kette eine Moduswahl durchgeführt, jedoch nur innerhalb der austauschbaren Modi.</p>
+        <h5>Beispiel für Moduswahl</h5>
+        <p class="Text">Wir setzen hier das Beispiel aus der Verkehrsverteilung fort <MadCap:xref class="sieheUeberschrSeite" href="#1_nachfragemodell_2215163117_1157885">(siehe „Beispiel für Verkehrsverteilung“ auf Seite&#160;173)</MadCap:xref> und bestimmen die Matrizen für die einzelnen Aktivitätenübergänge für die drei Modi PKW (P), ÖV (O) und Fuß (F). Dabei ist alleine der Modus P nicht austauschbar. Die Menge der austauschbaren Modi O und F wird kurz auch mit A gekennzeichnet. Für die einzelnen Aktivitätenübergänge wird wieder eine Nutzenfunktion vom Typ Logit verwendet, also <img src="../Resources/Images/5_26.jpg" />, mit dem Parameter <span class="formula">c</span> = 0,4. Die Nutzenmatrizen <span class="formula">u</span><span class="formula_superscript">m</span> für jeden Modus <span class="formula">m</span> seien gegeben durch</p>
+        <ul>
+            <LI class="List0" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="formula">u</span>
+                <span class="formula_superscript">P</span>
+            </LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 274px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="68px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="73px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="63px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="70px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="formula">u</span>
+                <span class="formula_superscript">O</span>
+            </LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 274px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="68px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="73px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="63px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="70px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="formula">u</span>
+                <span class="formula_superscript">F</span>
+            </LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 275px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="68px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="73px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="63px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="71px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Nach Auswertung der obigen Formel ergeben sich folgende Wahrscheinlichkeitsmatrizen.</p>
+        <ul>
+            <LI class="List0" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="formula">P</span>
+                <span class="formula_superscript">P</span>
+            </LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 274px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="68px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="73px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="63px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="70px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,472</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,526</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0,526</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,526</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,472</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">0,472</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,526</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,472</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0,472</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="formula">P</span>
+                <span class="formula_superscript">O</span>
+            </LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 276px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="68px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="73px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="64px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="71px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,316</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,237</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0,237</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,237</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,316</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">0,316</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,237</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,316</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0,316</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="formula">P</span>
+                <span class="formula_superscript">F</span>
+            </LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 279px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="69px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="74px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="64px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="72px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,212</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,237</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0,237</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,237</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,212</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">0,212</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,237</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,212</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0,212</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">
+                <span class="formula">P</span>
+                <span class="formula_superscript">A </span>= <span class="formula">P</span><span class="formula_superscript">O </span>+ <span class="formula">P</span><span class="formula_superscript">F</span></LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 279px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="69px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="74px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="64px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="72px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,528</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,474</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0,474</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,474</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,528</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">0,528</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,474</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,528</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0,528</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Von Interesse sind auch die Wahrscheinlichkeiten für die Modi O und F innerhalb der austauschbaren Modi.</p>
+        <ul>
+            <LI class="List0">
+                <span class="formula">PA</span>
+                <span class="formula_superscript">O </span>= <span class="formula">P</span><span class="formula_superscript">O </span>/ <span class="formula">P</span><span class="formula_superscript">A</span></LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 279px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="69px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="74px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="64px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="72px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,598</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,5</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0,5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,5</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,598</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">0,598</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,5</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,598</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0,598</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">
+                <span class="formula">PA</span>
+                <span class="formula_superscript">F </span>= <span class="formula">P</span><span class="formula_superscript">F </span>/ <span class="formula">P</span><span class="formula_superscript">A</span></LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 278px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="69px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="74px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="64px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="71px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,402</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,5</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0,5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,5</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,402</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">0,402</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,5</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,402</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0,402</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Nun wird zunächst die Matrix des nichtaustauschbaren Modus PKW für alle Aktivitätenübergänge berechnet. Die Matrix für den ersten Aktivitätenübergang ist das Produkt von <span class="formula">P</span><span class="formula_subscript">P</span> mit der Gesamtnachfragematrix <span class="formula">F</span><span class="formula_superscript">1</span> des ersten Übergangs.</p>
+        <ul>
+            <LI class="List0">Gesamtnachfragematrix <span class="formula">F</span><span class="formula_superscript">1</span> für den ersten Aktivitätenübergang (Zielaktivität A)</LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 280px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="66px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="57px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="49px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="55px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">93,4</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Matrix <span class="formula">F</span><span class="formula_superscript">P1</span> für Modus P und den ersten Aktivitätenübergang (Zielaktivität A)</LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 278px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="66px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="56px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="49px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="54px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">49,12</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">49,12</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">49,12</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">49,12</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">49,12</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Diese 49,12 Fahrten werden beim nächsten Aktivitätenübergang mit den Verteilungswahrscheinlichkeiten (<span class="formula">P</span><span class="formula_subscript">22</span> = 0,6 oder <span class="formula">P</span><span class="formula_subscript">23</span> = 0,4) auf die Bezirke 2 und 3 aufgeteilt.</p>
+        <ul>
+            <LI class="List0">Matrix <span class="formula">F</span><span class="formula_superscript">P2</span> für Modus P und den zweiten Aktivitätenübergang (Zielaktivität E)</LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 275px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="52px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="65px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="56px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="48px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="54px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">49,12</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">49,12</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">29,47</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">19,65</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">49,12</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">29,47</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">19,65</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">10</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Schließlich müssen diese Fahrten beim letzten Aktivitätenübergang wieder in ihrem Heimatbezirk 1 enden.</p>
+        <ul>
+            <LI class="List0">Matrix <span class="formula">F</span><span class="formula_superscript">P3</span> für den Modus P und den dritten Aktivitätenübergang (Zielaktivität W)</LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 278px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="52px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="66px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="56px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="49px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="55px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">49,12</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">49,12</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">49,12</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">29,47</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">29,47</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">19,65</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">19,65</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Aufsummiert ergibt sich folgende PKW-Gesamtnachfragematrix <span class="formula">F</span><span class="formula_superscript">PG</span></p>
+        <table class="TableStyle-TableStandard" style="width: 279px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="54px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="56px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="57px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="50px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="62px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">147,36</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">147,36</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">49,12</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">88,59</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">19,65</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">49,12</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">49,12</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">88,59</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">29,47</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">29,47</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">19,65</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">19,65</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">19,65</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Zur Bestimmung der Gesamtnachfragematrizen für die nicht-austauschbaren Modi wird diese PKW-Matrix von der Gesamtnachfragematrix <span class="formula">F</span><span class="formula_superscript">G</span> (aus der Verkehrsverteilung) subtrahiert. </p>
+        <ul>
+            <LI class="List0" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="formula">F</span>
+                <span class="formula_superscript">G</span>
+            </LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 281px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="54px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="56px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="50px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="63px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">280,2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">280,2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">149,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">37,4</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">93,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">93,4</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">149,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">56,0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">56,0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">37,4</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">37,4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">37,4</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Differenz ergibt zunächst die Gesamtnachfragematrix für alle nichtaustauschbaren Modi zusammen.</p>
+        <ul>
+            <LI class="List0" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="formula">F</span>
+                <span class="formula_superscript">A</span>
+            </LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 281px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="54px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="56px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="50px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="63px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">132,84</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">132</span>
+                            <span class="gui_element" style="font-family: 'Times New Roman';font-size: 8.5pt;line-height: 10.5pt;">,84</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">44,28</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">70,81</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">17,75</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">44,28</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">44,28</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">70,81</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">26,53</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">26,53</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">17,75</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">17,75</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">17,75</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Für diese Matrix findet nun innerhalb der austauschbaren Modi ÖV und Fuß eine Moduswahl statt, um die Gesamtnachfragematrizen für die Modi ÖV und Fuß zu erhalten. Dazu wird die Matrix mit den Wahrscheinlichkeiten <span class="formula">PA</span><span class="formula_superscript">O</span> und <span class="formula">PA</span><span class="formula_superscript">F</span> multipliziert.</p>
+        <ul>
+            <LI class="List0">ÖV-Gesamtnachfragematrix <span class="formula">F</span><span class="formula_superscript">O</span></LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 274px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="55px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="56px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="49px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="61px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">70,75</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">70,75</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">22,14</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">38,00</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">10,61</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">22,14</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">22,14</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">39,74</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">13,27</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">15,86</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">10,61</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">8,87</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">8,87</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Fuß-Gesamtnachfragematrix <span class="formula">F</span><span class="formula_superscript">F</span></LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 272px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="52px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="54px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="56px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="49px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="61px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">62,09</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">62,09</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">22,14</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">32,81</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">7,14</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">22,14</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">22,14</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">31,07</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">13,26</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">10,67</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">7,14</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">8,88</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">8,88</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Zu beachten ist, dass die PKW-Gesamtnachfragematrix identische Zeilen- und Spaltensummen für jeden Bezirk hat, wogegen das für die ÖV- und Fuß-Matrizen nicht zwingend der Fall sein muss.</p>
+        <p class="Text">Die Ergebnisse der Moduswahl können in aggregierter Form in einer Nachfragematrix pro Personengruppe und Modus gespeichert werden. Zusätzlich können Zeitintervall, Quell- bzw. Zielaktivität für weitere disaggregierte Ausgaben eingeschränkt werden.</p>
+    </body>
+</html>

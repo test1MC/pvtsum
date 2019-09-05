@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="760" MadCap:lastWidth="1062" MadCap:ignoredWords="E1;E9;V1;V9;N1;N9;G1;G9;G0;att;E2;bzw;ErhLinieName;E3;max;E5;E7;E8;V2;N2;V3;N3;NachlaufLRName;evtl;inkl;V5;N5;V6;N6;V4;N4;con;wege;RZ;UH;Wid;konst;ca;Registrierungs;Common;Misc;ProcessorInfo;angeb;empf;Abfahrts;t0;Nr;ErhFzpName;VorlaufVSysCode;VorlaufLinieName;VorlaufRichtungsCode;VorlaufLRName;VorlaufFZPName;NachlaufVSysCode;EingabeHstNr;EingabeHstAbfahrtstag;EingabeHstAbfahrtszeit;QHstNr;VorlaufHstNr;EinHstNr;AusHstNr;NachlaufHstNr;ZHstNr;AnzPassagiere;ExtHochFak;BUS1;EingabeHStNr;WID;rechenzeit;etc;Exp;interval;ATI;service;frequency;SF;4h;1h;Strategies;versch;Ber">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1033642">
+            </a>Zeitbeschränkung für Teilwege festlegen</h4>
+        <p class="Text">Sie können die Dauer von ÖV-Zusatz-Teilwegen und Fußwegen einschränken. Dies ist zwingend erforderlich, wenn große Teile des Netzes für solche Verkehrssysteme geöffnet sind und es ohne eine Beschränkung so viele mögliche Teilwege gibt, dass der Speicher nicht ausreicht. Durch eine solche Beschränkung kann außerdem die Laufzeit des Verfahrens reduziert werden.</p>
+        <p class="Text">Oft gibt es auch inhaltliche Gründe für diese Zeitbeschränkung: Zu-Fuß-Gehen oder Taxifahren ist eventuell zwar überall im Netz möglich, längere Fuß-Umstiege als 15 Minuten zwischen zwei Linien unternimmt aber kein Fahrgast und niemand fährt innerhalb der Stadt länger als 2 Stunden mit dem Taxi.</p>
+        <p class="Text">Für die Beschränkung von Gehzeit und ÖV-Zusatz-Zeit gilt</p>
+        <ul>
+            <LI class="List0">Sie wirkt bereits in der Teilwege-Vorberechnung.</LI>
+            <LI class="List0">Sie schränkt die Menge der nutzbaren Teilwege auf die Optionen ein, deren Geh- bzw. ÖV-Zusatz-Zeit den voreingestellten Wert nicht überschreitet.</LI>
+            <LI class="List0">Sie ist für fahrplanfeine und für taktfeine Umlegungen relevant.</LI>
+            <LI class="List0">Sie bezieht sich im Falle der Gehzeit lediglich auf Gehzeiten, die durch für Fuß-VSys offene Strecken und Übergänge zwischen Haltestellenbereichen einer Haltestelle anfallen, nicht auf Anbindungszeiten.</LI>
+            <LI class="List0">Sie ist je Teilweg zu verstehen, also je Übergang zwischen zwei ÖV-Teilstücken einer Verbindung. Bei einer Einstellung von beispielsweise 30&#160;min für die Gehzeit kann also auf einer ÖV-Verbindung zweimal eine Fuß-Übergangsgehzeit von 20&#160;min anfallen, in der Summe also 40&#160;min. Ein einzelner Übergang kann jedoch nicht länger als 30&#160;min dauern.</LI>
+        </ul>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Beachten Sie, dass es durch die Benutzung solcher Zeitschranken auch zu ungewollten Effekten kommen kann.</p>
+                        <p class="Text">Beispiel: Die ideale Verbindung einer Bezirksbeziehung ist eine direkte Taxifahrt (ÖV-Zusatz-Verkehrssystem) von drei Stunden Dauer. Da die maximale Dauer zwei Stunden beträgt, ist dieser Weg unzulässig. Der Fahrgast hat irgendwo auf diesem 3-Stunden-Weg die Option, eine „Schleife“ zu Fuß oder mit einem ÖV-VSys zurückzulegen. Der Fahrgast steigt also nach anderthalb Stunden aus dem Taxi, geht eine Runde durch den Park und steigt dann erneut in ein Taxi ein. Obwohl eine solche Schleife unsinnig ist, führt sie dazu, dass das Kriterium plötzlich erfüllt ist – durch die Unterbrechung des Gesamtwegs irgendwo in der Mitte.</p>
+                        <p class="Text">Solche Konstellationen können Sie vermeiden, indem Sie erstens die Zeitbeschränkung so groß wählen, dass alle gewollten Teilwege eine darunter liegende Dauer aufweisen und zweitens darauf achten, dass nicht das gesamte Netz für alle Verkehrssysteme geöffnet ist, sondern die Verkehrssystem-Unternetze differenziert modelliert werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Rechnen</span> den Eintrag <span class="gui_element">Allgemeine Verfahrenseinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Allgemeine Verfahrenseinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Navigator den Eintrag <span class="gui_element">ÖV-Einstellungen&#160;&gt; Umlegung</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Nehmen Sie im Bereich <span class="gui_element">ÖV-Zusatz Teilwege</span> die gewünschten Einstellungen vor.</p>
+        <table class="TableStyle_gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="143px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="334px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">maximale ÖV-Zusatz-Zeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">maximale Dauer eines ÖV-Zusatz-Teilwegs in Minuten</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Nehmen Sie im Bereich <span class="gui_element">Fußwege</span> die gewünschten Einstellungen vor.</p>
+        <table class="TableStyle_gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="143px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="334px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">maximale Gehzeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">maximale Dauer eines Fußwegs in Minuten</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">In problematischen Netzen empfiehlt sich für die Gehzeit ein Wert von etwa 30&#160;min, da Verbindungen mit längeren Fußweg-Übergängen unrealistisch sind.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Result" style="font-weight: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Die Änderungen werden übernommen. Sobald Sie eine ÖV-Umlegung durchführen, werden die Einstellungen verwendet.</p>
+    </body>
+</html>

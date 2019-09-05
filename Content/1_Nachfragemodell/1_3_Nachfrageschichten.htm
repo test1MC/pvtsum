@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="1191" MadCap:lastWidth="1018" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG;bearbeitung;Bearbeitungs;Nested;80er;sk;Method;of;verteilung;WAW;Stud">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1026101">
+            </a>
+            <a name="1_nachfragemodell_2215163117_25914">
+            </a>Nachfrageschichten</h3>
+        <p class="Text">
+            <MadCap:keyword term="Nachfrageschichten" />Die Nachfrageschicht ist das grundlegende Nachfrageobjekt für die Berechnung der Verkehrserzeugung, -verteilung und der Moduswahl. Sie verbindet eine Aktivitätenkette mit einer oder mehreren Personengruppen (in VISEM mit genau einer Personengruppe). Die Verweise auf Aktivitätenkette und Personengruppen sind im Standard-Vier-Stufen-Modell optional.</p>
+        <p class="Text">Die Zusammenhänge zwischen den verschiedenen Nachfrageobjekten lassen sich grafisch wie folgt darstellen <MadCap:xref class="sieheUeberschrSeite" href="#1_nachfragemodell_2215163117_1147190">(siehe „Zusammenhänge zwischen den verschiedenen Nachfrageobjekten“ auf Seite&#160;131)</MadCap:xref>.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Demand_Strata.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_nachfragemodell_2215163117_1147190">
+            </a>
+            <a name="1_nachfragemodell_2215163117_52350">
+            </a> Zusammenhänge zwischen den verschiedenen Nachfrageobjekten</p>
+        <p class="Text">Das Nachfrageobjekt <span class="gui_element">Nachfrageschicht</span> wird durch folgende Attribute beschrieben.</p>
+        <table class="TableStyle_gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="177px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="319px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle_gui_elements1_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Code</span> (Key)</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Kurzbezeichnung (beliebiger String), zum Beispiel WAW Stud</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Aktivitätenketten-Code</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Kurzbezeichnung der Aktivitätenkette (optional)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Personengruppen-Codes</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Kurzbezeichnung der Personengruppe(n) (optional)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Name</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Name der Nachfrageschicht, zum Beispiel Student-Einkauf oder Erwerbstätiger mit Pkw Wohnen-Einkauf-Wohnen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Nachfragemodell-Code</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Kurzbezeichnung des Nachfragemodells, zu dem die Nachfrageschicht gehört, zum Beispiel DEFAULT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Verteilungsmatrix-Nummer</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Nummer der Nachfragematrix, in die das Ergebnis der Verteilung für diese Nachfrageschicht geschrieben wird (optional)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Nachfrageganglinien-Nummer</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Nummer der Nachfrageganglinie zur zeitlichen Aufteilung der Nachfrage (optional)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Folgende Attribute, die Nachfrageschichten beschreiben, sind nur für EVA-Modelle relevant.</p>
+        <table class="TableStyle_gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="177px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="319px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle_gui_elements1_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Quell-Strukturgrößen-Codes</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Kurzbezeichnung der Quellstrukturgrößen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Ziel-Strukturgrößen-Codes</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Kurzbezeichnung der Zielstrukturgrößen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Ausgleichend</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Kennzeichnet die Nachfrageschicht (Quelle-Ziel-Typ 3), in der der Randsummenausgleich stattfindet</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Aufkommen als Potential verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Dieses boolesche Attribut beschreibt, ob die Quell- oder Zielaufkommen der Nachfrageschicht bei der Verteilung/Moduswahl als Potential wirken (=1) oder nur die Randsummenbedingungen erfüllen (=0) sollen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Typ Quelle</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Typ Ziel</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Typ der Randsummenbedingung auf Quellseite oder Zielseite</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Min-Faktor Quelle konstant</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Max-Faktor Quelle konstant</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Min-Faktor Ziel konstant</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Max-Faktor Ziel konstant</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Dieses boolesche Attribut beschreibt, ob die untere oder obere Schranke des Quell- oder Zielaufkommens konstant (=1) oder bezirksabhängig (=0) ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Min-Faktor Quelle</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Max-Faktor Quelle</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Min-Faktor Ziel</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Max-Faktor Ziel</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements1_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Faktor für die untere oder obere Schranke des Quell- oder Zielaufkommens</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

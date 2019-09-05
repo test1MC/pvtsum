@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="2843" MadCap:lastWidth="556" MadCap:ignoredWords="VorHst;EinHst;NachHst;QuellHst;ZielHst;linie;Ride;Wid;Branch;Bound;FZ;UZ;UH;Fak;timetab1;par;frueh;spaet;ΔT;gleichabständig;WID;Fzg;18min;Wid1;Wid2;P1;P2;M1;M2;A_DORF;X_STADT;UWZ;Beförd;Mittl">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1103951">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_49063">
+            </a>Beispiel für die Wahlmodelle</h4>
+        <p class="Text">Wir betrachten folgendes Netz.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_HeadwayBased_ExampleNetwork.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000028px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Beispielnetz zu Wahlmodellen</p>
+        <p class="Text">Wir analysieren die Entscheidung eines Fahrgasts, der sich an Bord von Linie 1 befindet und an Haltestelle A eintrifft. Zunächst gehen wir darauf ein, wie sich die Struktur der Wahlentscheidung ändert, wenn man die verfügbare Information variiert.</p>
+        <p class="Text">Die hier betrachteten Szenarien sind folgende.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Keine Information, konstante Takte.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Abfahrtszeit-Information je Haltestelle, nicht an Bord verfügbar.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Abfahrtszeit-Information je Haltestelle, auch an Bord verfügbar.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Abfahrtszeit-Information für alle Haltestellen, nicht an Bord verfügbar.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Abfahrtszeit-Information für alle Haltestellen, auch an Bord verfügbar.</p>
+        <h5>Hierarchische Struktur</h5>
+        <p class="Text">Im ersten Beispiel betrachten wir die Situation in Szenario 1.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_HeadwayBased_ChoiceHierarchy1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">Struktur der Wahlentscheidung in Szenario 1 (keine Information)</p>
+        <p class="Text">In der Darstellung stehen Kreise für Linien und Rechtecke für Haltestellen.</p>
+        <p class="Text">Hier entscheidet sich der Fahrgast zunächst zwischen Weiterfahrt und Ausstieg, wobei die aus der zweiten Alternative resultierende Rest-Reisezeit nur geschätzt werden kann. Nach dem Ausstieg erfolgt eine Entscheidung für die Einstiegshaltestelle (A, B oder C), die erneut nur auf Erwartungswerten beruht. Erst nach Eintreffen an dieser Haltestelle kann er die Entscheidung für die Einstiegslinie gezielt auf der Basis von Beobachtungen (der ankommenden Fahrzeuge) treffen.</p>
+        <p class="Text">Im zweiten Beispiel nehmen wir an, dass Abfahrtszeiten an den Haltestellen angezeigt werden. Die Entscheidungsstruktur verändert sich dann folgendermaßen.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_HeadwayBased_ChoiceHierarchy2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">Struktur der Wahlentscheidung in Szenario 2 (lokale Information)</p>
+        <p class="Text">	Im Unterschied zu eben beobachtet der Fahrgast direkt nach dem Ausstieg an Haltestelle A die nächsten Abfahrtszeiten der dort verkehrenden Linie 2. Er kann somit exakt beurteilen, welche Warte- und Rest-Reisezeit anfällt, falls er von dort aus weiterfährt. Im Gegensatz dazu kennt er für die Einstiegshaltestellen B und C lediglich Erwartungswerte.</p>
+        <p class="Text">Im dritten Beispiel unterstellen wir, dass der Fahrgast schon an Bord von Linie 1 erkennen kann, welche Anschlüsse ab Haltestelle A bestehen. Der Entscheidungsbaum sieht dann wie folgt aus.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_HeadwayBased_ChoiceHierarchy3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 4: ">Struktur der Wahlentscheidung in Szenario 3 (Information im Fahrzeug)</p>
+        <p class="Text">Nun ändert sich bereits die Charakteristik der ersten Entscheidung, denn die Weiterfahrt mit Linie 1 und ein Umstieg in Linie 2 oder 3 stellen nun Alternativen auf derselben Ebene dar, wobei sämtliche Wartezeiten bekannt sind.</p>
+        <h5>Vergleich der errechneten Anteile</h5>
+        <p class="Text">Es ist aufschlussreich zu analysieren, welchen Einfluss das verwendete Wahlmodell auf die Anteile der Linien und die mittleren Restkosten hat. Um die Rechnung zu vereinfachen, legen wir die folgende Definition generalisierter Kosten zugrunde.</p>
+        <p class="Formula">Kosten = 1.0 • Fahrzeit + 1.0 • Gehzeit + 1.0 • Wartezeit + 1&#160;min • Anzahl Umstiege</p>
+        <p class="Text">Fahrzeiten und Takte der Linien im Beispielnetz sind in <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1179400">Tabelle&#160;159</MadCap:xref> dargestellt.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 265px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="76px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Linie</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Fahrzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Takt</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">Start -&gt; A&#160;&#160;&#160;&#160;&#160;5‘</p>
+                        <p class="CellText_right">A -&gt; Ziel&#160;&#160;&#160;&#160;&#160;8‘</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">10‘</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">3‘</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">15‘</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">5‘</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">5‘</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">4‘</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">5‘</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">3‘</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">10‘</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_oev_2318507456_1179400">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_39802">
+                    </a>Fahrzeiten und Takte der Linien im Beispielnetz</p>
+            </caption>
+        </table>
+        <p class="Text">Die Situation des an Bord von Linie 1 an Haltestelle A eintreffenden Fahrgasts ist deshalb interessant, weil es mehrere Umsteigemöglichkeiten gibt, die eine kürzere Rest-Reisezeit zum Ziel versprechen. <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1179434">Tabelle&#160;160</MadCap:xref> zeigt, dass der Fahrgast einen desto größeren Nutzen aus diesen Umsteigealternativen ziehen kann, je mehr Informationen er über die dabei anfallenden Wartezeiten besitzt.</p>
+        <p class="Tabledist">&#160;</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 493px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Szenario 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Szenario 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Szenario 3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Szenario 4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Szenario 5</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">60,1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">59,7</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">32,3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">45,4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">28,2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">Anteil Linie 2 [%]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">9,0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">9,0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">11,7</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">13,8</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">22,7</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">Anteil Linie 3 [%]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">10,3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">6,8</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">12,1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">9,6</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">9,2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">Anteil Linie 4 [%]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">10,3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">14,4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">25,7</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">22,4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">27,6</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">Anteil Linie 5 [%]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">10,2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">10,2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">18,2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">8,8</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">12,4</p>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="TableStyle-TableStand_withTitle-Foot-Footer1">
+                    <td class="TableStyle-TableStand_withTitle-FootE-Column1-Footer1">
+                        <p class="CellCaption" style="text-align: right;">Mittl. Kosten [min]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-FootE-Column1-Footer1">
+                        <p class="CellCaption" style="text-align: right;">18‘39</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-FootE-Column1-Footer1">
+                        <p class="CellCaption" style="text-align: right;">18‘38</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-FootE-Column1-Footer1">
+                        <p class="CellCaption" style="text-align: right;">18‘20</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-FootE-Column1-Footer1">
+                        <p class="CellCaption" style="text-align: right;">17‘36</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-FootD-Column1-Footer1">
+                        <p class="CellCaption" style="text-align: right;">17‘00</p>
+                    </td>
+                </tr>
+            </tfoot>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_oev_2318507456_1179434">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_41128">
+                    </a>Anteile der Linien und mittlere Kosten je nach verfügbarer Information</p>
+            </caption>
+        </table>
+        <p class="Text">Die in der letzten Zeile genannten mittleren Kosten beziehen sich auf die Gesamtroute. </p>
+        <p class="Text">Der Unterschied zwischen den Szenarien 1 und 2 ist hier sehr gering, weil Informationen zu Abfahrten an der lokalen Haltestelle nur von Vorteil sind, wenn man dadurch erkennt, dass eine von der Reisezeit her schlechtere Linie zugunsten einer kurz darauf eintreffenden, besseren Linie ignoriert werden sollte. Dieser Fall tritt in diesem Netz nur mit sehr niedriger Wahrscheinlichkeit ein – und nur an Haltestelle B.</p>
+        <p class="Text">Wird dieselbe Information bereits an Bord zur Verfügung gestellt (Szenario 3), ändern sich die Anteile der einzelnen Linien bereits deutlich, die mittleren Kosten jedoch nur wenig. Dies liegt daran, dass die attraktivsten Umsteigelinien in diesem Beispiel nicht von Haltestelle A verkehren.</p>
+        <p class="Text">Aus genau diesem Grund reduzieren sich die erwarteten Restkosten dann, wenn Abfahrtszeit-Information nicht nur für die lokalen Linien einer Haltestelle, sondern für die Linien aller nahe gelegenen Haltestellen angeboten wird (Szenario 4). Aus der nun relativ großen Menge möglicher Linien kann der Fahrgast gezielt diejenige mit geringster Rest-Reisezeit auswählen. Der Effekt wird noch deutlicher, wenn er eine solche Entscheidung bereits an Bord von Linie 1 treffen kann (Szenario 5). Die Einsparung in den durchschnittlichen Kosten beträgt in diesem Beispiel 1‘39 Minuten – auf dem Stück von A zum Ziel sind das immerhin 14 Prozent.</p>
+    </body>
+</html>

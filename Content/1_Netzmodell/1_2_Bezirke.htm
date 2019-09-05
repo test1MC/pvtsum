@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="658" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1026600">
+            </a>
+            <a name="1_netzmodell_1240632468_21512">
+            </a>Bezirke</h3>
+        <p class="Text">
+            <MadCap:keyword term="Bezirke" />
+            <MadCap:keyword term="Netzobjekte: Bezirke" />Bezirke (auch Verkehrszellen) sind Ausgangspunkt und Ziel von Ortsveränderungen. Das bedeutet, jede Fahrt beginnt und endet in einem Bezirk. Bezirke verknüpfen das Verkehrsangebot (Netzmodell mit Knoten, Strecken, ÖV-Linien, usw.) mit der Verkehrsnachfrage in Form von Nachfragematrizen <MadCap:xref class="sieheUeberschrSeite" href="../1_Nachfragemodell/1_3_Matrizen.htm#1_nachfragemodell_2215163117_1025951"><span style="color: Black;" class="mcFormatColor">(</span><u>Matrizen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>, die die Verkehrsströme aller Bezirksbeziehungen des Modells enthalten.</p>
+        <p class="Text">Jedem Bezirk kann optional eine Bezirksumrandung (Bezirkspolygon) zugeordnet werden, die die räumliche Ausdehnung des Bezirks darstellt. Im Netzmodell wird ein Bezirk auf seinen Bezirksschwerpunkt reduziert, über den die Fahrten einer Nachfragematrix in das Netz eingespeist werden. Dazu muss jeder Bezirk über eine Anbindung <MadCap:xref class="sieheUeberschrSeite" href="1_2_Beziehungen.htm#1_netzmodell_1240632468_1120357"><span style="color: Black;" class="mcFormatColor">(</span><u>Beziehungen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> an mindestens einen Knoten angeschlossen sein. Das optionale Bezirkspolygon hat keine Auswirkung auf die Rechenergebnisse in der Umlegung, allerdings lassen sich mit Hilfe des Bezirkspolygons typische GIS-Funktionen wie das Verschneiden realisieren <MadCap:xref class="sieheUeberschrSeite" href="../1_GIS-Funktionalitaet/1_10_Verschneiden.htm#1_gis_funktionalitaet_3291278398_1035632"><span style="color: Black;" class="mcFormatColor">(</span><u>Verschneiden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Mehrere Bezirke können außerdem zu Auswertungszwecken zu einem Oberbezirk zusammengefasst werden.</p>
+        <p class="Text">Die Größe des Bezirks kann je nach gewünschtem Detaillierungsgrad des Modells variieren. Bezirke beschreiben im Allgemeinen die Lage von Orten, Teilorten oder Nutzungen (zum Beispiel Wohnorte, Arbeitsstätten, Einkaufszentren, Schulen). An ihnen werden Strukturdaten wie etwa die Anzahl der Einwohner, die Anzahl der Arbeitsplätze oder die Anzahl der Schulplätze hinterlegt, die bei der Berechnung der Verkehrsnachfrage als Eingangsdaten dienen <MadCap:xref class="sieheUeberschrSeite" href="../1_Nachfragemodell/1_3_Verfahren der Nachfragemodellierung.htm#1_nachfragemodell_2215163117_1193902"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahren der Nachfragemodellierung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1079151">Abbildung&#160;14</MadCap:xref> zeigt an einem Beispiel die Verkehrsnachfrage zwischen den Bezirken zum einen dargestellt im Netz, und zum anderen wie sie in der Nachfragematrix vorliegt.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_OD_Zones.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000067px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_netzmodell_1240632468_1079151">
+            </a>
+            <a name="1_netzmodell_1240632468_48299">
+            </a>Verkehrsnachfrage zwischen Bezirken dargestellt im Verkehrsnetz und als Nachfragematrix</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Bezirksumrandungen werden als Flächen verwaltet <MadCap:xref class="sieheUeberschrSeite" href="1_2_Das Flächenmodell in Visum.htm#1_netzmodell_1240632468_1127735"><span style="color: Black;" class="mcFormatColor">(</span><u>Das Flächenmodell in </u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> und können aus mehrteiligen Polygonen und Polygonen mit Löchern bestehen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

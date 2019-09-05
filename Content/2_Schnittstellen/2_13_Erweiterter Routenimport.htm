@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="701" MadCap:lastWidth="510" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;rim;PrtExtRouteImport;$ASSIGNEDDEMANDSEGMENT;CALCNETVOLUMES;$TIMEINTERVAL;DAYINDEX;STARTTIME;ENDTIME;t0">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1033106">
+            </a>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_52099">
+            </a>Erweiterter Routenimport<a name="30186"></a></h3>
+        <p class="Text">
+            <MadCap:keyword term="Routen:importieren (erweitert)" />Der erweiterte Routenimport bietet Ihnen flexible Möglichkeiten beim Einlesen von extern berechneten IV-Umlegungsergebnissen in Form von Routenimport-Dateien <span class="path">*.rim</span>. </p>
+        <ul>
+            <LI class="List0">Zusätzlich zu oder anstatt von IV-Routen können Sie extern berechnete IV-Umlegungsergebnisse (Netzbelastungen für Strecken, Abbieger, Oberabbieger und Anbindungen) für ein oder mehrere Nachfragesegmente nach <MadCap:variable name="PTV_Manual.Programmname" /> importieren.</LI>
+            <LI class="List0">Sie können dynamische und statische Umlegungsergebnisse einlesen.</LI>
+            <LI class="List0">Die Netz- und Routenbelastungen können Sie für einen undefinierten Umlegungszeitraum oder für individuelle Zeitintervalle importieren und optional die aktuellen Analysezeitintervalle durch die importierten Zeitintervalle ersetzen.</LI>
+        </ul>
+        <p class="Tabledist">&#160;</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie in der Symbolleiste auf das Symbol <img src="../Resources/Images_4_all/ICO_procedure_flow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000347px;margin-bottom: 0, 9983615px;" /><span class="gui_element">Verfahrensablauf öffnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Verfahrensablauf</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Fügen Sie an der gewünschten Stelle im Verfahrensablauf das Verfahren <span class="gui_element">Erweiterter Routenimport</span> aus der Kategorie <span class="gui_element">Umlegungen</span> ein <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahrensablauf festlegen und starten.htm#2_verfahrensablauf_festlegen_40480990_1019020"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahrensablauf festlegen und starten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Stellen Sie sicher, dass das eingefügte Verfahren markiert ist, und klicken Sie im Bereich <span class="gui_element">Aktionen</span> auf <span class="gui_element">Bearbeiten</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Parameter für erweiterten Routenimport</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Nehmen Sie die gewünschte Einstellung vor.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1" style="mc-hyphenate-shortest-prefix: 11;padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Zeitintervalle aus der Datei als Analysezeitintervalle übernehmen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden die in <MadCap:variable name="PTV_Manual.Programmname" /> definierten Analysezeitintervalle durch die in der Routenimport-Datei enthaltenen Zeitintervalle ersetzt.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, werden die Werte der Zeitintervalle aus der Routenimport-Datei passend zu den in <MadCap:variable name="PTV_Manual.Programmname" /> definierten Analysezeitintervallen aggregiert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="6. &#160;">Klicken Sie in der Zeile des eingefügten Verfahrens in die Spalte <span class="gui_element">Variante/Datei.</span></p>
+        <p class="Stepresult">Das Symbol <img src="../Resources/Images_4_all/ICO_file_select.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 012818px;margin-bottom: 1, 012818px;" /> wird angezeigt.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Klicken Sie auf das Symbol <img src="../Resources/Images_4_all/ICO_file_select.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 012818px;margin-bottom: 1, 012818px;" />.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">IV-Routen öffnen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="8. &#160;">Wählen Sie die gewünschte Datei aus.</p>
+        <p class="Step" MadCap:autonum="9. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Öffnen</span>.</p>
+        <p class="Stepresult">Der Dateiname wird in die Spalte <span class="gui_element">Variante/Datei</span> übernommen.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Alternativ können Sie in das Feld der Spalte <span class="gui_element">Variante/Datei</span> doppelklicken und Pfad und Dateiname manuell eingeben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="10. &#160;">Führen Sie das Verfahren aus <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahren im Verfahrensablauf ausführen.htm#2_verfahrensablauf_festlegen_40480990_1112524"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahren im Verfahrensablauf ausführen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Result">Die IV-Umlegungsergebnisse werden importiert.</p>
+        <h5 MadCap:autonum="">Beispiel einer Routenimport-Datei <span class="path">*.rim</span> für den erweiterten Routenimport</h5>
+        <p class="Text">Folgende Informationen sind in einer Datei <span class="path">*.rim</span> enthalten.</p>
+        <pre class="Input">$VISION</pre>
+        <pre class="Input">$VERSION:VERSNR;FILETYPE;LANGUAGE</pre>
+        <pre class="Input">3.000;PrtExtRouteImport;ENG</pre>
+        <pre class="Input">$ASSIGNEDDEMANDSEGMENT:CODE;CALCNETVOLUMES</pre>
+        <pre class="Input">C;1</pre>
+        <pre class="Input">H;1</pre>
+        <pre class="Input">$TIMEINTERVAL:CODE;NAME;DAYINDEX;STARTTIME;ENDTIME</pre>
+        <pre class="Input">* NAME(def=CODE) and DAYIND(def=1) is optional</pre>
+        <pre class="Input">3_4;Null-Eins4;1;03:00:00;04:00:00</pre>
+        <pre class="Input">0_1;Null-Eins1;1;00:00:00;01:00:00</pre>
+        <pre class="Input">1_2;Null-Eins2;1;01:00:00;02:00:00</pre>
+        <pre class="Input">2_3;Null-Eins3;1;02:00:00;03:00:00</pre>
+        <pre class="Input">$ROUTE:NO;FROMZONENO;TOZONENO;VOLVEH_DSEG(P,AP);VOLVEH_DSEG(C,0_1);<br />VOLVEH_DSEG(C,1_2);VOLVEH_DSEG(C,2_3);VOLVEH_DSEG(C,3_4);VOLVEH_DSEG(H,3_4)</pre>
+        <pre class="Input">1;100;200;1211.000;1212.000;1213.000;555;666;777</pre>
+        <pre class="Input">2;100;200;1221.000;1222.000;1223.000;555;666;777</pre>
+        <pre class="Input">3;100;200;1231.000;0;3213.000;555;666;777</pre>
+        <pre class="Input">4;100;200;1241.000;4213.000;;555;666;777</pre>
+        <pre class="Input">$ROUTEITEM:ROUTENO;INDEX;NODENO</pre>
+        <pre class="Input">1;1;10</pre>
+        <pre class="Input">1;2;11</pre>
+        <pre class="Input">1;3;20</pre>
+        <pre class="Input">1;4;21</pre>
+        <pre class="Input">1;5;30</pre>
+        <pre class="Input">1;6;31</pre>
+        <pre class="Input">1;7;40</pre>
+        <pre class="Input">$LINKVOLUME:LINKNO;FROMNODENO;IMP_PRTSYS(C,2_3);IMP_PRTSYS(C,3_4);<br />QUEUELENGTH(AP)</pre>
+        <pre class="Input">1;10;3849;1111;10</pre>
+        <pre class="Input">1;11;1780;2222;20</pre>
+        <pre class="Input">2;11;2619;2222;11</pre>
+        <pre class="Input">2;20;3980;1112;20</pre>
+        <pre class="Input">3;20;1819;1113;20</pre>
+        <pre class="Input">3;21;2580;443;21</pre>
+        <pre class="Input">4;20;360000000;4;20</pre>
+        <pre class="Input">…</pre>
+        <pre class="Input">$TURNVOLUME:FROMNODENO;VIANODENO;TONODENO;QUEUELENGTH(AP);<br />QUEUELENGTH(1_2);IMP_PRTSYS(H,1_2);IMP_PRTSYS(C,AP);<br />IMP_PRTSYS(C,2_3)</pre>
+        <pre class="Input">10;11;10;44;55;56;77;33</pre>
+        <pre class="Input">10;11;20;;;0;0;0</pre>
+        <pre class="Input">10;11;41;;;0;0;0</pre>
+        <pre class="Input">11;10;11;;;0;360000000;0</pre>
+        <pre class="Input">11;10;12;;;0;0;0</pre>
+        <pre class="Input">11;20;11;;;0;360000000;0</pre>
+        <pre class="Input">11;20;21;;;0;0;0</pre>
+        <pre class="Input">11;20;40;;;0;360000000;0</pre>
+        <pre class="Input">20;11;10;;;0;0;0</pre>
+        <pre class="Input">…</pre>
+        <pre class="Input">$MAINTURNVOLUME:FROMNODENO;FROMCORDONNODENO;TOCORDONNODENO;TONODENO;QUEUELENGTH(AP);QUEUELENGTH(1_2);IMP_PRTSYS(H,1_2);IMP_PRTSYS(C,AP);<br />IMP_PRTSYS(C,2_3)</pre>
+        <pre class="Input">20;21;31;40;144;155;156;177;133</pre>
+        <pre class="Input">40;31;21;20;244;255;256;277;233</pre>
+        <pre class="Input">20;21;21;20;344;355;356;377;333</pre>
+        <pre class="Input">40;31;31;40;444;455;456;477;433</pre>
+        <pre class="Input">$CONNECTORVOLUME:ZONENO;NODENO;DIRECTION;IMP_PRTSYS(L,2_3);<br />IMP_PRTSYS(C,1_2);QUEUELENGTH(0_1);QUEUELENGTH(AP)</pre>
+        <pre class="Input">100;10;O;3;4;1;1</pre>
+        <pre class="Input">100;10;D;2;650;6;3</pre>
+        <pre class="Input">100;11;O;0;0;;</pre>
+        <pre class="Input">100;11;D;0;0;0;</pre>
+        <pre class="Input">100;12;O;0;0;0;</pre>
+        <pre class="Input">100;12;D;0;0;0;</pre>
+        <pre class="Input">200;31;O;0;0;0;</pre>
+        <pre class="Input">200;31;D;0;0;0;</pre>
+        <pre class="Input">200;40;O;0;0;0;</pre>
+        <pre class="Input">200;40;D;0;0;2000;</pre>
+        <pre class="Input">200;41;O;0;0;0;</pre>
+        <pre class="Input">200;41;D;0;0;0;</pre>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Ist in Tabelle <span class="_Override" style="font-family: 'Courier New';font-size: 8pt;line-height: 10pt;">ASSIGNEDDEMANDSEGMENT </span>für ein existierendes Nachfragesegment <span class="input">Calcnetvolumes = 1 </span>gesetzt, werden Netzobjektbelastungen aus den Routen abgeleitet und für die Analyseperiode auf alle Strecken, Abbieger und Anbindungen der Routen verteilt, andernfalls werden sie auf 0 gesetzt. </p>
+                        <p class="Text">Existierende Widerstände von Netzobjekten werden je Netzobjekt ermittelt, indem die Widerstände entlang der Routen aufsummiert und als Reisezeit in Sekunden interpretiert werden. Ist kein Widerstand definiert, wird t0 verwendet. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

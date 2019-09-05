@@ -1,0 +1,891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="5630" MadCap:lastWidth="2268" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;Init;Destroy;Calc;const;wchar_t;langid;bit;UTF;Pointer;GetID;xml;int;tsysind;tsysisopen;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;para_a;para_b;para_c;para_d;para_f;para_a2;para_b2;para_d2;para_f2;satcrit;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1066143">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_86279">
+            </a>Benutzerdefinierte CR-Funktionen verwenden</h4>
+        <p class="Text">
+            <MadCap:keyword term="CR-Funktionen:benutzerdefinierte" />Eine Datei für eine benutzerdefinierte CR-Funktion muss über eine bestimmte Schnittstelle verfügen, um von <MadCap:variable name="PTV_Manual.Programmname" /> identifiziert zu werden. Am wichtigsten ist es, dass jede Datei <span class="path">*.dll </span>die aufgelisteten Funktionen exportiert, damit <MadCap:variable name="PTV_Manual.Programmname" /> diese Datei <span class="path">*.dll </span>während der Umlegung korrekt aufrufen kann.</p>
+        <h5 MadCap:autonum="">Datei <span class="path">*.dll</span> für eine benutzerdefinierte CR-Funktion vorbereiten</h5>
+        <p class="Text">Zu <MadCap:variable name="PTV_Manual.Programmname" /> gibt es eine Header-Datei <span class="path">UserDefinedVDF.h</span>, die Sie direkt nutzen können, um die erforderlichen Funktionen in C++ zu implementieren. Die Header-Datei und ein vollständiges Beispielprojekt für Microsoft Visual Studio befinden sich im Verzeichnis <span class="path">...\Programme</span>\<span class="path">PTV Vision\<MadCap:variable name="PTV_Manual.Programmname_VersNr_mitPunkt" />\Data\UserDefVDF</span>. Prinzipiell können Sie jede Programmiersprache nutzen, solange damit eine Windows-<span class="path">dll</span> erstellt werden kann, die über eine Schnittstelle entsprechend der Funktionsdeklarationen von C++ verfügt.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die CR-Funktion muss stetig und monoton steigend hinsichtlich der Belastungen sein. Dies gilt für alle möglichen Werte der Parameter.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Obligatorische Funktionen in der <span class="path">*.dll</span></h5>
+        <table class="TableStyle_TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="85px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="409px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Deklaration</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">
+                            <span class="gui_element">char Init ();</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Beschreibung</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Diese Funktion wird von <MadCap:variable name="PTV_Manual.Programmname" /> einmal direkt nach dem Start und vor dem ersten Nutzen anderer Funktionen aufgerufen. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Nutzen Sie die Funktion, um die eigenen Datenstrukturen zu initialisieren oder gegebenenfalls andere vorbereitende Funktionen durchzuführen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Parameter</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">keine</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Rückgabewert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">true – Initialisierung erfolgreich</p>
+                        <p class="CellText">false – Initialisierung nicht erfolgreich, die Datei <span class="path">*.dll</span> sollte nicht aufgerufen werden</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="85px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="409px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Deklaration</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">
+                            <span class="gui_element">void Destroy ();</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Beschreibung</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Diese Funktion wird von <MadCap:variable name="PTV_Manual.Programmname" /> einmal direkt vor dem Schließen und nach dem letzten Aufruf der anderen Funktionen aufgerufen. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Nutzen Sie die Funktion gegebenenfalls für Aufräumoperationen, zum Beispiel, um dynamisch angeforderten Speicher freizugeben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Parameter</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">keine</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Rückgabewert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">keiner</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="85px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="409px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Deklaration</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">
+                            <span class="gui_element">char IsThreadSafe();</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Beschreibung</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Diese Funktion wird von <MadCap:variable name="PTV_Manual.Programmname" /> einmal direkt nach dem Start und vor dem ersten Aufruf anderer Funktionen aufgerufen. Der Rückgabewert gibt an, ob die unten angeführten Calc...-Funktionen simultan benutzbar implementiert sind. Die Funktion kann dann ein weiteres Mal aufgerufen werden, ehe der vorige Aufruf beendet ist. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Dieser Parallelismus kann bei einer Multithread-Implementierung der Umlegungsverfahren von <MadCap:variable name="PTV_Manual.Programmname" /> genutzt werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Parameter</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">keine</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Rückgabewert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">true – simultan benutzbar</p>
+                        <p class="CellText">false – nicht simultan benutzbar</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="85px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="409px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Deklaration</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">
+                            <span class="gui_element">char DependsOnTSys ();</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Beschreibung</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Diese Funktion wird von <MadCap:variable name="PTV_Manual.Programmname" /> einmal direkt nach dem Start und vor dem ersten Aufruf anderer Funktionen aufgerufen. Wenden Sie die Funktion an, um anzuzeigen, ob die eigene Funktion unterschiedliche Fahrzeiten je Verkehrssystem liefert. Ist das nicht der Fall, dann kann <MadCap:variable name="PTV_Manual.Programmname" /> auf das Extrahieren und Weiterleiten dieser Belastungen zu den Calc...-Funktionen verzichten, was Rechenzeit spart.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Parameter</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">keine</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Rückgabewert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">true – benötigt Belastungen je Verkehrssystem</p>
+                        <p class="CellText">false – nutzt nur Gesamtbelastung in PkwE</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="85px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="409px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Deklaration</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">
+                            <span class="gui_element">const wchar_t * GetName (const char * langid);</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Beschreibung</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Liefert einen lesbaren Namen für die Funktion, der als Eintrag in den Auswahllisten für CR-Funktionen erscheint.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Parameter</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <span class="gui_element">langid</span> ist ein Sprachcode, der genutzt werden kann, um den Namen optional in andere Sprachen zu übersetzen. </p>
+                        <p class="CellText">Derzeit sind folgende Werte möglich.</p>
+                        <p class="CellText">‘ENG’ – Englisch</p>
+                        <p class="CellText">‘DEU’ – Deutsch</p>
+                        <p class="CellText">‘FRA’ – Französisch</p>
+                        <p class="CellText">‘ITA’ – Italienisch</p>
+                        <p class="CellText">‘POL’ – Polnisch</p>
+                        <p class="CellText">‘ESP’ – Spanisch</p>
+                        <p class="CellText">‘CHI’ – Chinesisch</p>
+                        <p class="CellText">‘JAP’ – Japanisch</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Sie können die Funktion vernachlässigen, wenn sie nicht erforderlich ist. Wird der Sprachcode genutzt, sollte immer der Fall eines unbekannten Codes behandelt werden, da eventuell zukünftig weitere Sprachen ohne ausdrückliche Benachrichtigung hinzugefügt werden. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Rückgabewert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Der lesbare Name der Funktion als 16-bit UTF-8 Zeichenstring. Der Wert muss als UTF-8 zurückgegeben werden, um die Sonderzeichen einiger Sprachen – vor allem asiatischer – aufzunehmen. <MadCap:variable name="PTV_Manual.Programmname" /> erwartet einen Pointer auf einen String, der in der Datei<span class="path"> *.dll</span> gespeichert ist. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der String darf nicht auf dem Stack alloziert werden, damit die Adresse nach Abschluss des Funktionsaufrufs noch gültig ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="85px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="409px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Deklaration</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">
+                            <span class="gui_element">const char * GetID ();</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Beschreibung</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Sollte einen String liefern, der als eindeutige ID für die Funktion genutzt wird. </p>
+                        <p class="CellText">Diese ID wird intern in der Versionsdatei gespeichert, um die vom Anwender getroffene Zuordnung zu Anbindungen oder Typen von Strecken, Knoten oder Abbiegern zu erfassen, und als ID der Funktion im Format <span class="path">*.xml</span> für die Verfahrensparameter.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Parameter</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">keine</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Rückgabewert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Der ID-String als ASCII-String. Der String darf nur die Zeichen 0..9, a..z, A..Z enthalten. <MadCap:variable name="PTV_Manual.Programmname" /> erwartet einen Pointer auf einen String, der in der Datei<span class="path"> *.dll</span> gespeichert ist.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der String darf nicht auf dem Stack alloziert werden, damit die Adresse nach Abschluss des Funktionsaufrufs noch gültig ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="85px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="409px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Deklaration</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">
+                            <span class="gui_element">int GetInterfaceVersion();</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Beschreibung</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Die Definition der Schnittstelle für Dateien vom Typ <span class="path">*.dll</span> ist versioniert, damit Funktionsdeklarationen später verändert oder erweitert werden können. Geben Sie die Versionsnummer der Header-Datei zurück, für die Sie Ihre Funktionen programmieren. <MadCap:variable name="PTV_Manual.Programmname" /> vergleicht die gelieferte Nummer mit den dem Programm bekannten Versionsnummern, ruft die <span class="path">dll</span>-Funktionen entsprechend auf oder gibt eine Fehlermeldung aus, wenn die Schnittstellenversion nicht unterstützt wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Parameter</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">keine</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Rückgabewert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">die Versionsnummer</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="85px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="409px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Deklaration</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">
+                            <span class="gui_element">void SetTsysInfo (int numtsys, const wchar_t * tsysids[])</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Beschreibung</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <MadCap:variable name="PTV_Manual.Programmname" /> ruft diese Funktion jedes Mal auf, wenn sich die Menge der IV-Verkehrssysteme ändert. Als Parameter werden die Anzahl der Verkehrssysteme und ein Array mit den Codes je Verkehrssystem übergeben. Aus Effizienzgründen übergibt <MadCap:variable name="PTV_Manual.Programmname" /> an die Calc…-Funktionen das Verkehrssystem als numerischen Index, und zwar als 0-basierten Index in das Feld tsysids. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Um teure Stringvergleiche in diesen oft aufgerufenen Funktionen zu vermeiden, sollten Sie den numerischen Index der Verkehrssysteme, die in den CR-Funktionen speziell behandelt werden müssen, in SetTsysInfo einmal auswerten und speichern.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Parameter</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">numtsys – die Anzahl der Verkehrssysteme (= Länge des Feldes tsysids)</p>
+                        <p class="CellText">tsysids – Feld von 16-bit UTF-8 Zeichen-Strings, wovon jedes Feld dem Wert des Attributs <span class="gui_element">Code</span> für eines der in der Umlegung genutzten Verkehrssysteme entspricht.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Rückgabewert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">nein</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="85px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="409px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Deklaration</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">
+                            <span class="gui_element">double Calc (int tsysind, bool tsysisopen, int typ, int numlanes, double length, double cap, double v0, double t0, double gradient, double pcuvol, double vehvolsys[], int uval1, int uval2, int uval3, int uvaltsys, double para_a, double para_b, double para_c, double para_d, double para_f, double para_a2, double para_b2, double para_d2, double para_f2, double satcrit)</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Beschreibung</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Die Implementierung der CR-Funktion selbst. <MadCap:variable name="PTV_Manual.Programmname" /> ruft diese Funktion auf, um die aktuelle Fahrzeit <span class="gui_element">tAkt</span> je Strecke, Abbieger, Anbindung, Knoten und ein Verkehrssystem zu berechnen. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Achten Sie darauf, dass die Funktion in recheneffizienter Form codiert ist, da sie sehr oft aufgerufen wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Parameter</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Für die Netzobjekte werden diverse Parameter übergeben.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Einzelheiten finden Sie in der nachfolgenden Tabelle.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Rückgabewert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">
+                            <span class="gui_element">tAkt</span> in [s]</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text2">In Abhängigkeit vom Netzobjekttyp übergibt <MadCap:variable name="PTV_Manual.Programmname" /> folgende Parameter an die Funktion Calc.</p>
+        <table class="TableStyle_gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="99px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="99px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="99px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="99px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="80px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">
+                            <span class="gui_element">Strecke</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">
+                            <span class="gui_element">Anbindung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">
+                            <span class="gui_element">Abbieger</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">
+                            <span class="gui_element">Knoten</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">int tsysind</p>
+                    </td>
+                    <td colspan="4" class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0-basierter Index des Verkehrssystems (bezogen auf das Feld tsysids, das in SetTsysInfo übergeben wurde), für das <span class="gui_element">tAkt</span> berechnet werden soll</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">bool tsysisopen</p>
+                    </td>
+                    <td colspan="4" class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Ist das Netz für das Verkehrssystem geöffnet</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">int typ</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0..99</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0..9</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0..9</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">0..99</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">int numlanes</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">AnzFahrstreifen</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">1 (willkürlich)</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">1 (willkürlich)</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">1 (willkürlich)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">double length</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Länge </p>
+                        <p class="CellText">[kurze Länge]</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Länge </p>
+                        <p class="CellText">[kurze Länge]</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0 (willkürlich)</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">0 (willkürlich)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">double cap</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">KapIV [PkwE]</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">10E10 oder KapIV [PkwE], wenn Anbindungsanteile verwendet werden, die sich auf den Gesamt-Quell-/Zielverkehr beziehen.</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">KapIV [PkwE]</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">KapIV [PkwE]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">double v0</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">v0 [m/s]</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Länge/t0 (oder 0, wenn t0=0)</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">double t0</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Länge/v0 [s] (oder 10E10, wenn v0=0)</p>
+                    </td>
+                    <td colspan="3" class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">t0 [s]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">double gradient</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Steigung</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0 (willkürlich)</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0 (willkürlich)</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">0 (willkürlich)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">double pcuvol</p>
+                    </td>
+                    <td colspan="4" class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">BelPkwE in [PkwE] als Linearkombination aller VSys-Belastungen in [Fzg] multipliziert mit dem Wert des Attributs PkwE für das Verkehrssystem.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Ist bei den meisten Anwendungen empfohlen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">double vehvolsys[]</p>
+                    </td>
+                    <td colspan="4" class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Alternativ – für nicht-standardisierte PkwE-Berechnungen – ein Array aller VSys-Belastungen in [Fzg]. Die Reihenfolge der Einträge entspricht der Reihenfolge im Feld tsysids, das an SetTsysInfo übergeben wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">double uval1/2/3</p>
+                    </td>
+                    <td colspan="4" class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">die Werte der Attribute ZWert1, ZWert2 und ZWert3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">double uvaltsys</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Wert des Attributs ZWert-VSys je VSys</p>
+                    </td>
+                    <td colspan="3" class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">double para_a..f2</p>
+                    </td>
+                    <td colspan="4" class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">aus dem Fenster <span class="gui_element">Parameter für CR-Kurve</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">double satcrit</p>
+                    </td>
+                    <td colspan="4" class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">aus dem Fenster <span class="gui_element">Parameter für CR-Kurve </span><MadCap:xref class="sieheUeberschrSeite" href="2_5_CR-Funktionen auswählen und Parameter einstellen.htm#2_einstellungen_benutzermodell_iv_1682368020_1146045"><span style="color: Black;" class="mcFormatColor">(</span><u>CR-Funktionen auswählen und Parameter einstellen </u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Optionale Funktionen in der <span class="path">*.dll</span></h5>
+        <table class="TableStyle_TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="85px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="409px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Deklaration</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">
+                            <span class="gui_element">double CalcDerivative (int tsysind, bool tsysisopen, int typ, int numlanes, double length, double cap, double v0, double t0, double gradient, double pcuvol, double vehvolsys[], int uval1, int uval2, int uval3, int uvaltsys, double para_a, double para_b, double para_c, double para_d, double para_f, double para_a2, double para_b2, double para_d2, double para_f2, double satcrit)</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Beschreibung</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Diese Funktion wird vom Programm aufgerufen, um für ein bestimmtes VSys und je Strecke, Abbieger, Anbindung, Knoten die Ableitung der aktuellen Fahrzeit <span class="gui_element">tAkt</span> hinsichtlich der Auslastung zu berechnen. Diese Funktion wird nur innerhalb der bikriteriellen Maut-Umlegungsmethoden TRIBUT-Gleichgewichtsumlegung und TRIBUT-Lernverfahren aufgerufen. </p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Achten Sie darauf, dass die Funktion in recheneffizienter Form codiert ist, da sie sehr oft aufgerufen wird.</p>
+                        <p class="CellText">Ist die Funktion nicht in der <span class="path">*.dll</span> implementiert, dann berechnet <MadCap:variable name="PTV_Manual.Programmname" /> die Ableitung numerisch, was jedoch länger dauert als das Bereitstellen von CalcDerivative() in der <span class="path">*.dll</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Parameter</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">genau wie für Calc()</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Rückgabewert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Ableitung von <span class="gui_element">tAkt</span> in [s]</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="85px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="409px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Deklaration</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">
+                            <span class="gui_element">double CalcIntegral (int tsysind, bool tsysisopen, int typ, int numlanes, double length, double cap, double v0, double t0, double gradient, double pcuvol, double vehvolsys[], int uval1, int uval2, int uval3, int uvaltsys, double para_a, double para_b, double para_c, double para_d, double para_f, double para_a2, double para_b2, double para_d2, double para_f2, double satcrit)</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Beschreibung</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Diese Funktion wird vom Programm aufgerufen, um für ein bestimmtes VSys und je Strecke, Abbieger, Anbindung, Knoten das Integral der aktuellen Fahrzeit <span class="gui_element">tAkt</span> hinsichtlich der Auslastung zu berechnen. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Funktion wird nicht mehr benötigt und muss daher nicht implementiert werden.</p>
+                        <p class="CellText">Ist die Funktion nicht in der <span class="path">*.dll</span> implementiert, dann berechnet <MadCap:variable name="PTV_Manual.Programmname" /> das Integral numerisch, was jedoch länger dauert als das Bereitstellen von CalcDerivative() in der <span class="path">*.dll</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Parameter</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">genau wie für Calc()</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Rückgabewert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Integral von 0 bis Auslastung der CR-Funktion in [s]</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Beispiel für eine benutzerdefinierte CR-Funktion</h5>
+        <p class="Text">Zwei Verkehrssysteme – PKW und LKW – werden in der Umlegung verwendet. </p>
+        <ul>
+            <LI class="List0">Für PKW (Car) hat die CR-Funktion eine lineare Form, wobei die Steigung bei <span class="formula">sat</span><span class="formula_subscript">crit</span> wechselt.</LI>
+        </ul>
+        <p class="Text2">
+            <img src="../Resources/Images/4_1.png" />
+        </p>
+        <ul>
+            <LI class="List0">Für LKW (HGV) werden zwei Steigungswechsel bei <span class="path">d</span> und <span class="path">e</span> verwendet.</LI>
+        </ul>
+        <p class="Text2">
+            <img src="../Resources/Images/4_2.png" />
+        </p>
+        <p class="Text2">Dabei gilt Folgendes.</p>
+        <p class="Text2">
+            <img src="../Resources/Images/4_3.png" />
+        </p>
+        <p class="Text">Die Ableitungen sind folgende:</p>
+        <p class="Text2">
+            <img src="../Resources/Images/4_4.png" />
+        </p>
+        <h5 MadCap:autonum="">Quellcode der Datei <span class="path">*.dll</span></h5>
+        <pre class="Code">#include “UserDefinedVDF.h”</pre>
+        <pre class="Code">#include “tchar.h”</pre>
+        <pre class="Code">int indHGV;  // index of the HGV tsys</pre>
+        <pre class="Code">wchar_t VDFName[] = _T(“ManualExample”); // UTF-8 !!</pre>
+        <pre class="Code">char  VDFID[] = “MANEX”;</pre>
+        <pre class="Code">int INTERFACE_VERSION = 1;</pre>
+        <pre class="Code">bool Init()</pre>
+        <pre class="Code">{</pre>
+        <pre class="Code">	indHGV = -1;</pre>
+        <pre class="Code">	return true;</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code">void Destroy()</pre>
+        <pre class="Code">{</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code">const wchar_t* GetName(const char *langid)</pre>
+        <pre class="Code">{</pre>
+        <pre class="Code">	return VDFName;</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code">const char* GetID(const char *langid)</pre>
+        <pre class="Code">{</pre>
+        <pre class="Code">	return VDFID;</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code">int GetInterfaceVersion()</pre>
+        <pre class="Code">{</pre>
+        <pre class="Code">	return INTERFACE_VERSION;</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code">void SetTsysInfo (int numtsys, const wchar_t * tsysids[])  </pre>
+        <pre class="Code">{</pre>
+        <pre class="Code">	for (int i = 0; i &lt; numtsys; i++)</pre>
+        <pre class="Code">	{</pre>
+        <pre class="Code">		if (_tcscmp(tsysids[i], _T(“HGV”)) == 0) indHGV = i;</pre>
+        <pre class="Code">	}</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code">double Calc (int tsysind, bool tsysisopen, int typ, int numlanes, double length, double cap, double v0, double t0, double gradient, double pcuvol, double vehvolsys[], int uval1, int uval2, int uval3, int uvaltsys, double para_a, double para_b, double para_c, double para_d, double para_f, double para_a2, double para_b2, double para_d2, double para_f2, double satcrit)</pre>
+        <pre class="Code">{ </pre>
+        <pre class="Code">	double sat = pcuvol / cap;</pre>
+        <pre class="Code">	if (tsysind != indHGV) {</pre>
+        <pre class="Code">		if (sat &lt; satcrit)</pre>
+        <pre class="Code">			return t0 * (1 + para_a * sat);</pre>
+        <pre class="Code">		else</pre>
+        <pre class="Code">			return t0 * (1 + para_a * satcrit + para_b * (sat-satcrit));</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code">	else {</pre>
+        <pre class="Code">		if (sat &lt; d)</pre>
+        <pre class="Code">			return t0 * (1 + para_a2 * sat);</pre>
+        <pre class="Code">		else {</pre>
+        <pre class="Code" xml:space="preserve">		   if (d &lt;= sat &amp;&amp; sat &lt; e)</pre>
+        <pre class="Code" xml:space="preserve">			  return t0 * (1 + para_a2 * d + para_b2 * (sat-d));</pre>
+        <pre class="Code">		else</pre>
+        <pre class="Code" style="mc-hyphenate: never;" xml:space="preserve">		    return t0 * (1 + para_a2 * d + para_b2*(e-d) + para_c*(sat-e));</pre>
+        <pre class="Code">		}</pre>
+        <pre class="Code">	}</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code" style="mc-hyphenate: never;">double CalcDerivative (int tsysind, bool tsysisopen, int typ, int numlanes, double length, double cap, double v0, double t0, double gradient, double pcuvol, double vehvolsys[], int uval1, int uval2, int uval3, int uvaltsys, double para_a, double para_b, double para_c, double para_d, double para_f, double para_a2, double para_b2, double para_d2, double para_f2, double satcrit)</pre>
+        <pre class="Code">{ </pre>
+        <pre class="Code">	double sat = pcuvol / cap;</pre>
+        <pre class="Code">	if (tsysind != indHGV) {</pre>
+        <pre class="Code">		if (sat &lt; satcrit)</pre>
+        <pre class="Code">			return para_a;</pre>
+        <pre class="Code">		else</pre>
+        <pre class="Code">			return para_b;</pre>
+        <pre class="Code">	}</pre>
+        <pre class="Code">	else {</pre>
+        <pre class="Code">		if (sat &lt; d)</pre>
+        <pre class="Code">			return para_a2;</pre>
+        <pre class="Code">		else {</pre>
+        <pre class="Code">			if (d &lt;= sat &amp;&amp; sat &lt; e)</pre>
+        <pre class="Code">				return para_b2;</pre>
+        <pre class="Code">			else</pre>
+        <pre class="Code">				return para_c;</pre>
+        <pre class="Code">		}</pre>
+        <pre class="Code">	}</pre>
+        <pre class="Code">}</pre>
+        <h5 MadCap:autonum="">Benutzerdefinierte CR-Funktionen importieren</h5>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Übersetzen und linken Sie die <span class="path">*.dll </span>mit der gewünschten Entwicklungsumgebung.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Benennen Sie die Bibliothekdatei in der Form <span class="path">VisumVDF***.dll</span>.</p>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Dabei können Sie *** durch jeden String ersetzten, der mit den Konventionen für Windows-Dateinamen vereinbar ist.</p>
+                        <p class="Text">Achten Sie darauf, dass die durch Funktion GetID() produzierten IDs eindeutig sind. Haben mehrere Dateien <span class="path">*.dll</span> die gleiche ID, so wird nur die erste in <MadCap:variable name="PTV_Manual.Programmname" /> geladen. Alle weiteren werden ignoriert. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="3. &#160;">Legen Sie die Datei in das Verzeichnis ...\<span class="path">Programme</span>\<span class="path">PTV Vision\<MadCap:variable name="PTV_Manual.Programmname_VersNr_mitPunkt" />\Data\UserDefVDF</span>. </p>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Dieses Verzeichnis wird bei der Installation standardmäßig angelegt und beim Programmstart durchsucht.</p>
+                        <p class="Text">Alternativ können Sie ein anderes Verzeichnis als Standardverzeichnis für Ihre angelegten Dateien <span class="path">*.dll </span>definieren. Der entsprechende Pfad muss dazu in die Standardpfaddatei <span class="path">std.pfd </span>gespeichert werden <MadCap:xref class="sieheUeberschrSeite" href="../2_Grundlagen_Programmbedienung/2_1_Speicherort von Dateien ändern.htm#2_grundlagen_programmbedienung_1644961382_1245181"><span style="color: Black;" class="mcFormatColor">(</span><u>Speicherort von Dateien ändern</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Diese Änderung ist erst nach einem Neustart des Programms wirksam.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Result">Beim Programmstart sucht <MadCap:variable name="PTV_Manual.Programmname" /> nach Dateien *.dll und lädt die Inhalte. Dabei werden nur Dateien geladen, deren Windows-Edition (32 oder 64 Bit) der verwendeten <MadCap:variable name="PTV_Manual.Programmname" />-Edition entsprechen. Die benutzerdefinierten CR-Funktionen stehen dann gemeinsam mit den vordefinierten CR-Funktionen im Fenster <span class="gui_element">Parameter für CR-Kurve </span>zur Verfügung.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Nach dem Programmstart sucht <MadCap:variable name="PTV_Manual.Programmname" /> nicht mehr nach neuen Dateien <span class="path">*.dll</span>. Wenn Sie eine neue benutzerdefinierte CR-Funktion hinzufügen, müssen Sie <MadCap:variable name="PTV_Manual.Programmname" /> erneut starten.</p>
+                        <p class="Text">Wenn Sie eine Datei *.<span class="path">bmp</span> mit dem gleichen Dateinamen wie die Datei <span class="path">*.dll</span> in das gleiche Verzeichnis speichern, wird das Bild der gewählten CR-Funktion im Fenster <span class="gui_element">Parameter für CR-Kurve </span>angezeigt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

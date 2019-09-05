@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="587" MadCap:lastWidth="510" MadCap:ignoredWords="E1;E9;V1;V9;N1;N9;G1;G9">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1065289">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_25370">
+            </a>Einstellungen für ÖV-Kenngrößenmatrizen vornehmen<a name="30204"></a><a name="30135"></a></h3>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">An dieser Stelle sind nur die ÖV-spezifischen Einstellungen für Kenngrößenmatrizen beschrieben. Zusätzlich nehmen Sie allgemeine Einstellungen für Kenngrößen vor <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Metadaten für Kenngrößenmatrizen festlegen.htm#2_verfahrensablauf_festlegen_40480990_1033259"><span style="color: Black;" class="mcFormatColor">(</span><u>Metadaten für Kenngrößenmatrizen festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Für alle ÖV-Kenngrößen können Sie eine Einheit für die Längen, eine Einheit für die Zeit und eine Einheit für den Widerstand festlegen.</p>
+        <p class="Text">Sie können mit der taktfeinen und der fahrplanfeinen Umlegung ein beliebiges direktes oder indirektes Fahrzeitprofilattribut als Kenngröße <span class="gui_element">Attribut für Teilweg-Kenngröße</span> ausgeben. Dafür legen Sie fest, welches Fahrzeitprofilattribut Sie nach welcher Methode aggregieren möchten. Aus den Attributwerten aller Teilwege mit Benutzung eines Fahrzeitprofils wird auf diese Weise ein Wegeattribut ermittelt. Benutzt ein Weg keine ÖV-Linien, ist das Ergebnis für diesen Weg gleich null, damit der Weg bei der Gewichtung aller Wege-Werte zu einer relationsbezogenen Kenngröße nicht eingeht.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Kenngröße wird in ÖV-Wege-Listen nicht ausgegeben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Kenngröße <span class="gui_element">Diskomfort durch Überlastung</span> ist ein Maß für die Zeit, in der ein Fahrgast keinen Sitzplatz hat. Die Kenngröße wird durch eine Formel berechnet, die Sie ändern können <MadCap:xref class="Grundlagen" href="../1_Benutzermodell OeV/1_6_Abgeleitete Kenngroessen.htm#1_benutzermodell_oev_2318507456_1026254">Siehe "Abgeleitete Kenngrößen"</MadCap:xref>. Die Kenngröße wird nur mit einer fahrplanfeinen Umlegung berechnet. Folgende Voraussetzungen müssen dabei erfüllt sein:</p>
+        <ul>
+            <LI class="List0">Die Wege werden verbindungsfein gespeichert.</LI>
+            <LI class="List0">Die Belastungen der Nachfragesegmente, für die die Kenngröße berechnet werden soll, werden nicht bei anderen Nachfragesegmenten gespeichert.</LI>
+            <LI class="List0">Die Nachfrage aller Bezirksbeziehungen ist größer null.</LI>
+        </ul>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Rechnen</span> den Eintrag <span class="gui_element">Allgemeine Verfahrenseinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Allgemeine Verfahrenseinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Navigator den Eintrag <span class="gui_element">ÖV-Einstellungen</span>&#160;&gt; <span class="gui_element">Kenngrößen</span>.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Innerhalb der Kenngrößentabelle können Sie weitere Einstellungen vornehmen <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Metadaten für Kenngrößenmatrizen festlegen.htm#2_verfahrensablauf_festlegen_40480990_1033259"><span style="color: Black;" class="mcFormatColor">(</span><u>Metadaten für Kenngrößenmatrizen festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="3. &#160;">Nehmen Sie im Bereich <span class="gui_element">Einheiten Kenngrößenmatrizen</span> die gewünschten Einstellungen vor.</p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="68px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="409px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Längen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Einheit, in der alle Kenngrößen vom Typ Länge gespeichert werden und die auch für die Kenngrößen vom Typ Geschwindigkeit verwendet wird.</p>
+                        <p class="CellText">Wählen Sie <span class="gui_element">Kilometer/Meilen</span> (Lange Länge) oder <span class="gui_element">Meter/Fuß</span> (Kurze Länge).</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Ob metrische oder imperiale Einheiten verwendet werden, hängt von der Einstellung im Menü <span class="gui_element">Netz&#160;&gt; Netzeinstellungen</span>&#160;&gt; Register <span class="gui_element">Einheiten</span> ab <MadCap:xref class="sieheUeberschrSeite" href="../2_Grundlagen_Programmbedienung/2_1_Aktionen rückgängig machen und wiederherstellen.htm#2_grundlagen_programmbedienung_1644961382_1253661"><span style="color: Black;" class="mcFormatColor">(</span><u>Aktionen rückgängig machen und wiederherstellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Zeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Einheit, in der alle Kenngrößen vom Typ Zeitdauer gespeichert werden und die auch für die Kenngrößen vom Typ Geschwindigkeit verwendet wird.</p>
+                        <p class="CellText">Wählen Sie <span class="gui_element">Minuten</span> oder <span class="gui_element">Sekunden</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Widerstand</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Wählen Sie <span class="gui_element">Minuten</span> oder <span class="gui_element">Sekunden</span> als Einheit für die Kenngröße Widerstand</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">
+                            <MadCap:variable name="PTV_Manual.Programmname" /> hält als Datentyp nicht die ausgewählte Längeneinheit vor, sondern speichert nur, ob es sich um eine kurze Länge (Meter oder Fuß) oder eine lange Länge (Kilometer oder Meilen) handelt. Beim Einlesen von Daten wird die Einheit gemäß der Einstellung im Menü <span class="gui_element">Netz</span>&#160;&gt; <span class="gui_element">Netzeinstellungen</span>&#160;&gt; Register <span class="gui_element">Einheiten</span> verwendet. Die Werte werden gegebenenfalls umgerechnet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Klicken Sie hinter <span class="gui_element">Teilweg-Attribut</span> auf die Schaltfläche <span class="gui_element">Parameter</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Kenngröße Teilweg-Attribut</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">&lt;Attribut&gt;</span>.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Schaltfläche ist mit dem aktuell gewählten Attribut beschriftet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Attribute (Fahrzeitprofile)</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="6. &#160;">Wählen Sie das gewünschte Attribut <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Fenster_zur_Auswahl_eines_Attributs.htm#2_netz_bearbeiten_23091886_2854659"><span style="color: Black;" class="mcFormatColor">(</span><u>Fenster zur Auswahl eines Attributs</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="8. &#160;">Wählen Sie in der Auswahlliste <span class="gui_element">Aggregationsfunktion</span> den gewünschten Eintrag.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Durchschnitt</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Mittelwert aller Attributwerte</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">DurchschnittAktive</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Mittelwert der Attributwerte aller aktiven Fahrzeitprofile</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Max</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Maximum aller Attributwerte</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">MaxAktive</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Maximum aller Attributwerte aller aktiven Fahrzeitprofile</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Min</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Minimum aller Attributwerte</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">MinAktive</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Minimum aller Attributwerte aller aktiven Fahrzeitprofile</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Sum</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Summe aller Attributwerte</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">SumAktive</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Summe aller Attributwerte aller aktiven Fahrzeitprofile</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="9. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="10. &#160;">Klicken Sie hinter <span class="gui_element">Diskomfort</span> auf die Schaltfläche <span class="gui_element">Parameter</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Kenngröße Diskomfort</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="11. &#160;">Geben Sie in die Eingabefelder die gewünschten Daten ein.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Werte müssen ≥ 0 sein.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="12. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Einstellungen für die Berechnung der ÖV-Kenngrößen sind vorgenommen.</p>
+    </body>
+</html>

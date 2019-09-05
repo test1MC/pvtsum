@@ -1,0 +1,1584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="624" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.Complete" MadCap:ignoredWords="ABSTRACT;NETWORK;ABSTRACTNETWORKMODEL;VERSNO;FROMTIME;TOTIME;LEFTHANDTRAFFIC;VEHTYPES;VEHTYPE;VEHCLASSES;XmlAnmVehClass;NODES;ZONES;LINKTYPES;PTSTOPS;PTLINES;SIGNALCONTROLS;VEHTYPEID;VEHCLASS;NO;VEHCATEGORY;XCOORD;YCOORD;ZCOORD;CONTROLTYPE;IGNOREDIFF;NUMLANES;TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1252097">
+            </a>Beschreibung der beim ANM-Import erzeugten Daten</h3>
+        <p class="Text">
+            <MadCap:keyword term="Abstrahiertes Netzmodell:Hinweise zu importierten Daten" />ANM-Dateien können nur in ein leeres Netz eingelesen werden. ÖV-Daten können derzeit nicht eingelesen werden.</p>
+        <p class="Text">Die folgende Beschreibung zeigt, welche Netzdaten in <MadCap:variable name="PTV_Manual.Programmname" /> beim Import von ANM-Daten gespeichert werden.</p>
+        <h5 MadCap:autonum="">ABSTRACT NETWORK MODEL</h5>
+        <p class="Text">Eine Datei <span class="path">*.anm</span> enthält das übergeordnete XML-Element &lt;ABSTRACTNETWORKMODEL&gt;. Folgende Elemente werden daraus in <MadCap:variable name="PTV_Manual.Programmname" /> übernommen.</p>
+        <table class="TableStyle-gui_elements1" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="132px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="365px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VERSNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FROMTIME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TOTIME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Name in Datei-Info</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Im Menü <span class="gui_element">Datei&#160;&gt; Datei-Info</span> finden Sie nach einem ANM-Import den Namen und den Pfad der eingelesenen Datei, sowie Datum und Zeitpunkt des Imports.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NETWORK</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Das untergeordnete Element &lt;NETWORK&gt; enthält u.&#160;a. Informationen zu Verkehrssystemen, Knoten, Bezirken, Strecken und Streckentypen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MATRICES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">ROUTING</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Das untergeordnete Element &lt;ROUTING&gt; enthält Informationen zu Routen und Belastungen. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">NETWORK</h5>
+        <p class="Text">Eine Datei <span class="path">*.anm</span> enthält das übergeordnete XML-Element &lt;NETWORK&gt;. </p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="132px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="365px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">LEFTHANDTRAFFIC</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Linksverkehr in Netzeinstellungen</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Innerhalb des Elements &lt;NETWORK&gt; befinden sich folgende untergeordnete Elemente. Die Abbildung der untergeordneten Elemente auf <MadCap:variable name="PTV_Manual.Programmname" />-Objekte wird anschließend detailliert beschrieben.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VEHTYPES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Legen den Typ des Verkehrssystems (ÖV, IV) fest. Jeder VEHTYPE wird auf ein Nachfragesegment abgebildet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">VEHCLASSES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Liste von XmlAnmVehClass-Objekten. Jedes wird auf ein Verkehrssystem abgebildet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NODES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Werden auf Knoten abgebildet</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ZONES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Werden auf Bezirke abgebildet</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LINKTYPES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Werden auf Streckentypen abgebildet</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LINKS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Werden auf Strecken abgebildet</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">PTSTOPS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">PTLINES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">SIGNALCONTROLS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Werden auf Signalanlagen abgebildet</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">VEHCLASSES</h5>
+        <p class="Text">Die &lt;VEHCLASSES&gt; werden wie folgt abgebildet:</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">VEHTYPEID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Code und Name des Verkehrssystems</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Zu einer VEHCLASS können mehrere VEHTYPES gehören. Für jede VEHCLASS wird in <MadCap:variable name="PTV_Manual.Programmname" /> ein Verkehrssystem und ein Modus angelegt, für jeden VEHTYPE ein Nachfragesegment. Das Verkehrssystem wird dem Modus mit identischem Namen zugeordnet und der Modus wird allen Nachfragesegmenten der VEHTYPES in dieser VEHCLASS zugeordnet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">VEHTYPES</h5>
+        <p class="Text">Die &lt;VEHTYPES&gt; werden wie folgt abgebildet:</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">--- </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Code und Name des Nachfragesegments</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">VEHCATEGORY</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Typ des Verkehrssystems (der korrespondierenden VEHCLASS)</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wenn der erste VEHTYPE einer VEHCLASS Bus oder Tram ist, wird die komplette VEHCLASS als ÖV abgebildet, die Kategorien aller weiteren VEHTYPES dieser VEHCLASS werden nicht berücksichtigt. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">NODES</h5>
+        <p class="Text">Die &lt;NODES&gt; werden wie folgt abgebildet:</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Es werden keine Oberknoten eingefügt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Nummer des Knotens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Name des Knotens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">XCOORD, YCOORD, ZCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Koordinaten des Knotens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CONTROLTYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Steuerungstyp des Knotens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">IGNOREDIFF</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NUMLANES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Beim Steuerungstyp Kreisverkehr Anzahl der Fahrstreifen im Kreisverkehr</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TURNS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LANES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrstreifen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LANETURNS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Fahrstreifenabbieger</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">CROSSWALKS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Furten</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">LANES</h5>
+        <p class="Text">Die Fahrstreifeninformation eines Arms muss konsistent sein. Die Anzahl der Durchgangsfahrstreifen muss die gleiche sein wie die <span class="gui_element">Anzahl Fahrstreifen</span> in <MadCap:variable name="PTV_Manual.Programmname" />. </p>
+        <p class="Text">Die &lt;LANES&gt; sind ein Element der &lt;NODES&gt;. Sie werden wie folgt abgebildet:</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LINKID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Streckennummer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">INDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrstreifen-Nummern</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">POCKET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Legt fest, ob es sich um eine Aufweitung handelt</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Handelt es sich um eine Aufweitung, muss der zugehörige Quell-Fahrstreifen auf einer der Seiten der Aufweitung liegen. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">POCKETLENGTH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt die Länge der Aufweitung an</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">WIDTH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Breite</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 15;padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText" style="mc-hyphenate-shortest-prefix: 12;">BLOCKEDVEHICLECLASSES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Menge der auf diesem Fahrstreifen gesperrten Verkehrssysteme</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">STOPLINEPOS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Arm\Haltelinien-Position</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Das Armattribut stellt in <MadCap:variable name="PTV_Manual.Programmname" /> den Durchschnitt der Werte aller Eingangsfahrstreifen dar.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TRAFFICSIGN</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Legen den Hauptstrom des Knotens fest</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Sind die Verkehrszeichen eines Knotens konsistent, wird ein manueller Hauptstrom an dem Knoten definiert. </p>
+                        <p class="CellText">Sind an einem Knoten Fahrstreifen definiert, überschreiben die Informationen der Verkehrszeichen der Fahrstreifen die Informationen an den Abbiegern.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">DETECTORS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Detektoren, die dem Fahrstreifen zugeordnet sind</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">DETECTORS</h5>
+        <p class="Text">In ANM-Dateien können Detektoren Furten, Fahrstreifenabbiegern und Fahrstreifen zugeordnet sein. In <MadCap:variable name="PTV_Manual.Programmname" /> können Detektoren und Fahrstreifenabbieger nicht direkt verbunden werden. Hier sind Detektoren Furten oder Fahrstreifen zugeordnet. Einer Furt kann nur ein Detektor zugeordnet sein. Ein Fahrstreifen kann mehrere Detektoren haben. Wird eine Furt mit mehreren Detektoren eingelesen, wird nur der erste Detektor eingelesen.</p>
+        <p class="Text">Die &lt;DETECTORS&gt; sind ein untergeordnetes Element der &lt;LANES&gt;. Sie werden wie folgt abgebildet:</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Typ des Detektors</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SCNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Nummer der Signalanlage</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">PORTNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Kanal-Nummer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Name des Detektors</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">POSOFFSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Haltlinien-Abstand</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LENGTH </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Länge des Detektors</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">AFFECTEDPTLINES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2" style="padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">AFFECTEDVEHCLASSES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Verkehrssystemset des Detektors</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">LANETURNS</h5>
+        <p class="Text">Die &lt;LANETURNS&gt; sind ein Element der &lt;NODES&gt;. Sie werden wie folgt abgebildet:</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FROMLINKID, FROMLANEINDEX, TOLINK-ID, TOLANEINDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Von-Strecken-Nummer, Von-Fahrstreifen-Nummer, Nach-Strecken-Nummer und Nach-Fahrstreifen-Nummer des Fahrstreifenabbiegers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2" style="padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">BLOCKEDVEHCLASSES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Menge der auf diesem Fahrstreifenabbieger gesperrten Verkehrssysteme</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LANETURNPOLY</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">DETECTORS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Detektoren an Fahrstreifenabbiegern werden nicht eingelesen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SCNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Nummer der Signalanlage, der die Signalgruppe unter &lt;SGNO&gt; zugeordnet ist</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Nummer muss für alle Fahrstreifenabbieger und Furten eines Knoten die gleiche sein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SGNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Signalgruppennummer</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Signalgruppe gehört zu der Signalanlage des Fahrstreifenabbiegers.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ORSGNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Nummer einer weiteren Signalgruppe</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">SIGNALTYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">CROSSWALKS</h5>
+        <p class="Text">Die Furten in <MadCap:variable name="PTV_Manual.Programmname" /> werden aus den zwei ANM-Klassen &lt;CROSSWALK&gt; und &lt;CROSSWALKSIDE&gt; eingelesen. In <MadCap:variable name="PTV_Manual.Programmname" /> ist eine Furt definiert durch den Arm, zu dem sie gehört, durch die Richtung, und einen Index von 1 bis 3. Es kann daher maximal sechs Furten an einem Arm geben.</p>
+        <p class="Text">Eine &lt;CROSSWALKSIDE&gt; auf der linken Seite wird in <MadCap:variable name="PTV_Manual.Programmname" /> auf eine Furt mit der Richtung „false” abgebildet. Auf der rechten Seite erhält sie den Wert „true”.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Da es in <MadCap:variable name="PTV_Manual.Programmname" /> nur eine Furt je Typ geben kann, also insgesamt sechs, werden möglicherweise ANM-Daten zu Furten beim Import verworfen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die &lt;CROSSWALKS&gt; sind ein Element der &lt;NODES&gt;. Sie werden wie folgt abgebildet:</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LEFTSIDE, RIGHTSIDE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Hinweise auf die Richtungen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">INLINKID, OUTLINKID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Nummern der Strecken über die die Furt führt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1" style="padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">CHANNELIZEDTURN</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt an, ob die Furt zu einer Dreiecksinsel führt</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der Wert kann nur „true” sein, wenn Arm\Dreiecksinsel-Länge des zugehörigen Arms ungleich null ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SCNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Beschreibt die Signalanlage, die dem Knoten zugeordnet ist. Die SCNO muss für alle Fahrstreifenabbieger und Furten an dem Knoten gleich sein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">INDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">WIDTH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Breite</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wenn es Hinweise auf LEFTSIDE oder RIGHTSIDE gibt, entspricht die Breite jeder der zwei Furten der Hälfte der ANM-Breite.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">OFFSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">CROSSWALKSIDES </h5>
+        <p class="Text">Die &lt;CROSSWALKSIDES&gt; geben die Richtung der Furten an. ANM-Furten haben zwei Richtungen.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">DETECTORS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">zugeordneter Detektor</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SGNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Signalgruppe</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">PEDVOL</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Fußgänger-Belastung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">BIKEVOL</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">XCOORD, YCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">TURNS</h5>
+        <p class="Text">Die &lt;TURNS&gt; sind ein untergeordnetes Element der &lt;NODES&gt;. Die &lt;TURNS&gt; werden wie folgt abgebildet: </p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">BLOCKEDVEHICLECLASSES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Menge der auf diesem Abbieger gesperrten Verkehrssysteme</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FROMLINKID, TOLINK-ID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Von-Strecken-Nummer und Nach-Strecken-Nummer des Abbiegers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">TRAFFICSIGN</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Legen den Hauptstrom des Knotens fest</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Sind die Verkehrszeichen eines Knotens konsistent, wird ein manueller Hauptstrom an dem Knoten definiert. </p>
+                        <p class="CellText">Sind an einem Knoten Fahrstreifen definiert, überschreiben die Informationen der Verkehrszeichen der Fahrstreifen die Informationen an den Abbiegern.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">ZONES</h5>
+        <p class="Text">Die &lt;ZONES&gt; sind ein untergeordnetes Element der &lt;NODES&gt;. Sie werden 1:1 als Bezirke abgebildet. Da ANM-Bezirke kein Polygon haben, haben auch die Bezirke in <MadCap:variable name="PTV_Manual.Programmname" /> kein Polygon. </p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Nummer des Bezirks</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">XCOORD, YCOORD, ZCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Koordinaten des Bezirks</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Z-Koordinaten werden nicht übernommen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">CONNECTORS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Anbindungen des Bezirks</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">CONNECTORS</h5>
+        <p class="Text">Die &lt;CONNECTORS&gt; sind ein untergeordnetes Element der &lt;ZONES&gt;. Sie werden wie folgt abgebildet:</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">BLOCKEDVEHCLASSES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Menge der auf diesem Anbindung gesperrten Verkehrssysteme</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Knotennummer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">DIRECTION</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Richtung</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Richtung gibt an, ob die Anbindung vom Bezirk weg oder zum Bezirk hin führt. „False” bedeutet Quellanbindung, „true” bedeutet Zielanbindung. In <MadCap:variable name="PTV_Manual.Programmname" /> hat eine Anbindung automatisch eine Rückrichtung. Gibt es keine Rückrichtung in ANM, ist die Rückrichtung in <MadCap:variable name="PTV_Manual.Programmname" /> für alle Verkehrssysteme gesperrt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">LINKTYPES</h5>
+        <p class="Text">Die &lt;LINKTYPES&gt; sind ein untergeordnetes Element der &lt;NODES&gt;. Das Streckentypen-Set in <MadCap:variable name="PTV_Manual.Programmname" /> wird durch den Import nicht verändert. Lediglich die Namen der Streckentypen werden übernommen.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Streckentyp-Nummer</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der ANM-Streckentyp 0 wird beim Import zum Streckentyp 100 in <MadCap:variable name="PTV_Manual.Programmname" />.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Streckentyp-Name</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1" style="padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">DRIVINGBEHAVIOUR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">LINKS</h5>
+        <p class="Text">Die &lt;LINKS&gt; sind ein untergeordnetes Element der &lt;NODES&gt;. Sie werden wie folgt abgebildet:</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Streckennummer</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">
+                            <MadCap:variable name="PTV_Manual.Programmname" /> versucht eine passende Streckennummer zu finden. Diese kann ein beliebiger String sein. Wurde die ANM-Datei aus <MadCap:variable name="PTV_Manual.Programmname" /> exportiert, können die ursprünglichen Nummern wieder zugeordnet werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FROMNODENO, TONODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Von-Knoten-Nummer, Nach-Knoten-Nummer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Name der Strecke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LINKTYPENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Streckentyp-Nummer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SPEED</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">v0 IV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NUMLANES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl Fahrstreifen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">REVERSELINK</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">---</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Rückrichtung wird in <MadCap:variable name="PTV_Manual.Programmname" /> automatisch eingefügt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">BLOCKEDVEHCLASSES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Menge der auf dieser Strecke gesperrten Verkehrssysteme</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LINKPOLY</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Verlauf der Strecke</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der Streckenverlauf der Hin- und der Rückrichtung kann in ANM voneinander abweichen, in <MadCap:variable name="PTV_Manual.Programmname" /> jedoch nicht. Haben beide Verläufe die gleiche Anzahl Elemente, ergibt sich der Verlauf aus dem Mittelwert. Ist die Anzahl der Elemente ungleich, wird der Verlauf mit der höheren Anzahl verwendet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TURNONRED</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Abbiegen bei Rot erlaubt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 11;padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">TRIANGLEISLANDLENGTH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wird auf den Eingangsarm des Knotens der zugehörigen Strecke abgebildet. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Das Attribut <span class="gui_element">Dreiecksinsel-Länge</span> ist in <MadCap:variable name="PTV_Manual.Programmname" /> am Arm definiert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SLO, ELO, SLOL, ELOL</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Diese Nummern legen die Breite und Länge der Mittelinsel in <MadCap:variable name="PTV_Manual.Programmname" /> fest.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">SLO und ELO geben die Breite an, SLOL und ELOL die Länge.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CLO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FROMNODERADIUS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Kreisverkehrs-Ausgangsradius des Arms am Von-Knoten</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Das Attribut ist in <MadCap:variable name="PTV_Manual.Programmname" /> am Arm definiert. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">TONODERADIUS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Kreisverkehrs-Ausgangsradius des Arms am Nach-Knoten</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Das Attribut ist in <MadCap:variable name="PTV_Manual.Programmname" /> am Arm definiert. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">PTSTOPS und PTLINES</h5>
+        <p class="Text">ÖV-Daten werden derzeit nicht importiert.</p>
+        <h5 MadCap:autonum="">SIGNALCONTROLS</h5>
+        <p class="Text">Die &lt;SIGNALCONTROLS&gt; werden als Signalanlagen abgebildet. Sie werden wie folgt abgebildet:</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SIGNALGROUPS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Signalgruppen der Signalanlage</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">INTERGREENS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Zwischenzeiten der Signalanlage</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Nummer der Signalanlage</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Name der Signalanlage</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CYCLETIME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Umlaufzeit der Signalanlage</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TIMEOFFSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Versatz der Signalanlage</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1" style="padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">SIGNALIZATIONTYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Signalisierungstyp der Signalanlage</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der Typ wird dem ANM-Attribut <span class="gui_element">Programfile</span> entnommen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CYCLETIMEFIXED</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">PROGRAMNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Programmnummer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">PROGRAMFILE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Dient der Bestimmung des Signalisierungstyps in <MadCap:variable name="PTV_Manual.Programmname" /></p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Nur die Signalisierungstypen Festzeit, RBC und extern werden unterstützt. Enthält das Attribut keinen Wert, wird der Signalisierungstyp in <MadCap:variable name="PTV_Manual.Programmname" /> auf signalgruppenbasiert gesetzt. Andernfalls wird der Typ extern vergeben. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SUPPLYFILE1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Dateiname</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SUPPLYFILE2, §</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">WTT1, 2, 3</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">SIGNALGROUPS</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Nummer der Signalgruppe</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Name der Signalgruppe</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">GTSTART</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Grünzeitanfang</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">GTSTART2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">GTEND</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Grünzeitende</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">GTEND2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">RATIME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ATIME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">MINGTIME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Mindestgrünzeit</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MINRTIME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ALLRED</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Allred</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">SIGNALGROUPTYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">INTERGREENS</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FROMSGNO, TOSGNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Von-Signalgruppe, Nach-Signalgruppe</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">INTERGREEN</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Zwischenzeit</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der Wert wird in die Zwischenzeitmatrix der Signalanlage eingefügt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">ROUTING</h5>
+        <p class="Text">Enthält die ANM-Datei Routing-Informationen, wird von drei Knoten je Route ausgegangen. Diese Knoten legen in <MadCap:variable name="PTV_Manual.Programmname" /> einen Abbieger fest. In <MadCap:variable name="PTV_Manual.Programmname" /> werden keine Routen eingefügt. Stattdessen werden die Belastungen in benutzerdefinierten Abbiegerattributen je Fahrzeugtyp gespeichert. </p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VEHTYPETIS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Verbindet ein Zeitintervall mit einer ANM-VEHTYPEID</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Eine ANM-VEHTYPEID ist ein Element einer ANM-VEHCLASS, die in <MadCap:variable name="PTV_Manual.Programmname" /> auf ein Verkehrssystem abgebildet wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">ROUTES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Belastungen am Abbieger je VSys</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">VEHTYPETIS</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">INDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FROMTIME, TOTIME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">VEHTYPEID</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Bestimmt das Verkehrssystem der Route</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">ROUTES</h5>
+        <p class="Text">Der Import funktioniert nur für Routen mit genau drei Elementen. Die ANM-Knoten, auf die die Elemente verweisen, müssen <MadCap:variable name="PTV_Manual.Programmname" />-Knoten zugeordnet sein, die eindeutig einen <MadCap:variable name="PTV_Manual.Programmname" />-Abbieger definieren. Das heißt, der erste und der dritte Knoten müssen neben dem zweiten Knoten liegen.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="370px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">ANM</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ITEMS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Paar aus einem Knoten und einer optionalen Strecke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">DEMANDS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Können für jedes <MadCap:variable name="PTV_Manual.Programmname" />-Verkehrssystem definiert sein. Sie werden auf benutzerdefinierte <MadCap:variable name="PTV_Manual.Programmname" />-Abbiegerattribute abgebildet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FROMZONENO, TOZONENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">INDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">---</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

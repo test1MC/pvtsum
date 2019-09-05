@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="586" MadCap:lastWidth="510" MadCap:ignoredWords="Nr;No;xls;v0;way;stop;0s;angeb;en">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_netz_bearbeiten_23091886_1141322">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_37762">
+            </a>Netz prüfen<a name="27031"></a></h3>
+        <p class="Text">Sie können die Konsistenz Ihres Netzmodells überprüfen.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">
+            <MadCap:keyword term="Netz: prüfen" />
+            <MadCap:keyword term="Netz: Fehler finden" />Wählen Sie im Menü <span class="gui_element">Rechnen</span> den Eintrag <span class="gui_element">Netz prüfen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Netz prüfen</span> öffnet sich.</p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_network_check.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie aus, worauf Sie das Netz untersuchen möchten.</p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="149px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="328px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td colspan="2" class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bereich <span class="gui_element">Allgemein</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Isolierte Knoten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Option prüft, ob das Netz Knoten enthält, die mit keiner Strecke verbunden sind.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese sind für das Modell bedeutungslos und können gelöscht werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Sinnlose Abbieger und Oberabbieger</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Die Option prüft, ob das Netz Abbieger oder Oberabbieger enthält, die für ein Verkehrssystem geöffnet sind, obwohl dieses für die Von- oder Nach-Strecke gesperrt ist.</p>
+                        <p class="CellText">Sie können die Verkehrssysteme für die Prüfung über die Schaltfläche <span class="gui_element">Relevante Verkehrssysteme</span> in einem separaten Fenster auswählen. Die Schaltfläche wird mit den ausgewählten Verkehrssystemen beschriftet.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Nur IV- und ÖV-Verkehrssysteme stehen zur Auswahl, keine ÖV-Fuß-Verkehrssysteme.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1" style="mc-hyphenate-shortest-prefix: 7;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Mehrfache Geradeaus-Abbieger und -Oberabbieger </span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Die Option prüft, ob das Netz Knoten enthält, die pro Zufahrt mehr als einen Abbieger oder Oberabbieger des Typs Geradeaus aufweisen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option funktioniert nicht, wenn im Menü <span class="gui_element">Netz &gt; Netzeinstellungen &gt; Netzobjekte &gt; Abbiegertypen</span> die Option<span class="gui_element"> Belegung nur entsprechend dem Winkel des einzelnen Abbiegers </span>ausgewählt ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="351px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td colspan="2" class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bereich <span class="gui_element">IV</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nicht für IV angebundene Bezirke</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Option prüft, ob das Netz Bezirke ohne IV-Anbindung ans Netz enthält. Dazu wird untersucht, ob Anbindungen vorhanden und für IV-Verkehrssysteme geöffnet sind. Bei Bezirken mit prozentualer Verkehrsaufteilung werden auch die Anbindungsanteile untersucht. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 11;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Netzzusammenhang prüfen </span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Die Option prüft, ob zwischen Paaren von Objekten ein durchgängiger Weg für die getroffene Verkehrssystemauswahl besteht.</p>
+                        <p class="CellText">Über die Auswahlliste stellen Sie ein, für welche Paare von Objekten die Prüfung durchgeführt werden soll.</p>
+                        <ul>
+                            <LI class="List0Tab">Paare von Bezirken (<span class="gui_element">alle Bezirke</span>)</LI>
+                            <LI class="List0Tab">Paare von Knoten, die an verschiedene Bezirke angebunden sind (<span class="gui_element">alle Anbindungsknoten</span>)</LI>
+                            <LI class="List0Tab">Paare von Bezirken ohne Anbindungsgewichte oder mit Anbindungsgewichten für den gesamten Quell/Zielverkehr, oder Paare von Knoten, die an ein Bezirk angebunden sind mit Anbindungsgewichten für jede einzelne Relation (<span class="gui_element">alle Anbindungen mit Gewicht &gt; 0</span>)</LI>
+                        </ul>
+                        <p class="CellText">Sie können die Verkehrssysteme für die Prüfung über die Schaltfläche <span class="gui_element">Relevante Verkehrssysteme</span> in einem separaten Fenster auswählen. Die Schaltfläche wird mit den ausgewählten Verkehrssystemen beschriftet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Sackgassen IV</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Option prüft, ob das Netz für die getroffene Verkehrssystemauswahl nicht angebundene Sackgassen ohne U-Turn oder ohne Gegenrichtung enthält.</p>
+                        <p class="CellText">Sie können die Verkehrssysteme für die Prüfung über die Schaltfläche <span class="gui_element">Relevante Verkehrssysteme</span> in einem separaten Fenster auswählen. Die Schaltfläche wird mit den ausgewählten Verkehrssystemen beschriftet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Strecken ohne Nachfolger</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Die Option prüft, ob das Netz nicht angebundene Strecken enthält, deren Nachfolger-Strecken für die getroffene Verkehrssystemauswahl gesperrt sind.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Hierbei handelt es sich um Strecken, für die zwar eine nachfolgende Strecke existiert, bei denen aber am Endknoten die Abbieger oder die nachfolgende Strecke nicht für das Verkehrssystem zugelassen ist. Diese Strecken sollten geprüft und nachbearbeitet werden.</p>
+                        <p class="CellText">Sie können die Verkehrssysteme für die Prüfung über die Schaltfläche <span class="gui_element">Relevante Verkehrssysteme</span> in einem separaten Fenster auswählen. Die Schaltfläche wird mit den ausgewählten Verkehrssystemen beschriftet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Strecken mit Kapazität IV&#160;=&#160;0 oder v0&#160;=&#160;0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Option prüft, ob das Netz offene IV-Strecken enthält, deren Kapazität IV = 0 ist, oder deren Geschwindigkeit v0 = 0 ist. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Solche Strecken wirken wie gesperrte Strecken, so dass bei der Umlegung kein Verkehr über sie fließen kann.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Tauglichkeit für ICA</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Die Option prüft, ob das Netz Knoten oder Oberknoten vom Typ vorfahrtsgeregelt, signalisiert oder All way stop enthält, die für eine ICA-Berechnung nicht korrekt modelliert sind. Außerdem wird geprüft, ob die Gründauer einer Signalgruppe null ist und ob für alle externen LSAs Dateien vorhanden sind.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Teilknoten von Oberknoten werden nicht überprüft. Es werden nur solche Knoten und Oberknoten überprüft, für die ICA als Methode zur Widerstandsberechnung ausgewählt ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Knotengeometrien prüfen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Die Option prüft, ob das Netz Fahrstreifenabbieger mit gesperrten Ein- oder Ausfahrstreifen enthält oder Eingangsfahrstreifen mit Verkehrssystemen ohne Abbiegemöglichkeiten.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="147px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="329px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td colspan="2" class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bereich <span class="gui_element">ÖV</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nicht für ÖV angebundene Bezirke</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Option prüft, ob das Netz Bezirke ohne ÖV-Anbindung ans Netz enthält. Dazu wird untersucht, ob Anbindungen vorhanden und für ÖV-Verkehrssysteme geöffnet sind. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Bei Bezirken mit prozentualer Verkehrsaufteilung werden auch die Anbindungsanteile untersucht.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Strecken mit ÖV-Fuß-Zeit&#160;=&#160;0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Die Option prüft, ob das Netz ÖV-Fußwege enthält, deren Zeit null ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Strecken mit ÖV-Zusatz-Zeit&#160;=&#160;0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Option prüft, ob das Netz ÖV-Zusatz-Verkehrssysteme enthält, deren Streckenzeit null ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Strecken mit ÖV-Fahrzeit&#160;=&#160;0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Die Option prüft, ob das Netz Strecken enthält, deren ÖV-Fahrzeit null ist, d.&#160;h. Strecken, die von einer Linienroute eines bestimmten Verkehrssystems überfahren werden, deren Strecken-Fahrzeit für das Verkehrssystem 0s beträgt und deren Länge oder Streckentyp-Geschwindigkeit für das Verkehrssystem ebenfalls null beträgt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Von einer Linienroute mehrfach überfahrene Strecken</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Option prüft, ob das Netz Strecken enthält, die von derselben Linienroute in derselben Richtung mehrfach überfahren werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 15;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Fahrzeugkombinationen ohne Fahrzeugeinheit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Die Option prüft, ob das Netz Fahrzeugkombinationen enthält, denen keine Fahrzeugeinheiten zugeordnet sind.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Inkonsistente Kopplungen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Option prüft, ob das Netz Kopplungen enthält, die nicht konsistent sind. Das sind Kopplungen, deren Verkehrstage sich nicht überlappen. Wenn etwa eine Fahrplanfahrt montags bis freitags verkehrt und die gekoppelte Fahrplanfahrt nur am Wochenende, dann hat die Kopplung keine Wirkung.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Haltestellenbereiche mit gleichem Knoten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Die Option prüft, ob das Netz Haltestellenbereichen derselben Haltestelle enthält, die einen gemeinsamen Zugangsknoten besitzen und dadurch direkte Umstiege in Zeit null ermöglichen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 10;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">ÖV-Anbindungsknoten ohne Haltestellenbereich</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Option prüft, ob das Netz ÖV-Anbindungen enthält, die zu Knoten führen, an denen kein Haltestellenbereich liegt.</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Diesen Prüfvorgang sollten Sie ausführen, wenn Sie im Menü <span class="gui_element">Rechnen&#160;&gt; Allgemeine Verfahrenseinstellungen&#160;&gt;</span> Eintrag <span class="gui_element">ÖV-Einstellungen&#160;&gt;</span> Eintrag <span class="gui_element">Umlegung</span> für die Option <span class="gui_element">Fußwege von und zu Anbindungen</span> den Eintrag <span class="gui_element">Ein-/Aussteigen am angeb. Knoten erzwingen</span> ausgewählt haben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">ÖV-Anbindungsknoten ohne Linien</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Die Option prüft, ob das Netz ÖV-Anbindungen enthält, die zu Knoten führen, an deren Haltestellenbereich(en) keine Linien verkehren, weil an keinem Haltepunkt der Ein- oder Ausstieg erlaubt ist.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Liegt am Anbindungsknoten kein Haltestellenbereich oder verkehrt dort keine Linie, nutzen Fahrgäste nach oder vor der Anbindung Fußwegstrecken.</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Diesen Prüfvorgang sollten Sie ausführen, wenn Sie im Menü <span class="gui_element">Rechnen&#160;&gt; Allgemeine Verfahrenseinstellungen&#160;&gt;</span> Eintrag <span class="gui_element">ÖV-Einstellungen&#160;&gt;</span> Eintrag <span class="gui_element">Umlegung</span> für die Option <span class="gui_element">Fußwege von und zu Anbindungen</span> den Eintrag <span class="gui_element">Ein-/Aussteigen am angeb. Knoten erzwingen</span> ausgewählt haben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Zwangsbindungen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Option prüft, ob das Netz ungültige Zwangsbindungen enthält, bei denen Quell- oder Ziel-Fahrplanfahrtabschnitt am geplanten Kalendertag nicht verkehren, oder bei denen der Ziel-Fahrplanfahrtabschnitt am selben Kalendertag mehrfach verwendet wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Linien ohne Tarifsystem</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Die Option prüft, ob das Netz Linien enthält, die in keinem Tarifsystem verkehren.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="476px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Über die Schaltflächen <span class="gui_element">Alle an</span> und <span class="gui_element">Alle aus</span> können Sie alle Prüfoptionen gleichzeitig auswählen oder ausschalten.</p>
+                        <p class="Text">Sie können eine Kurzinformation zu einer Prüfoption in einer Quickinfo anzeigen, indem Sie mit dem Mauszeiger auf die jeweilige Schaltfläche <img src="../Resources/Images_4_all/ICO_question_mark_small.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 002898px;margin-bottom: 0, 9901417px;" /> zeigen. Sie können die Kurzinformation auch durch Mausklick auf diese Schaltfläche in einem separaten Fenster aufrufen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Tests ausführen</span>.</p>
+        <p class="Result">Der Prüfvorgang wird ausgeführt. Hinter jeder Prüfoption wird eine Schaltfläche angezeigt, über die Sie das Prüfergebnis aufrufen können <MadCap:xref class="sieheUeberschrSeite" href="Prüfergebnis_anzeigen_und_Fehler_beheben.htm#2_netz_bearbeiten_23091886_1141471"><span style="color: Black;" class="mcFormatColor">(</span><u>Prüfergebnis anzeigen und Fehler beheben</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_network_check_result.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 0, 9997691px;" />
+        </p>
+    </body>
+</html>

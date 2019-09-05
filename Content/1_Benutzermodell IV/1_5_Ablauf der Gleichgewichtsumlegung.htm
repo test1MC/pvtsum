@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="690" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="ij;ijr;max;rel">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1132719">
+            </a>Ablauf der Gleichgewichtsumlegung</h3>
+        <p class="Text">
+            <MadCap:keyword term="Gleichgewichtsumlegung: Ablauf" />Die Berechnung des Gleichgewichtszustands kann als Optimierungsproblem mit konvexer Zielfunktion und linearen Nebenbedingungen folgendermaßen formuliert werden:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_166.jpg" />
+        </p>
+        <p class="Text">Dabei gilt Folgendes:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">E</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Menge aller Kanten im Netz und <span class="formula">a</span> eine dieser Kanten</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">q</span>
+                            <span class="formula_subscript">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Belastung von Objekt <span class="formula">a</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">R</span>
+                            <span class="formula_subscript">a</span>(<span class="formula">x</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Widerstand von Objekt <span class="formula">a</span> bei Belastung<span class="formula"> x</span> (monoton steigend in <span class="formula">x</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">q</span>
+                            <span class="formula_subscript">ij</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">gesamte Nachfrage (Anzahl Fahrten) von Bezirk <span class="formula">i</span> nach Bezirk <span class="formula">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">q</span>
+                            <span class="formula_subscript">ijr</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Belastung der Route <span class="formula">r</span> von Bezirk <span class="formula">i </span>nach Bezirk <span class="formula">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">P</span>
+                            <span class="formula_subscript">ijr</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Route <span class="formula">r</span> von Bezirk <span class="formula">i </span>nach Bezirk <span class="formula">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">E</span>
+                            <span class="formula_superscript">+</span>
+                            <span class="formula_subscript">u</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Menge der eingehenden Kanten an Knoten <span class="formula">u</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">E</span>
+                            <span class="formula_superscript">-</span>
+                            <span class="formula_subscript">u</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Menge der ausgehenden Kanten an Knoten <span class="formula">u</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">D</span>
+                            <span class="formula_subscript">u</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Zielverkehr von Knoten <span class="formula">u</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">O</span>
+                            <span class="formula_subscript">u</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Quellverkehr von Knoten <span class="formula">u</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Kanten sind in <MadCap:variable name="PTV_Manual.Programmname" /> alle Strecken, Abbieger und Anbindungen, Knoten sind Bezirke und Netzknoten.</p>
+        <p class="Text">Die Zielfunktion drückt aus, dass die Summe der Widerstände aller Kanten minimiert wird. Die Nebenbedingungen besagen Folgendes (von oben nach unten):</p>
+        <ul>
+            <LI class="List0">Alle Wegebelastungen müssen positiv sein.</LI>
+            <LI class="List0">Die Belastungen aller Wege von Bezirk <span class="formula">i </span>nach <span class="formula">j</span> müssen sich zur Gesamtnachfrage von <span class="formula">i</span> nach <span class="formula">j</span> addieren.</LI>
+            <LI class="List0">Die Belastung einer Kante ergibt sich als Summe der Belastungen aller Wege, die diese Kante enthalten.</LI>
+            <LI class="List0">An jedem Knoten gilt Flusserhaltung. Wenn ein Knoten einem Bezirk entspricht, muss die Differenz zwischen den Belastungen aller eingehenden Kanten und den Belastungen aller ausgehenden Kanten exakt der Differenz zwischen dem Ziel- und Quellverkehr entsprechen. An Netzknoten gibt es keinen Quell- und Zielverkehr, folglich muss die Differenz null sein.</LI>
+        </ul>
+        <p class="Text">Das Optimierungsproblem wird wegen der nichtlinearen Zielfunktion nicht direkt, sondern iterativ gelöst, wobei wegen der Monotonie der Widerstandsfunktion das Minimum dadurch erreicht wird, dass ausgehend von einer Startlösung Belastung zwischen den alternativen Wegen einer Fahrtbeziehung<span class="formula"> i-j </span>verlagert wird, sodass auf den Wegen gleicher Widerstand herrscht.</p>
+        <p class="Text">Während der Gleichgewichtsumlegung werden die in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1558114">Abbildung 1</MadCap:xref> gezeigten Schritte durchlaufen.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Flow_Equilibrium.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000028px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1558114">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_81238">
+            </a>Ablauf Gleichgewichtsumlegung</p>
+        <p class="Text">Ausgehend von einem Umlegungsergebnis aus einer zuvor berechneten Umlegung oder einer Sukzessivumlegung (standardmäßig) als Startlösung, wird der Gleichgewichtszustand in einer mehrstufigen Iteration hergestellt. Im inneren Iterationsteilschritt werden paarweise je zwei Routen einer Beziehung durch Verlagern von Fahrzeugen ins Gleichgewicht gebracht. Diese Iterationsteilschritte werden für alle Beziehungen so lange durchgeführt, bis alle Beziehungen im Gleichgewicht sind. Jede Verlagerung von Fahrzeugen von einer Route auf eine andere Route wirkt sich sofort auf die Widerstände der überfahrenen Netzobjekte aus. </p>
+        <p class="Text">In der äußeren Iteration wird überprüft, ob aufgrund des aktuellen Netzzustands neue Routen mit geringeren Widerständen gefunden werden können. Ist das für mindestens eine Beziehung der Fall, muss wieder ein Netzausgleich berechnet werden. </p>
+        <p class="Text">Daraus ergibt sich folgende Abbruchbedingung. Der Netzausgleich ist erreicht, wenn im inneren Iterationsteilschritt keine Verlagerung von Fahrzeugen erforderlich war und anschließend in der äußeren Iteration keine neuen Wege gefunden wurden.</p>
+        <p class="Text">Auch das Konvergenzkriterium <span class="gui_element">Gap</span> kann als Abbruchkriterium fungieren.</p>
+        <h5>Netzausgleich</h5>
+        <p class="Text">Der Ablauf des Netzausgleichs wird in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1132788">Abbildung 2</MadCap:xref> dargestellt.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Flow_Equilibrium_Balancing.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000028px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1132788">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_18960">
+            </a>Ablauf des Netzausgleichs einer Verkehrsbeziehung bei der Gleichgewichtsumlegung</p>
+        <h5>Abbruchkriterium</h5>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> bricht den Iterationsprozess zur Ermittlung des Gleichgewichts ab, wenn eine der folgenden Bedingungen erfüllt ist:</p>
+        <ul>
+            <LI class="List0">Der Netzausgleich ist erreicht, das heißt eine zulässige Abweichung der Widerstände der paarweise verglichenen Routen wurde erreicht oder unterboten.</LI>
+            <LI class="List0">Die angegebene Anzahl äußerer Iterationen wurde erreicht, ohne dass ein Netzausgleich erzielt wurde (bei sehr stark überlasteten Netzen kann es vorkommen, dass mit den eingestellten zulässigen Abweichungen kein Gleichgewichtszustand erreicht werden kann).</LI>
+            <LI class="List0">Das Konvergenzkriterium <span class="gui_element">max. Gap</span> wird erreicht oder unterboten.</LI>
+            <LI class="List0">Im Falle einer Gleichgewichtsumlegung mit Rückstauberechnung wurde die maximale Abweichung erreicht oder unterboten <MadCap:xref class="sieheUeberschrSeite" href="1_5_Rueckstaumodell.htm#1_benutzermodell_iv_2033098965_1427267"><span style="color: Black;" class="mcFormatColor">(</span><u>Rückstaumodell</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Das Verfahren bricht ab, wenn die Staubelastungswerte und Stauwartezeiten zweier äußerer Iterationsschritte maximal um die eingestellte <span class="gui_element">max. rel. Abweichung</span> voneinander abweichen.</LI>
+        </ul>
+    </body>
+</html>

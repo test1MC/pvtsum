@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="676" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;Transportation;Research;of;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;signal;Wardrop’schen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1026864">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_45426">
+            </a>Knotenwiderstandsberechnung nach Highway Capacity Manual (Intersection Capacity Analysis, ICA)</h3>
+        <p class="Text">
+            <MadCap:keyword term="Knotenwiderstände: nach HCM berechnen" />
+            <MadCap:keyword term="Highway Capacity Manual (HCM)" />
+            <MadCap:keyword term="Intersection Capacity Analysis (ICA)" />CR-Funktionen werden normalerweise verwendet, um belastungsabhängige Reisezeiten auf Strecken zu modellieren <MadCap:xref class="sieheUeberschrSeite" href="1_5_Widerstand und CR-Funktionen.htm#1_benutzermodell_iv_2033098965_1026242"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstand und CR-Funktionen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Sie können auch genutzt werden, um belastungsabhängige Wartezeiten für Abbieger oder komplette Knoten zu modellieren <MadCap:xref class="siehe_1" href="1_5_Widerstand von Abbiegern aus Abbieger CR-Funktion.htm#1_benutzermodell_iv_2033098965_1057995"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstand von Abbiegern aus Abbieger CR-Funktion</u></MadCap:xref><MadCap:xref class="siehe_2" href="1_5_Widerstand von Abbiegern aus Knoten CR-Funktion.htm#1_benutzermodell_iv_2033098965_1231166"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Widerstand von Abbiegern aus Knoten CR-Funktion</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text" style="mc-hyphenate-shortest-prefix: 9;">
+            <MadCap:keyword term="HCM" />
+            <MadCap:keyword term="ICA" />Das vom US Transportation Research Board veröffentlichte Highway Capacity Manual (HCM) enthält im Gegensatz dazu international anerkannte Richtlinien zum Berechnen des Level of Service und anderer Leistungsindikatoren für Knotenpunkte, basierend auf der detaillierten Knotengeometrie und unterschiedlichen Knotensteuerungen. <MadCap:variable name="PTV_Manual.Programmname" /> berechnet Leistungsindikatoren wie Kapazität, Wartezeiten oder LOS wahlweise gemäß der im Operationsmodell HCM 2000 oder HCM 2010 festgelegten Bestimmungen.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Im Folgenden ist die Umsetzung des HCM 2000 in <MadCap:variable name="PTV_Manual.Programmname" /> beschrieben. Bei den meisten Steuerungstypen (Ausnahme: signalisierte Knoten) weicht das HCM 2010 nur in wenigen Bereichen vom HCM 2000 ab. Im Text sind die abweichenden Stellen markiert. Da es das HCM nur in englischer Sprache gibt, sind zur besseren Nachvollziehbarkeit einige Begriffe und Beschreibungen in englischer Sprache gelassen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:keyword term="Steuerungstypen am Knoten" />
+            <MadCap:keyword term="Knoten:Steuerungstypen" />Bei niveaugleichen Knotenpunkten unterscheidet die Berechnung zwischen folgenden Steuerungstypen (Attribut <span class="gui_element">Effektiver Steuerungstyp</span> am Knoten):</p>
+        <ul>
+            <LI class="List0">rechts-vor-links-geregelte Knoten <MadCap:xref class="sieheUeberschrSeite" href="1_5_Rechts-vor-links-geregelte Knoten.htm#1_benutzermodell_iv_2033098965_1166794"><span style="color: Black;" class="mcFormatColor">(</span><u>Rechts-vor-links-geregelte Knoten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">lichtsignalgeregelte Knotenpunkte <MadCap:xref class="sieheUeberschrSeite" href="1_5_Signalisierte Knoten.htm#1_benutzermodell_iv_2033098965_1171292"><span style="color: Black;" class="mcFormatColor">(</span><u>Signalisierte Knoten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">statische Vorfahrtregelung mit den Zeichen StVO 306 oder 301 für die Vorfahrtstraße und StVO 205 oder 206 für die untergeordnete Straße <MadCap:xref class="sieheUeberschrSeite" href="1_5_Vorfahrtsgeregelte Knoten.htm#1_benutzermodell_iv_2033098965_1420427"><span style="color: Black;" class="mcFormatColor">(</span><u>Vorfahrtsgeregelte Knoten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">All-way-stops (nur für Nord-Amerika) <MadCap:xref class="sieheUeberschrSeite" href="1_5_All-Way Stop.htm#1_benutzermodell_iv_2033098965_1028646"><span style="color: Black;" class="mcFormatColor">(</span><u>All-Way Stop</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">Kreisverkehre</LI>
+        </ul>
+        <p class="Text2">Für die Analyse von Kreisverkehren bietet <MadCap:variable name="PTV_Manual.Programmname" /> zwei verschiedene Modelle an:</p>
+        <ul>
+            <LI class="List1">Die von R. M. Kimber, (Kimber 1980), (Kimber, Hollis 1979), (Kimber, Daly 1986), entwickelte Methode, die auch in der britischen Richtlinie TD 16/93 „The Geometric Design of Roundabouts“ beschrieben ist, beruht auf der empirischen Untersuchung zahlreicher Kreisverkehre und der statistischen Anpassung eines Modells, das Kapazitäten in Abhängigkeit von der Geometrie schätzt <MadCap:xref class="sieheUeberschrSeite" href="1_5_Kreisverkehre nach der Methode von TRL_Kimber.htm#1_benutzermodell_iv_2033098965_1215077"><span style="color: Black;" class="mcFormatColor">(</span><u>Kreisverkehre nach der Methode von TRL/Kimber</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List1">Die im Highway Capacity Manual 2010, Kapitel 21 beschriebene Methode <MadCap:xref class="sieheUeberschrSeite" href="1_5_Kreisverkehre nach der Methode von HCM 2010.htm#1_benutzermodell_iv_2033098965_1214907"><span style="color: Black;" class="mcFormatColor">(</span><u>Kreisverkehre nach der Methode von HCM 2010</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+        </ul>
+        <p class="Text2">Die Methode nach TRL/Kimber hat den Vorzug, umfangreiche empirische Ergebnisse zum Einfluss der Geometrie auf die Durchlassfähigkeit eines Kreisverkehrs zu berücksichtigen und ist seit fast drei Jahrzehnten erfolgreich im Einsatz. </p>
+        <p class="Text2">Die Methode nach HCM empfiehlt sich, wenn Sie innerhalb Ihres Projekts Einheitlichkeit in der Theorie für alle Steuerungstypen (Kreisverkehre ebenso nach HCM wie signal- und vorfahrtsgeregelte Knoten) bevorzugen. Die Methode ist zudem nicht von Beobachtungen abhängig, die ausschließlich bei Fahrverhaltensstudien in Großbritannien gewonnen wurden.</p>
+        <p class="Text">Für die Berechnung ist der effektive Steuerungstyp entscheidend, nicht der Steuerungstyp. Diese Werte unterscheiden sich dadurch, dass signalisierte Knoten als vorfahrtsgeregelt gelten, wenn ihnen keine LSA zugewiesen ist oder die LSA abgeschaltet ist (LSA-Attribut <span class="gui_element">Abgeschaltet</span>).</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Innerhalb der Modellbeschreibung gelten spezielle Bestimmungen für Rechts- oder Linksabbieger im Rechtsverkehr. Bei <MadCap:variable name="PTV_Manual.Programmname" />-Modellen mit Linksverkehr sind die Rollen von Links- und Rechtsabbiegern umgekehrt <MadCap:xref class="Benutzerhandbuch" href="../2_Grundlagen_Programmbedienung/2_1_Verkehrsrichtung wählen.htm#2_grundlagen_programmbedienung_1644961382_1251048"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Verkehrsrichtung wählen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="Text" style="mc-hyphenate-shortest-prefix: 11;">Im HCM 2000 werden U-Turns nie berücksichtigt. In <MadCap:variable name="PTV_Manual.Programmname" /> ist es möglich, durch die entsprechende Einstellung in den Verfahrensparametern für Knotenwiderstandsberechnung die U-Turns als linkeste Linksabbieger (im Linksverkehr entsprechend als rechteste Rechtsabbieger) zu behandeln. Diese Berechnung ist dann nicht mehr HCM-konform. Im HCM 2010 werden U-Turns an vorfahrtsgeregelten Knoten berücksichtigt. Die Behandlung in <MadCap:variable name="PTV_Manual.Programmname" /> folgt an dieser Stelle dem HCM 2010. Die anderen Steuerungstypen werden analog zum HCM 2000 behandelt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

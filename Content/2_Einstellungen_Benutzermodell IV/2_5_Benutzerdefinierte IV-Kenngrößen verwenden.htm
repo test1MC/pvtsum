@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="533" MadCap:lastWidth="512" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1127638">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_65977">
+            </a>Benutzerdefinierte IV-Kenngrößen verwenden<a name="25130"></a></h4>
+        <p class="Text">
+            <MadCap:keyword term="IV-Kenngrößen: benutzerdefiniert" />Für den IV können Sie eine benutzerdefinierte Kenngröße ermitteln, die die Attribute überfahrener Netzobjekte verknüpft. Auf diese Art können Sie zum Beispiel die Anzahl überfahrener POIs (beispielsweise Tankstellen) oder Zählstellen je Bezirksbeziehung ermitteln oder ein Attribut (beispielsweise ZWert1) von verschiedenen überfahrenen Netzobjekten miteinander verknüpfen. Die direkten und indirekten numerischen Attribute von Strecken, Anbindungen, Abbiegern und Oberabbiegern stehen für die Verknüpfung zur Auswahl. Attribute von Knoten und Oberknoten können folgendermaßen in die Kenngrößenermittlung eingebunden werden:</p>
+        <ul>
+            <LI class="List0">Als Über-Knoten der Abbieger (ohne Von- und Nach-Knoten)</LI>
+            <LI class="List0">Als Von-Knoten der Strecken (ohne Nach-Knoten)</LI>
+            <LI class="List0">Als Nach-Knoten der Strecken (ohne Von-Knoten)</LI>
+            <LI class="List0">Als Über-Knoten der Abbieger plus Knoten der Anbindungen (alle Knoten eingeschlossen)</LI>
+            <LI class="List0">Als Knoten der Anbindungen</LI>
+        </ul>
+        <p class="Text">Reellwertige Berechnungen sind möglich. Sie können auch benutzerdefinierte numerische Attribute verwenden.</p>
+        <h5 MadCap:autonum="">Einstellungen für die Benutzerdefinierte Kenngröße vornehmen</h5>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Rechnen</span> den Eintrag <span class="gui_element">Allgemeine Verfahrenseinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Allgemeine Verfahrenseinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Navigator den Eintrag <span class="gui_element">IV-Einstellungen</span>&#160;&gt; <span class="gui_element">Kenngrößen</span>.</p>
+        <p class="Stepresult">Die Tabelle der Kenngrößen öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie im Bereich <span class="gui_element">Einstellungen für spezielle Kenngrößen</span> auf die Schaltfläche <span class="gui_element">Parameter</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Benutzerdefinierte Kenngröße IV</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Klicken Sie auf die Schaltfläche des gewünschten Netzobjekttyps.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Parameter ‚Attribut ändern‘ </span>öffnet sich.</p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_SkimPrT_UserDef_Settings.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Netzobjekttyp</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Gewählter Netzobjekttyp, dessen ausgewählte Attributwerte in die Berechnung der benutzerdefinierten Kenngröße mit einfließen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Zielattribut</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Benutzerdefinierte Kenngröße</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Koeffizient</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Faktor, mit dem der Quellattributwert multipliziert wird</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der Koeffizient in der rechten Hälfte ist nur verfügbar, wenn Sie ein Operationszeichen gewählt haben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Attribut</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Quellattribut, dessen Wert in die Formel einfließt.</p>
+                        <p class="CellText">Über die Schaltfläche können Sie ein Attribut (und ein Subattribut, sofern vorhanden) auswählen. Direkte und indirekte Attribute des Quell-Netzobjekttyps stehen zur Auswahl. Die Auswahl erfolgt in einem separaten Fenster <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Fenster_zur_Auswahl_eines_Attributs.htm#2_netz_bearbeiten_23091886_2854659"><span style="color: Black;" class="mcFormatColor">(</span><u>Fenster zur Auswahl eines Attributs</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Das Quellattribut in der rechten Hälfte ist nur verfügbar, wenn Sie ein Operationszeichen gewählt haben.</p>
+                        <p class="CellText">Wenn Sie kein Quellattribut auswählen, wird stattdessen der Wert 1.0 verwendet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Op.</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Operationszeichen einer mathematischen Operation, die zwei Terme enthält (beispielsweise ZWert 2 + ZWert 3).</p>
+                        <p class="CellText">Über die Auswahlliste können Sie ein Operationszeichen wählen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Einfügen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Schaltfläche fügen Sie eine neue Zeile in die Formel ein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Löschen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche löschen Sie die unterste Zeile.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">Das Fenster Parameter Attribut ändern schließt sich, die Einstellungen für den Netzobjekttyp sind gespeichert.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Gegebenenfalls klicken Sie im Fenster <span class="gui_element">Benutzerdefinierte Kenngröße IV</span> auf die Schaltfläche weiterer gewünschter Netzobjekttypen, deren Attributwerte in die Berechnung der benutzerdefinierten Kenngröße einfließen sollen, und wiederholen Sie die Schritte 6) und 7).</p>
+        <p class="Stepresult">Die Einstellungen für weitere Netzobjekttypen sind gespeichert.</p>
+        <p class="Step" MadCap:autonum="8. &#160;">Klicken Sie im Fenster <span class="gui_element">Benutzerdefinierte Kenngröße IV</span> auf die Schaltfläche <span class="gui_element">OK</span>.</p>
+        <p class="Result">Die Parameter für die Berechnung der benutzerdefinierten Kenngröße sind festgelegt.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Beachten Sie bei der Wahl der Koeffizienten die angegebenen Einheiten für Widerstände: Länge in Meter und Zeit in Sekunden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

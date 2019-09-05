@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="681" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs;Ride">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1026323">
+            </a>
+            <a name="1_netzmodell_1240632468_40756">
+            </a>Streckentypen</h4>
+        <p class="Text">
+            <MadCap:keyword term="Strecken: Streckentypen" />
+            <MadCap:variable name="PTV_Manual.Programmname" /> beschreibt die verkehrstechnischen Eigenschaften von Strecken mit Streckenattributen. Außerdem bietet es die Möglichkeit, Strecken mit gleichen Eigenschaften in bis zu 100 Streckentypen zu gliedern, die ihrerseits Attribute besitzen. Jede Strecke gehört über ihr Attribut <span class="gui_element">Typ-Nummer</span> einem Streckentyp an. Die Streckentypen 00 bis 99 dienen der Netzklassifikation und ermöglichen die typbezogene Vergabe von Standardwerten für folgende Streckenattribute.</p>
+        <ul>
+            <LI class="List1">Liste der zulässigen Verkehrssysteme auf einer Strecke</LI>
+            <LI class="List1">Kapazität IV</LI>
+            <LI class="List1">zulässige IV-Geschwindigkeit (<span class="gui_element">v0-IV</span>) bei freiem Verkehrsfluss</LI>
+            <LI class="List1">Minimalgeschwindigkeit</LI>
+            <LI class="List1">die Anzahl der Fahrstreifen</LI>
+            <LI class="List1">der Rang zur Kennzeichnung der Wertigkeit einer Strecke</LI>
+            <LI class="List1">die zulässige Höchstgeschwindigkeit <span class="gui_element">vMax-VSys</span> jedes IV-Verkehrssystems</LI>
+            <LI class="List1">verkehrssystemspezifische Geschwindigkeit im IV für die Maut</LI>
+            <LI class="List1">verkehrssystemspezifische Geschwindigkeit <span class="gui_element">v-ÖVSys</span> zur Berechnung der verkehrssystemspezifischen ÖV-Fahrzeiten <span class="gui_element">t-ÖV</span> aus den Streckenlängen</LI>
+            <LI class="List1">je drei Kostensätze je Verkehrssystem im ÖV für die Berechnung von Streckenkosten im Rahmen des Betreibermodells <MadCap:xref class="sieheUeberschrSeite" href="../1_Betreibermodell OeV/1_7_Berechnung von Betriebskosten.htm#1_betreibermodell_oev_1878159914_1114672"><span style="color: Black;" class="mcFormatColor">(</span><u>Berechnung von Betriebskosten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+        </ul>
+        <p class="Text">Grundsätzlich sind die Werte der Attribute einer Strecke von denen des zugeordneten Streckentyps unabhängig. Das bedeutet Sie können jede Strecke unabhängig vom Streckentyp attribuieren. Jedoch empfiehlt es sich, genau die Werte des Streckentyps in die Strecke zu übernehmen. So erzielen Sie eine möglichst einheitliche Modellierung der Strecken und Änderungen an Attributen sind leichter vorzunehmen, da sie diese im Streckentyp ändern und dann auf die Strecken übertragen können <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Streckentypen_festlegen.htm#2_netz_bearbeiten_23091886_1130670"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Streckentypen festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Für die Umlegung kann jedem Streckentyp eine eigene Capacity-Restraint-Funktion (CR-Funktion) zugeordnet werden, die damit für alle Strecken dieses Streckentyps gilt <MadCap:xref class="sieheUeberschrSeite" href="../1_Benutzermodell IV/1_5_Widerstand und CR-Funktionen.htm#1_benutzermodell_iv_2033098965_1026242"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstand und CR-Funktionen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Somit können Sie erreichen, dass für anbaufreie Außerortsstraßen ein anderer mathematischer Zusammenhang für die Berechnung des Widerstandes gilt, als auf angebauten Straßen innerorts.</p>
+        <h5>
+            <MadCap:keyword term="Strecken: Hauptströme" />
+            <MadCap:keyword term="Hauptströme" />
+            <a name="1_netzmodell_1240632468_51408">
+            </a>Hauptströme</h5>
+        <p class="Text">Aus dem Rang der Streckentypen der Strecken, die an einem Knoten münden, bestimmt <MadCap:variable name="PTV_Manual.Programmname" /> eine Stromhierarchie mit einem Hauptstrom. Dieser bezieht sich immer auf zwei unterschiedliche Streckenorientierungen <MadCap:xref class="sieheUeberschrSeite" href="1_2_Knotenmodellierung.htm#1_netzmodell_1240632468_1212726"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte der Knotenmodellierung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Der Hauptstrom wird als eines von drei Kriterien <MadCap:xref class="sieheUeberschrSeite" href="1_2_Abbiegerstandards.htm#1_netzmodell_1240632468_1064377"><span style="color: Black;" class="mcFormatColor">(</span><u>Abbiegerstandards</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> für die Bestimmung der Zeitzuschläge für die aus dem Hauptstrom oder aus einer anderen Strecke herausführenden Abbiegevorgänge herangezogen. Er sollte also nach Möglichkeit der vorfahrtberechtigten oder durch die LSA-Schaltung besonders begünstigten Fahrtbeziehung entsprechen. Durch diesen Zusammenhang hat der Rang der Streckentypen einen indirekten Einfluss auf das IV-Umlegungsergebnis. <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1077635">Abbildung&#160;11</MadCap:xref> zeigt an einem Beispiel die Ermittlung der Stromhierarchie und insbesondere der Hauptströme.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_MajorFlows.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_netzmodell_1240632468_1077635">
+            </a>
+            <a name="1_netzmodell_1240632468_73158">
+            </a>Rang des Streckentyps und sich ergebende Hauptströme (gelb), Stromhierarchie (rot)</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Im ÖV-Modell hat der Rang keinen Einfluss auf das Umlegungsergebnis.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

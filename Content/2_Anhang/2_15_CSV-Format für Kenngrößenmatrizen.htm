@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1369" MadCap:lastWidth="645" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="D3;$E;$Relationen">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_anhang_3073197290_1066470">
+            </a>
+            <a name="2_anhang_3073197290_67720">
+            </a>CSV-Format für Kenngrößenmatrizen</h3>
+        <p class="Text">Für die weitere Arbeit in einem Tabellenkalkulationsprogramm können Sie Kenngrößenmatrizen im Format <span class="path">*.csv</span> speichern.</p>
+        <p class="Text">Das Format besitzt folgende Merkmale:</p>
+        <ul>
+            <LI class="List0">Komma, Semikolon, Tabulator oder Leerzeichen als Trennzeichen</LI>
+        </ul>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Das Trennzeichen muss dem vom Tabellenkalkulationsprogramm erwarteten Trennzeichen entsprechen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Für Kenngrößenmatrizen wird die Verkehrsmittelnummer für VISEM ausgegeben.</LI>
+            <LI class="List0">Die Datei enthält keine spezielle Formatkennung.</LI>
+            <LI class="List0">Die berechneten Kenngrößen sind in Kommentarzeilen gelistet.</LI>
+            <LI class="List0">In der Zeile $Relationen sind die Spaltenbezeichner gelistet: QBezNr, ZBezNr und die Bezeichner aller aktuell berechneten Kenngrößen.</LI>
+            <LI class="List0">Die Dateierweiterung der Matrixdatei ist <span class="path">*.csv</span>.</LI>
+        </ul>
+        <h5>ÖV-Kenngrößenmatrizen</h5>
+        <pre class="Input">$VISION</pre>
+        <pre class="Input">$VERSION:VersNr;FileType;Language</pre>
+        <pre class="Input">1.0;Matrix;D</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">*Dateiinfo</pre>
+        <pre class="Input">$INFO:TEXT</pre>
+        <pre class="Input">Verkehrsmittel-Nummer</pre>
+        <pre class="Input">3</pre>
+        <pre class="Input">Zeitbereich</pre>
+        <pre class="Input">    0.00   24.00</pre>
+        <pre class="Input">erstellt mit:           VISUM Version 11.500</pre>
+        <pre class="Input">erstellt am:            31.05.10</pre>
+        <pre class="Input">Netz/VersDatei:         D:\PTV_Vision\Manual\Matrixeditor\EXAMPLE.VER</pre>
+        <pre class="Input">Umlegungsverfahren:     Fahrplanfein</pre>
+        <pre class="Input">Aggregation:            Mittelwert</pre>
+        <pre class="Input">Gewichtet:              Ja</pre>
+        <pre class="Input">Nachfragesegment:       P;PuT</pre>
+        <pre class="Input">$</pre>
+        <pre class="Input">* Berechnete Kenngrößen:</pre>
+        <pre class="Input_tabwide">* MFW	Fahrtweite</pre>
+        <pre class="Input_tabwide">* MRZ	Reisezeit</pre>
+        <pre class="Input_tabwide">* MUH	Umsteigehäufigkeit</pre>
+        <pre class="Input">$Relationen:QBezNr ZBezNr MFW MRZ MUH</pre>
+        <pre class="Input">100 100 0 0 0.0</pre>
+        <pre class="Input">100 200 24713 101 0.4</pre>
+        <pre class="Input">100 300 20000 236 0.0</pre>
+        <pre class="Input">200 100 27500 105 0.0</pre>
+        <pre class="Input">200 200 0 0 0.0</pre>
+        <pre class="Input">200 300 7500 217 0.0</pre>
+        <pre class="Input">300 100 20000 236 0.0</pre>
+        <pre class="Input">300 200 7500 217 0.0</pre>
+        <pre class="Input">300 300 0 0 0.0</pre>
+        <h5>IV-Kenngrößenmatrizen</h5>
+        <pre class="Input">$VISION</pre>
+        <pre class="Input">$VERSION:VersNr;FileType;Language</pre>
+        <pre class="Input">1.0;Matrix;D</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">*Dateiinfo</pre>
+        <pre class="Input">$INFO:TEXT</pre>
+        <pre class="Input">Verkehrsmittel</pre>
+        <pre class="Input">4</pre>
+        <pre class="Input">Zeitbereich</pre>
+        <pre class="Input">0.00 24.00</pre>
+        <pre class="Input">erstellt mit     :	VISUM Version 11.50</pre>
+        <pre class="Input">erstellt am      :	31.05.10</pre>
+        <pre class="Input">Netz/VersDatei   :	D:\PTV_Vision\Manual\Matrixeditor\EXAMPLE.VER</pre>
+        <pre class="Input">Nachfragesegment :	C C</pre>
+        <pre class="Input">Wegewahl         :	Umlegung</pre>
+        <pre class="Input">Alle Beziehungen</pre>
+        <pre class="Input">Gewichtung       :	Belastungsmittel</pre>
+        <pre class="Input">Ausgabewerte aufsummiert aus:</pre>
+        <pre class="Input">                           Strecken</pre>
+        <pre class="Input">                           Quell-Anbindungen</pre>
+        <pre class="Input">                           Ziel-Anbindungen</pre>
+        <pre class="Input">                           Abbieger</pre>
+        <pre class="Input">$</pre>
+        <pre class="Input">* Berechnete Kenngrößen:</pre>
+        <pre class="Input_tabwide">* TT0	t0</pre>
+        <pre class="Input_tabwide">* TTC	tAkt</pre>
+        <pre class="Input_tabwide">* VP0	v0</pre>
+        <pre class="Input_tabwide">* VPC	vAkt</pre>
+        <pre class="Input_tabwide">* IMP	Widerstand</pre>
+        <pre class="Input_tabwide">* DIS	Fahrweite</pre>
+        <pre class="Input">$Relationen:QBezNr ZBezNr TT0 TTC VP0 VPC IMP DIS</pre>
+        <pre class="Input">100 100 0 0 0 0 0 0</pre>
+        <pre class="Input">100 200 23 23 89 88 1391 34000</pre>
+        <pre class="Input">100 300 28 29 71 70 1718 33574</pre>
+        <pre class="Input">200 100 23 23 89 89 1368 34000</pre>
+        <pre class="Input">200 200 0 0 0 0 0 0</pre>
+        <pre class="Input">200 300 22 22 63 63 1337 23574</pre>
+        <pre class="Input">300 100 28 28 71 71 1697 33574</pre>
+        <pre class="Input">300 200 22 22 63 63 1339 23574</pre>
+        <pre class="Input">300 300 0 0 0 0 0 0</pre>
+    </body>
+</html>

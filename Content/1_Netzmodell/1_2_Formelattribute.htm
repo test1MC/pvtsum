@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="640" MadCap:lastWidth="513" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_netzmodell_1240632468_1192440">
+            </a>
+            <a name="1_netzmodell_1240632468_83598">
+            </a>Formelattribute</h4>
+        <p class="Text">Benutzerdefinierte Attribute vom Datentyp Formel unterscheiden sich grundlegend von anderen benutzerdefinierten Attributen. Sie dienen nicht zur direkten Speicherung von Daten (sind also keine Eingabe-Attribute), sondern repräsentieren einen Rechenausdruck, in dem andere Attribute vorkommen. Der Ausdruck wird beim Anlegen des Attributs erstellt, kann aber auch nachträglich geändert werden.</p>
+        <p class="Text">Der große Vorteil von Formelattributen besteht darin, dass <MadCap:variable name="PTV_Manual.Programmname" /> den Rechenausdruck automatisch neu auswertet, wenn sich seine Eingangsgrößen ändern. Sie erhalten somit stets die aktuellen Werte. Formelattribute können genau so flexibel zur grafischen Darstellung, zum Filtern oder zu anderen Auswertungen benutzt werden wie andere Attribute.</p>
+        <h5 MadCap:autonum="">Beispiel</h5>
+        <p class="Text">Als Ergebnis einer IV- und einer ÖV-Umlegung errechnet <MadCap:variable name="PTV_Manual.Programmname" /> Streckenbelastungen für IV und ÖV, die in den Attributen Belastung IV [Pers] und Belastung ÖV [Pers] gespeichert werden. Wenn Sie ein Formelattribut</p>
+        <p class="Text">Vorteil IV = Belastung IV [Pers] - Belastung ÖV [Pers]</p>
+        <p class="Text">anlegen, haben Sie einen direkten Zugang zur Differenz der beiden Belastungen. Die Differenz wird automatisch aktualisiert, falls sich eine der Eingangsgrößen ändert.</p>
+        <p class="Text">Formelattribute sind stets numerisch. Beim Aufbau des Formelausdrucks stehen dieselben Möglichkeiten zur Verfügung wie im Verfahren <span class="gui_element">Attribut ändern</span> <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Attributwerte_während_des_Verfahrensablaufs_ändern.htm#2_netz_bearbeiten_23091886_3057277"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Attributwerte während des Verfahrensablaufs ändern</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>: Die Formel ist eine Summe von (beliebig vielen) Unterausdrücken, die jeweils aus Attributen besteht, die durch binäre Operatoren oder Funktionen verknüpft werden. Die hierbei verfügbaren Operatoren und Funktionen sind die vier Grundrechenarten, Division in Prozent, Potenzieren, Minimum und Maximum. Jeder Unterausdruck kann im Betrag genommen, gerundet oder abgeschnitten werden. </p>
+        <p class="Text">Es gibt keine Einschränkung hinsichtlich der innerhalb der Formel verwendeten Attribute. Insbesondere können Sie Formelattribute innerhalb anderer Formelattribute nutzen und somit komplexere Ausdrücke bilden. Es besteht auch die Möglichkeit der Klammersetzung.</p>
+        <h5 MadCap:autonum="">Beispiel</h5>
+        <ul>
+            <LI class="List1">Strecken-Formelattribut <span class="gui_element">Umweg</span> = [LAENGE]-[LAENGELUFT]</LI>
+            <LI class="List1">Strecken-Formelattribut <span class="gui_element">Umweg Prozentual</span> = Percent([UMWEG],[LANGELUFT])</LI>
+        </ul>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" style="mc-hyphenate-shortest-prefix: 6;" MadCap:autonum="Hinweise: ">Achten Sie darauf, dass Ihre Formel keinen direkten oder indirekten Zirkelbezug enthält. Auch Bezüge zwischen Ausgabewerten und Eingabewerten des gleichen Verfahrensschritts im Verfahrensablauf sollten Sie vermeiden, da sie zu unerwünschten Berechnungsergebnissen führen können.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

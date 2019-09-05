@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="688" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_oev_2318507456_1026830">
+            </a>
+            <MadCap:keyword term="Taktfeine Umlegung: Takt ermitteln" />
+            <a name="1_benutzermodell_oev_2318507456_52527">
+            </a>Taktermittlung</h3>
+        <p class="Text">Den Takt einer Linie können Sie auf drei verschiedene Weisen definieren <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Taktfeine Umlegung_ Register Basis.htm#2_einstellungen_benutzermodell_oev_2589728191_1034209"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Taktfeine Umlegung: Register Basis</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <ul>
+            <LI class="List0">aus einem (meist benutzerdefinierten) Fahrzeitprofil-Attribut</LI>
+            <LI class="List0">aus der mittleren Fahrzeugfolgezeit gemäß Fahrplan</LI>
+            <LI class="List0">aus der mittleren Wartezeit gemäß Fahrplan (Standardeinstellung)</LI>
+        </ul>
+        <p class="Text">Jede der drei Methoden kann nach Zeitintervallen getrennt angewandt werden. So können Sie abbilden, dass das Verkehrsangebot innerhalb des Umlegungszeitraums variiert – beispielsweise, weil es in der Morgenspitze dichter ist.</p>
+        <h5>
+            <MadCap:keyword term="Konstant aus Fahrzeitprofil-Attribut (Taktermittlung)" />Aus Fahrzeitprofil-Attribut</h5>
+        <p class="Text">Im einfachsten Fall geben Sie den Takt unmittelbar als Attribut des jeweiligen Fahrzeitprofils an. Dann ist die Angabe eines Fahrplans entbehrlich. Ein vorhandener Fahrplan wird ignoriert.</p>
+        <h5>
+            <MadCap:keyword term="Taktermittlung: aus mittlerer Fahrzeugfolgezeit" />Aus mittlerer Fahrzeugfolgezeit gemäß Fahrplan</h5>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> kann den Takt auch automatisch aus dem Fahrplan des Fahrzeitprofils ermitteln. Dazu bestimmt es für jedes Zeitintervall <span class="formula">l&#160;</span>=&#160;[<span class="formula">a,b</span>) innerhalb des Umlegungszeitraums die Zahl <span class="formula">n</span> der darauf entfallenden Abfahrten. Der Takt ergibt sich als Quotient:</p>
+        <p class="Text">
+            <img src="../Resources/Images/8_108.jpg" />
+        </p>
+        <p class="Text">Bei Netzen mit kleinen Takten und hinreichend breiten Zeitintervallen ist diese einfache Näherung vertretbar. Allgemein ist diese Vorgehensweise allerdings aus zwei Gründen problematisch.</p>
+        <p class="Text">Zum einen ist die Definition zu empfindlich gegenüber Verschiebungen einzelner Abfahrten über Intervallgrenzen hinweg. Hierdurch ergeben sich Unstetigkeiten im Ergebnis. Dieses Problem tritt immer dann auf, wenn der echte Takt einer Linie kein Teiler der Länge des Nachfragezeitintervalls ist. Betrachtet man etwa eine Linie mit 40-Minuten-Takt und das Zeitintervall <span class="formula">l</span>&#160;=&#160;[6:00,7:00), so ergeben sich je nach konkreter Abfahrtszeit unterschiedliche berechnete Takte (<MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1179295">Tabelle&#160;156</MadCap:xref>).</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Abfahrtszeiten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrten im Zeitintervall</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">berechneter Takt</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">5:55, 6:35, 7:15, ...</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">60 Minuten</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">6:05, 6:45, 7:25, ...</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">30 Minuten</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_oev_2318507456_1179295">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_14440">
+                    </a>Beispiel für Taktberechnung aus mittlerer Fahrzeugfolgezeit gemäß Fahrplan</p>
+            </caption>
+        </table>
+        <p class="Text">Zum anderen kann auf diese Weise nicht berücksichtigt werden, dass über das Zeitintervall verteilte Fahrten für den zufällig zugehenden Fahrgast im Schnitt eine geringere Wartezeit bedeuten als gehäuft liegende Fahrten. Daher wird als Standardeinstellung des taktfeinen Verfahrens nachfolgende dritte Definition verwendet.</p>
+        <h5>
+            <MadCap:keyword term="Taktermittlung: aus mittlerer Wartezeit" />Aus mittlerer Wartezeit gemäß Fahrplan</h5>
+        <p class="Text">Der Takt <span class="formula_symbol">t</span><span class="formula_superscript">a,b</span> einer Linie wird als das<span class="gui_element"> Doppelte der erwarteten Wartezeit auf die nächste Abfahrt von der Linie bei zufälligem Zugang im Zeitintervall</span> [<span class="formula">a,b</span>) definiert.</p>
+        <p class="Text">
+            <span class="formula">F</span>
+            <span class="formula_subscript">l</span>&#160;=&#160;{<span class="formula">x</span><span class="formula_subscript">1</span><span class="formula">, x</span><span class="formula_subscript">2</span><span class="formula">, ..., x</span><span class="formula_subscript">n</span>} sei die Menge der in Intervall <span class="formula">l&#160;</span>=&#160;[<span class="formula">a,b</span>) gelegenen Abfahrtszeitpunkte der Linie. Die erste Abfahrt nach Zeitpunkt <span class="formula">b</span> werde mit <span class="formula">x‘</span> bezeichnet. Weil eine solche Abfahrt nicht existieren muss oder sehr spät liegen kann, wird ferner die fiktive Abfahrt <span class="formula">x‘‘</span>&#160;=&#160;<span class="formula">x</span><span class="formula_subscript">1</span> + (<span class="formula">b-a</span>) betrachtet, die sich aus der zyklischen Fortsetzung des Fahrplans in <span class="formula">l</span> ergibt. Für die Wartezeitberechnung am Ende von <span class="formula">l</span> wird dann die Abfahrt <span class="formula">x</span><span class="formula_subscript">n+1</span>&#160;=&#160;min{<span class="formula">x‘,x‘‘</span>} verwendet.</p>
+        <p class="Text">Der Takt ist dann folgendermaßen definiert.</p>
+        <p class="Text">
+            <img src="../Resources/Images/8_21.jpg" />
+        </p>
+        <p class="Text">Dabei gilt <img src="../Resources/Images/8_23.jpg" />, <img src="../Resources/Images/8_24.jpg" /> und <img src="../Resources/Images/8_22.jpg" /> für die übrigen <span class="formula">i </span><span class="symbol">Î</span> {1, ..., <span class="formula">n-1</span>}. <span class="symbol">D</span><span class="formula_subscript">i</span> ist jeweils die erwartete Wartezeit in einem Teilintervall. </p>
+        <p class="Text">Betrachtet man wieder das Beispiel des 40-Minuten-Takts und das Intervall <span class="formula">l&#160;</span>=&#160;[6:00,7:00), so erhält man nun ein ausgeglicheneres Bild.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Abfahrtszeiten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrten im Zeitintervall</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">berechneter Takt </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">5:55, 6:35, 7:15</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">43’ 20’’</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">6:05, 6:45, 7:25, ...</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">33’ 20’’</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_oev_2318507456_19471">
+                    </a>Beispiel für Taktberechnung aus mittlerer Wartezeit gemäß Fahrplan</p>
+            </caption>
+        </table>
+        <p class="Text">Am Beispiel der ersten Zeile soll die Rechnung kurz erläutert werden. </p>
+        <p class="Text">Hier gilt <span class="formula">n </span>= 1, <span class="formula">x</span><span class="formula_subscript">1</span><span class="formula"></span>= 6:35 und <span class="formula">x</span><span class="formula_subscript">2</span> = 7:15.</p>
+        <p class="Text">Hieraus folgt</p>
+        <p class="Text">
+            <img src="../Resources/Images/8_109.jpg" /> und <img src="../Resources/Images/8_28.jpg" /></p>
+        <p class="Text">Daher ergibt sich insgesamt <img src="../Resources/Images/8_26.jpg" /> Minuten als Ergebnis.</p>
+        <p class="Text">An diesem Beispiel ist zu erkennen, dass die berechneten Werte bei Verschiebung der konkreten Abfahrtszeiten viel weniger schwanken als beim naiven Ansatz <img src="../Resources/Images/8_29.jpg" />.</p>
+    </body>
+</html>

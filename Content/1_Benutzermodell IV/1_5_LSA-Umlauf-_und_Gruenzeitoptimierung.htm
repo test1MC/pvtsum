@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;Wardrop’schen" MadCap:lastBlockDepth="4" MadCap:lastHeight="447" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_iv_2033098965_1241641">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_53446">
+            </a>LSA-Umlauf- und Grünzeitoptimierung</h4>
+        <p class="Text">
+            <MadCap:keyword term="Signalanlagen:Umlauf- und Grünzeiten optimieren" />
+            <MadCap:keyword term="Umlauf- und Grünzeiten optimieren" />
+            <MadCap:keyword term="Signalkoordinierung" />Wählen Sie für einen Knoten die LSA-Umlauf- und Grünzeitoptimierung, so berechnet <MadCap:variable name="PTV_Manual.Programmname" /> eine optimale Umlaufzeit für die Signalanlage am Knoten und gleichzeitig für diese Umlaufzeit eine optimale Grünzeitaufteilung. Wenn mehrere (Ober-)Knoten zu einer Signalanlage gehören, werden automatisch alle (Ober-)Knoten der Signalanlage optimiert.</p>
+        <p class="Text">Die Berechnung umfasst folgende Schritte:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Die Menge <span class="formula">T</span> der zulässigen Umlaufzeiten an der Signalanlage wird bestimmt. Ist der Verfahrensparameter <span class="gui_element">Umlaufzeiten der Koordinierungsgruppen verwenden</span> aktiv und gehört die Signalanlage zu einer Koordinierungsgruppe, so sind nur Umlaufzeiten aus deren Umlaufzeitfamilie zulässig. Sonst sind alle Umlaufzeiten (ganzzahlig in Sekunden) im Intervall zwischen den LSA-Attributen <span class="gui_element">ICA Minimale Umlaufzeit für Optimierung</span> und <span class="gui_element">ICA Maximale Umlaufzeit für Optimierung</span> zulässig.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Für jede zulässige Umlaufzeit <span class="formula">t</span> aus <span class="formula">T</span> gilt Folgendes:</p>
+        <ul>
+            <LI class="List2">Bestimme optimale Grünzeiten <span class="formula">g*</span>(<span class="formula">t</span>) für vorgegebene Umlaufzeit <span class="formula">t</span>.</LI>
+            <LI class="List2">Berechne mittels ICA die Gesamtwartezeit am Knoten für <span class="formula">g*</span>(<span class="formula">t</span>).</LI>
+        </ul>
+        <p class="Step" MadCap:autonum="3. &#160;">Wähle als optimale Umlaufzeit <span class="formula">t*</span> dasjenige <span class="formula">t</span> mit minimaler Gesamtwartezeit. Setze zudem die optimale Grünzeitaufteilung <span class="formula">g*</span>(<span class="formula">t*</span>).</p>
+        <p class="Text">Die ICA-Berechnung der Gesamtwartezeit am Knoten liefert nur dann gültige Werte, wenn die Summe der kritischen v/s-Verhältnisse kleiner oder gleich 1 ist. Für größere Summen ist grundsätzlich <span class="formula">t*</span> = max(<span class="formula">T</span>). Falls die Summe der Mindestgrünzeiten und Zwischenzeiten für alle Phasen und Signalgruppen größer als das berechnete <span class="formula">t*</span> ist, wird <span class="formula">t*</span> auf das kleinste <span class="formula">t</span> aus <span class="formula">T</span> gesetzt, das größer oder gleich dieser Summe ist. Existiert kein solches <span class="formula">t</span>, wird <span class="formula">t*</span> unabhängig von <span class="formula">T</span> auf die Summe gesetzt.</p>
+    </body>
+</html>

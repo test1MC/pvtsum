@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="3017" MadCap:lastWidth="1018" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;SG;QMin;Konst;NSch;QMax;ZMin;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1026296">
+            </a>
+            <a name="1_nachfragemodell_2215163117_89413">
+            </a>EVA-Datenmodell</h4>
+        <p class="Text">Das Datenmodell für EVA umfasst die auch für andere Modelle relevanten Nachfrageobjekttypen <MadCap:xref class="sieheUeberschrSeite" href="1_3_Nachfrageobjekte.htm#1_nachfragemodell_2215163117_1025950"><span style="color: Black;" class="mcFormatColor">(</span><u>Nachfrageobjekte</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> sowie den zusätzlichen Nachfrageobjekttyp Strukturgröße. Gegenüber dem Standard-Vier-Stufen-Modell besitzen diese Nachfrageobjekte im EVA-Modell einige zusätzliche Attribute. Diese Attribute wirken sich in der Operation EVA-Verkehrserzeugung aus <MadCap:xref class="sieheUeberschrSeite" href="1_3_EVA-Verkehrserzeugung.htm#1_nachfragemodell_2215163117_1154313"><span style="color: Black;" class="mcFormatColor">(</span><u>EVA-Verkehrserzeugung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <h5 MadCap:autonum="">Aktivitäten und Aktivitätenpaare</h5>
+        <p class="Text">
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Aktivitäten" />
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Aktivitätenpaare" />
+            <MadCap:keyword term="Aktivitäten: Attribute (EVA)" />
+            <MadCap:keyword term="Aktivitätenpaare: Attribute (EVA)" />Aktivitäten und Aktivitätenpaare besitzen im EVA-Modell folgende zusätzliche Attribute.</p>
+        <table class="TableStyle_TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="97px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="121px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="277px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Nachfrageobjekttyp</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Attribut und Wertebereich</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Bedeutung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Aktivität</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Ist Heimataktivität</span>
+                        </p>
+                        <p class="CellText">bool (0,1)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Der Wert 1 kennzeichnet die Aktivität, die den Heimatstandort der Verkehrsteilnehmer repräsentiert. Höchstens eine Aktivität kann so gekennzeichnet sein. Das Attribut beeinflusst die Standardbelegung des Attributs Quell-Ziel-Typ am Nachfrageobjekttyp Aktivitätenpaar.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Aktivitätenpaar</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Quelle-Ziel-Typ</span>
+                        </p>
+                        <p class="CellText">{1, 2, 3}</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">1 = Quellaktivität ist Heimataktivität</p>
+                        <p class="CellText">2 = Zielaktivität ist Heimataktivität</p>
+                        <p class="CellText">3 = weder Quell- noch Zielaktivität ist Heimataktivität</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Nachfrageobjekttypen im EVA-Nachfragemodell</p>
+        <h5 MadCap:autonum="">
+            <a name="1_nachfragemodell_2215163117_1026326">
+            </a>
+            <a name="1_nachfragemodell_2215163117_95076">
+            </a>Strukturgrößen</h5>
+        <p class="Text">
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Strukturgrößen" />
+            <MadCap:keyword term="Strukturgrößen: EVA-Modell Personenverkehr" />Eine Strukturgröße ist ein Maß für die Attraktivität eines Bezirks als Quelle oder Ziel einer Fahrt, zum Beispiel die Verkaufsfläche im Einzelhandel oder die Anzahl Schulplätze. Strukturgrößen sind sehr einfache Nachfrageobjekte, sie besitzen als Attribute lediglich einen Code und einen Namen. Im Prinzip könnten Sie an ihrer Stelle auch benutzerdefinierte Bezirksattribute verwenden, doch drückt die Definition als Strukturgröße ihre Rolle im Nachfragemodell deutlicher aus.</p>
+        <p class="Text">Zu jeder Strukturgröße SG, die Sie im Nachfragemodell definieren, entsteht automatisch das numerische Bezirksattribut <span class="gui_element">WertStrukturgröße(SG)</span>, in dem Sie die Werte der Strukturgröße pro Bezirk ablegen.</p>
+        <h5 MadCap:autonum="">Nachfrageschichten</h5>
+        <p class="Text">
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Nachfrageschichten" />
+            <MadCap:keyword term="Nachfrageschichten: Attribute (EVA)" />Auch Nachfrageschichten besitzen zahlreiche zusätzliche Eigenschaften, besonders im Zusammenhang mit ihren Randsummenbedingungen. Nachfrageschichten verweisen zudem auf ein Aktivitätenpaar, das einen Quell-Ziel-Typ besitzt. Weil dieser Typ die Behandlung der Nachfrageschicht in den Operationen bestimmt und wir deshalb häufig darauf Bezug nehmen, sprechen wir nachfolgend auch abkürzend vom Quell-Ziel-Typ der Nachfrageschicht selbst.</p>
+        <table class="TableStyle_TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="130px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="365px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Bedeutung und Wertebereich</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Quell-Strukturgrößen-Codes</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Diejenigen Größen, die das Strukturpotential der Nachfrageschicht auf der Quellseite bestimmen</p>
+                        <p class="CellText">Wertebereich: Menge von Strukturgrößen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Ziel-Strukturgrößen-Codes</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Analog für die Zielseite</p>
+                        <p class="CellText">Wertebereich: Menge von Strukturgrößen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Ausgleichend</span>
+                        </p>
+                        <p class="CellText">(<span class="gui_element">RSA</span> an der Benutzeroberfläche)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Der Wert 1 kennzeichnet die Nachfrageschicht, in der beim Randsummenausgleich Differenzen zwischen Gesamt-Quell- und -Ziel-Verkehr aufgefangen werden. Nur eine Nachfrageschicht kann so gekennzeichnet sein, sie muss vom Quell-Ziel-Typ 3 sein.</p>
+                        <p class="CellText">Wertebereich: bool (0, 1)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Aufkommen als Potential verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">1 = das Quell- oder Zielaufkommen definiert gleichzeitig das Strukturpotential (die Attraktivität) des Bezirks für die Nachfrageschicht.</p>
+                        <p class="CellText">0 = das Quell- oder Zielaufkommen ist bei der Verkehrsverteilung zwar als Randsummenbedingung einzuhalten, bedeutet aber keine Attraktivität. Alle Bezirke haben stattdessen gleiches Strukturpotential.</p>
+                        <p class="CellText">Wertebereich: bool (0, 1)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Typ Quelle</span>
+                        </p>
+                        <p class="CellText">(<span class="gui_element">RSB Quelle</span> an der Benutzeroberfläche)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Typ der Randsummenbedingung auf Quellseite. Für Quell-Ziel-Typ 1 stets hart, sonst frei wählbar.</p>
+                        <p class="CellText">Wertebereich: {hart, weich, elastisch, offen}</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Typ Ziel</span>
+                        </p>
+                        <p class="CellText">(<span class="gui_element">RSB Ziel</span> an der Benutzeroberfläche)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Analog für die Zielseite</p>
+                        <p class="CellText">Wertebereich: {hart, weich, elastisch, offen}</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Min-Faktor Quelle konstant</span>
+                        </p>
+                        <p class="CellText">(<span class="gui_element">RSF QMin Konst.</span> an der Benutzeroberfläche)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">1 = RandsummeMinFaktorQuelle ist konstant, also unabhängig vom Bezirk. Es gilt der Wert des Nachfrageschichtattributs <span class="gui_element">RandsummeMinFaktorQuelle</span>. Wählen Sie diese Option, wenn der Faktor für die untere Schranke des Quellaufkommens für alle Bezirke gleich ist.</p>
+                        <p class="CellText">0 = RandsummeMinFaktorQuelle ist bezirksabhängig. Es gilt der Wert des Bezirksattributs <span class="gui_element">RandsummeMinFaktorQuelle</span>(NSch). Diese Option ist sinnvoll, wenn Sie individuelle untere Schranken verwenden wollen.</p>
+                        <p class="CellText">Dieses Attribut ist nur dann editierbar, wenn der Faktor nicht durch den gewählten Randsummentyp festgelegt ist.</p>
+                        <p class="CellText">Wertebereich: bool (0, 1)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Max-Faktor Quelle konstant</span>
+                        </p>
+                        <p class="CellText">(<span class="gui_element">RSF QMax Konst.</span> an der Benutzeroberfläche)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Analog für die obere Schranke der Quellseite</p>
+                        <p class="CellText">Wertebereich: bool (0, 1)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Min-Faktor Ziel konstant</span>
+                        </p>
+                        <p class="CellText">(<span class="gui_element">RSF ZMin Konst.</span> an der Benutzeroberfläche)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Analog für die untere Schranke der Zielseite</p>
+                        <p class="CellText">Wertebereich: bool (0, 1)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Max-Faktor Ziel konstant</span>
+                        </p>
+                        <p class="CellText">(<span class="gui_element">RSF ZMax Konst.</span> an der Benutzeroberfläche)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Analog für die obere Schranke der Zielseite</p>
+                        <p class="CellText">Wertebereich: bool (0, 1)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Min-Faktor Quelle</span>
+                        </p>
+                        <p class="CellText">(<span class="gui_element">RSF QMin</span> an der Benutzeroberfläche)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Faktor für die Untergrenze der Quellaufkommen, falls <span class="gui_element">RandsummeMinFaktorQuelleKonstant</span> = 1</p>
+                        <p class="CellText">Dieses Attribut ist nur dann editierbar, wenn der Faktor nicht durch den gewählten Randsummentyp festgelegt ist.</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Max-Faktor Quelle</span>
+                        </p>
+                        <p class="CellText">(<span class="gui_element">RSF QMax</span> an der Benutzeroberfläche)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Analog für die obere Schranke der Quellseite</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Min-Faktor Ziel</span>
+                        </p>
+                        <p class="CellText">(<span class="gui_element">RSF ZMin</span> an der Benutzeroberfläche)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Analog für die untere Schranke der Zielseite</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Max-Faktor Ziel</span>
+                        </p>
+                        <p class="CellText">(<span class="gui_element">RSF ZMax</span> an der Benutzeroberfläche)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Analog für die obere Schranke der Zielseite</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Eigenschaften der Nachfrageschichten im EVA-Nachfragemodell</p>
+        <h5 MadCap:autonum="">Bezirke</h5>
+        <p class="Text">
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Bezirke" />
+            <MadCap:keyword term="Bezirke: Attribute (EVA)" />Durch die Definition der Objekte des Nachfragemodells entstehen zahlreiche Bezirksattribute.</p>
+        <table class="TableStyle_TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="130px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="90px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="275px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Subattribut</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Bedeutung und Wertebereich</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Bilanzfaktor Quell-Aufkommen</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nachfrageschicht</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Gewichtung des Quellaufkommens der Nachfrageschicht</p>
+                        <p class="CellText">Der Wert kann in die Verkehrsverteilung eingehen und durch diese neu berechnet werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Bilanzfaktor Ziel-Aufkommen</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nachfrageschicht</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Gewichtung des Zielaufkommens der Nachfrageschicht</p>
+                        <p class="CellText">Der Wert kann in die Verkehrsverteilung eingehen und durch diese neu berechnet werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Min-Faktor Quelle</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nachfrageschicht</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Faktor für die Untergrenze der Quellaufkommen, falls <span class="gui_element">RandsummeMinFaktorQuelleKonstant </span>= 0</p>
+                        <p class="CellText">Dieses Attribut ist nur dann editierbar, wenn der Faktor nicht durch den gewählten Randsummentyp festgelegt ist.</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Max-Faktor Quelle</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nachfrageschicht</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Analog für die obere Schranke der Quellseite</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Min-Faktor Ziel</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nachfrageschicht</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Analog für die untere Schranke der Zielseite</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Randsummen-Max-Faktor Ziel</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nachfrageschicht</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Analog für die obere Schranke der Zielseite</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl Personen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Personengruppe</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Anzahl Einwohner der Personengruppe im Bezirk</p>
+                        <p class="CellText">Wertebereich: Ganzzahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Wert der Strukturgröße</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Strukturgröße</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Wert, den die Strukturgröße im Bezirk annimmt</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Mobilitätsrate</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nachfrageschicht</p>
+                        <p class="CellText">Personengruppe</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Spezifisches Verkehrsaufkommen der Personengruppe für die Nachfrageschicht. Wirkt nur falls in den Verfahrensparametern der EVA-Verkehrserzeugung <span class="gui_element">MobilitätsRateKonstant</span>(NSch) = 0.</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Quell-Aufkommens-Rate</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nachfrageschicht</p>
+                        <p class="CellText">Strukturgröße</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Erzeugungsrate der Strukturgröße für die Nachfrageschicht auf Quellseite. Wirkt nur, falls in den Verfahrensparametern der EVA-Verkehrserzeugung <span class="gui_element">QuellaufkommensrateKonstant</span>(NSch) = 0.</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Ziel-Aufkommens-Rate</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nachfrageschicht</p>
+                        <p class="CellText">Strukturgröße</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Analog für die Zielseite</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Untersuchungsraumanteil Heimat</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nachfrageschicht</p>
+                        <p class="CellText">Personengruppe</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Im Untersuchungsraum verbleibender Anteil des Heimatverkehrs der Personengruppe für die Nachfrageschicht. Wirkt nur falls in den Verfahrensparametern der EVA-Verkehrserzeugung <span class="gui_element">UntersuchungsraumanteilHeimatKonstant</span>(NSch) = 0</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Untersuchungsraumanteil Quelle</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Nachfrageschicht</p>
+                        <p class="CellText">Strukturgröße</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Im Untersuchungsraum wirksamer Anteil der Strukturgröße für die Nachfrageschicht (auf Quellseite). Wirkt nur, falls in den Verfahrensparametern der EVA-Verkehrserzeugung <span class="gui_element">UntersuchungsraumanteilQuelleKonstant</span>(NSch) = 0</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Untersuchungsraumanteil Ziel</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Nachfrageschicht</p>
+                        <p class="CellText">Strukturgröße</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Analog für die Zielseite</p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 3: ">Bezirksattribute für das EVA-Nachfragemodell</p>
+    </body>
+</html>

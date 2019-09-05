@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="2" MadCap:lastHeight="553" MadCap:lastWidth="663" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_iv_2033098965_1545529">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249377">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc130966605">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc60553489">
+            </a>Aufteilungsmodelle in der Umlegung</h2>
+        <p class="Text">
+            <MadCap:keyword term="Stochastische Umlegung: Aufteilungsmodelle" />
+            <MadCap:keyword term="Umlegungen: Aufteilungsmodelle" />
+            <MadCap:keyword term="Aufteilungsmodelle" />
+            <MadCap:keyword term="Routen:Aufteilung der Nachfrage" />
+            <MadCap:keyword term="Verkehrsnachfrage:auf Routen aufteilen" />Mehrere Umlegungsverfahren in <MadCap:variable name="PTV_Manual.Programmname" /> sind so aufgebaut, dass zunächst eine Menge von Alternativen (Routen oder Verbindungen) ermittelt und anschließend die Gesamtnachfrage einer Quelle-Ziel-Relation auf die Alternativen aufgeteilt wird. Es handelt sich dabei um die (statische) stochastische IV-Umlegung, die dynamisch-stochastische IV-Umlegung und die fahrplanfeine ÖV-Umlegung. Bei den IV-Umlegungen sind die Alternativen verschiedene Routen vom Quellbezirk zum Zielbezirk, bei der ÖV-Umlegung sind die Alternativen verschiedene Verbindungen (Routen mit konkreten Abfahrtzeiten). Im Rest dieses Abschnitts sprechen wir zur Vereinfachung stets von Routen.</p>
+        <p class="Text">Ein Aufteilungsmodell bestimmt den Anteil der Verkehrsnachfrage, den eine Route zugewiesen bekommt. Dieser Anteil hängt vom Widerstand der Route ab. In allen Fällen bestimmt sich der prozentuale Anteil <span class="formula">P</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span> der Route <span class="formula">i</span> an der Verkehrsnachfrage einer Relation im Zeitintervall <span class="formula">a</span> so, dass der Widerstand <span class="formula">R</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span> in eine Aufteilungsfunktion eingesetzt und so der Nutzen<span class="formula" style="font-weight: normal;">U</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span> der Route errechnet wird. Für diese Aufteilungsfunktion stehen die Modelle Kirchhoff, Logit, Box-Cox, Lohse und Lohse mit variablem Beta zur Verfügung. Für alle Modelle gilt der folgende Ansatz:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Der Widerstand <span class="formula">R</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span> wird in den Nutzen <span class="formula">U</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span> von Route <span class="formula">i </span>im Zeitintervall <span class="formula">a</span> umgerechnet:</p>
+        <p class="Text2">
+            <span class="formula">U</span>
+            <span class="formula_subscript">i</span>
+            <span class="formula_superscript">a</span> = <span class="formula">f</span>(<span class="formula">R</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span>)</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Aus diesem Nutzen <span class="formula">U</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span> wird der prozentuale Nachfrage-Anteil <span class="formula">P</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span> berechnet (wobei <span class="formula">n</span> die Gesamtzahl der Routen ist).</p>
+        <p class="Text2">
+            <img src="../Resources/Images/7_102.jpg" />
+        </p>
+        <p class="Text">Unterschiede weisen die Modelle im funktionalen Zusammenhang <span class="formula">f</span> von Widerstand und Nutzen auf.</p>
+    </body>
+</html>

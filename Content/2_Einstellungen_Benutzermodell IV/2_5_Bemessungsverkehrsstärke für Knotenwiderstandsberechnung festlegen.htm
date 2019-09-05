@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="710" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;1h;Hour;PHF">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 " style="mc-hyphenate-shortest-prefix: 3;">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1182016">
+            </a>Bemessungsverkehrsstärke für Knotenwiderstandsberechnung festlegen</h3>
+        <p class="Text">Für alle Knoten legen Sie fest, mit welcher Verkehrsstärke ihr Knotenwiderstand berechnet wird.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Rechnen</span> den Eintrag <span class="gui_element">Allgemeine Verfahrenseinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Allgemeine Verfahrenseinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Navigator den Eintrag <span class="gui_element">IV-Einstellungen&#160;&gt; Widerstände am Knoten</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie in der Auswahlliste <span class="gui_element">Bemessungsverkehrsstärke [PkwE / h]</span> den gewünschten Eintrag.</p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="97px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="380px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Belastung IV [PkwE]</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Bemessungsverkehrsstärke wird aus dem Abbiegerattribut <span class="gui_element">Belastung IV [PkwE/h]</span> genommen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Belastung IV mit Grundbelastung [PkwE]</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Die Bemessungsverkehrsstärke ist die Summe aus dem Abbiegerattribut <span class="gui_element">Belastung IV [PkwE/h]</span> und der Grundbelastung, die auf der Seite <span class="gui_element">IV-Einstellungen&#160;&gt; Umlegung</span> festgelegt ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">ZWert 1 bis 3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Bemessungsverkehrsstärke wird aus einem der gewählten Attribute genommen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Vistro-Stundenbelastung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Diese Option ist nur verfügbar, wenn Sie das  Zusatzmodul <span class="gui_element"><MadCap:variable name="PTV_Manual.Programmname_ptv_vistro" /> Attribute</span> aktiviert haben.</p>
+                        <p class="CellText">Die Bemessungsverkehrsstärke wird dann abhängig vom Analysezeitraum mit Vistro Attributen berechnet:</p>
+                        <ul>
+                            <LI class="List0Tab">Haben Sie im Eingabefeld <span class="gui_element">Zeitintervall</span> 1h eingegeben <MadCap:xref class="sieheUeberschrSeite" href="2_5_Knotenwiderstände nach der Methode Knotenwiderstandsberechnung (ICA) berechn.htm#2_einstellungen_benutzermodell_iv_1682368020_1125615">(siehe „Knotenwiderstände nach der Methode Knotenwiderstandsberechnung (ICA) berechnen“ auf Seite&#160;1)</MadCap:xref>, wird der Peak-Hour-Faktor (PHF) nicht berücksichtigt. Die Bemessungsverkehrsstärke wird berechnet:<span class="formula"> gerundet (Vistro-Gesamt-Stundenbelastung * Vistro zusätzlicher Belastungsfaktor</span>).</LI>
+                            <LI class="List0Tab">Haben Sie im Eingabefeld <span class="gui_element">Zeitintervall</span> einen anderen Wert als 1h eingegeben <MadCap:xref class="sieheUeberschrSeite" href="2_5_Knotenwiderstände nach der Methode Knotenwiderstandsberechnung (ICA) berechn.htm#2_einstellungen_benutzermodell_iv_1682368020_1125615">(siehe „Knotenwiderstände nach der Methode Knotenwiderstandsberechnung (ICA) berechnen“ auf Seite&#160;1)</MadCap:xref>, wird der Peak-Hour-Faktor (PHF) berücksichtigt. Die Bemessungsverkehrsstärke wird berechnet:<span class="formula"> gerundet (Vistro-Gesamt-Stundenbelastung * Vistro zusätzlicher Belastungsfaktor / PHF)</span></LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Option <span class="gui_element">Vistro-Stundenbelastung</span> ist nur für das Programm <MadCap:variable name="PTV_Manual.Programmname_ptv_vistro" /> relevant. Sie ist nur verfügbar, wenn Sie das <MadCap:variable name="PTV_Manual.Programmname_vistro" /> Zusatzmodul aktiviert haben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Geben Sie in das Eingabefeld den gewünschten Faktor ein.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Bemessungsverkehrsstärke ist eingestellt.</p>
+    </body>
+</html>

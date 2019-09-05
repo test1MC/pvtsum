@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="VorHst;EinHst;NachHst;QuellHst;ZielHst;linie;Ride;Wid;Branch;Bound;FZ;UZ;UH;Fak;timetab1;par;frueh;spaet;ΔT;gleichabständig;WID;Fzg;18min;Wid1;Wid2;P1;P2;M1;M2;A_DORF;X_STADT;UWZ;Beförd;Mittl;Bus1;$ODMATRIX;$MATRIXSINGLELISTITEM;PuT;dmd;$TIMESERIES;$TIMESERIESITEM;$VISION;VisumInst;Table;$VERSION;VERSNR;FILETYPE;LANGUAGE;UNIT;Demand;ODMATRIX;NO;CONTENT;ROUND;NUMDECPLACES;Car;HVeh;MATRIXSINGLELISTITEM;MATRIXNO;FROMZONENO;TOZONENO;VALUE;TIMESERIESDOMAINTYPE;$TIMESERIESDOMAINTYPE;DESCRIPTION;UNITYSTRING;MAXVALUE;MINVALUE;No;series;TYPENO;UNITX;NUMINTERVALS;LENGTHINTERVAL;USEVALUELIST;VALUELISTTYPE;VALUEREFTYPE;DECSEPARATOR;VALUESEPARATOR;TIMESERIESITEM;TIMESERIESNO;STARTINTERVALINDEX;ENDINTERVALINDEX;$DEMANDDESCRIPTION;DSEGCODE;DEMANDTIMESERIESNO;STARTDAYINDEX;α;ß;γ;and;MSA" MadCap:lastBlockDepth="2" MadCap:lastHeight="404" MadCap:lastWidth="714">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1229651">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_71884">
+            </a>Dämpfung der Widerstände</h4>
+        <p class="Text">Für die Dämpfung auslastungsabhängiger Widerstände stehen die Verfahren exponentielle Glättung und Mittelwertbildung (MSA) zur Auswahl. Falls die Dämpfung der Widerstände ausgeführt wird, werden in nachfolgenden Schritten die gedämpften Widerstände anstatt der realen Widerstände verwendet.</p>
+        <h5>Exponentielle Glättung</h5>
+        <p class="Text">Der gedämpfte auslastungsabhängige Widerstand der Verbindung <span class="formula">V</span> in Iteration <span class="formula">i</span> ergibt sich aus dem berechneten Widerstand sowie dem gedämpften Widerstand der vorherigen Iteration durch die Formel:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_58.jpg" />
+        </p>
+        <p class="Text">Der Parameter a ist benutzerdefiniert und muss zwischen 0 und 1 liegen.</p>
+        <h5>	Mittelwertbildung (MSA)</h5>
+        <p class="Text">Der gedämpfte auslastungsabhängige Widerstand der Verbindung <span class="formula">V</span> in Iteration <span class="formula">i</span> ergibt sich aus den Widerständen der vorherigen Iterationen gemäß der Formel:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_47.jpg" />
+        </p>
+        <p class="Text">Durch diese Vorgehensweise wird Konvergenz der Widerstände und damit der Belastungen im Verfahren erzwungen.</p>
+    </body>
+</html>

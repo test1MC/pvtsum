@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km;max;Richtungs;te;LocationFault;TimeFault;LayoverTimeFault;VehicleFault;Fahrzeugeinheits;IC;Entfernungs;TP" MadCap:lastBlockDepth="4" MadCap:lastHeight="437" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_betreibermodell_oev_1878159914_1352534">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_77680">
+            </a>Verwendung von Fahrpreisen</h3>
+        <p class="Text">Mit einem Tarifmodell können Fahrpreise sowohl in der taktfeinen als auch in der fahrplanfeinen Umlegung berücksichtigt werden. Alternativ können Sie eine lineare Abhängigkeit des Fahrpreises von der (in Tarifpunkten gemessenen) zurückgelegten Entfernung in der taktfeinen Umlegung modellieren. </p>
+        <p class="Text">Aus beiden ÖV-Umlegungsvarianten können Sie folgende Kenngrößenmatrizen gewinnen:</p>
+        <ul>
+            <LI class="List0">Fahrpreis</LI>
+            <LI class="List0">Anzahl durchfahrener Tarifzonen</LI>
+        </ul>
+        <p class="Text">Bitte beachten Sie, dass die Kenngröße „Anzahl Tarifzonen“ nur diejenigen Tarifzonen zählt, die auch für die Fahrpreis-Ermittlung relevant sind. Falls eine Fahrkarte Vorrang hat (oder bei gleichem Rang günstiger ist), die eine andere Tarifstruktur als „Zonentarif” besitzt, spielen Tarifzonen auf den Teilwegen dieser Fahrkarte keine Rolle und werden auch für die Kenngröße nicht mitgezählt. Dies ist schon deshalb erforderlich, weil mehrere Tarifzonen-Systeme Typ-getrennt nebeneinander existieren können und sich jede Fahrkartenart höchstens auf Tarifzonen eines Typs bezieht. „Die” Anzahl Tarifzonen existiert also nicht.</p>
+        <p class="Text">Nach einer Umlegung können Sie über die Liste <span class="gui_element">ÖV-Teilwege</span> auf die je Teilweg verwendete Fahrkartenart zugreifen und <span class="gui_element" style="font-weight: normal;">Fahrpreis</span> sowie Erlös je Teilweg analysieren.</p>
+        <p class="Text">Der Unterschied zwischen Fahrpreis und Erlös besteht darin, dass sich Fahrpreise immer auf das <MadCap:variable name="PTV_Manual.Programmname" />-Tarifmodell beziehen, Erlöse jedoch alternativ als fixer Erlös pro Beförderungsfall oder als Erlös pro Tarifpunkt berechnet werden können.</p>
+        <p class="Text">Fahrpreise aus dem Tarifmodell können auch als Eingangsdaten der Erlösberechnung im Rahmen der ÖV-betrieblichen Kennzahlen dienen <MadCap:xref class="sieheUeberschrSeite" href="1_7_Erlösberechnung nach dem Tarifmodell.htm#1_betreibermodell_oev_1878159914_1329791"><span style="color: Black;" class="mcFormatColor">(</span><u>Erlösberechnung nach dem Tarifmodell</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+    </body>
+</html>

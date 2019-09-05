@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="DeltaT;bzw;Abfahrts;import;export" MadCap:lastBlockDepth="4" MadCap:lastHeight="911" MadCap:lastWidth="688">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1222293">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_24855">
+            </a>Anwendungsfall (3): Existierende Verbindungen für Suche nutzen</h4>
+        <p class="Text">Zu Beginn der Umlegung können Sie gegebene Verbindungen wiederverwenden, anstatt eine vollständige Verbindungssuche zu rechnen. Dies dient der Beschleunigung der Umlegung und ermöglicht die Anbindung externer Tools zur Verbindungssuche.</p>
+        <p class="Text">Der Import kann aus verschiedenen Quellen erfolgen:</p>
+        <ul>
+            <LI class="List0">aus einer Verbindungsdatei</LI>
+            <LI class="List0">aus einem existierenden Umlegungsergebnis des Netzes</LI>
+        </ul>
+        <p class="Text">Nach Abschluss des Imports fährt die Umlegung genau so fort wie nach einer normalen Verbindungssuche. Insbesondere hat die Quelle keinen Einfluss auf die Verbindungswahl <MadCap:xref class="sieheUeberschrSeite" href="1_6_Verbindungswahl.htm#1_benutzermodell_oev_2318507456_1027508"><span style="color: Black;" class="mcFormatColor">(</span><u>Verbindungswahl</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Importierte Verbindungen haben vorgegebene Abfahrts- und Ankunftszeitpunkte, die vom Umlegungszeitraum abhängen, der bei ihrer Berechnung eingestellt war. Sie können den Umlegungszeitraum für den Import verändern. Der zeitliche Abstand der Verbindungen vom neuen Umlegungszeitraum geht dabei wie üblich als <span class="symbol">D</span><span class="formula">T</span> in den Widerstand ein. Damit ist im Allgemeinen gewährleistet, dass weit außerhalb liegende Verbindungen kaum Nachfrage erhalten. Somit spielen sie auch bei der Kenngrößenberechnung kaum eine Rolle. Beachten Sie jedoch, dass für die Kenngröße Bedienungshäufigkeit stets die absolute Anzahl der Verbindungen relevant ist – unabhängig von ihrer zeitlichen Lage. Für diese Kenngröße sollten die Umlegungszeiträume von Verbindungsexport und -import also deckungsgleich sein.</p>
+        <h5>
+            <a name="1_benutzermodell_oev_2318507456_26451">
+            </a>Import aus einem existierenden Umlegungsergebnis</h5>
+        <p class="Text">Die Verwendung von Wegen aus einer vorherigen Umlegung ähnelt der aus den IV-Umlegungen bekannten Option <span class="gui_element">bestehende Umlegung als Startlösung verwenden</span> <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell IV/2_5_Parameter der Gleichgewichtsumlegung.htm#2_einstellungen_benutzermodell_iv_1682368020_1040412"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Parameter der Gleichgewichtsumlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Im Gegensatz dazu kann im ÖV allerdings ganz auf die Wegesuche verzichtet werden. Hier geben Sie ein Nachfragesegment an, für das bereits eine Umlegung gerechnet wurde.</p>
+        <p class="Text">Damit Wege aus einer bestehenden Umlegung wiederverwendet werden können, muss diese die folgenden Voraussetzungen erfüllen:</p>
+        <ul>
+            <LI class="List0">Die Umlegung muss fahrplanfein sein.</LI>
+            <LI class="List0">Die Umlegung muss mit verbindungsfeiner Wegespeicherung gerechnet worden sein. Bitte beachten Sie, dass dies nicht die Standardeinstellung ist <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Einstellungen zum Speichern der ÖV-Umlegungsergebnisse.htm#2_einstellungen_benutzermodell_oev_2589728191_1033372"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Einstellungen zum Speichern der ÖV-Umlegungsergebnisse</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Das Nachfragesegment muss zum selben Modus gehören wie die aktuell umzulegenden Nachfragesegmente.</LI>
+        </ul>
+        <h5>Import aus einer Verbindungsdatei</h5>
+        <p class="Text">Alternativ können Sie auch Verbindungen aus einer Datei einlesen.</p>
+        <p class="Text">Dazu verwenden Sie dieselben Verbindungsdateien wie beim Verfahren Verbindungsimport <MadCap:xref class="sieheUeberschrSeite" href="1_6_Anwendungsfall (1)_ Externe Wahl _ Verbindungsimport.htm#1_benutzermodell_oev_2318507456_1221037"><span style="color: Black;" class="mcFormatColor">(</span><u>Anwendungsfall (1): Externe Wahl / Verbindungsimport</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Anders als dort werden im Kontext dieses Imports in der Datei abgelegte Belastungen ignoriert, also nur die Wege selbst eingelesen.</p>
+        <p class="Text">Verbindungsdateien können auf beliebige Nachfragesegmente angewandt werden. Bitte stellen Sie bei Bedarf selbst sicher, dass die Wege aus der Verbindungsdatei zum Modus der aktuell umzulegenden Nachfragesegmente passen.</p>
+        <p class="Text">Beim Import wird der Level der enthaltenen Preisinformation automatisch erkannt <MadCap:xref class="sieheUeberschrSeite" href="1_6_Dateiformat für Verbindungsimport und -export.htm#1_benutzermodell_oev_2318507456_1217690"><span style="color: Black;" class="mcFormatColor">(</span><u>Dateiformat für Verbindungsimport und -export</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Beachten Sie, dass die aktuelle Einstellung der Option <span class="gui_element">importierte Preise speichern</span> <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Einstellungen zum Speichern der ÖV-Umlegungsergebnisse.htm#2_einstellungen_benutzermodell_oev_2589728191_1033372"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Einstellungen zum Speichern der ÖV-Umlegungsergebnisse</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> bestimmt, ob und wie diese Preise übernommen werden.</p>
+    </body>
+</html>

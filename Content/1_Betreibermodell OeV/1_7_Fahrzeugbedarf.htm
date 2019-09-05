@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="660" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="NumBlocksFFA;FFA">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1203373">
+            </a>Fahrzeugbedarf</h4>
+        <p class="Text">Der Fahrzeugbedarf kann sowohl <span class="gui_element">längenanteilig</span> als auch <span class="gui_element">zeitanteilig</span> ausgegeben werden. Die Ausgabe erfolgt sowohl für die Objekte der Linienhierarchie als auch schnittscharf für Gebiete. Beide Kennzahlen können für die folgenden Netzobjekte für die Analyseperiode, den Analysehorizont und Analysezeitintervalle berechnet werden.</p>
+        <ul>
+            <LI class="List0">Fahrplanfahrten</LI>
+            <LI class="List0">Fahrzeitprofile</LI>
+            <LI class="List0">Linienrouten</LI>
+            <LI class="List0">Linien</LI>
+            <LI class="List0">Oberlinien</LI>
+            <LI class="List0">Betreiber</LI>
+            <LI class="List0">Verkehrssysteme</LI>
+            <LI class="List0">Gebiete</LI>
+            <LI class="List0">Gebiet ÖV-Detail</LI>
+        </ul>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="106px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="389px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Kennzahl</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Anzahl Fahrzeuge (längenanteilig)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Länge des Fahrplanfahrtabschnitts geteilt durch die Summe der Längen aller Fahrplanfahrt-Umlaufelemente im Umlauf, multipliziert mit der Anzahl Umlauftage des Umlaufs.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Anzahl Fahrzeuge (zeitanteilig)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Dauer des Fahrplanfahrtabschnitts geteilt durch die Summe der Dauern aller Fahrplanfahrt-Umlaufelemente im Umlauf, multipliziert mit der Anzahl Umlauftage des Umlaufs.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_betreibermodell_oev_1878159914_47577">
+                    </a>Kennzahlen der Umlaufbildung und des Fahrzeugaufwands</p>
+            </caption>
+        </table>
+        <p class="Text">Die Zuscheidung der Kennzahl bei der schnittscharfen Berechnung für Gebiete funktioniert wie folgt.</p>
+        <ul>
+            <LI class="List0">Der zeitliche Anteil eines Fahrplanfahrtabschnittes an der Gesamtzeit aller Fahrplanfahrtabschnitte des Umlaufs wird ermittelt (im folgenden <span class="gui_element">NumBlocksFFA </span>genannt).</LI>
+            <LI class="List0">Für jede Strecke, die nach dem zeitlichen Schneiden des Fahrplanfahrtabschnitts mit Analyseperiode oder Zeitintervall als befahren ermittelt wurde, wird der Anteil Fahrzeuge ermittelt über den zeitlichen Anteil der Strecke am <span class="gui_element">FFA•NumBlocksFFA</span>. Dieser Wert wird in der Linienhierarchie aufsummiert und im folgenden <span class="gui_element">NumBlocksFFAOnLink</span> genannt.</LI>
+            <LI class="List0">Für die Gebietsschneidung wird pro Strecke der <span class="gui_element">längenmäßige Anteil der Strecke in einem Gebiet•NumBlocksFFAOnLink </span>multipliziert. Hier geht in jedem Fall der <span class="gui_element">längenbezogene Anteil</span> ein, da die Strecken-Gebietsschneidung immer auf diesem Kriterium basiert. Der dabei entstehende „Fehler“ ist aber minimal, denn relevant ist dies nur für solche Strecken, die über eine Gebietsgrenze hinweg führen. Für alle anderen Strecken beträgt der Anteil 1.0.</LI>
+        </ul>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Um für die Kennzahlen Anzahl Fahrzeuge (längenanteilig) und Anzahl Fahrzeuge (zeitanteilig) ein Ergebnis zu erhalten, müssen Sie zunächst das Verfahren Umlaufbildung und anschließend das Verfahren ÖV-betriebliche Kennzahlen berechnen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

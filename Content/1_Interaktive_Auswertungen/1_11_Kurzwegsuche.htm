@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="5min;en;29min;35s;26min;22min;28min;t0;10min" MadCap:lastBlockDepth="4" MadCap:lastHeight="1358" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_interaktive_auswertungen_949040047_1026906">
+            </a>
+            <MadCap:keyword term="Kurzwegsuche" />
+            <MadCap:keyword term="Interaktive Auswertungen: Kurzwegsuche" />
+            <a name="1_interaktive_auswertungen_949040047_77150">
+            </a>Kurzwegsuche</h2>
+        <p class="Text">Mit der Funktion Kurzwegsuche werden im Netz die günstigsten Wege von einem ausgewählten Start zu einem ausgewählten Ziel gesucht und grafisch ausgegeben (siehe <MadCap:xref class="Label_Image" href="#1_interaktive_auswertungen_949040047_1037044">Abbildung&#160;241</MadCap:xref>). Dabei können verschiedene Suchkriterien für die Ermittlung der kürzesten Wege benutzt werden. Im Anschluss daran können die gefundenen Wege auch in einer Kurzwegsuche-Liste ausgegeben werden.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_ShortestPath.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_interaktive_auswertungen_949040047_1037044">
+            </a>
+            <a name="1_interaktive_auswertungen_949040047_49574">
+            </a>Suche des kürzesten Weges zwischen zwei Knoten im IV</p>
+        <p class="Text">Eine interaktive Kurzwegsuche bietet sich insbesondere an um Fehler in der Netzmodellierung zu finden. Durch die grafische Ausgabe des Kurzweges im Netzeditor können Sie schnell nicht plausible Kurzwege ermitteln. So könnte es etwa vorkommen, dass vom Modellierer Strecken für ein Verkehrssystem versehentlich gesperrt wurden und daher ein unerwarteter Weg zwischen zwei Knoten als der kürzeste Weg angenommen wird. Mit der Kurzwegsuche können Sie solche Wege finden und die Streckensperrung gegebenenfalls aufheben.</p>
+        <h5>
+            <MadCap:keyword term="Kurzwegsuche: IV" />Kurzwegsuche im IV</h5>
+        <p class="Text">Im IV können kürzeste Wege zwischen Knoten, Oberknoten oder Bezirken gesucht werden. Der kürzeste Weg wird jeweils für das ausgewählte Verkehrssystem gesucht. Als Suchbedingungen sind die folgenden Wegewahl-Kriterien möglich.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">t0</span> (Fahrzeit im unbelasteten Netz)</LI>
+            <LI class="List0">
+                <span class="gui_element">tAkt</span> (Fahrzeit im belasteten Netz)</LI>
+            <LI class="List0" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="gui_element">Widerstand</span>
+            </LI>
+            <LI class="List0" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="gui_element">Entfernung</span>
+            </LI>
+            <LI class="List0">
+                <span class="gui_element">ZWerte 1</span> bis <span class="gui_element">3</span> (dies ermöglicht es auch die Werte beliebiger anderer Attribute als Kriterien für die Kurzwegsuche heranzuziehen)</LI>
+        </ul>
+        <h5>
+            <MadCap:keyword term="Kurzwegsuche: ÖV" />Kurzwegsuche im ÖV</h5>
+        <p class="Text">Für den ÖV kann die Kurzwegsuche entweder auf Basis des Fahrplans (Register <span class="gui_element">ÖV</span>) oder verkehrssystemfein (Register <span class="gui_element">ÖV VSys</span>) durchgeführt werden.</p>
+        <p class="Text">Wird sie <span class="gui_element">fahrplanfein</span> ausgeführt, so gilt die Verbindung mit minimalem Suchwiderstand als der kürzeste Weg. Der Suchwiderstand ist dabei eine beliebige Linearkombination aus der Reisezeit und der Umsteigehäufigkeit.</p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">Suchwiderstand = x • Reisezeit + y • Umsteigehäufigkeit</span>
+        </p>
+        <p class="Text">Sie können also angeben, ob eine kürzere Reisezeit oder eine geringere Anzahl an Umstiegen für die Kurzwegsuche als günstiger anzusehen ist. Sie können einen fahrplanfeinen Kurzweg zwischen zwei Bezirken oder zwei Haltestellenbereichen suchen.</p>
+        <p class="Text">Bei der <span class="gui_element">verkehrssystemfeinen</span> Kurzwegsuche wird nicht zwischen den einzelnen Linien eines ÖV-Angebots unterschieden. Die Modellierung des ÖV-Angebots berücksichtigt nur die Strecken eines Grundnetzes mit ihren zugehörigen Fahrzeiten. Das Grundnetz kann dabei eine der folgenden drei Möglichkeiten umfassen.</p>
+        <ul>
+            <LI class="List0">Alle Straßen- und Schienenstrecken des Streckennetzes</LI>
+            <LI class="List0">Nur die von Linien befahrenen Strecken des Streckennetzes</LI>
+            <LI class="List0">Nur die von aktiven Linien befahrenen Strecken des Streckennetzes</LI>
+        </ul>
+        <p class="Text">Aus den Strecken dieses Grundnetzes wird ein Graph aufgebaut, der die Grundlage für eine Kurzwegsuche bildet. Da zwischen einzelnen Linien nicht unterschieden wird, können Umsteigehaltestellen mit den zugehörigen Umsteigezeiten nicht in die Suche einbezogen werden. Allerdings ist es möglich, Übergangszeiten zwischen verschiedenen Verkehrssystemen (Umsteigezuschläge für Verkehrssystemwechsel, wie zum Beispiel zwischen Bus und Bahn) zu berücksichtigen. Die verkehrssystemfeine Kurzwegsuche kann zwischen zwei Bezirken oder zwei Knoten durchgeführt werden.</p>
+    </body>
+</html>

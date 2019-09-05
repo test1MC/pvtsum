@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="414" MadCap:lastWidth="510" MadCap:ignoredWords="en;RLS;Package;INIT;v_akt;t_akt;v_min;v_max;v0;v0sind;mDTV;24h;Emis;Rls90;Nordic;EMI1990;DAT;EMI1992;EMI2000;exe;emiss;dat;cfg;bzw;vmin;vmax;v_0;EDat;HC;NOx;SO2;mKr;PM;NO;reported;PN;Pb;NMHC;NH;of">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_umweltwirkungsmodell_4287321607_1041448">
+            </a>
+            <a name="2_einstellungen_umweltwirkungsmodell_4287321607_58600">
+            </a>Parameter des HBEFA-Verfahrens</h4>
+        <h5 MadCap:autonum="">Register Basis<a name="29002"></a></h5>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Emissionen für Analyseperiode (AP) und Analysehorizont (AH) berechnen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden die Emissionen statisch berechnet, also nur für Analyseperiode und Analysehorizont.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Emissionen für Analyseperiode (AP), Analysehorizont (AH) und pro Analysezeitintervall berechnen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden die Emissionen dynamisch, also für Analyseperiode, Analysehorizont und jedes bestehende Analysezeitintervall berechnet.</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">In den Listen <span class="gui_element">Strecken</span> oder <span class="gui_element">Gebiete</span> können dann Emissionswerte für jedes Analyseintervall einzeln angezeigt werden.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wird für die Bestimmung des LOS das Attribut <span class="gui_element">Auslastung IV </span>verwendet, wird der LOS pro Analysezeitintervall separat berechnet. Allerdings ist der Wert für AP und AH dann nicht aussagekräftig, da <span class="gui_element">Auslastung IV(AP)</span> der Quotient aus <span class="gui_element">Belastung(AP)</span> und <span class="gui_element">Kapazität</span> ist. Dabei bezieht sich die Kapazität auf eine Stunde, während AP üblicherweise länger als eine Stunde dauert, so dass die <span class="gui_element">Auslastung IV(AP)</span> stark überhöht ist und somit fast immer mit LOS 4 angesetzt wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Kaltstart-Emissionen berechnen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden Kaltstart-Emissionen berechnet. </p>
+                        <p class="CellText">
+                            <span class="gui_element">Parameter für Kaltstart</span>
+                        </p>
+                        <p class="CellText">Über die Liste können Sie einen Parameter wählen, der die durchschnittliche Temperatur, die Standzeitenverteilung und die Fahrtzeitenverteilung für den Kaltstart festlegt. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Schadstoffe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Hier wählen Sie die Schadstoffe aus, deren Werte Sie berechnen möchten:</p>
+                        <ul>
+                            <LI class="List0Tab">HBEFA Gruppe 1: fundierte Messprogramme</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">CO</span> (Kohlenmonoxid)</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">mKr</span> (Masse Kraftstoffverbrauch)</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">Benzin</span> (Masse Kraftstoffverbrauch)</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">Diesel</span> (Masse Kraftstoffverbrauch)</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">PM</span> (Masse Partikel)</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">HC</span> (Kohlenwasserstoffe)</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">NO</span>
+                                <span class="gui_element" style="font-size: 80%;vertical-align: sub;">x</span> (Stickoxide)</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">CO</span>
+                                <span class="gui_element" style="font-size: 80%;vertical-align: sub;">2</span>
+                                <span class="gui_element"> reported </span>(Kohlendioxid) </LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">CO</span>
+                                <span class="gui_element" style="font-size: 80%;vertical-align: sub;">2</span>
+                                <span class="gui_element"> total</span> (Kohlendioxid) </LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">PN</span> (Anzahl Partikel)</LI>
+                            <LI class="List0Tab">HBEFA Gruppe 2: ergänzende Messprogramme und Literatur</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">Pb</span> (Blei)</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">Benzol</span>
+                            </LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">CH</span>
+                                <span class="gui_element" style="font-size: 80%;vertical-align: sub;">4</span> (Methan)</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">SO</span>
+                                <span class="gui_element" style="font-size: 80%;vertical-align: sub;">2</span> (Schwefeldioxid)</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">NO</span>
+                                <span class="gui_element" style="font-size: 80%;vertical-align: sub;">2</span> (Stickstoffdioxid)</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">NMHC</span> (nicht-Methan-HC)</LI>
+                            <LI class="List0Tab">HBEFA Gruppe 3: indikative Literaturhinweise</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">NH</span>
+                                <span class="gui_element" style="font-size: 80%;vertical-align: sub;">3 </span>(Ammoniak)</LI>
+                            <LI class="List1Tab">
+                                <span class="gui_element">N</span>
+                                <span class="gui_element" style="font-size: 80%;vertical-align: sub;">2</span>
+                                <span class="gui_element">O</span> (Lachgas)</LI>
+                        </ul>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Emissionsfaktoren der Schadstoffe SO<span class="_Override" style="font-size: 80%;vertical-align: sub;">2</span>, Pb und CO<span class="_Override" style="font-size: 80%;vertical-align: sub;">2</span> reported sind länderspezifisch. Noch können in <MadCap:variable name="PTV_Manual.Programmname" /> jedoch nur die Werte für Deutschland berechnet werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text" style="font-weight: bold;font-style: normal;font-size: 10pt;letter-spacing: 0em;color: #000000;text-decoration: none;">Register Verkehrssituationen<a name="29003"></a></p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1" style="padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Streckenattribut für Geschwindigkeitsklasse</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche können Sie ein Streckenattribut für die Bestimmung der Geschwindigkeitsklasse auswählen. Standardmäßig ist das Attribut <span class="gui_element">v0 IV</span> eingestellt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Level of Service (LOS)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">In diesem Bereich legen Sie fest, wie der LOS bestimmt werden soll.</p>
+                        <p class="CellText">Streckenattribut<span class="gui_element"> für die Bestimmung des Level of Service (LOS)</span></p>
+                        <p class="CellText">Über die Schaltfläche können Sie ein Streckenattribut auswählen, das den Level of Service festlegt, beispielsweise <span class="gui_element">Auslastung IV</span> (Standard) oder ein benutzerdefiniertes Streckenattribut.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Werte direkt verwenden (erwartet Werte 1, 2, 3 oder 4)</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Werte 1, 2, 3 und 4 erwartet. </p>
+                        <p class="CellText">
+                            <span class="gui_element">Nach den Werten klassifizieren mit den angegeben Klassengrenzen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, können Sie drei Werte für Klassengrenzen festlegen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text" style="font-weight: bold;font-style: normal;font-size: 10pt;letter-spacing: 0em;color: #000000;text-decoration: none;">Register Belastung und Verkehrszusammensetzung</p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 11;padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Einheitliche Verkehrszusammensetzung verwenden (empfohlen)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, wird je Nachfragesegment nur eine Verkehrszusammensetzung verwendet.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wir empfehlen diese Option, da andernfalls eine Verlagerung von städtischen auf ländliche Bereiche (beispielsweise eine Umgehungsstraße) nur allein wegen einer anderen anzusetzenden Verkehrszusammensetzung zu veränderten Emissionen führen würde. Somit würden Effekte, die von einer veränderten Fahrleistung oder Verkehrssituation herrührten, überdeckt und verfälscht. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Differenzierte Verkehrszusammensetzung verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, muss jedem Nachfragesegment eine Verkehrszusammensetzung für <span class="gui_element">Innerorts</span>, <span class="gui_element">Außerorts</span> und <span class="gui_element">Autobahn</span> zugeordnet werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Belastungsattribute und Verkehrszusammensetzung pro Nachfragesegment</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Folgende Werte gehen in Ihre Berechnung ein:</p>
+                        <p class="CellText">
+                            <span class="gui_element">NSeg</span>
+                        </p>
+                        <p class="CellText">Die Spalte enthält für jedes zuvor ausgewählte Nachfragesegment eine Zeile.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Belastung Strecke (Attribut)</span>
+                        </p>
+                        <p class="CellText">Hier legen Sie ein Belastungsattribut fest, indem Sie auf die Schaltfläche mit der Attributbeschriftung klicken.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Quell-Belastung Bezirk (Attribut)</span>
+                        </p>
+                        <p class="CellText">Hier wählen Sie ein Bezirksattribut aus, das die Quellbelastung enthält.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">nur einheitliche Verkehrszusammensetzung</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wenn Sie eine einheitliche Verkehrszusammensetzung verwenden, müssen Sie zusätzlich folgende Auswahl treffen:</p>
+                        <p class="CellText">
+                            <span class="gui_element">Verkehrszusammensetzung</span>
+                        </p>
+                        <p class="CellText">Über die Auswahllisten ordnen Sie jedem Nachfragesegment eine Verkehrszusammensetzung zu.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">nur differenzierte Verkehrszusammensetzung</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Wenn Sie eine differenzierte Verkehrszusammensetzung verwenden, müssen Sie zusätzlich folgende Auswahl treffen:</p>
+                        <p class="CellText">
+                            <span class="gui_element">Innerorts</span>
+                        </p>
+                        <p class="CellText">Über die Auswahlliste wählen Sie für jedes Nachfragesegment eine Verkehrszusammensetzung aus.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Außerorts</span>
+                        </p>
+                        <p class="CellText">Über die Auswahlliste wählen Sie für jedes Nachfragesegment eine Verkehrszusammensetzung aus.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Autobahn</span>
+                        </p>
+                        <p class="CellText">Über die Auswahlliste wählen Sie für jedes Nachfragesegment eine Verkehrszusammensetzung aus.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn Sie eine Emissionsberechnung für den ÖV durchführen möchten, legen Sie ein IV-Nachfragesegment für den ÖV an, berechnen anschließend die Anzahl Servicefahrten (AP) mit dem Verfahren <span class="gui_element">ÖV-betriebliche Kennzahlen</span> und wählen im Register <span class="gui_element">Belastung und Verkehrszusammensetzung</span> das Belastungsattribut <span class="gui_element">Anzahl Servicefahrten (AP) </span>aus. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

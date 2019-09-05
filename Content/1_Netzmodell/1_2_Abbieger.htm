@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="599" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_nohead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1064335">
+            </a>
+            <a name="1_netzmodell_1240632468_35649">
+            </a>Abbieger</h4>
+        <p class="Text">
+            <MadCap:keyword term="Netzobjekte: Abbieger" />
+            <MadCap:keyword term="Abbieger" />Abbieger geben an, ob an einem Knoten abgebogen werden darf und welcher Zeitzuschlag für IV-Verkehrssysteme berücksichtigt werden muss.</p>
+        <ul>
+            <LI class="List0">Für den IV können je Abbieger Abbiegezeitzuschlag und Kapazität festgelegt werden, die den Einfluss der Kreuzung auf die Leistungsfähigkeit des Netzes beschreiben. Abbiegerattribute werden für IV-Verkehrssysteme bei der Umlegung berücksichtigt.</LI>
+            <LI class="List0">Abbiegeverbote für ÖV-Verkehrssysteme werden bei der Konstruktion der Linienroute und bei der verkehrssystemfeinen ÖV-Umlegung berücksichtigt.</LI>
+            <LI class="List0">Abbieger, die einen Fahrtrichtungswechsel darstellen, spielen im ÖV bei der Umlaufbildung eine Rolle.</LI>
+        </ul>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> erzeugt beim Einfügen einer Strecke alle theoretisch möglichen Abbieger an beiden Knoten der Strecke und verwendet dafür die Standardwerte aus benutzerdefinierten Abbiegerstandards.</p>
+        <p class="Text">So gibt es beispielsweise an einer vierarmigen Kreuzung insgesamt 16 Abbieger (4 Rechtsabbieger, 4 Geradeausfahrer, 4 Linksabbieger und 4 U-Turns).</p>
+        <p class="Text">Jeder Abbieger wird durch folgende Elemente beschrieben:</p>
+        <ul>
+            <LI class="List0">Liste der zugelassenen/gesperrten Verkehrssysteme</LI>
+            <LI class="List0">IV-Kapazität</LI>
+            <LI class="List0">IV-Zeitzuschlag</LI>
+            <LI class="List0">Ist Fahrtrichtungswechsel</LI>
+        </ul>
+        <p class="Text">Für jeden Abbieger müssen die Verkehrssysteme festgelegt werden, die diesen Abbieger benutzen dürfen. Ein Abbieger unterscheidet zugelassene und gesperrte Verkehrssysteme.</p>
+        <table class="TableStyle-TableStand_nohead" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="118px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="377px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText">Zulässige ÖV-Verkehrssysteme</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText">Der Abbieger darf bei der Konstruktion der Linienroute benutzt werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText">Zulässige IV-Verkehrssysteme</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText">Der Abbieger darf bei der Umlegung unter Berücksichtigung der IV-Kapazität und des IV-Zeitzuschlags benutzt werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body1">
+                        <p class="CellText">Gesperrte Verkehrssysteme</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyA-Column1-Body1">
+                        <p class="CellText">Abbiegeverbot</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Standardmäßig gilt beim Einfügen eines neuen Abbiegers Folgendes:</p>
+        <ul>
+            <LI class="List0">Alle Abbieger sind für alle Verkehrssysteme geöffnet, die sowohl für die Von-Strecke als auch für die Nach-Strecke zugelassen sind. Dies gilt auch für U-Turns.</LI>
+            <LI class="List0">Eine Ausnahme bilden die Verkehrssysteme vom Typ ÖVFuß: Diese werden nicht automatisch in das Verkehrssystem-Set von Abbiegern aufgenommen.</LI>
+        </ul>
+    </body>
+</html>

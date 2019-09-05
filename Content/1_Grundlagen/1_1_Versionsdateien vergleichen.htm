@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="673" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="R2;bzw;ggf;usw;DiffNet;Be;v0IV;DIFFNET;Netz1;Netz2;steuerung;horizonte;of;Bevölkerungs;Erzeugungs;erkehr;tädten;rzeugungs;odell;24h;Wohn;S5;BelFzgIV;Verscomp">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_grundlagen_des_programms_3110159993_1032672">
+            </a>
+            <a name="1_grundlagen_des_programms_3110159993_63869">
+            </a>Versionsdateien vergleichen</h3>
+        <p class="Text">
+            <MadCap:keyword term="Versionsvergleich" />Der Versionsvergleich dient dazu, auf einfachem, schnellem Weg Attributwerte aus anderen Varianten eines Netzes zugänglich zu machen. Der Versionsvergleich eignet sich im Unterschied zur <span class="gui_element">Netzvereinigung</span> eher für Netze, die im Wesentlichen dieselben Netzobjekte enthalten. Die folgende Tabelle gibt die Unterschiede zwischen den beiden Varianten des Versionsvergleichs wieder.</p>
+        <table class="TableStyle-TableStandard" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Versionsvergleich mit Übernahme der Attribute</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Versionsvergleich mit Vergleichsnetz im Hintergrund</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Attribute des Vergleichsnetzes werden zum Zeitpunkt des Versionsvergleichs übernommen und verbleiben beim Speichern in der Version.</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Alle Attribute sind automatisch über eine Relation zum Vergleichsnetz zugänglich, solange dieses Netz im Hintergrund geladen ist. Nach Beendigung der Sitzung sind die Attribute des Vergleichsnetzes nicht in der Version gespeichert, werden jedoch beim erneuten Öffnen wieder sichtbar. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Es erfolgt eine Übernahme ausgewählter direkter Attribute.</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Alle direkten und indirekten Attribute können ausgewertet werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Filter bleiben unberücksichtigt.</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Filter im geöffneten Netz werden auch im Vergleichsnetz ausgewertet und wirken sich dort auf indirekte Attribute mit dem Bezug Aktive aus.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Aktualisieren bedeutet, dass Attributwerte aus dem Vergleichsnetz für bereits ausgewählte Attribute im geöffneten Netz mit den aktuellen Werten neu befüllt werden. Voraussetzung ist, dass der Speicherort des Vergleichsnetzes nicht verändert wurde.</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Aktualisieren bedeutet, dass der Pfad optional geändert werden kann, und dann das Vergleichsnetz im Hintergrund erneut geladen wird. Ein erneutes Öffnen einer Version mit einem solchen Vergleich entspricht einer Aktualisierung im Sinne der linken Spalte.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Attribute des Vergleichsnetzes werden aus dem geöffneten Netz entfernt wenn der Versionsvergleich entfernt wird.</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Das automatische Laden des Vergleichsnetzes im Hintergrund kann über das Entfernen der Referenz zum Vergleichsnetz unterbunden werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Die Werte der ausgewählten Attribute des geöffneten sowie des Vergleichsnetzes erscheinen unter dem Attribut des jeweiligen Objekts im geöffneten Netz.</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">Die Attribute des Vergleichsnetzes werden über eine zusätzliche Relation zum geladenen Netz sichtbar. Untergeordnet zu dieser Relation finden sich alle Attribute und Relationen, die im Vergleichsnetz wirken. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Anwendungsfälle für den Versionsvergleich</h5>
+        <p class="Text">Die Beispiele 1 bis 3 können Sie über beide Varianten des Versionsvergleichs abbilden. Die Wahl der Variante wird in diesen Fällen davon abhängen, in welcher Form die Attribute bzw. Relationen im geöffneten Netz existieren sollen, und ob Sie die Ergebnisse einer Momentaufnahme zu einem späteren Zeitpunkt noch benötigen.</p>
+        <p class="Text">Beispiel 1: Sie haben die Kapazität eines Streckenkorridors erhöht oder den Fahrplan auf ÖV-Linien verdichtet. Sie können über den Versionsvergleich analysieren, wie und wo sich diese Maßnahmen auswirken, indem Sie per Versionsvergleich Umlegungsattribute vergleichen.</p>
+        <p class="Text">Beispiel 2: Sie haben für ein Netz in zwei verschiedenen Versionsdateien Umlegungen berechnet, beispielsweise für unterschiedliche Nachfragedaten. Die typischen Umlegungsattribute, wie Belastung oder Anzahl der Umsteiger, sowie die veränderten Nachfragedaten können Sie anschließend in einem Versionsvergleich direkt vergleichen.</p>
+        <p class="Text">Beispiel 3: Sie haben in zwei Versionsdateien unter verschiedenen Randbedingungen Umlaufbildungen durchgeführt. Die verschiedenen Ergebnisse, zum Beispiel die Anzahl Fahrzeuge je Fahrzeugkombination, vergleichen Sie über den Versionsvergleich.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Mit Hilfe der Modelltransferdatei können Sie die Netz- und Nachfragedaten der verglichenen Modelle ineinander überführen <MadCap:xref class="sieheUeberschrSeite" href="1_1_Modelltransferdateien.htm#1_grundlagen_des_programms_3110159993_1033522"><span style="color: Black;" class="mcFormatColor">(</span><u>Modelltransferdateien</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Beispiele 4 und 5 zeigen typische Anwendungsfälle, bei denen das Vergleichsnetz im Hintergrund geladen werden muss, d.&#160;h. diese Fälle können Sie nur über diese Variante des Versionsvergleichs abbilden.</p>
+        <p class="Text">Beispiel 4: Sie haben zwei Netze mit gleicher Infrastruktur, aber das ÖV-Angebot unterscheidet sich. Über Streckenbalken soll visualisiert werden, wie sich die Belastung unter Auswahl verschiedener Kriterien (Linienname, Verkehrstag) unterscheidet. Dazu werden indirekte Streckenattribute benötigt, die sich auf ein gefiltertes Angebot beziehen, z.&#160;B. Sum:Linienroutenelemente\Sum:Benutzende Fahrzeitprofilelemente\SumAktive: Fahrplanfahrtelemente\Belastung(AP). Der Filter im geöffneten Netz wird in beiden Netzen, und zwar im jeweiligen Kontext des Netzes, ausgewertet. Damit können Sie auf einfache Weise Differenzen der jeweiligen Streckenbelastungen darstellen. </p>
+        <p class="Text">Beispiel 5: Sie möchten alle Strecken visualisieren, auf denen die Belastungen der Linie S5 in beiden Netzen unterschiedlich sind. Dazu werden im geöffneten Netz zwei Filterbedingungen gesetzt: Über den Linienfilter wird die Linie S5 gewählt. Diese Bedingung kann in beiden Netzen ausgewertet werden. Diese Auswertung ist unabhängig vom jeweils anderen Netz und bewirkt Änderungen indirekter Attribute mit dem Bezug Aktive im jeweiligen Netz. Im Streckenfilter ist anzugeben, dass die Differenz der Streckenbelastungen ungleich null ist (Netz B\Dieses Netz - Vergleichsnetz\Sum:Linienroutenelemente\Sum:Benutzende Fahrzeitprofilelemente\SumAktive:Fahrplanfahrtelemente\Belastung (AP) <span class="_Override" style="font-size: 11pt;line-height: 13pt;">≠</span> 0), d.h. dazu wird im geöffneten Netz über die Relation zum Vergleichsnetz auf die berechnete Differenz zugegriffen. Diese schließt indirekte aktive Attribute ein. Diese Bedingung im Streckenfilter kann nur im geöffneten Netz ausgewertet werden.</p>
+        <h5>Versionsvergleich mit Übernahme der Attribute</h5>
+        <p class="Text">Zu einer geöffneten Versionsdatei lesen Sie eine oder mehrere Versionsdateien zum Vergleich ein. Als Ergebnis dieses Versionsvergleichs erzeugt <MadCap:variable name="PTV_Manual.Programmname" /> automatisch Attribute, die die ausgewählten Attributwerte aus den anderen Versionsdateien enthalten. Diese hinzugelesenen neuen Attribute erkennen Sie daran, dass der Code des Vergleichs an den Attributnamen angehängt wird (<MadCap:xref href="#1_grundlagen_des_programms_3110159993_1036416" class="Label_Table">Tabelle 1</MadCap:xref>).</p>
+        <p class="Text">Zusätzlich fügt <MadCap:variable name="PTV_Manual.Programmname" /> bei numerischen Attributen automatisch verschiedene Vergleichsattribute ein: Für jedes verglichene numerische Attribut werden zusätzliche Attribute für die absolute Differenz, die relative Abweichung und das Minimum und das Maximum angelegt. </p>
+        <p class="Text">Die folgende Tabelle zeigt anhand eines Beispiels die sieben zusätzlichen Attribute, die bei einem Versionsvergleich einer Version A mit einer Version B für das numerische Attribut Belastung IV (AP) angelegt werden.</p>
+        <table class="TableStyle-TableStandard" style="mc-table-style: url('../Resources/TableStyles/TableStandard.css');caption-side: bottom;" cellspacing="0">
+            <caption>
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_grundlagen_des_programms_3110159993_1036416">
+                    </a>Zusätzliche Attribute für ein verglichenes numerisches Attribut beim Versionsvergleich</p>
+            </caption>
+            <col class="TableStyle-TableStandard-Column-Column1" />
+            <col class="TableStyle-TableStandard-Column-Column1" />
+            <col class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Neues Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Kurzname deutsch</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Langname deutsch</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Wert aus Netz B</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">BelFzgIV,B(AP)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Belastung IV [Fzg] B (AP)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Absolute Differenz A-B</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">BelFzgIV,-B(AP)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Belastung IV [Fzg] - B (AP)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Absolute Differenz B-A</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">BelFzgIV,B-(AP)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Belastung IV [Fzg] B - (AP)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Relative Abweichung bezüglich B (A-B)/B</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">BelFzgIV,-B%(AP)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Belastung IV [Fzg] - B % (AP)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Relative Abweichung bezüglich A (B-A)/A</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">BelFzgIV,B-%(AP)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Belastung IV [Fzg] B - % (AP)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Minimum der beiden Attributwerte</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">BelFzgIV,B,Min(AP)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Belastung IV [Fzg] B Min (AP)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">Maximum der beiden Attributwerte</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">BelFzgIV,B,Max(AP)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">Belastung IV [Fzg] B Max (AP)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Werte der hinzugelesenen Attribute können nicht manuell geändert werden. Jedoch werden alle berechneten Werte, also alle außer dem Wert aus Netz B, automatisch neu berechnet, sobald sich etwas an den entsprechenden Werten im Ausgangsnetz A ändert.</p>
+        <p class="Text">Mit der Versionsdatei, die den Versionsvergleich enthält, können Sie alle <MadCap:variable name="PTV_Manual.Programmname" />-Funktionen weiter nutzen, einschließlich Berechnungen. Die eingelesenen Vergleiche können Sie mit der Version speichern.</p>
+        <p class="Text">Die hinzugelesenen Attribute können Sie nach Belieben darstellen und auswerten <MadCap:xref class="sieheUeberschrSeite" href="1_1_Auswertung von Ergebnissen.htm#1_grundlagen_des_programms_3110159993_1026064"><span style="color: Black;" class="mcFormatColor">(</span><u>Auswertung von Ergebnissen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_version_comparison_original_version.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Netz der ursprünglichen Version</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_version_comparison_second_version.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">Netz der Version, die zum Versionsvergleich verwendet wird</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_version_comparison_combined.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">Netz mit Versionsvergleich: Die Belastungen der beiden verglichenen Versionen sowie die Differenz sind dargestellt. „Verscomp“ ist der Name des Versionsvergleichs.</p>
+        <p class="Text">Sie können die Attributwerte der hinzugelesenen Version außerdem einfach in benutzerdefinierte Attribute umwandeln, sodass sie auch nach Beenden des Vergleichs weiter zur Verfügung stehen.</p>
+        <p class="Text">Die Verknüpfung zu den hinzugelesenen Daten wird nicht automatisch aktualisiert, Sie können Sie jedoch bei Bedarf aktualisieren. So können Sie beispielsweise die gleiche Versionsdatei zu verschiedenen Zeitpunkten einlesen und so die Änderungen verfolgen.</p>
+        <p class="Text">Die Verknüpfung zu den hinzugelesenen Daten können Sie jederzeit wieder lösen.</p>
+        <h5>Sonderfälle</h5>
+        <p class="Text">Wenn die verglichenen Versionen nicht die gleichen Netzobjekte oder Attribute enthalten, passiert Folgendes (geöffnete Version: A, hinzugelesene Version: B)</p>
+        <ul>
+            <LI class="List0">Existiert ein Objekt nur in B, ist es im Versionsvergleich nicht vorhanden.</LI>
+            <LI class="List0">Existiert ein Objekt nur in A, sind die Attributwerte von B leer.</LI>
+        </ul>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Ob ein Netzobjekt in einer der Vergleichsversionen vorhandenen ist, erkennen Sie mit Hilfe des Attributs <span class="gui_element">Existiert in Netz </span><span class="path">&lt;Code des Versionsvergleichs&gt;</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Existiert ein Attribut nur in B, kann es für den Versionsvergleich nicht ausgewählt werden.</LI>
+            <LI class="List0">Existiert ein Attribut nur in A, wird es nicht zum Vergleich verwendet.</LI>
+            <LI class="List0">Besitzt ein Attribut verschiedene Subattributsausprägungen in A und B, werden nur diejenigen betrachtet, die in A gültig sind. In B nicht vorhandene Subattributsausprägungen besitzen einen leeren Attributwert.</LI>
+        </ul>
+        <h5>Versionsvergleich mit Vergleichsnetz im Hintergrund</h5>
+        <p class="Text">Zu einer geöffneten Versionsdatei werden eine oder mehrere ausgewählte Versionsdateien als Vergleichsnetze im Hintergrund geladen. Damit werden alle Attribute des Vergleichsnetzes einschließlich indirekter Attribute in den Attributauswahlfenstern über die Relation zum geladenen Netz sichtbar. Diese Relation ist am Code des Versionsvergleichs erkennbar. Insbesondere über indirekte Attribute mit Aggregationsfunktionen, die aktive Objekte umfassen, eröffnen sich in Kombination mit Filtern im geöffneten Netz neue Möglichkeiten. Filter können Sie im geöffneten Netz definieren und dann auf beide Netze im jeweiligen Kontext anwenden. Damit können auf einfache Weise, nämlich durch Änderung der Filterbedingungen, systematisch Auswertungen der indirekten Attribute vorgenommen werden.</p>
+        <p class="Text">Wie beim Versionsvergleich mit Übernahme der Attribute werden bei numerischen Werten zusätzlich Vergleichsattribute wie relative Abweichung, Differenz, Maximum und Minimum erzeugt. Eine Umwandlung in benutzerdefinierte Attribute ist nach Auswahl ebenfalls möglich.</p>
+        <h5>Sonderfälle</h5>
+        <p class="Text">Grundsätzlich werden Objekte auf der Basis ihrer Schlüssel identifiziert. Aus der geöffneten Version (Netz A) wird eine Relation zum Objekt im Vergleichsnetz (Netz B) erzeugt. Wenn die verglichenen Versionen nicht die gleichen Netzobjekte oder Attribute enthalten, passiert Folgendes:</p>
+        <ul>
+            <LI class="List0">Existiert ein Objekt nur in B, ist das Objekt nur über indirekte Attribute zugänglich (z.&#160;B. ein nur in B existierender Knoten ist auch Teil aller Knoten in B - letzteres ist eine in Netz B bestehende Relation - zu denen aus A eine Relation besteht).</LI>
+            <LI class="List0">Existiert ein Objekt nur in A, sind die Werte der Relation zu B leer.</LI>
+            <LI class="List0">Besitzt ein Attribut verschiedene Subattributausprägungen in A und B, so können Ausprägungen, die nur in B existieren, über indirekte Attribute erreicht werden. Bei in B nicht vorhandenen Subattributausprägungen ist der berechnete Attributwert der Relation leer.</LI>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="294" MadCap:lastWidth="510" MadCap:ignoredWords="Nr;No;xls">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_netz_bearbeiten_23091886_1137098">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_97332">
+            </a>Auswirkungen von Änderungen an Kordonstrecken</h3>
+        <p class="Text">
+            <MadCap:keyword term="Oberknoten:Kordonstrecken ändern" />
+            <MadCap:keyword term="Kordonstrecken:ändern" />Wenn Sie Änderungen an den Kordonstrecken <MadCap:xref class="Grundlagen" href="../1_Netzmodell/1_2_Oberknoten.htm#1_netzmodell_1240632468_1082298">Siehe "Oberknoten"</MadCap:xref> eines Oberknotens vornehmen (einfügen oder löschen) oder an der Zuordnung von Knoten zu Oberknoten <MadCap:xref class="sieheUeberschrSeite" href="Einen_Oberknoten_suchen.htm#2_netz_bearbeiten_23091886_1136512"><span style="color: Black;" class="mcFormatColor">(</span><u>Einen Oberknoten suchen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>, kann sich dies auf das Netz und andere Netzobjekte auswirken. </p>
+        <p class="Text">Änderungen an inneren Strecken, Knoten und Abbiegern oder das Löschen dieser Objekte wirken sich jedoch nicht auf das Netz und andere Netzobjekte aus.</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="139px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="356px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Änderung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Auswirkung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Kordonstrecke einfügen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Wenn Sie eine neue Kordonstrecke einfügen, werden von ihr zu jeder bestehenden Kordonstrecke zwei neue Oberabbieger erzeugt. Diese werden mit Daten anhand der Abbiegerstandards vorbelegt <MadCap:xref class="sieheUeberschrSeite" href="Abbiegerstandards_verwalten.htm#2_netz_bearbeiten_23091886_1544499"><span style="color: Black;" class="mcFormatColor">(</span><u>Abbiegerstandards verwalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Kordonstrecke löschen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Wenn Sie eine Kordonstrecke löschen, werden auch die ihr zugehörigen Oberabbieger gelöscht.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Knoten zum Oberknoten hinzufügen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Wenn Sie einen Knoten einem Oberknoten neu zuordnen, hat dies folgende Auswirkungen:</p>
+                        <ul>
+                            <LI class="List0Tab">Alle Strecken, die von diesem Knoten ausgehen und zu bereits zugeordneten Knoten führen, werden zu inneren Strecken <MadCap:xref class="Grundlagen" href="../1_Netzmodell/1_2_Oberknoten.htm#1_netzmodell_1240632468_1082298">Siehe "Oberknoten"</MadCap:xref>.</LI>
+                            <LI class="List0Tab">Alle Strecken, die von diesem Knoten ausgehen und zu nicht zugeordneten Knoten führen, werden zu neuen Kordonstrecken.</LI>
+                            <LI class="List0Tab">Oberabbieger zwischen unveränderten Kordonstrecken bleiben bestehen. </LI>
+                            <LI class="List0Tab">Oberabbieger von neuen Kordonstrecken zu bestehenden Kordonstrecken werden erzeugt und mit Daten anhand der Abbiegerstandards vorbelegt. Wenn dem Oberknoten vorher keine Knoten zugeordnet waren, werden die Oberabbieger mit Daten anhand von Kurzwegen vorbelegt.</LI>
+                            <LI class="List0Tab">Oberabbieger von bestehenden Kordonstrecken zu inneren Strecken werden gelöscht.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Knoten aus Oberknoten löschen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">Wenn Sie einen Knoten aus einem Oberknoten löschen, hat dies folgende Auswirkungen:</p>
+                        <ul>
+                            <LI class="List0Tab">Alle Strecken, die von zugeordneten Knoten ausgehen und zu diesem Knoten führen, werden zu neuen Kordonstrecken.</LI>
+                            <LI class="List0Tab">Alle Strecken, die von diesem Knoten ausgehen und zu nicht zugeordneten Knoten führen, werden zu äußeren Strecken.</LI>
+                            <LI class="List0Tab">Oberabbieger zwischen unveränderten Kordonstrecken bleiben bestehen. </LI>
+                            <LI class="List0Tab">Oberabbieger von neuen Kordonstrecken zu bestehenden Kordonstrecken werden erzeugt und mit Daten anhand der Abbiegerstandards vorbelegt. </LI>
+                            <LI class="List0Tab">Oberabbieger von bestehenden Kordonstrecken zu äußeren Strecken werden gelöscht.</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="690" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="D3;$E;$Relationen;mtx;mx;nse;$V;$O;Nr;$S;$T;RandomRound;$NAMES">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_anhang_3073197290_1035747">
+            </a>
+            <a name="2_anhang_3073197290_52199">
+            </a>
+            <MadCap:variable name="PTV_Manual.Programmname" />-spezifische Matrixdateiformate</h3>
+        <p class="Text">Die folgende Tabelle enthält alle <MadCap:variable name="PTV_Manual.Programmname" />-spezifischen Matrixdateiformate, die Sie in <MadCap:variable name="PTV_Manual.Programmname" /> lesen und/oder speichern können.</p>
+        <table class="TableStyle_TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="63px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="245px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="187px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep" style="padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellCaption">Formatcode</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Hinweise</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">$V</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Standard-<MadCap:variable name="PTV_Manual.Programmname" />-Format, symmetrisch</p>
+                        <p class="CellText">(Anzahl Quell-Objekte x Anzahl Ziel-Objekte)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Textformat</p>
+                        <p class="CellText">Für ÖV-Kenngrößenmatrizen existiert zusätzlich ein Teil-V-Format.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">$O</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Eine Quelle-Ziel-Beziehung pro Zeile:</p>
+                        <p class="CellText">Quell-Objekt, Ziel-Objekt, Matrixwert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Textformat</p>
+                        <p class="CellText">Nur Werte ungleich null werden ausgegeben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">$E</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Ein Quell-Objekt pro Zeile:</p>
+                        <p class="CellText">Minuszeichen, Quell-Objekt-Nr., Ziel-Objekt-Nummern (aufsteigend sortiert) und dazu Matrixwerte</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Textformat</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">$S</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Ein Quell-Objekt pro Zeile:</p>
+                        <p class="CellText">Quell-Objekt-Nr., Ziel-Objekt-Nummern (aufsteigend sortiert) und dazu Matrixwerte</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Textformat</p>
+                        <p class="CellText">Sie können dieses Format nur in <MadCap:variable name="PTV_Manual.Programmname" /> speichern.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">$T</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Teilmatrix oder asymmetrische Matrix</p>
+                        <p class="CellText">(Anzahl Quell-Objekte x Anzahl Ziel-Objekte)</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Textformat</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Abhängig von den Einstellungen für das Speichern der Matrizen, können folgende zusätzliche Parameter mit gespeichert werden <MadCap:xref class="sieheUeberschrSeite" href="../2_Nachfrage_modellieren/2_3_Matrizen speichern.htm#2_nachfrage_modellieren_1800171850_1034350"><span style="color: Black;" class="mcFormatColor">(</span><u>Matrizen speichern</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>:</p>
+        <table class="TableStyle_TableStandard" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="62px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="434px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Parameter</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">R</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Die Matrixwerte sind zufällig gerundet (RandomRound).</p>
+                        <p class="CellText">Ein Dateiformatcode ohne R bedeutet, die Matrixwerte sind arithmetisch oder nicht gerundet (wenn eine entsprechende Anzahl Dezimalstellen gewählt wurde).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">D</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Anzahl Dezimalstellen der Matrixwerte (falls &gt; 0)</p>
+                        <p class="CellText">Ein Dateiformatcode ohne D bedeutet, die Matrixwerte sind ganzzahlig.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">M</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Verkehrsmittelnummer (nur für das Teil-V-Format)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Am Ende der Matrixdatei, im Abschnitt $NAMES, werden die Nummern und die Namen der Quell- und Zielobjekte aufgelistet.</p>
+    </body>
+</html>

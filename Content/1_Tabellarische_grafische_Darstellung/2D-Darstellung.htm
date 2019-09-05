@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="500m" MadCap:lastBlockDepth="4" MadCap:lastHeight="510" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_tabellarische_und_grafische_darstellung_86324768_1026842">
+            </a>
+            <a name="1_tabellarische_und_grafische_darstellung_86324768_45538">
+            </a>2D-Darstellung</h2>
+        <p class="Text">
+            <MadCap:keyword term="Darstellung: 2D" />Für Punktobjekte (zum Beispiel Knoten oder Haltestellen) ist zusätzlich eine flächige (extrapolierte) Darstellung der Verteilung von Attributwerten möglich. Hierzu kann ein beliebiges numerisches Attribut ausgewählt werden.</p>
+        <p class="Text">Der Attributwert des Punktobjekts wird für die grafische Darstellung auf die gesamte Netzfläche extrapoliert. Mit Hilfe von bis zu 10 Wertebereichsintervallen, denen jeweils eine Hintergrundfarbe zugeordnet ist, wird die flächige Verteilung der Attributwerte visualisiert.</p>
+        <p class="Text">Ablauf der Extrapolation</p>
+        <ul>
+            <LI class="List0">Ausgehend von jedem <MadCap:variable name="PTV_Manual.Programmname" />-Punktobjekt der gewählten Klasse (Knoten, Bezirke,...) wird für alle Koordinatenpaare in der Fläche ein extrapolierter Wert berechnet. Dabei nimmt der extrapolierte Wert linear mit dem Abstand zum Punktobjekt zu. Die Geschwindigkeit der Zunahme wird über den Parameter <span class="gui_element">v&#8209;Zugang </span>gesteuert.</LI>
+            <LI class="List0">Der endgültige extrapolierte Wert für ein Koordinatenpaar ergibt sich als Minimum über die Extrapolation zu allen <MadCap:variable name="PTV_Manual.Programmname" />-Punktobjekten.</LI>
+        </ul>
+        <h5>Beispiel</h5>
+        <p class="Text">Am Knoten P<span class="_Override" style="font-size: 80%;vertical-align: sub;">1</span> mit den Koordinaten (x,y) = (0,0) liege ein ZWert1 von 100 vor. Der Punkt P = (300, 400) hat einen Abstand von <img src="../Resources/Images/14_8.jpg" /> zu P<span class="_Override" style="font-size: 80%;vertical-align: sub;">1</span>. Nimmt man einen Netzmaßstab von 1 an, entspricht dies einer Entfernung von 500m. Bei Verwendung von v-Zugang = 5 (km/h) ergibt sich hieraus eine ZWert-Zunahme von 360, denn bei 5 km/h benötigt man für 500m genau 360 Sekunden. Der auf P<span class="_Override" style="font-size: 80%;vertical-align: sub;">1</span> bezogene extrapolierte ZWert am Punkt P ist somit gleich 100 + 360 = 460.</p>
+        <p class="Text">Durch Minimumbildung über die zu allen Punktobjekten P<span class="_Override" style="font-size: 80%;vertical-align: sub;">i</span> (hier Knoten) des Netzes berechneten Extrapolationen errechnet <MadCap:variable name="PTV_Manual.Programmname" /> schließlich den extrapolierten ZWert für P.</p>
+        <p class="Text">Basierend auf den benutzerdefinierten Klassifizierungsintervallen ergeben sich in der grafischen Netzdarstellung hieraus Wertebereichsringe gleicher Farbe um jedes Punktobjekt (<MadCap:xref class="Label_Image" href="#1_tabellarische_und_grafische_darstellung_86324768_1037311">Abbildung&#160;264</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_2D_Display.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997538px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_tabellarische_und_grafische_darstellung_86324768_1037311">
+            </a>
+            <a name="1_tabellarische_und_grafische_darstellung_86324768_30041">
+            </a>Isochronendarstellung</p>
+        <p class="Text">Ursprünglich wurde diese Darstellungsart für die grafische Auswertung von Isochronen <MadCap:xref class="sieheUeberschrSeite" href="../2_Einstellungen_interaktive_Auswertungen/2_11_Isochronen und Erreichbarkeit von Netzobjekten anzeigen.htm#2_einstellungen_interaktive_auswertung_2909108304_1033091"><span style="color: Black;" class="mcFormatColor">(</span><u>Isochronen und Erreichbarkeit von Netzobjekten anzeigen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> in <MadCap:variable name="PTV_Manual.Programmname" /> implementiert, die die Erreichbarkeit der Netzobjekte veranschaulicht. </p>
+        <p class="Text">Für die Extrapolation numerischer Attribute von <MadCap:variable name="PTV_Manual.Programmname" />-Punktobjekten sind daher die folgenden Eingabeparameter nicht mehr zwingend vom Typ Geschwindigkeit oder Zeit.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">V-Zugang</span> (Zugangsgeschwindigkeit) für die Extrapolation der Attributwerte</LI>
+            <LI class="List0">
+                <span class="gui_element">Max. T-Zug</span> (maximaler extrapolierter Attributwert) für die klassifizierte Darstellung</LI>
+        </ul>
+        <h5>
+            <span class="gui_element">V-Zugang</span> (Zugangsgeschwindigkeit)</h5>
+        <p class="Text">Intern verwendet <MadCap:variable name="PTV_Manual.Programmname" /> jedoch nach wie vor die übliche Weg-Zeit-Formel <img src="../Resources/Images/14_35.jpg" />, wobei <span class="formula">v&#160;=&#160;v&#160;&#8209;&#160;Zugang</span> durch den Anwender vorgegeben, <span class="path">s</span> als Netzabstand bekannt und <span class="path">t</span> zu berechnen ist. Für Attribute anderer Datentypen (zum Beispiel einheitenlose ZWerte) ist zu beachten, dass das Ergebnis der Formel <img src="../Resources/Images/14_36.jpg" /> ein Sekundenwert ist, der in Abhängigkeit vom Datentyp des Attributs als 1 Einheit interpretiert wird. Im obigen Beispiel werden die 360 Sekunden etwa als ZWert-Aufschlag von 360 gewertet.</p>
+    </body>
+</html>

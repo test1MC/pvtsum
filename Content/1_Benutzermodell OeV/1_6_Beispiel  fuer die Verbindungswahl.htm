@@ -1,0 +1,555 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="537" MadCap:lastWidth="524" MadCap:ignoredWords="VorHst;EinHst;NachHst;QuellHst;ZielHst;linie;Ride;Wid;Branch;Bound;FZ;UZ;UH;Fak;timetab1;par;frueh;spaet;ΔT">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1086108">
+            </a>
+            <MadCap:keyword term="Fahrplanfeine Umlegung: Verbindungswahl" />Beispiel für die Verbindungswahl</h4>
+        <p class="Text">
+            <MadCap:keyword term="Fahrplanfeine Umlegung: Verbindungswahl" />Die Wirkung der Verbindungswahl des fahrplanfeinen Verfahrens wird anhand der Ergebnisse einer Verbindungssuche mit 10 Minuten Umsteigezuschlag gezeigt. Es wird die Branch &amp; Bound-Suche verwendet. Diese Suche liefert alle fünf Verbindungen, die in <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1179996">Tabelle&#160;172</MadCap:xref> dargestellt sind. Eine einkriterielle Kurzwegsuche würde dagegen nur die Verbindungen 1, 3 und 5 finden, da sie jeweils den kleinsten Widerstand unter den Verbindungen ihres Abfahrtszeitpunkts besitzen. Der Widerstand (= empfundene Reisezeit) ergibt sich wie folgt aus der gewichteten Summe der Kenngrößen Fahrzeit (<span class="formula">FZ</span>), Umsteigewartezeit (<span class="formula">UZ</span>) und Umsteigehäufigkeit (<span class="formula">UH</span>).</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="51px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="65px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="56px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="39px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="240px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Verb. <span class="formula" style="line-height: 11pt;">i</span></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">ab</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula" style="line-height: 11pt;">FZ</span>
+                            <span class="formula_subscript" style="font-size: 8pt;line-height: 10pt;">i</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula" style="line-height: 11pt;">UZ</span>
+                            <span class="formula_subscript" style="font-size: 8pt;line-height: 10pt;">i</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula" style="line-height: 11pt;">UH</span>
+                            <span class="formula_subscript" style="font-size: 8pt;line-height: 10pt;">i</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="formula" style="line-height: 11pt;">ERZ</span>
+                            <span class="formula_subscript" style="font-size: 8pt;line-height: 10pt;">i</span> = <span class="formula" style="line-height: 11pt;">FZ</span><span class="formula_subscript" style="font-size: 8pt;line-height: 10pt;">i</span> + <span class="formula" style="line-height: 11pt;">UZ</span><span class="formula_subscript" style="font-size: 8pt;line-height: 10pt;">i</span> • <span class="formula" style="line-height: 11pt;">Fak</span><span class="formula_subscript" style="font-size: 8pt;line-height: 10pt;">UZ</span> + <span class="formula" style="line-height: 11pt;">UH</span><span class="formula_subscript" style="font-size: 8pt;line-height: 10pt;">i</span> • <span class="formula" style="line-height: 11pt;">Fak</span><span class="formula_subscript" style="font-size: 8pt;line-height: 10pt;">UH</span></p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6:10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">28 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">28  +  3 • 2  +  1 • 2  =  36</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">6:10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">45 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">45  +  0 • 2  +  0 • 2  =  45</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6:55</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">45 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">45  +  0 • 2  +  0 • 2  =  45</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">7:25</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">28 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">8 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">28  +  8 • 2  +  1 • 2  =  46</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">7:25</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">45 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">45  +  0 • 2  +  0 • 2  =  45</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="6" class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellCaption">
+                            <span class="formula" style="line-height: 11pt;">Fak</span>
+                            <span class="formula_subscript" style="font-size: 8pt;line-height: 10pt;">UZ</span> = 2, <span class="formula" style="line-height: 11pt;">Fak</span><span class="formula_subscript" style="font-size: 8pt;line-height: 10pt;">UH</span> = 2</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_oev_2318507456_1179996">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456__ref506260498">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456__toc507489467">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456__ref506170664">
+                    </a>Verbindungssuche-Ergebnis (Umsteigezuschlag 10 min, Parameterdatei <span class="path" style="text-transform: uppercase;">timetab1.par</span>)</p>
+            </caption>
+        </table>
+        <p class="Text">
+            <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1180038">Tabelle&#160;173</MadCap:xref> zeigt die Widerstände der Verbindungen. Da <span class="symbol">D</span><span class="formula">T</span> von der Wunschabfahrtszeit der Fahrgäste abhängt, ergeben sich für jeden Zeitraum des Fahrgastaufkommens andere Widerstände. So sind die Widerstände der ersten beiden Verbindungen im ersten Intervall geringer, die der letzten drei Verbindungen dagegen im zweiten Intervall. Die Widerstandsdefinition sei hier so gewählt, dass folgendes gilt:</p>
+        <p class="Formula">
+            <span class="formula">R</span>
+            <span class="formula_subscript">i</span>
+            <span class="formula_superscript">a</span> = <span class="formula">ERZ</span><span class="formula_subscript">i</span> • 1.0 + <span class="symbol">D</span><span class="formula">T</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span><span class="formula">frueh</span> • 1.0 + <span class="symbol">D</span><span class="formula">T</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span><span class="formula">spaet</span> • 1.0</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 494px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="50px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="57px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="106px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="102px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="103px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellText">Verb. <span class="formula" style="line-height: 11pt;">i</span></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellText">ab</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellText">
+                            <span class="symbol" style="line-height: 11pt;">D</span>
+                            <span class="formula">T</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">1</span>
+                        </p>
+                        <p class="CellText">5:30-6:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellText">
+                            <span class="symbol" style="line-height: 11pt;">D</span>
+                            <span class="formula">T</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">2</span>
+                        </p>
+                        <p class="CellText">6:30-7:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellText">
+                            <span class="formula" style="line-height: 11pt;">R</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">1</span>
+                        </p>
+                        <p class="CellText">5:30-6:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellText">
+                            <span class="formula" style="line-height: 11pt;">R</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">2</span>
+                        </p>
+                        <p class="CellText">6:30-7:30</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6:10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">20 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">36 +   0 =   36</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">36 + 20 = 56</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">6:10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">20 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">45 +   0 =   45</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">45 + 20 = 65</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6:55</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">25 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">45 + 25 =   70</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">45 +   0 = 45</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">7:25</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">55 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">46 + 55 = 101</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">46 +   0 = 46</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">7:25</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">55 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">45 + 55 = 100</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">45 +   0 = 45</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_oev_2318507456_1180038">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456__ref506170965">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456__toc507489468">
+                    </a>Zeitliche Abstände ΔT und Widerstände R der Verbindungen für die untersuchten zwei Zeiträume des Fahrgastaufkommens</p>
+            </caption>
+        </table>
+        <p class="Text">Mit einer Aufteilungsregel (hier Kirchhoff mit <span class="symbol" style="font-style: italic;font-size: 8pt;line-height: 10pt;">b</span> = 3) berechnen sich dann aus den Widerständen die Anteile <span class="formula">P</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span>, die auf die einzelnen Verbindungen entfallen. Die Eigenständigkeit wird hier nicht berücksichtigt. Wie in <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1180079">Tabelle&#160;174</MadCap:xref> dargestellt, erhalten alle fünf Verbindungen Anteile an der Nachfrage beider Zeitintervalle.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 497px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="49px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="41px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="82px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="80px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="80px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="80px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="85px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Verb. <span class="formula">i</span></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">ab</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="formula" style="line-height: 11pt;">P</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">1</span>
+                        </p>
+                        <p class="CellCaption">5:30-6:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="formula" style="line-height: 11pt;">P</span>
+                            <span class="formula_subscript">i</span>
+                            <span class="formula_superscript">2</span>
+                        </p>
+                        <p class="CellCaption">6:30-7:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrten <span class="formula" style="line-height: 11pt;">M</span><span class="formula_subscript">i</span><span class="formula_superscript">1</span></p>
+                        <p class="CellCaption">5:30-6:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrten <span class="formula" style="line-height: 11pt;">M</span><span class="formula_subscript">i</span><span class="formula_superscript">2</span></p>
+                        <p class="CellCaption">6:30-7:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="_Override" style="font-family: Symbol;">S</span> Fahrten</p>
+                        <p class="CellCaption">5:30-7:30</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6:10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">57%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">13%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">30 • 0,57 = 17</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">60 • 0,13 = 8</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">25</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">6:10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">30%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">8%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">30 • 0,30 = 9</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">60 • 0,08 = 5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">14</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6:55</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">7%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">27%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">30 • 0,07 = 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">60 • 0,27 = 16</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">18</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">7:25</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">3%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">25%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">30 • 0,03 = 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">60 • 0,25 = 15</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">16</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">7:25</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">27%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">30 • 0,03 = 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">60 • 0,27 = 16</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">17</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">S</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">100%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">100%</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">60</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">90</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+                    <a name="1_benutzermodell_oev_2318507456_1180079">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456__toc507489469">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456__ref506172138">
+                    </a>Aufteilung der Fahrten auf die Verbindungen (Kirchhoff, β = 3)</p>
+            </caption>
+        </table>
+        <p class="Text">Damit ergibt sich das in <MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1086467">Abbildung&#160;158</MadCap:xref> dargestellte Belastungsbild.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_NetworkVolume.png" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_oev_2318507456_1086467">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456__ref506178811">
+            </a>Netzbelastung bei fahrplanfeiner Umlegung (Parameterdatei <span class="path">timetab1.par</span>)</p>
+    </body>
+</html>

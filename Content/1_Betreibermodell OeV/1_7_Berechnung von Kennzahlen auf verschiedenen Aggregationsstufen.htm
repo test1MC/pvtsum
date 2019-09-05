@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="667" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="Train;ServiceKm;PersonenKm;xls">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_betreibermodell_oev_1878159914_1081472">
+            </a>Berechnung von Kennzahlen auf verschiedenen Aggregationsstufen</h3>
+        <p class="Text">
+            <MadCap:keyword term="Betreibermodell (ÖV): Kennzahlen (Aggregationsstufen)" />
+            <MadCap:keyword term="Kennzahlen: Aggregationsstufen berechnen" />
+            <MadCap:variable name="PTV_Manual.Programmname" /> ermöglicht es, Kennzahlen in unterschiedlicher Granularität zu berechnen. So kann man beispielsweise die Personenkilometer, Kosten und Erlöse der Fahrten zwischen 6 und 7&#160;Uhr in einem Gemeindegebiet ausgeben, die von einer bestimmten Linie mit dem Niederflurbus bedient werden. Oder Sie lassen sich für alle Betreiber Ihres Modells die jeweils geleisteten Personenkilometer berechnen, um die Fahrgeldeinnahmen auf die Betreiber aufzuteilen.</p>
+        <p class="Text">Im Einzelnen lassen sich Kennzahlen wie folgt berechnen.</p>
+        <ul>
+            <LI class="List0">räumlich differenziert nach Gebieten, zum Beispiel Gebietskörperschaften wie Landkreise oder Stadtteile <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Das Verfahren ÖV-betriebliche Kennzahlen durchführen.htm#2_einstellungen_betreibermodell_oev_1111312306_1096909"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Das Verfahren ÖV-betriebliche Kennzahlen durchführen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">nach Betreibergesellschaften</LI>
+            <LI class="List0">zeitlich differenziert durch frei einstellbare Zeitintervalle innerhalb eines Tages, oder – falls mit einem Kalender gearbeitet wird – innerhalb einer Woche oder eines Jahres. Dies ist unabhängig vom Verfahren ÖV-betriebliche Kennzahlen möglich <MadCap:xref class="Benutzerhandbuch" href="../2_Verfahrensablauf_festlegen/2_4_Allgemeine Verfahrenseinstellungen festlegen.htm#2_verfahrensablauf_festlegen_40480990_1111171"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Allgemeine Verfahrenseinstellungen festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">differenziert nach den Objekten der Linienhierarchie. Hierzu zählen Oberlinien, Linien, Linienrouten, Linienroutenverläufe, Fahrzeitprofile, Fahrzeitprofilverläufe, Fahrplanfahrten und Fahrplanfahrtverläufe</LI>
+        </ul>
+        <p class="Text">Für die Zuscheidung von Kennzahlen auf Gebiete existieren verschiedene Detaillierungsebenen. Für die Berechnung der Kennzahlen auf den Detaillierungsebenen ist das Verfahren ÖV-betriebliche Kennzahlen anzuwenden <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_ÖV-betriebliche Kennzahlen berechnen.htm#2_einstellungen_betreibermodell_oev_1111312306_1086926"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>ÖV-betriebliche Kennzahlen berechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Die Ergebnisse des Verfahrens finden Sie in der Gebietsliste ÖV-Detail. Im Einzelnen lassen sich die Kennzahlen auf folgenden Ebenen (auch als Schüttung bezeichnet) gebietsweise berechnen (dies betrifft sowohl Kennzahlen aus der ÖV-Umlegung als auch den Verfahren ÖV-betriebliche Kennzahlen und Umlaufbildung):</p>
+        <ul>
+            <LI class="List0">Gebiet</LI>
+            <LI class="List0">Gebiet x Verkehrssystem</LI>
+            <LI class="List0">Gebiet x Oberlinie</LI>
+            <LI class="List0">Gebiet x Linie</LI>
+            <LI class="List0">Gebiet x Linienroute</LI>
+            <LI class="List0">Gebiet x Fahrzeitprofil</LI>
+            <LI class="List0">Gebiet x Fahrplanfahrt</LI>
+            <LI class="List0">Gebiet x Verkehrssystem x Fahrzeugkombination</LI>
+            <LI class="List0">Gebiet x Oberlinie x Fahrzeugkombination</LI>
+            <LI class="List0">Gebiet x Linie x Fahrzeugkombination</LI>
+            <LI class="List0">Gebiet x Linienroute x Fahrzeugkombination</LI>
+            <LI class="List0">Gebiet x Fahrzeitprofil x Fahrzeugkombination</LI>
+            <LI class="List0">Gebiet x Fahrplanfahrt x Fahrzeugkombination</LI>
+        </ul>
+        <p class="Text">Besitzt ein <MadCap:variable name="PTV_Manual.Programmname" />-Modell zwei Gebiete (West, Ost) und drei Verkehrssysteme (Bus, Tram, Train), so werden in der Schüttung Gebiet x Verkehrssystem Kennzahlen für jede Kombination aus Gebiet und Verkehrssystem berechnet.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">Gebiet</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">VSys</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">ServiceKm</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellText">
+                            <span class="gui_element" style="font-weight: normal;">PersonenKm</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Ost</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Bus</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">2.776,88</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">17.219,58</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Ost</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Train</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">1.611,57</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">21.094,72</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Ost</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Tram</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">6.796,78</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">187.312,42</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">West</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Bus</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">538,57</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">9.671,80</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">West</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Train</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">323,14</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">5.803,08</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">West</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Tram</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_right">5.703,52</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText_right">214.538,25</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Schüttung Gebiet x Verkehrssystem</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Nicht jede Kennzahl ist auf allen Aggregationsstufen verfügbar. In der Datei <span class="path">Kennzahlenverfügbarkeit.xls</span> unter ...<span class="path">Programme</span>\<span class="path">PTV Vision\<MadCap:variable name="PTV_Manual.Programmname_VersNr_mitPunkt" />\Doc\Deu</span> finden Sie Tabellen, denen Sie entnehmen können, auf welchen Aggregationsebenen die Kennzahlen verfügbar sind.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

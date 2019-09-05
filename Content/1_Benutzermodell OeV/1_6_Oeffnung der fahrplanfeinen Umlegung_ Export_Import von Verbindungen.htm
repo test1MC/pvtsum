@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;evtl" MadCap:lastBlockDepth="4" MadCap:lastHeight="1174" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_oev_2318507456_1082500">
+            </a>
+            <MadCap:keyword term="Fahrplanfeine Umlegung: Öffnung" />
+            <a name="1_benutzermodell_oev_2318507456__toc175724500">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456__toc153337040">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456__toc130891244">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456__toc113088537">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456__toc106790941">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456__toc106692160">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456__ref88539672">
+            </a>Öffnung der fahrplanfeinen Umlegung: Export/Import von Verbindungen</h3>
+        <p class="Text">Bei manchen Projekten, besonders im Zusammenhang mit der Nachfragemodellierung <MadCap:xref class="sieheUeberschrSeite" href="../1_Nachfragemodell/1_3_Nachfragemodell.htm#1_nachfragemodell_2215163117_1165446"><span style="color: Black;" class="mcFormatColor">(</span><u>Nachfragemodell</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>, wird mehrmals im selben Verfahrensablauf eine (rechenzeitaufwändige) fahrplanfeine Umlegung gerechnet.</p>
+        <p class="Text">Beispielsweise werden zunächst ÖV-Kenngrößen berechnet, dann die Moduswahl ausgeführt und schließlich die eigentliche ÖV-Umlegung. Da bereits bei der Berechnung der ÖV-Kenngrößen alle Verbindungen gesucht werden, ist es sinnvoll, diese für die ÖV-Umlegung wieder zu verwenden. Die Umlegung beschränkt sich dann auf den Schritt Verbindungswahl <MadCap:xref class="sieheUeberschrSeite" href="1_6_Verbindungswahl.htm#1_benutzermodell_oev_2318507456_1027508"><span style="color: Black;" class="mcFormatColor">(</span><u>Verbindungswahl</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Die fahrplanfeine Umlegung ist darum so modularisiert, dass Suche und Wahl getrennt voneinander durchgeführt und dabei Verbindungen gespeichert und später wiederverwendet werden können. Sie haben damit folgende Vorteile:</p>
+        <ul>
+            <LI class="List0">Das Ersetzen der Verbindungssuche durch eine vorberechnete Wegedatei oder durch Wege einer bereits existierenden Umlegung spart viel Zeit. Gerade die Suche ist in vielen Netzen der zeitintensivste Rechenschritt. Während der Umlegung kann evtl. auch der Spitzenspeicherbedarf gesenkt werden.</LI>
+            <LI class="List0">Wege aus externen Quellen können der <MadCap:variable name="PTV_Manual.Programmname" />-Umlegung als Input vorgelegt werden. So ist eine benutzerdefinierte Heuristik für Suche oder Wahl möglich, ohne auf die sonstigen Vorteile der <MadCap:variable name="PTV_Manual.Programmname" />-Umlegung zu verzichten.</LI>
+            <LI class="List0">Varianten von Umlegungsergebnissen können über den Verbindungsexport gespeichert und bei Bedarf hinzugespielt werden, um Analysen durchzuführen. Die Verwendung mehrerer Versionsdateien ist so nicht mehr erforderlich.</LI>
+        </ul>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Flowchart_TimetableBased.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_oev_2318507456_1073273">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_68538">
+            </a>Schematischer Ablauf einer fahrplanfeinen Umlegung</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1073273">Abbildung&#160;159</MadCap:xref> zeigt, an welchen Stellen der fahrplanfeinen Umlegung Wege eingelesen oder ausgegeben werden können. Folgende Möglichkeiten ergeben sich:</p>
+        <p class="Text">(1) Externe Wahl / Verbindungsimport</p>
+        <p class="Text2">Belastete Verbindungen werden aus einer Datei importiert und wie ein Umlegungsergebnis abgelegt, also in Form von Wegen und Netzbelastungen <MadCap:xref class="sieheUeberschrSeite" href="1_6_Anwendungsfall (1)_ Externe Wahl _ Verbindungsimport.htm#1_benutzermodell_oev_2318507456_1221037"><span style="color: Black;" class="mcFormatColor">(</span><u>Anwendungsfall (1): Externe Wahl / Verbindungsimport</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">(2) Verbindungsexport</p>
+        <p class="Text2">Um eine externe Wahl mit Daten zu versorgen, können Verbindungen exportiert werden. Dies ist wahlweise mit oder ohne Belastungen, und optional mit Tarifpunkten,   Fahrpreisen oder benutzerdefinierten Attributen möglich <MadCap:xref class="sieheUeberschrSeite" href="1_6_Anwendungsfall (2)_ Verbindungsexport.htm#1_benutzermodell_oev_2318507456_1074643"><span style="color: Black;" class="mcFormatColor">(</span><u>Anwendungsfall (2): Verbindungsexport</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">(3) Benutzung von existierenden Verbindungen für die Suche</p>
+        <p class="Text2">Anstelle der <MadCap:variable name="PTV_Manual.Programmname" />-internen Verbindungssuche kann auch auf existierenden Verbindungen aufgesetzt werden. Diese können aus einer zuvor gerechneten Umlegung oder aus einer Verbindungsdatei stammen. Das Feature ist vor allem dann interessant, wenn an den Suchparametern keine Veränderungen vorgenommen wurden, jedoch eine Wahl unter anderen Einstellungen erfolgen soll <MadCap:xref class="sieheUeberschrSeite" href="1_6_Anwendungsfall (3)_ Existierende Verbindungen für Suche nutzen.htm#1_benutzermodell_oev_2318507456_1222293"><span style="color: Black;" class="mcFormatColor">(</span><u>Anwendungsfall (3): Existierende Verbindungen für Suche nutzen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Es ist möglich, aber nicht zwingend, während des Verbindungsexports die Option <span class="gui_element">Umlegung berechnen </span>zu deaktivieren. Dann werden (wie bei einer reinen Kenngrößenberechnung) keine Wege oder Belastungen abgelegt. Bestehende Umlegungen für die gewählten Nachfragesegmente bleiben dann erhalten.</p>
+    </body>
+</html>

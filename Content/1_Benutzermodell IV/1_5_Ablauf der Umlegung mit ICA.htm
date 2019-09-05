@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="608" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="ij;ijr;max;rel;CR;t0;bzw;kapazitäten;Abbiegerbelastungen">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1652910">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_10026">
+            </a>Ablauf der Umlegung mit ICA</h3>
+        <p class="Text">
+            <MadCap:keyword term="ICA:Umlegung mit ICA:Ablauf" />Die Umlegung mit ICA baut auf der iterativen Lösung für das Nutzergleichgewicht mit CR-Funktionen für alle Netzobjekte auf. Die Besonderheit besteht nur darin, dass die Parameter der Abbieger-CR-Funktionen für jeden Abbieger individuell („abbiegerfein”) belegt sind und sich im Lauf der Rechnung durch Anpassung an ICA-Berechnungsergebnisse ändern, wie der Beschreibung des Grundprinzips zu entnehmen ist <MadCap:xref class="sieheUeberschrSeite" href="1_5_Grundprinzip.htm#1_benutzermodell_iv_2033098965_1379731"><span style="color: Black;" class="mcFormatColor">(</span><u>Grundprinzip</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <ul>
+            <LI class="List0">Wird die Umlegung mit ICA nicht auf ein bestehendes Umlegungsergebnis aufgesetzt, erfolgt zuerst eine Initialisierung der in der CR-Funktion für Abbieger und Strecken verwendeten Parameter. Für Abbieger werden dazu die Eingabewerte verwendet, die Sie im Verfahrensparameterdialog (Register <span class="gui_element">Eingabe</span>) angeben. Je nach Steuerungstyp werden zusätzlich Signalzeiten und Geometriedaten berücksichtigt. Die initialisierten Werte für die Abbiegekapazitäten, t0 und die CR-Funktionsparameter A und B werden für die Berechnung der ersten untergeordneten Umlegung verwendet. Die Initialisierung des Streckenattributs <span class="gui_element">Effektive Kapazität in Umlegung mit ICA</span>hängt von den Einstellungen der Rückstauberechnung in den Umlegungsparametern ab. Werden Streckenkapazitäten berücksichtigt, wird der Wert mit dem  Wert aus dem Streckenkapazitätsmodell, d.h. entweder <span class="gui_element">Kapazität IV</span> oder der Summe der Abbiegekapazitäten initialisiert. Ist das nicht der Fall, ist der initiale Wert unendlich. Wird auf ein bestehendes Umlegungsergebnis aufgesetzt, liegen die Parameter aus der letzten Umlegung mit ICA vor und die Initialisierung entfällt.</LI>
+            <LI class="List0">Zunächst wird das untergeordnete Umlegungsverfahren ausgeführt. Wahlweise kann die Gleichgewichtsumlegung, das Lernverfahren oder die Gleichgewichtsumlegung (LUCE) verwendet werden. An den Knoten, an denen die ICA-Berechnung aktiviert ist, werden die abbiegerfeinen CR-Funktionen verwendet. Das bedeutet, dass während der Ausführung des untergeordneten Umlegungsverfahrens keine ICA-Berechnungen durchgeführt werden.</LI>
+            <LI class="List0">Zur Definition der verwendeten abbiegerfeinen CR-Funktionen gibt es eine gesonderte Beschreibung <MadCap:xref href="#1_benutzermodell_iv_2033098965_54529" class="Label_Image">Abbildung 1</MadCap:xref> <MadCap:xref href="1_5_Verwendete Abbieger-CR-Funktion.htm" class="sieheUeberschrSeite"><span style="color: Black;" class="mcFormatColor">(</span><u>Verwendete Abbieger-CR-Funktion</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>, ebenso zu Anpassung der CR-Funktion <MadCap:xref href="1_5_Anpassung der verwendeten CR-Funktionen.htm" class="sieheUeberschrSeite"><span style="color: Black;" class="mcFormatColor">(</span><u>Anpassung der verwendeten CR-Funktionen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. </LI>
+            <LI class="List0">Nach Beendigung des untergeordneten Umlegungsverfahrens wird das Rückstaumodell angewendet. Für die Berechnung des Rückstaumodells werden die Abbiegekapazitäten an mit ICA gerechneten Knoten immer berücksichtigt. Optional können zusätzlich die im Streckenkapazitätsmodell definierten Kapazitäten verwendet werden. Als Ergebnis der Rückstauberechnung werden die Streckenwiderstände angepasst, da einerseits durch auftretende Staus zusätzliche Wartezeiten auf Strecken mit Stau entstehen, und andererseits können sich stromabwärts vom Stau die Fahrzeiten aufgrund geringerer Belastung durch zurückgestauten Verkehr verringern.</LI>
+        </ul>
+        <table class="TableStyle-TipHint2" style="width: 477px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TipHint2.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Während der Ausführung des untergeordneten Umlegungsverfahrens kommt kein Rückstaumodell zum Einsatz.</p>
+                        <p class="Text">Am Ende der Umlegung mit ICA werden die globalen Parameter des Rückstaumodells  auf die in den Verfahrensparametern der Umlegung mit ICA definierten Parameter angepasst, d.h. davon abweichende Einstellungen werden während der Umlegung mit ICA ignoriert und dann überschrieben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Vor der ICA-Berechnung werden zunächst die aktuellen Werte für Belastungen und Widerstände sowie die Parameter der CR-Funktionen protokolliert (je nach Einstellung in Attributdateien, benutzerdefinierten Attributen und in der Liste Qualität IV-Umlegung mit ICA).</LI>
+            <LI class="List0">Danach werden die Abbiegebelastungen aus der aktuellen und der vorhergehenden Iteration gewichtet gemittelt (Glättung).</LI>
+            <LI class="List0">Mittels ICA werden Abbiegewiderstände und -kapazitäten ermittelt. Bei dieser ICA-Berechnung wird als Bemessungsverkehrsstärke die geglättete Belastung der Abbieger (je nach Einstellung der Bemessungsverkehrsstärke ist die Grundbelastung enthalten) verwendet. </LI>
+            <LI class="List0">Die Ermittlung der neuen abbiegerfeinen CR-Funktionen erfolgt in zwei Schritten, jeweils für alle Abbieger einzeln. Im ersten Schritt werden die Parameter der CR-Funktion durch Interpolation von drei Stützstellen ermittelt. Eine Stützstelle ist durch die geglätteten Abbiegerbelastungen und den zugehörigen Widerstand gegeben (siehe voriger Schritt), für zwei weitere Stützstellen wird die Belastung des aktuell bearbeiteten Abbiegers verringert oder erhöht, die Belastungen der anderen Abbieger am Knoten bleiben gleich, und der Widerstand des aktuellen Abbiegers wird erneut mit ICA berechnet. Da die zu interpolierende CR-Funktion drei freie Parameter aufweist (<span class="formula">t</span><span class="formula_subscript">0</span>, <span class="formula">A</span>, <span class="formula">B</span>), ist sie durch die drei Stützstellen eindeutig bestimmt. Im zweiten Schritt werden diese Parameter sowie die Kapazität mit Hilfe der Werte aus der vorigen Iteration geglättet. In den Verfahrensparametern kann eine Mindestkapazität pro Abbieger eingestellt werden. Liegt das Ergebnis der Glättung unter der Mindestkapazität, wird stattdessen die Mindestkapazität verwendet. Nach Ermittlung der neuen CR-Funktionen erfolgt der Konvergenztest. Sind die Konvergenzbedingungen erfüllt, werden die Parameter der CR-Funktionen auf den Wert der letzten Iteration zurückgesetzt. Das bedeutet, dass die CR-Kurven zur letzten durchgeführten untergeordneten Umlegung passen.</LI>
+            <LI class="List0">Ist der Konvergenztest nicht erfolgreich, werden die Attribute <span class="gui_element">Verdrängte Belastung stromaufwärts in Umlegung mit ICA</span> für Strecken und Abbieger sowie das Attribut <span class="gui_element">Effektive Kapazität in Umlegung mit ICA</span> für Strecken aktualisiert. Diese Werte werden bei der Anwendung der CR-Funktionen in der nächsten untergeordneten Umlegung (bzw. beim Aufsetzen auf ein bestehendes Umlegungsergebnis) benötigt.</LI>
+        </ul>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_FLOW_AssignWithICA_1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000028px;margin-bottom: 0, 9997844px;width: 482px;height: 605px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_54529">
+            </a>Ablauf Umlegung mit ICA</p>
+    </body>
+</html>

@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="685" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;v0;VOT;CR;277s;akt;321s;360s;ver;AE;ED;Fzg;BD;CF;DF;StrNr;0ij;0i;0j;ij;r1;exp;r2;MSA;Method;of;t0;tAkt;car;fma;hveh;Landstr;Str;NCHRP;Wardrop’schen;NLM;VerwendeUmlaufzeitfamilie;SignalKoordinierungsGruppe;VerwendeUmlaufzeitFamilie;VT;Bundesstr;AP;46min;39s;34s;12s;FahrzeugStd;FahrzeugKm;11min;40s;370h;54min;19s;5min;47s;111h;43min;15s;7min;48s;188h;29min;DueStauWellenGeschw;DueFunDiag;PlatzProPKWE;StreckenPlatzProPKWE;vMax;IVAnteil_Q;IVAnteil_Z;Abbiegerkapazitäten;x1;x2;x3;Turns;mph;bzw;1h;etc;Belastungs;Vol;38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;PkwE;Congestion;Charging;MautsystemNr">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1038043">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249384">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc130966612">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc60553496">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc508007546">
+            </a>Grundlagen der Umlegung mit Maut-Berücksichtigung</h3>
+        <p class="Text">
+            <MadCap:keyword term="Value of time (VT)" />Das entscheidende Merkmal eines Umlegungsverfahrens ist die Definition des Widerstands für Routenbewertung und Routenwahl. Bei allen Maut-Umlegungen setzt sich der Widerstand <span class="formula">R</span><span class="formula_subscript">r</span> einer Route <span class="formula">r</span> aus der Reisezeit <span class="formula">t</span><span class="formula_subscript">r</span> und den monetären Kosten <span class="formula">c</span><span class="formula_subscript">r</span> zusammen:</p>
+        <p class="Text">
+            <img src="../Resources/Images/7_268.jpg" />
+        </p>
+        <p class="Text">Dabei ist <span class="formula">VT </span>der Zeitwert (value of time) in zum Beispiel [€/h]. Während diese Gleichung für alle Maut-Umlegungen gilt, unterscheidet sich das Verfahren TRIBUT von anderen in zwei Eigenschaften:</p>
+        <ul>
+            <LI class="List0">Die monetären Kosten einer Route lassen sich auf verschiedene Weise berechnen.</LI>
+            <LI class="List0">Der Zeitwert <span class="formula">VT</span> ist kein konstanter Wert pro Nachfragesegment, sondern wird als stochastische Größe modelliert, die einer bestimmten Wahrscheinlichkeitsverteilung folgt.</LI>
+        </ul>
+        <h5>Streckenmaut</h5>
+        <p class="Text">Im einfachsten Fall ergeben sich die monetären Kosten einer Route durch Aufsummieren von Mautbeträgen pro Strecke entlang der Route.</p>
+        <p class="Text">Dabei gilt Folgendes:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="92px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="404px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">L</span> = <span class="formula">t</span>(<span class="formula">Vol</span><span class="formula_subscript">L</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Fahrzeit der Strecke <span class="formula">L</span> unter Belastung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Vol</span>
+                            <span class="formula_subscript">L</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Belastung der Strecke <span class="formula">L</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">C</span>
+                            <span class="formula_subscript">L</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Mautgebühr für die Benutzung der Strecke <span class="formula">L</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">VT</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Zeitwert (value of time) in beispielsweise [€/h]</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Dieser Typ von Maut ist beispielsweise bei der Lkw-Maut in Deutschland anzutreffen: Für Lkw wird auf einem Teil des Netzes (Autobahnen) ein Mautbetrag erhoben, der exakt proportional zur gefahrenen Entfernung ist. Deshalb kann jeder Strecke vom Streckentyp Autobahn das Produkt aus Streckenlänge und festem Kilometersatz als Mautbetrag zugewiesen werden. Auf allen anderen Strecken und für alle anderen Verkehrssysteme ist der Mautbetrag null. Die Summe über diese Beträge entlang einer Route ergibt für das Verkehrssystem Lkw genau die Kosten für die auf Autobahnstrecken gefahrene Entfernung.</p>
+        <p class="Text">Im Fall der Streckenmaut ist es nicht erforderlich, ein Mautsystem zu definieren. Es ist auch nicht erforderlich, das Streckenattribut <span class="gui_element">Maut-IVSys</span> in die Definition des Widerstands aufzunehmen, weil TRIBUT den Betrag automatisch berücksichtigt.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die streckenspezifischen Mautwerte werden beim TRIBUT-Gleichgewichtsverfahren immer berücksichtigt. Beim TRIBUT-Lernverfahren werden sie nur berücksichtigt, wenn die entsprechende Strecke zu keinem Mautsystem gehört.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Flächenmaut</h5>
+        <p class="Text">Besonders bei Mautmodellen für Innenstädte ist ein anderer Typ verbreitet. Bei der Flächenmaut ist ein geografisch zusammenhängender Teil des Netzes als Mautgebiet ausgewiesen. Es wird ein von der Entfernung unabhängiger Festbetrag erhoben, sofern ein Teil einer Route in das Mautgebiet fällt:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_271.jpg" />
+        </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/IMG_Tribut_London.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997538px;margin-bottom: 1, 000044px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Beispiel für Flächenmaut: die Congestion Charging Zone in London</p>
+        <p class="Text">Auf den ersten Blick sind die monetären Kosten einer Route in diesem Fall nicht von den einzelnen überfahrenen Strecken abhängig, sondern vom Routenverlauf als Ganzem. Grundsätzlich stimmt das, doch beruht TRIBUT - wie jedes Umlegungsverfahren - auf Kurzwegsuchen auf Strecken und benötigt dazu Widerstände pro Strecke. TRIBUT führt die Flächenmaut deshalb auf den Fall der Streckenmaut zurück. Dazu definieren Sie zunächst das Mautgebiet, indem Sie ein Netzobjekt Mautsystem vom Typ Flächenmaut einfügen und seine Nummer allen enthaltenen Strecken als Attribut <span class="gui_element">MautsystemNr</span> zuweisen. Das Mautsystem trägt zudem den festen Mautbetrag pro Verkehrssystem. Damit die unten beschriebene Abbildung eindeutig definiert ist, ist es erforderlich, dass alle Anbindungsknoten eines Bezirks entweder im Mautgebiet liegen oder außerhalb.</p>
+        <p class="Text">TRIBUT definiert auf dieser Basis Mautbeträge für Strecken, Abbieger und Anbindungen wie folgt:</p>
+        <p class="Text">
+            <span class="formula">c</span>
+            <span class="formula_subscript">L</span> = 0 für alle Strecken <span class="formula">L</span></p>
+        <p class="Text">
+            <span class="formula">c</span>
+            <span class="formula_subscript">C</span> = 0 für alle Anbindungen <span class="formula">C</span></p>
+        <p class="Text">
+            <span class="formula">
+                <img src="../Resources/Images/7_25.jpg" />
+            </span> für alle Abbieger <span class="formula">T, </span>wobei <span class="symbol">d</span><span class="formula_subscript">T</span>&#160;=&#160;1, falls der Abbieger <span class="formula">T</span> von einer Strecke im Mautgebiet zu einer Strecke außerhalb führt oder umgekehrt, also die Grenze des Mautgebiets quert. Sonst ist <span class="formula_symbol">d</span><span class="formula_subscript">T</span> = 0.</p>
+        <p class="Text">
+            <span class="formula">
+                <img src="../Resources/Images/7_239.jpg" />
+            </span> für alle Übergänge <span class="formula">X</span> von Anbindungen zu Strecken, wobei <span class="symbol">d</span><span class="formula_subscript">X</span>&#160;=&#160;1, falls der Übergang <span class="formula">X</span> zu einer Strecke im Mautgebiet führt oder von einer solchen kommt. Sonst ist <span class="formula_symbol">d</span><span class="formula_subscript">X</span> = 0.</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1359075">Abbildung 2</MadCap:xref> verdeutlicht das Prinzip:</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Tribut_AreaToll.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1359075">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_99237">
+            </a>Zurückführung von Flächenmaut auf Streckenmaut (Abbieger ohne Maut sind aus zugunsten der Übersichtlichkeit nicht dargestellt)</p>
+        <p class="Text">Summiert man den Mautbetrag entlang einer Route, ergibt sich der Betrag null für Routen, die das Mautgebiet überhaupt nicht berühren. Alle anderen Routen (Quellverkehr, Zielverkehr, Durchgangsverkehr, Binnenverkehr des Mautgebiets) werden mit einem Mautbetrag von <span class="formula">c</span> belastet, weil sie jeweils genau zwei Netzobjekte mit Mautbetrag von je <span class="formula">c</span>/2 überfahren.</p>
+        <p class="Text">Sie können in einem <MadCap:variable name="PTV_Manual.Programmname" />-Modell mehrere Mautsysteme vom Typ Flächenmaut definieren. Dann werden die Definitionen für Abbieger- und Anbindungskosten auf jedes Mautsystem mit dem dafür geltenden festen Mautbetrag angewendet. Abbieger zwischen zwei Mautgebieten werden mit beiden Mautbeträgen belastet.</p>
+        <p class="Text">Beachten Sie zwei Besonderheiten. Routen, die die Grenze des Mautgebiets mehrfach queren, werden mehrfach mit dem Mautbetrag belastet. Das mag in der Realität nicht der Fall sein, lässt sich jedoch bei der erforderlichen Rückführung auf additive Mautbeträge pro Netzobjekt nicht vermeiden. Ebenso kann in der Realität der Binnenverkehr des Mautgebiets von der Mautberechnung ausgenommen sein. Für die Routenwahl in TRIBUT ist es unschädlich, wenn diese Verkehre trotzdem mit Maut belastet werden, denn die Maut gilt für alle Routenalternativen gleichermaßen und diese additive Konstante ändert nichts an der Gleichgewichtslösung. Wenn Sie jedoch eine Kenngrößenmatrix des Widerstands berechnen, um diese beispielsweise im Nachfragemodell zu verwenden, müssen Sie nach der Berechnung der Kenngrößenmatrix für die Binnenverkehrsrelationen den Mautbetrag in einer Matrixoperation selbst subtrahieren.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Flächenmaut wird nur beim TRIBUT-Lernverfahren berücksichtigt.</p>
+                        <p class="Text">Bei Strecken, die zu einem Mautsystem gehören, wird das Streckenattribut <span class="gui_element">Maut-IVSys</span> nicht verwendet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Matrixmaut</h5>
+        <p class="Text">Ein weiterer Typ von Mautmodell wird häufig auf Autobahnkorridoren angewandt. Dort handelt es sich um ein geografisch zusammenhängendes Teilnetz mit einer kleinen Zahl von Verbindungen (Ein- und Ausfahrten) zum restlichen Netz (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1375910">Abbildung 3</MadCap:xref>). </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/IMG_Tribut_TollStation.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">
+            <a name="1_benutzermodell_iv_2033098965_1375910">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_63465">
+            </a>Mautstation an einer Autobahn-Ausfahrt</p>
+        <p class="Text">Mautbeträge sind nicht als Summe von Streckenmautbeträgen, sondern willkürlich als Preis für Paare (Einfahrt, Ausfahrt) festgelegt. Mit einer solchen Preismatrix hat der Betreiber zusätzliche Flexibilität, weil er die Maut für eine lange Route unabhängig von den Mautbeträgen für kürzere Teile davon definieren kann. Meist sind solche Tarife degressiv gestaltet, der Kilometersatz fällt also mit der Gesamtentfernung. </p>
+        <p class="Text">Solch eine Matrixmaut (benannt nach der Preismatrix) kann grundsätzlich nicht auf eine Summation von Mautbeträgen pro Strecke zurückgeführt werden. Betrachten wir dazu das Beispiel in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1375324">Abbildung 4</MadCap:xref>:</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Tribut_MatrixToll.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 1, 000067px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 4: ">
+            <a name="1_benutzermodell_iv_2033098965_1375324">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_71989">
+            </a>Beispiel für eine Matrixmaut</p>
+        <p class="Text">Die Strecken 1-2 und 2-3 bilden einen Autobahnkorridor mit Matrixmaut. Dazu definieren Sie zunächst das Mautgebiet, indem Sie ein Netzobjekt Mautsystem vom Typ Matrixmaut einfügen und seine Nummer allen enthaltenen Strecken als Attribut <span class="gui_element">MautsystemNr</span> zuweisen. Das Mautsystem enthält zudem pro Verkehrssystem eine Matrix von Mautbeträgen zwischen allen Grenzknoten des Mautgebiets. In unserem Beispiel sind das die Knoten 1, 2, 3. Die Mautbeträge enthält <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1371735">Tabelle 1</MadCap:xref>.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 452px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">von / nach Knoten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_iv_2033098965_1371735">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_97038">
+                    </a>Mautbeträge für das Beispielnetz</p>
+            </caption>
+        </table>
+        <p class="Text">Beachten Sie, dass die Maut für die Gesamtstrecke niedriger ist als für die beiden Einzelstrecken.</p>
+        <p class="Text">TRIBUT fügt für jedes Paar (Einfahrt, Ausfahrt) des Mautgebiets eine virtuelle Strecke mit dem Mautbetrag aus der Matrix ins Netz ein und verwendet diese virtuellen Strecken für die Kurzwegsuche. Die ursprünglichen Strecken im Mautgebiet sind dagegen für die Kurzwegsuche gesperrt. Zur Ermittlung der Reisezeit werden die auf die virtuellen Strecken entfallenden Belastungen zurück auf die ursprünglichen Strecken übertragen. Diese Zuordnung legt stets den (auf t0 bezogen) zeitkürzesten Weg zwischen Von-Knoten und Nach-Knoten der virtuellen Strecke zugrunde. <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1359136">Abbildung 5</MadCap:xref> zeigt den im Beispiel entstehenden Graph für die Kurzwegsuche.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Tribut_MatrixToll2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 1, 000067px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 5: ">
+            <a name="1_benutzermodell_iv_2033098965_1359136">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_55719">
+            </a>Kurzwegsuchgraph bei Matrixmaut</p>
+        <p class="Text">Dieser Modellierungsansatz setzt voraus, dass die Matrixmaut degressiv gestaltet ist, d.h. für drei Knoten A, B, C gilt stets <span class="formula">c</span><span class="formula_subscript">A-C</span><span class="formula"></span>≤<span class="formula"> c</span><span class="formula_subscript">A-B</span><span class="formula"> + c</span><span class="formula_subscript">B-C</span>. Zudem wächst die Zahl der in den Suchgraph eingefügten virtuellen Strecken quadratisch mit der Zahl der Grenzknoten des Mautgebiets. Verwenden Sie Matrixmaut deshalb nur in Fällen, bei denen das Mautgebiet nur über eine überschaubare Anzahl von Knoten mit dem Rest des Netzes verbunden ist.</p>
+        <p class="Text">Sie können in einem <MadCap:variable name="PTV_Manual.Programmname" />-Modell mehrere Mautsysteme vom Typ Matrixmaut definieren. Jede Strecke kann jedoch nur zu einem Mautsystem gehören.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Die Matrixmaut wird nur beim TRIBUT-Lernverfahren berücksichtigt.</p>
+                        <p class="Text">Bei Strecken, die zu einem Mautsystem gehören, wird das Streckenattribut <span class="gui_element">Maut-IVSys</span> nicht verwendet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Der Zeitwert (Value of Time) als stochastische Größe</h5>
+        <p class="Text">Die zweite Besonderheit des Verfahrens TRIBUT liegt in der Definition des Zeitwertes <span class="formula">VT</span> und in deren Konsequenzen (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1371763">Tabelle 2</MadCap:xref>). Bei ihrer Beschreibung beschränken wir uns auf den Fall der Streckenmaut, da das Grundprinzip vom Mauttyp unabhängig ist.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">”klassische” Maut-Umlegung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="font-weight: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">TRIBUT</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">VT</span> ist konstant für alle Fahrzeuge.</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">VT</span> ist zufallsverteilt, das heißt, jedes Fahrzeug der Matrix setzt einen individuellen <span class="formula">VT</span> zur Routenwahl an.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">monokriteriell</span>
+                        </p>
+                        <p class="CellText">Im gesamten Verlauf der Umlegung wird nur ein Kriterium verwendet, da die Kosten <span class="formula">c</span><span class="formula_subscript">R</span> einer Route in einen konstanten Zeitzuschlag umgerechnet werden.</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">bikriteriell</span>
+                        </p>
+                        <p class="CellText">Während der Umlegung müssen für jeden Weg beide Kriterien (<span class="formula">t</span><span class="formula_subscript">R</span> und <span class="formula">c</span><span class="formula_subscript">R</span>) ständig bekannt sein.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_iv_2033098965_1371763">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_92127">
+                    </a>Gegenüberstellung klassische Maut-Umlegung / TRIBUT</p>
+            </caption>
+        </table>
+        <p class="Text">Ein Zeit-Kosten-Diagramm veranschaulicht die Komplexität eines bikriteriellen Routenwahlverfahrens gut (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1128446">Abbildung 6</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Time_Costs.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000044px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 6: ">
+            <a name="1_benutzermodell_iv_2033098965_1128446">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_95272">
+            </a>Zeit-Kosten-Diagramm</p>
+        <ul>
+            <LI class="List0">Jeder Punkt im Diagramm, zum Beispiel <span class="formula">A</span> = (<span class="formula">t</span><span class="formula_subscript">A</span>,<span class="formula">c</span><span class="formula_subscript">A</span>), entspricht einer Route der gleichen Quelle-Ziel-Beziehung.</LI>
+            <LI class="List0">Ein bestimmter Zeitwert <span class="formula">VT</span> entspricht einer Schar paralleler Geraden mit negativer Steigung.</LI>
+            <LI class="List0">Liegen zwei Routen auf einer <span class="formula">VT</span>-Geraden, sind sie „gleich gut” (für einen Nutzer mit eben diesem <span class="formula">VT</span>). Dieser <span class="formula">VT</span> wird auch als kritischer <span class="formula">VT</span> für zwei Routen bezeichnet.</LI>
+        </ul>
+    </body>
+</html>

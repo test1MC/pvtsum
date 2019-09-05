@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="668" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG;bearbeitung;Bearbeitungs">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_nachfragemodell_2215163117_1025951">
+            </a>
+            <a name="1_nachfragemodell_2215163117_65038">
+            </a>Matrizen</h3>
+        <p class="Text">
+            <MadCap:keyword term="Matrizen" />Matrizen sind einer der wichtigsten Bestandteile von Verkehrsmodellen. Man unterscheidet zwei verschiedene Matrixtypen: </p>
+        <ul>
+            <LI class="List0">
+                <MadCap:keyword term="Nachfragematrizen" />
+                <MadCap:keyword term="Matrizen: Nachfragematrizen" />
+                <MadCap:keyword term="Fahrtenmatrizen: siehe Nachfragematrizen" />
+                <MadCap:keyword term="Quelle-Ziel-Matrizen: siehe Nachfragematrizen" />Nachfragematrizen werden benutzt, um die Verkehrsnachfrage zwischen jedem Quell- und jedem Zielbezirk abzubilden.</LI>
+            <LI class="List0">
+                <MadCap:keyword term="Kenngrößenmatrizen" />
+                <MadCap:keyword term="Matrizen: Kenngrößenmatrizen" />Kenngrößenmatrizen stellen Kenngrößen von jedem Quell- zu jedem Zielbezirk dar, zum Beispiel die Reisezeit.</LI>
+        </ul>
+        <p class="Text">Die Verkehrsnachfrage ist in Nachfragematrizen durch die Zahl der Ortsveränderungen (Zahl der Fahrten) von Verkehrszelle <span class="formula">i</span> nach Verkehrszelle <span class="formula">j</span> angegeben. Die zeitliche Verteilung der Fahrtwünsche innerhalb des Untersuchungszeitraums wird durch die Angabe eines Startzeitpunkts und einer Ganglinie beschrieben, die bei der ÖV-Umlegung und bei dynamischen IV-Umlegungen berücksichtigt wird <MadCap:xref class="sieheUeberschrSeite" href="1_3_Ganglinien.htm#1_nachfragemodell_2215163117_1149712"><span style="color: Black;" class="mcFormatColor">(</span><u>Ganglinien</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Bei statischen IV-Umlegungen wird die Ganglinie ignoriert.</p>
+        <p class="Text">
+        </p>
+        <p class="Text">Matrizen sind in <MadCap:variable name="PTV_Manual.Programmname" /> eigenständige Objekte und können für die Umlegung den Nachfragesegmenten frei zugeordnet werden. Das bedeutet, dass Sie eine Matrix auch für mehrere Nachfragesegmente verwenden können.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Es ist nicht zwingend notwendig, ein eigenes Nachfragemodell in <MadCap:variable name="PTV_Manual.Programmname" /> aufzubauen, das die Matrizen für die Umlegung berechnet. Sie können auch Matrizen aus externen Quellen verwenden und umlegen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:keyword term="Matrixeditor" />Der in <MadCap:variable name="PTV_Manual.Programmname" /> integrierte Matrixeditor ermöglicht die Aufbereitung vorhandener Matrixdaten und Berechnungen nach dem Gravitationsansatz <MadCap:xref class="sieheUeberschrSeite" href="1_3_Gravitationsmodell rechnen.htm#1_nachfragemodell_2215163117_1228718"><span style="color: Black;" class="mcFormatColor">(</span><u>Gravitationsmodell rechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Zudem stehen Ihnen leistungsfähige Verfahren zur Verfügung, mit denen Sie einzelne oder mehrere Matrizen im Verlaufe der Berechnungen ändern können.</p>
+        <p class="Text">Das Arbeiten mit Matrizen kann auf vielfältige Weise organisiert werden. Matrizen können vor ihrer Verwendung interaktiv angelegt werden oder sie können im Verlaufe der Berechnung automatisch generiert werden. Grundsätzlich können Matrizen entweder über ihre Nummer ausgewählt werden oder anhand ihrer Eigenschaften, d.h. den Werten ihrer Attribute. Beide Optionen bieten Vor- und Nachteile, die Sie für ein Projekt gegeneinander abwägen sollten.</p>
+        <p class="Text">Die Auswahl und Verwendung von Matrizen über ihre Eigenschaften bietet eine Reihe von Vorteilen:</p>
+        <ul>
+            <LI class="List0">Matrizen müssen vor ihrer Verwendung nicht angelegt werden. Existieren Ausgabematrizen mit den definierten Eigenschaften noch nicht im Modell, werden sie automatisch durch das Verfahren generiert, sonst werden die Matrixwerte in vorhandenen Matrizen überschrieben. Auf der anderen Seite können Sie Matrizen, beispielsweise Kenngrößenmatrizen, in weiteren Verfahren verwenden, obwohl diese erst im Verlaufe der Berechnung erzeugt werden.</LI>
+            <LI class="List0">Es besteht die Möglichkeit, analoge Berechnungen für eine Menge von Matrizen mit gleicher Funktion im Modell durchzuführen, beispielsweise die Berechnung der Gesamtnachfrage je Nachfragesegment aus den Ergebnissen einer Nachfrageberechnung. Dabei wird über ausgewählte Eigenschaften dieser Matrizen iteriert, beispielsweise das Nachfragesegment oder die Nachfrageschicht. So können Attributwerte der Eigenschaft, über die iteriert wird, in die Berechnung einbezogen werden, wie beispielsweise ein vom Nachfragesegment abhängiger Besetzungsgrad oder ein von der Nachfrageschicht abhängiger Zeitwert (value of time).</LI>
+            <LI class="List0">Verfahren, die Matrizen verwenden, können in allgemein gültiger Form definiert werden, sodass Erweiterungen des Modells um ein Verkehrsmittel oder eine Nachfrageschicht nur geringfügige Anpassungen erfordern.</LI>
+            <LI class="List0">Die Übertragbarkeit von Verfahrensabläufen auf andere Modelle vereinfacht sich, wenn auf Matrizen über ihre Eigenschaften Bezug genommen wird, ohne konkrete Attributwerte zu verwenden, beispielsweise bei der Berechnung von Nutzenmatrizen für alle Nachfrageschichten eines Nachfragemodells.</LI>
+        </ul>
+        <p class="Text">Im Gegensatz zur Auswahl über die Matrixnummer müssen Sie bei der Auswahl über Eigenschaften sicherstellen, dass die verwendeten Matrizen eindeutig durch die Kombination der Eigenschaften definiert sind.</p>
+    </body>
+</html>

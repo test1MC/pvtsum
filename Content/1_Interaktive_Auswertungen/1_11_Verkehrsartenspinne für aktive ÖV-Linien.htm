@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="753" MadCap:lastWidth="1018" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="5min;en;29min;35s;26min;22min;28min;t0;10min;bzw;usw;etc">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_interaktive_auswertungen_949040047_1049827">
+            </a>Verkehrsartenspinne für aktive ÖV-Linien</h4>
+        <p class="Text">Beim Wegefilter für aktive ÖV-Linien, Linienrouten etc. nehmen die auf einem Weg benutzten Linien bzw. Linienrouten die Rolle der Strecken in der Strecken-Verkehrsartenspinne ein. Das heißt, der ÖV-Weg wird als Abfolge aktiver und passiver Teilwege betrachtet, indem der Aktiv-Status der auf den einzelnen Teilwegen benutzten Linien, Linienroute etc. zugrunde gelegt wird.</p>
+        <p class="Text">Sie können einstellen, auf welcher Ebene der Linienhierarchie das ÖV-Angebot betrachtet wird. Zur Auswahl stehen Linie, Linienroute, Fahrzeitprofil, Fahrplanfahrt und Fahrplanfahrtabschnitt.</p>
+        <p class="Text">Die ersten drei Netzobjekttypen sind immer verfügbar, doch für Fahrplanfahrten und Fahrtabschnitte muss eine fahrplanfeine Umlegung zugrunde liegen, deren Wege verbindungsfein abgespeichert wurden.</p>
+        <p class="Text">Fahrplanfahrtabschnitte stellen einen Sonderfall dar, da sie keine Belastung tragen und es auch bei vorgegebener Fahrplanfahrt keinen eindeutigen Fahrplanfahrtabschnitt für einen Teilweg geben muss. Bei Auswahl der Ebene Fahrplanfahrtabschnitt gilt ein ÖV-Teilweg darum als aktiv, falls er vollständig mit aktiven Fahrtabschnitten seiner Fahrplanfahrt überdeckt werden kann. Es wird also für jedes Fahrtelement der Fahrt auf dem ÖV-Teilweg geprüft, ob es in einem aktiven Fahrtabschnitt enthalten ist.</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Table" href="#1_interaktive_auswertungen_949040047_1043829">Tabelle&#160;277</MadCap:xref> zeigt die Bedeutung der Verkehrsarten bei Wegefiltern für aktive ÖV-Linien grafisch. Dabei ist der Linienfilter so eingestellt, dass die Fernverkehrslinien („ICE“) aktiv und die Nahverkehrslinien („RE“) passiv sind.</p>
+        <table class="TableStyle_TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="186px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="309px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Binnenverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <img src="../Resources/Images/DIAG_InternalTraffic.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997767px;margin-bottom: 1, 000061px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Durchgangsverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <img src="../Resources/Images/DIAG_ThroughTraffic.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 1, 000061px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Quellverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <img src="../Resources/Images/DIAG_OrigTraffic.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997767px;margin-bottom: 0, 9997786px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Zielverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <img src="../Resources/Images/DIAG_DestTraffic.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997767px;margin-bottom: 1, 000063px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Umgehungsbinnenverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <img src="../Resources/Images/DIAG_ExternalInternalTraffic.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Außenverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <img src="../Resources/Images/DIAG_ExternalTraffic.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 0, 9997786px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Legende</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Aktives ÖV-Angebot <img src="../Resources/Images/DIAG_ActiveTimeProfile.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997767px;margin-bottom: 1, 000061px;" /></p>
+                        <p class="CellText">Passives ÖV-Angebot <img src="../Resources/Images/DIAG_PassiveTimeProfile.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000063px;" /></p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_interaktive_auswertungen_949040047_1043829">
+                    </a>
+                    <a name="1_interaktive_auswertungen_949040047_71873">
+                    </a>Bedeutung der Verkehrsarten bei Wegefilter für aktive ÖV-Linien</p>
+            </caption>
+        </table>
+        <p class="Text">Folgende Auswertungen können Sie beispielsweise mittels Wegefilter über aktive ÖV-Linien durchführen:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Ziel: alle Fahrgäste, die auf mindestens <span class="gui_element" style="font-weight: normal;">einem</span> Teilweg Fernverkehrslinien benutzen</p>
+        <ul>
+            <LI class="List1">Nur Fernverkehrslinien sind aktiv. Auswahl des Netzobjekttyps Linien.</LI>
+            <LI class="List1">Auswahl der Verkehrsarten Binnenverkehr, Quellverkehr, Zielverkehr, Durchgangsverkehr und Umgehungsbinnenverkehr</LI>
+        </ul>
+        <p class="Step" MadCap:autonum="2. &#160;">Ziel: alle Fahrgäste, die auf mindestens einem Teilweg Fernverkehrslinien und auf mindestens einem Teilweg Nahverkehrslinien benutzen</p>
+        <ul>
+            <LI class="List1">Nur Fernverkehrslinien sind aktiv. Auswahl des Netzobjekttyps Linien.</LI>
+            <LI class="List1">Auswahl der Verkehrsarten Quellverkehr, Zielverkehr, Durchgangsverkehr und Umgehungsbinnenverkehr</LI>
+        </ul>
+        <p class="Step" MadCap:autonum="3. &#160;">Ziel: alle Fahrgäste, die ausschließlich Fahrten eines bestimmten Betreibers X benutzen.</p>
+        <ul>
+            <LI class="List1">Nur Fahrplanfahrten des Betreibers X sind aktiv. Auswahl des Netzobjekttyps Fahrplanfahrten.</LI>
+            <LI class="List1">Auswahl der Verkehrsart Binnenverkehr</LI>
+        </ul>
+    </body>
+</html>

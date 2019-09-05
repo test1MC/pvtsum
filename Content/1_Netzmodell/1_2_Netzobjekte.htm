@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="8" MadCap:lastHeight="685" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;vStd;en;Point;Geo;Database;PGD">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_netzmodell_1240632468_1025945">
+            </a>
+            <a name="1_netzmodell_1240632468_68192">
+            </a>Netzobjekte</h2>
+        <p class="Text">Das Netzmodell unterscheidet Basisnetzobjekte wie Knoten und Strecken, die das Grundgerüst eines Netzes darstellen <MadCap:xref class="sieheUeberschrSeite" href="#1_netzmodell_1240632468_1174489"><span style="color: Black;" class="mcFormatColor">(</span><u>Basisnetzobjekte eines Verkehrsnetzes</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Hinzu kommen Netzobjekte, die nur bei der Modellierung von ÖV-Netzen zur Anwendung kommen (<MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1174887">Tabelle 2</MadCap:xref>) und allgemeine Netzobjekte, die keine verkehrliche Bedeutung haben müssen und insbesondere auch keinen Einfluss auf Verfahrensberechnungen haben <MadCap:xref class="sieheUeberschrSeite" href="#1_netzmodell_1240632468_1175387"><span style="color: Black;" class="mcFormatColor">(</span><u>Allgemeine Netzobjekte</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <table class="TableStyle-TableStand_withTitle" style="mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" cellspacing="0">
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Netzobjekt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Verkehrssysteme" />Verkehrssystem (VSys)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Das Verkehrsangebot setzt sich aus verschiedenen (Teil-)Verkehrssystemen zusammen. Verkehrssysteme dienen beispielsweise dazu Attribute für Netzobjekte abhängig vom Verkehrssystem zu belegen. So können etwa Strecken für ein Verkehrssystem Rad geöffnet, für die Verkehrssysteme Pkw und Lkw hingegen gesperrt werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Modi" />Modus</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Im IV umfasst ein Modus genau ein Verkehrssystem. Im ÖV hingegen kann ein Modus mehrere Verkehrssysteme umfassen. So können Sie zum Beispiel einen Modus ÖV definieren, der die ÖV-Verkehrssysteme Tram, Bus und Zug umfasst.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Nachfragesegmente" />Nachfragesegment (NSeg)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Ein Nachfragesegment stellt die Verbindung zwischen Verkehrsangebot und Verkehrsnachfrage her. Ein Nachfragesegment ist genau einem Modus zugeordnet und jedem Nachfragesegment ist genau eine Nachfragematrix zugeordnet. Ein Modus kann mehrere Nachfragesegmente umfassen. So können Sie beispielsweise für den Modus ÖV ein Nachfragesegment für den Schülerverkehr und eines für den übrigen ÖV-Verkehr anlegen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_node_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Knoten<MadCap:keyword term="Netzobjekte: Knoten" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Knoten sind Punktobjekte, die die räumliche Lage von Straßenkreuzungen, Einmündungen oder Weichen im Straßen- und Schienennetz angeben. Sie sind Anfangs- oder Endpunkte von Strecken. Über Knoten erfolgt die Anbindung der Bezirke an das Netz (Anbindungsknoten).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_turn_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Abbieger<MadCap:keyword term="Netzobjekte: Abbieger" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Abbieger geben an, welche Fahrtbeziehungen an einem Knoten zugelassen sind, das heißt ob an einem Knoten von einer Strecke in eine andere Strecke abgebogen werden darf.</p>
+                        <p class="CellText">Für IV-Verkehrssysteme können Abbiegezeitzuschläge und Kapazitäten festgelegt werden, die den Einfluss der Kreuzung auf die Leistungsfähigkeit des Netzes beschreiben. </p>
+                        <p class="CellText">Abbiegeverbote werden wie folgt berücksichtigt:</p>
+                        <ul>
+                            <LI class="List0Tab">Für ÖV-Verkehrssysteme bei der Konstruktion der Linienroute</LI>
+                            <LI class="List0Tab">Für IV-Verkehrssysteme bei der Routensuche</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Abbiegerstandard<MadCap:keyword term="Netzobjekte: Abbiegerstandards" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Abbiegerstandards sind Muster, aus denen neu entstehende Abbieger mit Standardwerten für ihre Attribute <span class="gui_element">Zeitzuschlag</span> und <span class="gui_element">Kapazität IV</span> belegt werden. Welcher Abbiegerstandard zur Belegung der Attribute eines Abbiegers verwendet wird, richtet sich nach dem Typ des Knotens, dem Typ des Abbiegers und der Stromhierarchie.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_link_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 8917807px;margin-bottom: 0, 9096392px;" />&#160;Strecke<MadCap:keyword term="Netzobjekte: Strecken" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Strecken verbinden Knoten und beschreiben so die Struktur des Straßen- und Schienennetzes. Eine Strecke ist eine gerichtete Kante, das heißt Hin- und Rückrichtung der Strecke sind eigenständige Netzobjekte und können somit unterschiedliche Attributwerte haben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Streckentypen" />Streckentyp</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Streckentypen dienen als Muster beim Einfügen neuer Strecken. Beim Einfügen einer Strecke muss ein Streckentyp angegeben werden. Von diesem übernimmt die Strecke dann die Attribute zulässige Verkehrssysteme (<span class="gui_element">VSysSet</span>), <span class="gui_element">Kapazität IV</span>, Geschwindigkeiten (<span class="gui_element">v0-IV</span>, <span class="gui_element">vMin-IV</span>, <span class="gui_element">vMax-IV</span><span class="gui_element" style="font-weight: normal;"> und </span><span class="gui_element">vStd-ÖV</span>), <span class="gui_element">Anzahl</span> <span class="gui_element">Fahrstreifen</span> und den Rang der Strecke als Standardwerte.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_zone_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Bezirk<MadCap:keyword term="Netzobjekte: Bezirke" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Bezirke (Verkehrszellen) beschreiben die Lage von Nutzungen im Netz (zum Beispiel Wohngebiete, Arbeitsstätten, Einkaufszentren, Schulen). Sie sind Ausgangspunkt und Ziel von Ortsveränderungen, das heißt von Verkehr, und über Anbindungen mit dem Netz verbunden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_connector_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Anbindung<MadCap:keyword term="Netzobjekte: Anbindungen" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Anbindungen schließen Bezirke an das Streckennetz an. Sie entsprechen den Zu- und Abgangswegen zwischen Bezirksschwerpunkt und Anbindungsknoten. Für den ÖV erfolgt die Anbindung über einen Haltestellenbereich mit Haltepunkt(en), der einem Netzknoten zugeordnet ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_mainnode_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Oberknoten<MadCap:keyword term="Netzobjekte: Oberknoten" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Mehrere Knoten lassen sich zu einem Oberknoten aggregieren. Jeder Knoten darf dabei nur Teil eines Oberknotens sein. Die Verwendung von Oberknoten bietet sich an, wenn das <MadCap:variable name="PTV_Manual.Programmname" />-Netz stark disaggregiert vorliegt und beispielsweise Richtungsfahrbahnen als getrennte Strecken vorhanden sind und dadurch Kreuzungen aus mehreren Knoten bestehen (diese Situation kann etwa bei der Arbeit mit Navigationsnetzen in <MadCap:variable name="PTV_Manual.Programmname" /> entstehen).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_mainturn_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Oberabbieger<MadCap:keyword term="Netzobjekte: Oberabbieger" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Oberabbieger entstehen bei der Verwendung von Oberknoten. Jede der Fahrtbeziehungen über den Oberknoten hinweg wird durch einen Oberabbieger repräsentiert. Oberabbieger besitzen die gleichen Attribute wie Abbieger. In der Umlegung tritt der Oberabbieger an die Stelle der Abbieger des Knotens, was den erwünschten Effekt zur Folge hat, dass nur ein Abbiegezuschlag für jeden Oberabbieger in die Umlegung mit eingeht.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_mainzone_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000062px;" />&#160;Oberbezirk<MadCap:keyword term="Netzobjekte: Oberbezirke" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Oberbezirke gruppieren mehrere Bezirke und ermöglichen aggregierte Auswertungen. Ein Oberbezirk kann zum Beispiel einen Landkreis darstellen, der mehrere Gemeinden als Verkehrszellen umfasst.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_territory_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Gebiet<MadCap:keyword term="Netzobjekte: Gebiete" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gebiete sind Netzobjekte, mit denen sich zum Beispiel Stadt- und Kreisgrenzen abbilden lassen. Basierend auf einem Polygon, das die Gebietsgrenze definiert, können Kennzahlen des IV und ÖV für jedes Gebiet schnittscharf ausgewiesen werden (zum Beispiel die gefahrenen Servicekilometer innerhalb eines Gebiets).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Beziehungen" />Beziehung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Beziehungen bestehen zwischen allen Bezirken des Netzes. Die Werte in Kenngrößenmatrizen und Nachfragematrizen <MadCap:xref class="sieheUeberschrSeite" href="../1_Nachfragemodell/1_3_Matrizen.htm#1_nachfragemodell_2215163117_1025951"><span style="color: Black;" class="mcFormatColor">(</span><u>Matrizen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> beziehen sich auf jeweils eine Beziehung. Im Unterschied zu den anderen Netzobjekten können Sie Beziehungen nicht interaktiv im Netzeditor bearbeiten, aber Sie können Beziehungen filtern und grafisch darstellen. Für jede Beziehung können Sie als Attribute die Kenngrößenmatrix-Werte, Nachfragematrix-Werte und die Luftlinienweite auswählen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Wege" />Weg</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Bei der Berechnung von Umlegungen werden Wege zwischen den Quell- und Zielbezirken gefunden und deren Belastung ermittelt. Wege sind daher das zentrale Ergebnis der Umlegungsverfahren. Im IV kann der Anwender Wege manuell bearbeiten. So können etwa Umlegungsergebnisse manuell nach <MadCap:variable name="PTV_Manual.Programmname" /> importiert werden oder auch die <MadCap:variable name="PTV_Manual.Programmname" />-Umlegungsergebnisse manuell angepasst werden. Es lassen sich sowohl die Belastungen der Wege als auch der Verlauf der Wege bearbeiten.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Verkehrstage" />Verkehrstag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">Ein Verkehrstag ist eine frei definierbare Menge von Tagen innerhalb des verwendeten Kalenders. Wird ein Wochenkalender verwendet, so kann ein Verkehrstag die Tage Montag bis Sonntag umfassen (zum Beispiel „montags bis freitags“). Wird ein Jahreskalender verwendet, so können beliebige Einzeltage innerhalb der Gültigkeitsdauer ausgewählt werden. Wird kein Kalender verwendet, so gibt es nur den Verkehrstag „täglich“. Es ist dann nicht möglich neue Verkehrstage anzulegen.</p>
+                        <p class="CellText">Im ÖV: jedem Fahrplanfahrtabschnitt kann ein Verkehrstag zugeordnet werden.</p>
+                        <p class="CellText">Im IV: für die Dynamische Stochastische Umlegung und DUE kann das Verkehrsangebot zeitlich veränderlich sein. Dazu dienen befristete Attribute <MadCap:xref class="sieheUeberschrSeite" href="1_2_Befristete Attribute.htm#1_netzmodell_1240632468_1028812"><span style="color: Black;" class="mcFormatColor">(</span><u>Befristete Attribute</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Bei Verwendung eines Kalenders können für diese befristeten Attribute Verkehrstage angegeben werden, an denen sie wirken sollen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_netzmodell_1240632468_1174489">
+            </a>
+            <a name="1_netzmodell_1240632468_35581">
+            </a>Basisnetzobjekte eines Verkehrsnetzes</p>
+        <table class="TableStyle-TableStand_withTitle" style="mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Netzobjekt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_stop_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000062px;" />&#160;Haltestelle<MadCap:keyword term="Netzobjekte: Haltestellen" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Eine Haltestelle fasst Haltestellenbereiche und damit auch Haltepunkte zusammen. Sie hat zur Lokalisierung und grafischen Darstellung eine Koordinate, ist aber nicht direkt einem Netzknoten oder einer Strecke zugeordnet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_stoparea_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000062px;" />&#160;Haltestellenbereich<MadCap:keyword term="Netzobjekte: Haltestellenbereiche" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Ein Haltestellenbereich unterteilt eine Haltestelle in Bereiche. Er kann beispielsweise einen Bahnsteig, eine Straßenkreuzung mit mehreren Haltepunkten, eine Bahnhofshalle darstellen. Ein Haltestellenbereich hat folgende Eigenschaften:</p>
+                        <ul>
+                            <LI class="List0Tab">Er ist genau einer Haltestelle zugeordnet.</LI>
+                            <LI class="List0Tab">Er kann mehrere Haltepunkte umfassen.</LI>
+                            <LI class="List0Tab">Er kann einem Netzknoten zugeordnet werden. Damit ist eine ÖV-Anbindung eines Bezirks an das Streckennetz möglich.</LI>
+                            <LI class="List0Tab">Die Bereiche einer Haltestelle werden durch eine Übergangsgehzeitenmatrix (Gehzeiten zwischen den Haltestellenbereichen) miteinander verbunden. Sie enthält die Übergangsgehzeit für zum Beispiel jedes ÖVFuß-Verkehrssystem.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_stoppoint_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Haltepunkt<MadCap:keyword term="Netzobjekte: Haltepunkte" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Ein Haltepunkt ist der Ort, an dem ÖV-Linien für den Fahrgastwechsel halten. Ein Haltepunkt kann entweder auf einem Knoten oder auf einer Strecke liegen (Streckenhaltepunkt).</p>
+                        <ul>
+                            <LI class="List0Tab">Ein Haltepunkt am Knoten kann von allen Linien bedient werden, die den Knoten überfahren.</LI>
+                            <LI class="List0Tab">Ein Haltepunkt auf einer Strecke kann nur von den Linien bedient werden, die über diese Strecke fahren. Mit Streckenhaltepunkten ist optional eine detaillierte richtungsfeine Modellierung auf der Basis von Masten möglich. Alternativ können auch ungerichtete Haltepunkte auf Strecken eingefügt werden.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_line_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Linie<MadCap:keyword term="Netzobjekte: Linien" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Linien fassen alle Linienrouten und Fahrpläne einer Linie zusammen. Eine Linie hat mindestens eine Linienroute und diese mindestens ein Fahrzeitprofil. Um Linienvarianten zu definieren, können einer Linie mehrere Linienrouten zugeordnet werden und jeder von diesen wiederum mehrere Fahrzeitprofile.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Linienrouten" />Linienroute</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Die Linienroute beschreibt den räumlichen Verlauf des Linienweges für eine Fahrtrichtung als eine Folge von Routenpunkten. Routenpunkte sind ausgewählte Punkte im Linienweg, nämlich alle Haltepunkte und eventuell auch überfahrene Knoten. Der erste und letzte Routenpunkt einer Linienroute muss je ein Haltepunkt sein, der für das Verkehrssystem der Linie geöffnet ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Fahrzeitprofile" />Fahrzeitprofil</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrzeitprofile beschreiben die Länge der Fahrzeiten zwischen den Haltepunkten einer Linienroute und ob an den Haltepunkten der Linienroute ein- oder ausgestiegen werden darf. Da es möglich ist pro Linienroute mehrere Fahrzeitprofile anzulegen, können Sie so beispielsweise modellieren, dass die Fahrzeiten einer Straßenbahn zwischen Haltepunkten im Feierabendverkehr länger sind als am Rest des Tages. Die Zuordnung des Fahrzeitprofils erfolgt auf Fahrtebene, so dass Sie jeder Fahrt ein anderes Fahrzeitprofil zuweisen können.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Fahrten" />Fahrplanfahrt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Fahrplanfahrten (auch kurz Fahrten genannt) sind die grundlegenden Objekte zur Beschreibung des Fahrplans. Jede Fahrplanfahrt benutzt genau ein Fahrzeitprofil. In den meisten Fällen benutzen alle Fahrten einer Linienroute dasselbe Fahrzeitprofil, falls dieses zum Beispiel nicht tageszeitabhängig variiert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Fahrtabschnitte" />Fahrplanfahrtabschnitt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrplanfahrtabschnitte (auch Fahrtabschnitte genannt) dienen dazu, eine Fahrplanfahrt weiter zu unterteilen. Für die Fahrtabschnitte einer Fahrplanfahrt können unterschiedliche Verkehrstage und unterschiedliche Fahrzeugkombinationen festgelegt werden. So können Sie etwa erreichen, dass ein Zug an Tagen hoher Auslastung mit einer Fahrzeugkombination, die mehr Wagen angehängt hat, verkehrt. Außerdem können Sie für jeden Fahrtabschnitt unterschiedliche Start- und Endhaltepunkt angeben, und somit beispielsweise erreichen, dass die zusätzlichen Wagen nur auf einem Teil des Linienroutenverlaufs angehängt werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Oberlinien" />Oberlinie</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Oberlinien dienen dazu mehrere Linien zu aggregieren und Auswertungen (wie zum Beispiel für ÖV-betriebliche Kennzahlen) auf dieser Aggregationsebene vorzunehmen. Die Aggregation kann auch über Linien mit verschiedenen Verkehrssystemen erfolgen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_sysroute_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Systemroute<MadCap:keyword term="Netzobjekte: Systemrouten" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Eine Systemroute beschreibt die Fahrzeit und den räumlichen Verlauf zwischen zwei Haltepunkten. Im Gegensatz zur Linienroute ist sie unabhängig von der Zugehörigkeit zu einer Linie oder gar zu einer konkreten Fahrplanfahrt. Systemrouten dienen mit ihren Wege- und Fahrzeitinformationen als Schablone für das effiziente Digitalisieren von Linienrouten und für das Setzen von Fahrzeiten im Fahrzeitprofil. Systemrouten sind optionale Netzobjekte, also nicht zwingend notwendig, wenn Sie ein ÖV-Modell erstellen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: ÖV-Betreiber" />ÖV-Betreiber</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Jedem Fahrplanfahrtabschnitt können Sie optional einen Betreiber zuordnen. Bei der Arbeit mit dem Betreibermodell können Sie dann ÖV-betriebliche Kennzahlen je Betreiber auswerten <MadCap:xref class="sieheUeberschrSeite" href="../1_Betreibermodell OeV/1_7_Betreibermodell OeV.htm#1_betreibermodell_oev_1878159914_1360628"><span style="color: Black;" class="mcFormatColor">(</span><u>Betreibermodell ÖV</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Des Weiteren können Sie jedem Betreiber Kostenwerte für Abschreibungen und laufende Kosten zuweisen und dann Betreiberkosten bezogen auf verschiedene Netzobjekte auswerten.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Fahrzeugkombinationen" />Fahrzeugkombination</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Jedem Fahrplanfahrtabschnitt können Sie optional eine Fahrzeugkombination zuordnen. Einer Fahrzeugkombination können Sie zeit- und entfernungsabhängige Kostensätze für Fahrplanfahrten und Leerfahrten und Kostensätze für den Aufenthalt im Depot und die Standzeit zuordnen. Diese Kostensätze kommen im Rahmen des Betreibermodells zur Anwendung <MadCap:xref class="sieheUeberschrSeite" href="../1_Betreibermodell OeV/1_7_Betreibermodell OeV.htm#1_betreibermodell_oev_1878159914_1360628"><span style="color: Black;" class="mcFormatColor">(</span><u>Betreibermodell ÖV</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Fahrzeugeinheiten" />Fahrzeugeinheit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Eine Fahrzeugkombination besteht aus einer oder mehreren Fahrzeugeinheiten. So können Sie beispielsweise eine Fahrzeugkombination <span class="gui_element">Intercity</span> aus mehreren Fahrzeugeinheiten <span class="gui_element">Wagen</span> zusammensetzen. Für jede können Sie die Anzahl Sitzplätze und Gesamtplätze angeben. Des Weiteren können Sie zeit- und entfernungsabhängige Kostensätze für Fahrplanfahrten und Leerfahrten und Kostensätze für den Aufenthalt im Depot und die Standzeit zuordnen. Außerdem ist ein fixer Kostensatz pro Fahrzeug definierbar. Dies ermöglicht eine sehr differenzierte Modellierung Ihres Fahrzeugparks.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Umlaufversionen" />Umlaufversion</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">In <MadCap:variable name="PTV_Manual.Programmname" /> können mehrere Umlaufbildungsergebnisse nebeneinander gehalten werden. Diese werden in so genannten Umlaufversionen abgelegt. So können Planungsvarianten mit unterschiedlichen Parametereinstellungen leichter miteinander verglichen werden. Zum Beispiel können eine Umlaufversion, in der das Umsetzen erlaubt ist, und eine andere, in der dies nicht erlaubt ist, im Modell gehalten werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Umlaufelementtypen" />Umlaufelementtyp</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Jeder Umlauf setzt sich aus einzelnen Abschnitten zusammen, die als Umlaufelemente bezeichnet werden. Jedes Umlaufelement ist von einem bestimmten Typ (Umlaufelementtyp). Standardmäßig gibt es in <MadCap:variable name="PTV_Manual.Programmname" /> die Umlaufelementtypen Fahrplanfahrt, Leerfahrt, Wendezeit und Stand. Sie können aber auch benutzerdefinierte Umlaufelementtypen anlegen und diese manuell in Ihre Umläufe einplanen (zum Beispiel für Wartung oder Waschen).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Fahrkartenarten" />Fahrkartenart</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Werden Erlöse mit Hilfe eines Tarifmodells modelliert, dann bildet die Fahrkartenart die Grundlage für die Fahrpreisberechnung einer Verbindung. Es können Grundpreise und verkehrssystemabhängige Zuschläge definiert werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: Tarifzonen" />Tarifzone</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Bei der Erlösberechnung mit Tarifmodell und Zonentarif, dienen Tarifzonen zur Fahrpreisberechnung einer Verbindung. Dieses richtet sich beim Zonentarif nach der Anzahl durchfahrener Tarifzonen. Um die Anzahl durchfahrener Tarifzonen zu ermitteln, werden diesen Haltestellen zugeordnet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <MadCap:keyword term="Netzobjekte: ÖV-Koordinierungsgruppen" />ÖV-Koordinierungsgruppe</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Dieses Netzobjekt ist nur in der taktfeinen Umlegung relevant. Gibt es beispielsweise zwei Linien, die sich auf einem gemeinsamen Abschnitt der Linienwege zu einem halb so langen Taktintervall ergänzen, so spricht man von Koordinierung. Die Koordinierungsgruppe fasst zwei oder mehr Fahrzeitprofile über einen gemeinsamen Abschnitt der Linienwege zusammen. Wurden zwei oder mehrere Fahrzeitprofile über einen Streckenabschnitt koordiniert, so verhalten sie sich auf diesem Abschnitt wie ein Fahrzeitprofil mit entsprechend erhöhter Taktfrequenz. Die Zufallsgröße, die im Rahmen der taktfeinen Umlegung die Wartezeit darstellt, verringert sich dadurch auf dem koordinierten Abschnitt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+            <a name="1_netzmodell_1240632468_1174887">
+            </a>ÖV-Netzobjekte eines Verkehrsnetzes</p>
+        <table class="TableStyle-TableStand_withTitle" style="mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Netzobjekt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_POI_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Point of Interest (POI) und POI-Kategorie<MadCap:keyword term="Netzobjekte: Points of Interest (POI)" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Points of Interest sind benutzerdefinierte Netzobjekte mit räumlichem Bezug, zum Beispiel Parkplätze, LSA-Controller oder Baken für Rechnergestützte Betriebsleitsysteme (RBL) im ÖV. POIs dienen zur Darstellung spezieller Nutzungen wie etwa Gaststätten oder Hotels, zur Datenverwaltung sowie für Erreichbarkeitsanalysen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_CP_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Zählstelle<MadCap:keyword term="Netzobjekte: Zählstellen" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Zählstellen sind eigenständige Netzobjekte, die genau einer Strecke richtungsbezogen zugeordnet sind und zur Verwaltung von Streckenzählwerten dienen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_detector_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Detektor<MadCap:keyword term="Netzobjekte: Detektoren" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Detektoren sind optionale Netzobjekte des Zusatzmoduls Zählstellen. Sie dienen der fahrstreifenfeinen Verwaltung von Zähldaten sowie der Modellierung von Signalsteuerungen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_toll_systems.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;" />&#160;Mautsystem<MadCap:keyword term="Netzobjekte: Mautsysteme" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Mautsysteme sind optionale Netzobjekte, mit denen Sie Mautzonen in das Netzmodell einfügen können. Beim TRIBUT-Verfahren bilden sie die Grundlage zur Berechnung der Straßenbenutzungsgebühren. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_GIS_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;GIS-Objekt<MadCap:keyword term="Netzobjekte: GIS-Objekte" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">GIS-Objekte (GIS = geografisches Informationssystem) erweitern das Netzmodell um spezielle Layer, die direkt aus dem GIS ArcGIS eingebunden und über Verschneidefunktionen mit den <MadCap:variable name="PTV_Manual.Programmname" /> Netzdaten verknüpft werden können. Die Objekte sind nur während der Verbindung mit einer Personal Geodatabase (PGD) verfügbar.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_screenline_layer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000064px;" />&#160;Screenline<MadCap:keyword term="Netzobjekte: Screenlines" /></p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Screenlines sind ein nützliches Konstrukt für die Kalibrierung eines Umlegungsmodells anhand von Streckenzählwerten. Ihr Verlauf entspricht häufig natürlichen Gegebenheiten, zum Beispiel einem Fluss oder einem Bahnkörper. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+            <a name="1_netzmodell_1240632468_1175387">
+            </a>
+            <a name="1_netzmodell_1240632468_54586">
+            </a>Allgemeine Netzobjekte</p>
+        <p class="Text">Durch die Netzbearbeitung ändern sich die Eigenschaften des Verkehrsnetzes, so dass sich andere Kenngrößenwerte und Umlegungsergebnisse ergeben.</p>
+        <ul>
+            <LI class="List0">Bei strukturellen Netzänderungen wird ein vorhandenes Umlegungsergebnis initialisiert. Das Einfügen oder Entfernen eines Netzobjekts einschließlich Umnummerieren oder Verschmelzen von Knoten, das Splitten einer Strecke oder eines Bezirks sowie das Aggregieren von Bezirken stellen eine strukturelle Netzänderung dar. ÖV-Umlegungsergebnisse bleiben erhalten, wenn neue Bezirke und Anbindungen eingefügt werden.</LI>
+            <LI class="List0">Werden lediglich Attributwerte einzelner Netzobjekte geändert, zum Beispiel die Länge einer Strecke, bleibt das aktuelle Umlegungsergebnis erhalten, obwohl eine erneute Umlegung zu einem anderen Ergebnis führen kann.</LI>
+        </ul>
+    </body>
+</html>

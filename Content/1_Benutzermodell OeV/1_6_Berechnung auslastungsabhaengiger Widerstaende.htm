@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="VorHst;EinHst;NachHst;QuellHst;ZielHst;linie;Ride;Wid;Branch;Bound;FZ;UZ;UH;Fak;timetab1;par;frueh;spaet;ΔT;gleichabständig;WID;Fzg;18min;Wid1;Wid2;P1;P2;M1;M2;A_DORF;X_STADT;UWZ;Beförd;Mittl;Bus1;$ODMATRIX;$MATRIXSINGLELISTITEM;PuT;dmd;$TIMESERIES;$TIMESERIESITEM;$VISION;VisumInst;Table;$VERSION;VERSNR;FILETYPE;LANGUAGE;UNIT;Demand;ODMATRIX;NO;CONTENT;ROUND;NUMDECPLACES;Car;HVeh;MATRIXSINGLELISTITEM;MATRIXNO;FROMZONENO;TOZONENO;VALUE;TIMESERIESDOMAINTYPE;$TIMESERIESDOMAINTYPE;DESCRIPTION;UNITYSTRING;MAXVALUE;MINVALUE;No;series;TYPENO;UNITX;NUMINTERVALS;LENGTHINTERVAL;USEVALUELIST;VALUELISTTYPE;VALUEREFTYPE;DECSEPARATOR;VALUESEPARATOR;TIMESERIESITEM;TIMESERIESNO;STARTINTERVALINDEX;ENDINTERVALINDEX;$DEMANDDESCRIPTION;DSEGCODE;DEMANDTIMESERIESNO;STARTDAYINDEX;α;ß;γ" MadCap:lastBlockDepth="2" MadCap:lastHeight="662" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1229049">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_72768">
+            </a>Berechnung auslastungsabhängiger Widerstände</h4>
+        <p class="Text">Die Auslastung <span class="formula">A</span><span class="formula_subscript">v</span> auf dem Fahrplanfahrtelement <span class="formula">v</span> ergibt sich in allen drei Optionen aus:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_52.jpg" />
+        </p>
+        <p class="Text">Die Kapazität <span class="formula">v</span> entspricht dem Wert des vom Anwender angegebenen Attributs für die Kapazität eines Fahrplanfahrtelements. Die voreingestellte Standardbelegung summiert über alle Fahrplanfahrtabschnitte, die das Fahrplanfahrtelement unabhängig von ihrem Verkehrstag bedienen. Die Belastung eines Fahrplanfahrtelements ergibt sich aus der Summe der Belastungen aller Verbindungen, die es verwenden:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_46.jpg" />
+        </p>
+        <p class="Text">Teilwege mit ÖV-Zusatz bleiben bei der Berechnung auslastungsabhängiger Widerstände unberücksichtigt. </p>
+        <h5>
+            <a name="1_benutzermodell_oev_2318507456_45472">
+            </a>Berechnung aus den erwarteten Steherminuten (Deutsche Bahn – (DB))</h5>
+        <p class="Text">Die erwarteten Steherminuten (E) sind der Mittelwert der Zeit, in der ein Fahrgast im Verlauf einer Fahrt keinen Sitzplatz hat, wenn auf jedem Halteabschnitt die Sitzplätze zufällig unter den Reisenden vergeben werden. Letzteres ergibt sich aus der Tatsache, dass nicht zwischen Fahrgästen unterschieden werden kann, die bereits vor einem überlasteten Streckenabschnitt im Fahrzeug sind, und jenen, die in diesem Abschnitt zusteigen. Diese Interpretation der Steherminuten gilt, wenn die Kapazität eines Fahrplanfahrtelements in Bezug auf die Sitzplätze definiert wird. Allgemein handelt es sich um einen Diskomfort, der mit zunehmender Auslastung steigt.</p>
+        <p class="Text">Die Steherwahrscheinlichkeit auf einem Fahrplanfahrtelement <span class="formula">v</span> wird durch eine potentiell asymptotische Funktion approximiert:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_63.jpg" />
+        </p>
+        <p class="Text">
+            <span class="formula">a</span> und <span class="formula">b</span> sind Parameter, die vom Anwender angegeben werden müssen, <span class="formula">A</span><span class="formula_subscript">v</span> ist die Auslastung.</p>
+        <p class="Text">Die erwarteten Steherminuten einer Verbindung V entsprechen dem belastungsabhängigen Widerstand und ergeben sich durch Aufsummieren des Produkts aus Steherwahrscheinlichkeit und Fahrzeit über alle Fahrtplanfahrtelemente der Verbindung:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_64.jpg" />
+        </p>
+        <h5>Berechnung mittels einer Bestrafungsfunktion (Schweizer Bundesbahnen – (SBB))</h5>
+        <p class="Text">Der Widerstand eines Fahrplanfahrtelements <span class="formula">v</span> ist gegeben durch:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_2.jpg" />
+            <img src="../Resources/Images/8_19.jpg" />
+        </p>
+        <p class="Text">Die Parameter <span class="formula">a, b, c</span>, <span class="formula">l</span><span class="formula_subscript">1</span> und <span class="formula">l</span><span class="formula_subscript">2</span> müssen vom Anwender angegeben werden, <span class="formula">A</span><span class="formula_subscript">v</span> ist die Auslastung eines Fahrplanfahrtelements <span class="formula">v</span>. Die Parameter <span class="formula">r, α, ß</span> und <span class="formula">γ</span> ergeben sich daraus, weil die Funktion an den Stellen <span class="formula">l</span><span class="formula_subscript">1</span> und <span class="formula">l</span><span class="formula_subscript">2</span> stetig differenzierbar ist.</p>
+        <p class="Text">Damit ergibt sich der Widerstand einer Verbindung <span class="formula">V</span> durch:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_65.jpg" />
+        </p>
+        <h5>Berechnung mittels einer linearen Bestrafungsfunktion (Linear)</h5>
+        <p class="Text">Der Widerstand eines Fahrplanfahrtelements <span class="formula">v</span> ist gegeben durch:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_62.jpg" />
+        </p>
+        <p class="Text">Die Parameter <span class="formula">a</span> und <span class="formula">b</span> sind benutzerdefiniert, <span class="formula">A</span><span class="formula_subscript">v</span> ist die Auslastung eines Fahrplanfahrtelements <span class="formula">v</span>.</p>
+        <p class="Text">Damit ergibt sich der Widerstand einer Verbindung <span class="formula">V</span> durch:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_65.jpg" />
+        </p>
+    </body>
+</html>

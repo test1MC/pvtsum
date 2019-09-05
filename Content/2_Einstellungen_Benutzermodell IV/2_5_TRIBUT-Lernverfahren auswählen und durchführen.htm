@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="1304" MadCap:lastWidth="1036" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls;max;Program;Processor;R';Factor;Stdabw;Lognormalvert;Method;Lotka;Volterra;BPR;BPR2;b’;Knotensteuerung_CR;pseudodynamic;pa;tmodelspecial;ten;Circular;Operations;Planning;ICU1;ICU;ICU2">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1060223">
+            </a>TRIBUT-Lernverfahren auswählen und durchführen</h4>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn in Ihrem Netz Umlegungsergebnisse vorhanden sind, können Sie diese direkt löschen oder als Teil eines Verfahrensablaufs, zum Beispiel direkt vor der Berechnung einer neuen Umlegung <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Umlegungsergebnisse IV_ÖV löschen.htm#2_verfahrensablauf_festlegen_40480990_1082712"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlegungsergebnisse IV/ÖV löschen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass die Eingabeattribute für das Verfahren vorhanden sind <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Eingabe- und Ausgabeattribute des Verfahrens TRIBUT.htm#1_benutzermodell_iv_2033098965_1226132">Siehe "Eingabe- und Ausgabeattribute des Verfahrens TRIBUT"</MadCap:xref>.</p>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Insbesondere müssen Sie die Maut festlegen. Sie können verschiedene Mauttypen in Ihrem Modell verwenden. Jede Strecke wird aber nur für einen Mauttyp berücksichtigt.</p>
+                        <ul>
+                            <LI class="List0">Mauttyp Streckenmaut: Geben Sie für die Strecken, die nicht in einem Mautsystem liegen, die Streckenmaut in das Streckenattribut <span class="gui_element">Maut-IVSys</span> ein <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Strecken__Register_IV_VSys.htm#2_netz_bearbeiten_23091886_1795968"><span style="color: Black;" class="mcFormatColor">(</span><u>Strecken: Register IV-VSys</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+                            <LI class="List0">Mauttyp Flächenmaut oder Matrixmaut: Fügen Sie ein oder mehrere Mautsysteme ein und ordnen Sie die gewünschten Strecken den Mautsystemen zu <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Mautsystem_einfügen.htm#2_netz_bearbeiten_23091886_2019859"><span style="color: Black;" class="mcFormatColor">(</span><u>Mautsystem einfügen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Definieren Sie gegebenenfalls für Matrixmautsysteme die Matrixmaut <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Matrixmaut_für_ein_Mautsystem_festlegen.htm#2_netz_bearbeiten_23091886_2305306"><span style="color: Black;" class="mcFormatColor">(</span><u>Matrixmaut für ein Mautsystem festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Für Strecken, die einem Mautsystem zugeordnet sind, wird das Streckenattribut <span class="gui_element">Maut-IVSys</span> ignoriert.</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Menü <span class="gui_element">Rechnen</span> den Eintrag <span class="gui_element">Allgemeine Verfahrenseinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Allgemeine Verfahrenseinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Nehmen Sie unter <span class="gui_element">IV-Einstellungen</span> die erforderlichen Einstellungen vor.</p>
+        <ul>
+            <LI class="List1">
+                <span class="gui_element">IV-Einstellungen </span>
+                <MadCap:xref class="sieheUeberschrSeite" href="2_5_Einstellungen für IV-Umlegungen vornehmen.htm#2_einstellungen_benutzermodell_iv_1682368020_1091394">
+                    <span style="color: Black;" class="mcFormatColor">(</span>
+                    <u>Einstellungen für IV-Umlegungen vornehmen</u>
+                    <span style="color: Black;" class="mcFormatColor">)</span>
+                </MadCap:xref>
+            </LI>
+            <LI class="List1">
+                <span class="gui_element">IV-Einstellungen&#160;&gt; Widerstand</span> und<span class="gui_element"> IV-Einstellungen&#160;&gt; CR-Kurven </span><MadCap:xref class="sieheUeberschrSeite" href="2_5_Widerstandsfunktionen definieren und verwenden.htm#2_einstellungen_benutzermodell_iv_1682368020_1034717"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstandsfunktionen definieren und verwenden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List1">
+                <span class="gui_element">IV-Einstellungen&#160;&gt; Widerstände am Knoten </span>
+                <MadCap:xref class="sieheUeberschrSeite" href="2_5_Knotenwiderstände berechnen.htm#2_einstellungen_benutzermodell_iv_1682368020_1079765">
+                    <span style="color: Black;" class="mcFormatColor">(</span>
+                    <u>Knotenwiderstände berechnen</u>
+                    <span style="color: Black;" class="mcFormatColor">)</span>
+                </MadCap:xref>
+            </LI>
+            <LI class="List1">
+                <span class="gui_element">IV-Einstellungen&#160;&gt; Rückstaumodell </span>
+                <MadCap:xref class="sieheUeberschrSeite" href="2_5_Rückstaumodell einstellen und berechnen.htm#2_einstellungen_benutzermodell_iv_1682368020_1033770">
+                    <span style="color: Black;" class="mcFormatColor">(</span>
+                    <u>Rückstaumodell einstellen und berechnen</u>
+                    <span style="color: Black;" class="mcFormatColor">)</span>
+                </MadCap:xref>
+            </LI>
+        </ul>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Für die Berechnung des Widerstands sollte das Attribut <span class="gui_element">Maut-IVSys</span> nicht verwendet werden, da es vom Verfahren neben dem Widerstand (<span class="gui_element">tAkt</span>, <span class="gui_element">Länge</span>) automatisch berücksichtigt wird <MadCap:xref class="sieheUeberschrSeite" href="2_5_Widerstandsfunktionen definieren und verwenden.htm#2_einstellungen_benutzermodell_iv_1682368020_1034717"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstandsfunktionen definieren und verwenden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Nehmen Sie unter <span class="gui_element">Analysezeiträume</span> die gewünschten Einstellungen vor <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Allgemeine Verfahrenseinstellungen festlegen.htm#2_verfahrensablauf_festlegen_40480990_1111171"><span style="color: Black;" class="mcFormatColor">(</span><u>Allgemeine Verfahrenseinstellungen festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">
+            <MadCap:snippetText src="../Resources/Snippets/A_RES_Das_Fenster_schließt_sich.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="6. &#160;">Klicken Sie in der Symbolleiste auf das Symbol <img src="../Resources/Images_4_all/ICO_procedure_flow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000347px;margin-bottom: 0, 9983615px;" />&#160;<span class="gui_element">Verfahrensablauf öffnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Verfahrensablauf</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Fügen Sie an der gewünschten Stelle im Verfahrensablauf das Verfahren <span class="gui_element">IV-Umlegung</span> aus der Kategorie <span class="gui_element">Umlegungen</span> ein <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahrensablauf festlegen und starten.htm#2_verfahrensablauf_festlegen_40480990_1019020"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahrensablauf festlegen und starten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="8. &#160;">Klicken Sie in der Zeile des neu eingefügten Verfahrens auf die Schaltfläche in der Spalte <span class="gui_element">Bezugsobjekt(e)</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Nachfragesegmente Auswahl</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="9. &#160;">Wählen Sie in der Auswahlliste <span class="gui_element">Modus auswählen</span> den Eintrag <span class="gui_element">Alle IV-Modi</span>.</p>
+        <p class="Step" MadCap:autonum="10. &#160;">Wählen Sie im Bereich <span class="gui_element">Nachfragesegmente</span> den gewünschten Eintrag.</p>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Alternativ können Sie mehrere Nachfragesegmente auswählen.</p>
+                        <p class="CellText">Einzelne Einträge wählen Sie aus, indem Sie die Taste <span class="shortcut">Strg</span> drücken und jeden Eintrag anklicken. Aufeinanderfolgende Einträge wählen Sie aus, indem Sie die Taste <span class="shortcut">Umschalt</span> drücken und auf den ersten und den letzten gewünschten Eintrag klicken.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="11. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">In der Spalte <span class="gui_element">Bezugsobjekt(e)</span> werden die gewählten Nachfragesegmente angezeigt.</p>
+        <p class="Step" MadCap:autonum="12. &#160;">Klicken Sie in der Zeile des eingefügten Verfahrens in die Spalte <span class="gui_element">Variante/Datei</span>.</p>
+        <p class="Stepresult">Eine Auswahlliste wird verfügbar.</p>
+        <p class="Step" MadCap:autonum="13. &#160;">Wählen Sie in der Auswahlliste den Eintrag <span class="gui_element">TRIBUT-Lernverfahren</span>.</p>
+        <p class="Stepresult">Der gewählte Eintrag wird in der Spalte angezeigt.</p>
+        <p class="Step" MadCap:autonum="14. &#160;">Stellen Sie sicher, dass das eingefügte Verfahren markiert ist, und klicken Sie im Bereich <span class="gui_element">Aktionen</span> auf <span class="gui_element">Bearbeiten</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Parameter für TRIBUT-Lernverfahren</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="15. &#160;">Legen Sie die gewünschten Parameter fest <MadCap:xref class="sieheUeberschrSeite" href="2_5_Parameter des TRIBUT-Lernverfahrens.htm#2_einstellungen_benutzermodell_iv_1682368020_1060399"><span style="color: Black;" class="mcFormatColor">(</span><u>Parameter des TRIBUT-Lernverfahrens</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="16. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="17. &#160;">Führen Sie das Verfahren aus <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahren im Verfahrensablauf ausführen.htm#2_verfahrensablauf_festlegen_40480990_1112524"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahren im Verfahrensablauf ausführen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Result">Das Umlegungsverfahren wird durchgeführt.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Hinweise zu den Berechnungsergebnissen des TRIBUT-Lernverfahrens finden Sie in der Protokolldatei. Zu jeder Iteration finden Sie darin die Anzahl der Netzobjekte, für die die Abweichung beim Abbruch des Verfahrens zu hoch war. Wenn die Anzahl pro Verkehrssystem einen bestimmten Wert unterschreitet, sind die Netzobjekte einzeln aufgelistet. Diese Netzobjekte können Sie auf Eingabefehler oder Probleme hin untersuchen. </p>
+                        <p class="Text">Sie können festlegen, bis zu welcher Anzahl die nicht konvergierenden Netzobjekte einzeln aufgelistet werden <MadCap:xref class="sieheUeberschrSeite" href="2_5_Anzahl nicht-konvergierter Netzobjekte in Protokolldatei ändern.htm#2_einstellungen_benutzermodell_iv_1682368020_1092739"><span style="color: Black;" class="mcFormatColor">(</span><u>Anzahl nicht-konvergierter Netzobjekte in Protokolldatei ändern</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="673" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1120854">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_63945">
+            </a>Einstellungen für die Berechnung von IV-Kenngrößenmatrizen<a name="11031"></a></h3>
+        <h5 MadCap:autonum="">Betrachtete Relationen</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="383px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur Beziehungen mit Nachfrage &gt;&#160;0 berechnen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden nur die Quelle-Ziel-Beziehungen berücksichtigt, deren Verkehrsnachfrage größer null ist. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Quelle-Ziel-Beziehungen mit Verkehrsnachfrage = 0 erhalten den Kenngrößenwert null.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">Filter-Auswahlliste</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Über die Auswahlliste können Sie die betrachteten Bezirksbeziehungen weiter einschränken, die der aktuellen Einstellung der Option <span class="gui_element">Nur Beziehungen mit Nachfrage &gt;&#160;0 berechnen </span>entsprechen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Für alle Bezirksbeziehungen, die aufgrund der gewählten Option nicht ausgewertet werden, enthält die Kenngrößenmatrix den Wert, der für <span class="gui_element">Ignorierte Beziehungen</span> gesetzt ist über Menü <span class="gui_element">Rechnen</span>&#160;&gt; <span class="gui_element">Allgemeine Verfahrenseinstellungen</span>&#160;&gt; <span class="gui_element">IV-Einstellungen</span>&#160;&gt; <span class="gui_element">Kenngrößen </span><MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Metadaten für Kenngrößenmatrizen festlegen.htm#2_verfahrensablauf_festlegen_40480990_1033259"><span style="color: Black;" class="mcFormatColor">(</span><u>Metadaten für Kenngrößenmatrizen festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">alle</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden alle Bezirksbeziehungen ausgewertet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Nur aktive Beziehungen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden nur die aktiven Beziehungen ausgewertet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Nur aktive Quell-Bezirke</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden nur Beziehungen mit einem aktiven Quellbezirk ausgewertet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Nur Paare aktiver Bezirke</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden nur Beziehungen zwischen aktiven Bezirken ausgewertet.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Die Einstellung der betrachteten Bezirksbeziehungen für die Kenngrößenberechnung kann von derjenigen für die Umlegung abweichen.</p>
+                        <p class="CellText">Ist für die Umlegung ein einschränkendes Bezirksintervall definiert, schränkt dies die betrachteten Bezirksbeziehungen noch weiter ein.</p>
+                        <p class="CellText">Beim Einlesen von Parametern aus älteren Versionen von <MadCap:variable name="PTV_Manual.Programmname" /> wird die damalige Auswahl dieser Option entweder als <span class="gui_element">alle</span> oder als <span class="gui_element">Nur Paare aktiver Bezirke</span> interpretiert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Wegewahl, Wege aufsummieren aus</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="95px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="401px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Kriterium für die Wegesuche</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Kriterium für die Auswahl des Wegs bzw. der Wege, aus denen pro Beziehung der Kenngrößenwert ermittelt wird.</p>
+                        <p class="CellText">
+                            <span class="gui_element">t0</span>
+                        </p>
+                        <p class="CellText">Weg mit kürzester Fahrzeit im unbelasteten Netz</p>
+                        <p class="CellText">
+                            <span class="gui_element">tAkt</span>
+                        </p>
+                        <p class="CellText">Weg mit kürzester Fahrzeit im belasteten Netz</p>
+                        <p class="CellText">
+                            <span class="gui_element">Widerstand</span>
+                        </p>
+                        <p class="CellText">Abhängig von der Option <span class="gui_element">Wege aus der Umlegung verwenden</span></p>
+                        <ul>
+                            <LI class="List0Tab">Ist die Option nicht ausgewählt, wird der Weg mit dem niedrigsten Widerstand für das IV-VSys entsprechend der aktuellen Widerstandsfunktion verwendet.</LI>
+                            <LI class="List0Tab">Ist die Option ausgewählt, wird der aggregierte Wert aus allen Wegen verwendet.</LI>
+                        </ul>
+                        <p class="CellText">
+                            <span class="gui_element">Entfernung</span>
+                        </p>
+                        <p class="CellText">Weg mit kürzester Länge</p>
+                        <p class="CellText">
+                            <span class="gui_element">ZWert1</span>, <span class="gui_element">ZWert2</span>, <span class="gui_element">ZWert3</span></p>
+                        <p class="CellText">Weg mit minimalem ZWert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Wege aus der Umlegung verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, wird der Kenngrößenwert aus allen Wegen einer Beziehung ermittelt, gemäß der Option <span class="gui_element">Gewichtung der Wege</span>.</p>
+                        <p class="CellText">Ist die Option nicht ausgewählt, wird der Weg mit minimalem Widerstand für das IV-VSys entsprechend der aktuellen Widerstandsfunktion verwendet.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option steht nur zur Verfügung, wenn als Kriterium für die Wegesuche die Option <span class="gui_element">Widerstand</span> gewählt ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Gewichtung der Wege</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Methode zur Ermittlung des Kenngrößenwerts aus den Werten aller Wege</p>
+                        <p class="CellText">
+                            <span class="gui_element">Minimum je Kenngröße</span>
+                        </p>
+                        <p class="CellText">Wert des Wegs mit dem niedrigsten Wert</p>
+                        <p class="CellText">
+                            <span class="gui_element">Maximum je Kenngröße</span>
+                        </p>
+                        <p class="CellText">Wert des Wegs mit dem höchsten Wert</p>
+                        <p class="CellText">
+                            <span class="gui_element">Mittel über die Wege</span>
+                        </p>
+                        <p class="CellText">Mittelwert über alle Wege</p>
+                        <p class="CellText">
+                            <span class="gui_element">Mittel über Wegebelastung</span>
+                        </p>
+                        <p class="CellText">Mittelwert über alle Wege, gewichtet mit der jeweiligen Belastung des Weges</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Die Option steht nur zur Verfügung, wenn die Option <span class="gui_element">Wege aus der Umlegung verwenden</span> ausgewählt ist.</p>
+                        <p class="CellText">Für Beziehungen, für die in der Umlegung keine Wege berechnet wurden, wird der Weg mit dem geringsten Widerstand ermittelt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Wege aufsummieren aus</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Der Kenngrößenwert berechnet sich aus den Werten der Netzobjekte der ausgewählten Netzobjekttypen auf den gewählten Wegen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Strecken</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">Abbieger</span> (inkl. Oberabbieger)</p>
+                        <p class="CellText">
+                            <span class="gui_element">Quell-Anbindungen</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">Ziel-Anbindungen</span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Liste der IV-Kenngrößen</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="93px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="403px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">Liste der Kenngrößen</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Berechnen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die entsprechende Kenngröße berechnet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Auf Datei schreiben</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die entsprechende Kenngröße als Kenngrößenmatrixdatei ausgegeben. Weitere Einstellungen zur Ausgabe treffen Sie im Bereich Ausgabedatei <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_iv_1682368020_1120979">(siehe „Ausgabedatei einer IV-Kenngrößenmatrix“ auf Seite&#160;1126)</MadCap:xref>. Für jede Kenngröße, die Sie in eine Datei ausgeben, erzeugt <MadCap:variable name="PTV_Manual.Programmname" /> eine Datei mit einer spezifischen Dateierweiterung, die auf einer englischen Abkürzung beruht.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Kenngrößenmatrixdateien, die mit älteren <MadCap:variable name="PTV_Manual.Programmname" />-Versionen erzeugt wurden, enthalten sprachabhängige Dateierweiterungen, die sogar benutzerdefiniert überschrieben worden sein können.</p>
+                        <p class="CellText">Diese Option ist ausgegraut, wenn die Option <span class="gui_element">Berechnen</span> nicht ausgewählt ist.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Öffnen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die jeweilige Kenngrößenmatrix nach der Berechnung geöffnet.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option ist ausgegraut, wenn die Option <span class="gui_element">Berechnen</span> nicht ausgewählt ist.</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Sie können jede der zuvor genannten Spalten insgesamt aktivieren oder deaktivieren, indem Sie mit der rechten Maustaste auf den Spaltenkopf klicken und im Kontextmenü die Option <span class="gui_element">Spalte aktivieren</span> bzw. <span class="gui_element">Spalte deaktivieren</span> auswählen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Kenngröße</span>
+                        </p>
+                        <p class="CellText">Liste der verfügbaren Kenngrößen <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Kenngroessen_des_IV.htm#1_benutzermodell_iv_2033098965_1173115">Siehe "Kenngrößen des IV"</MadCap:xref></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1120979">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_25346">
+            </a>Ausgabedatei einer IV-Kenngrößenmatrix</h5>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Dieser Bereich steht nur zur Verfügung, wenn Sie mindestens eine Kenngrößenmatrix als Datei ausgeben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="72px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="424px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Dateiname</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="Tabledist">&#160;</p>
+                        <p class="Tabledist">&#160;</p>
+                        <p class="CellText">Name der ausgegebenen Kenngrößenmatrixdateien. Über die Schaltfläche <img src="../Resources/Images_4_all/ICO_file_selection.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 011118px;margin-bottom: 1, 011118px;" /> geben Sie Pfad und Dateiname der Datei ohne Dateierweiterung ein.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Wenn Sie den Dateinamen ohne Pfad eingeben, wird die Datei in das Projektverzeichnis für Matrizen ausgegeben.</p>
+                        <p class="CellText">
+                            <MadCap:variable name="PTV_Manual.Programmname" /> ergänzt die Dateierweiterung gemäß dem eingestellten <span class="gui_element">Format </span>und den Einstellungen im Menü <span class="gui_element">Rechnen</span>&#160;&gt; <span class="gui_element">Allgemeine Verfahrenseinstellungen</span>&#160;&gt; <span class="gui_element">IV-Einstellungen</span>&#160;&gt; <span class="gui_element">Kenngrößen </span><MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Metadaten für Kenngrößenmatrizen festlegen.htm#2_verfahrensablauf_festlegen_40480990_1033259"><span style="color: Black;" class="mcFormatColor">(</span><u>Metadaten für Kenngrößenmatrizen festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Format</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Auswahlliste wählen Sie das Format, in dem die Matrizen gespeichert werden sollen <MadCap:xref class="sieheUeberschrSeite" href="../2_Anhang/2_15_Datenstrukturen von Matrizen in Visum-spezifischen Textformaten.htm#2_anhang_3073197290_1070836"><span style="color: Black;" class="mcFormatColor">(</span><u>Datenstrukturen von Matrizen in -spezifischen Textformaten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Binär</span>
+                            </LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">V-Format</span> (Textformat)</LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">O-Format </span>(Textformat)</LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">E-Format </span>(Textformat)</LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">S-Format </span>(Textformat)</LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">CSV-Format</span> (Textformat)</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Trennzeichen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Auswahlliste wählen Sie das Zeichen, mit dem die Einträge in der Textdatei getrennt werden.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Diese Auswahlliste ist nur für das Format <span class="gui_element">CSV-Format</span> verfügbar.</p>
+                        <p class="CellText">Für alle anderen Formate wird das Leerzeichen als Trennzeichen verwendet, damit die Matrix im Matrixeditor editiert werden kann.</p>
+                        <p class="CellText">Matrizen im Format <span class="path">*.csv</span> mit Komma als Trennzeichnen können per Doppelklick als Excel-Datei geöffnet werden. Matrizen im Format <span class="path">*.csv</span> mit einem anderen Trennzeichen müssen mit dem Excel-Assistent eingelesen werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Verkehrsmittelnr (VISEM)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Verkehrsmittelnummer (für VISEM)</p>
+                        <p class="CellText">1 = Fuß</p>
+                        <p class="CellText">2 = PKW-Mitfahrer</p>
+                        <p class="CellText">3 = ÖV</p>
+                        <p class="CellText">4 = PKW-Selbstfahrer (einschließlich LKW) etc.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Überschreiben bestätigen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, wird eine Meldung angezeigt, falls schon Matrizen mit dem gleichen Namen vorhanden sind. Sie können die Meldung dann bestätigen oder die Ausgabe abbrechen.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, werden vorhandene Matrizen mit dem gleichen Namen ohne weitere Nachfrage überschrieben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

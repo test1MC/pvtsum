@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="684" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;FS;BS;xd;KJ;k2;k1;s'';abflüssen;of;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1600542">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_44356">
+            </a>Proportionalität bei der Routenaufteilung optimieren</h3>
+        <p class="Text">Aus der Gleichgewichtsbedingung von Wardrop folgt, dass die Streckenbelastungen im Gleichgewicht eindeutig bestimmt sind, dagegen nicht notwendigerweise die Wegebelastungen. Das Beispiel in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1600549">Abbildung 1</MadCap:xref> zeigt dies deutlich.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_LUCE_Proportionality1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1600549">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_11213">
+            </a>Beispiel für Proportionalität mit Streckenbelastungen im Gleichgewicht</p>
+        <p class="Text">Die Bezirke 1 und 2 sind an Knoten A angebunden, Bezirke 3 und 4 an Knoten B. A und B sind über zwei Strecken x und y mit identischer Widerstandsfunktion verbunden. Die Nachfrage beträgt je 500 Fahrten von 1 nach 3 und von 1 nach 4. Die Grafik zeigt die resultierenden Streckenbelastungen im Gleichgewicht. Diese Streckenbelastungen können jedoch durch Überlagerung sehr unterschiedlicher Routenbelastungen zustande kommen. Drei davon zeigt die Tabelle:</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 452px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Belastung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Variante 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Variante 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Variante 3</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1 - x - 3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">200</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">500</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">250</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1 - y - 3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">300</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">250</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1 - x - 4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">300</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">250</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">1 - y - 4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">200</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">500</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">250</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Wegebelastungsvarianten zu den Streckenbelastungen in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1600549">Abbildung 1</MadCap:xref></p>
+            </caption>
+        </table>
+        <p class="Text">Alle Varianten sind im Sinne des Widerstandsgleichgewichts gleichwertig, doch Variante 3 besitzt den Vorteil, dass die Routenaufteilung an Knoten A für die Relationen nach Bezirk 3 und 4 gleiche Proportionen aufweist. Da die Strecken x und y widerstandsgleich sind, gibt es keinen Grund für die Annahme, dass sich Verkehrsteilnehmer mit Fahrtziel x am Knoten A in einem anderen Verhältnis auf die beiden Strecken aufteilen sollten als diejenigen mit Fahrtziel y.</p>
+        <p class="Text">Während das wegebasierte Gleichgewichtsverfahren durch separate Betrachtung aller Quell-Ziel-Beziehungen willkürlich jede der unendlich vielen Wegebelastungsvarianten erzeugen könnte, belastet LUCE die Wege stets wie in Variante 3 mit gleichen Proportionen. Allerdings beruht dieser Vorteil darauf, dass LUCE alle Wegebelastungen zu einem Quellbezirk simultan ausgleicht. Gleiche Abbiegerproportionen werden dadurch nur innerhalb eines Quellbezirks erreicht, nicht zwischen den Routen verschiedener Quellbezirke.</p>
+        <p class="Text">Betrachten wir dazu das erweiterte Beispiel in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1600601">Abbildung 2</MadCap:xref>, nun auch mit je 500 Fahrten zwischen Bezirk 2 und 3 bzw. 2 und 4. Die Abbildung zeigt wieder die Streckenbelastungen im Gleichgewicht.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_LUCE_Proportionality2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1600601">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_98933">
+            </a>Erweitertes Beispiel für Proportionalität mit Streckenbelastungen im Gleichgewicht</p>
+        <p class="Text">Auch wenn die Routenaufteilungen innerhalb der Wege jedes Quellbezirks konsistente Anteile aufweisen, gilt das nicht zwischen den Wegen unterschiedlicher Quellbezirke. Zusammen genommen ergeben sich wiederum mehrere Belastungsvarianten:</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 452px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Belastung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Variante 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Variante 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Variante 3</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1 - x - 3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">200</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">500</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">250</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1 - y - 3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">300</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">250</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1 - x - 4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">200</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">500</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">250</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1 - y - 4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">300</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">250</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2 - x - 3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">300</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">250</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2 - y - 3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">200</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">500</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">250</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2 - x - 4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">300</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">250</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">2 - y - 4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">200</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">500</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">250</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Wegebelastungsvarianten zu den Streckenbelastungen in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1600601">Abbildung 2</MadCap:xref></p>
+            </caption>
+        </table>
+        <p class="Text">Aus dem gleichen Grund wie zuvor ist Variante 3 vorzuziehen, da es keinen Anlass für eine ungleichmäßige Routenaufteilung gibt. Dieser Ausgleich ist jedoch nicht rein quellbasiert zu erreichen. LUCE bietet die Option, nach der eigentlichen Umlegung in den berechneten Wegen Maschen gleichen Widerstands (wie im Beispiel die Masche A-B) zu ermitteln und die Wegebelastungen über alle Quellbezirke zu harmonisieren. Dies ist stets der Fall, weil sich die Masche isoliert betrachtet im Gleichgewicht befindet und Belastungen zwischen den Wegealternativen verschiedener Quellbezirke verschoben werden können, ohne dass sich dadurch die Streckenbelastungen oder die Widerstände ändern. Das Gleichgewicht bleibt also erhalten.</p>
+        <p class="Text">Da die Ermittlung der Maschen und die Optimierung der Routenaufteilung Rechenzeit beansprucht, ist sie optional und kann in den Verfahrensparametern von LUCE zusätzlich ausgewählt werden. Für eine zuverlässige Erkennung, ob eine Masche im Gleichgewicht ist, sollte die Umlegung selbst mit einem Gap von 10<span class="_Override" style="font-size: 80%;vertical-align: super;">-6</span> oder besser abgeschlossen worden sein. In diesem Fall dauert die Optimierung der Routenaufteilung zusätzlich zwischen 20% und 50% der Laufzeit für die eigentliche Umlegung.</p>
+        <p class="Text">Verwenden Sie die Optimierung der Routenaufteilung vor allem, wenn Sie anschließend Routenbelastungen auswerten oder sie in anschließenden Rechenschritten verwenden. Das ist bei folgenden Anwendungen der Fall:</p>
+        <ul>
+            <LI class="List0">Matrixschätzverfahren VStromFuzzy</LI>
+            <LI class="List0">Spinnenauswertungen (besonders Analyse von Spinnen-Matrizen)</LI>
+            <LI class="List0">Rückstaumodell</LI>
+        </ul>
+        <p class="Text">Benötigen Sie dagegen in erster Linie streckenbezogene Umlegungsergebnisse (Belastungen, Reisezeiten), können Sie auf die Optimierung verzichten, da diese Ergebnisse dadurch nicht verbessert werden.</p>
+    </body>
+</html>

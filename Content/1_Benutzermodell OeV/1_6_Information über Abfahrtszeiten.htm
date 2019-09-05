@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î" MadCap:lastBlockDepth="3" MadCap:lastHeight="621" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1109381">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_32223">
+            </a>Information über Abfahrtszeiten</h4>
+        <p class="Text">Dieses Modell basiert auf der Annahme, dass ein Fahrgast nicht nur die Fahrzeiten und Takte aller Linien kennt, sondern er sich (spätestens an der Haltestelle) auch über die konkreten Abfahrtszeiten informieren kann. Die optimale Strategie kann dann einfach wie folgt formuliert werden.</p>
+        <p class="Text" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="gui_element">Ein Fahrgast steigt in diejenige Linie ein, deren Restkosten bei konkret gegebenen Abfahrtszeiten am geringsten sind.</span>
+        </p>
+        <p class="Text">Anders als in den bisherigen Fällen steigt der Fahrgast nicht einfach in die erste eintreffende Linie aus einer bestimmten (eventuell zeitabhängigen) Menge ein. Da alle Wartezeiten <span class="formula">w</span><span class="formula_subscript">i</span> bekannt sind, unterliegt seine Entscheidung keinen stochastischen Einflüssen. Vielmehr wählt er genau diejenige Linie, deren Restkosten <span class="formula">s</span><span class="formula_subscript">i</span><span class="formula">&#160;+&#160;w</span><span class="formula_subscript">i</span> minimal sind.</p>
+        <p class="Text">Die optimale Linienmenge besteht also aus allen Linien, die in manchen Fahrplanlagen die geringsten Restkosten haben.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_34.jpg" /> und <img src="../Resources/Images/8_37.jpg" /></p>
+        <p class="Text">So umfasst die optimale Menge genau diejenigen Linien, die im Grenzfall optimal sind, da sie ohne Wartezeit eintreffen, während alle anderen Linien einen vollen Takt auf sich warten lassen. </p>
+        <p class="Text">Die Berechnung der Anteile gestaltet sich in diesem Fall wie folgt:</p>
+        <p class="Formula_number2" MadCap:autonum=" [1.1]">
+            <a name="1_benutzermodell_oev_2318507456_1180574">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_19768">
+            </a>
+            <img src="../Resources/Images/8_112.jpg" />
+        </p>
+        <p class="Formula_number2ff" MadCap:autonum=" [1.2]">
+            <a name="1_benutzermodell_oev_2318507456_1181037">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_81488">
+            </a>
+            <img src="../Resources/Images/8_110.jpg" />
+        </p>
+        <p class="Formula_number2ff" MadCap:autonum=" [1.3]">
+            <a name="1_benutzermodell_oev_2318507456_1181017">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_27302">
+            </a>
+            <img src="../Resources/Images/8_103.jpg" />
+        </p>
+        <p class="Formula_number2ff" MadCap:autonum=" [1.4]">
+            <img src="../Resources/Images/8_83.jpg" />
+        </p>
+        <p class="Formula_number2ff" MadCap:autonum=" [1.5]">
+            <a name="1_benutzermodell_oev_2318507456_1180649">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_16020">
+            </a>
+            <img src="../Resources/Images/8_111.jpg" />
+        </p>
+        <p class="Formula_number2ff" MadCap:autonum=" [1.6]">
+            <a name="1_benutzermodell_oev_2318507456_1180622">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_53309">
+            </a>
+            <img src="../Resources/Images/8_91.jpg" />
+        </p>
+        <h5>Erläuterung der Herleitung</h5>
+        <p class="Text">In Zeile <MadCap:xref class="Label_formula" href="#1_benutzermodell_oev_2318507456_1180574">(60.1)</MadCap:xref> benutzt man die vollständige Information des Fahrgasts. Linie <span class="formula">i</span> wird genau dann gewählt, wenn ihre Restkosten <span class="formula">C</span><span class="formula_subscript">i</span> kleiner sind als die der anderen Linien. Zeile <MadCap:xref class="Label_formula" href="#1_benutzermodell_oev_2318507456_1181037">(60.2)</MadCap:xref> formt den Ausdruck um, indem die Dichtefunktion der Zufallsvariablen <span class="formula">C</span><span class="formula_subscript">i</span> benutzt wird. Wegen der Konstanz der Takte ist <span class="formula">C</span><span class="formula_subscript">i</span> gleichverteilt in [<span class="formula">s</span><span class="formula_subscript">i</span>,<span class="formula">s</span><span class="formula_subscript">i </span>+ <span class="formula">h</span><span class="formula_subscript">i</span>). (Wird die Wartezeit mit einem Faktor gewichtet, ist dieser überall <span class="formula">h</span><span class="formula_subscript">i</span> voranzustellen, die Rechnung ändert sich ansonsten aber nicht.)</p>
+        <p class="Text">In Zeile <MadCap:xref class="Label_formula" href="#1_benutzermodell_oev_2318507456_1181017">(60.3)</MadCap:xref> nutzen wir aus, dass die Abfahrten der Linien unabhängig voneinander sind. Dies ist – in allen Wahlmodellen – eine grundlegende Annahme der taktfeinen Umlegung. Um Fallunterscheidungen zu vermeiden, wird der Integrationsbereich in <MadCap:xref class="Label_formula" href="#1_benutzermodell_oev_2318507456_1180649">(60.5)</MadCap:xref> in Bereiche zerlegt, in denen das innere Produkt über eine konstante Menge von Linien erstreckt wird. Dazu muss man beachten, dass für <span class="formula">j &gt; k</span> und <span class="formula">x</span> <span class="symbol">Î</span> [<span class="formula">s</span><span class="formula_subscript">k</span>,<span class="formula">s</span><span class="formula_subscript">k+1</span>) zwingend <span class="formula">P</span>(<span class="formula">C</span><span class="formula_subscript">j</span> &gt; <span class="formula">x</span>) = 1 gilt. Dies liegt an der eingangs getroffenen Sortierung der Linien, da die Kosten von Linie <span class="formula">j &gt; k</span> mindestens <span class="formula">s</span><span class="formula_subscript">k+1</span> betragen. Im letzten Schritt <MadCap:xref class="Label_formula" href="#1_benutzermodell_oev_2318507456_1180622">(60.6)</MadCap:xref> setzen wir schließlich die Verteilungsfunktion von <span class="formula">C</span><span class="formula_subscript">j</span> ein – wiederum eine Gleichverteilung. Am Ende der Rechnung steht somit eine Summe von Polynomen mit maximalem Grad <span class="formula">i</span><span class="formula_superscript">*</span>.</p>
+        <p class="Text">Auf analoge Weise gelangt man zur erwarteten Wartezeit.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_98.jpg" />
+        </p>
+        <p class="Text">Fahrgastinformation unterstellen zu können, ist keine außerordentlich strenge Forderung. Vielerorts gibt es schon heute Informationssysteme, die die nächsten Abfahrtszeiten auf der Basis von Echtzeit-Betriebsdaten anzeigen. Alternativ können Fahrpläne an den Haltestellen ausgehängt sein. Auch anderen technischen Hilfsmitteln sind heute keine Grenzen mehr gesetzt.</p>
+    </body>
+</html>

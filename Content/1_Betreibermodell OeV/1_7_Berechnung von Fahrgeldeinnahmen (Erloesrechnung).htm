@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="680" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="LinBef">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_betreibermodell_oev_1878159914_1165595">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_65761">
+            </a>Berechnung von Fahrgeldeinnahmen (Erlösrechnung)</h3>
+        <p class="Text">
+            <MadCap:keyword term="ÖV:betriebliche Kennzahlen: Fahrgeldeinnahmen berechnen" />
+            <MadCap:keyword term="ÖV:Erlöse" />Mit <MadCap:variable name="PTV_Manual.Programmname" /> können Erlöse berechnet und dann auf die Netzobjekte aufgeteilt werden. Für die Erlösberechnung stehen drei Methoden zur Auswahl.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Vorgabe eines fixen Erlösbetrages je Beförderungsfall</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Für jede Fahrgastfahrt wird ein einheitlicher Fahrpreis angenommen und auf die vom Fahrgast benutzten Linien aufgeteilt. Die Erlösaufteilung kann zudem durch die Angabe bestimmter Parameter (Fixbetrag pro Teilweg, Gewicht Anzahl Tarifpunkt, Gewicht Anzahl Teilwege) modifiziert werden.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Vorgabe eines Erlösbetrages pro Tarifpunkt</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Der Erlös ergibt sich aus dem Produkt von Erlösbetrag/Tarifpunkt und Anzahl Tarifpunkte. Die Erlösaufteilung kann zudem durch die Angabe bestimmter Parameter (Fixbetrag pro Teilweg, Gewicht Anzahl Tarifpunkt, Gewicht Anzahl Teilwege) modifiziert werden.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Berechnung der Erlöse mit Tarifmodell</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Für jede Fahrgastfahrt wird der Fahrpreis berechnet, der sich für die aktuelle Fahrkartenart ergibt. Dieser Erlös wird dann auf die vom Fahrgast benutzten Linien aufgeteilt. Die Erlösaufteilung kann zudem durch die Angabe bestimmter Parameter (Fixbetrag pro Teilweg, Gewicht Anzahl Tarifpunkt, Gewicht Anzahl Teilwege sowie verkehrssystemabhängige Aufteilung der Zuschläge) modifiziert werden.</p>
+        <p class="Text">Die Entscheidung für eine dieser drei Möglichkeiten hängt ab von der gewünschten Detaillierung des Modells, der Verfügbarkeit von Eingangsdaten und dem eingeplanten Arbeitsaufwand für das Modellieren der Erlösberechnung. Die drei Möglichkeiten der Erlösberechnung in <MadCap:variable name="PTV_Manual.Programmname" /> werden im Folgenden erläutert. Für jede Möglichkeit wird beispielhaft eine Berechnung anhand des Anwendungsbeispiels durchgeführt.</p>
+        <p class="Text">Unabhängig von der gewählten Art der Erlösberechnung stehen folgende Ausgabeattribute (Erlöskennzahlen) zur Verfügung.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="106px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="389px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Kennzahl</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Erlös gesamt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gesamter Erlös aus Fahrgeldeinnahmen, die auf das Netzobjekt entfallen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Erlös-NSeg</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Erlös je Nachfragesegment aus Fahrgeldeinnahmen, die auf das Netzobjekt entfallen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Erlös gesamt (längenanteilig)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gesamter Erlös aus Fahrgeldeinnahmen, der auf das Gebiet und die gewählte Schüttung entfällt. Die Aufteilung erfolgt proportional zu den Streckenlängen der überfahrenen Strecken.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Erlös-NSeg (längenanteilig)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Wie Erlös gesamt (längenanteilig), aber nur der Erlös je Nachfragesegment.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Erlös gesamt (tarifpunktanteilig)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gesamter Erlös aus Fahrgeldeinnahmen, der auf das Gebiet und die gewählte Schüttung entfällt. Die Aufteilung erfolgt proportional zur Anzahl der auf Strecken und Fahrzeitprofilverläufen überfahrenen Tarifpunkte.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Erlös NSeg (tarifpunktanteilig)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Wie Erlös gesamt (tarifpunktanteilig), aber nur der Erlös je Nachfragesegment.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Erlös LinBef</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Erlös pro Linienbeförderungsfall = Erlös gesamt / Linienbeförderungsfälle</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Erlös LinBef-NSeg</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Erlös pro Nachfragesegment / Linienbeförderungsfälle pro Nachfragesegment</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Deckungsbeitrag %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Drückt die Kostendeckung prozentual aus</p>
+                        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Deckungsbeitrag % = Erlös gesamt (längenanteilig) / Kosten • 100</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Deckungsbeitrag gesamt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Drückt die Kostendeckung in absoluten Zahlen aus</p>
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Deckungsbeitrag gesamt = Erlös gesamt (längenanteilig) - Kosten</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Deckungsbeitrag pro LinBef</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Deckungsbeitrag pro Linienbeförderungsfall = Deckungsbeitrag gesamt / Linienbeförderungsfälle</span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Kennzahlen der Erlösrechnung</p>
+    </body>
+</html>

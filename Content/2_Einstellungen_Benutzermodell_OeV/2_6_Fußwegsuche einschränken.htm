@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="1660" MadCap:lastWidth="1036" MadCap:ignoredWords="E1;E9;V1;V9;N1;N9;G1;G9;G0;att;E2;bzw;ErhLinieName;E3;max;E5;E7;E8;V2;N2;V3;N3;NachlaufLRName;evtl;inkl;V5;N5;V6;N6;V4;N4;con;wege;RZ;UH;Wid;konst;ca;Registrierungs;Common;Misc;ProcessorInfo;angeb;empf;Abfahrts;t0;Nr;ErhFzpName;VorlaufVSysCode;VorlaufLinieName;VorlaufRichtungsCode;VorlaufLRName;VorlaufFZPName;NachlaufVSysCode;EingabeHstNr;EingabeHstAbfahrtstag;EingabeHstAbfahrtszeit;QHstNr;VorlaufHstNr;EinHstNr;AusHstNr;NachlaufHstNr;ZHstNr;AnzPassagiere;ExtHochFak;BUS1;EingabeHStNr">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1033462">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_60263">
+            </a>Fußwegsuche einschränken</h4>
+        <p class="Text">Sie können bei der Vorberechnung von ÖV-Fuß-Teilwegen für die taktfeine und fahrplanfeine Umlegung die Kurzwegsuche auf bestimmte ÖV-Fuß-Teilwege einschränken. Sie können die Einstellungen für die Übergänge zwischen Haltestellenbereichen und für die ÖV-Fuß-Teilwege zwischen Bezirken ändern.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Standardmäßig besteht ein Umsteigevorgang aus einem ÖV-Fuß-Teilweg zwischen zwei Haltestellenbereichen. In manchen Fällen kann ein Umsteigevorgang auch aus mehreren Teilwegen bestehen, zum Beispiel ÖV-Fuß-Teilweg – ÖV-Zusatz-Teilweg (Rolltreppe) – ÖV-Fuß-Teilweg. Daher wird in <MadCap:variable name="PTV_Manual.Programmname" /> für die Umsteigevorgänge allgemein der Begriff Übergang verwendet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Rechnen</span> den Eintrag <span class="gui_element">Allgemeine Verfahrenseinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Allgemeine Verfahrenseinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Navigator den Eintrag <span class="gui_element">ÖV-Einstellungen&#160;&gt; Umlegung</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie im Bereich <span class="gui_element">Fußwege</span> in der Auswahlliste <span class="gui_element">Fußwege innerhalb einer Haltestelle</span> den gewünschten Eintrag.</p>
+        <table class="TableStyle_gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="94px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="383px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Suche ohne Einschränkungen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Die Kurzwegsuche berücksichtigt alle ÖV-Fuß-Teilwege des Netzes. <MadCap:variable name="PTV_Manual.Programmname" /> ermittelt aus den Einträgen der Haltestellenmatrix automatisch alle möglichen Übergänge (auch indirekte) und für alle Paare von Haltestellenbereichen den günstigsten Übergang. Dabei wird die kombinierte Zeit eines indirekten Übergangs verwendet, wenn diese kleiner ist als die Zeit für den direkten Übergang. Zwischen Haltestellenbereichen, die an denselben Zugangsknoten angebunden sind, beträgt die Übergangszeit 0, da jeder Haltestellenbereich ohne Zeitzuschlag mit seinem Zugangsknoten verknüpft ist.</p>
+                        <p class="CellText">Beispiel</p>
+                        <p class="CellText">Der Übergang von Haltestellenbereich A nach C dauert laut Haltestellenmatrix fünf Minuten. Der Übergang von A nach B dauert eine Minute, der von B nach C zwei Minuten. <MadCap:variable name="PTV_Manual.Programmname" /> würde daraus für den Übergang von A nach C drei Minuten ermitteln.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Mit dieser Option kann sich bei einer großen Anzahl von Haltestellenbereichen eine Vielzahl von möglichen (direkten und indirekten) Wegen ergeben, was zu einer aufwändigen Kurzwegsuche führt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Suche über Zugangsknoten verbieten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Die Kurzwegsuche beschränkt sich auf ÖV-Fuß-Teilwege der Haltestellenmatrix. Die Übergangszeiten werden wie bei der Suche ohne Einschränkung berücksichtigt, der Zugangsknoten wird jedoch ignoriert, sodass für Übergänge zwischen Haltestellenbereichen mit demselben Zugangsknoten die Übergangszeit aus der Matrix verwendet wird (direkt oder indirekt).</p>
+                        <p class="CellText">Für ÖV-Fuß-Teilwege zwischen anderen Netzobjekten ergeben sich keine Veränderungen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Keine Suche, Matrix verwenden wie eingegeben</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Die ÖV-Fuß-Teilwege werden genau gemäß der eingegebenen Übergangszeiten verwendet. <MadCap:variable name="PTV_Manual.Programmname" /> ermittelt keine indirekten Übergänge. Alle Übergänge, für die keine Übergangszeit eingetragen wurde, sind verboten.</p>
+                        <p class="CellText">Diese Einstellung wirkt sich potenziell auch auf ÖV-Fuß-Teilwege zwischen anderen Netzobjekten aus.</p>
+                        <ul>
+                            <LI class="List0Tab">Falls zum Beispiel zwei Knoten durch einen ÖV-Fuß-Teilweg verbunden sind, der eine Haltestellendurchquerung inklusive Wechsel zwischen Haltestellenbereichen enthält, wird auch bei diesem Wechsel die vorgegebene Übergangszeit verwendet.</LI>
+                            <LI class="List0Tab">Existieren gesperrte Übergänge in der Haltestellenmatrix, können dadurch auch andere Wege gesperrt werden.</LI>
+                        </ul>
+                        <p class="CellText">Beispiel</p>
+                        <p class="CellText">Der Übergang von Haltestellenbereich A nach C dauert laut Haltestellenmatrix fünf Minuten. Der Übergang von A nach B dauert eine Minute, der von B nach C zwei Minuten. <MadCap:variable name="PTV_Manual.Programmname" /> würde für den Übergang von A nach C trotzdem die angegebenen fünf Minuten verwenden. Dies ist beispielsweise sinnvoll, wenn für den indirekten Übergang Straßen zu überqueren sind oder der dazwischenliegende Haltestellenbereich unterirdisch ist und daher nicht verwendet wird.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Wir empfehlen diese Einstellung nur erfahrenen Anwendern, da der Anwender dafür sorgen muss, dass die Matrix sinnvolle und zueinander passende Einträge enthält.</p>
+                        <p class="CellText">Ist die direkte Übergangszeit zwischen zwei Haltestellenbereichen deutlich größer als die kombinierte Zeit, die für indirekte Übergänge nötig wäre, findet <MadCap:variable name="PTV_Manual.Programmname" /> möglicherweise unsinnige Verbindungen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie im Bereich <span class="gui_element">Fußwege</span> in der Auswahlliste <span class="gui_element">Fußwege von und zu Anbindungen </span>den gewünschten Eintrag.</p>
+        <table class="TableStyle_gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="94px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="383px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Alle Fußwege zulassen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Bei der Suche nach Wegen zwischen zwei Bezirken werden auch reine Fußwege gefunden. Somit sind auch Wege mit einem ÖV-Fuß-VSys für Quell- und Zielanbindung und alle weiteren Teilwege zulässig.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Fußwege zwischen Bezirken verbieten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Wege zwischen zwei Bezirken, die nur aus zwei Anbindungen oder aus zwei Anbindungen und einem ÖV-Fuß-Teilweg bestehen, werden bei der Kurzwegsuche nicht berücksichtigt. Zulässig sind Wege, die mindestens eine ÖV-Linie benutzen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Ein-/Aussteigen am angeb. Knoten erzwingen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Eine Quellanbindung darf ausschließlich durch einen ÖV-Fuß-Teilweg zu einem angebundenen Knoten oder zu einem Haltestellenbereich, der mit diesem Knoten verknüpft ist, fortgesetzt werden (und nicht darüber hinaus). Eine Zielanbindung darf nur direkt von einem angebundenen Knoten bzw. einem Haltestellenbereich, der mit diesem Knoten verknüpft ist, erreicht werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Ist eine der Optionen <span class="gui_element">Fußwege zwischen Bezirken verbieten</span> oder <span class="gui_element">Ein-/Aussteigen am angeb. Knoten erzwingen</span> ausgewählt, werden zwischen Bezirken keine Verbindungen ohne ÖV gefunden. Die entsprechende Einstellung für die fahrplanfeine Umlegung ist dann bedeutungslos <MadCap:xref class="sieheUeberschrSeite" href="2_6_Fahrplanfeine Umlegung_ Register Vorauswahl.htm#2_einstellungen_benutzermodell_oev_2589728191_1036145"><span style="color: Black;" class="mcFormatColor">(</span><u>Fahrplanfeine Umlegung: Register Vorauswahl</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="Text">Das Verwenden der Optionen <span class="gui_element">Fußwege zwischen Bezirken verbieten</span> und <span class="gui_element">Ein-/Aussteigen am angeb. Knoten erzwingen</span> wird nur erfahrenen Anwendern empfohlen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Result" style="font-weight: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Die Änderungen werden übernommen. Sobald Sie eine ÖV-Umlegung durchführen, werden die Einstellungen verwendet.</p>
+    </body>
+</html>

@@ -1,0 +1,1676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="307" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;gruppen;gruppe;ICU1;ICU2;Circular;Planning;Operations;pretimed;fully;actuated;semi;actuation;type;ICAArrivalType;14a;AnteilLKW;6b;ICAEingVerlustZVerw;ICAIstCentral;BusinessDistrict;Central;District;6e;ICASneakers;ICAZuflussFaktor;10b;14b;BusFrequenz;WDDTA;xd;FS;ox;yo;BS;FIFO;dt;initialize;the;solution;flows;to;zero;for;each;destination;compute;arc;costs;and;their;if;then;UmlgAbw;ASSIGNDEVIATION;AbsRMSE;Abs;RMSE;Achsabs;ax;AnteilAkzGEH;akzept;AnteilAkzRelFehler;rel;AnzBeob;AnzKlasse;KlassenWert;Korr;Pearson;MittAbsFehler;MittBeob;MittRelFehler;R2;RSQ;RelRMSE;StdAbw;VolDem;Cap;ScalingFactor;Vol;te;flow;toNode;Lj;maxFlow;propagatingFlow;Nr;tcur;cap;BPR;Bureau;Public;Roads;INRETS;recherche;sur;les;transports;leur;sécurité;sat;crit;cur;b’;BPR2;BPR3;CONICAL;CONICAL_MARGINAL;EXPONENTIAL;Ramp;Metering;SIGMOIDAL_MMF_NODES;SIGMOIDAL_MMF;SIGMOIDAL_MMF_LINKS;SIGMOIDAL_MMF2;AKCELIK;peak;hour;factor;volume;adjustment;stage;gap;acceptance;PHF;OT;OR;ToP;JT;5JR;FrP;2JL;2JLF;JTF;JRF;Geradeausfahrstreifen;vol;num;cx;cb;cHV;HV;cG;cT;3LT;fx;fb;fHV;px;mx;Fußg;ft;JL;JLF;vJL;JR;vJLF;vIT;vR4;vIR;pIP;pJP;R1;95x;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;KJ;k2;k1;s'';abflüssen;LT;RT;vphpl;bb;Lu;Lpb;Rpb;CBD;ST;Ui;PF;Ii;Ri;PA;bi;Volume;ICU;P1;P2;P3;6a;6c;6d;LUo;qr;po;ArrivalType;6j;3a;3b;pedu;pbT;rec;RTA;LTA;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_iv_2033098965_1420427">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_47337">
+            </a>Vorfahrtsgeregelte Knoten</h4>
+        <table class="TableStyle-TipHint1" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Im HCM 2000 wird dieser Steuerungstyp in Kapitel 17 beschrieben, im HCM 2010 in Kapitel 19. Weite Teile der Berechnung entsprechen dem HCM 2000. Hinzugekommen ist insbesondere die explizite Behandlung von U-Turns.</p>
+                        <p class="Text">Vorfahrtsgeregelte Knoten werden in <MadCap:variable name="PTV_Manual.Programmname" /> durch die Steuerungstypen <span class="_Override" style="font-weight: bold;">geregelte Vorfahrt (Stopp)</span> und <span class="_Override" style="font-weight: bold;">geregelte Vorfahrt (Vorfahrt achten)</span> wiedergegeben. Die Beschreibung im HCM bezieht sich auf Knoten mit Stoppschildern. Die Berechnung ist im Wesentlichen identisch, der einzige Unterschied ergibt sich bei der Ermittlung der Wartezeiten in <MadCap:xref class="Schrittnummer" href="#1_benutzermodell_iv_2033098965_1028532">Schritt 8</MadCap:xref>.</p>
+                        <p class="Text">Knoten mit Steuerungstyp <span class="_Override" style="font-weight: bold;">signalisiert</span> werden ebenfalls nach der Methode für vorfahrtsgeregelte Knoten berechnet, falls keine LSA zugewiesen ist oder die LSA abgeschaltet ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:keyword term="Intersection Capacity Analysis (ICA): vorfahrtgeregelte Knoten" />Die Analysemethode für vorfahrtsgeregelte Knotenpunkte basiert auf dem Konzept der Akzeptanz von Zeitlücken. Die zugrunde liegende Idee hierbei ist, potentielle Kapazitäten für alle Fahrtbeziehungen zu berechnen und von diesen auf der Basis einer Fahrtbeziehungen-Rangfolge (Priorität) Kapazität abzuziehen. Das Ablaufdiagramm für diese Berechnung sieht wie in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1217858">Abbildung 1</MadCap:xref> dargestellt aus.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_ICA2WayStop.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1217858">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_99409">
+            </a>Ablauf der Berechnung an vorfahrtsgeregelten Knoten</p>
+        <p class="Text">Wenn Sie das HCM Operationsmodell auf vorfahrtsgeregelte Knoten anwenden, wirken sich die in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1366884">Tabelle 1</MadCap:xref> aufgeführten <MadCap:variable name="PTV_Manual.Programmname" />-Attribute aus. Stellen Sie sicher, dass realistische Werte für die Attribute definiert sind, ehe die Analyse gestartet wird.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');mc-table-style-original: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="90px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="115px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="290px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Netzobjekte</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung / Auswirkung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Strecke</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Steigung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Verwendet in <MadCap:xref class="Schrittnummer" href="#1_benutzermodell_iv_2033098965_1055767">Schritt 3</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Knoten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ICA peak hour factor volume adjustment</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Anpassungsfaktor der anfänglichen Belastung an die Spitzenbelastung; Belastungen werden <span class="gui_element">sowohl</span> durch den Knoten- als auch die Abbiegeranpassungsfaktoren geteilt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Geometrie</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">alle</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Geometrieinformationen zu Fahrstreifen, Fahrstreifenabbiegern und Furten</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Anteil Lkw</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Lkw-Anteil verwendet in <MadCap:xref class="Schrittnummer" href="#1_benutzermodell_iv_2033098965_1055767">Schritt 3</MadCap:xref> + <MadCap:xref class="Schrittnummer" href="#1_benutzermodell_iv_2033098965_1612483">Schritt 4</MadCap:xref>. Ein pauschaler Wert, der für die Abbieger gilt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ICA peak hour factor volume adjustment</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Anpassungsfaktor der anfänglichen Belastung an die Spitzenbelastung; Belastungen werden <span class="gui_element">sowohl</span> durch den Knoten- als auch die Abbiegeranpassungsfaktoren geteilt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ICA Eingestellte Grenzzeitlücke</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Wert der gewünschten Grenzzeitlücke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ICA Eingestellte Grenzzeitlücke verwenden</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Optional können Sie die Grenzzeitlücke überschreiben, genutzt in <MadCap:xref class="Schrittnummer" href="#1_benutzermodell_iv_2033098965_1055767">Schritt 3</MadCap:xref></p>
+                        <p class="CellText">Bei aktivierter Option wird der unter Eingestellte Grenzzeitlücke angegebene Wert verwendet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ICA Eingestellte Folgezeitlücke</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Wert der gewünschten Folgezeitlücke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ICA Eingestellte Folgezeitlücke verwenden</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Optional können Sie die Folgezeitlücke überschreiben, genutzt in <MadCap:xref class="Schrittnummer" href="#1_benutzermodell_iv_2033098965_1612483">Schritt 4</MadCap:xref></p>
+                        <p class="CellText">Bei aktivierter Option wird der unter Eingestellte Folgezeitlücke angegebene Wert verwendet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Eingestellte Grenzzeitlücke Phase 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Das Attribut wirkt in Verbindung mit den Attributen Verwende Plätze in Mittelinsel (Arm) und Eingestellte Grenzzeitlücke verwenden (Abbieger) für untergeordnete Ströme. Der eingegebene Wert ersetzt den Standardwert für die Grenzzeitlücke in Phase 1 aus dem HCM bei der sogenannten "2-stage gap acceptance"-Methodik.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Eingestellte Grenzzeitlücke Phase 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Das Attribut wirkt in Verbindung mit den Attributen Verwende Plätze in Mittelinsel (Arm) und Eingestellte Grenzzeitlücke verwenden (Abbieger) für untergeordnete Ströme. Der eingegebene Wert ersetzt den Standardwert für die Grenzzeitlücke in Phase 2 aus dem HCM bei der sogenannten "2-stage gap acceptance"-Methodik.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hat getrennten Rechtsabbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Vorhandensein eines getrennten Rechtsabbiegers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Steuerung getrennter Rechtsabbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Das Attribut wirkt in Verbindung mit dem Attribut Hat getrennten Rechtsabbieger in <MadCap:xref href="#1_benutzermodell_iv_2033098965_11641" class="Schrittnummer">Schritt 2</MadCap:xref> gemäß den im HCM&#160;definierten Regeln.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Berechne die Wirkung der Eingangsaufweitung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Das Attribut wirkt in Verbindung mit dem Attribut Größe der Eingangsaufweitung.gemäß den Formeln des HCM bei der Kapazitätsberechnung von Mischfahrstreifen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Größe der Eingangsaufweitung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Größe der Eingangsaufweitung in Anzahl Fahrzeuge, wirkt gemäß den Formeln des HCM bei der Kapazitätsberechnung von Mischfahrstreifen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">Verwende Plätze in Mittelinsel</td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Das Attribut wirkt in Verbindung mit dem Attribut Anzahl Plätze in Mittelinsel bei der sogenannten "2-stage gap acceptance"-Methodik gemäß den Formeln des HCM,</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Anzahl Plätze in Mittelinsel</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Das Attribut definiert die Anzahl der Plätze in der Mittelinsel und wirkt bei der sogenannten "2-stage gap acceptance"-Methodik gemäß den Formeln des HCM.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrstreifen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ICA Eingestellte Grenzzeitlücke</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Wert der gewünschten Grenzzeitlücke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrstreifen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ICA Eingestellte Grenzzeitlücke verwenden</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Optional können Sie die Grenzzeitlücke überschreiben, genutzt in <MadCap:xref href="#1_benutzermodell_iv_2033098965_1055767" class="Schrittnummer">Schritt 3</MadCap:xref>. Der analoge Wert am Abbieger wird nicht verwendet.</p>
+                        <p class="CellText">Bei aktivierter Option wird der unter Eingestellte Grenzzeitlücke angegebene Wert verwendet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrstreifen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ICA Eingestellte Folgezeitlücke</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Wert der gewünschten Folgezeitlücke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Fahrstreifen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">ICA Eingestellte Folgezeitlücke verwenden</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">Optional können Sie die Folgezeitlücke überschreiben, genutzt in <MadCap:xref href="#1_benutzermodell_iv_2033098965_1612483" class="Schrittnummer">Schritt 4</MadCap:xref>. Der analoge Wert am Abbieger wird nicht verwendet.</p>
+                        <p class="CellText">Bei aktivierter Option wird der unter Eingestellte Folgezeitlücke angegebene Wert verwendet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1366884">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_77987">
+            </a>Eingabe-Attribute für die Berechnung an vorfahrtsgeregelten Knoten</p>
+        <p class="Text">Die Ausgabe ist über die gleichen Attribute verfügbar wie bei signalisierten Knoten (<MadCap:xref class="Label_Table" href="1_5_Signalisierte Knoten.htm#1_benutzermodell_iv_2033098965_1366477">Tabelle 2</MadCap:xref>). Hinzu kommen berechnete Grenzzeit- und Folgezeitlücken.</p>
+        <p class="Text">Die Methode ist auf alle Fahrtbeziehungen (links, geradeaus, rechts) anwendbar. Jede Fahrtbeziehung ist gemäß <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1366897">Tabelle 2</MadCap:xref> eingeordnet.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px; caption-side: bottom; mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css'); mc-table-style-original: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="33px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="462px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Rang</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Hauptstrom Geradeaus</p>
+                        <p class="CellText">Hauptstrom Rechts</p>
+                        <p class="CellText">Nebenstrom Fußgängerfurt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Hauptstrom Links</p>
+                        <p class="CellText">Nebenstrom Rechts</p>
+                        <p class="CellText">Hauptstrom Fußgängerfurt</p>
+                        <p class="CellText">Hauptstrom Links – Vorrang für Lücken im Gegenstrom</p>
+                        <p class="CellText">Nebenstrom Rechts – Vorrang für Lücken im Verkehr des äußersten rechten Fahrstreifens des Hauptstroms</p>
+                        <p class="CellText">Fußgänger – Vorrang vor allen anderen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Nebenstrom Geradeaus</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Nebenstrom Links</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_iv_2033098965_1366897">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_68677">
+                    </a>Einordnung der Fahrtbeziehungen</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Im HCM 2010 werden auch U-Turns auf dem Hauptstrom berücksichtigt. Sie haben Rang 2. Die Einstellung bezüglich der U-Turns in den Verfahrensparametern hat auf diese U-Turns keine Wirkung, falls gemäß HCM 2010 gerechnet wird.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Heading_Schritt1" MadCap:autonum="Schritt 1: ">Verkehrsstärken (Belastungen) für jede Fahrtbeziehung berechnen</p>
+        <p class="Text">Die 15-Minuten-Spitzenverkehrsstärken (in der Anpassung des PHF berechnet) werden als Belastungen der angepassten Fahrtbeziehungen genommen.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 2: ">
+            <a name="1_benutzermodell_iv_2033098965_11641">
+            </a>Konfliktströme für jede Fahrtbeziehung</p>
+        <p class="Text">Zusätzlich zur Berechnung der Belastungen jeder Fahrtbeziehung müssen die Konfliktströme für jede Fahrtbeziehung auf jeder Zufahrt berechnet werden. </p>
+        <table class="TableStyle-TipHint1" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Fahrtbeziehungen vom Rang&#160;1 haben keine Konfliktströme, da sie die höchste Priorität besitzen. Fahrtbeziehungen vom Rang&#160;1 werden im Wesentlichen von der Analyse ausgenommen, mit Ausnahme einer zusätzlichen Berechnung <MadCap:xref class="sieheUeberschrSeite" href="1_5_Signalisierte Knoten.htm#1_benutzermodell_iv_2033098965_1532754"><span style="color: Black;" class="mcFormatColor">(</span><u>Kritische Auslastung für gesamten Knotenpunkt berechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="Text">Im HCM 2010 werden Aufweitungsfahrstreifen für Linksabbieger (im Linksverkehr Rechtsabbieger) im Hauptstrom gesondert behandelt.</p>
+                        <p class="Text">Im HCM sind nun drei- und vierarmige Knoten beschrieben. In <MadCap:variable name="PTV_Manual.Programmname" /> können auch mehrarmige Knoten berechnet werden. Die Behandlung von Konfliktströmen zwischen untergeordneten Armen, die nicht durch einen Arm des Hauptstroms getrennt sind, erfolgt dabei nach der Regel rechts vor links.</p>
+                        <p class="Text">Die Berechnung im Linksverkehr erfolgt symmetrisch zum Rechtsverkehr.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Ein Beispiel (im Rechtsverkehr) für einen Konfliktstrom für einen Linksabbieger auf dem Hauptstrom ist Folgendes:</p>
+        <ul>
+            <LI class="List0">Belastung Geradeausverkehr in Gegenrichtung + Belastung Rechtsabbieger in Gegenrichtung (Es sei denn, Rechtsabbieger in Gegenrichtung sind durch eine Dreiecksinsel getrennt und befolgen ein Vorfahrt-achten- oder ein Stoppschild) + Fußgängerbelastung Nebenstrom kreuzend</LI>
+        </ul>
+        <p class="Text">Die <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369028">Tabelle 3</MadCap:xref> zeigt die Gleichungen für Konfliktströme.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px; caption-side: bottom; mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css'); mc-table-style-original: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="112px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="383px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrtbeziehung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Konfliktströme</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hauptstrom Links</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">OT + OR* + ToP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Nebenstrom Rechts</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">JT/N + 0.5JR* + FrP + ToP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Neben Geradeaus</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">2JL + JT + 0.5JR* + FrP + ToP + 2JLF + JTF + JRF*</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+                    <a name="1_benutzermodell_iv_2033098965_1369028">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_74248">
+                    </a>Berechnung der Konfliktströme</p>
+            </caption>
+        </table>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">O</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Gegenrichtung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText">T</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Geradeaus</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">R</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Rechts</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText">L</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Links</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">N</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Anzahl der Geradeausfahrstreifen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText">J</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Haupt…</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">I</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Neben…</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText">F</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">fern… (bei Geradeaus/Linksabbiegern aus dem Nebenstrom der 2. getroffene Hauptstrom)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">ToP</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Zufahrt mit Fußgängerquerung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText">FrP</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Ausfahrt mit Fußgängerquerung</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Es gibt eine Reihe von Fällen, in denen der Konfliktstrom angepasst wird:</p>
+        <ul>
+            <LI class="List0">Wird der Hauptstrom Rechts durch eine Dreiecksinsel getrennt und befolgt er ein Vorfahrt-achten- oder ein Stoppschild, dann wird dieser Strom nicht bei der Berechnung des Konfliktstroms für andere Ströme berücksichtigt.</LI>
+            <LI class="List0">Wenn dem Hauptstrom mehr als ein Fahrstreifen zur Verfügung steht, dann wird bei Rechts- und Linksabbiegern aus dem Nebenstrom nur die Belastung des rechten Fahrstreifens des Hauptstroms (= vol/num der Geradeausfahrstreifen) als Konfliktstrom angesehen.</LI>
+            <LI class="List0">Besitzt der Hauptstrom einen Rechtsabbiegerfahrstreifen, zählen die Rechtsabbieger des Hauptstroms nicht beim Konfliktstrom mit.</LI>
+            <LI class="List0">Bei Linksabbiegern aus dem Nebenstrom zählt die Belastung des Rechtsabbiegers der Gegenrichtung nicht als Konfliktstrom mit, wenn die Zielstrecke beider Abbieger über mehrere Fahrstreifen verfügt.</LI>
+        </ul>
+        <table class="TableStyle-TipHint1" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Das HCM 2010 unterscheidet sich vom HCM 2000 abgesehen von den U-Turns in subtilen Feinheiten. Die Ermittlung der Konfliktströme ist im HCM 2010 auf den Seiten 19-9 bis 19-14 beschrieben.</p>
+                        <p class="Text">Abknickende Vorfahrt ist im HCM generell nicht berücksichtigt. Hier erfolgt die Ermittlung der Konfliktströme gemäß Brilon und Weinert, 2002.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 3: ">
+            <a name="1_benutzermodell_iv_2033098965_1055767">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_40253">
+            </a>Kritische Zeitlücke für jede Fahrtbeziehung berechnen</p>
+        <p class="Text">Die kritische Zeitlücke ist die Zeit, die ein durchschnittlicher Fahrer für das Einreihen in den Verkehr akzeptieren würde. </p>
+        <h5>
+            <span class="gui_element">Beispiel</span>
+        </h5>
+        <p class="Text">Sarah benötigt 4 Sekunden Abstand zwischen den Fahrzeugen, um links abzubiegen und sich sicher in den anderen Verkehr einzureihen.</p>
+        <p class="Text">Die Gleichung für die Berechnung der kritischen Zeitlücke lautet wie folgt:</p>
+        <p class="Text">
+            <span class="formula">t</span>
+            <span class="formula_subscript">cx</span> = <span class="formula">t</span><span class="formula_subscript">cb</span> + (<span class="formula">t</span><span class="formula_subscript">cHV</span><span class="formula">P</span><span class="formula_subscript">HV</span>) + (<span class="formula">t</span><span class="formula_subscript">cG</span><span class="formula">G</span>) - <span class="formula">t</span><span class="formula_subscript">cT</span> - <span class="formula">t</span><span class="formula_subscript">3LT</span></p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="58px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="438px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">cx</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">kritische Lücke für Fahrtbeziehung <span class="formula">x</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">cb</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Grundwert kritische Zeitlücke (siehe <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1612476">Tabelle 4</MadCap:xref>) </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">cHV</span>
+                            <span class="formula">P</span>
+                            <span class="formula_subscript">HV</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Anpassungsfaktor für Lkw • Prozent Lkw</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">cG</span>
+                            <span class="formula">G</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Anpassungsfaktor für Steigung • Steigung (als Verhältnis)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">cT</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Anpassungsfaktor für Querung in zwei Zügen (gegenwärtig auf 0 gesetzt, da Querungen immer als einzügig angenommen werden)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">3LT</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Anpassungsfaktor kritische Zeitlücke für Geometrie</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die anderen Anpassungsfaktoren sind Folgende:</p>
+        <p class="Text">
+            <img src="../Resources/Images/7_71.png" style="margin-right: 0, 01417542px;margin-bottom: 0, 01247406px;" />
+        </p>
+        <p class="Text">Die Grundwerte für die kritische Zeitlücke werden wie in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1612476">Tabelle 4</MadCap:xref> gezeigt berechnet.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px; caption-side: bottom; mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css'); mc-table-style-original: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrtbeziehung</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Grundwert kritische Zeitlücke <span class="formula" style="line-height: 11pt;">t</span><span class="formula_subscript">cb</span></p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">&lt; 4 Fahrstreifen Hauptstrom</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">4 + Fahrstreifen Hauptstrom</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hauptstrom Links</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4,1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">4,1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Nebenstrom Rechts</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6,2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">6,9</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Nebenstrom Geradeaus</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">6,5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">6,5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Nebenstrom Links</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">7,1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">7,5</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 4: ">
+                    <a name="1_benutzermodell_iv_2033098965_1612476">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_15959">
+                    </a>Grundwerte für die kritische Zeitlücke</p>
+            </caption>
+        </table>
+        <p class="Text">Stimmen die ermittelten Werte nicht mit den beobachteten Werten überein, können pro Abbieger manuell eingestellte Werte verwendet werden.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 4: ">
+            <a name="1_benutzermodell_iv_2033098965_1612483">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_68000">
+            </a>Folgezeitlücke für jede Fahrtbeziehung berechnen </p>
+        <p class="Text">Die Folgezeitlücke ist die zusätzliche Zeitspanne, die ein zweites Auto benötigt, um die Lücke zu nutzen. </p>
+        <h5>
+            <span class="gui_element">Beispiel</span>
+        </h5>
+        <p class="Text">Nehmen wir an, dass Frank hinter Sarah an dem Knotenpunkt warten würde. Wenn er gleich hinter Sarah abbiegen würde, würde er eine Folgezeitlücke von nur 2 Sekunden benötigen statt nochmals 4 Sekunden, um sich wieder sicher in den Verkehr einzureihen. Das heißt, wäre die Lücke zwischen den Fahrzeugen wenigstens 6 Sekunden lang, könnten sowohl Sarah als auch Frank sicher abbiegen.</p>
+        <p class="Text">Die Gleichung für die Berechnung der Folgezeitlücke lautet folgendermaßen: </p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;font-size: 7.2pt;vertical-align: sub;text-decoration: none;">
+            <span class="formula_subscript">
+                <img src="../Resources/Images/7_214.jpg" />
+            </span>
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="118px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="377px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">fx</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Folgezeitlücke für Fahrtbeziehung <span class="formula">x</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">fb</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Grundwert Folgezeitlücke (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369095">Tabelle 5</MadCap:xref>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">fHV</span>
+                            <span class="formula">P</span>
+                            <span class="formula_subscript">HV</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Anpassungsfaktor Folgezeitlücke für Lkw • Prozent Lkw</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die anderen Anpassungsfaktoren sind Folgende:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_218.jpg" />
+        </p>
+        <p class="Text">Folgezeitlücken werden anhand der <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369095">Tabelle 5</MadCap:xref> berechnet.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px; caption-side: bottom; mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css'); mc-table-style-original: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrtbeziehung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Grundwert Folgezeitlücke <span class="formula">t</span><span class="formula_subscript">fb</span></p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hauptstrom Links </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">2,2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Neben Rechts</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">3,3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Nebenstrom Geradeaus</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">4,0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Nebenstrom Links</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">3,5</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 5: ">
+                    <a name="1_benutzermodell_iv_2033098965_1369095">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_18566">
+                    </a>Folgezeitlücken</p>
+            </caption>
+        </table>
+        <p class="Text">Stimmen die ermittelten Werte nicht mit den beobachteten Werten überein, können pro Abbieger manuell eingestellte Werte verwendet werden.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 5: ">Potentielle (oder ideale) Kapazität für jede Fahrtbeziehung berechnen </p>
+        <p class="Text">Die ideale Kapazität ist die Kapazität, die erreicht wird, wenn diese Fahrtbeziehung alle potentiellen Zeitlücken nutzt (das heißt, dass keine vorrangigen Fahrtbeziehungen die Lücken beanspruchen). Außerdem wird angenommen, dass jede Fahrtbeziehung einen eigenen Fahrstreifen zur Verfügung hat. Die ideale Kapazität ist folgendermaßen definiert:</p>
+        <p class="Text">
+            <img src="../Resources/Images/7_73.png" />
+        </p>
+        <p class="Text">mit</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="41px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="454px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                            <span class="formula_subscript">px</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">potentielle Kapazität für Fahrtbeziehung <span class="formula">x</span> (Fzg/h)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">cx</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Konfliktstrom für Fahrtbeziehung <span class="formula">x</span> (Konflikt/h)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">cx</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">kritische Zeitlücke für Fahrtbeziehung <span class="formula">x</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">fx</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Folgezeitlücke für Fahrtbeziehung <span class="formula">x</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 6: ">Fahrtbeziehungskapazität berechnen unter Berücksichtigung von Konfliktwirkungen</p>
+        <p class="Text">Höherrangige Fahrtbeziehungen behindern die Kapazitäten niederrangiger Fahrtbeziehungen, da bevorrechtigte Abbieger die verfügbaren Lücken vor den niederrangigen Fahrtbeziehungen nutzen können. Deshalb wird die potentielle Kapazität mittels eines Anpassungsfaktors angepasst, um die Kapazität der Fahrtbeziehungen erhalten. Die Gleichung für die Fahrtbeziehungskapazität lautet folgendermaßen: </p>
+        <p class="Text">
+            <img src="../Resources/Images/7_72.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                            <span class="formula_subscript">mx</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText"> Fahrtbeziehungskapazität für Fahrtbeziehung <span class="formula">x</span> (Fzg/h) </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                            <span class="formula_subscript">px</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText"> potentielle Kapazität für Fahrtbeziehung <span class="formula">x</span> (Fzg/h)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <img src="../Resources/Images/7_75.png" style="margin-bottom: 0, 01417351px;" /> = Wahrscheinlichkeit, dass der Abbiegevorgang <span class="formula">i</span> eines behindernden Fahrzeugs die betreffende Fahrtbeziehung nicht blockiert </p>
+        <p class="Text">
+            <img src="../Resources/Images/7_74.jpg" /> = Wahrscheinlichkeit, dass ein behindernder Fußgängerstrom<span class="formula"> j</span> die betreffende Fahrtbeziehung nicht blockiert</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">i</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Belastung Fahrtbeziehung <span class="formula">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">j</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Belastung für Fußgängerstrom <span class="formula">j</span> (Fußg/h)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">w</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Fahrstreifenbreite (ft), Standardwert 12 ft.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">S</span>
+                            <span class="formula_subscript">P</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Fußgängergehgeschwindigkeit (ft/s), Standardwert 4 ft/s</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Da die Berechnung von den Kapazitäten bevorrechtigter Fahrtbeziehungen abhängt, erfolgt die Berechnung von oben nach unten (von Fahrtbeziehungen von Rang 1 zu Rang 4). Behindernde Fahrzeuge und Fußgängerströme für jede betreffende Fahrtbeziehung sind in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369123">Tabelle 6</MadCap:xref> aufgelistet.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px; caption-side: bottom; mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css'); mc-table-style-original: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="192px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="54px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="249px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrtbeziehung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Rang</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Behindernde Fahrtbeziehungen</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hauptstrom Geradeaus</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">kein</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hauptstrom Rechts</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">kein</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hauptstrom Links</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">ToP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Nebenstrom Rechts</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">FrP, ToP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Nebenstrom Geradeaus</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">JL, JLF, FrP, ToP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Nebenstrom Links</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">JL, JLF, OT, OR, FrP, ToP</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 6: ">
+                    <a name="1_benutzermodell_iv_2033098965_1369123">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_51132">
+                    </a>Behindernde Fahrtbeziehungen</p>
+            </caption>
+        </table>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="46px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="450px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">J</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Haupt…</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText">I</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Neben…</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">O</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Gegenrichtung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText">T</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Geradeaus</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">R</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Rechts</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText">L</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Links</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">F</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">fern… (bei Geradeaus/Linksabbiegern aus dem Nebenstrom der 2. getroffene Hauptstrom)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText">ToP</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Zufahrt mit Fußgängerquerung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText">FrP</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Ausfahrt mit Fußgängerquerung</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Heading_Schritt_Buchstabe" MadCap:autonum="Schritt 6a: ">Anpassung für die Behinderung des Hauptstrom-Linksabbiegers berechnen</p>
+        <p class="Text">Auch für Hauptstrom-Linksabbieger muss ein Anpassungsfaktor berechnet werden, wenn dafür kein eigener Fahrstreifen zur Verfügung steht. Die Gleichung benutzt eine Standardsättigungsverkehrsstärke. Sie lautet folgendermaßen: </p>
+        <p class="Text">
+            <img src="../Resources/Images/7_52.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="51px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="445px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">vJL</span>
+                            <span class="formula">‘</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">modifizierte Wahrscheinlichkeit für Behinderung des Hauptstrom-Linksabbiegers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">vJL</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">unmodifizierte Wahrscheinlichkeit für Behinderung des Hauptstrom-Linksabbiegers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">JT</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Belastung Hauptstrom Geradeaus</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">JR</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Belastung Hauptstrom Rechts (0 bei eigenem Rechtsabbiegerfahrstreifen)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">s</span>
+                            <span class="formula_subscript">JT</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Sättigungsverkehrsstärke Hauptstrom Geradeaus (Standardwert 1700)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">s</span>
+                            <span class="formula_subscript">JR</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Sättigungsverkehrsstärke Hauptstrom Rechts (Standardwert 1700)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Im HCM 2010 ist auch der Fall eines kurzen Aufweitungsfahrstreifens auf dem Hauptstrom beschrieben (HCM 2010, Seite 19-20).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Heading_Schritt_Buchstabe" MadCap:autonum="Schritt 6a: ">Anpassungen für Nebenstrom-Linksabbieger berechnen</p>
+        <p class="Text">Zusätzlich gibt es eine spezielle Anpassung für Nebenstrom-Linksabbieger (Rang 4). Die Gleichung ist unten aufgeführt. Grundsätzlich werden Linksabbieger des Hauptstroms und Geradeausfahrer des Nebenstroms vorausberechnet und dann angepasst. Der angepasste Wert wird dann in Verbindung mit den verbleibenden Rechtsabbiegern des Nebenstroms und den Wahrscheinlichkeiten für Fußgänger verwendet. </p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_230.jpg" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_253.jpg" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_254.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="51px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="445px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">vJL</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Wahrscheinlichkeit für Behinderung des nahen Hauptstrom-Linksabbiegers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">vJLF</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Wahrscheinlichkeit für Behinderung des fernen Hauptstrom-Linksabbiegers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">vIT</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Wahrscheinlichkeit für Behinderung des Nebenstrom-Geradeausfahrers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">vR4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Wahrscheinlichkeit für Nebenstrom Links (Rang 4)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">vIR</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Wahrscheinlichkeit für Nebenstrom Rechts (Rang 2)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">pIP</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Wahrscheinlichkeit für Nebenstrom Fußgänger</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">pJP</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Wahrscheinlichkeit für Hauptstrom Fußgänger</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 7: ">Fahrtbeziehungskapazität auf gemeinsam genutzten Fahrstreifen </p>
+        <p class="Text">Bisher gehen die Berechnungen davon aus, dass jeder Fahrtbeziehung des Nebenstroms ein separater Fahrstreifen zur Verfügung steht. Steht ein gemeinsamer Fahrstreifen zur Verfügung, wird eine kombinierte Kapazität für diejenigen Fahrtbeziehungen berechnet, die sich einen Fahrstreifen teilen.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_79.png" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="47px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="448px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">C</span>
+                            <span class="formula_subscript">SH</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Kapazität des gemeinsam genutzten Fahrstreifens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">i</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Belastung Fahrtbeziehungen der Nebenstraßen <span class="formula">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                            <span class="formula_subscript">m</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Fahrtbeziehungskapazität der Fahrtbeziehungen der Nebenstraßen <span class="formula">i</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Beachten Sie, dass Anpassungen stromaufwärts für Signale und Pulkbildung gegenwärtig noch von der Berechnung ausgeschlossen sind. Das gleiche gilt für die Anpassung der akzeptablen Zeitlücke für zweizügiges Queren sowie für aufgeweitete Zufahrten.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 8: ">
+            <a name="1_benutzermodell_iv_2033098965_1028532">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_24561">
+            </a>Wartezeit berechnen</p>
+        <p class="Text">Die Berechnung der Wartezeit der Steuerung ist folgendermaßen definiert:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_53.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="43px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="453px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">d</span>
+                            <span class="formula_subscript">x</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">durchschnittliche Wartezeit der Steuerung pro Fahrzeug für Fahrtbeziehung <span class="formula">x</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                            <span class="formula_subscript">mx</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrtbeziehungskapazität (gemeinsam genutzter Fahrstreifen <span class="formula">x</span>, <span class="formula">C</span><span class="formula_subscript">SH</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">T</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Dauer des Analysezeitraums (h) (Standardwert 0,25 für 15 Min.)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">x</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Fahrtbeziehungsbelastung (gemeinsam genutzter Fahrstreifen <span class="formula">x</span>, <span class="formula">V</span><span class="formula_subscript">SH</span>)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Bei der Berechnung des Steuerungstyps geregelte Vorfahrt (Vorfahrt achten) wird eine ähnliche Formel verwendet:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_219.jpg" />
+        </p>
+        <p class="Text">Der Wartezeit der Steuerung pro Fahrtbeziehung wird aggregiert zur Zufahrt mit einem gewichteten Mittel (durch Belastung) aller Fahrtbeziehungen/gemeinsame Fahrstreifen in der Zufahrt. Die durchschnittliche Wartezeit der Zufahrt wird dann aggregiert auf den gesamten Knotenpunkt, auch mit einem gewichteten Mittel. Die Gleichungen sind dieselben wie die für signalisierte Knotenpunkte.</p>
+        <p class="Text">Beachten Sie, dass Fahrtbeziehungen vom Rang 1 keine Wartezeit erhalten. Falls jedoch keine Aufweitung ausschließlich für Linksabbieger vorhanden ist, können auch für Fahrtbeziehungen vom Rang 1 Wartezeiten auftreten. Für diesen Fall gibt es eine zusätzliche Wartezeitengleichung für Fahrtbeziehungen vom Rang 1, sollte keine Aufweitung für Linksabbieger auf den Hauptzufahrten vorhanden sein. Die Gleichung lautet folgendermaßen: </p>
+        <p class="Formula_number" MadCap:autonum=" [1]">
+            <a name="1_benutzermodell_iv_2033098965_1028563">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_49932">
+            </a>
+            <img src="../Resources/Images/7_78.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="50px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="446px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">d</span>
+                            <span class="formula_subscript">R1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Wartezeit Fahrzeuge vom Rang 1 (s/Fzg)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">N</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl der Geradeausspuren des Hauptstroms pro Richtung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">vJL</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Wahrscheinlichkeit eines Anpassungsfaktors Behinderung Hauptstrom Links <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1028563">[1]</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">d</span>
+                            <span class="formula_subscript">JL</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Wartezeit für Hauptstrom Links (s/Fzg)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">T</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Geradeaus-Belastung des gemeinsam genutzten Fahrstreifens (bei mehreren Fahrstreifen nur die Belastung des gemeinsam genutzten Fahrstreifens)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">R</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Rechtsabbieger des gemeinsam genutzten Fahrstreifens (bei mehreren Fahrstreifen nur die Belastung des gemeinsam genutzten Fahrstreifens)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Bei der Berechnung der Wartezeit in der Zufahrt und/oder des Knotenpunkts wird diese Wartezeit durch die Null-Wartezeit der Fahrtbeziehungen vom Rang 1 ersetzt.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 9: ">
+            <MadCap:keyword term="Level of Service" />Level of Service</p>
+        <p class="Text">Level of Service wird dann, wie in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369153">Tabelle 7</MadCap:xref> gezeigt, als Zuordnung auf der Basis der Wartezeit am Knotenpunkt definiert.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px; caption-side: bottom; mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css'); mc-table-style-original: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="37px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="458px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">LOS</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Mittlere Wartezeit/Fahrzeug</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">0 – 10 Sek.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">B</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">10 – 15 Sek.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">C</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">15 – 25 Sek.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">D</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">25 – 35 Sek.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">E</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">35 – 50 Sek.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">F</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">50 + Sek.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 7: ">
+                    <a name="1_benutzermodell_iv_2033098965_1369153">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_78703">
+                    </a>Zuordnung eines LOS zur mittleren Wartezeit je Fahrzeug</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Im HCM 2010 wird bei der Bestimmung des Levels-of-Service noch berücksichtigt, ob die Kapazität überschritten ist. In diesem Fall ist das Level-of-Service immer F (HCM 2010, Seite 19-2).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Länge des Rückstaus am Knotenpunkt wird folgendermaßen berechnet:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_82.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="58px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="438px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Q</span>
+                            <span class="formula_subscript">95x</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Rückstaulänge 95%-Perzentil für Fahrtbeziehung <span class="formula">x</span> (Fzg)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                            <span class="formula_subscript">mx</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrtbeziehungskapazität (gemeinsam genutzter Fahrstreifen <span class="formula">x</span>, <span class="formula">C</span><span class="formula_subscript">SH</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">T</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Dauer des Analysezeitraums (h) (Standardwert 0,25 für 15 Min.)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">x</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Fahrtbeziehungsbelastung (gemeinsam genutzter Fahrstreifen <span class="formula">x</span>, <span class="formula">V</span><span class="formula_subscript">SH</span>)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

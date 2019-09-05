@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="688" MadCap:lastWidth="510" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1077981">
+            </a>Funktion von Koordinierungsgruppen</h4>
+        <p class="Text">
+            <MadCap:keyword term="Koordinierungsgruppen" />Eine Koordinierung wird zwischen zwei oder mehreren Linien definiert um auszudrücken, dass die Fahrten dieser Linien auf einem gemeinsamen Streckenabschnitt zum Vorteil der Fahrgäste zeitlich gleichabständig angeordnet sind. Als Konsequenz wird das betreffende Linienbündel während des gesamten Verfahrens an den gemeinsamen Haltestellen wie eine einzige Linie behandelt, die entsprechend häufiger verkehrt. Hierdurch kommt eine geringere mittlere Wartezeit zustande als bei der standardmäßig vorausgesetzten stochastischen Gleichverteilung der Lage der Linien zueinander.</p>
+        <p class="Text">Eine Koordinierungsgruppe ist ein Bündel mehrerer Fahrzeitprofile auf einem gemeinsam befahrenen Korridor. Der Abschnitt wird durch zwei Haltestellen begrenzt. Die Bedeutung einer Koordinierungsgruppe liegt in der Berechnung der mittleren Wartezeit im Rahmen der taktfeinen Umlegung. Normalerweise wird in diesem Umlegungsverfahren davon ausgegangen, dass der zeitliche Abstand zwischen Abfahrten auf verschiedenen Linienrouten (genauer gesagt, auf Fahrzeitprofilen) zufällig ist. Durch Koordinierungsgruppen kann abgebildet werden, dass bestimmte Linienrouten zum Vorteil der Fahrgäste in einem gleichabständigen Rhythmus verkehren – so wie es in der Realität auch häufig der Fall ist.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">In der fahrplanfeinen Umlegung haben Koordinierungsgruppen keine Bedeutung, da die Abfahrtszeitpunkte hier dem Fahrplan entnommen werden können. Die taktfeine Umlegung rechnet hingegen nur mit mittleren Wartezeiten. Soll ausgedrückt werden, dass diese Wartezeiten geringer sind, als es sich aus einer zufälligen Anordnung der Linienrouten ergeben würde, kommen Koordinierungsgruppen ins Spiel.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Es ist zu beachten, dass das Aufsplitten einer Linie in zwei neue Linien mit jeweils halbem Angebot somit nicht <span class="gui_element">automatisch</span> zum selben Rechenergebnis führt. Das Verfahren darf nicht von vornherein davon ausgehen, dass eine Koordinierung vorliegt. Koordinierungen müssen vielmehr ausdrücklich spezifiziert werden. <MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1054411">Abbildung&#160;157</MadCap:xref> zeigt hierzu ein Beispiel.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Coordination_Lines.png" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_oev_2318507456_1054411">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_53030">
+            </a>Koordinierung von Linien</p>
+        <p class="Text">Betrachtet man nur die rot-blaue Linie, ergibt sich für den zufällig zugehenden Fahrgast eine mittlere Wartezeit von 5 Minuten – genau die Hälfte des Taktes.</p>
+        <p class="Text">Wird diese Linie <span class="gui_element">ohne</span> Definition einer Koordinierung in einen blauen und einen roten Teil aufgesplittet, ergibt sich nach der Taktermittlung eine mittlere Wartezeit von 6:40 Minuten. Dies ist der Erwartungswert des Abstandes zur nächsten Abfahrt einer der beiden Linien – und dieser Abstand kann je nach Lage der beiden Linien zueinander zwischen 0 und 20 Minuten liegen.</p>
+        <p class="Text">Durch Definition einer Koordinierungsgruppe drückt man aus, dass zwischen Abfahrten der roten und der blauen Linie immer konstant 10 Minuten liegen. Dann ergibt sich wie in der Ausgangssituation eine mittlere Wartezeit von 5 Minuten.</p>
+    </body>
+</html>

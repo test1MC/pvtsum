@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="3084" MadCap:lastWidth="555" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km;max;meilen">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1186390">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_47356">
+            </a>Umlauf</h4>
+        <p class="Text">
+            <MadCap:keyword term="Netzobjekte: Umlauf" />
+            <MadCap:keyword term="Umlaufbildung: Umläufe" />
+            <MadCap:keyword term="Umläufe" />Ein Umlauf bedeutet eine durchgehende Verwendung von N&#160;Fahrzeugen über den gesamten Umlaufbildungszeitraum hinweg. Dabei ist N die Anzahl der Umlauftage. Sie ist unabhängig vom Umlaufbildungszeitraum oder von der Länge des Kalenders. Das Attribut <span class="gui_element">Anzahl Umlauftage</span> gibt den Fahrzeugbedarf wieder, der für einen Umlauf entsteht. In <MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1191585">Abbildung 1</MadCap:xref> fährt ein Zug am Umlauftag&#160;1 von Hamburg nach Wien. Am Umlauftag&#160;2 steht derselbe Zug nicht schon wieder in Hamburg zur Verfügung um dieselbe Strecke zu fahren, sondern muss zunächst in umgekehrter Richtung von Wien nach Hamburg gelangen. Daher ist es notwendig, für diesen Umlauf einen zweiten Zug einzuführen, der Fahrzeugbedarf beträgt also zwei Fahrzeuge.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_BlockingDay.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000067px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_betreibermodell_oev_1878159914_1191585">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_53622">
+            </a>Umlauftage und Fahrzeugbedarf</p>
+        <p class="Text">Ein Umlauf besitzt die in <MadCap:xref class="Label_Table" href="#1_betreibermodell_oev_1878159914_1310236">Tabelle 2</MadCap:xref> beschriebenen Attribute.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="138px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="358px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Umlaufversions-ID /-Code</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Verweis auf die Umlaufversion, zu der der Umlauf gehört.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrzeugkombinations-Nummer</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrzeugkombination, mit der ein Umlauf gefahren wird. Ein Umlauf kann nur von einer Fahrzeugkombination absolviert werden, aber eventuell von mehreren Exemplaren dieses gleichen Typs.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Anzahl Umlauftage</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt an, wie viele (gleichartige) Fahrzeugkombinationen für diesen Umlauf gleichzeitig im Einsatz sind, wie hoch also der Fahrzeugbedarf für den Umlauf ist. Geschlossene Umläufe sind nach dieser Anzahl Tage wieder am Ausgangsort angekommen. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Geschlossen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt an, ob der Umlauf für eine geschlossene Zeitachse gebildet wurde, ob also nach dem letzten Tag des Umlaufbildungszeitraums wieder der erste Tag folgt analog zur Umlegung.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Depot-Nummer</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Verweist auf einen Haltepunkt, der als Depot für diesen Umlauf dient.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Leerfahrt-Verkehrssystem-Code</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt an, welches Verkehrssystem im Rahmen der Umlaufprüfung bei der Berechnung der Leerfahrt benutzt werden soll. Der Wert wird bei der Umlaufbildung aus den Verfahrensparametern übernommen. Bei manueller Planung kann er auch direkt eingegeben werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Ungeprüft</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt an, ob der Umlauf bereits geprüft wurde (0) oder nicht (1).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hat Fahrzeugfehler</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt an, ob im Umlauf ein falsches Fahrzeug verwendet wurde <MadCap:xref class="sieheUeberschrSeite" href="1_7_Umlaufprüfung.htm#1_betreibermodell_oev_1878159914_1360122"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlaufprüfung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hat Wendezeitfehler</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt an, ob Vor- oder Nachbereitungszeiten unterschritten wurden <MadCap:xref class="sieheUeberschrSeite" href="1_7_Umlaufprüfung.htm#1_betreibermodell_oev_1878159914_1360122"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlaufprüfung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hat Umlauftags-Fehler</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt an, ob ein Umlauftag ohne Umlaufelemente vorliegt <MadCap:xref class="sieheUeberschrSeite" href="1_7_Umlaufprüfung.htm#1_betreibermodell_oev_1878159914_1360122"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlaufprüfung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hat Zeitbruch</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt an, ob ein Zeitbruch vorliegt <MadCap:xref class="sieheUeberschrSeite" href="1_7_Umlaufprüfung.htm#1_betreibermodell_oev_1878159914_1360122"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlaufprüfung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hat Ortsbruch</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt an, ob ein Ortsbruch vorliegt <MadCap:xref class="sieheUeberschrSeite" href="1_7_Umlaufprüfung.htm#1_betreibermodell_oev_1878159914_1360122"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlaufprüfung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hat Grenzwertfehler</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt an, ob einer der Grenzwerte für Länge oder der Grenzwert für Dauer eines benutzerdefinierten Umlaufelements überschritten wurde <MadCap:xref class="sieheUeberschrSeite" href="1_7_Umlaufprüfung.htm#1_betreibermodell_oev_1878159914_1360122"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlaufprüfung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hat Zwangsbindungsfehler</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt an, ob eine nicht eingehaltene gültige Zwangsbindung vorliegt <MadCap:xref class="sieheUeberschrSeite" href="1_7_Umlaufprüfung.htm#1_betreibermodell_oev_1878159914_1360122"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlaufprüfung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hat Fahrtrichtungsfehler</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt an, ob ein Fahrtrichtungsfehler vorliegt <MadCap:xref class="sieheUeberschrSeite" href="1_7_Umlaufprüfung.htm#1_betreibermodell_oev_1878159914_1360122"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlaufprüfung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hat Fahrzeugaustausch</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt an, ob der Umlauf mit Fahrzeugaustausch gebildet wurde oder ohne, ob also die Fahrzeugkombination gegen das Fahrplanfahrtabschnitts-Attribut <span class="gui_element">Fahrzeugkombination</span> oder gegen das Attribut <span class="gui_element">Fahrzeugkombinations-Set</span> zu prüfen ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrtrichtung beachten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Bestimmt, ob bei einer Prüfung dieses Umlaufs die Fahrtrichtung beachtet werden soll. Nur dann kann die Umlaufprüfung einen Fahrtrichtungsfehler ermitteln. Spielt die Fahrtrichtung keine Rolle (z.B. bei Bussen), kann hiermit dieser Teil der Umlaufprüfung abgeschaltet werden <MadCap:xref class="sieheUeberschrSeite" href="1_7_Umlaufprüfung.htm#1_betreibermodell_oev_1878159914_1360122"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlaufprüfung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Von-Haltepunkt-Nummer und -Name</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt an, an welchem Haltepunkt der Umlauf beginnt. Bei geschlossenen Umläufen stimmt dieser mit dem Nach-Haltepunkt überein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Nach-Haltepunkt-Nummer und -Name</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt an, an welchem Haltepunkt der Umlauf endet. Bei geschlossenen Umläufen stimmt dieser mit dem Von-Haltepunkt überein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Starttag-Index</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Index des Starttages des Umlaufs bezogen auf den Umlaufbildungszeitraum der Umlaufversion. Bei geschlossenen Umläufen ist der Wert immer 1.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Startzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Startzeit des Umlaufs, also Startzeit des ersten Umlaufelements. Bei geschlossenen Umläufen ist das meistens 00:00:00, es sei denn, ein Fahrplanfahrt-Umlaufelement ragt am letzten Tag über 24h hinaus.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Endtag-Index</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Index des Endtages des Umlaufs bezogen auf den Umlaufbildungszeitraum der Umlaufversion. Bei geschlossenen Umläufen ist der Wert immer gleich der Anzahl Tage im Umlaufbildungszeitraum.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Endzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Endzeit des Umlaufs, also Endzeit des letzten Umlaufelements. Bei geschlossenen Umläufen ist das meistens 24:00:00, es sei denn, ein Fahrplanfahrt-Umlaufelement am letzten Tag ragt über 24h hinaus.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Leerfahrt-Zeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Kumulierte Zeit, die auf Leerfahrten und benutzerdefinierten Umlaufelementtypen des Umlaufs anfällt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Leerzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Kumulierte Zeit, die durch Standzeiten und Wendezeiten sowie durch Leerfahrten und benutzerdefinierte Umlaufelementtypen des Umlaufs anfällt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Mittlere Leerzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula">Leerzeit</span> / (<span class="formula">Anzahl Umlauftage</span> • <span class="formula">Anzahl Tage des Umlaufbildungszeitraums</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mittlere Leerfahrt-Zeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">Leerfahrt-Zeit</span> / (<span class="formula">Anzahl Umlauftage</span> • <span class="formula">Anzahl Tage des Umlaufbildungszeitraums</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Leerkilometer / -meilen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Kumulierte Distanz, die auf Leerfahrten und benutzerdefinierten Umlaufelementtypen des Umlaufs zurückgelegt wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mittlere Leerkilometer / -meilen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">Leerkilometer</span> / (<span class="formula">Anzahl Umlauftage</span> • <span class="formula">Anzahl Tage des Umlaufbildungszeitraums</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Einsatzzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Kumulierte Zeit, die auf den Umlaufelementen eines Umlaufs anfällt. Standzeiten werden dabei nicht berücksichtigt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mittlere Einsatzzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Durchschnittliche Einsatzzeit pro Umlauftag und Kalendertag (kumulierte Einsatzzeit geteilt durch Anzahl Umlauftage und Anzahl Tage des Umlaufbildungszeitraums).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Einsatzkilometer / -meilen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Summe der Längen aller Umlaufelemente eines Umlaufs.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mittlere Einsatzkilometer / -meilen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">Einsatzkilometer</span> / (<span class="formula">Anzahl Umlauftage</span> • <span class="formula">Anzahl Tage des Umlaufbildungszeitraums</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Servicezeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Summe der Fahrzeiten der Fahrplanfahrten eines Umlaufs.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mittlere Servicezeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">Servicezeit</span> / (<span class="formula">Anzahl Umlauftage • Anzahl Tage des Umlaufbildungszeitraums</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Zeit außerhalb Depot</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Umlaufzeit abzüglich Aufenthalt im Depot</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mittlere Zeit außerhalb Depot</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">Zeit außerhalb Depot</span> / (<span class="formula">Anzahl Umlauftage • Anzahl Tage des Umlaufbildungszeitraums</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Servicekilometer / -meilen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Summe der Längen aller Fahrplanfahrt-Umlaufelemente eines Umlaufs.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mittlere Servicekilometer / -meilen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">Servicekilometer</span> / (<span class="formula">Anzahl Umlauftage • Anzahl Tage des Umlaufbildungszeitraums</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Umlaufzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gesamtdauer des Umlaufs.</p>
+                        <p class="CellText">
+                            <span class="formula">Anzahl Tage des Umlaufbildungszeitraums</span> • <span class="formula">Anzahl Umlauftage</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Anzahl Linien</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Anzahl der Linien, die der Umlauf überfährt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Anzahl Linienrouten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl der Linienrouten, die der Umlauf überfährt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Anzahl Fahrzeitprofile</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Anzahl der Fahrzeitprofile, die vom Umlauf benutzt werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Anzahl Servicefahrten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl der Fahrplanfahrt-Umlaufelemente, die während des Umlaufs absolviert werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Kosten Entfernung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Kilometerkosten des Umlaufs, die sich aus den zurückgelegten Service- und Leerkilometern ergeben (<MadCap:xref class="Label_Image" href="1_7_Berechnung von Betriebskosten und Fahrgeldeinnahmen (Erloesen).htm#1_betreibermodell_oev_1878159914_1129373">Abbildung 1</MadCap:xref>).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Kosten Fahrzeug</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrzeugkosten, die sich aus der Anzahl der benötigten Fahrzeuge und den Fixkosten für eine Fahrzeugeinheit ergeben (<MadCap:xref class="Label_Image" href="1_7_Berechnung von Betriebskosten und Fahrgeldeinnahmen (Erloesen).htm#1_betreibermodell_oev_1878159914_1129373">Abbildung 1</MadCap:xref>).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Kosten Fahrzeug bezogen auf den Umlaufbildungszeitraum</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Kosten Fahrzeug hochgerechnet auf den Umlaufbildungszeitraum</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Kosten Zeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Stundenkosten des Umlaufs, die sich aus den auf Fahrplanfahrten und Leerfahrten absolvierten Zeitdauern ergeben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Kosten Zeit mit Stillstandzeiten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Stundenkosten des Umlaufs, die sich aus den auf Fahrplanfahrten und Leerfahrten sowie bei Aufenthalten innerhalb oder außerhalb eines Depots absolvierten Zeitdauern ergeben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Führendes Depot - Nummer</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Depot mit der längsten Aufenthaltszeit. Bei Mehrdeutigkeit das Depot mit der kleinsten Nummer.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+            <a name="1_betreibermodell_oev_1878159914_1310236">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_76136">
+            </a>Attribute des Umlaufs</p>
+    </body>
+</html>

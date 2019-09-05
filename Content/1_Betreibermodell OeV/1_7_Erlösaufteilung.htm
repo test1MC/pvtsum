@@ -1,0 +1,913 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="668" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="usw;Tarifpkt;TW;Ges;Anz;GewTarifpkt;GewTW;Bef;Village;Train;Bus1;GE;VonBez;NachBez;LinBef;BUS1;TRAIN;Bus2;EC;IC">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStd_TitnoHead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1126356">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_34242">
+            </a>Erlösaufteilung</h4>
+        <p class="Text">
+            <MadCap:keyword term="ÖV: Erlöse: auf ÖV-Teilwege aufteilen" />Intern berechnet <MadCap:variable name="PTV_Manual.Programmname" /> die Erlöse zunächst für ÖV-Wege. Anschließend werden die Erlöse auf ÖV-Teilwege verteilt, und schließlich auf die Netzobjekte der Linienhierarchie (Linien, Linienrouten usw.) umgerechnet. Sie können die Aufteilung der Erlöse durch folgende Parameter beeinflussen.</p>
+        <ul>
+            <LI class="List0">Mit <span class="gui_element">Gewicht Anzahl Teilwege </span>erreichen Sie eine gleichmäßige Aufteilung des Erlöses über alle Teilwege. Jeder Teilweg erhält denselben Erlösanteil, falls dieses Gewicht 100&#160;% beträgt.</LI>
+            <LI class="List0">Mit <span class="gui_element">Gewicht Anzahl Tarifpunkte</span> erfolgt die Aufteilung auf Basis des Verhältnisses der Anzahl der Tarifpunkte des Teilweges zur Anzahl der Tarifpunkte des gesamten Weges. Hiermit können Sie erreichen, dass die (im Sinne von Tarifpunkten) längere Teilwege einen größeren Anteil des Erlöses zugeschieden bekommen.</LI>
+            <LI class="List0">Sie können eine beliebige Gewichtung zwischen den beiden Aufteilungsmöglichkeiten Anzahl Teilwege und Anzahl Tarifpunkte wählen.</LI>
+            <LI class="List0">Bei der Vorgabe von einem <span class="gui_element">Fixbetrag pro Teilweg</span> erhält zunächst jeder Teilweg einen fixen Betrag vom Gesamterlös. Der Resterlös wird dann nach den oben genannten Aufteilungsregeln auf die Teilwege verteilt. Übersteigt die Summe aller Fixbeträge den aufzuteilenden Erlös, dann werden die Fixbeträge entsprechend reduziert. Wird ein Tarifmodell verwendet, dann werden die Zuschläge hierbei nicht berücksichtigt.</LI>
+        </ul>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Erlösaufteilung erfolgt unabhängig davon, wie der Erlös berechnet wurde (Tarifmodell, fixer Erlös pro Beförderungsfall oder fixer Erlös pro Tarifpunkt).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Erlöszuscheidung beruht auf folgenden Formeln</p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">Anteil-Tarifpkt =Tarifpkt-TW/Tarifpkt-Ges</span>
+        </p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">Anteil-Teilweg =1/Anz-TW</span>
+        </p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">Erlösanteil-Teilweg =(Anteil-Tarifpkt • GewTarifpkt + Anteil-Teilweg • GewTW)</span>
+        </p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">Erlös-Teilweg = Erlös-Fix + (Erlös-Bef - Erlös-Fix • Anz-TW) • Erlösanteil-Teilweg</span>
+        </p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="201px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="182px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Anz-TW</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Zahl der Teilwege eines Beförderungsfalls</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Tarifpkt-TW</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl Tarifpunkte eines Teilwegs</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Tarifpkt-Ges</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Gesamtzahl Tarifpunkte des Beförderungsfalls</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Erlösanteil-Teilweg</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Anteil des Erlöses des Wegs, der auf den Teilweg entfällt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">GewTarifpkt</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">Gewichtung der Tarifpunkte</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">GewTW</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText">Gewichtung der Teilwege</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">GewTarifpkt + GewTW = 1.0</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Erlös-Bef</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Erlös je Beförderungsfall</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Erlös-Fix</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Erlös, der jedem Teilweg als Fixbetrag zugeordnet wird</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Erlös-Teilweg</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Erlös, der dem Teilweg zugeschieden wird</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Um die Erlösaufteilung zu veranschaulichen, ziehen wir wiederum das Beispiel <span class="path">Example_LLE.ver</span> heran. Dort wurde ein Tarifmodell mit Zonentarif modelliert und die Berechnung der für die Erlösaufteilung notwendigen Eingangsdaten bereits demonstriert <MadCap:xref class="sieheUeberschrSeite" href="1_7_Erlösberechnung nach dem Tarifmodell.htm#1_betreibermodell_oev_1878159914_1329791"><span style="color: Black;" class="mcFormatColor">(</span><u>Erlösberechnung nach dem Tarifmodell</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Die Erlösaufteilung erfolgt nur für die Wege, die mehrere Teilwege umfassen. Im Beispiel sind dies der Weg von A-Village nach X-City, auf dem 1.000 Fahrgäste Bus und Bahn nutzen, und zurück. Da die Teilweg-Tarifpunkte sowohl für den Bus (A-Village - C-Village) als auch für den Zug (C-Village - X-City) 10 betragen, ergibt sich immer ein Aufteilungsfaktor von 0,5.</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="175px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="320px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Von-Quellbezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">100 (A-Village)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Nach-Zielbezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">200 (X-City)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Strecken im Verlauf von Weg 1</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">1 (Bus) -&gt; 2 (Bus) -&gt; 4 (Train)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Anzahl der Tarifpunkte auf den überfahrenen Strecken</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Strecke 1: 5 (Bus)</p>
+                        <p class="CellText">Strecke 2: 5 (Bus)</p>
+                        <p class="CellText">Strecke 4: 10 (Train)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Anteil-Tarifpunkte(Bus1)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_47.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Anzahl der Teilwege von Weg 1</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Anteil-Teilweg(Bus1)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_45.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Erlös auf dem Weg 1</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">6000 GE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Gewichtung der Tarifpunkte</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">75&#160;%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Gewichtung der Teilwege</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">25&#160;%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText">Erlös-Teilweg(Bus1)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_46.jpg" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Erlösberechnung für den Teilweg Bus1</p>
+            </caption>
+        </table>
+        <p class="Text">Möchten Sie die Erlöse auf der Ebene der Linien ausgeben, so ergibt sich folgende Rechnung.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="50px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="68px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="80px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="57px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="80px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="160px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Linie</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">VonBez</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">NachBez</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">LinBef</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrpreis</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Erlös = LinBef • Fahrpreis</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td rowspan="9" class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">BUS1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">X-City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1000</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">3.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">3000.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">A-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">X-City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">1000</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">6.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_59.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">C-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">200</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">200.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">B-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">X-City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">2000</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">1.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">2000.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">C-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">200</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">200.0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">X-City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">A-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">1000</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">3.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">3000.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">X-City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1000</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">6.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_60.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">X-City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">B-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">2000</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">1.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">2000.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td colspan="4" class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">= 16400.00</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td rowspan="5" class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">TRAIN</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">X-City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">C-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">5000</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">4.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">20000.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">X-City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1000</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">6.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_32.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">C-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">X-City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">5000</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">4.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">2000.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A-Village</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">X-City</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1000</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">6.00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_42.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="4" class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Summe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">= 46000.00</span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Aggregation der Erlöse von Teilwegen auf Linien</p>
+            </caption>
+        </table>
+        <p class="Text">Ein weiteres Rechenbeispiel soll die Einstellmöglichkeiten (insbesondere Zuweisung eines fixen Betrags für jeden Teilweg) zeigen. Gegeben sei folgendes Netz.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Example_RevenueCalc.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Beispielnetz Fixbetrag je Teilweg</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="175px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="320px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Personenfahrten</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Gesamtanzahl Tarifpunkte</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">12</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Anteil-Tarifpunkte(Bus1)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_28.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Anteil-Tarifpunkte(Train)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_29.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Anteil-Tarifpunkte(Bus2)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_48.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Anzahl Teilwege</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Anteil-TW</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_49.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body2">
+                        <p class="CellText">Erlös-Bef</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">3.00</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">Eingangsdaten für das Rechenbeispiel</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="73px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="211px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="211px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Teilweg</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Anteil Teilweg</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Erlös je Teilweg</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Bus 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1.0 • 0.167 + 0.0 • 0.333 = 0.167</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">0.167 • 3.00 = 0.50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Train</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1.0 • 0.500 + 0.0 • 0.333 = 0.500</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">0.500 • 3.00 = 1.50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Bus 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">1.0 • 0.333 + 0.0 • 0.333 = 0.333</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">0.333 • 3.00 = 1.00</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 4: ">Erlösaufteilung GewTarifpkt = 1,0, GewTW = 0,0, Fixbetrag = 0</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="73px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="211px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="211px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Teilweg</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Anteil Teilweg</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Erlös je Teilweg</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Bus 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0.5 • 0.167 + 0.5 • 0.333 = 0.250</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">0.250 • 3.00 = 0.75</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Train</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0.5 • 0.500 + 0.5 • 0.333 = 0.417</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">0.417 • 3.00 = 1.25</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Bus 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">0.5 • 0.333 + 0.5 • 0.333 = 0.333</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">0.333 • 3.00 = 1.00</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 5: ">Erlösaufteilung GewTarifpkt = 0,5, GewTW = 0,5, Fixbetrag = 0,00</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="73px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="211px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="211px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Teilweg</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Anteil Teilweg</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Erlös je Teilweg</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Bus 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0.5 • 0.167 + 0.5 • 0.333 = 0.250</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">0.20 + 0.250 • (3.00 - 3 • 0.20) = 0.80</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Train</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0.5 • 0.500 + 0.5 • 0.333 = 0.417</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">0.20 + 0.417 • (3.00 - 3 • 0.20) = 1.20</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Bus 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">0.5 • 0.333 + 0.5 • 0.333 = 0.333</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">0.20 + 0.333 • (3.00 - 3 • 0.20) = 1.00</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 6: ">Erlösaufteilung GewTarifpkt = 0.5, GewTW = 0.5, Fixbetrag = 0.20</p>
+            </caption>
+        </table>
+        <p class="Text">Bei Verwendung eines Tarifmodells <MadCap:xref class="sieheUeberschrSeite" href="1_7_Erlösberechnung nach dem Tarifmodell.htm#1_betreibermodell_oev_1878159914_1329791"><span style="color: Black;" class="mcFormatColor">(</span><u>Erlösberechnung nach dem Tarifmodell</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> kann außerdem die Aufteilung der Zuschläge beeinflusst werden. Mit der Option <span class="gui_element">Zuschläge verkehrssystemweise aufteilen</span> haben Sie folgende Möglichkeiten:</p>
+        <ul>
+            <LI class="List0">Ist die Option ausgewählt, wird der für ein Verkehrssystem erhobene Zuschlag nur auf die Teilwege aufgeteilt, die von diesem Verkehrssystem befahren werden. So wird beispielsweise bei einer Verbindung, auf der ein Nahverkehrszug ohne Zuschlag und ein Fernverkehrszug mit Zuschlag benutzt werden, der Zuschlag nur auf die Teilwege verteilt, auf denen der Fernverkehrszug genutzt wird.</LI>
+            <LI class="List0">Ist die Option nicht ausgewählt, wird der Zuschlag nach dem Verteilungsschlüssel auf alle Teilwege verteilt, unabhängig davon, ob das Verkehrssystem, für das der Zuschlag anfällt, auf dem Teilweg verkehrt. So profitiert bei der Erlöszuscheidung beispielsweise auch ein Regionalzug vom Zuschlag eines Fernverkehrszuges.</LI>
+        </ul>
+        <p class="Text">Ein Beispiel soll die Unterschiede zwischen beiden Methoden verdeutlichen. Im Beispiel gibt es nur einen fixen Zuschlag. Der Einfachheit halber gibt es keinen entfernungsabhängigen Zuschlag. Der Grundpreis der Verbindung beträgt 30.00&#160;GE.</p>
+        <table class="TableStyle-TableStandard" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="71px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="53px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="126px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="95px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">VSys (#Rang)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Anzahl Tarifpunkte auf Teilweg</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Aufteilung des Grundpreises [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fixer Zuschlag [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Verkehrssystemweise Aufteilung des Zuschlags auf Teilwege [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Aufteilung des Zuschlags auf alle Teilwege [GE]</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">EC (#2)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">100.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">10.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">7.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">(**) 3.50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">2.33</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">IC (#2)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">100.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">10.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">7.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">(**) 3.50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_right">2.33</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">RE (#3)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">100.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">10.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">2.33</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText_right">30.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText_right">(*) 7.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText_right">7.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText_right">7.00</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">(*)&#160;Es wird nur einmal der fixe Zuschlag des ranghöchsten VSys (EC und IC) erhoben, in diesem Fall 7.00&#160;GE.</p>
+        <p class="Text">(**) Der Zuschlag von 7.00&#160;GE wird nur auf die beiden Verkehrssysteme EC und IC verteilt, da sie denselben maximalen Rang aufweisen. Hätte der IC beispielsweise Rang&#160;3 und einen fixen Zuschlag von 3.00&#160;GE, so würde bei Berücksichtigung des Ranges und verkehrssystemweiser Aufteilung der EC den vollen Zuschlag von 7.00&#160;GE erhalten.</p>
+    </body>
+</html>

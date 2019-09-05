@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="615" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;verkehrssystem">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1115592">
+            </a>
+            <a name="1_netzmodell_1240632468_64480">
+            </a>Knotenmodellierung</h3>
+        <p class="Text">
+            <MadCap:keyword term="Knoten: verkehrstechnisch modellieren" />
+            <MadCap:keyword term="Knotenmodellierung" />
+            <MadCap:keyword term="Knotenmodell" />
+            <MadCap:variable name="PTV_Manual.Programmname" /> bietet die Möglichkeit zur detaillierten Modellierung von Knoten. Hierfür gibt es zwei Hauptanwendungsgebiete, nämlich die Verwendung eines detaillierten Knotenwiderstandsmodells unter anderem in Umlegungsverfahren, und den Export zur Mikrosimulation Vissim.</p>
+        <table class="TableStyle-TableStand_withTitle" style="caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Geometrie</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Geometrien dienen der detaillierten Beschreibung der Geometrie von Knoten und Oberknoten. Die Hauptelemente von Geometrien sind Knotenarme.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Knotenarm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Eine Knotengeometrie besteht aus einer Menge von Knotenarmen. Ein Knotenarm beschreibt eine Einfahrt in den Knotenbereich und die dazugehörige Ausfahrt. Die Menge von Knotenarmen an einem Knoten oder Oberknoten ist definiert über die Menge der Streckenorientierungen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrstreifen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Ein Knotenarm besteht aus einer Menge von Eingangs- und Ausgangsfahrstreifen. Durchgangsfahrstreifen sind diejenigen, die bis zum Nachbarknoten führen, Aufweitungsfahrstreifen beginnen oder enden in einer bestimmten Entfernung vor dem Knotenbereich.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrstreifenabbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrstreifenabbieger definieren eine Beziehung zwischen einem Eingangsfahrstreifen und einem Ausgangsfahrstreifen. Sie dienen der detaillierten, verkehrssystem- und fahrstreifenfeinen Beschreibung der Abbiegeverhältnisse am Knoten.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Signalanlage</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Eine Signalanlage beschreibt die Gesamtheit der Signalisierungsdaten an einem oder mehreren Knoten oder Oberknoten. Es gibt phasenbasierte, signalgruppenbasierte und externe Signalanlagen und Signalanlagen vom Typ RBC.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Phase</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Eine Phase ist die Grundeinheit eines Signalplans bei phasenbasierten Signalanlagen. Jeder Phase wird eine Menge von Signalgruppen zugeordnet. Die Grünzeiten der Signalgruppen resultieren dann aus den Grünzeiten der Phasen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Signalgruppe</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Eine Signalanlage enthält eine Menge von Signalgruppen, auch wenn sie phasenbasiert ist. Signalgruppen dienen der detaillierten, fahrstreifenabbiegerfeinen Beschreibung der Signalisierung.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Furt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Furten dienen zur Beschreibung der Fußgängerverhältnisse an Knoten und Oberknoten. Sie beziehen sich auf Knotenarme. Ein Knotenarm kann über mehrere Fußgängerfurten verfügen, je nachdem ob eine Mittelinsel oder eine Dreiecksinsel definiert ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Detektor</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">Ein Detektor ist einem Knoten oder Oberknoten zugeordnet. Diese Art von Detektoren dient der Modellierung der Signalisierung, beispielsweise bei verkehrsabhängigen Steuerungen. </p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_netzmodell_1240632468_1212726">
+                    </a>
+                    <a name="1_netzmodell_1240632468_24078">
+                    </a>Netzobjekte der Knotenmodellierung</p>
+            </caption>
+        </table>
+    </body>
+</html>

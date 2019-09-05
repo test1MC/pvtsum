@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="2" MadCap:lastHeight="491" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;gruppen;gruppe;ICU1;ICU2;Circular;Planning;Operations;pretimed;fully;actuated;semi;actuation;type;ICAArrivalType;14a;AnteilLKW;6b;ICAEingVerlustZVerw;ICAIstCentral;BusinessDistrict;Central;District;6e;ICASneakers;ICAZuflussFaktor;10b;14b;BusFrequenz;Factor;è;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;FS;BS;xd;KJ;k2;k1;s'';abflüssen;peak;hour;factor;LT;RT;vphpl;HV;bb;Lu;Lpb;Rpb;CBD;ST;Ui;PF;Ii;Ri;PA;bi;Volume;to;ICU;P1;P2;P3;6a;6c;6d;LUo;qr;po;ArrivalType;6j;3a;3b;pedu;pbT;rec;RTA;LTA;Wardrop’schen">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_iv_2033098965_1385331">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_34462">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249376">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc130966604">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc60553488">
+            </a>
+            <MadCap:keyword term="Stochastische Umlegung" />
+            <MadCap:keyword term="IV-Umlegungsverfahren: Stochastische Umlegung" />Stochastische Umlegung</h2>
+        <p class="Text">Stochastische Umlegungsverfahren gehen davon aus, dass die Verkehrsteilnehmer prinzipiell die beste Route wählen, jedoch aufgrund unvollständiger und verschiedener Informationen die einzelnen Routen unterschiedlich bewerten.</p>
+        <p class="Text">Außerdem wird bei einer stochastischen IV-Umlegung die Nachfrage ähnlich wie bei einer ÖV-Umlegung unter Verwendung eines Aufteilungsmodells (zum Beispiel Logit, Kirchhoff, Box-Cox, Lohse oder Lohse mit variablem Beta) auf die gefundenen Routen aufgeteilt <MadCap:xref class="sieheUeberschrSeite" href="1_5_Aufteilungsmodelle in der Umlegung.htm#1_benutzermodell_iv_2033098965_1545529"><span style="color: Black;" class="mcFormatColor">(</span><u>Aufteilungsmodelle in der Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Um bei der Aufteilung die räumliche Ähnlichkeit der Routen zu berücksichtigen, wird aus der Überlappung der Routen (analog zur Eigenständigkeit bei der fahrplanfeinen ÖV-Umlegung) ein Ähnlichkeitsmaß, das als Commonality Factor (<span class="_Override" style="font-family: Wingdings;">è</span> „C-Logit“) bezeichnet wird, beziehungsweise die Eigenständigkeit jeder Route (nach Ben Akiva) bestimmt.</p>
+        <p class="Text">Es ergibt sich damit folgender Ablauf:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Routensuche für alle Verkehrszellen für aktuellen Widerstand.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Berechnung des Commonality-Faktors beziehungsweise der Eigenständigkeit aus der Überlappung aller Routen einer Quelle-Ziel-Beziehung.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Aufteilung der Nachfrage auf die Routen jeder Quelle-Ziel-Beziehung unter Berücksichtigung des Commonality-Faktors beziehungsweise der Eigenständigkeit.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Wiederholung von Schritt 3, bis die Nachfrage für alle Quelle-Ziel-Beziehungen im Gleichgewicht ist.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Wiederholung der Schritte 1-4, bis keine neuen Routen gefunden werden oder die Änderung der Streckenbelastungen zwischen zwei Iterationsschritten sehr klein ist.</p>
+        <p class="Text">Bei der Routensuche kann die Zahl möglicher Routen dadurch erhöht werden, dass nicht nur die kürzeste Route ermittelt wird, sondern, durch eine mehrfache Bestwegsuche und eine Variation der Streckenwiderstände, mehrere Alternativen gefunden werden können.</p>
+    </body>
+</html>

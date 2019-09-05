@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI" MadCap:lastBlockDepth="4" MadCap:lastHeight="376" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_betreibermodell_oev_1878159914_1346832">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_75349">
+            </a>ÖV-Tarifmodell</h2>
+        <p class="Text">Grundlage des <MadCap:variable name="PTV_Manual.Programmname" />-Tarifmodells sind Tarifsysteme und Fahrkartenarten.</p>
+        <p class="Text">Ein <span class="gui_element">Tarifsystem</span> ist eine Menge von Linien, für die ein gemeinsames Fahrpreissystem existiert. Häufig hat jeder ÖV-Betreiber sein eigenes Tarifsystem, in Verkehrsverbünden kann ein Tarifsystem jedoch auch Linien unterschiedlicher Betreiber umfassen.</p>
+        <p class="Text">Eine <span class="gui_element">Fahrkartenart</span> beschreibt, wie der Fahrpreis für eine ÖV-Verbindung oder einen Teil von ihr zu berechnen ist. Jede Fahrkartenart folgt einer von vier Berechnungsmethoden („Tarifstruktur“):</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Entfernungstarif</span>: der Preis richtet sich nach der zurückgelegten Entfernung, die durch Tarifpunkte gemessen wird.</LI>
+            <LI class="List0">
+                <span class="gui_element">Zonentarif</span>: der Preis richtet sich nach der Anzahl durchfahrener Tarifzonen.</LI>
+            <LI class="List0">
+                <span class="gui_element">Von-Nach-Zonentarif</span>: der Preis ist nur von Start-Tarifzone und Ziel-Tarifzone abhängig, es handelt sich also um einen Matrixtarif.</LI>
+            <LI class="List0">
+                <span class="gui_element">Kurzstreckentarif</span>: ein Sonderpreis für Wege, die hinsichtlich Entfernung, Fahrzeit und/oder Anzahl Haltestellen vorgegebene Schwellenwerte nicht übersteigen.</LI>
+        </ul>
+        <p class="Text">Die vier Tarifstrukturen sind nachfolgend detailliert beschrieben <MadCap:xref class="sieheUeberschrSeite" href="1_7_Grundpreis-Berechnung.htm#1_betreibermodell_oev_1878159914_1348284"><span style="color: Black;" class="mcFormatColor">(</span><u>Grundpreis-Berechnung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1417684">Abbildung&#160;189</MadCap:xref> bietet eine Übersicht der Netzobjekte, die zur Tarifmodellierung in <MadCap:variable name="PTV_Manual.Programmname" /> gehören.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_TarifModel.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_betreibermodell_oev_1878159914_1417684">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_72899">
+            </a>Möglichkeiten der Tarifmodellierung in <MadCap:variable name="PTV_Manual.Programmname" /></p>
+        <p class="Text">Sie können für jedes <span class="gui_element">Nachfragesegment</span> festgelegen, welche Fahrkartenarten in einem Tarifsystem genutzt werden können. Insbesondere können je Nachfragesegment mehrere Fahrkartenarten für ein Tarifsystem existieren.</p>
+        <p class="Text">Durch die Zuordnung von Linien (und ÖV-Zusatz-Verkehrssystemen) zu Tarifsystemen gehört jeder Teilweg einer ÖV-Verbindung zu einem oder zu mehreren Tarifsystemen.</p>
+        <p class="Text">Tarifsysteme gelten im Allgemeinen als unabhängig. Somit ist der Gesamtpreis für eine Verbindung im Normalfall die Summe der für die einzelnen Tarifsysteme zu zahlenden Fahrpreise. Durch spezifische Umstiegsfahrpreise können Sie jedoch abbilden, dass ein Wechsel zwischen Tarifsystemen extra kostet oder eine Ermäßigung mit sich bringt <MadCap:xref class="sieheUeberschrSeite" href="1_7_Verkehrssystem-spezifische Zuschläge.htm#1_betreibermodell_oev_1878159914_1348846"><span style="color: Black;" class="mcFormatColor">(</span><u>Verkehrssystem-spezifische Zuschläge</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <h5>Ermittlung der zu verwendenden Fahrkarte je Tarifsystem</h5>
+        <p class="Text">Innerhalb von Tarifsystemen sind die Möglichkeiten der Fahrpreismodellierung äußerst vielfältig.</p>
+        <p class="Text">Eine grundlegende Eigenschaft eines Tarifsystems ist der „Fahrpreis-Bezug“. Hiermit drücken Sie aus, ob eine Fahrkarte für jeden einzelnen Teilweg gekauft werden muss, oder ob sie für aufeinander folgende oder gar alle Teilwege einer Verbindung genutzt werden kann. Alle drei Fälle sind in der Praxis häufiger zu finden.</p>
+        <p class="Text">Wie erwähnt können (je Nachfragesegment) mehrere Fahrkartenarten innerhalb eines Tarifsystems verfügbar sein. Als Beispiel betrachten wir den Fall, dass ein Tarifsystem auf Tarifzonen aufgebaut ist und der Normalpreis von der Anzahl durchfahrener Tarifzonen abhängt. Für Fahrten von maximal zehn Minuten gilt unabhängig von den Tarifzonen ein günstiges Kurzstreckenticket. Und für Fahrten von und zum Flughafen muss ein spezielles Flughafenticket gelöst werden.</p>
+        <p class="Text">Allgemein gesprochen ist die Kernfrage bei der Gestaltung eines Tarifsystems, welche Fahrkartenarten für welche Verbindungen benutzt werden dürfen und welche Freiheitsgrade der Fahrgast bei der Wahl seiner Fahrkarte hat.</p>
+        <p class="Text">Der <span class="gui_element">Anwendbarkeit</span> der verschiedenen Fahrkartenarten kommt dabei eine wesentliche Rolle zu. Falls die in der Fahrkartenart definierten Bedingungen verletzt sind, ist sie nicht anwendbar und es muss eine andere Fahrkarte benutzt werden. Im Beispiel ist etwa das Kurzstreckenticket ungültig, falls die maximale Fahrzeit von 10 Minuten überschritten wird, und das Flughafenticket gilt ausschließlich für Wege vom und zum Flughafen. Auch Fahrkartenarten mit Entfernungs-- oder Zonentarif können so gestaltet sein, dass sie nur auf bestimmten Verbindungen gültig sind. Sie können dabei selbst festlegen, wo die Grenzen der Anwendbarkeit eines Tickets liegen.</p>
+        <p class="Text">Fahrkartenarten besitzen <span class="gui_element">Ränge</span>, mit denen Sie eine hierarchische Reihenfolge innerhalb eines Tarifsystems ausdrücken. In Kombination mit der zuvor erklärten Anwendbarkeit von Fahrkarten ergibt sich daraus eine Logik für die Bestimmung der für eine gegebene Verbindung – oder deren Teilweg(e) – zu benutzenden Fahrkarte: Unter allen anwendbaren Fahrkartenarten ist es diejenige mit dem höchsten Rang.</p>
+        <p class="Text">Im hier betrachteten Beispiel muss etwa das spezielle Flughafenticket den höchsten Rang besitzen, da es für alle Verbindungen genutzt werden muss, deren Start oder Ziel der Flughafen ist. Für alle anderen Verbindungen ist das Flughafenticket nach Konstruktion nicht anwendbar, daher wird die Fahrkarte mit zweithöchstem Rang betrachtet, in diesem Fall das Kurzstreckenticket. Falls die Verbindung die Voraussetzungen des Kurzstreckentickets erfüllt, gilt dieses. Falls nicht, kommt die normale Zonentarif-Fahrkarte zum Einsatz, die den niedrigsten Rang hat.</p>
+        <p class="Text">Möchten Sie abbilden, dass der Fahrgast die freie Wahl zwischen mehreren Fahrkartenarten hat, so vergeben Sie für diese denselben Rang. Unter allen anwendbaren Fahrkarten mit dem höchsten Rang wird die günstigste benutzt.</p>
+        <h5>Rangordnung von Tarifsystemen</h5>
+        <p class="Text">Es kann vorkommen, dass Linien nicht nur zu einem Tarifsystem gehören, sondern Teil mehrerer Tarifsysteme sind. Beispielsweise kann ein Regionalzug sowohl innerhalb des städtischen Verbundgebiets mit einer Verbundfahrkarte genutzt werden als auch über die Grenzen des Verbundes hinaus mit einer Fernverkehrsfahrkarte. Städtischer Verbund und Fernverkehr sind separate Tarifsysteme mit völlig unterschiedlichen Preisstrukturen, die Regionalzuglinie gehört jedoch zu beiden.</p>
+        <p class="Text">Wenn eine Linie zu mehreren Tarifsystemen gehört, so lässt sich prinzipiell nach dem oben beschriebenen Vorgehen ein Fahrpreis innerhalb jedes dieser Tarifsysteme bestimmen. Allerdings kann der Fahrgast in der Realität nicht in jedem Fall frei zwischen den verschiedenen Tarifsystemen wählen. Eine nicht untypische Tarifbedingung wäre beispielsweise, dass der Regionalzug auf Fahrten innerhalb des Verbundgebiets ausschließlich mit Fahrkarten des Verbund-Tarifsystems benutzt werden darf und Fernverkehrstickets in ihm nur dann Geltung haben, wenn man über die Verbundgrenze hinaus fährt <MadCap:xref class="sieheUeberschrSeite" href="1_7_Vorgehen bei mehrdeutigen Tarifsystemen.htm#1_betreibermodell_oev_1878159914_1347750"><span style="color: Black;" class="mcFormatColor">(</span><u>Vorgehen bei mehrdeutigen Tarifsystemen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Um eine solche Rangfolge auszudrücken, können Sie Tarifsystem-Ränge vergeben. Diese Ränge sind nur dann relevant, wenn in Ihrem Netzmodell Linien zu mehreren Tarifsystemen gehören, denn andernfalls sind die Tarifsysteme für alle Teilwege einer ÖV-Verbindung eindeutig.</p>
+        <p class="Text">Allgemein betrachtet gehört die Linie jedes Teilwegs einer ÖV-Verbindung zu mehreren Tarifsystemen. Für jeden Teilweg existiert also eine Menge zugeordneter Tarifsysteme. Die gesamte Verbindung kann prinzipiell durch beliebige Kombinationen von Elementen dieser Tarifsystem-Mengen „überdeckt“ werden. Die Tarifsysteme-Ränge definieren dann eine logische Abfolge innerhalb der Kombinationen: alle Kombinationen mit kleinstem maximalem Tarifsystem-Rang werden zuerst betrachtet, und daraus diejenige gewählt, welche anwendbar ist und den niedrigsten Fahrpreis liefert. Ist keine anwendbar, folgen alle Kombinationen mit nächsthöherem Rang. Falls überhaupt keine gültige Tarifsystem-Kombination existiert, wird der globale Rückfall-Fahrpreis des Tarifmodells erhoben.</p>
+        <p class="Text">Da Sie sowohl auf der Ebene der Fahrkartenarten als auch auf der Ebene der Tarifsysteme Ränge vergeben können, um spezifische Tarifbestimmungen abzubilden, erreichen Sie insgesamt eine sehr große Flexibilität bei der Tarifmodellierung.</p>
+        <h5>Themen</h5>
+        <ul>
+            <LI class="List0">
+                <MadCap:xref class="themenheadings" href="1_7_Fahrkartenarten.htm#1_betreibermodell_oev_1878159914_1346950">Fahrkartenarten</MadCap:xref>
+            </LI>
+            <LI class="List0">
+                <MadCap:xref class="themenheadings" href="1_7_Tarifsysteme.htm#1_betreibermodell_oev_1878159914_1347371">Tarifsysteme</MadCap:xref>
+            </LI>
+            <LI class="List0">
+                <MadCap:xref class="themenheadings" href="1_7_Fahrpreisermittlung.htm#1_betreibermodell_oev_1878159914_1347732">Fahrpreisermittlung</MadCap:xref>
+            </LI>
+            <LI class="List0">
+                <MadCap:xref class="themenheadings" href="1_7_Verwendung von Fahrpreisen.htm#1_betreibermodell_oev_1878159914_1352534">Verwendung von Fahrpreisen</MadCap:xref>
+            </LI>
+        </ul>
+    </body>
+</html>

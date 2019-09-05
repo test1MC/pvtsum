@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="136" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;DMRB;InscribedCircleDiameter;ICAEntryWidth;ICAApproachHalfWidth;Zufahrtsstrecke;ICAFlareLength;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;of;to;Durchschnittl;Wardrop’schen;RoundaboutInscribedDiameter;RoundaboutEntryRadius" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_iv_2033098965_1215077">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_63941">
+            </a>Kreisverkehre nach der Methode von TRL/Kimber</h4>
+        <p class="Text">Diese Analysemethode fasst die Kapazität einer Zufahrt als Funktion der Geometrie und des Konfliktstroms im Kreisverkehr auf. Diese Funktion wurde anhand zahlreicher Beobachtungen an britischen Kreisverkehren geeicht.</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1220322">Abbildung 1</MadCap:xref> zeigt den Berechnungsablauf für Kreisverkehre nach der Methode von TRL/Kimber.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Roundabout_FlowKimber.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1220322">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_24580">
+            </a>Berechnungsablauf für Kreisverkehre nach der Methode von TRL/Kimber</p>
+        <p class="Text">
+            <MadCap:keyword term="DMRB-Richtlinie TD 16/93 (Kreisverkehre)" />Die Geometrie des Kreisverkehrs wird in <MadCap:variable name="PTV_Manual.Programmname" /> durch Armattribute beschrieben. Diese Attribute haben nur dann Bedeutung, wenn der Knoten ein Kreisverkehr und als Analysemethode TRL/Kimber gewählt ist. In allen anderen Fällen werden die Parameter bei der ICA-Berechnung ignoriert. Die Bedeutung der Parameter illustriert <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1215092">Abbildung 2</MadCap:xref>, die der DMRB-Richtlinie TD 16/93 entnommen ist. Zum besseren Vergleich mit dieser Richtlinie sind in den tabellarischen Übersichten auch die üblichen englischen Originalbezeichnungen und Abkürzungen angegeben. Ein weiterer Parameter beschreibt die zeitliche Variabilität des Zuflusses.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Roundabout_2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1215092">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_66171">
+            </a>Beschreibung der Knotengeometrie für das Modell nach TRL/Kimber</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369520">Tabelle 1</MadCap:xref> zeigt die zusätzlichen Eingabe-Attribute an Armen für die Berechnung nach TRL/Kimber.</p>
+        <table class="TableStyle-TableStand_withTitle" style="mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" style="width: 133px;" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Name</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">DMRB Definition</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="mc-hyphenate-shortest-prefix: 6;">Wertetyp</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="mc-hyphenate-shortest-prefix: 5;">Wertebereich (<span class="_Override" style="text-decoration: underline;">Standardwert</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bedeutung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 11;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText" style="mc-hyphenate-shortest-prefix: 6;">Einbeschriebener Kreisverkehrs-Durchmesser</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 15;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p>RoundaboutInscribedDiameter</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Länge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">10 - 200 m (<span class="_Override" style="text-decoration: underline;">40 m</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Außendurchmesser des Kreisverkehrs. Bei asymmetrischen Kreisverkehren geben Sie den Radius bezogen auf die Umgebung der jeweiligen Zufahrt an. Das Attribut wird beim ANM-Export und bei ICA (Kimber) verwendet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText" style="mc-hyphenate-shortest-prefix: 6;">ICA Eingangsbreite</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ICAEntryWidth</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Länge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">3 - 20 m (<span class="_Override" style="text-decoration: underline;">7 m</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Breite der Einfahrt unmittelbar am Kreisverkehr</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ICA Eingangs-Halbweite</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ICAApproachHalfWidth (v)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Länge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2 - 15 m (<span class="_Override" style="text-decoration: underline;">3.5 m</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Fahrbahnbreite der Zufahrtsstrecke ohne Aufweitung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">ICA Aufweitungslänge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ICAFlareLength (L‘)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Länge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1 - 100 m (<span class="_Override" style="text-decoration: underline;">20 m</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">halbe</span> Länge der Zufahrt zwischen den Punkten, an denen KVEinfahrtsbreite und KVZufahrtsbreite gemessen sind</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 11;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">Kreisverkehr Eingangsradius</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">RoundaboutEntryRadius (r)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Länge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1 - 1&#160;000 m (<span class="_Override" style="text-decoration: underline;">35 m</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Radius des Kreises, der sich tangential an den Außenkreis des Kreisverkehrs und an die äußere Begrenzung der Zufahrt anschmiegt</p>
+                        <p class="CellText">Das Attribut wird beim ANM-Export und bei ICA (Kimber) verwendet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">ICA Eingangswinkel</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ICAEntryAngle (<span class="_Override" style="font-family: Symbol;">F</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Integer</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0°..180° (<span class="_Override" style="text-decoration: underline;">45°</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">siehe <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1215092">Abbildung 2</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">ICA Steigungstrennung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ICAGradeSeparation (SEP)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Länge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0 - 100 m (<span class="_Override" style="text-decoration: underline;">0 m</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Abstand zwischen Zu- und Ausfahrt des gleichen Knotenarms. Bei normalen Kreisverkehren geben Sie 0 m an. Das bedeutet, dass der Kreisverkehr nicht Teil einer Kreuzung mit mehreren Ebenen ist. Mit Werten &gt; 0 beschreiben Sie die Entfernung zwischen der Zufahrt und der Ausfahrt des gleichen Arms an ausgedehnten Kreisverkehren, die Teil einer Kreuzung mit mehreren Ebenen sind.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">ICA KimberHollis C-Faktor</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">ICAKimberHollisC</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Double</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">0 .. 10 (<span class="_Override" style="text-decoration: underline;">1.0</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Der C-Faktor in der Staulängenformel nach Kimber-Hollis beschreibt die Variabilität des Zuflusses</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1369520">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_26047">
+            </a>Eingabe-Attribute für die Berechnung nach der Methode von TRL/Kimber</p>
+        <p class="Text">Diese Attribute haben nur dann Bedeutung, wenn der Nach-Knoten der Strecke den Steuerungstyp Kreisverkehr besitzt, das heißt die Strecke eine Zufahrt zu einem Kreisverkehr repräsentiert. In allen anderen Fällen werden die Attribute ignoriert. </p>
+        <p class="Text">Die Ausgabeattribute entsprechen denen für signalisierte Knotenpunkte (<MadCap:xref class="Label_Table" href="1_5_Signalisierte Knoten.htm#1_benutzermodell_iv_2033098965_1366477"></MadCap:xref>).</p>
+        <p class="Heading_Schritt1" MadCap:autonum="Schritt 1: ">Zuflüsse und Konfliktströme für jede Zufahrt</p>
+        <p class="Text">Alle Berechnungen basieren auf den Zuflüssen und Konfliktströmen an jeder Zufahrt. Diese Ströme werden aus den Abbiegerbelastungen gewonnen. Alle Belastungen werden in Pkw-Einheiten ausgedrückt.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 2: ">Kapazitäten der Zufahrten</p>
+        <p class="Text">Für Kreisverkehre mit KVAbstandAusfahrt = 0 gilt Folgendes:</p>
+        <p class="Text">
+            <img src="../Resources/Images/7_40.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Cap</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Kapazität der Zufahrt in PkwE/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">q</span>
+                            <span class="formula_subscript">c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Konfliktstrom in PkwE/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">k</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">1 - 0,00347 • (<span class="formula_symbol">F</span> - 30 ) - 0,978 • [(1/<span class="formula">r</span>) - 0,05]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">F</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">303 <span class="formula">x</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">f</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">0,21 <span class="formula">t</span> (1 + 0,2 <span class="formula">x</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">1 + ,5 / (1 + <span class="formula">M</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">M</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">e<span class="formula_superscript">(D - 60)/10</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">x</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula">v</span> + (<span class="formula">e</span> - <span class="formula">v</span>) / (1 + 2 <span class="formula">S</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">S</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">1,6 (<span class="formula">e</span> - <span class="formula">v</span>) / <span class="formula">L‘</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die übrigen Variablenbezeichnungen beziehen sich auf die Attribute der Geometriebeschreibung.</p>
+        <p class="Text">Für Kreisverkehre mit <span class="gui_element">KVAbstandAusfahrt</span> &gt; 0 gilt abweichend Folgendes:</p>
+        <p class="Formula">
+            <span class="formula">Cap</span> =1,004<span class="formula">F</span> - 0,036<span class="formula">SEP</span> - 0,232 <span class="formula">q</span><span class="formula_subscript">c</span> + 14,35 - <span class="formula">f q</span><span class="formula_subscript">c</span>(2,14 - 0,023 <span class="formula">q</span><span class="formula_subscript">c</span>)</p>
+        <p class="Text">Dabei sind alle Größen wie oben, jedoch <span class="formula">Cap</span> und <span class="formula">q</span><span class="formula_subscript">c</span> in PkwE/min.</p>
+        <p class="Text">Die Kapazität jedes Abbiegers ergibt sich aus der für die Zufahrt errechneten Kapazität. Das Ergebnis wird in PkwE/h im Abbieger-Attribut <span class="gui_element">ICAEndgültigeKapazität</span> gespeichert.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 3: ">
+            <a name="1_benutzermodell_iv_2033098965_1215233">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_56735">
+            </a>Staulängen</p>
+        <p class="Text">Die Staulänge an einer Zufahrt ergibt sich aus der Formel von Kimber und Hollis (Kimber, Hollis 1979), (Kimber, Daly 1986).</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_101.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">L</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">erwartete Staulänge am Ende des Betrachtungszeitraums in Pkw-Einheiten</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: Symbol;font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula_symbol">m</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Kapazität der Zufahrt in Pkw-Einheiten / h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">T</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Länge des Betrachtungszeitraums in h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">L</span>
+                            <span class="formula_subscript">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">initiale Staulänge (in <MadCap:variable name="PTV_Manual.Programmname" /> stets 0)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">C</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Variationsfaktor KVKimberHollisC</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Belastung der Zufahrt in Pkw-Einheiten / h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: Symbol;font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula_symbol">r</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">= <span class="formula">v / </span><span class="formula_symbol" style="line-height: 11pt;">m</span> = Auslastung</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> verwendet die in (Kimber, Hollis 79) für erhöhte Genauigkeit modifizierte Formel.</p>
+        <p class="Text">Die mittlere Staulänge jedes Abbiegers ist gleich der mittleren Staulänge seiner Zufahrt und wird im Abbieger-Attribut <span class="gui_element">ICA mittlere Staulänge</span> gespeichert.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 4: ">Wartezeiten</p>
+        <p class="Text">Die durchschnittliche steuerungsbedingte Wartezeit einer Zufahrt ergibt sich aus der Formel von Kimber und Hollis (Kimber, Hollis 1979), (Kimber, Daly 1986).</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_36.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">mittlere steuerungsbedingte Wartezeit im Betrachtungszeitraum in h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: Symbol;font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula_symbol">m</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Kapazität der Zufahrt in Pkw-Einheiten / h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">T</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Länge des Betrachtungszeitraums in h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">L</span>
+                            <span class="formula_subscript">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">initiale Staulänge (in <MadCap:variable name="PTV_Manual.Programmname" /> stets 0)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">C</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Variationsfaktor KVKimberHollisC</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Belastung der Zufahrt in Pkw-Einheiten / h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: Symbol;font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula_symbol">r</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <span class="_Override" style="line-height: 11pt;">=</span>
+                            <span class="formula">v / </span>
+                            <span class="formula_symbol" style="line-height: 11pt;">m</span>
+                            <span class="_Override" style="line-height: 11pt;">=</span> Auslastung</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die durchschnittliche steuerungsbedingte Wartezeit eines Abbiegers ist gleich der durchschnittlichen steuerungsbedingten Wartezeit seiner Zufahrt und wird im Abbieger-Attribut <span class="gui_element">tAkt</span> gespeichert.</p>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> wertet wie in <MadCap:xref class="Schrittnummer" href="#1_benutzermodell_iv_2033098965_1215233">Schritt 3</MadCap:xref> die von Kimber und Hollis für erhöhte Genauigkeit modifizierte Formel aus.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 5: ">Level of Service (LOS)</p>
+        <p class="Text">Das Konzept eines LOS wird im Modell von Kimber nicht erwähnt. Um Einheitlichkeit innerhalb von ICA herzustellen und weil die Kenngröße RFC (Ratio Flow to Capacity) als ungenügend kritisiert wurde, definiert <MadCap:variable name="PTV_Manual.Programmname" /> dennoch einen LOS pro Zufahrt als Klassifikation der durchschnittlichen Wartezeit (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369610">Tabelle 2</MadCap:xref>).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 497px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="55px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="442px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">LOS</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Durchschnittl. Wartezeit [s / PkwE]</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">0 - 10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">B</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">&gt;10 - 15</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">C</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">&gt;15 - 25</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">D</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">&gt;25 - 35</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">E</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">&gt;35 - 50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">F</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">&gt;50</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1369610">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_26953">
+            </a>LOS bei der Berechnung nach Kimber in Abhängigkeit von der durchschnittlichen Wartezeit</p>
+        <p class="Text">Entsprechend berechnet <MadCap:variable name="PTV_Manual.Programmname" /> den LOS des gesamten Knotens auf der Basis der belastungsgewichteten durchschnittlichen Wartezeit aller Zufahrten.</p>
+    </body>
+</html>

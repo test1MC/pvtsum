@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="2" MadCap:lastHeight="692" MadCap:lastWidth="510" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG;bearbeitung;Bearbeitungs;Nested;80er;sk;Method;of;verteilung;WAW;Stud;Schmiedel;NEmP;NEoP;Sch;GSch;StrukturgrößenCodes;KopplungZiel;GanglinienNr;WBW;WFW;WAEW" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">Funktionalität Rubberbanding bei der Verkehrsverteilung</h4>
+        <p class="Text">
+            <MadCap:keyword term="VISEM-Modell: Rubbebanding" />Die Funktionalität Rubberbanding wurde implementiert, um die Zielwahlen entlang einer Aktivitätenkette realistischer zu machen. Die Idee dabei ist, dass die Zielwahl aller Aktivitäten in Hinblick auf eine Hauptaktivität geschieht und so konsistentere Wegeketten ermittelt werden. Dazu wird in der kombinierten Verteilung/Moduswahl in der Zielwahl für einen Aktivitätenübergang neben dem Ort der Quellaktivität auch der Wohnstandort bzw. der Standort der Hauptaktivität der Kette (z.&#160;B. Arbeitsplatz) berücksichtigt. Weil mit der zusätzlichen Abhängigkeit die Wahl eines Zwischenstopps zwischen Wohnen und Hauptaktivität so funktioniert, als wäre der Zwischenstopp mit beiden Orten wie mit einem Gummiband verbunden, wird der Ansatz allgemein als „Rubberbanding“ bezeichnet. Ein zu definierendes Gewicht bestimmt dabei, wie fest oder elastisch dieses Gummiband ist, wovon wiederum der Einfluss des Rubberbandings abhängt.</p>
+        <p class="Text">Rubberbanding ist nur von Bedeutung, wenn die Aktivitätenkette außerhalb der Heimat aus mindestens 2 Aktivitäten besteht. Die Kette Wohnen-Arbeiten-Wohnen (WAW) berechnet sich gleich wie ohne Rubberbanding. Wichtig ist die Definition der Hauptaktivität. Diese bestimmt, wie das Gummiband gespannt ist.</p>
+        <p class="Text">Die Berechnung wird im Folgenden beispielhaft dargestellt.</p>
+        <p class="Text">Als Beispiel dient eine Aktivitätenkette, die aus den Aktivitäten Wohnen-Einkaufen-Arbeiten-Wohnen (WE<span class="Bold">A</span>W) besteht. Die Hauptaktivität sei dabei Arbeiten.</p>
+        <p class="Text">
+            <img src="../Resources/Images/DIAG_Rubberbanding1.png" />
+        </p>
+        <p class="Text">Das obige Bild zeigt die Lage der Aktivitätsorte sowie die Widerstände zwischen den Aktivitäten. Der Quellverkehr beträgt 100 Personen. Die Zielpotenziale sind sowohl für Arbeitsplätze als auch Einkaufsmöglichkeiten jeweils 50.</p>
+        <p>Damit gilt:</p>
+        <p class="CellText">
+            <img src="../Resources/Images/4_70.png" />
+        </p>
+        <p class="Text">
+            <img src="../Resources/Images/4_71.png" />
+        </p>
+        <p class="Text">Für die Zielwahlberechnung nehmen wir eine Logitfunktion mit c = 1, d.h. <span class="formula">f(u)= e</span><span class="formula_superscript">-u</span>. Ohne Rubberbanding wird bei der Zielwahl für die Aktivität Einkaufen ausschließlich der Aktivitätenübergang W-E betrachtet. Da der Nutzen für <span class="formula">E</span><span class="formula_subscript">1</span> und <span class="formula">E</span><span class="formula_subscript">2</span> vom Wohnort aus gleich ist, nämlich 1,5, wählen bei der Berechnung ohne Rubberbanding jeweils 50 Personen <span class="formula">E</span><span class="formula_subscript">1</span> und <span class="formula">E</span><span class="formula_subscript">2</span>. Dabei wird nicht berücksichtigt, dass es für diejenigen Personen, die in A<span class="Subscript">2</span> arbeiten, günstiger ist, in <span class="formula">E</span><span class="formula_subscript">2</span> einzukaufen, weil der Nutzen (Widerstand) von <span class="formula">E</span><span class="Subscript">2</span> nach A<span class="Subscript">2</span> gleich 1 ist, der Nutzen von <span class="formula">E</span><span class="formula_subscript">1</span> nach <span class="formula">A</span><span class="formula_subscript">2</span> aber gleich 2,5.</p>
+        <p class="Text">Bei der Berechnung mit Rubberbanding wird zuerst die Zielwahl für die Hauptaktivität gerechnet. Dies gilt auch dann, wenn wie im Beispiel die Hauptaktivität nicht die erste Aktivität ist und es den direkten Aktivitätenübergang W-A gar nicht gibt.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 1: ">
+            <a name="Schritt1">
+            </a>Zielwahl W-&gt;A</p>
+        <p class="Text">
+            <img src="../Resources/Images/4_72.png" />
+        </p>
+        <p class="Text">
+            <img src="../Resources/Images/4_73.png" />
+        </p>
+        <p class="Text">Die Anzahl der Fahrten von Wohnen zur Arbeit beträgt damit</p>
+        <p class="Text">
+            <img src="../Resources/Images/4_74.png" /> und <img src="../Resources/Images/4_75.png" /></p>
+        <p class="Text">Hierin sind allerdings verschiedene Wege enthalten: Ein Teil der Wege geht über <span class="formula">E</span><span class="formula_subscript">1</span>, und der zweite Teil der Wege geht über <span class="formula">E</span><span class="formula_subscript">2</span>. Da hier noch keine einzelnen Wege vorliegen, sondern eigentlich nur das Quellpotential von 100 Personen aufgeteilt wurde in das Quellpotential pro Bezirk für die Hauptaktivität Arbeiten, nennen wir die neue Matrix <span class="formula">Q</span><span class="formula_superscript">W→A</span> auch zielbezogenes Quellpotential.</p>
+        <p class="Text">Die genaue Aufteilung in einzelne Wege, d.&#160;h. welchen Ort zum Einkaufen die Personen in Abhängigkeit von der Wahl des Arbeitsplatzes wählen, wird im nächsten Schritt berechnet.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 2: ">
+            <a name="Schritt2">
+            </a>Zielwahl W-&gt;E</p>
+        <p class="Text">Da der Ort für das Einkaufen in Abhängigkeit von der Zielwahl der Hauptaktivität gewählt wird, erfolgt die Wahl des Einkaufortes getrennt für die Arbeitsplätze in <span class="formula">A</span><span class="formula_subscript">1</span> und <span class="formula">A</span><span class="formula_subscript">2</span>. Der Nutzen <img src="../Resources/Images/4_76.png" /> wird ersetzt durch <img src="../Resources/Images/4_77.png" />. Der Faktor w bestimmt das Maß des Rubberbandings, quasi wie stark das Gummiband ist. In diesem Beispiel ist w = 1.</p>
+        <p class="Text">Damit gilt für Personen mit Arbeitsplatz in <span class="formula">A</span><span class="formula_subscript">1</span>:</p>
+        <p class="Text">
+            <img src="../Resources/Images/4_78.png" />
+        </p>
+        <p class="Text">Personen, die in <span class="formula">A</span><span class="formula_subscript">1</span> arbeiten, fahren damit mit gleicher Wahrscheinlichkeit nach <span class="formula">E</span><span class="formula_subscript">1</span> und <span class="formula">E</span><span class="formula_subscript">2</span> zum Einkaufen.</p>
+        <p class="Text">Entsprechend für Personen mit Arbeitsplatz in <span class="formula">A</span><span class="formula_subscript">2</span>:</p>
+        <p class="Text">
+            <img src="../Resources/Images/4_79.png" />
+        </p>
+        <p class="Text">Da <span class="formula">E</span><span class="formula_subscript">2</span> wesentlich näher an <span class="formula">A</span><span class="formula_subscript">2</span> liegt als <span class="formula">E</span><span class="formula_subscript">1</span>, gehen erheblich mehr Personen, die in <span class="formula">A</span><span class="formula_subscript">2</span> arbeiten, nach <span class="formula">E</span><span class="formula_subscript">2</span> zum Einkaufen.</p>
+        <p class="Text">Damit können jetzt die Fahrten von Wohnen nach <span class="formula">E</span><span class="formula_subscript">1</span> und <span class="formula">E</span><span class="formula_subscript">2</span> berechnet werden.</p>
+        <p class="Text">
+            <img src="../Resources/Images/4_700.png" />
+        </p>
+        <p class="Text">
+            <img src="../Resources/Images/4_701.png" />
+        </p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 3: ">
+            <a name="Schritt3">
+            </a>Zielwahl E-&gt;A</p>
+        <p class="Text">Die Zielwahl für die Aktivität Arbeiten wurde bereits im <MadCap:xref href="#Schritt1" class="Schrittnummer">Schritt 1</MadCap:xref> durchgeführt. Es müssen daher nur noch die Wegekombinationen ausmultipliziert werden.</p>
+        <p class="Text">
+            <img src="../Resources/Images/4_702.png" />
+        </p>
+        <p class="Text">Wenn mehrere Wohnstandorte vorhanden sind, müssen die Wege zusätzlich aufsummiert werden.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 4: ">
+            <a name="Schritt4">
+            </a>Zielwahl A-&gt;W</p>
+        <p class="Text">Da jede Person wieder an ihren Heimatort zurückkehrt, findet hier keine Zielwahl mehr statt. Die Wegematrix ist einfach die transponierte Matrix <span class="formula">Q</span><span class="formula_superscript">W→A</span>  aus <MadCap:xref href="#Schritt1" class="Schrittnummer">Schritt 1</MadCap:xref>, also</p>
+        <p class="Text">
+            <img src="../Resources/Images/4_703.png" />
+        </p>
+        <p class="Text">Die Wegeketten mit Belastungen sind in folgendem Bild dargestellt.</p>
+        <p class="Text">
+            <img src="../Resources/Images/DIAG_Rubberbanding2.png" />
+        </p>
+        <p class="Text">Für Fälle mit mehreren Aktivitäten als im obigen Beispiel gelten einige Besonderheiten. Entscheidend ist dabei die Definition der Hauptaktivität.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Erweitert man die Aktivitätenkette im Beispiel durch die Aktivität B (für Bäckerei) in der Form WBE<span class="Bold">A</span>W, so wird bei der Berechnung der Wege <span class="formula">F</span><span class="formula_superscript">W→B</span> die Aktivität Einkauf zunächst ignoriert. Maßgebende Kette ist damit WB<b>A</b>. Zunächst werden dann wie im Beispiel das zielbezogene Quellaufkommen <span class="formula">Q</span><span class="formula_superscript">W→A</span> und die Wegematrix <span class="formula">F</span><span class="formula_superscript">W→B</span>   ausgerechnet. Durch Aufsummieren erhalten wir dann im nächsten Schritt ein zielbezogenes Quellaufkommen von der Aktivität B aus <span class="formula">Q</span><span class="formula_superscript">B→A</span>. Jetzt betrachten wir den Rest der Kette bis zur Hauptaktivität, also BEA. Die Zielwahl <span class="formula">B→E</span> rechnen wir dann wie in <MadCap:xref href="#Schritt2" class="Schrittnummer">Schritt 2</MadCap:xref>: wir ersetzen für jeden Zielbezirk k für A den Nutzen für E, also <img src="../Resources/Images/4_704.png" />, durch <img src="../Resources/Images/4_705.png" /> .</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Besteht zwischen der Hauptaktivität und dem Wohnen eine weitere Aktivität (also etwa W<b>A</b>EW), so beruht die Berechnung auf einem Gummiband zwischen A und W. Für einen festen Zielbezirk k für W ersetzt man <img src="../Resources/Images/4_704.png" /> für die Zielwahl von E durch <img src="../Resources/Images/4_706.png" />.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Moduswahl: Bei Berechnung ohne Rubberbanding wird die Moduswahl durch die erste Aktivität bestimmt. Der Modus wird über die restliche Wegekette beibehalten oder im Rahmen von austauschbaren Modi variiert. Bei Berechnung mit Rubberbanding erfolgt die Moduswahl aufgrund der Hauptaktivität. Die Moduswahl wird im Beispiel in <MadCap:xref href="#Schritt1" class="Schrittnummer">Schritt 1</MadCap:xref> festgelegt.</p>
+    </body>
+</html>

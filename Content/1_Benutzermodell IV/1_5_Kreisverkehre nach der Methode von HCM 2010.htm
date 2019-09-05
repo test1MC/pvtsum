@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="673" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;Hour;Ausfahrts;Grenz;gap;Q95;of;Durchschnittl;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_benutzermodell_iv_2033098965_1214907">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_41593">
+            </a>Kreisverkehre nach der Methode von HCM 2010</h4>
+        <p class="Text">
+            <MadCap:keyword term="Intersection Capacity Analysis (ICA): Kreisverkehre" />Die Analysemethode ist im HCM 2010 in den Kapiteln 21 und 33 beschrieben. Sie ähnelt derjenigen für vorfahrtsgeregelte Knotenpunkte und unterscheidet sich davon hauptsächlich in folgenden Punkten:</p>
+        <ul>
+            <LI class="List0">Die Ermittlung der Konfliktströme folgt der Geometrie des Kreisverkehrs.</LI>
+            <LI class="List0">Die Standardwerte für Zeitlücken unterscheiden sich durch die veränderten Sichtverhältnisse. Die Ermittlung erfolgt hier auch auf Basis von Fahrstreifen, nicht auf Basis von Abbiegern.</LI>
+            <LI class="List0">Die Methode ist nur für ein- und zweistreifige Zufahrten (plus einen optionalen Bypass-Fahrstreifen) verfügbar. Die <MadCap:variable name="PTV_Manual.Programmname" />-Methode für drei- oder mehrstreifige Zufahrten ist im HCM nicht beschrieben. Die Belastungsaufteilung auf die Fahrstreifen erfolgt in <MadCap:variable name="PTV_Manual.Programmname" /> wie bei vorfahrtsgeregelten Knotenpunkten.</LI>
+        </ul>
+        <p class="Text">Der Ablauf der Berechnung ist in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1214915">Abbildung 1</MadCap:xref> dargestellt.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Roundabout_FlowHCM.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1214915">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_66778">
+            </a>Ablauf der Berechnung bei Kreisverkehren nach HCM 2010</p>
+        <p class="Text">Wenn Sie das HCM 2010 Operationsmodell auf Kreisverkehrs-Knoten anwenden, wirken sich die in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369439">Tabelle 1</MadCap:xref> gezeigten <MadCap:variable name="PTV_Manual.Programmname" />-Attribute aus. Stellen Sie sicher, dass realistische Werte für die Attribute definiert sind, ehe die Analyse gestartet wird.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="90px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="115px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="290px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Netzobjekte</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung / Auswirkung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Geometrie</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">alle</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Geometrieinformationen zu Fahrstreifen, Fahrstreifenabbiegern und Furten</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Knoten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ICAPHFVolAdj</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Anpassungsfaktor der anfänglichen Belastung an die Spitzenbelastung. Belastungen werden <span class="gui_element">sowohl</span> durch den Knoten- als auch die Abbiegeranpassungsfaktoren geteilt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ICAPHFVolAdj</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">Arm</td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">Hat Mittelinsel</td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p>Zeigt an, ob der Arm eine Mittelinsel hat (ja/nein)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mittelinsel-Länge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Länge der Mittelinsel</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Mittelinsel-Breite</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Breite der Mittelinsel</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Dreiecksinsel-Länge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Länge der Dreiecksinsel</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hat Fahrbahnteiler</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Zeigt an, ob der Arm einen Fahrbahnteiler hat (ja/nein)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrbahnteiler Länge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Länge des Fahrbahnteilers</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der eingegebene Wert wird genutzt, wenn das Attribut <span class="gui_element">Hat Fahrbahnteiler</span> aktiviert ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrbahnteiler Breite</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Breite des Fahrbahnteilers</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der eingegebene Wert wird genutzt, wenn das Attribut <span class="gui_element">Hat Fahrbahnteiler</span> aktiviert ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hat Bypass</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Zeigt an, ob der Arm einen Bypass hat (ja/nein)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Arm</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Anteil Bypass Belastung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Anteil der Rechtsabbieger (Linksverkehr: Linksabbieger), die zum Abbiegen einen Bypass-Fahrstreifen verwenden.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Dieser Anteil wird genutzt, wenn das Attribut <span class="gui_element">Hat Bypass</span> aktiviert ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrstreifen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ICA Eingestellte Grenzzeitlücke</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Wert der gewünschten Grenzzeitlücke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrstreifen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ICA Eingestellte Grenzzeitlücke verwenden</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Optional können Sie die Grenzzeitlücke überschreiben, genutzt in <MadCap:xref class="Schrittnummer" href="#1_benutzermodell_iv_2033098965_1215019">Schritt 5</MadCap:xref>. Der analoge Wert am Abbieger wird nicht verwendet.</p>
+                        <p class="CellText">Bei aktivierter Option wird der unter Eingestellte Grenzzeitlücke angegebene Wert verwendet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrstreifen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ICA Eingestellte Folgezeitlücke</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Wert der gewünschten Folgezeitlücke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Fahrstreifen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">ICA Eingestellte Folgezeitlücke verwenden</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Optional können Sie die Folgezeitlücke überschreiben, genutzt in <MadCap:xref class="Schrittnummer" href="#1_benutzermodell_iv_2033098965_1215032">Schritt 6</MadCap:xref>. Der analoge Wert am Abbieger wird nicht verwendet.</p>
+                        <p class="CellText">Bei aktivierter Option wird der unter Eingestellte Folgezeitlücke angegebene Wert verwendet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1369439">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_56823">
+            </a>Eingabe-Attribute für Kreisverkehrs-Knoten nach HCM 2010</p>
+        <p class="Text">Die Ausgabe ist über die gleichen Attribute verfügbar wie bei signalisierten Knoten (<MadCap:xref class="Label_Table" href="1_5_Signalisierte Knoten.htm#1_benutzermodell_iv_2033098965_1366477"></MadCap:xref>).</p>
+        <p class="Text">Die Berechnungsmethode im HCM 2010 besteht aus zwölf aufeinanderfolgenden Schritten. Die Beschreibung hier ist auf die wichtigsten Schritte verkürzt.</p>
+        <p class="Heading_Schritt1" MadCap:autonum="Schritt 1: ">Verkehrsstärken (Belastungen) für jeden Abbieger berechnen</p>
+        <p class="Text">Die in Pkw-Einheiten gegebenen Abbiegerbelastungen werden durch Multiplikation mit den Peak-Hour-Faktoren des Abbiegers und des Knotens in Werte für die 15-Minuten-Spitze umgerechnet.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 2: ">Berechnung der Zuflüsse pro Fahrstreifen und Konfliktströme für jede Zufahrt</p>
+        <p class="Text">Alle Berechnungen basieren auf den Zuflüssen und Konfliktströmen an jeder Zufahrt. Diese Ströme werden aus den Abbiegerbelastungen (in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1214988">Abbildung 2</MadCap:xref> für einen Kreisverkehr mit vier Zufahrten mit v<span class="formula_subscript">1</span> bis v<span class="formula_subscript">12</span> bezeichnet) gewonnen.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Roundabout_1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1214988">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_94165">
+            </a>Zuflüsse an einem vierarmigen Kreisverkehr </p>
+        <p class="Text">Die Aufteilung der Belastungen auf Fahrstreifen kann dem HCM 2010 auf den Seiten 21-14 und 21-15 entnommen werden.</p>
+        <h5 MadCap:autonum="">Beispiel</h5>
+        <p class="Text">Der Zufluss aus Richtung Süden ist die Summe der Abbiegerbelastungen v<span class="formula_subscript">7</span> + v<span class="formula_subscript">8</span> + v<span class="formula_subscript">9</span>. Der für diesen Zufluss geltende Konfliktstrom ist dagegen die Summe v<span class="formula_subscript">1</span> + v<span class="formula_subscript">2</span> + v<span class="formula_subscript">10</span>. Die Methodik kann auf Kreisverkehre mit beliebig vielen Zufahrten angewendet werden. Auch U-Turns lassen sich auf gleiche Weise berücksichtigen, wenn Sie sie in die ICA-Berechnung einbeziehen möchten.</p>
+        <p class="Text">Falls eine Zufahrt mehr als einen Fahrstreifen besitzt, wird der Gesamtzufluss auf Fahrstreifen verteilt.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Falls nur ein Fahrstreifen für Linksabbieger zugelassen ist, ist seine Belastung die Summe aller Belastungen von Linksabbiegern.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Falls nur ein Fahrstreifen für Rechtsabbieger zugelassen ist, ist seine Belastung die Summe aller Belastungen von Rechtsabbiegern.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Die verbleibende Belastung wird so auf alle Fahrstreifen aufgeteilt, dass sie möglichst gleiche Belastungen aufweisen.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 4: ">Kapazität</p>
+        <p>Die Kapazität jedes Fahrstreifens wird allen Abbiegern zugeordnet, für die Fahrstreifenabbieger von dem Fahrstreifen ausgehend definiert sind. Das Ergebnis wird in PkwE/h im Abbieger-Attribut <span class="gui_element">ICA Endgültige Kapazität</span> gespeichert.</p>
+        <p class="Text">Für alle Fälle sind feste Formeln vorgegeben (HCM 2010, Gleichungen 21-1 bis 21-7). Die Grundformel lautet:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_84.jpg" />
+        </p>
+        <p class="Text">Bei ein- und zweistreifigen Zufahrten in einstreifige Kreisverkehre nimmt <span class="formula">B</span> hier den Wert 0,001 an, bei einstreifigen Zufahrten in zweistreifige Kreisverkehre den Wert 0,0007. Bei zweistreifigen Zufahrten in zweistreifige Kreisverkehre nimmt <span class="formula">B</span> auf dem inneren (linken) Fahrstreifen den Wert 0,00075 an, auf dem rechten den Wert 0,0007. Bei einem Bypass-Fahrstreifen mit einem konfligierenden Ausfahrts-Fahrstreifen wird der Wert 0,001 angenommen, bei zwei konfligierenden Ausfahrts-Fahrstreifen der Wert 0,0007.</p>
+        <p>Bei der Berechnung der Kapazität wird berücksichtigt, ob die standardmäßigen Grenz- und/oder Folgezeitlücken durch die entsprechenden Visum-Attribute verändert wurden. Grenz- und Folgezeitlücken werden beim Steuerungstyp Kreisverkehr an den Fahrstreifen angegeben. Die gleichnamigen Werte an den Abbiegern sind hier nicht wirksam. Die Kapazität ergibt sich bei der erweiterten Berechnung aus folgenden Werten (HCM 2010, Seite 33-3):</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_293.jpg" />
+        </p>
+        <p>Je nach veränderten Werten für die Grenz- und/oder Folgezeitlücken werden andere Werte für A und B berücksichtigt. Ist das Attribut <span class="gui_element">Eingestellte Folgezeitlücke verwenden</span> aktiv, erfolgt die Berechnung von A nach Kapitel 33 des HCM 2010. Diese Berechnung entspricht Gleichung 21-22:</p>
+        <p>
+            <img src="../Resources/Images/7_294.jpg" />
+        </p>
+        <p>Andernfalls wird der Wert A nach dem ersten Teil im Kapitel 21 des HCM2010 bestimmt. Das bedeutet, dass die Standardwerte für die Folgezeitlücke aus Kapitel  33 niemals für A verwendet werden.</p>
+        <p>Ist das Attribut <span class="gui_element">Eingestellte Grenzzeitlücke verwenden</span> gesetzt, werden für B die Werte der Folgelücken aus Kapitel  33 verwendet, es sei denn, die Folgezeitlücke wird ebenfalls überschrieben. Im letzteren Fall wird dann der überschriebene Wert verwendet.</p>
+        <p>
+            <img src="../Resources/Images/7_295.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Kapazität in PkwE/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Konfliktstrom in PkwE/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">gap</span>
+                            <span class="formula_subscript">c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Grenzzeitlücke in s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">gap</span>
+                            <span class="formula_subscript">f</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Folgezeitlücke in s</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Als Standardwerte verwendet <MadCap:variable name="PTV_Manual.Programmname" /> 4&#160;s für die Grenzzeitlücke und 3&#160;s für die Folgezeitlücke. Sie können beide Werte optional pro Fahrstreifen überschreiben.</p>
+        <p class="Text">Fußgänger haben einen Einfluss auf die Kapazität. Eine genaue Beschreibung ist im HCM 2010 auf den Seiten 21-16 und 21-17 zu finden.</p>
+        <p class="Text">Die Kapazität jedes Fahrstreifens wird allen Abbiegern zugeordnet, für die Fahrstreifenabbieger von dem Fahrstreifen ausgehend definiert sind. Das Ergebnis wird in PkwE/h im Abbieger-Attribut <span class="gui_element">ICA Endgültige Kapazität</span> gespeichert.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 5: ">
+            <a name="1_benutzermodell_iv_2033098965_1215019">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_78481">
+            </a>Wartezeiten</p>
+        <p class="Text">Die durchschnittliche Wartezeit auf einem Fahrstreifen einer Zufahrt ergibt sich aus folgenden Werten:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_3.jpg" />
+        </p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">durchschnittliche Wartezeit in s/PkwE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Kapazität des Fahrstreifens in PkwE/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Belastung des Fahrstreifens in PkwE/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">T</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Betrachtungszeitraum in h</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die durchschnittliche Wartezeit eines Abbiegers ist das belastungsgewichtete Mittel der durchschnittlichen Wartezeiten der benutzten Fahrstreifen. Das Ergebnis wird im Abbieger-Attribut <span class="gui_element">tAkt</span> gespeichert.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 6: ">
+            <a name="1_benutzermodell_iv_2033098965_1215032">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_70445">
+            </a>Staulängen</p>
+        <p class="Text">Die Staulänge auf einem Fahrstreifen einer Zufahrt ergibt sich aus folgenden Werten:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_198.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Q</span>
+                            <span class="formula_subscript">95</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">95%-Perzentil der Staulänge in PkwE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Kapazität des Fahrstreifens in PkwE/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">v</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Belastung des Fahrstreifens in PkwE/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">T</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Betrachtungszeitraum in h</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Das Attribut <span class="gui_element">ICAPerzStaulänge</span> ist das Maximum der Q95-Perzentile für die benutzten Fahrtstreifen.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 7: ">Level of Service (LOS)</p>
+        <p class="Text">LOS pro Fahrstreifen einer Zufahrt ist als Klassifikation der durchschnittlichen Wartezeit definiert (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369492">Tabelle 2</MadCap:xref>).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="39px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="457px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">LOS</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Durchschnittl. Wartezeit [s / PkwE]</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">0 - 10</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">B</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">&gt;10 - 15</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">C</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">&gt;15 - 25</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">D</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">&gt;25 - 35</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">E</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">&gt;35 - 50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">F</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">&gt;50</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_iv_2033098965_1369492">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_79947">
+                    </a>LOS pro Fahrstreifen in Abhängigkeit von der durchschnittlichen Wartezeit</p>
+            </caption>
+        </table>
+        <p class="Text">Das HCM macht keine Aussage zur Berechnung von LOS pro Zufahrt, Abbieger oder Knoten. <MadCap:variable name="PTV_Manual.Programmname" /> berechnet den LOS in diesen Fällen auf der Basis der belastungsgewichteten durchschnittlichen Wartezeit. Ist die Belastung größer als die Kapazität, wird das LOS automatisch auf <span class="formula">F</span> gesetzt.</p>
+    </body>
+</html>

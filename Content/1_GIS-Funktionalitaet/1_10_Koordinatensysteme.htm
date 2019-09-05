@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="677" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="of;Layern;Markierung1;Projections;Well;Known;geographic;coordinate;systems;projected;Erd;UTM;48N;mdb;accdb;hgr">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_gis_funktionalitaet_3291278398_1031411">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_26812">
+            </a>Koordinatensysteme</h2>
+        <p class="Text">
+            <MadCap:keyword term="Koordinatensysteme" />
+            <MadCap:keyword term="Projektionen" />
+            <MadCap:keyword term="Georeferenzierung" />Beim Aufbau von Netzen werden oft Bestandteile aus verschiedenen GIS-Quellen zusammengeführt, die sich teilweise auf verschiedene Koordinatensysteme beziehen. Um eine Konsistenz zwischen diesen Daten herzustellen ist eine Koordinatentransformation notwendig. <MadCap:variable name="PTV_Manual.Programmname" /> unterstützt Sie bei dieser Aufgabe durch folgende Funktionalitäten.</p>
+        <ul>
+            <LI class="List0">Der Anwender kann optional angeben, dass sämtliche Koordinaten im aktuellen Netz einem bestimmten vordefinierten Koordinatensystem angehören <MadCap:xref class="Benutzerhandbuch" href="../2_GIS-Funktionalitaet_nutzen/2_10_Koordinatensystem wählen.htm#2_gis_funktionalitaet_nutzen_1884258370_1054640"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Koordinatensystem wählen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Das Koordinatensystem kann in <MadCap:variable name="PTV_Manual.Programmname" /> gewechselt werden. Dabei können Sie die Koordinaten des aktuellen Netzes automatisch transformieren <MadCap:xref class="Benutzerhandbuch" href="../2_GIS-Funktionalitaet_nutzen/2_10_Koordinatensystem wählen.htm#2_gis_funktionalitaet_nutzen_1884258370_1054640"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Koordinatensystem wählen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Werden Daten eingelesen, die sich auf ein anderes Koordinatensystem beziehen als für das aktuelle Netz eingestellt ist, transformiert <MadCap:variable name="PTV_Manual.Programmname" /> automatisch die eingelesenen Koordinaten in das System des aktuellen Netzes.</LI>
+        </ul>
+        <p class="Text">Es besteht die Option, von der Standardeinstellung <MadCap:variable name="PTV_Manual.Programmname" /> zu einem vordefinierten Koordinatensystem zu wechseln. <MadCap:variable name="PTV_Manual.Programmname" /> bietet eine Auswahl von Koordinatensystemen, die in Form von Dateien mit der Erweiterung <span class="path">*.prj</span> im Verzeichnis ...<span class="path">Programme</span>\<span class="path">PTV Vision\<MadCap:variable name="PTV_Manual.Programmname_VersNr_mitPunkt" />\Exe\Projections</span> mitgeliefert wird. Das Format dieser Dateien ist das Well-Known-Text-Format in der Fassung von ESRI.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Ob Sie in Ihrem Projekt mit einer gängigen Projektion arbeiten möchten, können Sie optional festlegen. Häufig ist es ausreichend die Standardeinstellung („<MadCap:variable name="PTV_Manual.Programmname" />“) beizubehalten. In diesem Fall folgen die Koordinaten in <MadCap:variable name="PTV_Manual.Programmname" /> keiner gängigen Projektion, sondern werden „uninterpretiert“ in einem rechtwinkligen System dargestellt. Sind allerdings Originaldaten in einer bestimmten Projektion angegeben und werden Sie zu einem Netz importiert, in dem keine Projektion ausgewählt ist, so sieht die Darstellung verzerrt aus. Wählen Sie daher in einem solchen Fall die passende Projektion aus.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">In <MadCap:variable name="PTV_Manual.Programmname" /> wird zwischen geografischen Koordinatensystemen (geographic coordinate systems) und Koordinatensystemen, die in die Ebene projizieren (projected coordinate systems),  unterschieden.</p>
+        <p class="Text">In geografischen Koordinatensystem werden die Koordinaten als Kugelkoordinaten mit geografischer Länge und Breite dargestellt. Sie werden gemessen als Winkel von der Erdmitte zu einem Punkt auf der Erdoberfläche (zum Beispiel 47° 6‘ nördliche Breite, 12° 27‘ östliche Länge). Im Unterschied dazu werden bei ebenen Koordinatensystemen die Koordinaten des Erd-Ellipsoids auf eine Ebene projiziert. Ein Ort auf der Erde wird also durch eine X- und Y-Koordinate auf der Ebene eindeutig bestimmt. Im Folgenden werden beispielhaft zwei Projektionsdateien für ein ebenes und ein geometrisches Koordinatensystem in <MadCap:variable name="PTV_Manual.Programmname" /> gezeigt.</p>
+        <p class="Text">Beispiel für ebenes Koordinatensystem (<span class="path">WGS 1984 UTM Zone 48N.prj</span>):</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <pre class="Input">PROJCS["WGS_1984_UTM_Zone_48N",</pre>
+                        <pre class="Input">GEOGCS["GCS_WGS_1984",</pre>
+                        <pre class="Input">DATUM["D_WGS_1984",</pre>
+                        <pre class="Input">SPHEROID["WGS_1984",6378137,298.257223563]],</pre>
+                        <pre class="Input">PRIMEM["Greenwich",0],</pre>
+                        <pre class="Input">UNIT["Degree",0.017453292519943295]],</pre>
+                        <pre class="Input">PROJECTION["Transverse_Mercator"],</pre>
+                        <pre class="Input">PARAMETER["False_Easting",500000],</pre>
+                        <pre class="Input">PARAMETER["False_Northing",0],</pre>
+                        <pre class="Input">PARAMETER["Central_Meridian",105],</pre>
+                        <pre class="Input">PARAMETER["Scale_Factor",0.9996],</pre>
+                        <pre class="Input">PARAMETER["Latitude_Of_Origin",0],</pre>
+                        <pre class="Input">UNIT["Meter",1]]</pre>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Ebenes Koordinatensystem</p>
+            </caption>
+        </table>
+        <p class="Text">Beispiel für geografisches Koordinatensystem (<span class="path">Deutsches Hauptdreiecksnetz.prj</span>):</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <pre class="Input">GEOGCS["GCS_Deutsches_Hauptdreiecksnetz",</pre>
+                        <pre class="Input">DATUM["D_Deutsches_Hauptdreiecksnetz",</pre>
+                        <pre class="Input">SPHEROID["Bessel_1841",6377397.155,299.1528128]],</pre>
+                        <pre class="Input">PRIMEM["Greenwich",0],</pre>
+                        <pre class="Input">UNIT["Degree",0.017453292519943295]]</pre>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Geografisches Koordinatensystem</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Bitte beachten Sie, dass in der eigentlichen Datei *.<span class="path">prj</span> die hier zeilenweise aufgeschriebenen Bestandteile der Projektion fortlaufend (also in einer Zeile) stehen müssen. Detaillierte Informationen zur Erstellung von Projektionen finden Sie auf der ESRI Homepage (zum Beispiel unter <span class="hyperlink"><a href="http://www.support.esri.com/index.cfm?fa=knowledgebase.techArticles.articleShow&amp;amp;d=14056" target="_blank">www.support.esri.com/index.cfm?fa=knowledgebase.techArticles.articleShow&amp;d=14056</a></span>).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> verwaltet Koordinatensysteme in den folgenden Dateiarten. Je nach Dateiart werden die Koordinateninformationen unterschiedlich gespeichert oder eingelesen.</p>
+        <table class="TableStyle-TableStandard" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="95px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="236px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Dateiart</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Schreiben</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Lesen</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="path">*.ver</span> Versionsdatei</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Alle Attribute zum aktuellen Koordinatensystem werden gespeichert.</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Alle Attribute zum aktuellen Koordinatensystem werden eingelesen. Wird der Name des Systems nicht unter den vordefinierten gefunden, wird er als neuer Eintrag (selektiert) in der Koordinatensystem-Auswahlliste aufgeführt. Eine Datei <span class="path">*.prj</span> wird jedoch nicht angelegt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="path">*.net</span>, <span class="path">*.mdb, *.accdb</span> Netzdatei Datenbank</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Alle Attribute zum aktuellen Koordinatensystem werden gespeichert.</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Bei nicht additivem Lesen wird die Datei wie eine Versionsdatei gelesen; falls der Netzparameterblock fehlt, wird die Standardeinstellung (<MadCap:variable name="PTV_Manual.Programmname" />) angenommen. Bei additivem Lesen wird der Netzparameterblock gelesen, sofern vorhanden und ausgewählt <MadCap:xref class="Benutzerhandbuch" href="../2_Grundlagen_Programmbedienung/2_1_Netzdaten additiv einlesen.htm#2_grundlagen_programmbedienung_1644961382_1238898"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Netzdaten additiv einlesen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="path">*.shp</span> Shapedatei</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Zusätzlich zur Shapedatei wird eine Datei <span class="path">*.prj</span> mit der aktuell eingestellten Projektion gespeichert, sofern sie von der Standardeinstellung (<MadCap:variable name="PTV_Manual.Programmname" />) abweicht.</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Falls zur Shapedatei eine spezifische Datei <span class="path">*.prj</span> existiert, wird diese Projektion verwendet und gegebenenfalls in die aktuell eingestellte transformiert. Existiert diese nicht und das bestehende Netz besitzt ein Koordinatensystem, wählt der Anwender ein Koordinatensystem aus <MadCap:xref class="Benutzerhandbuch" href="../2_GIS-Funktionalitaet_nutzen/2_10_Shapefiles importieren.htm#2_gis_funktionalitaet_nutzen_1884258370_1056481"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Shapefiles importieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="path">*.inp</span> Vissim-Netz</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Die Koordinaten werden ohne weitere Transformation in die Datei <span class="path">*.inp </span>geschrieben.</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">entfällt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="path">*.hgr </span>Hintergrunddatei</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">entfällt</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">Hintergrund-Dateien werden nicht angepasst.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

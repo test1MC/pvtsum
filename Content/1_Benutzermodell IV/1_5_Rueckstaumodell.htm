@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;FS;BS;xd;KJ;k2;k1;s'';abflüssen;Wardrop’schen" MadCap:lastBlockDepth="4" MadCap:lastHeight="667" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_iv_2033098965_1427267">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_63301">
+            </a>Rückstaumodell</h2>
+        <p class="Text">
+            <MadCap:keyword term="Rückstaumodell" />Das Rückstaumodell (pseudodynamic assignment, pa) schließt die Lücke zwischen rein statischen Verfahren, die keinen Zeitbezug haben und keine Wartezeiten aufgrund von Stausituationen ermitteln können, und dynamischen Verfahren, die viel Rechenzeit benötigen. Es ist deutlich schneller als ein dynamisches Umlegungsverfahren, beansprucht weniger Speicher und kann darüber hinaus Aussagen zu Stauphänomenen machen. Das Verfahren kann in Verbindung mit einer statischen Umlegung angewendet werden, um Staulängen und Wartezeiten in überlasteten Netzen abzuschätzen, und eignet sich im Gegensatz zur Dynamischen Stochastischen Umlegung für Netze mit &gt; 50&#160;000 Strecken, obwohl es nur wenige zusätzliche Angaben zur zeitlichen Verteilung der Nachfrage benötigt.</p>
+        <p class="Text">Die Idee des Verfahrens liegt in der Neuverteilung der Nachfrage entlang von Routen, die in einem vorgelagerten Schritt durch ein beliebiges statisches Umlegungsverfahren gewonnen wurden. Ausgabe des Verfahrens sind</p>
+        <ul>
+            <LI class="List0">neue Belastungen auf Strecken, Anbindungen, (Ober-)Abbiegern und (Ober-)Knoten</LI>
+            <LI class="List0">Staulängen auf Strecken und Anbindungen</LI>
+            <LI class="List0">Wartezeiten auf Strecken</LI>
+        </ul>
+        <p class="Text">Die ursprünglichen Belastungen aus der Umlegung finden Sie für Strecken, Anbindungen und (Ober-)Abbieger in den folgenden Attributen:</p>
+        <ul>
+            <LI class="List0" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="gui_element">Belastung Nachfrage IV mit Grundbelastung</span>
+            </LI>
+            <LI class="List0" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="gui_element">Belastung Nachfrage NSeg</span>
+            </LI>
+            <LI class="List0" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="gui_element">Belastung IV Nachfrage</span>
+            </LI>
+        </ul>
+        <p class="Text">Die ursprünglichen Belastungen für Knoten finden Sie im Attribut</p>
+        <ul>
+            <LI class="List0" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="gui_element">Belastung Nachfrage IV</span>
+            </LI>
+        </ul>
+        <h5>
+            <span class="gui_element">Stauberechnung</span>
+        </h5>
+        <p class="Text">Entlang jeder Route wird ein Anteil der Nachfrage so lange von einer Strecke zur nächsten weitergereicht, bis eine begrenzende Kapazität erschöpft ist. Dabei werden die folgenden Regeln eingehalten.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Von einer Strecke auf die nächste kann höchstens so viel Verkehr fließen, wie die Kapazität (IV) der Strecke, die Kapazität am Nach-Knoten und die Kapazität am Abbieger zulassen. Für Strecken zählt die Verkehrsmenge, die die Strecke verlässt (Engpass am Streckenende).</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Auf jeder Strecke steht höchstens so viel Verkehr, wie die Standkapazität angibt.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Existiert ein Stau auf einer Strecke, so kann kein Verkehr daran vorbeifließen, auch wenn die betroffene Route nicht über den Stau verursachenden Engpass führt.</p>
+        <p class="Text">Daraus unmittelbar abgeleitet ist die vierte Regel, die den Zustrom einer Strecke begrenzt.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">In jede Strecke fließt höchstens so viel Verkehr, wie die Summe aus Kapazität und Standkapazität angibt.</p>
+    </body>
+</html>

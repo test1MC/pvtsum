@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="643" MadCap:lastWidth="510" MadCap:ignoredWords="DeltaT;bzw;export;bx">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1027550">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_92541">
+            </a>Aufteilung der Fahrten auf die Verbindungen</h4>
+        <p class="Text">
+            <MadCap:keyword term="Fahrplanfeine Umlegung: Aufteilung der Fahrten auf Verbindungen" />Der bei der Verbindungswahl verwendete Widerstand einer Verbindung<span class="formula"> i</span> in einem Zeitintervall <span class="formula">a</span> berechnet sich folgendermaßen.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_17.jpg" />
+        </p>
+        <p class="Text">Jede der in den Widerstand eingehenden Kenngrößen kann optional <span class="gui_element">einzeln</span> Box-Cox-transformiert werden. Das hat keinen Einfluss auf das eigentliche Wahlmodell, das heißt, auch bei Verwendung der Box-Cox-Transformationen kann auf den Gesamtwiderstand weiter eine beliebige Nutzenfunktion angewandt werden.</p>
+        <p class="Text">Die Widerstandsberechnung bleibt also von der eigentlichen Verbindungswahl entkoppelt, das heißt, auch bei Anwendung der Box-Cox-Transformation muss nicht zwingend <span class="gui_element">Logit</span> eingesetzt werden, sondern es kann eine <span class="gui_element">beliebige</span> Nutzenfunktion gewählt werden.</p>
+        <p class="Text">Die Berechnung des Widerstands erfolgt wie folgt:</p>
+        <p class="Text">Für <span class="formula">i </span>= 1, ..., <span class="formula">n</span> seien <span class="formula">x</span><span class="formula_subscript">i</span> die verschiedenen Wegeattribute, wobei ohne Einschränkung die ersten <span class="formula">m </span>von ihnen Box-Cox-transformiert werden sollen (und zwar jeweils zum Parameter <span class="symbol">l</span><span class="formula_subscript">i</span>). <span class="symbol">b</span><span class="formula_subscript">i</span> stehe für die zugehörigen Koeffizienten. Dann gilt</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_40.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_16.jpg" />
+        </p>
+        <p class="Text">Durch Einsetzen dieses Widerstands in eines der Aufteilungsmodelle Kirchhoff, Logit, Box-Cox oder Lohse <MadCap:xref class="sieheUeberschrSeite" href="../1_Benutzermodell IV/1_5_Aufteilungsmodelle in der Umlegung.htm#1_benutzermodell_iv_2033098965_1545529"><span style="color: Black;" class="mcFormatColor">(</span><u>Aufteilungsmodelle in der Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> bestimmt <MadCap:variable name="PTV_Manual.Programmname" /> hieraus den Nutzen einer Verbindung in einem Zeitintervall und so schließlich ihren Anteil an der Nachfrage dieses Intervalls. Wahlweise kann auch die Eigenständigkeit in die Aufteilungsregel mit eingehen <MadCap:xref class="sieheUeberschrSeite" href="1_6_Eigenstaendigkeit von Verbindungen.htm#1_benutzermodell_oev_2318507456_1028012"><span style="color: Black;" class="mcFormatColor">(</span><u>Eigenständigkeit von Verbindungen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Der Anteil einer Verbindung <span class="formula">i</span> an der Gesamtnachfrage errechnet sich wie bisher folgendermaßen:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_41.jpg" />
+        </p>
+        <p class="Text">Dabei ist <span class="formula">g</span> die gewählte (stets antitone) Nutzenfunktion, im Fall von <span class="gui_element">Logit</span> ist also <span class="formula">g</span>(<span class="formula">x</span>)&#160;=&#160;<span class="formula">e</span><span class="formula_superscript">-bx</span>.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Wie an der Definition erkennbar wird, muss bei Benutzung der Box-Cox-Transformation für <span class="formula">x</span><span class="formula_subscript">i</span> generell <span class="formula">x</span><span class="formula_subscript">i</span> ≥ 0 gelten, im Fall <span class="symbol">l</span><span class="formula_subscript">i</span> = 0 sogar <span class="formula">x</span><span class="formula_subscript">i</span> &gt; 0. Wird diese Regel zur Laufzeit verletzt, wird die Umlegung mit einer Fehlermeldung abgebrochen.</p>
+                        <p class="Text">Durch Box-Cox-Transformation oder durch negative Koeffizienten kann <span class="formula">R</span><span class="formula_subscript">i</span> selbst negativ sein. In diesem Fall ist nur die Logit-Nutzenfunktion anwendbar, sonst wird die Umlegung mit einer Fehlermeldung abgebrochen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

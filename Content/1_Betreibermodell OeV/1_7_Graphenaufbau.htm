@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="676" MadCap:lastWidth="700" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="bzw;Timeline;Timelines;ServiceKm;Mi;LeerKm">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1180400">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_44533">
+            </a>Graphenaufbau</h4>
+        <p class="Text">
+            <MadCap:keyword term="Umlaufbildung: Verfahrensablauf" />Die wesentlichen Schritte bei der Konstruktion des Graphen sind wie folgt.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Füge für jede Abfahrt und jede Ankunft eines Fahrplanfahrtabschnitts (bzw. einer Folge von durch Zwangsbindungen miteinander verbundenen Fahrplanfahrtabschnitten) einen Knoten ein und verbinde die beiden Knoten mit einer Kante. Diese Knoten heißen im Folgenden echte Events. Unter Abfahrt und Ankunft wird dabei jeweils die Zeit unter Einschluss eventueller Vor- und Nachbereitungszeiten verstanden, insofern diese berücksichtigt werden sollen <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Parameter der Umlaufbildung.htm#2_einstellungen_betreibermodell_oev_1111312306_1064843"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Parameter der Umlaufbildung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Graph1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-bottom: 0, 06234539px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Einfügen der Knoten und Kanten für Fahrplanfahrtabschnitte</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Füge für jedes für die Fahrzeugkombination zulässige Depot sowie für jeden Haltepunkt, der Beginn eines Fahrplanfahrtabschnitts der aktuellen Partition ist (Leerfahrten zwischen Haltepunkten), ein Ankunftsevent zum Zeitpunkt der dortigen Ankunft und eine Kante für die Leerfahrt vom Abfahrtsevent der Fahrt zum Ankunftsevent im Haltepunkt oder Depot ein (es entstehen dadurch so genannte unechte Ankunftsevents). Depots sind dabei spezielle Haltepunkte. Im Graphen werden die Events im Haltepunkt und im Depot unterschieden – das bedeutet, es gibt im Graphen jeweils einen Knoten für den Haltepunkt und einen zusätzlichen für das Depot, obwohl das Depot im Netz durch den gleichen Haltepunkt repräsentiert wird.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Graph2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-bottom: 0, 06234539px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">Einfügen der Kanten für das Einrücken in die Depots und für die Leerfahrten zwischen Haltepunkten</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Füge ebenso analog ein Abfahrtsevent und eine Kante von dort zum Abfahrtsevent der Fahrt ein, allerdings nur für jedes zulässige Depot, nicht für andere Haltepunkte (diese stehen für das Ausrücken aus den Depots, es entstehen dadurch so genannte unechte Abfahrtsevents).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Graph3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-bottom: 0, 06234539px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">Einfügen der Kanten für das Ausrücken aus Depots</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Ist Umsetzen verboten <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Parameter der Umlaufbildung.htm#2_einstellungen_betreibermodell_oev_1111312306_1064843"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Parameter der Umlaufbildung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>, werden nur Kanten zu und von dem Depot eingefügt, welches im Netz durch den gleichen Haltepunkt repräsentiert wird. In diesem Fall ist somit kein Umsetzen möglich, die Fahrzeugkombination kann aber in ein Depot einrücken und anschließend für den Beginn der nächsten Fahrt an den gleichen Haltepunkt zurückkehren.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Füge zwischen je zwei zeitlich aufeinander folgenden Events eines Haltepunkts oder Depots eine zusätzliche Kante ein (die so genannte Timeline- oder Wartekante). Mit Hilfe dieser Kante wird es ermöglicht, das Warten an einem Haltepunkt oder in einem Depot zu modellieren. Timeline-Kanten ermöglichen es, dass ein Umlauf mit einer neuen Fahrt am selben Haltepunkt fortgesetzt werden kann.</p>
+        <p class="Text2">Bei der Umlaufbildung können Sie auswählen, ob Sie offene oder geschlossene Umläufe bilden möchten. Bei der Bildung geschlossener Umläufe bildet jede Timeline, also jede Folge von Timeline-Kanten für einen Haltepunkt oder ein Depot, einen geschlossenen Ring. Auch Fahrplanfahrt- und Leerfahrtkanten können den Übergang vom letzten auf den ersten Tag des Umlaufbildungszeitraums überqueren. Ein Umlauf hat so viele Umlauftage, wie er „Runden“ durch den Kalenderzeitraum dreht, bis er wieder seinen Anfangspunkt erreicht.</p>
+        <p class="Text2">Nur im offenen Fall kann gefordert werden, dass Umläufe in einem Depot beginnen und enden. Dann werden vor dem ersten und nach dem letzten Knoten einer jeden Timeline Verbindungskanten von einem Hilfsknoten zu allen Depots eingefügt. Zu- und Abfluss erfolgt dann nur über diese Hilfsknoten. In diesem Fall kann es vorkommen, dass kein Fluss ermittelt werden kann. Dies passiert dann, wenn die Gesamtkapazität aller Depots kleiner ist als die Anzahl der zur Abdeckung aller Leistungen benötigten Fahrzeuge. In einem solchen Fall wird die Umlaufbildung mit einer Fehlermeldung abgebrochen.</p>
+        <p class="Text2">
+            <a name="1_betreibermodell_oev_1878159914_99662">
+            </a>Zu offenen und geschlossenen Umläufen finden Sie auch den Hinweis im einführenden Beispiel <MadCap:xref class="sieheUeberschrSeite" href="1_7_Offene und geschlossene Umläufe.htm#1_betreibermodell_oev_1878159914_1218675"><span style="color: Black;" class="mcFormatColor">(</span><u>Offene und geschlossene Umläufe</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Der Graph wird nun vereinfacht, indem Knoten mit gleicher Erreichbarkeit zusammengefasst und äquivalente Leerfahrtkanten (das heißt, die gleichen Abfahrten sind erreichbar) gelöscht werden (Kantenreduktion). Der Graph nach der Kantenreduktion ist in <MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1182373">Abbildung&#160;184</MadCap:xref> zu sehen.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Graph6.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-bottom: 0, 06234539px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 4: ">
+            <a name="1_betreibermodell_oev_1878159914_1182373">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_60315">
+            </a>Beispielgraph nach Einfügen der Timeline-Kanten und Kantenreduktion</p>
+        <p class="Step" MadCap:autonum="6. &#160;">Für die Formulierung als Flussproblem ist es notwendig, den Kanten eine Untergrenze und eine Obergrenze für deren Kapazität (also die Anzahl der Fahrzeuge, die minimal oder maximal über eine Kante fließen können) zuzuweisen. Dabei gilt Folgendes:</p>
+        <ul>
+            <LI class="List1">Die Untergrenze der Kapazität auf den Fahrplanfahrtabschnitten ist 1 (da es zwingend notwendig ist, dass jeder Fahrplanfahrtabschnitt auch wirklich gefahren wird).</LI>
+            <LI class="List1">Alle anderen Kanten besitzen eine untere Kapazitätsgrenze von 0 (da es zum Beispiel bei Leerfahrten nicht zwingend notwendig ist, dass sie gefahren werden).</LI>
+            <LI class="List1">Die Obergrenze ist für die Kanten der Fahrplanfahrtabschnitte ebenfalls 1 (da jeder Fahrplanfahrtabschnitt nur genau einmal gefahren werden soll und nicht öfter).</LI>
+            <LI class="List1">Leerfahrt-Kanten haben als Obergrenze die Anzahl der Leerfahrten, die sie vertreten (diese ist nur größer als 1, falls im Rahmen der Kantenreduktion Kanten zusammengelegt wurden).</LI>
+            <LI class="List1">Kanten entlang der Timelines haben, falls es sich um ein Depot handelt, als Obergrenze die Kapazität des Depots. Bei allen anderen Timelines ist die Obergrenze unbegrenzt.</LI>
+        </ul>
+        <p class="Step" MadCap:autonum="7. &#160;">Um einen kostenminimalen Fluss ermitteln zu können, sind im letzten Schritt die Kanten mit Kosten zu bewerten. Diese werden durch eine Kostenfunktion analog zur Empfundenen Reisezeit bei ÖV-Umlegungen beschrieben <MadCap:xref class="sieheUeberschrSeite" href="../1_Benutzermodell OeV/1_6_Empfundene Reisezeit1.htm#1_benutzermodell_oev_2318507456_1082810"><span style="color: Black;" class="mcFormatColor">(</span><u>Empfundene Reisezeit</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Diese Kostenfunktion besteht aus Summanden, die jeweils eine Eigenschaft der Kante (also der durch die Kante beschriebenen Aktivität) mit einem Faktor und einem Kostensatz multiplizieren. Die Kostenfunktion lautet wie folgt:</p>
+        <table class="TableStyle-gui_elements2" style="width: 394px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="94px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="300px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Kosten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">= Fahrzeugbedarf • Koeffizient • Kostensatz Fahrzeugeinheit gesamt</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">+ Servicezeit • Koeffizient • Kostensatz Stunde Service</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">+ ServiceKm/Mi • Koeffizient • Kostensatz Km/Mi Service</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">+ Leerzeit • Koeffizient • Kostensatz Stunde Leer</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">+ LeerKm/Mi • Koeffizient • Kostensatz Km/Mi Leer</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">+ Anzahl Leerfahrten • Koeffizient</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">+ Standzeit • Koeffizient • Kostensatz Stunde Stand</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">+ Servicezeit Depot • Koeffizient • Kostensatz Stunde Depot</span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Koeffizienten wirken auch auf den Kostensatz für „keine Fahrzeugkombination“.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Welche Kostenbestandteile auf einer Kante zum Tragen kommen, ist abhängig von der Art der Kante. Die Kostenbestandteile für die einzelnen Kantenarten sind folgende.</p>
+        <ul>
+            <LI class="List0">Fahrplanfahrt-Kanten</LI>
+            <LI class="List1">Servicezeit beschreibt die Dauer des Fahrplanfahrtabschnitts (die Kosten für die Fahrt selbst sind für die Lösung des Problems irrelevant, da jede solche Kante genau mit einem Fluss von 1 belegt wird und es daher keine andere alternative Belegung gibt. Für das Ausweisen des Ergebnisses werden Fahrplanfahrt-Kanten trotzdem mit den Fahrplanfahrt-Kostensätzen der Fahrzeugkombination für Dauer und Entfernung bewertet)</LI>
+            <LI class="List1">ServiceKm/Mi beschreibt die zurückgelegte Entfernung der Fahrplanfahrt</LI>
+            <LI class="List1">Standzeit beschreibt die Dauer zwischen dem Zeitpunkt des Von-Knotens bis zur Abfahrt vom Von-Konten zuzüglich der Dauer zwischen der Ankunft am Nach-Knoten und dem Zeitpunkt des Nach-Knotens</LI>
+            <LI class="List0">Leerfahrt-Kanten</LI>
+            <LI class="List1">Leerzeit beschreibt die Dauer der Leerfahrt</LI>
+            <LI class="List1">LeerKm/Mi beschreibt die zurückgelegte Entfernung der Leerfahrt</LI>
+            <LI class="List1">Standzeit beschreibt die Dauer zwischen dem Zeitpunkt des Von-Knotens bis zur Abfahrt zuzüglich Dauer zwischen Ankunft und Zeitpunkt des Nach-Knotens, jeweils falls es sich um einen gewöhnlichen Haltepunkt handelt</LI>
+            <LI class="List1">Standzeit Depot beschreibt die Dauer zwischen dem Zeitpunkt des Von-Knotens bis zur Abfahrt zuzüglich Dauer zwischen Ankunft und Zeitpunkt des Nach-Knotens, jeweils falls es sich um ein Depot handelt</LI>
+            <LI class="List0">Timeline-Kanten</LI>
+            <LI class="List1">Standzeit und Standzeit Depot beschreiben die Dauer zwischen den Zeitpunkten der durch die Kante verbundenen Knoten</LI>
+            <LI class="List0">Um den Fahrzeugbedarf zu bewerten, wird für jede Kante, die einen beliebig gewählten Zeitpunkt überquert, der Kostensatz für die Fahrzeugkombination zur Bewertung addiert. Da jede Fahrzeugkombination genau einmal diesen Bewertungszeitpunkt überqueren muss, ist damit der Fahrzeugbedarf gezählt und bewertet.</LI>
+        </ul>
+        <p class="Text">Als Zwischenergebnis liegt nun ein bewerteter Graph vor, für den im folgenden Schritt ein Fluss mit minimalen Kosten bestimmt wird.</p>
+    </body>
+</html>

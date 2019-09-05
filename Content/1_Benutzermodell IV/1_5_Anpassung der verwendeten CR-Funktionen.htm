@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="681" MadCap:lastWidth="513" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="BSB;ji;id;ijA;Braess;tmodelspecial;true;armig;3a;4a;3b;4b;armige;armigen;vphpl;CR;vdf;base;cur;cap;effcap;sec;kapazitäten;Abbiegerbelastungen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_benutzermodell_iv_2033098965_1649565">
+            </a>Anpassung der verwendeten CR-Funktionen</h4>
+        <p class="Text">
+            <MadCap:keyword term="Strecken:CR-Funktionen anpassen" />
+            <MadCap:keyword term="Abbieger:CR-Funktionen anpassen" />In der Umlegung mit ICA werden sowohl Abbiege-  als auch Strecken-CR-Funktionen modifiziert. Die Anpassungen erfolgen in zwei Richtungen:</p>
+        <ul>
+            <LI class="List0">horizontale Verschiebung der Funktion aufgrund geringerer Belastung stromaufwärts vom Stau </LI>
+            <LI class="List0">Anpassung des Kurvenverlaufs für Belastungswerte über der effektiven Kapazität ausgelöst durch zusätzliche Stauwartezeiten</LI>
+        </ul>
+        <p class="Text">Die erste Anpassung erfolgt für Abbiege- und Strecken-CR-Funktionen gleichermaßen und wird durch das Attribut <span class="gui_element">Verdrängte Belastung stromaufwärts</span> bestimmt. Die zweite Anpassung betrifft nur Strecken, auf denen ein Stau beobachtet werden kann. Beide Effekte sind in der folgenden Abbildung anhand einer geänderten Strecken-CR-Funktion dargestellt.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_effective_capacity_ICA.png" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Anpassung der Strecken-CR-Funktion</p>
+        <p class="Text">Grundsätzlich werden auch für die Umlegung mit ICA Strecken-CR-Funktionen im herkömmlichen Sinne zugewiesen, d.h. Sie können in Abhängigkeit vom Streckentyp CR-Funktionen definieren. Die folgende Gleichung zeigt die Anpassungen, wobei sich <span class="formula">vdf</span><span class="formula_subscript">base</span> auf die von Ihnen definierte Strecken-CR-Funktion bezieht.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/7_98.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="61px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="435px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">cur</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Streckenfahrzeit im belasteten Netz</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="formula">vdf</span>
+                            <span class="formula_subscript">base</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">definierte CR-Funktion (abhängig vom Streckentyp)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">q</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Streckenbelastung in der untergeordneten Umlegung (ohne Rückstau)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="formula">cap</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Streckenkapazität </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">effcap</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Streckenattribut, das in jeder Iteration nach Berechnung des Rückstaus ermittelt wird</p>
+                        <p class="CellText">Das Attribut <span class="_Override" style="font-weight: bold;">Effektive Kapazität in Umlegung mit ICA</span> enthält den Wert am Ende der Umlegung mit ICA.</p>
+                        <p class="CellText">Die effektive Kapazität entspricht der Streckenkapazität für Strecken, auf denen kein Stau ist. Auf Strecken mit Stau ergibt sie sich aus dem Minimum von Kapazität und Streckenbelastung.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="_Override" style="font-family: Symbol;font-style: normal;">D</span>
+                            <span class="formula">q</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Streckenattribut, das sich aus der Differenz von Nachfragebelastung und Belastung plus Staulänge berechnet. Die verdrängte Belastung entspricht demjenigen Teil der Belastung, der laut Rückstauberechnung stromaufwärts zurückgehalten wird und die Strecke nicht erreicht.</p>
+                        <p class="CellText">Das Attribut <span class="gui_element">Verdrängte Belastung stromaufwärts in Umlegung mit ICA</span> enthält den Wert am Ende der Umlegung mit ICA.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">T</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">T = 1800, d.h. T entspricht dem halben Umlegungszeitraum [in sec]</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Durch Anpassung der CR-Funktionen wird sichergestellt, dass die durch die Rückstauberechnung veränderten Widerstände in der untergeordneten Umlegung die Routensuche und Routenwahl  beeinflussen.</p>
+    </body>
+</html>

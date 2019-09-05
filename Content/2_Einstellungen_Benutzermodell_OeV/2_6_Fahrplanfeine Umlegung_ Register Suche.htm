@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="428" MadCap:lastWidth="510" MadCap:ignoredWords="E1;E9;V1;V9;N1;N9;G1;G9;G0;att;E2;bzw;ErhLinieName;E3;max;E5;E7;E8;V2;N2;V3;N3;NachlaufLRName;evtl;inkl;V5;N5;V6;N6;V4;N4;con;wege;RZ;UH;Wid;konst" MadCap:conditions="PTV_Manual.Ready_for_translation">
+    <head>
+        <link href="../Resources/TableStyles/PTVStandard_SingleCells1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1036028">
+            </a>Fahrplanfeine Umlegung: Register Suche<a name="25077"></a></h4>
+        <p class="Text">In diesem Register legen Sie die Einstellungen für die Ermittlung von ÖV-Verbindungen fest.</p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Fahrplanfahrtabschnitte berücksichtigen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden Wege nur über die aktiven Fahrplanfahrtabschnitte gesucht.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Max. Anzahl Umsteigevorgänge</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Maximal zulässige Anzahl der Umsteigevorgänge für eine Verbindung vom Quellbezirk zum Zielbezirk.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Branch &amp; Bound-Suche</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden alle geeigneten Verbindungen im gesamten Untersuchungszeitraum ermittelt, dabei auch zu einem Abfahrzeitpunkt mehrere Verbindungen mit unterschiedlichem Widerstand <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_oev_2589728191_1123499">(siehe „Branch &amp; Bound-Suche“ auf Seite&#160;1158)</MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Branch &amp; Bound-Suche eignet sich für die Betrachtung eines Zeitraums.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Kurzwegsuche</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, wird pro Abfahrzeitpunkt stets nur eine Verbindung ermittelt <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_oev_2589728191_1040745">(siehe „Kurzwegsuche“ auf Seite&#160;1160)</MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Kurzwegsuche eignet sich für die Betrachtung eines bestimmten Zeitpunkts.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1123499">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_19517">
+            </a>Branch &amp; Bound-Suche<a name="25120"></a></h5>
+        <table class="TableStyle-PTVStandard_SingleCells1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PTVStandard_SingleCells1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-PTVStandard_SingleCells1-Column-Column1" />
+            <col width="382px" class="TableStyle-PTVStandard_SingleCells1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Head-Header1">
+                    <td class="TableStyle-PTVStandard_SingleCells1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body1">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">SuchWid</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Branch and Bound" />Für die Suche wird ein Widerstand verwendet, der aus Reisezeit (<span class="gui_element">RZ</span>), Umsteigehäufigkeit (<span class="gui_element">UH</span>) und verkehrssystemspezifischen Zuschlägen (<span class="gui_element">VSys-Wid</span>; Fahrpreis) sowie fahrplanfahrtspezifischen Zuschlägen (<span class="gui_element">Fahrt-Wid</span>; Einsteigezuschlag und Komfort-Term) berechnet wird.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wenn Sie im Register <span class="gui_element">Basis</span> die Option <span class="gui_element">Kapazitätsbeschränkung verwenden</span> gewählt haben, wird zum <span class="gui_element">SuchWid</span> zusätzlich ein <span class="gui_element">auslastungsabhängiger Widerstand gemäß Nachfragesegment</span> addiert. Über eine Auswahlliste legen Sie das Nachfragesegment fest. </p>
+                        <p class="CellText">Über die Eingabefelder legen Sie Gewichtungsfaktoren für die Summanden fest.</p>
+                        <p class="CellText">Über die Schaltfläche <span class="gui_element">VSys-Wid</span> legen Sie fest, wie die verkehrssystemspezifischen Zuschläge berechnet werden <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_oev_2589728191_1040505">(siehe „Verkehrssystemspezifische Widerstände festlegen“ auf Seite&#160;1159)</MadCap:xref>.</p>
+                        <p class="CellText">Über die Schaltfläche <span class="gui_element">Fahrt-Wid</span> legen Sie fest, wie die fahrplanfahrtspezifischen Zuschläge berechnet werden <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_oev_2589728191_1100010">(siehe „Fahrplanfahrtspezifische Widerstände festlegen“ auf Seite&#160;1159)</MadCap:xref>. Dieser Fahrplanfahrtwiderstand wird auf jedem ÖV-Teilweg erhoben und zum Suchwiderstand addiert. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der hier definierte Suchwiderstand unterscheidet sich vom Widerstand, der für die Verbindungswahl verwendet wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body2">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Eine Verbindung wird gelöscht, wenn:</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyD-Column1-Body2">
+                        <p class="CellText">Verbindungen, die beim Aufbau eines Suchbaums eine der folgenden Bedingungen erfüllen, werden gelöscht. Sie können die Bedingungen über Faktoren und Summanden anpassen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">SuchWid &gt; </span>Faktor <span class="gui_element">• minimaler SuchWid +</span> Summand</p>
+                        <p class="CellText">Verbindungen werden gelöscht, wenn ihr Suchwiderstand sehr groß ist im Vergleich mit dem minimalen Suchwiderstand der Beziehung.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Reisezeit &gt; </span>Faktor <span class="gui_element">• minimale Reisezeit + </span>Summand</p>
+                        <p class="CellText">Verbindungen werden gelöscht, wenn ihre Reisezeit sehr groß ist im Vergleich mit der minimalen Reisezeit der Beziehung.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Umsteigehäufigkeit &gt; minimale Umsteigehäufigkeit + </span>Summand</p>
+                        <p class="CellText">Verbindungen werden gelöscht, wenn ihre Umsteigehäufigkeit um eine bestimmte Zahl größer ist als die minimale Umsteigehäufigkeit der Beziehung.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body1">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Dominanz</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Dominanz:Äquivalente Verbindungen" />Über die Schaltfläche öffnet sich das Fenster <span class="gui_element">Dominanz von Verbindungen</span>. Hier sind die Bedingungen beschrieben, die gelten müssen, damit beim paarweisen Vergleich von Verbindungen eine Verbindung eine andere dominiert. In diesem Fall wird die dominierte Verbindung gelöscht.</p>
+                        <p class="CellText">Über die beiden Eingabefelder können Sie eine Formel für den Vergleich der Suchwiderstände anpassen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Dominanz zwischen äquivalenten Verbindungen erlauben</span>
+                        </p>
+                        <p>Ist die Option ausgewählt, werden äquivalente Verbindungen, die dominiert werden, nicht gelöscht, wenn sich die Verbindungen ausschließlich in den Umsteigehalten unterscheiden. Wir empfehlen, zusammen mit der Auswahl dieser Option ebenfalls die Option <span class="gui_element">Eigenständigkeit verwenden</span> auf dem Register <span class="gui_element">Wahl</span> auszuwählen und die Option mit Vorsicht einzusetzen <MadCap:xref href="../1_Benutzermodell OeV/1_6_Verbindungssuche mit Branch and Bound.htm" class="Grundlagen">(siehe Grundlagen: Kap.  0.0.0.1 , Seite&#160;1)</MadCap:xref>.</p>
+                        <p>
+                            <span class="gui_element">Direktverbindungen nicht dominieren</span>
+                        </p>
+                        <p>Ist die Option ausgewählt, werden Direktverbindungen nicht gelöscht.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1040505">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_48441">
+            </a>Verkehrssystemspezifische Widerstände festlegen<a name="25080"></a></h5>
+        <p class="Text">In diesem Fenster legen Sie pro Verkehrssystem fest, welcher Zuschlag zum Widerstand addiert wird.</p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_TSysSpecific_Impedance.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Wid/km</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Der km-Fahrpreis wird mit der Anzahl der im Verkehrssystem zurückgelegten km multipliziert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Wid/Tarifpunkt</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Der Fahrpreis pro Tarifpunkt wird mit der Summe der Tarifpunkte an den Strecken multipliziert, die im Verkehrssystem überfahren werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Wid/VSys-ZWert</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Der Wert wird mit der Summe der ZWerte der Strecken multipliziert, die im VSys überfahren werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">konst. Zuschlag</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Der konstante Zuschlag wird einmal für die gesamte Verbindung berücksichtigt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">konst. Zuschlag je Teilweg</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Der konstante Zuschlag wird je Teilweg, für den das Verkehrssystem benutzt wird, berücksichtigt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1100010">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_90319">
+            </a>Fahrplanfahrtspezifische Widerstände festlegen<a name="25129"></a></h5>
+        <p class="Text">In diesem Fenster legen Sie fest, welcher fahrplanfahrtspezifische Zuschlag zum Widerstand addiert wird.</p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_JourneySpecific_Impedance.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Einsteige-Zuschlag</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wählen Sie ein direktes oder indirektes numerisches Attribut des Fahrplanfahrt-Verlaufs für die Verwendung als Einsteige-Zuschlag.</p>
+                        <p class="CellText">Der Einsteigezuschlag wird je ÖV-Teilweg für das erste Fahrplanfahrtelement des Teilwegs erhoben.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Attributwerte &lt; 0 werden wie 0 betrachtet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Diskomfort-Zuschlag</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wählen Sie ein direktes oder indirektes numerisches Attribut des Fahrplanfahrt-Verlaufs für die Verwendung als Diskomfort-Zuschlag.</p>
+                        <p class="CellText">Der Diskomfort-Zuschlag wird für alle Elemente zwischen dem ersten Fahrplanfahrtelement (inklusive) des Teilwegs bis zum letzten Fahrplanfahrtelement des Teilwegs (exklusive) erhoben und gemäß der Benutzereinstellung aggregiert. Das letzte Element zählt nicht mit, weil hier die „Streckensicht“ auf den Fahrtverlauf zählt, also die Beförderung von einem Halt zum nächsten. Hinter dem letzten Element gibt es aber keine Beförderung mehr.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Attributwerte &lt; 0 werden wie 0 betrachtet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Aggregationsfunktion</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Wählen Sie die geeignete Aggregationsfunktion in der Auswahlliste:</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Summe</span>
+                            </LI>
+                            <LI class="List0">
+                                <span class="gui_element">Minimum</span>
+                            </LI>
+                            <LI class="List0">
+                                <span class="gui_element">Mittel</span>
+                            </LI>
+                            <LI class="List0">
+                                <span class="gui_element">Maximum</span>
+                            </LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Gewichtetes Mittel</span>
+                            </LI>
+                        </ul>
+                        <p class="CellText">Mit dieser Aggregationsfunktion werden die Werte je Fahrplanfahrtelement aggregiert, um einen Wert je Teilweg zu erhalten.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Für die Verwendung des gewichteten Mittels können Sie ein weiteres Fahrtverlaufsattribut wählen, nach dem gewichtet wird.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1040745">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_50678">
+            </a>
+            <span class="gui_element">Kurzwegsuche</span>
+        </h5>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Verbindung mit minimalem Suchwiderstand suchen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, wird für jeden Startzeitpunkt diejenige Verbindung bestimmt, deren Widerstand entsprechend der eingestellten Formel minimal ist. In der Formel können Sie die Gewichtungsfaktoren für Reisezeit und Umsteigehäufigkeit anpassen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">bikriteriell: zu jeder zulässigen UH eine RZ-minimale Verbindung suchen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, wird für jeden Startzeitpunkt und für jede zulässige Umsteigehäufigkeit (das heißt für alle ganzzahligen Werte&#160;≥ 0 und ≤ <span class="gui_element">Max. Anzahl Umsteigevorgänge</span>) die Verbindung mit der kleinsten Reisezeit berechnet. Ergeben sich dabei für verschiedene Umsteigehäufigkeiten gleiche Reisezeiten, so wird nur die Verbindung mit der geringsten Umsteigehäufigkeit aufgehoben (Dominanz).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Abfahrtszeitpunkte für Suche</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Die Verbindungen für einen Bezirk werden ermittelt, indem für verschiedene Startzeitpunkte eine Bestwegsuche durchgeführt wird. Die Startzeitpunkte ergeben sich aus den Abfahrtszeiten der ÖV-Linien an den angebundenen Haltestellen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">alle vorhandenen nutzen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird für jeden Abfahrtszeitpunkt eine Bestwegsuche durchgeführt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl beschränken</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, können Sie eine maximale Anzahl für die Abfahrtszeitpunkte festlegen. Falls es mehr Abfahrtszeitpunkte gibt, wird die angegebene Anzahl zufällig aus den vorhandenen Abfahrtszeitpunkten ausgewählt.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Die maximal sinnvolle Anzahl beträgt bei einem Umlegungszeitraum von 24 Stunden 1440 – die Anzahl der Minuten pro 24 Stunden.</p>
+                        <p class="CellText">Durch die Beschränkung der Anzahl reduziert sich die Rechenzeit, da nicht alle Verbindungen ermittelt werden müssen. Das Ergebnis wird sich vom Ergebnis einer vollständigen Suche unterscheiden, wobei die Qualität der Ergebnisse vom Verkehrsangebot abhängt. Bei regelmäßigen, meist getakteten Angeboten hat die Einschränkung weniger Einfluss als bei Netzen mit niedriger, unregelmäßiger Bedienung.</p>
+                        <p class="CellText">Die korrekte Berechnung der Bedienungshäufigkeit ist nur möglich, wenn alle Abfahrtszeitpunkte berücksichtigt werden.</p>
+                        <p class="CellText">Wir empfehlen, bei der eingeschränkten Suche die <span class="gui_element">Rückwärtskorrektur</span> auszuwählen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2" style="mc-hyphenate-shortest-prefix: 13;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Rückwärtskorrektur</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, wird für jede gefundene Verbindung, ausgehend vom Ankunftszeitpunkt an der Ausstiegshaltestelle im Zielbezirk, rückwärts für jeden Teil der Verbindung eine spätere Abfahrt der gleichen Linie oder einer anderen Linie gesucht, sodass sich die Fahr- oder Umsteigezeiten reduzieren. So kann für die ermittelte Ankunftszeit eine günstigere Verbindung mit identischen Haltepunkten (Start, alle Umstiege, Ziel), aber späterem Abfahrtszeitpunkt ermittelt werden. Statt der zuerst gefundenen Verbindung wird dann die durch die Rückwärtskorrektur ermittelte verwendet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="End" MadCap:lastBlockDepth="4" MadCap:lastHeight="861" MadCap:lastWidth="582">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1342293">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_66189">
+            </a>Leerfahrten</h4>
+        <p class="Text">Leerfahrten dienen dem Umsetzen eines Fahrzeugs in dem Fall, dass der Endhaltepunkt eines zu leistenden Fahrplanfahrtabschnitts nicht mit dem Starthaltepunkt des im Umlauf nachfolgenden Fahrplanfahrtabschnitts übereinstimmt. Die Erzeugung von Leerfahrten erfolgt in der Umlaufprüfung sowie in beiden Verfahren der Umlaufbildung nach den gleichen Prinzipien und hat direkte Auswirkungen auf das Datenmodell.</p>
+        <p class="Text">Grundsätzlich kann die Erzeugung von Leerfahrten über das Attribut <span class="gui_element">Leerfahrten erzeugen</span> an der Umlaufversion abgeschaltet werden. Umlaufbildungen für diese Umlaufversion sowie die Umlaufprüfung für Umläufe in dieser Umlaufversion können dann keine Leerfahrten berechnen. Stimmen End- und Starthaltepunkt aufeinander folgender Umlaufelemente nicht überein, wird dies als Ortsbruch gekennzeichnet.</p>
+        <p class="Text">Ist die Erzeugung von Leerfahrten grundsätzlich erlaubt, versucht <MadCap:variable name="PTV_Manual.Programmname" />, zum Ortswechsel eine Leerfahrt zu berechnen. Dies erfolgt immer bezüglich des Leerfahrt-Verkehrssystems des Umlaufs. Bei der Umlaufprüfung ist dieses das angegebene Leerfahrt-Verkehrssystem (Eingabeattribut). Bei der Umlaufbildung existieren a priori keine Umläufe. Daher wird hier abhängig von den Parametereinstellungen für jede Konfiguration <MadCap:xref class="sieheUeberschrSeite" href="1_7_Partitionierung.htm#1_betreibermodell_oev_1878159914_1180231"><span style="color: Black;" class="mcFormatColor">(</span><u>Partitionierung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> eines Umlaufs, der entstehen könnte, ein Leerfahrt-Verkehrssystem vorgegeben und an den tatsächlich entstehenden Umläufen abgespeichert. Auf diese Weise ist sichergestellt, dass bei einer späteren Prüfung das gleiche Leerfahrt-Verkehrssystem verwendet wird.</p>
+        <p class="Text">Durch das Attribut <span class="gui_element">Systemrouten-Verwendung</span> der Umlaufversion kann näher bestimmt werden, wie die Berechnung der Leerfahrt erfolgen soll:</p>
+        <ul>
+            <LI class="List0">Systemrouten nicht verwenden</LI>
+        </ul>
+        <p class="List_Text0">Leerfahrten entstehen durch Kurzwegsuche im Netz bezüglich des Leerfahrt-Verkehrssystems. Es können unter anderem der kürzeste Weg bezüglich der Entfernung oder bezüglich der Fahrtzeit (t-ÖVSys) ermittelt werden.</p>
+        <ul>
+            <LI class="List0">Systemrouten verwenden</LI>
+        </ul>
+        <p class="List_Text0">Gibt es für das Leerfahrt-Verkehrssystem eine Systemroute vom Quell- zum Zielhaltepunkt, so werden deren Länge und Fahrzeit als Werte für die Leerfahrt übernommen. Gibt es Fahrzeugkombinations-spezifische Fahrzeiten, haben diese Vorrang. Das entstehende Leerfahrt-Umlaufelement hat eine Relation zur benutzten Systemroute. Systemrouten werden nicht transitiv verwendet. Gibt es keine passende Systemroute, wird eine Kurzwegsuche im Netz durchgeführt.</p>
+        <ul>
+            <LI class="List0">Systemrouten exklusiv verwenden</LI>
+        </ul>
+        <p class="List_Text0">Die möglichen Leerfahrten werden ausschließlich durch Systemrouten beschrieben, eine Kurzwegsuche im Netz findet nicht statt. Gibt es für eine Quelle-Ziel-Beziehung keine passende Systemroute, so ist dort kein Umsetzen möglich.</p>
+        <ul>
+            <LI class="List0">Systemrouten bei Bedarf erzeugen</LI>
+        </ul>
+        <p class="List_Text0">Es gelten zunächst die gleichen Berechnungsregeln wie unter Systemrouten verwenden. Wenn für eine Leerfahrt keine passende Systemroute gefunden wird, wird bei erfolgreicher Kurzwegsuche eine neue Systemroute zwischen dem Haltepunktepaar erzeugt und die Information für die Leerfahrt verwendet. Das entstehende Leerfahrt-Umlaufelement hat eine Relation zur erzeugten Systemroute.</p>
+        <p class="Text">Durch die Auswahl der passenden Option können die entstehenden Leerfahrten sehr detailliert kontrolliert werden.</p>
+    </body>
+</html>

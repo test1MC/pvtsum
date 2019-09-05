@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="AHPI;NMHC;NH;100km;ca;75kg;83kg;UBA;BAFU;www;hbefa;Emis;Nordic;Rls90;Council;of;Emissions;Lm;DStrO;Dv;v_0;bis130;DStg;rls;NOx;HC;SO2;Emiss" MadCap:lastBlockDepth="2" MadCap:lastHeight="581" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_umweltwirkungsmodell_1611065317_1030674">
+            </a>Schadstoff-Emis Verfahren</h3>
+        <p class="Text">
+            <MadCap:keyword term="Schadstoff-Emis Verfahren" />
+            <MadCap:keyword term="Luftschadstoffemissionen:Schadstoff-Emis Verfahren" />Diesem Verfahren liegen Emissionsfaktoren des Schweizer Bundesumweltamtes (BAFU) für die Schadstoffe NOx, CO, HC und SO2 zu Grunde, differenziert nach PKW und LKW. Für jeden Schadstoff wird eine Regressionskurve mit Polynomen 5. Grades verwendet.</p>
+        <p class="Formula">Emiss:= a + b * v + c * v2 + d * v3 + e * v4 + f * v5</p>
+        <p class="Text">Die Parameter a, b, c, d, e und f des Polynoms wurden dabei für die verschiedenen Schadstoffe und getrennt für PKW und LKW für die Bezugsjahre 1990, 1992 und 2000 bestimmt und sind in den Text-Parameterdateien EMI1990.DAT, EMI1992.DAT und EMI2000.DAT enthalten. Für das Bezugsjahr 1990 werden zum Beispiel die folgenden Werte verwendet.</p>
+        <pre class="Input">* Eingabedatei für flexible Emissionsformeln der Schweiz  1990</pre>
+        <pre class="Input">* Es sind Polynome 5.-ten Grades.</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">* a + bx + cx2 + dx3 + ex4 + fx5     (die Zahlen sind im Exponent)</pre>
+        <pre class="Input">*                                    (x ist die Geschwindigkeit PKW oder LKW)</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">*             a      +    bx    +    cx2   +    dx3   +    ex4   +   fx5</pre>
+        <pre class="Input">* NOx PKW</pre>
+        <pre class="Input">           0.75860     2.8004e-2 -9.9187e-4  1.4276e-5 -5.6655e-8     0.0</pre>
+        <pre class="Input">* NOx LKW</pre>
+        <pre class="Input">            24.216    -0.70194    1.5878e-2 -1.5996e-4  7.1751e-7     0.0</pre>
+        <pre class="Input">* CO  PKW</pre>
+        <pre class="Input">            16.425    -0.38357    2.8706e-3 -4.5425e-6      0.0       0.0</pre>
+        <pre class="Input">* CO  LKW</pre>
+        <pre class="Input">            45.380    -3.0729     9.7880e-2 -1.6116e-3  1.3138e-5 -4.1410e-8</pre>
+        <pre class="Input">* HC  PKW</pre>
+        <pre class="Input">            2.2155    -6.6593e-2 8.7930e-4  -5.1330e-6  1.1381e-8     0.0</pre>
+        <pre class="Input">* HC  LKW</pre>
+        <pre class="Input">           46.490     -3.7859    0.13382     2.3153e-3  1.9258e-5 -6.1410e-8</pre>
+        <pre class="Input">* SO2 PKW</pre>
+        <pre class="Input">           101.80     -3.0309    4.4557e-2  -2.8928e-4 7.7300e-7      0.0</pre>
+        <pre class="Input">* SO2 LKW</pre>
+        <pre class="Input">           1980.4     -87.564    2.9120     -5.0701e-2 4.3285e-4  -1.3577e-6</pre>
+        <p class="Text">Nach neueren Messungen werden die tatsächlichen Emissionswerte nach den Berechnungsfaktoren von 1990 im allgemeinen überschätzt, da die Veränderung der Fahrzeugflotten (höherer Ausrüstungsgrad mit Katalysator) zu einer Verringerung der Belastungen pro Fahrzeug beigetragen hat. Die neuesten Schweizer Emissionsfaktoren tragen dieser Veränderung durch Anpassungen an die Jahre 1992 und 2000 Rechnung.</p>
+        <p class="Text">Die Polynom-Näherung der Emissionen in Abhängigkeit von der Geschwindigkeit zeigt beispielsweise für CO für die verschiedenen Bezugsjahre die Verläufe in <MadCap:xref class="Label_Image" href="#1_umweltwirkungsmodell_1611065317_1028153">Abbildung&#160;207</MadCap:xref>.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Pollutants_Emis.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_umweltwirkungsmodell_1611065317_1028153">
+            </a>
+            <a name="1_umweltwirkungsmodell_1611065317_89999">
+            </a>Emissionen in Abhängigkeit von der Geschwindigkeit</p>
+    </body>
+</html>

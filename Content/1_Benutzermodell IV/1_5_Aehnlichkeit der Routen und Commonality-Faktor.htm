@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="505" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="ij;QZ;å;Î;FSB;widerstandskürzeste;ca;rs;CF;0a;0r;ija;BSB;ji;id;ijA;Braess;kapazitäten;Abbiegerbelastungen">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1036720">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_73566">
+            </a>Ähnlichkeit der Routen und Commonality-Faktor</h3>
+        <p class="Text">
+            <MadCap:keyword term="Stochastische Umlegung: Commonality-Faktor" />
+            <MadCap:keyword term="Commonality-Faktor" />
+            <MadCap:keyword term="Cascetta" />
+            <MadCap:keyword term="C-Logit-Ansatz" />Bei der Stochastischen Umlegung werden – ausgehend von einer anderen Umlegung als Startlösung – Routenalternativen für ein Quelle-Ziel-Paar erzeugt, indem der Widerstand der Netzobjekte gemäß einer Verteilung variiert wird, um die unvollständige Information der Verkehrsteilnehmer und die individuellen Unterschiede in ihrer Wahrnehmung und ihren Präferenzen abzubilden. Auf diese Weise ist es möglich, in einem Iterationsschritt nicht nur die widerstandskürzeste Route, sondern auch alternative Routen mit höheren Widerständen zu ermitteln. Nach der Routensuche wird die Nachfrage abhängig vom Routenwiderstand nach einem Aufteilungsmodell (Logit, Box-Cox, Kirchhoff, Lohse oder Lohse mit variablem Beta) auf die Alternativen verteilt. Bei der Aufteilung ist die Ähnlichkeit der Routen zu berücksichtigen. Das Problem der Ähnlichkeit wird an folgendem Beispiel deutlich (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1051392">Abbildung 1</MadCap:xref>):</p>
+        <p class="Text">Während in Fall 1 und 2 die Unabhängigkeit der Routen gewährleistet ist, gibt es in Fall 3 eine Abhängigkeit der Routen 1 und 3, da sich diese zum Teil überlappen. Diese Überlappung muss bei der Routenwahl berücksichtigt werden.</p>
+        <table class="TableStyle-TableStandard" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="47px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="59px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="59px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="40px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="291px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td rowspan="4" class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="Text">Fall 1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="Text">&#160;</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">Anteil</p>
+                    </td>
+                    <td rowspan="4" class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Similarity_Routes_F1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;width: 251px;height: 210px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="Text">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">erwartet</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Logit</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Route 1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">50%</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">50%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Route 2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">50%</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">50%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td rowspan="5" class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="Text">Fall 2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">Anteil</p>
+                    </td>
+                    <td rowspan="5" class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Similarity_Routes_F2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;width: 244px;height: 205px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">erwartet</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Logit</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Route 1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">33%</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">33%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Route 2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">33%</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">33%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Route 3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">33%</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">33%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td rowspan="5" class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="Text">Fall 3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Anteil</p>
+                    </td>
+                    <td rowspan="5" class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Similarity_Routes_F3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;width: 254px;height: 213px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">erwartet</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">Logit</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Route 1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">ca. 28%</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid">33%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Route 2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">ca. 44%</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">33%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Route 3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText_mid">ca. 28%</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText_mid">33%</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1051392">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_89458">
+            </a>Beispiel für die Ähnlichkeit von Routen</p>
+        <p class="Text">Für dieses Problem eignet sich der C-Logit-Ansatz nach Cascetta. Dazu wird ein so genannter Commonality-Faktor <span class="formula">C</span> eingeführt, der die Überlappung zweier Routen <span class="formula">r</span> und <span class="formula">s</span> folgendermaßen misst:</p>
+        <p class="Text">
+            <img src="../Resources/Images/7_97.jpg" /> oder <img src="../Resources/Images/7_106.jpg" /></p>
+        <p class="Text">mit</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">C</span>
+                            <span class="formula_subscript">rs</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Ähnlichkeit der Routen <span class="formula">r</span> und <span class="formula">s</span> (Commonality-Faktor)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula" style="font-size: 80%;vertical-align: sub;">0</span>
+                            <span class="formula_subscript">rs</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Zeit <span class="formula">t</span><span class="formula_subscript">0</span> der gemeinsamen Abschnitte der Routen <span class="formula">r</span> und <span class="formula">s</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula" style="font-size: 80%;vertical-align: sub;">0</span>
+                            <span class="formula_subscript">r</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Zeit <span class="formula">t</span><span class="formula_subscript">0</span> der Route <span class="formula">r</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">l</span>
+                            <span class="formula_subscript">rs</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Länge <span class="formula">l</span> der gemeinsamen Abschnitte der Routen <span class="formula">r</span> und <span class="formula">s</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">l</span>
+                            <span class="formula_subscript">r</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Länge <span class="formula">l</span> der Route <span class="formula">r</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <span class="formula">C</span>
+            <span class="formula_subscript">rs</span> ergibt somit 1, wenn die zwei Routen identisch sind, und 0, wenn sich die zwei Routen nicht überlappen. Der Commonality-Faktor <span class="formula">C</span><span class="formula_subscript">rs</span> wird für alle Routenkombinationen bestimmt. Der Korrekturfaktor <span class="formula">CF</span><span class="formula_subscript">r</span><span class="formula"></span>einer Route <span class="formula">r</span> zu allen anderen Routen <span class="formula">s</span> ist dann folgendermaßen definiert:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_152.jpg" />
+        </p>
+        <p class="Text">Der Korrekturfaktor einer Route <span class="formula">r</span> ist 1, wenn die Commonality-Faktoren <span class="formula">C</span><span class="formula_subscript">rs</span> für alle Routen <span class="formula">s</span> den Wert 0 aufweisen, wenn also die Route keine Überlappungen mit einer anderen Route hat. In allen anderen Fällen ist er kleiner als 1. Der Korrekturfaktor <span class="formula">CF</span><span class="formula_subscript">r</span> wird dann in folgender Weise im Logit-Modell berücksichtigt:</p>
+        <p class="Text">
+            <img src="../Resources/Images/7_56.jpg" />
+        </p>
+        <p class="Text">Im Fall von Box-Cox, Kirchhoff, Lohse oder Lohse mit variablem Beta erfolgt die Berücksichtigung in analoger Weise.</p>
+        <p class="Text">Alternativ kann der Korrekturfaktor <span class="formula">CF</span><span class="formula_subscript">r</span> mit einem einfacheren Ansatz nach Ben Akiva ermittelt werden. Er ist dann folgendermaßen definiert:</p>
+        <p class="Text">
+            <img src="../Resources/Images/7_93.jpg" />
+        </p>
+        <p class="Text">oder </p>
+        <p class="Text">
+            <img src="../Resources/Images/7_94.jpg" />
+        </p>
+        <p class="Text">mit</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="50px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="446px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">0a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Zeit <span class="formula">t</span><span class="formula_subscript">0</span> der Strecke <span class="formula">a</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">0r</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Zeit <span class="formula">t</span><span class="formula_subscript">0</span> der Route <span class="formula">r</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">l</span>
+                            <span class="formula_subscript">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Länge <span class="formula">l</span> der Strecke <span class="formula">a</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">l</span>
+                            <span class="formula_subscript">r</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Länge <span class="formula">l</span> der Route <span class="formula">r</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">N</span>
+                            <span class="formula_subscript">ija</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Anzahl Routen der Quelle-Ziel-Beziehung <span class="formula">ij</span>, die über Strecke <span class="formula">a</span> führen</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

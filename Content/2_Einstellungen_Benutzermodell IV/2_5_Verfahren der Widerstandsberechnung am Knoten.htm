@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="273" MadCap:lastWidth="1062" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls;max;Program;Processor;R';Factor;Stdabw;Lognormalvert;Method;Lotka;Volterra;BPR;BPR2;b’;Knotensteuerung_CR;pseudodynamic;pa;tmodelspecial;ten;Circular;Operations;Planning;ICU1;ICU;ICU2">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1179269">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_32019">
+            </a>Verfahren der Widerstandsberechnung am Knoten</h3>
+        <p class="Text">
+            <MadCap:keyword term="Knotenwiderstand: Verfahren" />Automatisch können Sie die Knotenwiderstände vor oder während oder nach der Umlegung berechnen <MadCap:xref class="Grundlagen" href="2_5_Einstellungen für IV-Umlegungen vornehmen.htm#2_einstellungen_benutzermodell_iv_1682368020_1091394">Siehe "Einstellungen für IV-Umlegungen vornehmen"</MadCap:xref>.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Für Knoten mit <span class="gui_element">Knoten CR-Funktion</span> oder <span class="gui_element">Abbieger CR-Funktion</span> als Methode für den Widerstand am Knoten werden die Widerstände auch ohne Berechnung sofort aktualisiert, sobald Sie ein relevantes Eingabeattribut ändern.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Unabhängig von Umlegungen können Sie die Knotenwiderstände <span class="gui_element">manuell</span> berechnen. Setzen Sie bei Bedarf ausgewählte Knoten aktiv und wählen Sie die geeignete Vorgehensweise.</p>
+        <ul>
+            <LI class="List0">Verfahren <span class="gui_element">Aktualisieren der Widerstände am Knoten</span> im Verfahrensablauf <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Widerstände_aller_Knoten_und_Oberknoten_aktualisieren.htm#2_netz_bearbeiten_23091886_1411327"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstände aller Knoten und Oberknoten aktualisieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">Sonderfunktion <span class="gui_element">Widerstände am Knoten aktualisieren</span> (<span class="gui_element">Mehrfach-Bearbeiten Knoten</span>) im Netzeditor <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Widerstände_am_Knoten_aktualisieren.htm#2_netz_bearbeiten_23091886_2223374"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstände am Knoten aktualisieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">Skript (via COM-Schnittstelle) <MadCap:xref class="sieheUeberschrSeite" href="../2_Mit_Skripten_arbeiten/2_14_Skript-Dateien oder Skript-Code in den Verfahrensablauf einbinden.htm#2_mit_skripten_arbeiten_3619911052_1040238"><span style="color: Black;" class="mcFormatColor">(</span><u>Skript-Dateien in den Verfahrensablauf einbinden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">Für mehrere Knoten durch Ändern von <span class="gui_element">t0</span> über <span class="gui_element">Bearbeiten Knoten </span>oder<span class="gui_element"> Mehrfach-Bearbeiten Knoten </span>im Register <span class="gui_element">Formel</span></LI>
+            <LI class="List0">Für einen einzelnen Knoten</LI>
+            <LI class="List1">durch Ändern von <span class="gui_element">t0</span> in der Knotenliste oder im Knoteneditor oder</LI>
+            <LI class="List1">über das Symbol <img src="../Resources/Images_4_all/ICO_JE_ICA.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 011118px;margin-bottom: 1, 012818px;" />&#160;<span class="gui_element">ICA-Berechnung durchführen</span> im Knoteneditor <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/ICA_berechnen_und_exportieren.htm#2_netz_bearbeiten_23091886_1512935"><span style="color: Black;" class="mcFormatColor">(</span><u>ICA berechnen und exportieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+        </ul>
+    </body>
+</html>

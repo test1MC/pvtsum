@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG;bearbeitung;Bearbeitungs;Nested;80er;sk;Method;of;verteilung;WAW;Stud;Schmiedel;NEmP;NEoP;Sch;GSch;evtl" MadCap:lastBlockDepth="2" MadCap:lastHeight="825" MadCap:lastWidth="697">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_nachfragemodell_2215163117_1026153">
+            </a>
+            <a name="1_nachfragemodell_2215163117_88209">
+            </a>Verkehrserzeugung</h4>
+        <p class="Text">
+            <MadCap:keyword term="Standard-Vier-Stufen-Modell: Verkehrserzeugung" />
+            <MadCap:keyword term="Verkehrserzeugung: Standard-Vier-Stufen-Modell" />
+            <MadCap:keyword term="Quellaufkommen" />
+            <MadCap:keyword term="Zielaufkommen" />
+            <MadCap:keyword term="Nachfrageschichten: Quellaufkommen" />
+            <MadCap:keyword term="Nachfrageschichten: Zielaufkommen" />In diesem Schritt wird für jeden Bezirk und jede Nachfrageschicht das Quell- und Zielaufkommen berechnet. Diese Größen werden auch als Erzeugungen und Anziehungen bezeichnet. Das Quellaufkommen entspricht entweder unmittelbar dem tatsächlichen Quellverkehr des Bezirks, das heißt der Zahl der dort beginnenden Fahrten, oder es drückt lediglich die Attraktivität des Bezirks für die Nachfrageschicht aus und beeinflusst damit die <span class="gui_element">Wahrscheinlichkeit</span> dafür, dass bei der nachfolgenden Verkehrsverteilung Fahrten in diesem Bezirk beginnen. Welche der beiden Bedeutungen gelten soll, bestimmen Sie mit einem Verfahrensparameter der Operation Verkehrsverteilung. Analoges gilt für das Zielaufkommen.</p>
+        <p class="Text">
+            <MadCap:keyword term="Strukturgrößen" />Das Quellaufkommen einer Nachfrageschicht in einem Bezirk hängt von strukturellen oder demografischen Kenngrößen des Bezirks ab, die die Intensität der Quellaktivität beschreiben. Für die Quellaktivität Wohnen können Sie zum Beispiel die Einwohnerzahl des Bezirks verwenden, bei Bedarf nach Alter, Einkommen und/oder Pkw-Besitz disaggregiert. Für die Quellaktivität Arbeit bietet sich die Zahl der Arbeitsplätze an, evtl. nach Branchen aufgeschlüsselt. Legen Sie für solche Kenngrößen am besten benutzerdefinierte Bezirksattribute an. Das Quellaufkommen <span class="formula">Q</span><span class="formula_subscript">i</span> von Bezirk <span class="formula">i</span> wird zunächst nach der Formel</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_2.png" />
+        </p>
+        <p class="Text">berechnet, wobei über alle Strukturgrößen <span class="formula">SG</span><span class="formula_subscript">g</span> summiert wird. <span class="formula">SG</span><span class="formula_subscript">g</span>(<span class="formula">i</span>) bezeichnet den Wert von <span class="formula">SG</span><span class="formula_subscript">g</span> im Bezirk <span class="formula">i</span>. Der Koeffizient <span class="symbol">a</span><span class="formula_subscript">g</span> ist eine Erzeugungsrate, die beschreibt, wie viele Fahrten pro Einheit der Strukturgröße stattfinden. Sie geben die Erzeugungsraten pro Nachfrageschicht und verwendetem Bezirksattribut an. Die gleiche Berechnung wird für das Zielaufkommen <span class="formula">Z</span><span class="formula_subscript">j</span> ausgeführt.</p>
+        <p class="Text">In den meisten Anwendungen ist das Gesamtquellaufkommen einer Nachfrageschicht (summiert über alle Bezirke) gleich dem Gesamtzielaufkommen.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_5.png" style="margin-right: 0, 007938385px;" />
+        </p>
+        <p class="Text">Falls sich die Gleichheit nicht bereits aus den verwendeten Attributen und Erzeugungsraten ergibt, können Sie über einen Verfahrensparameter einstellen, ob sämtliche Quell- und Zielaufkommen so skaliert werden sollen, dass ihre Summen gleich sind. Als Bezugswert können Sie das Gesamtquellaufkommen, das Gesamtzielaufkommen oder Minimum, Maximum oder Mittelwert beider Größen vorgeben.</p>
+        <p class="Text">Sie können die gesamte Berechnung auf die aktiven Bezirke einschränken. Dies bietet sich beispielsweise an, wenn das Netzmodell sowohl den eigentlichen Planungsraum als auch umgebende Kordonbezirke umfasst. Wenn Sie nur den Binnenverkehr des Planungsraums mit dem Nachfragemodell berechnen wollen, so definieren Sie vorab einen Filter nur für die im Planungsraum liegenden Bezirke. Ähnlich gehen Sie vor, wenn die Erzeugungsraten nicht einheitlich für alle Bezirke sind. Unterteilen Sie die Bezirke in Gruppen mit homogenen Erzeugungsraten und fügen Sie für jede solche Gruppe eine Operation Verkehrserzeugung in den Verfahrensablauf ein. Laden Sie vor jeder solchen Operation einen Filter für die Bezirke der Gruppe (Operation Filter lesen <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Filter_lesen.htm#2_netz_bearbeiten_23091886_1105957"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Filter lesen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>) und berechnen Sie die Verkehrserzeugung jeweils nur für die aktiven Bezirke.</p>
+        <p class="Text">Die Ergebnisse der Verkehrserzeugung werden für jeden Bezirk pro Nachfrageschicht in die Bezirksattribute <span class="gui_element">Quell-</span> und <span class="gui_element">Zielaufkommen</span> gespeichert.</p>
+    </body>
+</html>

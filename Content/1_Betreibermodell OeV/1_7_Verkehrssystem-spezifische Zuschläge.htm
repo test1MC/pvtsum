@@ -1,0 +1,718 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="675" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km;max;Richtungs;te;LocationFault;TimeFault;LayoverTimeFault;VehicleFault;Fahrzeugeinheits;IC;Entfernungs;TP">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1348846">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_55493">
+            </a>
+            <span class="gui_element">Verkehrssystem-spezifische Zuschläge</span>
+        </h4>
+        <p class="Text">Jede Fahrkartenart hat eigene Zuschlagsregelungen. Diese enthalten je ÖV-Verkehrssystem Entfernungszuschläge und fixe Zuschläge, wobei für letztere auch ein Verkehrssystem-Rang eingestellt werden kann. Ferner können Sie je Verkehrssystem einen Mindestpreis definieren.</p>
+        <p class="Text">Zuschläge werden für jede Verwendung einer Fahrkartenart unabhängig erhoben. Dies gilt auch dann, wenn genau diese Fahrkartenart mehrfach auf einer Verbindung gelöst wird.</p>
+        <p class="Text">Sie können in jeder Fahrkartenart Zuschläge für alle ÖV-Verkehrssysteme des Netzes definieren. Wirksam sind natürlich immer nur die Einstellungen für diejenigen Verkehrssysteme, deren Linien mit dem Tarifsystem der Fahrkartenart verknüpft sind, das heißt, für die Fahrgäste die Fahrkartenart überhaupt nutzen können.</p>
+        <h5>Mindestpreis</h5>
+        <p class="Text">Der Mindestpreis je Verkehrssystem wird anstelle des ermittelten Gesamtfahrpreises für die Fahrkartenart erhoben, falls</p>
+        <ul>
+            <LI class="List0">das Verkehrssystem auf den von der Fahrkarte überdeckten Teilwegen auftritt und</LI>
+            <LI class="List0">der Gesamtfahrpreis niedriger ist als der Mindestfahrpreis.</LI>
+        </ul>
+        <p class="Text">Der Mindestpreis ist somit keine additive Komponente, sondern ein Mindestwert für den zu erhebenden Gesamtpreis. Da die Regelung für alle Verkehrssysteme gilt, ist letztlich der maximale Mindestpreis aller vorkommenden Verkehrssysteme eine Untergrenze für den Gesamtpreis der Fahrkartenart.</p>
+        <p class="Text">Weiter unten finden Sie ein einfaches Beispiel zu Mindestpreisen <MadCap:xref class="sieheUeberschrSeite" href="#1_betreibermodell_oev_1878159914_1350747">(siehe „Beispiel: Berechnung fixer Zuschläge“ auf Seite&#160;613)</MadCap:xref>.</p>
+        <h5>
+            <a name="1_betreibermodell_oev_1878159914_93527">
+            </a>Fixe Zuschläge</h5>
+        <p class="Text">Fixe Zuschläge sind konstante Aufpreise, die zum Grundpreis der Fahrkartenart addiert werden. Jedes ÖV-Verkehrssystem hat einen eigenen fixen Zuschlag. Für welche Teilwege des mit einer Fahrkarte abgedeckten Teils einer Verbindung ein fixer Zuschlag erhoben wird, ist eine zentrale Eigenschaft der Fahrkartenart. Folgende Optionen stehen dafür zur Auswahl:</p>
+        <ul>
+            <LI class="List0">Zuschlag einmal pro Verkehrssystem erheben,</LI>
+            <LI class="List0">Zuschlag nur für das Verkehrssystem mit dem höchsten Rang erheben,</LI>
+            <LI class="List0">Zuschlag pro Teilweg erheben.</LI>
+        </ul>
+        <p class="Text">Im ersten Fall fällt genau ein fixer Zuschlag für jedes vorkommende Verkehrssystem an - unabhängig davon, wie viele Teilwege mit Linien dieses Verkehrssystems benutzt werden.</p>
+        <p class="Text">Im zweiten Fall kommen die Ränge der Verkehrssysteme aus den Zuschlagsregelungen der Fahrkartenart ins Spiel. Mit Hilfe der Ränge können Sie ausdrücken, dass ein Zuschlag für ein bestimmtes Verkehrssystem (etwa: ICE) den Fahrgast davon entbindet, fixe Zuschläge für andere Verkehrssysteme (etwa: IC) zu zahlen. Haben mehrere Verkehrssysteme auf den von der Fahrkartenart abgedeckten Teilwegen denselben maximalen Rang, so gilt der maximale fixe Zuschlag der ranghöchsten Verkehrssysteme. Ränge haben keinen Einfluss auf entfernungsabhängige Zuschläge.</p>
+        <p class="Text">Im dritten Fall wird für jeden Teilweg aufs Neue ein fixer Zuschlag für das darauf genutzte Verkehrssystem erhoben.</p>
+        <p class="Text">Der Unterschied zwischen den drei Optionen zur Erhebung fixer Zuschläge wird an folgendem Beispiel deutlich:</p>
+        <ul>
+            <LI class="List0">
+                <a name="1_betreibermodell_oev_1878159914_1350747">
+                </a>
+                <a name="1_betreibermodell_oev_1878159914_97248">
+                </a>Beispiel: Berechnung fixer Zuschläge</LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="99px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Verkehrssystem</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Fixer Zuschlag [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Mindestfahrpreis [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Rang</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Entfernungsabhängiger Zuschlag</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">IC</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">4.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_mid">Nein</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">ICE</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">7.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="text-align: right;">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_mid">Ja</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">RE</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText_mid" style="text-align: right;">3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText_mid">Nein</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Für den ICE bestehen folgende entfernungsabhängigen Zuschläge:</p>
+        <table class="TableStyle-TableStandard" style="width: 226px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Anzahl Tarifpunkte</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Preis [GE]</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">0.50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">100</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_right">1.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">200</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">2.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">300</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_right">3.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">400</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">4.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">500</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_right">5.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">600</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">6.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">&gt; 600</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText_right">7.00</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die betrachtete Verbindung enthält vier Teilwege: IC, RE, IC und ICE. Die Tabellen im Anschluss zeigen die Berechnung des Fahrpreises für die drei unterschiedlichen Optionen zur Erhebung fixer Zuschläge:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Zuschlag einmal pro Verkehrssystem:</p>
+        <table class="TableStyle-TableStandard" style="width: 498px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Teilwege der Verbindung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Tarifpunkte</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Grundpreis [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">fixer Zuschlag [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Entfernungs-Zuschlag [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Mindestfahrpreis [GE]</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">IC</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">4.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">RE</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">200</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">IC</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">100</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">(*) 0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">ICE</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">(**) 0.50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_right">(***) 7.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">400</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">4.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">4.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td colspan="5" class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Gesamt-Preis</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText_right">8.50</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text2">(*)&#160;0.00 GE, weil der IC-Zuschlag bereits auf dem ersten Teilweg erhoben wurde.</p>
+        <p class="Text2">(**)&#160;0.50 GE sowohl bei additiver als auch bei anteiliger Berechnung des Entfernungszuschlags <MadCap:xref class="sieheUeberschrSeite" href="#1_betreibermodell_oev_1878159914_1351705">(siehe „Entfernungsabhängige Zuschläge“ auf Seite&#160;615)</MadCap:xref>.</p>
+        <p class="Text2">(***) Der Mindestfahrpreis von 7.00 GE kommt nicht zum Tragen, da der reguläre Fahrpreis mit 8.50 GE höher ist.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Zuschlag nur für das Verkehrssystem mit dem höchsten Rang:</p>
+        <table class="TableStyle-TableStandard" style="width: 498px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Teilwege der Verbindung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Tarifpunkte</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Grundpreis [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">fixer Zuschlag [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Entfernungs-Zuschlag [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Mindestfahrpreis [GE]</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">IC</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">(*) 0.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">RE</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">200</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">IC</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">100</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">(*) 0.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">ICE</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.50 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_right">7.00 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">400</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">4.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.50 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td colspan="4" class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Gesamt-Preis</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText_right">(**) 7.00 </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text2">(*)&#160;Es wird nur der fixe Zuschlag des ranghöchsten Verkehrssystems (ICE) erhoben, auch wenn er – wie in diesem Fall – null beträgt.</p>
+        <p class="Text2">(**)&#160;Der ICE-Mindestfahrpreis wird erhoben, da der ICE benutzt wird und der reguläre Fahrpreis mit 4.50 GE niedriger ist als der ICE-Mindestfahrpreis.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Zuschlag je Teilweg:</p>
+        <table class="TableStyle-TableStandard" style="width: 498px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Teilwege der Verbindung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Tarifpunkte</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Grundpreis [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">fixer Zuschlag [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Entfernungs-Zuschlag [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Mindestfahrpreis [GE]</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">IC</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">4.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">RE</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">200</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">IC</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">100</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">(*) 4.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">ICE</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">50</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">0.50 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_right">(**) 7.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">400</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">4.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">8.00 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">0.50 </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td colspan="5" class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Gesamt-Preis</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText_right">12.50 </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text2">(*)&#160;Anders als im ersten Fall erneute Erhebung des fixen IC-Zuschlags.</p>
+        <p class="Text2">(**) Der Mindestfahrpreis von 7.00 GE kommt nicht zum Tragen, da der reguläre Fahrpreis mit 12.50 GE höher ist.</p>
+        <h5>
+            <a name="1_betreibermodell_oev_1878159914_1351705">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_63375">
+            </a>Entfernungsabhängige Zuschläge</h5>
+        <p class="Text">Jedes ÖV-Verkehrssystem hat eigene Tarifstufen für entfernungsabhängige Zuschläge. Sie werden genau so berechnet wie entfernungsbasierte Grundpreise, also auf Basis der Anzahl Tarifpunkte. Die Anzahl Tarifpunkte wird je Verkehrssystem nur über diejenigen Teilwege summiert, die zu Linien des Verkehrssystems gehören. Auch entfernungsabhängige Zuschläge werden zum Grundpreis der Fahrkartenart addiert.</p>
+        <p class="Text">Es gibt zwei Varianten, wie entfernungsabhängige Zuschläge aus der Preistabelle der Entfernungsstufen abgelesen werden können:</p>
+        <ul>
+            <LI class="List0">anteilige Berechnung</LI>
+            <LI class="List0">additive Berechnung</LI>
+        </ul>
+        <p class="Text">Diese Einstellung ist eine Eigenschaft der Fahrkartenart. Bei anteiliger Berechnung wird der für die Summe der Tarifpunkte aller Teilwege gültige Entfernungszuschlag aus der Preistabelle ermittelt und anschließend mit dem relativen Anteil der Tarifpunkte dieses Verkehrssystems multipliziert. Die additive Berechnung ist einfacher - hier wird je Verkehrssystem unmittelbar der Entfernungszuschlag für die Anzahl Tarifpunkte des Verkehrssystems erhoben.</p>
+        <p class="Text">Folgendes Rechenbeispiel vergleicht die beiden Optionen:</p>
+        <ul>
+            <LI class="List0">Beispiel: Berechnung entfernungsabhängiger Zuschläge</LI>
+        </ul>
+        <p class="Text">Auf einer Verbindung werden 100 Tarifpunkte mit dem ICE zurückgelegt und 50 mit dem IC. Die entfernungsabhängigen Zuschläge lauten wie folgt:</p>
+        <table class="TableStyle-TableStandard" style="width: 396px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="132px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="132px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="132px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Anzahl Tarifpunkte (TP)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">ICE-Zuschlag [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">IC-Zuschlag [GE]</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_right">3.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText_right">2.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">&lt;= 100</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_right">4.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText_right">3.00</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">&lt;= 150</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText_right">5.00</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText_right">3.50</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Entfernungszuschlag bei anteiliger Berechnung:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/9_103.jpg" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/9_104.jpg" />
+        </p>
+        <p class="Text">Entfernungszuschlag bei additiver Berechnung:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/9_105.jpg" />
+        </p>
+    </body>
+</html>

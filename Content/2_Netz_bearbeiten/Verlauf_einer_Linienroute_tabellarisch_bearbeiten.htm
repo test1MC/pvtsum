@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="693" MadCap:lastWidth="513" MadCap:ignoredWords="Nr;No;xls;End;VonHP;NachHP;FzgKomb;Anfahr;Tannenstr">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_netz_bearbeiten_23091886_1203884">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_93808">
+            </a>Verlauf einer Linienroute tabellarisch bearbeiten<a name="23220"></a></h4>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Sie können Linienroutenverläufe nur tabellarisch bearbeiten, wenn bereits Systemroutenverläufe existieren <MadCap:xref class="sieheUeberschrSeite" href="Systemrouten_verwalten.htm#2_netz_bearbeiten_23091886_1743038"><span style="color: Black;" class="mcFormatColor">(</span><u>Systemrouten verwalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:keyword term="Systemrouten: für Linienrouten verwenden" />
+            <MadCap:keyword term="Linienrouten:aus Systemrouten erzeugen" />Alternativ zum manuellen Bearbeiten oder Einfügen von Linienrouten können Sie den Verlauf einzelner Linienrouten tabellarisch verlängern <MadCap:xref class="sieheUeberschrSeite" href="#2_netz_bearbeiten_23091886_1224733"><span style="color: Black;" class="mcFormatColor">(</span><u>Linienroute tabellarisch verlängern</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> oder umrouten <MadCap:xref class="sieheUeberschrSeite" href="#2_netz_bearbeiten_23091886_1225178"><span style="color: Black;" class="mcFormatColor">(</span><u>Linienroute tabellarisch umrouten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Dies geschieht anhand von im Netz vorhandenen Systemroutenverläufen. </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn Sie eine neue Linienroute tabellarisch einfügen, werden die Fahrzeiten der Systemroute als Fahrzeiten für das neue Fahrzeitprofil übernommen.</p>
+                        <p class="CellText">Summe = Anfahrzuschlag + Durchfahrzeit + Abbremszuschlag</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Systemroutenverläufe wiederum können aus Fahrzeitprofilen erzeugt werden <MadCap:xref class="sieheUeberschrSeite" href="Systemrouten_verwalten.htm#2_netz_bearbeiten_23091886_1743038"><span style="color: Black;" class="mcFormatColor">(</span><u>Systemrouten verwalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Sie können Systemroutenverläufe am Start- und am End-Haltepunkt einer Linienroute anfügen, um die Linienroute zu verlängern. Sie können Systemroutenverläufe außerdem nutzen, um den Verlauf einer Linienroute abschnittweise umzurouten. Folgende Punkte sind dabei zu beachten:</p>
+        <ul>
+            <LI class="List0">Da Systemrouten zwingend an Haltepunkten starten und enden, kann nur dann tabellarisch verlängert werden, wenn Start- oder Endpunkt der Linienroute auf Haltepunkten liegen. Ist nur einer dieser Punkte ein Haltepunkt, so kann nur von diesem ausgehend tabellarisch verlängert werden.</LI>
+            <LI class="List0">Falls das Verkehrssystem der Systemroute vom Verkehrssystem der Linienroute abweicht, kann es erforderlich sein, Strecken, Abbieger und Haltepunkte für das Linienrouten-Verkehrssystem zu öffnen. </LI>
+            <LI class="List0">Auf dem neuen Verlaufsabschnitt werden (abgesehen von Start- und End-Haltepunkt) keine Routenpunkte gesetzt. Die Länge des neuen Abschnitts wird aus der Systemroute übernommen.</LI>
+            <LI class="List0">Wird eine bestehende Linienroute bearbeitet, so werden die Fahrzeiten aller Fahrzeitprofile der Linienroute angepasst. Standardmäßig werden die Systemroutenzeiten verwendet.</LI>
+        </ul>
+        <h5 MadCap:autonum="">
+            <a name="2_netz_bearbeiten_23091886_1224733">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_66838">
+            </a>Linienroute tabellarisch verlängern<a name="23221"></a></h5>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Öffnen Sie das Fenster <span class="gui_element">Linienrouten</span>&#160;<MadCap:xref class="sieheUeberschrSeite" href="Fenster_Linienrouten_öffnen.htm#2_netz_bearbeiten_23091886_1681200"><span style="color: Black;" class="mcFormatColor">(</span><u>Fenster Linienrouten öffnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Markieren Sie die Linienroute, die Sie bearbeiten möchten.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie mit der rechten Maustaste in die Netzdarstellung.</p>
+        <p class="Stepresult">Ein Kontextmenü öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie den Eintrag <span class="gui_element">Digitalisieren</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Linienroute digitalisieren </span>öffnet sich.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Klicken Sie auf die Schaltfläche<span class="gui_element"> tabellarisch bearbeiten</span>.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn es im Netz keine geeigneten Systemrouten gibt, ist die Schaltfläche nicht verfügbar.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Tabellarische Bearbeitung der Linienroute</span> öffnet sich.</p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_tabular_lengthening.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Text2">Für jede Systemroute werden die Spalten von <span class="gui_element">VonHP</span>, <span class="gui_element">NachHP</span>, <span class="gui_element">Name</span>, <span class="gui_element">VSys</span>, <span class="gui_element">FzgKomb</span> und <span class="gui_element">Fahrzeit</span> angezeigt. </p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Unter <span class="gui_element">Fahrzeit </span>ist die Summe aus Durchfahrzeit, Anfahr- und Abbremszuschlägen zu verstehen. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">am Start verlängern/</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">am Ende verlängern</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Das Fenster enthält - abhängig von der gewählten Option - eine Liste aller möglichen Verlängerungen des Linienroutenverlaufs am Start oder am Ende. Sie können den Verlauf verlängern, indem Sie eine der folgenden Optionen und einen Systemroutenabschnitt in der Liste auswählen: </p>
+                        <p class="CellText">
+                            <span class="gui_element">am Start verlängern</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird der in der Liste ausgewählte Systemroutenabschnitt am Beginn des bisherigen Verlaufs angefügt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">am Ende verlängern</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird der in der Liste ausgewählte Systemroutenabschnitt am Ende des bisherigen Verlaufs angefügt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Umrouten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über diese Schaltfläche können Sie die Linienroute umrouten <MadCap:xref class="sieheUeberschrSeite" href="#2_netz_bearbeiten_23091886_1225178"><span style="color: Black;" class="mcFormatColor">(</span><u>Linienroute tabellarisch umrouten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur aktive Systemrouten anzeigen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden nur aktive Systemrouten aufgelistet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Auch Schleifen vorschlagen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden auch Systemrouten vorgeschlagen, die eine Rückfahrt zum letzten Halt bedeuten.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Filter</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Filter können Sie die Liste der Systemroutenabschnitte einschränken.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wird eine Einschränkung vorgenommen, so ist die jeweilige Beschriftung anschließend rot. </p>
+                        <p class="CellText">
+                            <span class="gui_element">VonHP/NachHP</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche öffnet sich das Fenster <span class="gui_element">Haltepunkt suchen</span>. Sie können nur einen Haltepunkt auswählen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Abhängig von der gewählten Option<span class="gui_element"> am Start verlängern/am Ende verlängern</span> heißt die Schaltfläche <span class="gui_element">VonHP</span> oder<span class="gui_element"> NachHP</span>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">VSys</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche öffnet sich das Fenster <span class="gui_element">Auswahl Verkehrssysteme</span>. Wählen Sie die zugelassenen Verkehrssysteme aus. </p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Sie können mehrere Verkehrssysteme auswählen, wenn Sie die Taste <span class="shortcut">Strg</span> gedrückt halten.</p>
+                        <p class="CellText">Wenn Sie die Auswahl nicht einschränken, werden alle Verkehrssysteme der Linie angezeigt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">FzgKomb</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche öffnet sich das Fenster <span class="gui_element">Auswahl Fahrzeugkombinationen</span>. Wählen Sie die zugelassenen Fahrzeugkombinationen aus.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Sie können mehrere Fahrzeugkombinationen auswählen, wenn Sie die Taste <span class="shortcut">Strg</span> gedrückt halten.</p>
+                        <p class="CellText">Wenn Sie die Auswahl nicht einschränken, werden alle Fahrzeugkombinationen angezeigt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Undo</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Schaltfläche können Sie den letzten Schritt rückgängig machen und den zuletzt hinzugefügten Abschnitt entfernen. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Autozoom</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche können Sie sich den vollständigen Routenverlauf der markierten Linienroute anzeigen lassen. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Verlängern</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Über diese Schaltfläche bestätigen Sie den verlängerten Verlauf über den in der Liste markierten Abschnitt. </p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Sie können der Linienroute auch einen Abschnitt hinzufügen, indem Sie auf die entsprechende Zeile doppelklicken.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Je nach Einstellung der Parameter für die Wegesuche werden zugehörige Fahrplanfahrten automatisch verlängert, wenn eine Linienroute verlängert wird <MadCap:xref class="sieheUeberschrSeite" href="Linienroute_einfügen.htm#2_netz_bearbeiten_23091886_2956615"><span style="color: Black;" class="mcFormatColor">(</span><u>Linienrouten: Parameter für die Wegesuche einstellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Die aktuelle Einstellung entnehmen Sie einem Hinweis im Fenster <span class="gui_element">Tabellarische Bearbeitung der Linienroute</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="7. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Verlängern</span>.</p>
+        <p class="Stepresult">Die Linienroute wird verlängert und die Systemroutenauswahl entsprechend aktualisiert.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Sie können die Linienroute um Abschnitte verlängern, ohne das Fenster <span class="gui_element">Tabellarische Bearbeitung der Linienroute </span>zwischenzeitlich zu schließen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="8. &#160;">Bestätigen Sie mit <span class="gui_element">Schließen</span>.</p>
+        <p class="Result">Der Digitalisiermodus wird erneut aktiviert.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Sie können beliebig oft zwischen Digitalisiermodus und Fenster <span class="gui_element">Tabellarische Bearbeitung der Linienroute </span>wechseln. Schließen Sie die Verlaufsbearbeitung ab, indem Sie im Fenster <span class="gui_element">Linienroute digitalisieren</span> auf <span class="gui_element">OK</span> klicken.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Beispiel</h5>
+        <p class="Text">Der Verlauf der ausgewählten Linienroute ist im Netz markiert. </p>
+        <p class="Image">
+            <img src="../Resources/Images/AREA_tab_lengthening1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 0, 9997996px;" />
+        </p>
+        <p class="Text">Die dunkle Markierung kennzeichnet die mögliche Verlängerung, die der ausgewählten Zeile im Fenster <span class="gui_element">Tabellarische Bearbeitung der Linienroute </span>entspricht, die helle Markierung den bisherigen Linienroutenverlauf. Wird der obige Verlauf per Doppelklick auf die entsprechende Zeile oder über die Schaltfläche <span class="gui_element">Verlängern</span> übernommen (hier Tannenstr - Weinbergweg), so werden anschließend weitere Verläufe zur Verlängerung ab Haltepunkt Weinbergweg (= dem neuen Von Haltepunkt) vorgeschlagen.</p>
+        <p class="Image">
+            <img src="../Resources/Images/AREA_tab_lengthening2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997767px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Text">Diese werden wiederum im Fenster <span class="gui_element">Tabellarische Bearbeitung der Linienroute</span> aufgelistet.</p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_tabular_lengthening2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <h5 MadCap:autonum="">
+            <a name="2_netz_bearbeiten_23091886_1225178">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_65230">
+            </a>Linienroute tabellarisch umrouten<a name="23209"></a></h5>
+        <p class="Text">Wenn Sie einen Abschnitt der ausgewählten Linienroute umrouten möchten, gehen Sie wie folgt vor.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie im Fenster <span class="gui_element">Tabellarische Bearbeitung der Linienroute</span> auf die Schaltfläche <span class="gui_element">Umrouten</span>.</p>
+        <p class="Stepresult">Das Fenster<span class="gui_element"> Tabellarisches Umrouten</span> öffnet sich.</p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_rerouting.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Step" MadCap:autonum="2. &#160;">Legen Sie den Abschnitt fest, den Sie umrouten möchten.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Von Haltepunkt /Nach Haltepunkt</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Über die Auswahllisten können Sie den Von-Haltepunkt und den Nach-Haltepunkt des umzuroutenden Bereichs wählen. </p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Zur Auswahl stehen alle Routenpunkte auf denen Haltepunkte liegen.</p>
+                        <p class="CellText">Da zwei existierende Routenpunkte der Linienroute ausgewählt werden müssen, können Sie weder den Start- noch den Endhalt verändern. Der Beginn und das Ende können daher nicht umgeroutet werden. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="3. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Tabellarische Bearbeitung der Linienroute</span> öffnet sich.</p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_rerouting2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Stepresult">Der umzuroutende Abschnitt wird im Fenster rot hinterlegt ausgegeben. In der Netzdarstellung wird der im Fenster ausgewählte Vorschlag für den Verlauf der Linienroute in der für <span class="gui_element">Markierung 2</span> eingestellten Farbe gekennzeichnet.</p>
+        <p class="Image">
+            <img src="../Resources/Images/AREA_rerouting.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000044px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie in der Liste den gewünschten Abschnitt aus.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Anfügen</span>.</p>
+        <p class="Stepresult">Der Vorschlag wird übernommen und die Linienroute umgeroutet.</p>
+        <p class="Step" MadCap:autonum="6. &#160;">Routen Sie bei Bedarf weitere Abschnitte um.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wird der gewählte Nach-Haltepunkt erreicht, ist das Umrouten automatisch abgeschlossen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="7. &#160;">Bestätigen Sie Ihre Änderung mit einem Klick auf die Schaltfläche <span class="gui_element">Schließen</span>.</p>
+    </body>
+</html>

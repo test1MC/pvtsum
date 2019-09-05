@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km" MadCap:lastBlockDepth="6" MadCap:lastHeight="669" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/TableStyles/TableStd_TitnoHead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1307634">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_97638">
+            </a>Streckenkosten</h4>
+        <p class="Text">
+            <MadCap:keyword term="ÖV:betriebliche Kennzahlen: Streckenkosten" />Streckenkosten sind Infrastrukturkosten, die bei der Benutzung einer Strecke anfallen. Die Streckenkosten werden gleichmäßig auf die Fahrplanfahrten aufgeteilt, die die Strecke benutzen. Um diese Kosten abzubilden, können pro Strecke und Verkehrssystem bis zu drei Kostenwerte (Attribute <span class="gui_element">Kostensatz1-ÖVSys</span> bis <span class="gui_element">Kostensatz3-ÖVSys</span>) eingegeben werden <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Attribute_und_Optionen_von_Strecken.htm#2_netz_bearbeiten_23091886_1130895"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Attribute und Optionen von Strecken</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Für jeden dieser drei Kostenwerte kann eine der folgenden Kostenarten gewählt werden:</p>
+        <ul>
+            <LI class="List0">Abschreibungskosten, zum Beispiel jährliche Kosten für Abschreibung und Verzinsung, die sich aus den Investitionskosten für die Strecke ergeben</LI>
+            <LI class="List0">Laufende Kosten, zum Beispiel Unterhalts- und Betriebskosten</LI>
+            <LI class="List0">Benutzungskosten, zum Beispiel Gebühren für die Haltepunktnutzung oder Trassengebühren</LI>
+        </ul>
+        <p class="Text">Abhängig von der gewählten Kostenart erfolgt dann die Zuscheidung der Kosten auf die einzelnen Fahrplanfahrten nach den unten beschriebenen Formeln.</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="163px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="332px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Kostenart Abschreibungskosten</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">KostenWert: zum Beispiel Investitionskosten für eine Strecke (Streckenattribute <span class="gui_element">Kostensatz1-ÖVSys</span> bis 3)</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_39.jpg" /> mit q = 1 + p/100</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_4.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Kostenart Laufende Kosten</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">KostenWert: zum Beispiel jährliche Unterhaltskosten für eine Strecke (Streckenattribute <span class="gui_element">Kostensatz1-ÖVSys</span> bis 3)</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_13.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Kostenart Benutzungskosten</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">KostenWert: zum Beispiel Gebühren für die Nutzung einer Strecke (Streckenattribute <span class="gui_element">Kostensatz1-ÖVSys</span> bis 3)</p>
+                        <p class="Formula">
+                            <span class="formula">KostenStr</span>
+                            <span class="formula_subscript">V, S, Sys</span>
+                            <span class="formula"> = KostenWert</span>
+                            <span class="formula_subscript">S, Sys</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">KostenWert</span>
+                            <span class="formula_subscript">S, Sys</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Kostenwert, der als Attribut der Strecke eingegeben wird. Für die laufenden Kosten kann dieser auf AP oder AH bezogen werden. Abschreibungs- und Benutzungskosten lassen sich entweder auf alle Fahrplanfahrten verteilen oder nur auf Fahrplanfahrten, die an diesem Haltepunkt enden oder beginnen <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_ÖV-betriebliche Kennzahlen_ Register Infrastrukturkosten.htm#2_einstellungen_betreibermodell_oev_1111312306_1087041"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>ÖV-betriebliche Kennzahlen: Register Infrastrukturkosten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula">KostenStr</span>
+                            <span class="formula_subscript">AP, S, Sys</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Streckenkosten der Strecke in der Analyseperiode (AP)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">KostenStr</span>
+                            <span class="formula_subscript">V, S, Sys</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Kosten für eine Fahrplanfahrt <span class="formula">V</span>, die die Strecke benutzt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="symbol">S</span>
+                            <span class="formula" style="font-size: 8pt;line-height: 10pt;">V</span>
+                            <span class="formula_subscript">S, Sys</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl aller Fahrplanfahrten des Verkehrssystems <span class="formula">Sys</span>, die die Strecke <span class="formula">S</span> benutzen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">FakVA</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Hochrechnungsfaktor des Verkehrsangebots von AP auf AH <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Attribute_und_Optionen_von_Verkehrstagen.htm#2_netz_bearbeiten_23091886_1141669"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Attribute und Optionen von Verkehrstagen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">AD</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Abschreibungsdauer in Jahren</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">p</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">Zinssatz [%]</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Formeln für die Berechnung von Streckenkosten</p>
+            </caption>
+        </table>
+        <h5>Berechnungsbeispiel Streckenkosten für Fahrplanfahrten in der Analyseperiode</h5>
+        <ul>
+            <LI class="List0">
+                <MadCap:keyword term="ÖV:betriebliche Kennzahlen: Streckenkosten" />Beispiel für Abschreibungskosten</LI>
+        </ul>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="213px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="283px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Kostensatz 2-ÖVSys(Train)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">100000 GE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Zinssatz <span class="formula">p</span></p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">7&#160;%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Abschreibungsdauer <span class="formula">AD</span></p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">10 Jahre</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Hochrechnungsfaktor Verkehrsangebot (<span class="formula">FakVA</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">365</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Anzahl der Fahrplanfahrten des Verkehrssystems Train</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">19</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Kosten 2 Strecke der Strecke 4</p>
+                        <p class="CellText">
+                            <span class="formula">KostStr</span>
+                            <span class="formula_subscript">AP, S, V</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_22.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText">Kosten 2 Strecke der Fahrplanfahrt 58</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">39.008 / 19 = 2.053</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Beispielrechnung für Strecken-Abschreibungskosten</p>
+            </caption>
+        </table>
+        <ul>
+            <LI class="List0">Beispiel für laufende Kosten</LI>
+        </ul>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Kostensatz 3-ÖVSys(Bus)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">100 GE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Strecken, die die Fahrplanfahrt 96 überfährt</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">1 -&gt; 2 -&gt; 3 -&gt; 5 -&gt; 6 -&gt; 7</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Streckenlängen</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">5&#160;km je Strecke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Längenbezug des Kostensatz 3</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Streckenlänge</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Zeitbezug des Kostensatz 3</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Analysehorizont</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Hochrechnungsfaktor Verkehrsangebot (FakVA)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">365</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Kosten 2 Strecken für Anteil der Strecken 1, 2, 3 und 5</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">4 • (20 GE / (19 • 365)) = 0.01154 GE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Kosten 2 Strecken für Anteil der Strecken 6 und 7</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">2 • (20 GE / (38 • 365)) = 0.00288 GE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText">Kosten 2 Strecken für Fahrplanfahrt 96
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">0.01154 + 0.00288 = 0.01442 GE
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Beispielrechnung für laufende Kosten von Strecken</p>
+            </caption>
+        </table>
+        <ul>
+            <LI class="List0">Beispiel für Benutzungskosten (im Beispiel im Attribut <span class="gui_element">Kosten 1 Strecken</span> hinterlegt)</LI>
+        </ul>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Kostensatz 1-ÖVSys(Train)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">100 GE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Länge der Strecke 4</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">10&#160;km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Längenbezug des Kostensatz 1</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body2">
+                        <p class="CellText">Kosten 1 Strecken für Fahrplanfahrt (in diesem Beispiel für alle Fahrten des Zugs gleich)
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">100 GE/km • 10km = 1000 GE
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Beispielrechnung für Strecken-Benutzungskosten</p>
+            </caption>
+        </table>
+    </body>
+</html>

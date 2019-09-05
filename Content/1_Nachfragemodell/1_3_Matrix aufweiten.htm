@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG" MadCap:lastBlockDepth="6" MadCap:lastHeight="571" MadCap:lastWidth="1018">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_nohead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1230523">
+            </a>
+            <a name="1_nachfragemodell_2215163117_26649">
+            </a>Matrix aufweiten</h3>
+        <p class="Text">
+            <MadCap:keyword term="Matrizen:aufweiten" />
+            <MadCap:keyword term="Matrizen:Spalten oder Zeilen hinzufügen" />Sie können externe Matrizen während einer Rechenoperation aufweiten, also Spalten und Zeilen hinzufügen. Dazu wählen Sie eine Rechenoperation, bei denen Sie die externen Matrizen mit Matrizen mit abweichenden Quelle-Ziel-Beziehungen kombinieren.</p>
+        <p class="Text">Hierfür eignen sich alle Rechenoperationen, bei denen ein zweiter Operand benötigt wird, zum Beispiel die Grundrechenarten oder Maximum oder Minimum bilden.</p>
+        <p class="Text">Die Matrixwerte werden folgendermaßen ermittelt:</p>
+        <ul>
+            <LI class="List0">Für die in allen Matrizen vorhandenen Quelle-Ziel-Beziehungen wird die Rechenoperation durchgeführt.</LI>
+            <LI class="List0">Falls eine Quelle-Ziel-Beziehung nicht in allen Matrizen vorhanden ist, wird für die nicht vorhandenen Quelle-Ziel-Beziehungen vor der Rechenoperation der Matrixwert null eingesetzt. Dann wird die Rechenoperation durchgeführt.</LI>
+            <LI class="List0">Quelle-Ziel-Beziehungen, die in keiner der Matrizen vorhanden sind, werden in der Ergebnismatrix mit einem Standardwert belegt.</LI>
+        </ul>
+        <h5 MadCap:autonum="">Beispiel für die Aufweitung einer Matrix</h5>
+        <p class="Text">Zwei Matrizen werden bei der Addition aufgeweitet. Als Standardwert für neue Relationen ist der Wert 99 festgelegt.</p>
+        <ul>
+            <LI class="List0">Matrix im Matrixeditorfenster</LI>
+        </ul>
+        <table class="TableStyle_TableStand_nohead" style="width: 180px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Als Operand ausgewählte Matrix</LI>
+        </ul>
+        <table class="TableStyle_TableStand_nohead" style="width: 225px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">4</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">4</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText_mid">5</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Bei der Addition aufgeweitete Matrix</LI>
+        </ul>
+        <table class="TableStyle_TableStand_nohead" style="width: 270px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">&#160;</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">4</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">99</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText_mid">99</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">4</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">99</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">5</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">99</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

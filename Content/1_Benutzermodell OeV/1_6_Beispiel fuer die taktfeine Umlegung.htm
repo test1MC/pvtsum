@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="661" MadCap:lastWidth="514" MadCap:ignoredWords="VorHst;EinHst;NachHst;QuellHst;ZielHst;linie;Ride;Wid;Branch;Bound;FZ;UZ;UH;Fak;timetab1;par;frueh;spaet;ΔT;gleichabständig;WID;Fzg;18min;Wid1;Wid2;P1;P2;M1;M2;A_DORF;X_STADT;UWZ;Beförd">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_benutzermodell_oev_2318507456_1078688">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_81811">
+            </a>Beispiel für die taktfeine Umlegung</h3>
+        <h5 MadCap:autonum="">
+            <a name="1_benutzermodell_oev_2318507456_82051">
+            </a>Taktermittlung</h5>
+        <p class="Text">Für das in <MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1078792">Abbildung&#160;156</MadCap:xref> dargestellte ÖV-Angebot ermittelt das taktfeine Verfahren für den Untersuchungszeitraum von 5:30 Uhr bis 7:30 Uhr (120 Minuten) die in <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1179474">Tabelle&#160;161</MadCap:xref> dargestellten Takte – wenn diese nach der Methode <span class="path">aus mittlerer Fahrzeugfolgezeit</span> <MadCap:xref class="sieheUeberschrSeite" href="1_6_Taktermittlung.htm#1_benutzermodell_oev_2318507456_1026830"><span style="color: Black;" class="mcFormatColor">(</span><u>Taktermittlung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> berechnet werden.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Linie</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrzeugfolgezeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Takt</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Bus 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">120 / 3 * = 40 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">40 min</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Zug</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">120 / 2 ** = 60 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">60 min</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td colspan="3" class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">* 3 Abfahrten im Untersuchungszeitraum (6.10, 6.55, 7.25) in A-Dorf</p>
+                        <p class="CellText">** 2 Abfahrten im Untersuchungszeitraum (6.25, 7.05) am Bhf</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_oev_2318507456_1179474">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_72840">
+                    </a>Taktermittlung für das Beispiel</p>
+            </caption>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="1_benutzermodell_oev_2318507456_1079109">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_94109">
+            </a>Routensuche</h5>
+        <p class="Text">Wir betrachten den Fall, dass Fahrgastinformation zu Abfahrtszeiten vorliegt und diese auch an Bord der Buslinie verfügbar ist. Das Verfahren wird dann bei der Routensuche von A-Dorf nach X-Stadt zwei Routen ermitteln, wenn beide Alternativen mit positiver Wahrscheinlichkeit besser sind als die jeweils andere.</p>
+        <ul>
+            <LI class="List0">Route 1 (Bus 1, ohne Umsteigen) und</LI>
+            <LI class="List0">Route 2 (Bus 1 und Zug, einmal umsteigen)</LI>
+        </ul>
+        <p class="Text">Die Wahrscheinlichkeit kommt dadurch ins Spiel, dass die Wartezeit auf den Zug bei einem Umstieg im Bereich zwischen 0 und 60 Minuten liegt und hierfür nicht schon von vornherein eine feste Zeitdauer angenommen wird.</p>
+        <p class="Text">Wird kein extrem hoher Umsteigezuschlag vergeben, nutzt ein Teil der Fahrgäste in jedem Fall die Umstiegsmöglichkeit. Dies liegt daran, dass der Zug mit einer gewissen Wahrscheinlichkeit sehr zeitnah zur Ankunft des Busses weiterfährt und die Fahrgäste damit schneller am Ziel sind.</p>
+        <p class="Text">Weil die Wahrscheinlichkeit für einen ungünstigen Anschluss hier aber wesentlich höher ist, wird der größere Teil der Fahrgäste mit dem Bus weiterfahren.</p>
+        <p class="Text">Entscheidend ist also nicht nur die <span class="gui_element">mittlere </span>Wartezeit auf den Zug – diese beträgt im Beispiel 30 Minuten – sondern der gesamte Bereich <span class="gui_element">möglicher</span> Wartezeiten. Aufgrund der vorliegenden Fahrgastinformation erhält jede der beiden Routen genau denjenigen Anteil an der Nachfrage, der der Chance entspricht, dass sie die bessere der beiden Optionen darstellt.</p>
+        <h5 MadCap:autonum="">
+            <a name="1_benutzermodell_oev_2318507456_1078728">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_56429">
+            </a>Routenwahl</h5>
+        <p class="Text">Um im Beispiel eine Aufteilung zu bestimmen, müssen konkrete Widerstandsparameter herangezogen werden. Diese seien nun wie folgt gesetzt:</p>
+        <ul>
+            <LI class="List0">
+                <span class="formula">WID = ERZ</span> • 1,0 + <span class="formula">Anzahl Tarifpunkte </span>• 0,0</LI>
+            <LI class="List0">
+                <span class="formula">Empfundene Reisezeit ERZ = Fahrzeit im Fzg</span> • 1,0</LI>
+        </ul>
+        <p class="Text2">
+            <span class="formula">+ Zu-, Abgangszeit</span> • 1,0</p>
+        <p class="Text2">
+            <span class="formula">+ Gehzeit </span>• 1,0</p>
+        <p class="Text2">
+            <span class="formula">+ Startwartezeit</span> • 1,0</p>
+        <p class="Text2">
+            <span class="formula">+ Umsteigewartezeit </span>• 1,0</p>
+        <p class="Text2">
+            <span class="formula">+ Umsteigehäufigkeit</span> • 2 min</p>
+        <p class="Text">Damit errechnen sich aus der Sicht des mit Bus 1 am Bahnhof ankommenden Fahrgastes die in <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1179512">Tabelle&#160;162</MadCap:xref> dargestellten Widerstände für die noch vor ihm liegenden Teile der Routen.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Route 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Route 2</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Abgangszeit, Gehzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">0 min</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">33 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">16 min</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Umsteigewartezeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">zufällig in [0 min, 60 min]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Umsteigezuschlag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0 • 2 min = 0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">1 • 2 min = 2 min</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">WID = ERZ • 1.0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">33 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">zufällig in [18min, 78 min]</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_oev_2318507456_1179512">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_23717">
+                    </a>Widerstandsberechnung für die Routen im Beispiel</p>
+            </caption>
+        </table>
+        <p class="Text">Aus den Widerständen <span class="formula">Wid1</span> und <span class="formula">Wid2</span> der beiden Routen ergeben sich ihre Anteile <span class="formula">P1</span> und <span class="formula">P2</span> an der Verkehrsnachfrage (hier 90 Fahrten) und somit die absolute Fahrtenzahl auf beiden Routen (<span class="formula">M1</span> und <span class="formula">M2</span>). Dies geschieht wie folgt.</p>
+        <p class="Text">Welche Route attraktiver ist, hängt nur davon ab, ob die zufällige Größe <span class="formula">Wid2</span> größer oder kleiner ist als die konstante Größe <span class="formula">Wid1</span>. Weil <span class="formula">Wid2</span> gleichverteilt im <span class="formula">Intervall</span> [18, 78[ und <span class="formula">Wid1</span> gleich 33 ist, lautet die gesuchte Wahrscheinlichkeit dafür, dass Route 2 gewählt wird, also 0,25 nach folgender Formel.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_48.png" />
+        </p>
+        <p class="Text">Somit entscheiden sich 90 • 0,25 = 22,5 Fahrgäste für den Umstieg in den Zug und 90 • 0,75 = 67,5 Fahrgäste für die Weiterfahrt im Bus.</p>
+        <p class="Text">Es ergibt sich das in <MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1078792">Abbildung&#160;156</MadCap:xref> dargestellte Belastungsbild.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_NetworkVolume_02min_TrPen.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_oev_2318507456_1078792">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_41388">
+            </a>Netzbelastung bei taktfeiner Umlegung, Umsteigezuschlag 2 min</p>
+        <p class="Text">Bei Variation des Umsteigezuschlags ändert sich dieser Anteil wie in <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1179546">Tabelle&#160;163</MadCap:xref> aufgeführt. Für andere Widerstandsparameter gilt Entsprechendes.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Umsteigezuschlag</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Anteil Route 1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Anteil Route 2</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">0,717</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">0,283</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">1 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">0,733</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">0,267</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">2 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">0,750</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">0,250</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">5 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">0,800</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">0,200</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">10 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">0,883</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText_right">0,117</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+                    <a name="1_benutzermodell_oev_2318507456_1179546">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_87226">
+                    </a>Änderung der Anteile bei Variation des Umsteigezuschlags</p>
+            </caption>
+        </table>
+        <p class="Text">Die Kenngrößen für die Beziehung von A_DORF nach X_STADT zeigt <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1179584">Tabelle&#160;164</MadCap:xref>. Dabei handelt es sich um die mittleren Kenngrößen der beiden Routen, die – gewichtet mit der Fahrgastmenge – für die hier verwendeten Widerstandsparameter zusammengefasst sind.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="46px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="43px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="108px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="94px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="120px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="85px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Route</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Menge</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrgäste • Fahrzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrgäste • UWZ</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Fahrgäste • Beförd.-zeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Fahrgäste • UH</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">67,5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">67,5 • 45 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">67,5 • 0 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">67,5 • 45 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">67,5 • 0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">22,5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">22,5 • 28 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">22,5 • 7,5 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">22,5 • 35,5 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">22,5 • 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">90</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3&#160;667,5 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">168,75 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3&#160;836,25 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">22,5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Mittel</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">3&#160;667,5 / 90 = 40,75 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">168,75 / 90 = 1,875 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">3&#160;836,25 / 90 = 42,625 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">22,5 / 90 = 0,25</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 4: ">
+                    <a name="1_benutzermodell_oev_2318507456_1179584">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456__ref507909056">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456__toc507489465">
+                    </a>Mittlere Kenngrößen bei der taktfeinen Umlegung</p>
+            </caption>
+        </table>
+        <p class="Text">Besonders zu beachten ist die auf Route 2 anfallende Umsteigewartezeit von 7,5 Minuten. Hier steht nicht etwa 60 / 2 = 30 Minuten, auch wenn der Takt des Zuges 60 Minuten ist. Dies liegt daran, dass Fahrgäste nur dann auf den Zug wechseln, wenn die Umsteigewartezeit gering genug ist – genauer gesagt, wenn diese Zeit (wie oben gesehen) im Bereich von null und 15 Minuten liegt. In allen anderen Fällen lohnt sich ein Umstieg nicht. Die 7,5 Minuten Umsteigewartezeit bei Wahl von Route 2 stellen also einen bedingten Erwartungswert dar – es handelt sich um die mittlere Wartezeit derjenigen Fahrgäste, für die Route 2 tatsächlich die bessere Alternative ist.</p>
+    </body>
+</html>

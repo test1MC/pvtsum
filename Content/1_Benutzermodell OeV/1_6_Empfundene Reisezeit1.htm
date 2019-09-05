@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;SZ;t1;f'" MadCap:lastBlockDepth="4" MadCap:lastHeight="1670" MadCap:lastWidth="582">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1082810">
+            </a>
+            <MadCap:keyword term="Fahrplanfeine Umlegung: Empfundene Reisezeit" />
+            <MadCap:keyword term="Empfundene Reisezeit" />
+            <a name="1_benutzermodell_oev_2318507456_15202">
+            </a>Empfundene Reisezeit</h4>
+        <p class="Text">ERZ [min] = </p>
+        <p class="Text2">Fahrzeit im Fzg •<span class="formula"> FakFZ </span>•<span class="formula"></span>(in)direktes Fahrtverlauf-Attribut </p>
+        <p class="Text2">+ ÖV-Zusatz-Fahrzeit<span class="formula"></span>•<span class="formula"> FakXZ </span>•<span class="formula"></span>(in)direktes VSys-Attribut</p>
+        <p class="Text2">+ Zugangszeit<span class="formula"></span>•<span class="formula"> FakZZ</span></p>
+        <p class="Text2">+ Abgangszeit<span class="formula"></span>•<span class="formula"> FakAZ</span></p>
+        <p class="Text2">+ Gehzeit • <span class="formula">FakGZ</span></p>
+        <p class="Text2">+ Startwartezeit •<span class="formula"> FakSZ</span></p>
+        <p class="Text2">+ Umsteigewartezeit<span class="formula"></span>•<span class="formula"> FakUZ</span></p>
+        <p class="Text2">+ Umsteigehäufigkeit •<span class="formula"> FakUH</span></p>
+        <p class="Text2">+ Anzahl Betreiberwechsel •<span class="formula"> FakOC</span></p>
+        <p class="Text2">+ Erweiterter Widerstand •<span class="formula"> Faktor</span></p>
+        <h5>Anmerkungen</h5>
+        <ul>
+            <LI class="List0">ÖV-Zusatz-Fahrzeit</LI>
+        </ul>
+        <p class="List_Text0">Die in ÖV-Zusatz-Verkehrssystemen verbrachte Fahrzeit geht als eigene Kenngröße in die ERZ ein und kann mit einem beliebigen Verkehrssystem-Attribut gewichtet werden. Sie wird auch als Kenngröße benötigt.</p>
+        <ul>
+            <LI class="List0">Modellierung von Bonus und Malus</LI>
+        </ul>
+        <p class="List_Text0">Um etwa bekannte Auslastungseffekte (zum Beispiel keine Sitzplatzgarantie) oder andere Aspekte (zum Beispiel Komfort) einer Linie zu modellieren, kann die Fahrzeit mit einem beliebigen Attribut des Fahrtverlaufs oder die ÖV-Zusatzfahrzeit mit einem Attribut des Verkehrssystems multipliziert werden.</p>
+        <ul>
+            <LI class="List0">Umsteigehäufigkeit</LI>
+        </ul>
+        <p class="List_Text0">In die Berechnung der Umsteigehäufigkeit fließen ÖV-Linie und ÖV-Zusatz gleichwertig ein.</p>
+        <ul>
+            <LI class="List0">Anzahl Betreiberwechsel</LI>
+        </ul>
+        <p class="List_Text0">Betreiberwechsel können durch ÖV-Zusatz-Teilwege nicht anfallen.</p>
+        <h5>
+            <MadCap:keyword term="Startwartezeit (fahrplanfeine Umlegung)" />Startwartezeit</h5>
+        <p class="Text">Die Startwartezeit <span class="formula">SZ</span> kann dabei aus der Bedienungshäufigkeit aller Verbindungen über folgende Formel berechnet werden.</p>
+        <p class="Text">
+            <span class="formula">SZ</span> = <span class="formula">A</span> • (Umlegungszeitraum / Bedienungshäufigkeit)<span class="formula_superscript">E</span></p>
+        <ul>
+            <LI class="List0">Mit <span class="formula">A</span> = 0,5 und <span class="formula">E</span> = 1 entspricht die Startwartezeit der halben mittleren Fahrzeugfolgezeit.</LI>
+            <LI class="List0">Mit <span class="formula">A</span> = 1,5 und <span class="formula">E</span> = 0,5 ergibt sich eine Wurzelfunktion, die eine bessere Fahrplankenntnis des Fahrgastes bei niedriger Bedienungshäufigkeit unterstellt.</LI>
+        </ul>
+        <p class="Text">Die Startwartezeit ist für alle Verbindungen einer Quelle-Ziel-Beziehung gleich. Ihre Einbeziehung in die ERZ wirkt daher lediglich wie ein konstanter Zuschlag. Die Ausgabe der <span class="formula">SZ</span> in einer Kenngrößenmatrix kann dagegen für die Netzanalyse sinnvoll sein.</p>
+        <h5>
+            <MadCap:keyword term="Umsteigewartezeit (fahrplanfeine Umlegung)" />
+            <a name="1_benutzermodell_oev_2318507456_41706">
+            </a>Umsteigewartezeit</h5>
+        <p class="Text">Die Umsteigewartezeit modelliert nahtlose Umstiege in der Zeit null oder etwas über null.</p>
+        <p class="Text">Die erweiterte Umsteigewartezeit modelliert, dass Umstiege nicht dann ideal sind, wenn sie in Zeit null (oder knapp darüber) ablaufen, sondern wenn sie sich im Bereich weniger Minuten bewegen. Auch viele Fahrplan-Auskunftssysteme bieten keine Verbindungen an, die „nahtlose“ Anschlüsse enthalten.</p>
+        <p class="Text">Mit der erweiterten Umsteigewartezeit hat der Anwender auch in <MadCap:variable name="PTV_Manual.Programmname" /> die Möglichkeit, zu knappe Umstiege zu bestrafen. Hierzu wird eine nichtlineare Funktion benutzt, die abhängig von der vom Benutzer eingestellten idealen Umsteigewartezeit eine gewichtete Wartezeit errechnet, die dann in die empfundene Reisezeit eingeht. Die erweiterte Umsteigezeit kann anstelle der normalen Umsteigewartezeit in die ERZ-Berechnung eingehen, aber auch als eigene Kenngröße herausgeschrieben werden.</p>
+        <p class="Text">Die verwendete Gewichtungsfunktion <span class="formula">f</span> hat folgende Gestalt. </p>
+        <ul>
+            <LI class="List0">Als Argument erhält sie die tatsächliche Umsteigewartezeit <span class="formula">t</span>, also die Zeit, die zwischen Ankunft des Fahrgasts am Haltepunkt und der Abfahrt der Fahrplanfahrt vergeht.</LI>
+            <LI class="List0">Die gewichtete Wartezeit <span class="formula">f</span>(<span class="formula">t</span>) ist dann definiert als</LI>
+            <LI class="List1">(<span class="formula">t - t</span><span class="formula_subscript">0</span>)<span class="formula_superscript">n</span><span class="formula"> + c</span>, falls <span class="formula">t</span>&#160;&lt;&#160;<span class="formula">t</span><span class="formula_subscript">1</span>, und</LI>
+            <LI class="List1">
+                <span class="formula">f</span>(<span class="formula">t</span>) <span class="formula">= t</span>, falls <span class="formula">t&#160;</span>≥<span class="formula">&#160;t</span><span class="formula_subscript">1</span>.</LI>
+        </ul>
+        <p class="Text2">
+            <span class="formula">t1</span> und <span class="formula">c</span> ergeben sich aus den Randbedingungen <span class="formula">f</span>(<span class="formula">t</span><span class="formula_subscript">1</span>)&#160;=&#160;<span class="formula">t</span><span class="formula_subscript">1</span> und <span class="formula">f'</span>(<span class="formula">t</span><span class="formula_subscript">1</span>)&#160;=&#160;1, also aus der differenzierbaren Verknüpfung beider Funktionsteile an der Stelle <span class="formula">t</span><span class="formula_subscript">1</span>.</p>
+        <ul>
+            <LI class="List0">Entscheidend ist, dass <span class="formula">t</span><span class="formula_subscript">0</span> die als ideal angesehene Umsteigewartezeit ist. Für die erweiterte Umsteigewartezeit darf diese Größe von der benötigten Gehzeit abhängen und ist deshalb folgendermaßen zu parametrisieren:</LI>
+        </ul>
+        <p class="Text2">Faktor mal Gehzeit plus Konstante</p>
+        <p class="Text">Durch die polynomiale Gestalt von <span class="formula">f </span>ist die gewichtete Wartezeit <span class="formula">f</span>(<span class="formula">t</span>) genau an der Stelle <span class="formula">t&#160;=&#160;t</span><span class="formula_subscript">0</span> am geringsten.</p>
+        <p class="Text">Um <span class="formula">t</span><span class="formula_subscript">0</span> herum steigt <span class="formula">f</span>(<span class="formula">t</span>) symmetrisch an.</p>
+        <p class="Text">Bei steigendem t nähert sich die Funktion <span class="formula">f</span>(<span class="formula">t</span>) der linearen Asymptote <span class="formula">t</span> an.</p>
+        <ul>
+            <LI class="List0">Beispiel</LI>
+        </ul>
+        <p class="Text">Standardmäßig ist <span class="formula">n </span>= 2 und <span class="formula">t</span><span class="formula_subscript">0 </span>= 5.</p>
+        <p class="Text">Aus diesen Parametern ergibt sich durch die Randbedingungen <span class="formula">f</span>(<span class="formula">t</span><span class="formula_subscript">1</span>)&#160;=&#160;<span class="formula">t</span><span class="formula_subscript">1</span> und <span class="formula">f'</span>(<span class="formula">t</span><span class="formula_subscript">1</span>)&#160;=&#160;1, dass <span class="formula">t</span><span class="formula_subscript">1</span>&#160;=&#160;5.5 und <span class="formula">c</span>&#160;=&#160;5.25.</p>
+        <ul>
+            <LI class="List0">Findet ein Umstieg in Zeit <span class="formula">t</span>&#160;=&#160;0 statt, wird folgende Gewichtung errechnet, das heißt ein sehr hoher Strafterm:</LI>
+        </ul>
+        <p class="List_Text0">
+            <span class="formula">f</span>(0) = <span class="formula">t</span><span class="formula_subscript">0</span><span class="formula_superscript">2</span><span class="formula"> + c </span>= 25 + 5,25 = 30,25</p>
+        <ul>
+            <LI class="List0">Bei einem Umstieg in Zeit <span class="formula">t</span>&#160;=&#160;3 ergibt sich schon ein bedeutend günstigerer Wert:</LI>
+        </ul>
+        <p class="List_Text0">
+            <span class="formula">f</span>(3) = (3 - <span class="formula">t</span><span class="formula_subscript">0</span>)<span class="formula_superscript">2</span><span class="formula"> + c </span>= 2<span class="formula_superscript">2</span> + 5,25 = 9,25</p>
+        <ul>
+            <LI class="List0">Bei einem Umstieg in Zeit <span class="formula">t</span>&#160;=&#160;5 wird das Optimum erreicht:</LI>
+        </ul>
+        <p class="List_Text0">
+            <span class="formula">f</span>(5) = (5 - <span class="formula">t</span><span class="formula_subscript">0</span>)<span class="formula_superscript">2</span><span class="formula"> + c </span>= 0<span class="formula_superscript">2</span> + 5,25 = 5,25</p>
+        <ul>
+            <LI class="List0">Steigt t weiter an, wird die Gewichtung wieder schlechter, zum Beispiel bei <span class="formula">t&#160;</span>=&#160;10:</LI>
+        </ul>
+        <p class="List_Text0">
+            <span class="formula">f</span>(10) = (10 - <span class="formula">t</span><span class="formula_subscript">0</span>)<span class="formula_superscript">2</span><span class="formula"> + c</span> = 25 + 5,25 = 30,25</p>
+    </body>
+</html>

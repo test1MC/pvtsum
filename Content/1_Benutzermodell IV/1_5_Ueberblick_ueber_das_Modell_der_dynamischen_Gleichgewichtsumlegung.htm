@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="678" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;gruppen;gruppe;ICU1;ICU2;Circular;Planning;Operations;pretimed;fully;actuated;semi;actuation;type;ICAArrivalType;14a;AnteilLKW;6b;ICAEingVerlustZVerw;ICAIstCentral;BusinessDistrict;Central;District;6e;ICASneakers;ICAZuflussFaktor;10b;14b;BusFrequenz;WDDTA;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;FS;BS;xd;KJ;k2;k1;s'';abflüssen;peak;hour;factor;LT;RT;vphpl;HV;bb;Lu;Lpb;Rpb;CBD;ST;Ui;PF;Ii;Ri;PA;bi;Volume;to;ICU;P1;P2;P3;6a;6c;6d;LUo;qr;po;ArrivalType;6j;3a;3b;pedu;pbT;rec;RTA;LTA;abflussganglinien;Wardrop’schen">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1050633">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249392">
+            </a>Überblick über das Modell der dynamischen Gleichgewichtsumlegung</h3>
+        <p class="Text">Das Modell soll die <span class="gui_element">dynamische Verkehrsumlegung innerhalb eines Tages</span> auf Streckennetzen lösen und widmet sich speziell der Simulation von Rückstau. Es basiert auf einem makroskopischen Ansatz, der <span class="gui_element">Dynamischen Gleichgewichtsumlegung</span> (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1038261">Abbildung 1</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_Problem.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000028px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1038261">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_26450">
+            </a>Das Problem Dynamische Gleichgewichtsumlegung</p>
+        <p class="Text">Abgesehen von der zeitlichen Dimension besteht der Hauptunterschied zwischen dem statischen und dem dynamischen Gleichgewicht in den Konsistenzbedingungen zwischen Kanten- und Wegemodellvariablen. Während diese Bedingungen im statischen Fall nur die räumliche Dimension des Systems betreffen, ist im dynamischen Fall auch die zeitliche Dimension betroffen. Für die vorgegebenen Wegebelastungen werden für die Bestimmung der Kantenbelastungen, für die im statischen Fall nur die Kanten-Wege-Inzidenzmatrix benötigt wird, auch die Reisezeiten im Netz einbezogen, also hängt das Flusspropagierungsmodell auch von den Wegewiderständen ab (diagonaler Pfeil in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1038261">Abbildung 1</MadCap:xref>).</p>
+        <p class="Text">Der vorliegende Ansatz der WDDTA enthält drei wesentliche Neuerungen gegenüber existierenden Methoden.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Anstatt eines Simulationsansatzes wird ein Ganglinienansatz verfolgt, wobei der Wert jeder Modellvariable als Ganglinie über die gesamte Analyseperiode bestimmt wird, basierend auf den Ganglinien der anderen Variablen, die jeweils festgehalten werden. Dieser Ansatz, veranschaulicht auf der rechten Seite von <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1050599">Abbildung 2</MadCap:xref>, ist iterativer Natur, da alle Variablen solange neu berechnet werden, bis Konvergenz erreicht ist.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DueTemporalLayer.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1050599">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_50051">
+            </a>Zeitscheibenansatz (linke Seite) und Ganglinienansatz (rechte Seite) für das Problem der kontinuierlichen dynamischen Netzbelastung </p>
+        <p class="Step" MadCap:autonum="2. &#160;">Rückstau kann explizit einfach durch das Hin- und Herwechseln zwischen zwei verschiedenen Netzwiderstandsmodellen modelliert werden. Ohne Rückstau hängt der Kantenwiderstand (das Verhältnis zwischen Kantenzuflussganglinien und -abflussganglinien) nur von den Eigenschaften der jeweiligen Kante ab, wobei mit Rückstau die Kapazitäten stromaufwärts von Engpässen reduziert werden, damit die Aufstellkapazitäten der Kanten nicht überschritten werden (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1050572">Abbildung 3</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_SchemeFixedPointCalc.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">
+            <a name="1_benutzermodell_iv_2033098965_1050572">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_73455">
+            </a>Diagramm des Fixpunktansatzes für die WDDTA mit Rückstau</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Das Wegewahlmodell kann entweder einen deterministischen Ansatz aufweisen, bei dem nur die Wege mit den objektiv geringsten Kosten geladen werden, oder einen Probit-Ansatz, bei dem Widerstände stochastisch gestört werden, um subjektive Nutzerwahrnehmungen zu reflektieren. </p>
+        <p class="Text">Dieser Ansatz hat viele Vorteile:</p>
+        <ul>
+            <LI class="List0">Konsistenz zwischen Weg- und Streckenbelastungen (Netz belasten) wird in derselben Iteration erreicht wie das Gleichgewicht zwischen Nachfrage und Angebot. Mehrstufige Schleifen werden vermieden.</LI>
+            <LI class="List0">Ein impliziter Wegeansatz erzeugt plausible Wegewahrscheinlichkeiten, ohne dass alle Wege aufgezählt werden müssen.</LI>
+            <LI class="List0">Ein großer Vorteil des Ganglinienansatzes besteht in der Möglichkeit, den Umlegungszeitraum in lange Zeitintervalle (üblicherweise 5-15 Minuten) zu unterteilen, statt in wenige Sekunden wie für die Simulationsansätze, was Rechenzeit und Speicher spart. Dadurch wird die Schwierigkeit überwunden, dynamische Umlegungen auf großen Netzen und mit langen Analyseperioden zu rechnen.</LI>
+            <LI class="List0">Die Komplexität des Algorithmus entspricht der der statischen Umlegung multipliziert mit der Anzahl der eingeführten (langen) Zeitintervalle.</LI>
+        </ul>
+        <p class="Text">Für die Rückstaumodellierung wird die Wechselbeziehung zwischen den Belastungen auf angrenzenden Kanten hinsichtlich der zeitlich veränderlichen Kantenabflusskapazitäten propagiert. Der Ansatz besteht dann darin, das Rückstauphänomen als überkritischen Belastungszustand abzubilden, der sich zunächst rückwärts – ausgehend vom letzten Abschnitt einer Kante – hin zum Anfangsabschnitt ausbreitet und dann die Kapazität der stromaufwärtigen Kanten reduziert, was letztendlich deren Belastungszustand beeinflusst.</p>
+        <p class="Text">Die Beschreibung der Dynamischen Gleichgewichtsumlegung ist wie folgt aufgebaut. Zunächst werden die dem kontinuierlichen Modell zu Grunde liegenden Hauptvariablen und einige wichtige Ergebnisse der Flusstheorie vorgestellt, die die Basis des dargestellten Modells bilden <MadCap:xref class="sieheUeberschrSeite" href="1_5_Mathematischer Hintergrund der Dynamischen Gleichgewichtsumlegung.htm#1_benutzermodell_iv_2033098965_1038288"><span style="color: Black;" class="mcFormatColor">(</span><u>Mathematischer Hintergrund der Dynamischen Gleichgewichtsumlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Anschließend werden das Netzwiderstandsmodell und seine Teilmodelle beschrieben <MadCap:xref class="sieheUeberschrSeite" href="1_5_Netzwiderstandsmodell.htm#1_benutzermodell_iv_2033098965_1038494"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzwiderstandsmodell</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Dann folgt die Darstellung der Netzbelastungsfunktion <MadCap:xref class="sieheUeberschrSeite" href="1_5_Umlegung der Nachfrage auf das Netz (Netzbelastung).htm#1_benutzermodell_iv_2033098965_1038931"><span style="color: Black;" class="mcFormatColor">(</span><u>Umlegung der Nachfrage auf das Netz (Netzbelastung)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>, gefolgt von einer Beschreibung des Gesamtmodells der Dynamischen Gleichgewichtsumlegung sowohl für den deterministischen als auch den Probit-Ansatz <MadCap:xref class="sieheUeberschrSeite" href="1_5_Das Gesamtmodell.htm#1_benutzermodell_iv_2033098965_1039062"><span style="color: Black;" class="mcFormatColor">(</span><u>Das Gesamtmodell</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Ein numerisches Beispiel inklusive Analyse rundet die Verfahrensbeschreibung ab <MadCap:xref class="sieheUeberschrSeite" href="1_5_Beispiel fuer die Dynamische Gleichgewichtsumlegung.htm#1_benutzermodell_iv_2033098965_1039107"><span style="color: Black;" class="mcFormatColor">(</span><u>Beispiel für die Dynamische Gleichgewichtsumlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+    </body>
+</html>

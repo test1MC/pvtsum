@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="560" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;1a;1b;Layern">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1123722">
+            </a>
+            <MadCap:keyword term="Flächenmodell: mehrteilige Flächen" />
+            <MadCap:keyword term="Flächenmodell: Flächen normalisieren" />
+            <a name="1_netzmodell_1240632468_14472">
+            </a>Mehrteilige Flächen</h3>
+        <p class="Text">
+            <MadCap:keyword term="Normalisieren" />Eine Fläche kann aus mehreren Teilflächen bestehen (mehrteilige Flächen). Generell ist eine mehrteilige Fläche definiert als eine Menge so genannter Teilflächen. Jede Teilfläche ist ein Polygon mit einem Vorzeichen. Dieses ist positiv, wenn die Koordinaten das Polygon entgegen dem Uhrzeigersinn beschreiben und negativ, wenn die Koordinaten mit dem Uhrzeigersinn angeordnet sind. Also werden positive Teilflächen linksherum (also gegen den Uhrzeigersinn) digitalisiert, negative Teilflächen rechtsherum. So wird beim interaktiven Bearbeiten von Polygonen im Netzeditor in eindeutiger Weise ausgedrückt, welche Art von Teilfläche gemeint ist. Diese Orientierung einer Teilfläche ist daher eine wesentliche Objekteigenschaft. Positive Teilflächen sind Teil der Fläche, negative Teilflächen werden subtrahiert (sie werden als Löcher bezeichnet).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Polygon_with_hole.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Positive und negative Teilflächen</p>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> normiert die Definition jeder existierenden Fläche automatisch. Teilflächen können einander nicht schneiden und eine positive Teilfläche wird immer nur negative Teilflächen (direkt) enthalten und umgekehrt.</p>
+        <h5>Was ist eine normalisierte Fläche und warum muss normalisiert werden?</h5>
+        <p class="Text">Damit geometrische Operationen (wie zum Beispiel Verschneiden oder die Berechnung von Gebietskennzahlen) auch für komplexe Flächen effizient durchgeführt werden können, muss eine normalisierte Repräsentation verwendet werden. <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182697">Tabelle&#160;38</MadCap:xref> zeigt einige Beispiele für die Normalisierung von Flächen.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="78px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="209px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="209px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Vorgegebene Fläche</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Normalisierte Form der Fläche</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_MultiPolygons1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 0, 9997805px;" />
+                        </p>
+                        <p class="CellText">zwei getrennte Teilflächen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_MultiPolygons2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000059px;" />
+                        </p>
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">OK – Fläche bleibt unverändert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_MultiPolygons3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 0, 9997805px;" />
+                        </p>
+                        <p class="CellText">zwei überlappende Teilflächen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_MultiPolygons4.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000063px;" />
+                        </p>
+                        <p class="CellText">nicht OK – beide Teilflächen werden vereinigt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_MultiPolygons5.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000059px;" />
+                        </p>
+                        <p class="CellText">eine Teilfläche mit einem Loch</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_MultiPolygons6.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000059px;" />
+                        </p>
+                        <p class="CellText">OK – Fläche bleibt unverändert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">4</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_MultiPolygons7.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000067px;" />
+                        </p>
+                        <p class="CellText">eine Teilfläche mit einem Loch, welches den Rand der Fläche schneidet</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_MultiPolygons8.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 0, 9997767px;" />
+                        </p>
+                        <p class="CellText">nicht OK – das Loch entfällt, die Teilfläche wird angepasst</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">5</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_MultiPolygons9.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000067px;" />
+                        </p>
+                        <p class="CellText">eine Teilfläche, deren Rand sich selbst schneidet</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_MultiPolygons10.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000067px;" />
+                        </p>
+                        <p class="CellText">nicht OK – das negativ umlaufende Stück wird entfernt</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_netzmodell_1240632468_1182697">
+            </a>
+            <a name="1_netzmodell_1240632468_71551">
+            </a>Beispiele für die Normalisierung von Flächen</p>
+        <p class="Text">Eine Fläche ist somit normalisiert, falls die folgenden Bedingungen erfüllt sind:</p>
+        <ul>
+            <LI class="List0"> Teilflächen gleicher Orientierung enthalten keine Überlappungen. Das heißt</LI>
+            <LI class="List1">alle positiven Teilflächen sind getrennt (Kriterium 1a).</LI>
+            <LI class="List1">alle negativen Teilflächen sind untereinander getrennt sind und berühren die offene Ebene nicht (Kriterium 1b).</LI>
+            <LI class="List0">Der Rand jeder Teilfläche schneidet sich nicht selbst (Kriterium 2).</LI>
+        </ul>
+        <p class="Text">Um zu verstehen, warum eine normalisierte Repräsentation geometrische Rechenverfahren vereinfacht, genügt das einfache Beispiel der Flächeninhaltsberechnung. Bei normalisierten Flächen kann der Inhalt der Gesamtfläche direkt als Summe der Flächeninhalte ihrer Teilflächen errechnet werden. Das Vorzeichen hängt dabei unmittelbar von der Orientierung ab. Ohne Normalisierung müssten die Inhalte aller auftretenden Schnittmengen vom Ergebnis abgezogen werden. Dies würde einen signifikanten Anstieg der Rechenzeit bedeuten. Die Rechenzeit steigt vor allem deshalb, weil die bloße Bestimmung der Schnittmengen bei Mehrfachüberlappungen ein algorithmisch komplexer Vorgang ist.</p>
+        <h5>Wann wird normalisiert?</h5>
+        <p class="Text">Die normalisierte Form von Flächen ist Voraussetzung für eine effiziente Verarbeitung von Polygonen in diversen geometrischen Rechenoperationen. Daher wird diese Eigenschaft beim interaktiven Digitalisieren und Bearbeiten von Polygonen automatisch sichergestellt. Die oben gezeigten Beispiele können interaktiv zunächst genauso eingefügt werden, wie sie in der linken Spalte dargestellt sind. Beim Verlassen des Digitalisieren-Modus führt <MadCap:variable name="PTV_Manual.Programmname" /> jedoch automatisch die Normalisierung durch. Auch beim Einlesen von Flächen aus Netzdateien oder Shapefiles kann diese Eigenschaft geprüft und gegebenenfalls durch Umwandlung der Eingabedaten hergestellt werden. Falls die Polygone bereits normalisiert vorliegen oder die Daten nicht für geometrische Rechenoperationen benötigt werden (zum Beispiel bei POI-Layern, die lediglich als Hintergrund dienen), kann dabei jedoch optional auf die Prüfung und Herstellung der normalisierten Form verzichtet und so der Zeitaufwand für den Import reduziert werden.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Werden Flächen, die nur für eine Hintergrunddarstellung gedacht sind und daher beim Import nicht normalisiert wurden, zu einem späteren Zeitpunkt doch für Rechenoperationen benötigt, beispielsweise für das Verschneiden, kann es zu fehlerhaften Ergebnissen kommen, weil der normalisierte Zustand Voraussetzung für solche Operationen ist. Wenn Sie nicht sicher sind, in welchem Zustand sich Flächen befinden, können Sie die Flächen vorher explizit normalisieren <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Alle_Flächen_normalisieren.htm#2_netz_bearbeiten_23091886_2459822"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Alle Flächen normalisieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Wie genau wird normalisiert (für Experten)?</h5>
+        <p class="Text">Beim Normalisieren kommt es auf die Reihenfolge an, in der die Teilflächen einer Fläche definiert werden. Diese Reihenfolge ist zum Beispiel in der Netzdatei durch die Tabelle Flächenelemente definiert.</p>
+        <p class="Text">Eine Vorbehandlung des Teilflächenpolygons ist erforderlich, falls sich sein Rand selbst schneidet (siehe <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182697">Tabelle&#160;38</MadCap:xref>, Beispiel 5). In diesem Fall wird die Teilfläche in schnittfreie Segmente zerlegt. Die Zerlegung erfolgt so, dass sich sämtliche Komponenten auch gegenseitig nicht schneiden. Die Orientierung der Segmente bleibt erhalten, das heißt ein Schnörkel wie in <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182697">Tabelle&#160;38</MadCap:xref>, Beispiel 5 wird als negative Teilfläche aufgefasst. Die so ermittelten positiven und negativen Polygone werden mit dem Zwischenergebnis der zuvor betrachteten Teilflächen vereinigt. Bei schnittfreiem Rand ist keine Zerlegung erforderlich. Das vorgegebene Polygon kann direkt mit dem Zwischenergebnis der zuvor betrachteten Teilflächen vereinigt werden.</p>
+        <p class="Text">Bei dieser Vereinigungsoperation kann es vorkommen, dass Teilflächen in einfacher Form verschmolzen werden müssen. In <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182697">Tabelle&#160;38</MadCap:xref>, Beispiel 2, geschieht dies für zwei positive Teilflächen. Es kann aber auch der Fall auftreten, dass Teilflächen ganz entfallen und andere Teilflächen ihre Form verändern. Dies ist etwa in <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182697">Tabelle&#160;38</MadCap:xref>, Beispiel 4 der Fall.</p>
+        <p class="Text">Diese Vorgehensweise impliziert insbesondere, dass die erste Teilfläche keine negative Orientierung haben darf. In diesem Fall greift sofort Kriterium 1b, das heißt die Teilfläche wird verworfen.</p>
+        <p class="Text">Besondere Beachtung muss der Frage geschenkt werden, ob die Orientierung eines Teilflächenpolygons zum Enklave-Attribut ihres Flächenelement-Eintrags passt. Beim Netzlesen können hier widersprüchliche Angaben vorliegen. In diesem Fall gewinnt die Enklave-Eigenschaft, das heißt die Orientierung des Polygons wird gegebenenfalls umgekehrt. Der Vorteil dieser Regelung ist, dass eine Teilfläche in der Netzdatei durch Veränderung eines einzigen Attributs von einem positiven zu einem negativen Polygon gemacht werden kann oder umgekehrt.</p>
+    </body>
+</html>

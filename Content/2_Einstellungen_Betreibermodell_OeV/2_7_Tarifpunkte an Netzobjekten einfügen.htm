@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="311" MadCap:lastWidth="1062" MadCap:ignoredWords="Fahrzeugkombinations;kms;HP30;HP40;Init;Linienleistungs;erfolgsrechnung;TP;max;Anz;End;Mindest;Entf;bzw;hh;ss;xls;Leerkm;DBGes;ErlösGes;DBProz;DBLinBef;LinBef;Wartungs;FzgKomb;Erw;Dez">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_einstellungen_betreibermodell_oev_1111312306_1044422">
+            </a>
+            <a name="2_einstellungen_betreibermodell_oev_1111312306_65161">
+            </a>Tarifpunkte an Netzobjekten einfügen</h3>
+        <p class="Text">Tarifpunkte können Sie für zwei Netzobjekttypen anlegen:</p>
+        <ul>
+            <LI class="List0">Eingabe-Attribute <span class="gui_element">Anzahl Tarifpunkte</span>, <span class="gui_element">Anzahl Tarifpunkte für Einstieg</span>, <span class="gui_element">Anzahl Tarifpunkte für Durchfahrt</span>, <span class="gui_element">Anzahl Tarifpunkte für Ausstieg</span> an Fahrzeitprofil-Elementen</LI>
+            <LI class="List0">Eingabe-Attribut <span class="gui_element">Anzahl Tarifpunkte-VSys</span> je ÖV-Verkehrssystem an Strecken</LI>
+        </ul>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Zusätzlich wird für Fahrzeitprofil-Elemente das Ausgabe-Attribut <span class="gui_element">Anzahl Strecken-Tarifpunkte</span> verwaltet. Sein Wert entspricht der Summe des Streckenattributs <span class="gui_element">Anzahl Tarifpunkte-VSys</span> für das Verkehrssystem der Linie des Fahrzeitprofils für die überfahrene Streckenfolge von diesem Fahrzeitprofil-Element bis zum nächsten Element dieses Fahrzeitprofils. </p>
+                        <p class="Text">Bei einem Strecken-Haltepunkt als Fahrzeitprofil-Element wird für diese Strecke nur der überfahrene Längenanteil berücksichtigt. Nur der anteilige Wert des Streckenattributs <span class="gui_element">Anzahl Tarifpunkte-VSys</span> fließt in den Wert von Ausgabe-Attribut <span class="gui_element">Anzahl Strecken-Tarifpunkte</span> ein.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Basierend auf dem Ergebnis einer ÖV-Umlegung ermittelt die Erlösberechnung die Anzahl der überfahrenen Tarifpunkte je ÖV-Weg aus der Anzahl überfahrener Tarifpunkte der ÖV-Teilwege als Summen aus Anzahl überfahrener Strecken-Tarifpunkte des Verkehrssystems und Anzahl Tarifpunkte der überfahrenen Fahrzeitprofil-Elemente. Die Gesamtsumme überfahrener Tarifpunkte des Fahrgastwegs wird mit dem Wert des Parameters <span class="gui_element">Erlös je Tarifpunkt</span> multipliziert.</p>
+    </body>
+</html>

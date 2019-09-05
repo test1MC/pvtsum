@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:lastBlockDepth="8" MadCap:lastHeight="616" MadCap:lastWidth="510" MadCap:ignoredWords="Symmetrize;bzw;zeilen;$O;usw;of;gpm;VonKnoten;ViaKnoten;LinBef;Anz;Kum;cod;max;Δ;Dez">
+    <head>
+        <link href="../Resources/TableStyles/PTVStandard_SingleCells1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_nachfrage_modellieren_1800171850_1526896">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_48308">
+            </a>Parameter von VStromFuzzy</h4>
+        <h5 MadCap:autonum="">VStromFuzzy: <span class="gui_element">Zählwerte</span><a name="30150"></a></h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="101px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="395px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur Netzobjekte mit Belastung &gt;&#160;0 und Zählwert &gt;&#160;0 verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden nur Netzobjekte verwendet, die eine Belastung und einen Zählwert größer 0 besitzen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Gezählte Belastungen beziehen sich nur auf aktive Linienroutenelemente</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden die ÖV-Zählwerte nur auf aktive Linienroutenelemente bezogen. Die Belastungen bzw. Ein-/Aussteiger werden nach folgenden Regeln berücksichtigt:</p>
+                        <ul>
+                            <LI class="List0Tab">Streckenbelastung: Das Linienroutenelement am VonKnoten der Strecke muss aktiv sein.</LI>
+                            <LI class="List0Tab">Abbiegerbelastung: Die Linienroutenelemente am VonKnoten und am ViaKnoten des Abbiegers müssen aktiv sein.</LI>
+                            <LI class="List0Tab">Screenlinebelastung: Das Linienroutenelement am VonKnoten der die Screenline querenden Strecke muss aktiv sein.</LI>
+                            <LI class="List0Tab">Linienbelastung (LinBef): Das erste Linienroutenelement des Teilwegs muss aktiv sein.</LI>
+                            <LI class="List0Tab">Aussteiger an einem Haltestellenbereich: Das letzte Linienroutenelement des Teilwegs muss aktiv sein. Es handelt sich um das Linienroutenelement vor dem Linienroutenelement des Ausstiegshaltepunkts.</LI>
+                            <LI class="List0Tab">Einsteiger an einem Haltestellenbereich: Das erste Linienroutenelement des Teilwegs muss aktiv sein.</LI>
+                        </ul>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option wird nur angezeigt, wenn Sie ein Nachfragesegment des Modus ÖV gewählt haben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Bezirke</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Zeilen- und Spaltensummen der Matrix zugrunde legen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Werte von numerischen (eventuell benutzerdefinierten) Bezirksattributen als Zählwerte verwendet. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Bei der Bestimmung des Quell-/Zielverkehrs dürfen Sie im ÖV nur dann Ein-/Aussteigerzahlen verwenden, wenn diese keine Umsteiger enthalten.</p>
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Bezirke</span>
+                        </p>
+                        <p class="CellText">Wenn nicht für alle Bezirke Zählwerte vorliegen, können Sie mit der Option ausschließlich die Werte der Bezirke berücksichtigen, die aktiv gesetzt sind <MadCap:xref class="siehe_1" href="../2_Netz_bearbeiten/Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über Filter aktiv und passiv setzen</u></MadCap:xref><MadCap:xref class="siehe_2" href="../2_Netz_bearbeiten/Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Zeilensumme</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Bezirksattribut, das die Zählwerte für den Quellverkehr enthält, in einem separaten Fenster auswählen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Spaltensumme</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Bezirksattribut, das die Zählwerte für den Zielverkehr enthält, in einem separaten Fenster auswählen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">+/-</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Attribut, das die Schwankungsbreiten enthält, in einem separaten Fenster auswählen <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Methodische Grundlagen von VStromFuzzy.htm#1_nachfragemodell_2215163117_1032471">Siehe "Methodische Grundlagen von VStromFuzzy"</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Strecken</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">gezählte Streckenbelastungen zugrunde legen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Werte von numerischen (eventuell benutzerdefinierten) Streckenattributen als Zählwerte verwendet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Strecken</span>
+                        </p>
+                        <p class="CellText">Wenn nicht für alle Strecken Zählwerte vorliegen, können Sie mit der Option ausschließlich die Werte der Strecken berücksichtigen, die aktiv gesetzt sind <MadCap:xref class="siehe_1" href="../2_Netz_bearbeiten/Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über Filter aktiv und passiv setzen</u></MadCap:xref><MadCap:xref class="siehe_2" href="../2_Netz_bearbeiten/Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Belastung</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Streckenattribut, das die Belastungszählwerte für die Strecke enthält, in einem separaten Fenster auswählen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">+/-</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Attribut, das die Schwankungsbreiten enthält, in einem separaten Fenster auswählen <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Methodische Grundlagen von VStromFuzzy.htm#1_nachfragemodell_2215163117_1032471">Siehe "Methodische Grundlagen von VStromFuzzy"</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Abbieger und Oberabbieger</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">gezählte Abbieger- und Oberabbiegerbelastungen zugrunde legen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Werte von numerischen (eventuell benutzerdefinierten) Abbieger- oder Oberabbiegerattributen als Zählwerte verwendet.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Möchten Sie ein benutzerdefiniertes Attribut für Oberabbieger verwenden, müssen Sie dieses Attribut auch für Abbieger anlegen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Abbieger und Oberabbieger</span>
+                        </p>
+                        <p class="CellText">Wenn nicht für alle Abbieger oder Oberabbieger Zählwerte vorliegen, können Sie mit der Option ausschließlich die Werte der Abbieger oder Oberabbieger (sofern ein Oberknoten definiert ist) berücksichtigen, die aktiv gesetzt sind <MadCap:xref class="siehe_1" href="../2_Netz_bearbeiten/Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über Filter aktiv und passiv setzen</u></MadCap:xref><MadCap:xref class="siehe_2" href="../2_Netz_bearbeiten/Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Belastung</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Abbiegerattribut, das die Belastungszählwerte für den Abbieger oder Oberabbieger enthält, in einem separaten Fenster auswählen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">+/-</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Attribut, das die Schwankungsbreiten enthält, in einem separaten Fenster auswählen <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Methodische Grundlagen von VStromFuzzy.htm#1_nachfragemodell_2215163117_1032471">Siehe "Methodische Grundlagen von VStromFuzzy"</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Screenlines</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">gezählte Belastungen in Richtung der Screenline zugrunde legen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Werte von Screenlineattributen (numerisch oder benutzerdefiniert) als Zählwerte verwendet. Dabei werden nur die Belastungen in Richtung der Screenline zugrunde gelegt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Screenlines</span>
+                        </p>
+                        <p class="CellText">Wenn nicht für alle Screenlines Zählwerte vorliegen, können Sie mit der Option ausschließlich die Werte der Screenlines berücksichtigen, die aktiv gesetzt sind <MadCap:xref class="siehe_1" href="../2_Netz_bearbeiten/Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über Filter aktiv und passiv setzen</u></MadCap:xref><MadCap:xref class="siehe_2" href="../2_Netz_bearbeiten/Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Belastung</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Screenlineattribut, das die Belastungszählwerte für die Screenline enthält, in einem separaten Fenster auswählen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">+/-</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Attribut, das die Schwankungsbreiten enthält, in einem separaten Fenster auswählen <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Methodische Grundlagen von VStromFuzzy.htm#1_nachfragemodell_2215163117_1032471">Siehe "Methodische Grundlagen von VStromFuzzy"</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Gesamtverkehr</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">gezählten Gesamtverkehr (alle Nachfragesegmente) zugrunde legen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird der gezählte Gesamtverkehr verwendet.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Es wird der gezählte Gesamtverkehr für alle Nachfragesegmente zusammen verwendet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Gesamtverkehr</span>
+                        </p>
+                        <p class="CellText">Geben Sie in das Eingabefeld den Ausgangswert für den gezählten Gesamtverkehr ein.</p>
+                        <p class="CellText">
+                            <span class="gui_element">+/-</span>
+                        </p>
+                        <p class="CellText">Geben Sie in das Eingabefeld die Schwankungsbreite ein.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">VStromFuzzy: Zählwerte IV<a name="30156"></a></h5>
+        <table class="TableStyle-TipHint1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="496px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Das Register <span class="gui_element">Zählwerte IV</span> wird nur angezeigt, wenn Sie ein Nachfragesegment des Modus IV gewählt haben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1" style="mc-hyphenate-shortest-prefix: 11;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Fahrstreifengruppen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">gezählte Belastungen auf Fahrstreifengruppen zugrunde legen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden numerische Werte von Fahrstreifen als Zählwerte verwendet. Mehrere Fahrstreifen werden dabei zu Fahrstreifengruppen zusammengefasst, wenn es Mischfahrstreifen gibt, die das Abbiegen in verschiedene Richtungen ermöglichen <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Signalisierte Knoten.htm#1_benutzermodell_iv_2033098965_1171292">Siehe "Signalisierte Knoten"</MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wenn ein Fahrstreifen einer Gruppe den Wert null enthält, erhalten Sie eine Warnung.</p>
+                        <p class="CellText">
+                            <span class="gui_element">nur Fahrstreifengruppen an aktiven Knoten</span>
+                        </p>
+                        <p class="CellText">Wenn nicht für alle Knoten Zählwerte vorliegen, können Sie mit der Option ausschließlich die Werte der Fahrstreifen von aktiven Knoten berücksichtigen <MadCap:xref class="siehe_1" href="../2_Netz_bearbeiten/Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über Filter aktiv und passiv setzen</u></MadCap:xref><MadCap:xref class="siehe_2" href="../2_Netz_bearbeiten/Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Belastung</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Fahrstreifenattribut, das die Belastungszählwerte für die Fahrstreifengruppe enthält, in einem separaten Fenster auswählen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">+/-</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Attribut, das die Schwankungsbreiten enthält, in einem separaten Fenster auswählen <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Methodische Grundlagen von VStromFuzzy.htm#1_nachfragemodell_2215163117_1032471">Siehe "Methodische Grundlagen von VStromFuzzy"</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">VStromFuzzy: <span class="gui_element">Zählwerte ÖV<a name="30154"></a></span></h5>
+        <table class="TableStyle-TipHint1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="496px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Das Register <span class="gui_element">Zählwerte ÖV</span> wird nur angezeigt, wenn Sie ein Nachfragesegment des Modus ÖV gewählt haben.</p>
+                        <p class="Text">Die Zählwerte können nur verwendet werden, wenn für die gewählten Nachfragesegmente ÖV-Wege vorliegen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="73px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="423px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">ÖV-Linien</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">gezählte Linienbeförderungsfälle zugrunde legen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Werte von numerischen (eventuell benutzerdefinierten) Linienattributen als Zählwerte verwendet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Linien</span>
+                        </p>
+                        <p class="CellText">Wenn nicht für alle Linien Zählwerte vorliegen, können Sie mit der Option ausschließlich die Werte der Linien berücksichtigen, die aktiv gesetzt sind <MadCap:xref class="siehe_1" href="../2_Netz_bearbeiten/Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über Filter aktiv und passiv setzen</u></MadCap:xref><MadCap:xref class="siehe_2" href="../2_Netz_bearbeiten/Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Belastung</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Linienattribut, das die Belastungszählwerte für die Linie enthält, in einem separaten Fenster auswählen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">+/-</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Attribut, das die Schwankungsbreiten enthält, in einem separaten Fenster auswählen <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Methodische Grundlagen von VStromFuzzy.htm#1_nachfragemodell_2215163117_1032471">Siehe "Methodische Grundlagen von VStromFuzzy"</MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">gezählte Personenkilometer zugrunde legen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Werte von numerischen (eventuell benutzerdefinierten) Linienattributen als Zählwerte verwendet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Linien</span>
+                        </p>
+                        <p class="CellText">Wenn nicht für alle Linien Zählwerte vorliegen, können Sie mit der Option ausschließlich die Werte der Linien berücksichtigen, die aktiv gesetzt sind <MadCap:xref class="siehe_1" href="../2_Netz_bearbeiten/Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über Filter aktiv und passiv setzen</u></MadCap:xref><MadCap:xref class="siehe_2" href="../2_Netz_bearbeiten/Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Personenkilometer</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Linienattribut, das die Zählwerte für die Personenkilometer der Linie enthält, in einem separaten Fenster auswählen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">+/-</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Attribut, das die Schwankungsbreiten enthält, in einem separaten Fenster auswählen <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Methodische Grundlagen von VStromFuzzy.htm#1_nachfragemodell_2215163117_1032471">Siehe "Methodische Grundlagen von VStromFuzzy"</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2" style="mc-hyphenate-shortest-prefix: 13;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Haltestellenbereiche</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">gezählte Ein-/Aussteiger an Haltestellenbereichen zugrunde legen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Werte von numerischen (eventuell benutzerdefinierten) Haltestellenbereichsattributen als Zählwerte verwendet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Haltestellenbereiche</span>
+                        </p>
+                        <p class="CellText">Wenn nicht für alle Haltestellenbereiche Zählwerte vorliegen, können Sie mit der Option ausschließlich die Werte der Haltestellenbereiche berücksichtigen, die aktiv gesetzt sind <MadCap:xref class="siehe_1" href="../2_Netz_bearbeiten/Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über Filter aktiv und passiv setzen</u></MadCap:xref><MadCap:xref class="siehe_2" href="../2_Netz_bearbeiten/Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Einsteiger</p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Haltestellenbereichsattribut, das die Zählwerte für die Einsteiger enthält, in einem separaten Fenster auswählen.</p>
+                        <p class="CellText">Aussteiger</p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Haltestellenbereichsattribut, das die Zählwerte für die Aussteiger enthält, in einem separaten Fenster auswählen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">+/-</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie das Attribut, das die Schwankungsbreiten enthält, in einem separaten Fenster auswählen <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Methodische Grundlagen von VStromFuzzy.htm#1_nachfragemodell_2215163117_1032471">Siehe "Methodische Grundlagen von VStromFuzzy"</MadCap:xref>.</p>
+                        <p class="CellText">Umsteiger zählen als Ein-/Aussteiger</p>
+                        <p class="CellText">Über die Auswahlliste legen Sie fest, ob Umsteiger als Ein- und Aussteiger zählen sollen. </p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">immer</span>: Umsteiger zählen als Ein- und Aussteiger</LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">nie</span>: Umsteiger zählen nicht als Ein- und Aussteiger</LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">falls Attribut &gt; 0</span>: Über die darunter liegende Schaltfläche wählen Sie das gewünschte Attribut. Umsteiger zählen bei denjenigen Haltestellenbereichen als Ein- und Aussteiger, bei denen der Wert des Attributs größer 0 ist.</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">VStromFuzzy: <span class="gui_element">Verteilung &lt;Code des Nachfragesegments&gt;<a name="30153"></a></span></h5>
+        <table class="TableStyle-TipHint1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="496px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Pro gewähltem Nachfragesegment wird ein Register angezeigt. Sie können pro Nachfragesegment verschiedene Einstellungen vornehmen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="97px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="398px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 11;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Kenngrößenverteilung zugrunde legen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, wird die Ergebnismatrix für das entsprechende Nachfragesegment an eine vorgegebene Verteilung angepasst.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Beziehungen berücksichtigen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden nur die aktiven Bezirksbeziehungen verwendet, um die Ergebnismatrix an eine vorgegebene Verteilung anzupassen. Das gilt sowohl für die Ermittlung der Klassengrenzen als auch für die Beziehungen in der Ergebnismatrix.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Werte in den Spalten <span class="gui_element">Anz. Fahrten</span> und <span class="gui_element">Anz. Fahrten Toleranz</span>  hängen von dieser Einstellung ab.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Kenngrößenmatrix für Klassifikation</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche rufen Sie das Fenster <span class="gui_element">Kenngrößenmatrix auswählen</span> auf, in dem Sie die Kenngrößenmatrix auswählen, bezüglich der die Quelle-Ziel-Beziehungen klassifiziert werden. Sie können eine externe Matrixdatei wählen oder eine Kenngrößenmatrix, die in der Versionsdatei enthalten ist <MadCap:xref href="2_3_Matrizen_auswaehlen.htm" class="sieheUeberschrSeite">(siehe „Fenster Matrizen auswählen“ auf Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Klassen und Anteile</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Klassengrenzen vorgeben, Anteile aus bestehender Matrix</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, legen Sie die Klassengrenzen gemäß der folgenden Optionen fest:</p>
+                        <p class="CellText">
+                            <span class="gui_element">Anteile entsprechend aktueller Nachfragematrix</span>
+                        </p>
+                        <p class="CellText">Die Anteile der festgelegten Klassen ergeben sich durch die aktuelle Nachfragematrix.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Anteile entsprechend der Matrix</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche rufen Sie ein separates Fenster auf, in dem Sie die Nachfragematrix auswählen, durch die sich die Anteile der festgelegten Klassen ergeben. Sie können eine externe Matrixdatei wählen oder eine Matrix, die in der Versionsdatei enthalten ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Klassengrenzen und Anteile vorgeben</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, legen Sie die Klassengrenzen und deren Anteile in der darunter stehenden Liste <span class="gui_element">Klassengrenzen und Anteile </span>fest. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Klassengrenzen und Anteile</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Liste der festgelegten Klassen. Sie können die Klassen manuell einfügen oder aus einer Intervalldatei einlesen und anschließend bearbeiten.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Von</span> / <span class="gui_element">Bis</span></p>
+                        <p class="CellText">Klassengrenzen für die gewünschte Verteilung</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Klassen dürfen sich nicht überlappen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Anteil</span>
+                        </p>
+                        <p class="CellText">Prozentualer Anteil der Klasse (100&#160;% = 1)</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Felder sind nicht bearbeitbar, wenn Sie die Anteile aus einer bestehenden Nachfragematrix einlesen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Kum. Anteil</span>
+                        </p>
+                        <p class="CellText">summierter Anteil</p>
+                        <p class="CellText">
+                            <span class="gui_element">Anz. Fahrten</span>
+                        </p>
+                        <p class="CellText">Anzahl der Fahrten, die sich aufgrund der Klassengrenzen und des aktuell eingegebenen Anteils aus der aktuellen Nachfragematrix ergeben. </p>
+                        <p class="CellText">
+                            <span class="gui_element">Anz. Fahrten Toleranz</span>
+                        </p>
+                        <p class="CellText">Wert, der sich aus der <span class="gui_element">Anz. Fahrten</span> und der <span class="gui_element">Toleranz der Klassenanteile</span> ergibt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Einfügen</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche fügen Sie eine neue Klasse ein.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Löschen</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche löschen Sie die gewählte Klasse.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Einlesen aus Datei</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche löschen Sie alle vorhandenen Klassen und fügen Klassen und Anteile aus einer Intervalldatei (<span class="path">*.cod</span> oder <span class="path">*.att</span>) in die Liste ein.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nicht verfügbar, wenn die Option <span class="gui_element">Aus Intervall-Datei</span> ausgewählt ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Intervalltyp</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Mit diesen Optionen legen Sie fest, zu welcher Klasse die Grenzwerte jeweils gehören.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nicht verfügbar, wenn die Option <span class="gui_element">Aus Intervall-Datei</span> ausgewählt ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Aus Intervall-Datei</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, verwenden Sie eine Intervalldatei mit Klassen und Anteilen. Die Datei wählen Sie über die Schaltfläche <img src="../Resources/Images_4_all/ICO_file_selection.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 011118px;margin-bottom: 1, 011118px;" /> aus.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Über diese Option können Sie Daten verwenden, die erst während des Verfahrensablaufs berechnet werden.</p>
+                        <p class="CellText">Intervalldateien besitzen eine der Dateierweiterungen <span class="path">*.cod</span> oder <span class="path">*.att</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Toleranz der Klassenanteile</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Zulässige Abweichung hinsichtlich der Anzahl Fahrten in den Klassen</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">In der Spalte <span class="gui_element">Anz. Fahrten Toleranz</span> werden die sich daraus ergebenden absoluten Werte angezeigt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_nachfrage_modellieren_1800171850_1254368">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_21504">
+            </a>VStromFuzzy: <span class="gui_element">Verfahrenssteuerung</span><a name="30151"></a></h5>
+        <table class="TableStyle-TipHint1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="496px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wir empfehlen, die Voreinstellung der <span class="gui_element">Verfahrensparameter</span> nicht zu verändern.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-PTVStandard_SingleCells1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PTVStandard_SingleCells1.css');" cellspacing="0">
+            <col width="100px" class="TableStyle-PTVStandard_SingleCells1-Column-Column1" />
+            <col width="396px" class="TableStyle-PTVStandard_SingleCells1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Head-Header1">
+                    <td class="TableStyle-PTVStandard_SingleCells1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body1">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Analyse</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Protokoll</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird ein Protokoll während der Matrixkorrektur in die Protokolldatei gespeichert <MadCap:xref class="sieheUeberschrSeite" href="../2_Grundlagen_Programmbedienung/2_1_Mit Protokolldateien arbeiten.htm#2_grundlagen_programmbedienung_1644961382_1136821"><span style="color: Black;" class="mcFormatColor">(</span><u>Mit Protokolldateien arbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Diagnose</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die Diagnosefunktion aktiviert. <MadCap:variable name="PTV_Manual.Programmname" /> führt dann mit verschiedenen Kriterien eine Diagnose durch, deren Ergebnislisten in die Protokolldatei geschrieben werden.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Verlaufsstatistik</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird eine Verlaufsstatistik erstellt. Über die Schaltfläche <img src="../Resources/Images_4_all/ICO_file_selection.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 011118px;margin-bottom: 1, 011118px;" /> legen Sie den Speicherort für die Statistiken fest.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Statistikdatei wird im Format <span class="path">*.txt</span> gespeichert. Sie können die Datei dadurch leicht in eine Grafik überführen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body2">
+                    <td rowspan="5" class="TableStyle-PTVStandard_SingleCells1-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 13;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Verfahrensparameter</span>
+                        </p>
+                    </td>
+                    <td rowspan="5" class="TableStyle-PTVStandard_SingleCells1-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">max. Korrekturfaktor</span>
+                        </p>
+                        <p class="CellText">Der Korrekturfaktor Δ begrenzt die Veränderung einer Fahrtbeziehung von einer alten zu einer neuen Matrix auf den Faktor e±Δ.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Für die Voreinstellung tritt dieser Fall nur dann ein, wenn das Verfahren keine Lösung im Rahmen der vorgegeben Zählwerte finden kann und numerisch instabil wird.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Abbruch bei Änderung &lt;</span>
+                        </p>
+                        <p class="CellText">Die Berechnung wird abgebrochen, wenn sich die Nachfragematrizen von einer Iteration zur nächsten in keiner Fahrtbeziehung um mehr als die eingegebene Fahrtenzahl geändert haben.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl Iterationen</span>
+                        </p>
+                        <p class="CellText">Der Iterationsprozess wird abgebrochen, wenn die eingegebene Anzahl Iterationen gerechnet wurde, bevor die Berechnung konvergiert.</p>
+                        <p class="CellText">
+                            <span class="gui_element">geschätzte Fahrtenzahl</span>
+                        </p>
+                        <p class="CellText">Wenn Sie die neue Fahrtenzahl in der korrigierten Matrix gut einschätzen, können Sie die Anzahl der erforderlichen Iterationen verringern.</p>
+                        <p class="CellText">Geben Sie den Wert in das Eingabefeld ein.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Alpha-Niveau</span>
+                        </p>
+                        <p class="CellText">Faktor, mit dem die eingestellten Schwankungsbreiten skaliert werden <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Methodische Grundlagen von VStromFuzzy.htm#1_nachfragemodell_2215163117_1032471">Siehe "Methodische Grundlagen von VStromFuzzy"</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body1" />
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body2" />
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body1" />
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body2" />
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body1">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur Beziehungen mit Information anpassen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyD-Column1-Body1">
+                        <p class="CellText">Wenn bei Benutzung von Streckenbelastungen keine der Routen für eine Fahrtbeziehung die Zählstrecken berührt, existiert für die Fortschreibung dieser Fahrtbeziehung keinerlei Information. </p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden solche Fahrtbeziehungen unverändert in die jeweilige Ergebnismatrix übernommen. </p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, werden diese Fahrtbeziehungen mit der durchschnittlichen Veränderung aller anderen Beziehungen hochgerechnet.</p>
+                        <p class="CellText">Tipps</p>
+                        <p class="CellText">Wird zum Beispiel innerhalb eines umfangreichen Netzes nur ein Korridor gezählt und Sie möchten nur die den Korridor berührenden Fahrtbeziehungen fortschreiben, setzen Sie nur die Strecken des Korridors aktiv und wählen Sie die Option aus.</p>
+                        <p class="CellText">Existieren dagegen nur vereinzelte, periphere Fahrtbeziehungen, die keine der Zählstrecke berühren, empfehlen wir, die Option auszuschalten und diese mit dem allgemeinen Trend fortzuschreiben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body2">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Nur aktive Beziehungen anpassen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, sind nur die Fahrtbeziehungen aktiv, deren Wert in der Filtermatrix nicht 0 ist <MadCap:xref class="sieheUeberschrSeite" href="2_3_Filtermatrix erzeugen.htm#2_nachfrage_modellieren_1800171850_1653174"><span style="color: Black;" class="mcFormatColor">(</span><u>Filtermatrix erzeugen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Alle anderen Beziehungen werden fixiert und unverändert in die neue Matrix übernommen. Die aktiven Fahrtbeziehungen werden so verändert, dass allein dadurch die Differenzen zwischen alten Umlegungsbelastungen und neuen Zählwerten ausgeglichen werden.</p>
+                        <p class="CellText">Über die Schaltfläche rufen Sie ein separates Fenster auf, in dem Sie die Filtermatrix auswählen. Sie können eine externe Matrixdatei wählen oder eine Matrix, die in der Versionsdatei enthalten ist <MadCap:xref href="2_3_Matrizen_auswaehlen.htm" class="sieheUeberschrSeite">(siehe „Fenster Matrizen auswählen“ auf Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body1">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Anteilsmatrix</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyD-Column1-Body1">
+                        <p class="CellText">Sie können festlegen, wie die Wegeinformation aus der vorangegangenen Umlegung pro Nachfragesegment für die Matrixkorrektur verwendet werden soll <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Methodische Grundlagen von VStromFuzzy.htm#1_nachfragemodell_2215163117_1032471">Siehe "Methodische Grundlagen von VStromFuzzy"</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body2">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">NSeg</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyD-Column1-Body2">
+                        <p class="CellText">Für die Matrixkorrektur ausgewählte Nachfragesegmente</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Jedem Nachfragesegment entspricht eine Nachfragematrix <MadCap:xref class="sieheUeberschrSeite" href="2_3_Nachfragematrizen mit Nachfragesegmenten verknüpfen.htm#2_nachfrage_modellieren_1800171850_1509304"><span style="color: Black;" class="mcFormatColor">(</span><u>Nachfragematrizen mit Nachfragesegmenten verknüpfen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body1">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Laden/Speichern</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">neu berechnen</span>
+                        </p>
+                        <p class="CellText">Ist die Option für das jeweilige Nachfragesegment ausgewählt, wird die jeweilige Anteilsmatrix neu berechnet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">laden von Datei</span>
+                        </p>
+                        <p class="CellText">Ist die Option für das jeweilige Nachfragesegment ausgewählt, werden die Werte einer zuvor berechneten und gespeicherten Anteilsmatrix eingelesen.</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Wenn Sie für ein Nachfragesegment mehrere Läufe mit der gleichen alten Nachfragematrix, aber unterschiedlichen Zählwerten (bei unveränderter Menge von Abbiegern/Oberabbiegern/Strecken/Bezirken) oder Verfahrensparametern durchführen, empfehlen wir, beim ersten Lauf die Anteilsmatrix zu berechnen und abzuspeichern und bei allen folgenden Läufen die abgespeicherte Anteilsmatrix wieder einzulesen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Wiederverwendung einer alten Anteilsmatrix spart Rechenzeit, kann aber zu Fehlern führen, weil das Programm eine unpassende Anteilsmatrix oft nicht erkennen kann. Stellen Sie unbedingt sicher, dass Folgendes gilt:</p>
+                        <ul>
+                            <LI class="List0Tab">Die Ausgangsmatrix ist identisch zum Lauf, bei dem die Anteilsmatrix gespeichert wurde, oder hat zumindest die gleichen Fahrtbeziehungen mit Fahrtenzahl &gt; 0.</LI>
+                            <LI class="List0Tab">Die verwendeten Strecken, Bezirke, Abbieger oder Oberabbieger sind identisch.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body2">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Dateiname</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyA-Column1-Body2">
+                        <p class="CellText">Über die jeweilige Schaltfläche rufen Sie ein separates Fenster auf, in dem Sie je nach Einstellung der Option <span class="gui_element">Laden/Speichern</span> entweder den Pfad und den Dateinamen der zu speichernden Anteilsmatrix eingeben oder auswählen können (<span class="gui_element">neu berechnen</span>), oder den Pfad und den Dateinamen der einzulesenden Anteilsmatrix eingeben oder auswählen können (<span class="gui_element">laden von Datei</span>).</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">VStromFuzzy: <span class="gui_element">Ergebnismatrix</span><a name="30152"></a></h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="112px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="381px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">NSeg</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Für die Matrixkorrektur ausgewählte Nachfragesegmente</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Jedem Nachfragesegment entspricht eine Nachfragematrix <MadCap:xref class="sieheUeberschrSeite" href="2_3_Nachfragematrizen mit Nachfragesegmenten verknüpfen.htm#2_nachfrage_modellieren_1800171850_1509304"><span style="color: Black;" class="mcFormatColor">(</span><u>Nachfragematrizen mit Nachfragesegmenten verknüpfen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Ergebnis speichern</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">in Nachfragematrix des NSeg</span>
+                        </p>
+                        <p class="CellText">Ist die Option für das jeweilige Nachfragesegment ausgewählt, werden die Werte der alten, eingelesenen Nachfragematrix in <MadCap:variable name="PTV_Manual.Programmname" /> durch die Ergebnisse der Berechnung ersetzt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">in Matrix</span>
+                        </p>
+                        <p class="CellText">Ist die Option für das jeweilige Nachfragesegment ausgewählt, wird die korrigierte Nachfragematrix gespeichert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Ergebnismatrix</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Falls Sie die Option <span class="gui_element">in Matrix</span> gewählt haben, wählen Sie über die Schaltfläche die Matrix aus, in die Sie das Ergebnis speichern möchten. Sie können eine externe Matrixdatei wählen oder eine Matrix, die in der Versionsdatei enthalten ist <MadCap:xref href="2_3_Matrizen_auswaehlen.htm" class="sieheUeberschrSeite">(siehe „Fenster Matrizen auswählen“ auf Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Dez.</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Anzahl Dezimalstellen, mit denen die Matrixwerte gespeichert werden</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="673" MadCap:lastWidth="510" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;t0;100000h">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1190804">
+            </a>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_98416">
+            </a>Fallunterscheidungen beim Einlesen von Anbindungen</h4>
+        <h5>Einbahnstraße</h5>
+        <p class="Text">Handelt es sich bei der angebundenen Strecke um eine Einbahnstraße, wird die Strecke (Hin- und Rückrichtung) gesplittet. Entsprechend der Grundprinzipien sind auch die neuen Strecken in der entsprechenden Richtung gesperrt (gestrichelte Linie).</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="166px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="330px" class="TableStyle-gui_elements1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">ursprüngliche Strecke</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellCaption">gesplittete Strecke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images/DIAG_SAT_OneWayOrigin.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 7593974px;margin-bottom: 1, 24044px;width: 166px;height: 39px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_SAT_OneWaySplit.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 0, 9997767px;width: 300px;height: 135px;" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Falls eine Anbindung für die gesperrte Richtung einer Einbahnstraße existiert, wird diese geöffnet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Strecke in beide Richtungen offen, Anbindungen an beide Richtungen</h5>
+        <p class="Text">Ist die angebundene Strecke in beide Richtungen offen und gelten alle Anbindungen für beide Richtungen, wird die Strecke (Hin- und Rückrichtung) gesplittet.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="166px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="330px" class="TableStyle-gui_elements1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">ursprüngliche Strecke</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellCaption">gesplittete Strecke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images/DIAG_SAT_BothOpenOrigin.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 7593974px;margin-bottom: 1, 24044px;width: 165px;height: 39px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_SAT_SameConnectorsSplit.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 0, 9997767px;" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die U-Turns an den Knoten 3 und 5 (4-3-6, 6-5-4) werden gesperrt, d. h.</p>
+        <ul>
+            <LI class="List1">
+                <span class="gui_element">VSysSet</span> = leer (kein Verkehrssystem)</LI>
+            <LI class="List1">
+                <span class="gui_element">t0</span> = 100000h</LI>
+            <LI class="List1">
+                <span class="gui_element">KapIV</span> = 0</LI>
+        </ul>
+        <h5>Strecke in beide Richtungen offen, unterschiedliche Anbindungen</h5>
+        <p class="Text">Ist die angebundene Strecke in beide Richtungen offen und gelten nicht alle Anbindungen für beide Richtungen, werden Hin- und Rückrichtung gesplittet. Die Bezirke werden an die entsprechenden Knoten angebunden.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">ursprüngliche Strecke</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellCaption">gesplittete Strecke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_SAT_BothOpenOrigin.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 7593974px;margin-bottom: 1, 24044px;width: 162px;height: 37px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_SAT_DiffConnectorsSplit.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 1, 000067px;" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die U-Turns an den Knoten 3 und 5 (4-3-6, 6-5-4) müssen gesperrt werden:</p>
+        <ul>
+            <LI class="List1">
+                <span class="gui_element">VSysSet</span> = leer (kein Verkehrssystem)</LI>
+            <LI class="List1">
+                <span class="gui_element">t0</span> = 100000h</LI>
+            <LI class="List1">
+                <span class="gui_element">KapIV</span> = 0</LI>
+        </ul>
+        <h5>Strecke in beide Richtungen offen, Anbindungen nur in eine Richtung</h5>
+        <p class="Text">Ist die angebundene Strecke in beide Richtungen offen, und gelten die Anbindungen nur für eine Richtung, werden Hin- und Rückrichtung gesplittet.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">ursprüngliche Strecke</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellCaption">gesplittete Strecke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_SAT_BothOpenOrigin.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 7593974px;margin-bottom: 1, 24044px;width: 177px;height: 42px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_SAT_OneDirectionSplit.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 0, 9997767px;" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">U-Turns an den Knoten 3 und 5 (4-3-6, 6-5-4) müssen gesperrt werden:</p>
+        <ul>
+            <LI class="List1">
+                <span class="gui_element">VSysSet</span> = leer (kein Verkehrssystem)</LI>
+            <LI class="List1">
+                <span class="gui_element">t0</span> = 100000h</LI>
+            <LI class="List1">
+                <span class="gui_element">KapIV</span> = 0</LI>
+        </ul>
+        <p class="Text">Die anderen Abbieger werden nicht explizit geschrieben. Sie werden von <MadCap:variable name="PTV_Manual.Programmname" /> automatisch geöffnet.</p>
+    </body>
+</html>

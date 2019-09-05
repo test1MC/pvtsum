@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="621" MadCap:lastWidth="512" MadCap:ignoredWords="DeltaT;bzw;export;bx;MPA;è">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 MadCap:autonum=" 0.1 ">
+            <a name="1_benutzermodell_oev_2318507456_1026525">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_27177">
+            </a>Aufteilung der Verkehrsnachfrage auf ÖV-Anbindungen</h2>
+        <p class="Text">
+            <MadCap:keyword term="Verkehrsnachfrage:auf ÖV-Anbindungen aufteilen" />
+            <MadCap:keyword term="Anbindungen: Verkehrsnachfrage aufteilen: ÖV" />Ähnlich wie im IV kann die Aufteilung von Quell- und Zielverkehr des ÖV auf die ÖV-Anbindungen entweder frei oder prozentual erfolgen <MadCap:xref class="sieheUeberschrSeite" href="../1_Netzmodell/1_2_Aufteilung der Nachfrage eines Bezirks auf die Anbindungen.htm#1_netzmodell_1240632468_1026663"><span style="color: Black;" class="mcFormatColor">(</span><u>Aufteilung der Nachfrage eines Bezirks auf die Anbindungen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Bei der prozentualen Aufteilung wird hierbei - anders als im IV - nicht zwischen zwei Varianten unterschieden, sondern es wird immer das Modell „Jede einzelne Relation (MPA)“ zugrunde gelegt. Die prozentuale Aufteilung kann im ÖV zum Beispiel dazu verwendet werden, sämtliche in einer Gemeinde (die als genau ein Bezirk modelliert ist) liegenden Haltestellen mit Verkehrsbelastung zu versehen.</p>
+        <p class="Text">Die prozentuale Aufteilung des ÖV-Verkehrs erfolgt ähnlich wie die prozentuale Aufteilung des IV-Gesamtverkehrs. Der gesamte Quell- und Zielverkehr des Bezirks wird proportional zu den aktuellen Anteilsgewichten der Anbindungen über alle Anbindungen des Bezirks verteilt. Für jeden angebundenen Knoten wird während der Umlegung ein temporärer virtueller Bezirk erzeugt, dessen Gesamtverkehr dem Anteil der Anbindung am Gesamtverkehr des ursprünglichen Bezirks entspricht. Die Umlegung wird auf der Basis der virtuellen Bezirke berechnet. Nach Abschluss der Umlegung werden die temporären Bezirke wieder gelöscht und die Ergebnisse auf die ursprünglichen Bezirke übertragen.</p>
+        <h5 MadCap:autonum="">Beispiel</h5>
+        <p class="Text">Gegeben seien zwei Bezirke mit folgenden Anbindungen.</p>
+        <ul>
+            <LI class="List0">Bezirk 100 mit prozentualer Aufteilung, angebundene Knoten 1, 2 und 3</LI>
+            <LI class="List0">Bezirk 200 mit prozentualer Aufteilung, angebundene Knoten 4 und 5</LI>
+        </ul>
+        <p class="Text">Die Anbindungsgewichte für Quelle und Ziel seien wie in <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1179109">Tabelle&#160;154</MadCap:xref> eingestellt.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Anbindung an Knoten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Gewicht (Quelle)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Gewicht (Ziel)</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">20</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">80</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">50</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">20</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">40</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">90</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_right">60</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText_right">10</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_oev_2318507456_1179109">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_16423">
+                    </a>Anbindungsgewichte für das Beispiel</p>
+            </caption>
+        </table>
+        <ul>
+            <LI class="List0">Die Verkehrsnachfrage von Bezirk 100 nach Bezirk 200 beträgt 1000 Fahrten</LI>
+            <LI class="List0">Die Verkehrsnachfrage von Bezirk 200 nach Bezirk 100 beträgt 500 Fahrten</LI>
+        </ul>
+        <p class="Text">Hieraus ergibt sich die in <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1179249">Tabelle&#160;155</MadCap:xref> gezeigte temporäre Nachfragematrix für die Umlegung.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 498px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">virtueller Bezirk</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">5</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">180</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">20</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">270</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">30</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">450</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">160</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">40</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">240</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">60</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_oev_2318507456_1179249">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_74399">
+                    </a>Temporäre Nachfragematrix für die Umlegung im Beispiel</p>
+            </caption>
+        </table>
+        <p class="Text">Der Zellwert für die temporäre Relation 1 <span class="_Override" style="font-family: Wingdings;">è</span> 4 errechnet sich aus 1000 • 0.2 • 0.9 = 180.</p>
+    </body>
+</html>

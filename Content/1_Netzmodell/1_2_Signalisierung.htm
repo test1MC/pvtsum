@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="680" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs;Ride;ring;barrier;controller;sig;rbc">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1115689">
+            </a>
+            <a name="1_netzmodell_1240632468_46538">
+            </a>Signalisierung</h4>
+        <p class="Text">
+            <MadCap:keyword term="Knoten: Signalisierung" />
+            <MadCap:keyword term="Signalisierung" />
+            <MadCap:keyword term="Knotenmodell: Signalisierung" />Knoten und Oberknoten können Signalanlagen (LSA) zugewiesen werden. Es gibt vier Typen von LSA: signalgruppenbasierte, phasenbasierte, RBC (ring-barrier controller) und externe Steuerungen (Vissig). Bei signalgruppenbasierten LSAs können sofort Signalgruppen definiert werden. Bei phasenbasierten LSAs werden zunächst die Phasen definiert und die Signalgruppen daraufhin den Phasen zugeordnet. Vissig-Steuerungen  werden mit einem externen Programm verwaltet <MadCap:xref class="sieheUeberschrSeite" href="#1_netzmodell_1240632468_1166895">(siehe „Externe Steuerungen“ auf Seite&#160;87)</MadCap:xref>. </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Weitere Informationen zu RBC-Steuerungen finden Sie im RBC-Handbuch im Ordner <span class="path">Doc\Deu </span>in Ihrem <MadCap:variable name="PTV_Manual.Programmname" />-Installationsverzeichnis.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">LSAs können abgeschaltet werden. Dies bewirkt, dass Knoten und Oberknoten mit abgeschalteten LSAs in Verfahren wie ICA und Signalzeitoptimierung wie vorfahrtsgeregelte Knoten (Oberknoten) behandelt werden. Das heißt, das Abschalten einer LSA bewirkt eine Änderung des effektiven Steuerungstyps eines Knotens.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Eine LSA kann mehreren Knoten und Oberknoten zugewiesen werden. Dies ist jedoch nur bei Vissig-Steuerungen empfehlenswert, weil das Verfahren <span class="gui_element">LSA-Umlauf- und Grünzeitoptimierung</span> im Falle mehrerer Knoten und Oberknoten nur hier gute Ergebnisse liefert. Die Nummer der Koordinierungsgruppe der LSA spielt eine Rolle beim Verfahren <span class="gui_element">Optimierung der LSA-Versatzzeit </span><MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Signalkoordinierungsgruppe_einfügen.htm#2_netz_bearbeiten_23091886_1670741"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Signalkoordinierungsgruppe einfügen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die wesentlichen Attribute einer Signalgruppe sind ihr <span class="gui_element">Grünzeitanfang</span> und ihr <span class="gui_element">Grünzeitende</span>. Diese Attribute spielen bei der Knotenwiderstandsberechnung eine Rolle <MadCap:xref class="sieheUeberschrSeite" href="../1_Benutzermodell IV/1_5_Signalisierte Knoten.htm#1_benutzermodell_iv_2033098965_1171292"><span style="color: Black;" class="mcFormatColor">(</span><u>Signalisierte Knoten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. In externen Steuerungen können Signalgruppen zwei Paare von Grünzeitanfang und Grünzeitende aufweisen. Auf diese Weise können Sie Doppelanwurf modellieren, in der Signalzeitenansicht des Knoteneditors korrekt darstellen und in der Knotenwiderstandsberechnung berücksichtigen. Bei phasenbasierten LSAs entsprechen Grünzeitanfang und Grünzeitende einer Signalgruppe dem Grünzeitanfang und Grünzeitende ihrer Phase. Hat bei einer Signalgruppe oder bei einer Phase das Attribut <span class="gui_element">Grünzeitanfang</span> den Wert 0 und ist das Attribut <span class="gui_element">Grünzeitende </span>gleich der Umlaufzeit der LSA, wird das als Dauergrün interpretiert. Beide Attribute sind durch die Umlaufzeit der LSA beschränkt. Das <span class="gui_element">Grünzeitende</span> darf einen kleineren Wert haben als der <span class="gui_element">Grünzeitanfang</span>. In diesem Fall ergibt sich die Grünzeitdauer, indem man die Differenz beider Werte von der Umlaufzeit der LSA abzieht. Die Grünzeitdauer kann die Mindestgrünzeit einer Signalgruppe nicht unterschreiten.</p>
+        <p class="Text">Signalgruppen verfügen außerdem über die Attribute <span class="gui_element">Gelb</span> und <span class="gui_element">Allred</span>. Des Weiteren können zwischen Signalgruppen <span class="gui_element">Zwischenzeiten</span> definiert werden. Alle diese Werte spielen bei der LSA-Umlauf- und Grünzeitoptimierung eine Rolle. Hierbei bestimmt das Attribut <span class="gui_element">Verwendete Zwischenzeit-Methode </span>der Signalanlage, ob zur Optimierung Gelb- und Allredzeit oder die Zwischenzeitmatrix verwendet wird. Das Attribut <span class="gui_element">ICA Verlustzeit-Anpassung </span>dient bei der Ermittlung der Widerstände mit ICA zur Bestimmung der effektiven Grünzeiten mit Hilfe der angegebenen Grünzeiten. Das Attribut <span class="gui_element">Mindestgrünzeit</span> wird bei der LSA-Umlauf- und Grünzeitoptimierung verwendet und dient als untere Schranke für die dort ermittelte Gründauer. Das Attribut <span class="gui_element">Vissim Koordiniert</span> ist nur für den Vissim-Export relevant.</p>
+        <p class="Text">Der Zusammenhang der Signalisierung zum Netz wird hergestellt, indem die Signalgruppen Fahrstreifenabbiegern zugeordnet werden. Jede Signalgruppe kann beliebig vielen Fahrstreifenabbiegern zugeordnet werden, vorausgesetzt, dass die Fahrstreifenabbieger sich an Knoten oder Oberknoten befinden, die der LSA der Signalgruppe zugeordnet sind. Umgekehrt können jedem Fahrstreifenabbieger beliebig viele Signalgruppen aus der LSA zugeordnet werden, die dem Knoten oder Oberknoten des Fahrstreifenabbiegers zugeordnet ist. Eine Signalgruppe kann außerdem beliebig vielen Furten zugewiesen werden. Umgekehrt kann eine Furt jedoch nur auf eine Signalgruppe verweisen. Das Datenmodell kennt hier wenige Einschränkungen. Beispielsweise kontrolliert <MadCap:variable name="PTV_Manual.Programmname" /> nicht, ob jedem Fahrstreifenabbieger eine Signalgruppe zugewiesen ist. Es wird ebenfalls nicht kontrolliert, ob Konfliktströme überlappende Grünzeiten haben. Sollte die Signalisierung zur Ermittlung von Knotenwiderständen verwendet werden, empfiehlt es sich, zunächst die entsprechende ICA-Netzprüfen-Funktion durchzuführen, um unvollständige Knotenmodellierungen aufzudecken <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Netz_prüfen_und_Fehler_beheben.htm#2_netz_bearbeiten_23091886_2873260"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Netz prüfen und Fehler beheben</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Es wird empfohlen, zunächst die Knotenmodellierung an einem Knoten oder Oberknoten zu vervollständigen und erst danach die Zuordnung von Signalgruppen zu Fahrstreifenabbiegern vorzunehmen. Beim Entfernen und Einfügen von Fahrstreifenabbiegern bleiben die Signalisierungsdaten nicht immer erhalten.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>
+            <a name="1_netzmodell_1240632468_1166895">
+            </a>
+            <a name="1_netzmodell_1240632468_91442">
+            </a>Externe Steuerungen</h5>
+        <p class="Text">Externe LSA haben die Besonderheit, dass die Daten außerhalb der Versionsdatei gespeichert werden. Die Daten werden bei Vissig-Steuerungen in Steuerungsdateien im Format *<span class="path">.sig</span> gespeichert. Damit sind sie auch für andere Programme, beispielsweise Vissim, zugänglich. Zum Editieren von externen Steuerungsdaten wird in <MadCap:variable name="PTV_Manual.Programmname" /> das Programm Vissig verwendet. In externen Steuerungen können mehrere Signalprogramme hinterlegt werden. Das ist bei signalgruppenbasierten und phasenbasierten Steuerungen nicht der Fall. Daher ist das LSA-Attribut <span class="gui_element">Signalprogramm-Nummer</span> auch nur bei externen Steuerungen von Bedeutung. <MadCap:variable name="PTV_Manual.Programmname" /> greift zu bestimmten Zeitpunkten auf die in der Steuerungsdatei gespeicherten Daten zu. Dies geschieht zum Beispiel beim Öffnen einer Versionsdatei oder bei Ausführung der Verfahren <span class="gui_element">LSA-Umlauf- und Grünzeitoptimierung</span> und <span class="gui_element">Aktualisieren der Widerstände am Knoten</span> mittels ICA.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Bis einschließlich <MadCap:variable name="PTV_Manual.Programmname" /> 12 zählten RBC-Steuerungen zu den externen Steuerungen. RBC-Dateien im Format <span class="path">*.rbc</span> werden seither lediglich eingelesen, dann jedoch nicht weiter verwendet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>
+            <MadCap:keyword term="Signalisierung: Phasenschablonen" />Phasenschablonen</h5>
+        <p class="Text">Mit Phasenschablonen können an einem Knoten oder Oberknoten auf sehr einfache Weise Signalisierungsdaten erzeugt werden <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Signalzeiten_phasenbasierter_Steuerungen_bearbeiten.htm#2_netz_bearbeiten_23091886_1893822"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Signalzeiten phasenbasierter Steuerungen bearbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Wird einem Knoten eine Phasenschablone zugewiesen, verfügt die LSA des Knotens danach über eine Menge von Phasen und Signalgruppen. Den Signalgruppen sind bereits sinnvoll Fahrstreifenabbieger zugewiesen. Das bedeutet zum Beispiel, dass Konfliktströme mit unterschiedlichen Grünzeiten signalisiert sind.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Voraussetzung für die Anwendung einer Phasenschablone ist, dass dem Knoten oder Oberknoten bereits eine phasenbasierte LSA zugewiesen ist. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

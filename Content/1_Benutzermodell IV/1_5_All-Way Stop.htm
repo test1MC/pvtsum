@@ -1,0 +1,1514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="8" MadCap:lastHeight="472" MadCap:lastWidth="513" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="ij;QZ;å;Î;FSB;0a;0r;ija;akt;ten;CR;Way;Stop;Controlled;AWSC;TWSC;PHF;Abfahrts;adj;LTadj;LT;RTadj;RT;HVadj;HV;degree;of;conflicts;DOC;L2;L1;adjP;si;base;BSB;ji;id;ijA;Braess;tmodelspecial;true;armig;3a;4a;3b;4b;armige;armigen;vphpl;kapazitäten;Abbiegerbelastungen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_benutzermodell_iv_2033098965_1028646">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__ref174775013">
+            </a>All-Way Stop</h4>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Im HCM 2000 wird dieser Steuerungstyp in Kapitel 17 beschrieben, im HCM 2010 in Kapitel 20. Die Berechnung im HCM 2010 erfolgt praktisch identisch zum HCM 2000. Im HCM 2010 wird eine Berechnungsvorschrift für Staulänge angegeben (HCM 2010, Seite 20-17), die im HCM 2000 fehlt. Außerdem erfolgt die Berechnung des Levels-of-Service unter Berücksichtigung der Auslastung. Bei Überlastung ist das Level-of-Service automatisch F.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:keyword term="Intersection Capacity Analysis (ICA): All-Way Stop" />Die All-Way Stop Controlled (AWSC)-Methode der Kapazitätsanalyse des HCM 2000 ist eine iterative Methode. Das Modell betrachtet alle möglichen Szenarios eines Fahrzeugs, das sich entweder auf einer Zufahrt oder nicht darauf befindet. Auf der Basis der eingegebenen Belastungen wird die Wahrscheinlichkeit des Eintretens eines jeden Szenarios sowie die mittlere Wartezeit berechnet. Die Auslastung <span class="formula">v/c</span> wird für jedes Szenario berechnet, das wiederum die anderen beeinflusst. Deshalb ist eine iterative Methode für die Bestimmung der Kapazität einer jeden Zufahrt erforderlich. </p>
+        <p class="Text">Anders als die signalisierte Methode, die auf der Basis von Signalgruppen arbeitet, oder die TWSC-Methode, die mit Fahrtbeziehungen arbeitet, verwendet das AWSC-Modell Fahrstreifen pro Zufahrt. </p>
+        <p class="Text">Die zugrunde liegende Berechnung wird im Ablaufdiagramm in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1218391">Abbildung 1</MadCap:xref> dargestellt. Zusammen mit weiteren zusätzlichen Attributen wie <span class="gui_element">PHF</span> und <span class="gui_element">%Lkw</span> gibt der Anwender die Knotenpunktgeometrie und die Belastungen ein. Die Belastungen werden angepasst und den Fahrstreifen zugeordnet. Der nächste Schritt ist dann die Berechnung der Anpassungsfaktoren für die Sättigungs-(Kapazitäts-)Fahrzeugfolgezeiten. Dann werden die Abfahrts-Fahrzeugfolgezeiten (das heißt die durchschnittliche Zeit zwischen zwei Abfahrten auf einem Fahrstreifen einer Zufahrt) auf der Basis aller Kombinationen von Wahrscheinlichkeiten berechnet. Diese Abfahrts-Fahrzeugfolgezeiten eines jeden Fahrstreifens einer jeden Zufahrt hängen von den anderen Zufahrten ab und werden daher iterativ berechnet. Ist ein konvergierter Wert gefunden, können Servicezeit, mittlere Wartezeit und LOS berechnet werden.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_ICAAllWayStop.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1218391">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_92775">
+            </a>Ablauf der Berechnung bei einem All-Way-Stop-Knoten</p>
+        <p class="Text">Benutzen Sie das Operationsmodell HCM für All-Way Stop-Knoten, haben die in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369186">Tabelle 1</MadCap:xref> aufgeführten <MadCap:variable name="PTV_Manual.Programmname" />-Attribute Auswirkungen. Überprüfen Sie, dass vor Beginn der Analyse realistische Werte eingestellt sind.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="78px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="359px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Netzobjekt </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung / Wirkung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Knoten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ICAPHFVolAdj</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Anpassung der Anfangsbelastung an die Spitzenperiode. Belastungen werden dann <span class="gui_element">sowohl</span> durch die Knoten- als auch durch die Abbiegeranpassungsfaktoren geteilt. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Geometrie</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">alle</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Geometrische Informationen zu Fahrstreifen, Fahrstreifenabbiegern und Furten</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">AnteilLkw</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Anteil Schwerverkehr, benötigt für Anpassung der Fahrzeugfolgezeiten. Ein pauschaler Wert, der für die Abbieger gilt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ICAPHFVolAdj</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Anpassung der Anfangsbelastung an die Spitzenperiode. Belastungen werden dann <span class="gui_element">sowohl</span> durch die Knoten- als auch durch die Abbiegeranpassungsfaktoren geteilt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">Abbieger</td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">ICA mittlere Staulänge</td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">Mittlere Staulänge</td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_iv_2033098965_1369186">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_93888">
+                    </a>Eingabe-Attribute für einen All-Way-Stop-Knoten</p>
+            </caption>
+        </table>
+        <p class="Text">Die Ausgabe ist über die gleichen Attribute verfügbar wie bei signalisierten Knoten (<MadCap:xref class="Label_Table" href="1_5_Signalisierte Knoten.htm#1_benutzermodell_iv_2033098965_1611587">Tabelle 1</MadCap:xref>).</p>
+        <p class="Text">Der erste Schritt ist die PHF-Anpassung der Belastungen pro Fahrstreifen pro Fahrtbeziehung pro Zufahrt. Zusätzlich wird der Lkw-Anteil pro Fahrstreifen pro Fahrtbeziehung pro Zufahrt eingegeben, sofern verfügbar. Da in <MadCap:variable name="PTV_Manual.Programmname" /> Belastungen pro Fahrtbeziehung und nicht pro Fahrstreifen pro Fahrtbeziehung angegeben sind, werden diese gemäß einer Standardmethode zuerst auf die einzelnen Fahrstreifen disaggregiert.</p>
+        <p class="Text">Der nächste Schritt besteht in der Berechnung der Anpassungsfaktoren der Fahrzeugfolgezeit für jeden einzelnen Fahrstreifen. Die Berechnung erfolgt folgendermaßen:</p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">h</span>
+            <span class="formula_subscript">adj</span>
+            <span class="formula"> = h</span>
+            <span class="formula_subscript">LTadj</span>
+            <span class="formula"> • p</span>
+            <span class="formula_subscript">LT</span>
+            <span class="formula"> + h</span>
+            <span class="formula_subscript">RTadj</span>
+            <span class="formula"> • p</span>
+            <span class="formula_subscript">RT</span>
+            <span class="formula"> + h</span>
+            <span class="formula_subscript">HVadj</span>
+            <span class="formula"> • p</span>
+            <span class="formula_subscript">HV</span>
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="63px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="432px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">h</span>
+                            <span class="formula_subscript">adj</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Anpassung Fahrzeugfolgezeit</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">h</span>
+                            <span class="formula_subscript">LTadj</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Anpassung Fahrzeugfolgezeit Linksabbieger</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">h</span>
+                            <span class="formula_subscript">RTadj</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Anpassung Fahrzeugfolgezeit Rechtsabbieger</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">h</span>
+                            <span class="formula_subscript">HVadj</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Anpassung Fahrzeugfolgezeit Lkw</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">LT</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Anteil Linksabbieger in Zufahrt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">RT</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Anteil Rechtsabbieger in Zufahrt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                            <span class="formula_subscript">HV</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Anteil Lkw in Zufahrt</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Anpassungsfaktoren sind in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369220">Tabelle 2</MadCap:xref> aufgelistet.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="222px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="106px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="61px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="106px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Anzahl Fahrstreifen der betrachteten Zufahrt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Anpassungsfaktor</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Sättigung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Fahrzeugfolgezeit</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">LT</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">RT</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">HV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0,2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">-0,6</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">1,7</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">2+</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">0,5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">-0,7</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">1,7</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_iv_2033098965_1369220">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_42965">
+                    </a>Anpassungsfaktoren</p>
+            </caption>
+        </table>
+        <p class="Text">Nach der Berechnung des Anpassungsfaktors Fahrzeugfolgezeit wird die Abfahrts-Fahrzeugfolgezeit iterativ berechnet. Die Berechnung erfolgt in fünf Schritten. </p>
+        <p class="Heading_Schritt1" MadCap:autonum="Schritt 1: ">Wahrscheinlichkeit kombinierter Wahrscheinlichkeiten berechnen</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_85.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="57px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="439px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">P</span>(<span class="formula">i</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Wahrscheinlichkeit für Kombination <span class="formula">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="formula">P</span>(<span class="formula">a</span><span class="formula_subscript">j</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Wahrscheinlichkeit des Konfliktgrades (degree-of-conflicts, DOC) für Kombination <span class="formula">i</span> des Fahrstreifentyps <span class="formula">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a</span>
+                            <span class="formula_subscript">j</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">1 oder 0 abhängig von Fahrstreifentyp <span class="formula">j</span> (siehe <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369252">Tabelle 3</MadCap:xref>)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Diese Berechnung der Wahrscheinlichkeiten setzt sich aus mehreren Teilen zusammen. Für jeden Fahrstreifentyp <span class="formula">j</span> wird die <span class="formula">P</span>(<span class="formula">a</span><span class="formula_subscript">j</span>) bestimmt. <span class="formula">P</span>(<span class="formula">a</span><span class="formula_subscript">j</span>) wird auf der Grundlage einer Nachschlagetabelle berechnet (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369252">Tabelle 3</MadCap:xref>).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 494px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="85px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="304px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="105px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a</span>
+                            <span class="formula_subscript">j</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <span class="formula">V</span>
+                            <span class="formula_subscript">j</span> (Belastung konfligierende Zufahrt)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">P(a</span>
+                            <span class="formula_subscript">j</span>
+                            <span class="formula">)</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">&gt;0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">X</span>
+                            <span class="formula_subscript">j</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">&gt;0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">1 -<span class="formula"> X</span><span class="formula_subscript">j</span></p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+                    <a name="1_benutzermodell_iv_2033098965_1369252">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_86259">
+                    </a>Berechnung der Wahrscheinlichkeit des Konfliktgrads</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">&#160;</p>
+                        <ul>
+                            <LI class="List0Tab">Wenn Iteration 1, dann <span class="formula">X</span><span class="formula_subscript">j</span> = (<span class="formula">V</span><span class="formula_subscript">j</span><span class="formula"> • h</span><span class="formula_subscript">d</span>) / 3&#160;600</LI>
+                            <LI class="List0Tab">Wenn Iteration &gt; 1, dann <span class="formula">X</span><span class="formula_subscript">j</span> = min(1,(<span class="formula">V</span><span class="formula_subscript">j</span><span class="formula"> • h</span><span class="formula_subscript">d</span>) / 3&#160;600)</LI>
+                            <LI class="List0Tab">Grundwert <span class="formula">h</span><span class="formula_subscript">d</span> = 3,2 s</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Der Wert <span class="formula">a</span><span class="formula_subscript">j</span> ist der DOC-Tabelle entnommen (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369282">Tabelle 4</MadCap:xref>). Diese Tabelle enthält alle Kombinationen von 0 bis 1 pro Fahrstreifen für jede Zufahrt. Für 2 Fahrstreifen pro Zufahrt sieht dies wie in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369282">Tabelle 4</MadCap:xref> dargestellt aus (siehe Anlage 17-30 in HCM 2000 für die ganze Tabelle).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="24px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="92px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="72px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="49px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="41px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="59px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="47px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="55px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="56px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">i</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">DOC-Fall (<span class="formula">C</span><span class="formula_subscript">k</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Anzahl <br />Fahrzeuge</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Zufahrt <br />Gegenrichtung</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="font-weight: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">Links <br />(betrachtete Zufahrt)</p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="font-weight: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">Rechts <br />(betrachtete Zufahrt)</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">L1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">L2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">L1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">L2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">L1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">L2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">…</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">64</p>
+                    </td>
+                    <td colspan="8" class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">Bei 4 Armen mit je 2 Fahrstreifen ergeben sich 64 Kombinationen.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 4: ">
+                    <a name="1_benutzermodell_iv_2033098965_1369282">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_83292">
+                    </a>Auszug aus der DOC-Tabelle für zwei Fahrstreifen pro Zufahrt</p>
+            </caption>
+        </table>
+        <p class="Text">Die Wahrscheinlichkeit für kombinierte Wahrscheinlichkeiten <span class="formula">P</span>(<span class="formula">i</span>) wird dann für jede Reihe (<span class="formula">i</span>) und für jede Spalte (Fahrstreifentyp) (<span class="formula">j</span>) berechnet. Zur Berechnung von <span class="formula">P</span>(<span class="formula">i</span>) nehmen wir das Produkt aller Wahrscheinlichkeiten der Fahrstreifen der Gegenrichtung und der konfligierenden Fahrstreifen <span class="formula">P</span>(<span class="formula">a</span><span class="formula_subscript">j</span>). Das Ergebnis <span class="formula">P</span>(<span class="formula">i</span>)<span class="formula"> =</span><span class="formula_symbol">P</span><span class="formula">P</span>(<span class="formula">a</span><span class="formula_subscript">j</span>) ist die Wahrscheinlichkeit für Reihe (<span class="formula">i</span>).</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 2: ">Anpassungsfaktoren für Wahrscheinlichkeiten berechnen</p>
+        <p class="Text">Nach der Berechnung von <span class="formula">P</span>(<span class="formula">i</span>) für jeden Fall (<span class="formula">i</span>) muss eine Anpassung für jeden DOC-Fall berechnet werden. Die Anpassung berücksichtigt eine Reihenkorrelation in der vorherigen Berechnung aufgrund damit verbundener Konfliktfälle. Die Anpassungsgleichungen bei DOC-Fall (<span class="formula">C</span><span class="formula_subscript">k</span>) sind folgende:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_96.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="40px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="456px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">0,01 (oder 0,00, falls keine Reihenkorrelation)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">n</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Anzahl der Nicht-Null-Fälle (<span class="formula">i</span>) für jeden DOC-Fall (höchstens <span class="formula">n </span>= 1 für <span class="formula">C</span><span class="formula_subscript">1</span>, 3 für <span class="formula">C</span><span class="formula_subscript">2</span>, 6 für <span class="formula">C</span><span class="formula_subscript">3</span>, 27 für <span class="formula">C</span><span class="formula_subscript">4</span> und <span class="formula">C</span><span class="formula_subscript">5</span>)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 3: ">Angepasste Wahrscheinlichkeit berechnen</p>
+        <p class="Formula">
+            <span class="formula">P‘</span>(<span class="formula">i</span>)<span class="formula"> = P</span>(<span class="formula">i</span>)<span class="formula"> + adjP</span>(<span class="formula">i</span>)</p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="61px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="435px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">P‘</span>(<span class="formula">i</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Angepasste Wahrscheinlichkeit für Fall <span class="formula">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="formula">P</span>(<span class="formula">i</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Wahrscheinlichkeit des DOC für Fall <span class="formula">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">adjP</span>(<span class="formula">i</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Anpassungsfaktor Wahrscheinlichkeit Fall <span class="formula">i</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 4: ">Sättigungs-Fahrzeugfolgezeit berechnen</p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">h</span>
+            <span class="formula_subscript">si</span>
+            <span class="formula"> = h</span>
+            <span class="formula_subscript">adj</span>
+            <span class="formula"> + h</span>
+            <span class="formula_subscript">base</span>
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="53px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="442px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">h</span>
+                            <span class="formula_subscript">si</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Sättigungs-Fahrzeugfolgezeit pro DOC-Fall <span class="formula">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">h</span>
+                            <span class="formula_subscript">adj</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Anpassung Fahrzeugfolgezeit je Fahrstreifen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">h</span>
+                            <span class="formula_subscript">base</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Basis-Fahrzeugfolgezeit je DOC-Fall <span class="formula">i</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Basis-Fahrzeugfolgezeit <span class="formula">h</span><span class="formula_subscript">base</span> für jeden DOC-Fall <span class="formula">i</span> ist einer Nachschlagetabelle entnommen, die auf dem jeweiligen DOC-Fall (1–5) und der Geometriegruppe basiert (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369324">Tabelle 5</MadCap:xref>).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="80px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="89px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="104px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="113px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="110px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td colspan="5" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Anzahl Fahrstreifen</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Betrachtete Zufahrt</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Zufahrt Gegenrichtung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nicht verträgliche Zufahrt</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Knotenpunkttyp </span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Geometriegruppe</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4-armig oder T</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">4-armig oder T</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4-armig oder T</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">3a / 4a</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">T</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">3b</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4-armig</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">4b</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1 - 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1 - 2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">4-armig oder T</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1*</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1*</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4-armig oder T</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">4-armig oder T</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">6</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 5: ">
+                    <a name="1_benutzermodell_iv_2033098965_1369324">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_78752">
+                    </a>Nachschlagetabelle Basis-Fahrzeugfolgezeit</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">* Verfügt die betrachtete Zufahrt über 3 Fahrstreifen und die Zufahrt der Gegenrichtung oder eine konfligierende Zufahrt über 1 Fahrstreifen, dann gilt Geometriegruppe 5, sonst Geometriegruppe 6.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Das Modell wird für 3+ Fahrstreifen verallgemeinert, um es auf mehr als 4-armige Knotenpunkte anzuwenden. Die Erweiterung besteht darin, dass diese mehr als 4-armigen Fälle in Geometriegruppe 6 fallen.</p>
+        <p class="Text">Die <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1564548">Tabelle 6</MadCap:xref> zeigt die Grundwerte für die Sättigungs-Fahrzeugfolgezeit.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="32px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="73px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="73px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="73px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="73px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="73px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">DOC-Fall</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">5</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element"># Fahrzeuge (Summe der [0,1] für den Fall)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">1</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">2</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">&gt;=3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">1</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">2</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">&gt;=3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">2</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">3</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">4</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">&gt;=5</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">3</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">4</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">5</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="gui_element">&gt;=6</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td rowspan="8" class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="gui_element">Geometriegruppe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">1</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">3,9</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4,7</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">5,8</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">7,0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">9,6</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">2</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3,9</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">4,7</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">5,8</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">7,0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">9,6</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">3a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4,0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4,8</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">5,9</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">7,1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">9,7</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">3b</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">4,3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">5,1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6,2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">7,4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">10,0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">4a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4,0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4,8</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">5,9</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">7,1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">9,7</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">4b</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">4,5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">5,3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">6,4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">7,6</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">10,2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">5</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4,5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">5,0</p>
+                        <p class="CellText">6,2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">6,4</p>
+                        <p class="CellText">7,2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">7,6</p>
+                        <p class="CellText">7,8</p>
+                        <p class="CellText">9,0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">9,7</p>
+                        <p class="CellText">9,7</p>
+                        <p class="CellText">10,0</p>
+                        <p class="CellText">11,5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">6</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">4,5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">6,0</p>
+                        <p class="CellText">6,8</p>
+                        <p class="CellText">7,4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">6,6</p>
+                        <p class="CellText">7,3</p>
+                        <p class="CellText">7,8</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">8,1</p>
+                        <p class="CellText">8,7</p>
+                        <p class="CellText">9,6</p>
+                        <p class="CellText">12,3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">10,0</p>
+                        <p class="CellText">11,1</p>
+                        <p class="CellText">11,4</p>
+                        <p class="CellText">13,3</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 6: ">
+                    <a name="1_benutzermodell_iv_2033098965_1564548">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_96940">
+                    </a>Grundwerte für die Sättigungs-Fahrzeugfolgezeit</p>
+            </caption>
+        </table>
+        <p class="Text">Der DOC-Fall hängt von den 64 Typen eines 4-armigen Knotenpunktes ab. Knoten mit mehr als vier Armen werden zunächst wie oben auf 4 Arme reduziert.</p>
+        <p class="Heading_Schritt" MadCap:autonum="Schritt 5: ">Abfahrts-Fahrzeugfolgezeit berechnen</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_90.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="55px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">h</span>
+                            <span class="formula_subscript">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Abfahrts-Fahrzeugfolgezeit für Fahrstreifen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">h</span>
+                            <span class="formula_subscript">si</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Sättigungs-Fahrzeugfolgezeit für jedes <span class="formula">i</span> in <span class="formula">I</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">P‘</span>(<span class="formula">i</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">angepasste Wahrscheinlichkeit für jedes <span class="formula">i</span> in <span class="formula">I</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">I</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Reihe der Tabelle 1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Diese fünf Schritte werden so lange wiederholt, bis die Werte der Abfahrts-Fahrzeugfolgezeiten konvergieren (Unterschied &lt; 0.1). Die berechnete Abfahrts-Fahrzeugfolgezeit <span class="formula" style="font-size: 8pt;line-height: 10pt;">h</span><span class="formula_subscript">d</span> unterscheidet sich nun vom Ausgangswert. Daher wird die nächste Iteration ein anderes Ergebnis hervorbringen.</p>
+        <p class="Text">Nachdem nun die Abfahrts-Fahrzeugfolgezeit für jeden Fahrstreifen berechnet ist, können Servicezeit und Kapazität berechnet werden. Die Servicezeit wird wie folgt berechnet.</p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">t = h</span>
+            <span class="formula_subscript">d</span>
+            <span class="formula"> - m</span>
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="58px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="438px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Servicezeit</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">h</span>
+                            <span class="formula_subscript">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Abfahrts-Fahrzeugfolgezeit</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">m</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Aufrückzeit (2,0 s bei Geometriegruppe 1-4, 2,3 s bei Gruppe 5-6)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Für die Berechnung der Kapazität wird die Belastung auf dem betrachteten Fahrstreifen erhöht, bis der Nutzungsgrad (<span class="formula">v</span><span class="formula_subscript">j</span><span class="formula">h</span><span class="formula_subscript">d</span>)&#160;/&#160;3&#160;600 auf dem betrachteten Fahrstreifen ≥ 1,0 ist. Die Belastung auf den anderen Zufahrten wird konstant gehalten. An diesem Punkt wird der Wert der Belastung der betrachteten Strecke als ihre Kapazität übernommen. Die Kapazität ist daher abhängig von den eingegebenen Belastungen einer jeden Zufahrt.</p>
+        <p class="Text">In einer linearen Implementierung geht die Suche nach der Kapazität langsam von statten. Daher wird einer binäre Suche mit einer oberen Grenze von 1&#160;800&#160;vphpl durchgeführt.</p>
+        <p class="Text">Die mittlere Wartezeit der Steuerung pro Fahrstreifen wird mittels unten stehender Gleichung berechnet. Die gewichtete mittlere Wartezeit einer Zufahrt wird auf der Grundlage der Gewichtungen der Fahrstreifenbelastungen, die mittlere Wartezeit am Knotenpunkt wird auf der Grundlage des gewichteten Mittels pro Zufahrtsbelastungen berechnet. Die Gleichungen sind dieselben wie diejenigen für signalisierte Knotenpunkte. </p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_76.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="53px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="443px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">d</span>
+                            <span class="formula_subscript">x</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">mittlere Steuerungswartezeit pro Fahrzeug für Fahrstreifen <span class="formula">x</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Servicezeit</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">T</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Dauer des Analysezeitraums (h) (Standardwert 0.25 für 15 Min.)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">x</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Nutzungsgrad <img src="../Resources/Images/7_269.jpg" /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">h</span>
+                            <span class="formula_subscript">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Abfahrts-Fahrzeugfolgezeit</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Der Level of Service kann anhand der Wartezeit am Knotenpunkt nachgeschlagen werden (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1369411">Tabelle 7</MadCap:xref>).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="39px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="456px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">LOS</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Mittlere Wartezeit/Fahrzeug</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">A</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">0 – 10 s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">B</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">10 – 15 s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">C</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">15 – 25 s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">D</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">25 – 35 s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">E</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">35 – 50 s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">F</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">50 + s</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 7: ">
+                    <a name="1_benutzermodell_iv_2033098965_1369411">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_39220">
+                    </a>Ermittlung des LOS in Abhängigkeit von der mittleren Wartezeit je Fahrzeug</p>
+            </caption>
+        </table>
+        <p class="Text">Die vorgeschlagene Erweiterung auf 4+ Arme erfolgt durch die Zusammenfassung mehrfacher Links- oder Rechtsabbieger zu einem Links- oder Rechtsabbieger durch das Aufsummieren der Anzahl der Fahrstreifen bei der Berechnung konfligierender Verkehrsströme. Gibt es zum Beispiel 2 konfligierende Linksabbieger für eine betrachtete Zufahrt, eine mit einem Fahrstreifen und eine mit zwei Fahrstreifen, so werden diese zu einem konfligierenden Linksabbieger mit drei Fahrstreifen zusammengefasst. So kann der vorhandene Rahmen verwendet werden. Wahrscheinlich wird die Wartezeit etwas zu niedrig angegeben, aber im vorhandenen Rahmen wird es funktionieren und zu zusätzlicher Wartezeit für weitere Arme führen.</p>
+    </body>
+</html>

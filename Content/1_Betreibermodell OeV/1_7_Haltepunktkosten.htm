@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="Kostensatz1;Kostensatz3;KostenHP;Abschreibungs" MadCap:lastBlockDepth="6" MadCap:lastHeight="661" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/TableStyles/TableStd_TitnoHead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1165536">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_80252">
+            </a>Haltepunktkosten</h4>
+        <p class="Text">
+            <MadCap:keyword term="ÖV:betriebliche Kennzahlen: Haltepunktkosten" />Haltepunktkosten sind Infrastrukturkosten, die für die Benutzung eines Haltepunkts anfallen. Die Kosten werden je Haltepunkt definiert und gleichmäßig auf die Fahrplanfahrten aufgeteilt, für die an diesem Haltepunkt Ein- oder Aussteigen erlaubt ist. Um diese Kosten abzubilden, können pro Haltepunkt bis zu drei Kostenwerte (Attribute <span class="gui_element">Kostensatz1</span> bis <span class="gui_element">Kostensatz3</span>) eingegeben werden <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Attribute_und_Optionen_von_Haltepunkten.htm#2_netz_bearbeiten_23091886_1386463"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Attribute und Optionen von Haltepunkten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Für jeden dieser drei Kostenwerte kann eine der folgenden Kostenarten gewählt werden.</p>
+        <ul>
+            <LI class="List0">Abschreibungskosten, zum Beispiel jährliche Kosten für Abschreibung und Verzinsung, die sich aus den Investitionskosten für die Strecke ergeben</LI>
+            <LI class="List0">Laufende Kosten, zum Beispiel Unterhalts- und Betriebskosten</LI>
+            <LI class="List0">Benutzungskosten, zum Beispiel Gebühren für die Haltepunktnutzung oder Trassengebühren</LI>
+        </ul>
+        <p class="Text">Abhängig von der gewählten Kostenart erfolgt dann die Zuscheidung der Kosten auf die einzelnen Fahrplanfahrten nach den folgenden Formeln.</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="130px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="366px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Kostenart Abschreibungskosten</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">KostenWert: zum Beispiel Investitionskosten für einen Haltepunkt (Haltepunktattribute <span class="gui_element">Kostensatz1</span> bis 3)</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_5.jpg" /> mit q = 1 + p/100</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_7.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Kostenart Laufende Kosten</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">KostenWert: zum Beispiel jährliche Unterhaltskosten für einen Haltepunkt (Haltepunktattribute <span class="gui_element">Kostensatz1</span> bis 3)</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_15.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Kostenart Benutzungskosten</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">KostenWert: zum Beispiel Gebühren für die Nutzung eines Haltepunkts (Haltepunktattribute <span class="gui_element">Kostensatz1</span> bis 3)</p>
+                        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">KostenHP</span>
+                            <span class="formula_subscript">V, HP</span>
+                            <span class="formula"> = KostenWert</span>
+                            <span class="formula_subscript">HP</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">KostenWert</span>
+                            <span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">HP</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Kostenwert, der als Attribut des Haltepunkts <span class="formula">HP</span> eingegeben wird. Für die laufenden Kosten kann dieser auf <span class="formula">AP</span> oder <span class="formula">AH</span> bezogen werden. Abschreibungs- und Benutzungskosten lassen sich entweder auf alle Fahrplanfahrten verteilen oder nur auf Fahrplanfahrten, die an diesem Haltepunkt enden oder beginnen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">KostenHP</span>
+                            <span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">AP, HP</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Haltepunktkosten des Haltepunkts <span class="formula">HP</span> in der Analyseperiode (<span class="formula">AP</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">KostenHP</span>
+                            <span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">V, HP</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Kosten für eine Fahrplanfahrt <span class="formula">V</span>, die den Haltepunkt <span class="formula">HP</span> benutzt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="symbol" style="line-height: 11pt;">S</span>
+                            <span class="formula" style="font-size: 8pt;line-height: 10pt;">V</span>
+                            <span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">HP</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl aller Fahrplanfahrten, die den Haltepunkt <span class="formula">HP</span> benutzen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">FakVA</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Hochrechnungsfaktor des Verkehrsangebots von <span class="formula">AP</span> auf <span class="formula">AH</span><MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Kalender_und_Verkehrstage_einstellen.htm#2_netz_bearbeiten_23091886_1141591"> <span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Kalender und Verkehrstage einstellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">AD</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Abschreibungsdauer in Jahren</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">Zinssatz [%]</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Formeln für die Berechnung von Haltepunktkosten</p>
+            </caption>
+        </table>
+    </body>
+</html>

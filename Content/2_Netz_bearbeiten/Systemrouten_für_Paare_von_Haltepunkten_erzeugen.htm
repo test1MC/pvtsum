@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="429" MadCap:lastWidth="510" MadCap:ignoredWords="Nr;No;xls;End;Sys_B_20_40;Sys_B_20_40_1">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_netz_bearbeiten_23091886_2720811">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_98117">
+            </a>Systemrouten für Paare von Haltepunkten erzeugen</h4>
+        <p class="Text">Sie können für Paare von Haltepunkten, die nicht mit einer Systemroute verbunden sind, Systemrouten erzeugen. </p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie im Fenster <span class="gui_element">Netz</span> mit der rechten Maustaste auf die Schaltfläche <span class="gui_element">Systemrouten</span>.</p>
+        <p class="Stepresult">Das Kontextmenü <span class="gui_element">Systemrouten</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie den Eintrag <span class="gui_element">Erzeugen für Paare von Haltepunkten</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Systemrouten erzeugen für Paare von Haltepunkten</span> öffnet sich.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/WIN_system_routes_generate_stop_points.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Step" MadCap:autonum="3. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Namensgebung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Folgende Namensbestandteile der zu erzeugenden Systemroute können ausgewählt und geändert werden:</p>
+                        <p class="CellText">
+                            <span class="gui_element">Präfix</span>
+                        </p>
+                        <p class="CellText">Angabe eines beliebigen Texts</p>
+                        <p class="CellText">
+                            <span class="gui_element">Verkehrssystem</span>
+                        </p>
+                        <p class="CellText">Auswahl eines Verkehrssystem-Attributs</p>
+                        <p class="CellText">
+                            <span class="gui_element">Start-Haltepunkt</span>
+                        </p>
+                        <p class="CellText">Auswahl eines Haltepunkt-Attributs</p>
+                        <p class="CellText">
+                            <span class="gui_element">End-Haltepunkt</span>
+                        </p>
+                        <p class="CellText">Auswahl eines Haltepunkt-Attributs</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Existiert noch keine Systemroute mit identischem Verkehrssystem und Verlauf im Netz, gilt für die Namensgebung:</p>
+                        <ul>
+                            <LI class="List0Tab">Sind alle vier Bestandteile aktiv, ergibt sich beispielsweise folgender Name für eine erzeugte Systemroute Sys_B_20_40.</LI>
+                            <LI class="List0Tab">Um zu verhindern, dass unterschiedliche gleichzeitig erzeugte Systemrouten identische Namen erhalten, wird eine Zahl an den Namen gehängt, falls eine Namenskombination bereits besteht. Die Zählung startet bei 1, beispielsweise Sys_B_20_40_1.</LI>
+                        </ul>
+                        <p class="CellText">Existierende Systemrouten können mit Hilfe der Namensgebung überschrieben oder aktualisiert werden.</p>
+                        <ul>
+                            <LI class="List0Tab">Eine Systemroute mit identischem Verkehrssystem und Verlauf wird überschrieben, wenn deren Name mit den oben genannten Bestandteilen übereinstimmt. Möchten Sie die Systemroutendaten eines Netzes lediglich aktualisieren, müssen im Fenster die gleichen Parameter wie für existierende Systemrouten eingestellt sein. </LI>
+                            <LI class="List0Tab">Wenn Sie das Überschreiben existierender Systemrouten beim Systemrouten erzeugen verhindern möchten, müssen Sie eine neue Namenskombination wählen. Für diese können keine vorhandenen Systemrouten im Netz gefunden werden. Alle Objekte werden dann neu eingefügt, zusätzlich zu den bestehenden Systemrouten.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Entfernungskriterium (Streckenattribut)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Auswahl eines Streckenattributs als Entfernungskriterium</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Systemrouten werden über Kurzwegsuchen ermittelt, die anhand des angegebenen Entfernungskriteriums und Verkehrssystems durchgeführt werden.</p>
+                        <p class="CellText">Folgende Attribute stehen zur Auswahl:</p>
+                        <p class="CellText">
+                            <span class="gui_element">Länge, t-ÖVSys</span>, <span class="gui_element">ZWert1</span>, <span class="gui_element">ZWert2</span>, <span class="gui_element">ZWert3</span> und <span class="gui_element">ZWert-VSys</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Verkehrssystem</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Auswahl eines Verkehrssystems</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Systemrouten werden über Kurzwegsuchen ermittelt, die anhand des angegebenen Entfernungskriteriums und Verkehrssystems durchgeführt werden. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Haltepunkte verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden nur zwischen aktiven Haltepunkten Systemrouten erzeugt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Systemrouten werden für alle oder alle aktiven Paare von Haltepunkten erzeugt, die noch nicht durch eine aktive Systemroute verbunden sind.</p>
+    </body>
+</html>

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="2210" MadCap:lastWidth="1062" MadCap:ignoredWords="point;2A;2B;from;numarray">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_mit_skripten_arbeiten_3619911052_1038856">
+            </a>Beispiel 2 für den Einsatz von Skriptsprache</h3>
+        <p class="Text">Das Beispiel zeigt die neue Aufteilung der Verkehrsmittelwahl, die auf der Basis der bekannten alten Aufteilung und alter/neuer Nutzenwerte (pivot point) ermittelt wurde.</p>
+        <p class="Text">Über das Menü <span class="gui_element">Rechnen&#160;&gt; Verfahrensablauf</span> wurde ein Beispiel so konfiguriert, dass ersichtlich wird, wie die Nachfrage auf Veränderungen der ÖV-Reisezeit reagiert.</p>
+        <p class="Text">Werden beispielsweise einige Fahrzeiten geändert und wird anschließend das Verfahren ausgeführt, ergeben sich Veränderungen in der Nachfrage, die mittels Matrixspinne visualisiert werden können.</p>
+        <p class="Text">Für das Beispiel werden folgende Schritte ausgeführt:</p>
+        <ul>
+            <LI class="List0">Mit dem Verfahren <span class="gui_element">ÖV-Kenngrößenmatrix berechnen</span> werden die neuen ÖV-Reisezeiten berechnet.</LI>
+            <LI class="List0">Mit dem Verfahren <span class="gui_element">Kombination von Matrizen und Vektoren</span> werden die ÖV-Reisezeiten mit -1 multipliziert, um den Nutzen zu ermitteln. Der Istfall-Nutzen für IV und ÖV sind bereits berechnet.</LI>
+            <LI class="List0">Mit dem Verfahren <span class="gui_element">Skript ausführen</span> wird eine der Python-Skript-Varianten aufgerufen, die sich folgendermaßen unterscheiden:</LI>
+            <LI class="List1">
+                <span class="gui_element">2A</span> ist detaillierter formuliert und enthält erklärende Kommentare <MadCap:xref class="sieheUeberschrSeite" href="#2_mit_skripten_arbeiten_3619911052_1038968"><span style="color: Black;" class="mcFormatColor">(</span><u>2A</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List1">
+                <span class="gui_element">2B</span> ist kompakter formuliert und spart Speicherplatz <MadCap:xref class="sieheUeberschrSeite" href="#2_mit_skripten_arbeiten_3619911052_1040413"><span style="color: Black;" class="mcFormatColor">(</span><u>2B</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+        </ul>
+        <p class="Text2">Die Skripte können für verschiedene Modelle verwendet werden. </p>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">In der letzten Zeile müssen Sie die Matrixnummern jeweils entsprechend ersetzen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Das Verfahren <span class="gui_element">Kombination von Matrizen und Vektoren</span> dient ausschließlich der Ästhetik: Die neue ÖV-Nachfrage wird von der alten subtrahiert, damit die Veränderungen in den Ergebnissen anhand der Matrixspinne visualisiert werden.</LI>
+        </ul>
+        <h5 MadCap:autonum="">
+            <a name="2_mit_skripten_arbeiten_3619911052_1038968">
+            </a>
+            <a name="2_mit_skripten_arbeiten_3619911052_86451">
+            </a>2A</h5>
+        <pre class="Code">from numarray import *</pre>
+        <pre class="Code">import numarray.ieeespecial as ieee</pre>
+        <pre class="Code">def errormsg(msg):</pre>
+        <pre class="Code">	import Tkinter</pre>
+        <pre class="Code">	import tkMessageBox as tkmsg</pre>
+        <pre class="Code">	tk = Tkinter.Tk()</pre>
+        <pre class="Code">	tkmsg.showerror("Pivot point mode choice", msg)</pre>
+        <pre class="Code">	tk.destroy()</pre>
+        <pre class="Code">def Pivot(Visum, T_old_no, T_new_no, U_old_no, U_new_no):</pre>
+        <pre class="Code">	"""Calculate pivot point mode choice model.</pre>
+        <pre class="Code">	T_old_no = list of prior OD matrix numbers</pre>
+        <pre class="Code">	T_new_no = list of posterior OD matrix numbers (0 = don't save)</pre>
+        <pre class="Code">	U_old_no = list of prior utility (skim) matrix numbers</pre>
+        <pre class="Code">	U_new_no = list of posterior utility (skim) matrix numbers """</pre>
+        <pre class="Code">	# fetch all matrices into numarrays</pre>
+        <pre class="Code">	T_old = []</pre>
+        <pre class="Code">	U_old = []</pre>
+        <pre class="Code">	U_new = []</pre>
+        <pre class="Code">	ODs = Visum.Net.ODMatrices</pre>
+        <pre class="Code">	skims = Visum.Net.SkimMatrices</pre>
+        <pre class="Code">	for no in T_old_no:</pre>
+        <pre class="Code">		try:</pre>
+        <pre class="Code">			T_old.append(ODs.ItemByKey(no).GetValues())</pre>
+        <pre class="Code">		except:</pre>
+        <pre class="Code">			errormsg("%d is not a valid OD matrix number." % no)</pre>
+        <pre class="Code">				return</pre>
+        <pre class="Code">	for no in U_old_no:</pre>
+        <pre class="Code" xml:space="preserve">	   try:</pre>
+        <pre class="Code" xml:space="preserve">		   U_old.append(skims.ItemByKey(no).GetValues())</pre>
+        <pre class="Code" xml:space="preserve">	   except:</pre>
+        <pre class="Code" xml:space="preserve">		   errormsg("%d is not a valid skim matrix number or does not contain</pre>
+        <pre class="Code" xml:space="preserve">		   data." % no) </pre>
+        <pre class="Code" xml:space="preserve">			return</pre>
+        <pre class="Code">	for no in U_new_no:</pre>
+        <pre class="Code" xml:space="preserve">	   try:</pre>
+        <pre class="Code">		U_new.append(skims.ItemByKey(no).GetValues())</pre>
+        <pre class="Code" xml:space="preserve">	   except:</pre>
+        <pre class="Code" xml:space="preserve">		errormsg("%d is not a valid skim matrix number or does not contain</pre>
+        <pre class="Code" xml:space="preserve">		data." % no)</pre>
+        <pre class="Code">				return</pre>
+        <pre class="Code"># convert lists into arrays</pre>
+        <pre class="Code">T_old = array(T_old)</pre>
+        <pre class="Code">U_old = array(U_old)</pre>
+        <pre class="Code">U_new = array(U_new)</pre>
+        <pre class="Code"># compute pivot point model</pre>
+        <pre class="Code">T_old_sum = sum(T_old)          # total trips</pre>
+        <pre class="Code">p_old = T_old / T_old_sum       # prior mode shares</pre>
+        <pre class="Code">p_old[ieee.isnan(p_old)] = 0     # set results of division by zero to 0</pre>
+        <pre class="Code">p_new = p_old * exp(U_new-U_old)  # posterior mode shares</pre>
+        <pre class="Code">p_new_sum = sum(p_new)</pre>
+        <pre class="Code">T_new = T_old_sum * p_new / p_new_sum</pre>
+        <pre class="Code">T_new[ieee.isnan(T_new)] = 0      # set results of division by zero to 0</pre>
+        <pre class="Code"># save matrices</pre>
+        <pre class="Code">for i, no in enumerate(T_new_no):</pre>
+        <pre class="Code">	if no &gt; 0:</pre>
+        <pre class="Code">		try:</pre>
+        <pre class="Code">			ODs.ItemByKey(no).SetValues(T_new[i])</pre>
+        <pre class="Code">		except:</pre>
+        <pre class="Code" xml:space="preserve">			errormsg("%d is not a valid OD matrix number or saving </pre>
+        <pre class="Code" xml:space="preserve">			failed." % no)</pre>
+        <pre class="Code">			return</pre>
+        <pre class="Code">""" In the example I am going to change only the PuT supply. The prior</pre>
+        <pre class="Code">	utility matrices are no. 1 for PrT and no. 4 for PuT. The posterior</pre>
+        <pre class="Code">	PuT utilities are in no.4 and I reuse no.1 for PrT, because I do</pre>
+        <pre class="Code">	not change PrT.</pre>
+        <pre class="Code">	Prior OD matrices are no.1 for PrT and no.3 for PuT. I am only</pre>
+        <pre class="Code">	interested in posterior PuT demand, so I set the posterior PrT OD</pre>
+        <pre class="Code">	matrix number to zero (= don't save) and store the posterior PuT</pre>
+        <pre class="Code">	demand in matrix no. 6. """</pre>
+        <pre class="Code">Pivot(Visum, [1,3], [0,6], [1,4], [1,3])</pre>
+        <h5 MadCap:autonum="">
+            <a name="2_mit_skripten_arbeiten_3619911052_1040413">
+            </a>
+            <a name="2_mit_skripten_arbeiten_3619911052_19718">
+            </a>2B</h5>
+        <pre class="Code">from numarray import *</pre>
+        <pre class="Code">import numarray.ieeespecial as ieee</pre>
+        <pre class="Code">def errormsg(msg):</pre>
+        <pre class="Code">	import Tkinter</pre>
+        <pre class="Code">	import tkMessageBox as tkmsg</pre>
+        <pre class="Code">	tk = Tkinter.Tk()</pre>
+        <pre class="Code">	tkmsg.showerror("Pivot point mode choice", msg)</pre>
+        <pre class="Code">	tk.destroy()</pre>
+        <pre class="Code">def Pivot(Visum, T_old_no, T_new_no, U_old_no, U_new_no):</pre>
+        <pre class="Code">	"""Calculate pivot point mode choice model.</pre>
+        <pre class="Code">		T_old_no = list of prior OD matrix numbers</pre>
+        <pre class="Code">		T_new_no = list of posterior OD matrix numbers (0 = don't save)</pre>
+        <pre class="Code">		U_old_no = list of prior utility (skim) matrix numbers</pre>
+        <pre class="Code">		U_new_no = list of posterior utility (skim) matrix numbers """</pre>
+        <pre class="Code">	# fetch all matrices into numarrays</pre>
+        <pre class="Code">	T = []</pre>
+        <pre class="Code">	U_old = []</pre>
+        <pre class="Code">	U_new = []</pre>
+        <pre class="Code">	ODs = Visum.Net.ODMatrices</pre>
+        <pre class="Code">	skims = Visum.Net.SkimMatrices</pre>
+        <pre class="Code">	for no in T_old_no:</pre>
+        <pre class="Code">		try:</pre>
+        <pre class="Code">			T.append(ODs.ItemByKey(no).GetValues())</pre>
+        <pre class="Code">		except:</pre>
+        <pre class="Code">			errormsg("%d is not a valid OD matrix number." % no)</pre>
+        <pre class="Code">			return</pre>
+        <pre class="Code">	for no in U_old_no:</pre>
+        <pre class="Code">		try:</pre>
+        <pre class="Code">			U_old.append(skims.ItemByKey(no).GetValues())</pre>
+        <pre class="Code">		except:</pre>
+        <pre class="Code" xml:space="preserve">			errormsg("%d is not a valid skim matrix number or does not </pre>
+        <pre class="Code" xml:space="preserve">			contain data." % no)</pre>
+        <pre class="Code">			return</pre>
+        <pre class="Code">	for no in U_new_no:</pre>
+        <pre class="Code">		try:</pre>
+        <pre class="Code">			U_new.append(skims.ItemByKey(no).GetValues())</pre>
+        <pre class="Code">		except:</pre>
+        <pre class="Code">			errormsg("%d is not a valid skim matrix number or does not</pre>
+        <pre class="Code">contain data." % no)</pre>
+        <pre class="Code">			return</pre>
+        <pre class="Code"># convert lists into arrays</pre>
+        <pre class="Code">T = array(T)</pre>
+        <pre class="Code">U_old = array(U_old)</pre>
+        <pre class="Code">U_new = array(U_new)</pre>
+        <pre class="Code"># compute pivot point model</pre>
+        <pre class="Code">Ts = sum(T)              # total trips</pre>
+        <pre class="Code">p = T / Ts               # prior mode shares</pre>
+        <pre class="Code">p[ieee.isnan(p)] = 0     # set results of division by zero to 0</pre>
+        <pre class="Code">p *= exp(U_new-U_old)    # posterior mode shares</pre>
+        <pre class="Code">Ts /= sum(p)             # total matrix / sum of posterior shares</pre>
+        <pre class="Code">Ts[ieee.isnan(Ts)] = 0   # set results of division by zero to 0</pre>
+        <pre class="Code"># save matrices</pre>
+        <pre class="Code">for i, no in enumerate(T_new_no):</pre>
+        <pre class="Code">	if no &gt; 0:</pre>
+        <pre class="Code">		try:</pre>
+        <pre class="Code">			ODs.ItemByKey(no).SetValues(p[i] * Ts)</pre>
+        <pre class="Code">		except:</pre>
+        <pre class="Code" xml:space="preserve">			errormsg("%d is not a valid OD matrix number or saving </pre>
+        <pre class="Code" xml:space="preserve">			failed." % no)</pre>
+        <pre class="Code">			return</pre>
+        <pre class="Code">""" In the example I am going to change only the PuT supply. The</pre>
+        <pre class="Code">	prior utility matrices are no. 1 for PrT and no. 4 for PuT.</pre>
+        <pre class="Code">	The posterior PuT utilities are in no.4 and I reuse no.1 for</pre>
+        <pre class="Code">	PrT, because I do not chane PrT.</pre>
+        <pre class="Code">	Prior OD matrices are no.1 for PrT and no.3 for PuT. I am only</pre>
+        <pre class="Code">	interested in posterior PuT demand, so I set the posterior PrT</pre>
+        <pre class="Code">	OD matrix number to zero (= don't save) and store the posterior</pre>
+        <pre class="Code">	PuT demand in matrix no. 6. """</pre>
+        <pre class="Code">Pivot(Visum, [1,3], [0,6], [1,4], [1,3])</pre>
+    </body>
+</html>

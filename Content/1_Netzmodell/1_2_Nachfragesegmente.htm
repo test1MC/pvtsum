@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens" MadCap:lastBlockDepth="4" MadCap:lastHeight="1002" MadCap:lastWidth="582">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1026260">
+            </a>
+            <a name="1_netzmodell_1240632468_72652">
+            </a>Nachfragesegmente</h4>
+        <p class="Text">
+            <MadCap:keyword term="Netzobjekte: Nachfragesegmente" />
+            <MadCap:keyword term="Nachfragesegmente" />Ein Nachfragesegment ist genau einem Modus zugeordnet. Es stellt die Verbindung von Verkehrsangebot und Verkehrsnachfrage dar. Da für jeden Modus mehrere Nachfragesegmente definiert werden können, lassen sich unterschiedliche Arten von Nachfrage in einem Verkehrsmodell integrieren.</p>
+        <p class="Text">Nachfragesegmente können verwendet werden zur Differenzierung von folgenden Objekten.</p>
+        <ul>
+            <LI class="List0">Personengruppen</LI>
+        </ul>
+        <p class="List_Text0">Beispielsweise Erwerbstätige Pkw, Erwerbstätige ÖV, Schüler ÖV</p>
+        <ul>
+            <LI class="List0">Fahrkartenarten</LI>
+        </ul>
+        <p class="List_Text0">Beispielsweise Fahrgäste-Einzelfahrkarte, Fahrgäste-Zeitkarte</p>
+        <ul>
+            <LI class="List0">Fahrtzwecken</LI>
+        </ul>
+        <p class="List_Text0">zur Arbeit, zum Einkaufen, zur Wohnung</p>
+        <ul>
+            <LI class="List0">Fahrzeugtypen</LI>
+        </ul>
+        <p class="List_Text0">Beispielsweise Pkw-Diesel, Pkw-Benzin</p>
+        <p class="Text">Jedem Nachfragesegment wird genau eine Nachfragematrix zugeordnet. Umlegungsergebnisse liegen daher immer auf der Ebene eines Nachfragesegments vor (zum Beispiel die Belastungen für das Nachfragesegment ÖV-Schülerverkehr).</p>
+        <p class="Text">Grundsätzlich wird davon ausgegangen, dass Nachfragematrizen in folgenden Einheiten vorliegen.</p>
+        <ul>
+            <LI class="List0">IV</LI>
+        </ul>
+        <p class="List_Text0">in Pkw-Einheiten (PkwE)</p>
+        <ul>
+            <LI class="List0">ÖV</LI>
+        </ul>
+        <p class="List_Text0">in Personen-Einheiten</p>
+        <p class="Text">Zur Umrechnung von Pkw-Einheiten in Personenfahrten im IV kann für jedes Nachfragesegment ein Besetzungsgrad angegeben werden <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Attribute_und_Optionen_von_Nachfragesegmenten.htm#2_netz_bearbeiten_23091886_1133924"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Attribute und Optionen von Nachfragesegmenten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <h5>Nachfragesegmente in der Umlegung</h5>
+        <p class="Text">
+            <MadCap:keyword term="Umlegungen: Nachfragesegmente" />Mit allen IV-Umlegungsverfahren <MadCap:xref class="sieheUeberschrSeite" href="../1_Benutzermodell IV/1_5_Benutzermodell IV.htm#1_benutzermodell_iv_2033098965_1428447"><span style="color: Black;" class="mcFormatColor">(</span><u>Benutzermodell IV</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> können Nachfragesegmente verschiedener IV-Modi gleichzeitig umgelegt werden.</p>
+        <ul>
+            <LI class="List0">Tribut-Verfahren, Stochastische oder Dynamische Stochastische Umlegung</LI>
+        </ul>
+        <p class="List_Text0">Pro Iterationsschritt wird für jedes Verkehrssystem eine eigene Routensuche durchgeführt, da jedes Verkehrssystem eine verkehrssystemspezifische Widerstandsfunktion aufweist.</p>
+        <ul>
+            <LI class="List0">Sukzessiv- und Gleichgewichtsumlegung, Lernverfahren</LI>
+        </ul>
+        <p class="List_Text0">Die Suche erfolgt für jedes Nachfragesegment separat unter Verwendung derselben VSys-spezifischen Widerstandsfunktion. Das heißt Belastungen können NSeg-fein ausgegeben werden. Werden die Nachfragematrizen vor der Umlegung addiert, reduziert sich die Rechenzeit.</p>
+        <ul>
+            <LI class="List0">DUE</LI>
+        </ul>
+        <p class="List_Text0">Aufgrund der Parametrisierung je Nachfragesegment erfolgt die Routensuche immer NSeg-fein.</p>
+        <p class="Text">Im ÖV können immer nur die Nachfragesegmente eines ÖV-Modus gleichzeitig ausgewählt werden <MadCap:xref class="sieheUeberschrSeite" href="../1_Benutzermodell OeV/1_6_Benutzermodell OeV.htm#1_benutzermodell_oev_2318507456_1025949"><span style="color: Black;" class="mcFormatColor">(</span><u>Benutzermodell ÖV</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Falls mehr als ein ÖV-Modus (zum Beispiel ÖV-Fern, ÖV-Nah) modelliert werden soll, ist für jeden Modus eine eigene Umlegung erforderlich, da die Routensuche unterschiedliche Verkehrssysteme berücksichtigen muss. Für jedes Nachfragesegment können in den Umlegungsparametern spezifische Splitparameter bestimmt werden. Damit lässt sich beispielsweise eine unterschiedliche Bewertung des Umsteigens oder der Fahrpreise bei unterschiedlichen Personengruppen (Schüler, Rentner, Erwerbstätige) abbilden.</p>
+    </body>
+</html>

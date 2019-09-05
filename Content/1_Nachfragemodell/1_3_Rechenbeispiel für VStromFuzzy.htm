@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG;bearbeitung;Bearbeitungs;Nested;80er;sk;Method;of;verteilung;WAW;Stud;Schmiedel;NEmP;NEoP;Sch;GSch" MadCap:lastBlockDepth="2" MadCap:lastHeight="1276" MadCap:lastWidth="1070">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1032583">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc148165098">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc129148449">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc112739195">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc112047349">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc88627391">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc56320078">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc506714332">
+            </a>Rechenbeispiel für VStromFuzzy</h4>
+        <p class="Text">Ein Rechenbeispiel soll die Funktion der Matrixkorrektur verdeutlichen. In dem beistehend gezeigten sehr einfachen Netz mit vier Bezirken ist ein ÖV-Angebot definiert. </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/5_101.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <p class="Text">Die Streckenbalken zeigen das Umlegungsergebnis der folgenden Matrix, von der wir annehmen, dass sie vor längerer Zeit durch eine Verkehrsbefragung ermittelt wurde:</p>
+        <pre class="Input">$VR</pre>
+        <pre class="Input">*  PTV </pre>
+        <pre class="Input">*  Zeitintervall</pre>
+        <pre class="Input">   0.00  24.00</pre>
+        <pre class="Input">*  Faktor</pre>
+        <pre class="Input">   1</pre>
+        <pre class="Input"> Verkehrsmittel-Nr 3</pre>
+        <pre class="Input">*    3 Verkehrsmittel ÖV</pre>
+        <pre class="Input">*    4 Verkehrsmittel IV</pre>
+        <pre class="Input">* Anzahl Bezirke</pre>
+        <pre class="Input">    4</pre>
+        <pre class="Input">         1         2       3         4</pre>
+        <pre class="Input">*Bez       1     Summe =      300</pre>
+        <pre class="Input">         0       100     100       100</pre>
+        <pre class="Input">*Bez       2     Summe =      300</pre>
+        <pre class="Input">       100         0     100       100</pre>
+        <pre class="Input">*Bez       3     Summe =      300</pre>
+        <pre class="Input">       100       100       0       100</pre>
+        <pre class="Input">*Bez       4     Summe =      300</pre>
+        <pre class="Input">       100       100     100         0</pre>
+        <p class="Text">Inzwischen wurden Zählungen auf allen Strecken des Netzes vorgenommen, bei denen folgende Belastungen ermittelt wurden.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/5_102.png" />
+        </p>
+        <p class="Text">Die Zählwerte für dieses Beispiel beziehen sich auf die Annahme, dass die Nachfragematrix sich inzwischen wie folgt verändert hat.</p>
+        <pre class="Input">$VR</pre>
+        <pre class="Input">*  PTV </pre>
+        <pre class="Input">*  Zeitintervall</pre>
+        <pre class="Input">   0.00  24.00</pre>
+        <pre class="Input">*  Faktor</pre>
+        <pre class="Input">   1</pre>
+        <pre class="Input"> Verkehrsmittel-Nr 3</pre>
+        <pre class="Input">*    3 Verkehrsmittel ÖV</pre>
+        <pre class="Input">*    4 Verkehrsmittel IV</pre>
+        <pre class="Input">* Anzahl Bezirke</pre>
+        <pre class="Input">    4</pre>
+        <pre class="Input">         1         2         3         4</pre>
+        <pre class="Input">*Bez       1     Summe =      350</pre>
+        <pre class="Input">         0       150       100       100</pre>
+        <pre class="Input">*Bez       2     Summe =      330</pre>
+        <pre class="Input">       150         0       100        80</pre>
+        <pre class="Input">*Bez       3     Summe =      300</pre>
+        <pre class="Input">       100       100         0       100</pre>
+        <pre class="Input">*Bez       4     Summe =      280</pre>
+        <pre class="Input">       100        80       100         0</pre>
+        <p class="Text">Die Zählwerte aus der Abbildung werden in <MadCap:variable name="PTV_Manual.Programmname" /> als Strecken-Zusatzwerte geladen, zusätzlich kann für jeden einzelnen Zählwert oder pauschal eine Stichprobenunschärfe hinterlegt werden, das heißt eine Bandbreite, innerhalb derer die Zählwerte tatsächlich von einem Erhebungsstichtag zum anderen schwanken. Diese Unschärfe kann pauschal angenommen oder empirisch durch Zählung derselben Fahrtbeziehungen an verschiedenen Stichtagen ermittelt werden.</p>
+        <p class="Text">VStromFuzzy ermittelt nun eine neue Matrix, die einerseits möglichst ähnliche Verhältnisse zwischen den Fahrtenzahlen in den einzelnen Quelle-Ziel-Relationen aufweist wie die alte Matrix (durch Maximierung der gewichteten Entropie), andererseits bei Umlegung die Zählwerte aus der neuen Erhebung innerhalb der vorgegebenen Schwankungsbreite trifft.</p>
+        <p class="Text">Im vorliegenden Beispiel ermittelt VStromFuzzy bei einer Stichprobenunsicherheit von <img src="../Resources/Images/5_117.png" style="margin-right: 0, 01417255px;margin-bottom: 0, 006236076px;" />5&#160;% die folgende Matrix, die gut mit der angenommenen „Musterlösung“ übereinstimmt.</p>
+        <pre class="Input">$VN</pre>
+        <pre class="Input">       4</pre>
+        <pre class="Input">              1       2       3       4</pre>
+        <pre class="Input">*           346     331     298     281</pre>
+        <pre class="Input">*     1:       346</pre>
+        <pre class="Input">              0     148      99      99</pre>
+        <pre class="Input">*     2:       331</pre>
+        <pre class="Input">            148       0     100      83</pre>
+        <pre class="Input">*     3:       298</pre>
+        <pre class="Input">             99     100       0      99</pre>
+        <pre class="Input">*     4:       281</pre>
+        <pre class="Input">             99      83      99       0</pre>
+        <pre class="Input">* 1256</pre>
+    </body>
+</html>

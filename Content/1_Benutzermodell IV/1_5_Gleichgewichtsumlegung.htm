@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="595" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;v0;VOT;CR;277s;akt;321s;360s;ver;AE;ED;Fzg;BD;CF;DF;StrNr;0ij;0i;0j;ij;r1;exp;r2;MSA;Method;of;t0;tAkt;car;fma;hveh;Landstr;Str;NCHRP;Wardrop’schen;NLM;VerwendeUmlaufzeitfamilie;SignalKoordinierungsGruppe;VerwendeUmlaufzeitFamilie;VT;Bundesstr;AP;46min;39s;34s;12s;FahrzeugStd;FahrzeugKm;11min;40s;370h;54min;19s;5min;47s;111h;43min;15s;7min;48s;188h;29min;DueStauWellenGeschw;DueFunDiag;PlatzProPKWE;StreckenPlatzProPKWE;vMax;IVAnteil_Q;IVAnteil_Z;Abbiegerkapazitäten;x1;x2;x3;Turns;mph;bzw;1h;etc;Belastungs;38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;PkwE">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_iv_2033098965_1034670">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249368">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc130966596">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc60553480">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc508007534">
+            </a>Gleichgewichtsumlegung</h2>
+        <p class="Text">
+            <MadCap:keyword term="Gleichgewichtsumlegung" />
+            <MadCap:keyword term="IV-Umlegungsverfahren: Gleichgewichtsumlegung" />Die Gleichgewichtsumlegung verteilt die Nachfrage entsprechend dem ersten Wardrop’schen Prinzip:</p>
+        <p class="Text">„Jeder einzelne Verkehrsteilnehmer wählt seine Route derart, dass der Widerstand auf allen alternativen Routen letztlich gleich ist und jeder einseitige Wechsel auf eine andere Route die persönliche Fahrzeit erhöhen würde (Nutzeroptimum).“</p>
+        <p class="Text">Dieser Verhaltenshypothese liegt die in der Praxis unrealistische Annahme zu Grunde, dass jeder Verkehrsteilnehmer die vollständige Information über den Netzzustand besitzt. In der Verkehrsplanung wird diese Hypothese angesichts eines wesentlichen methodischen Vorteils der Gleichgewichtsumlegung akzeptiert – unter recht allgemeinen Voraussetzungen ist die Existenz und Eindeutigkeit des Umlegungsergebnisses (ausgedrückt in Belastungen der Netzobjekte) garantiert. Überdies existieren Maße für den Abstand einer Näherungslösung vom Gleichgewicht, woraus sich ein objektives Abbruchkriterium für das in der Regel iterative Lösungsverfahren ableiten lässt.</p>
+        <p class="Text">Die Gleichgewichtsumlegung ermittelt ein Nutzeroptimum, das sich von einem Systemoptimum unterscheidet, wie <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1370008">Tabelle 1</MadCap:xref> und <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1370042">Tabelle 2</MadCap:xref> zeigen.</p>
+        <ul>
+            <LI class="List0">
+                <MadCap:keyword term="Nutzeroptimum" />Beim Nutzeroptimum ergibt sich für alle Routen einer Verkehrsbeziehung zwischen den Bezirken <span class="formula">i</span> und <span class="formula">j</span> der gleiche Widerstand (im Rahmen der Rechengenauigkeit). Dies ergibt sich unmittelbar aus der Bedingung, dass sich für keinen Verkehrsteilnehmer der Wechsel auf eine andere Route lohnt (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1370008">Tabelle 1</MadCap:xref>).</LI>
+            <LI class="List0">
+                <MadCap:keyword term="Systemoptimum" />Beim Systemoptimum wird dagegen der Gesamtwiderstand im Netz, das Produkt aus Routenwiderstand und Routenbelastung für alle Verkehrsbeziehungen, minimiert. Im Durchschnitt führt diese Vorgehensweise zu kürzeren Reisezeiten pro Verkehrsteilnehmer, doch gibt es (wenige) Verkehrsteilnehmer, die im Dienste der Allgemeinheit Routen mit überdurchschnittlichem Widerstand nutzen (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1370042">Tabelle 2</MadCap:xref>).</LI>
+        </ul>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Route</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Strecken</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Belastung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">tAkt [min]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Belastung • tAkt</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1+8+9</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">736</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">38:19</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">470:05:53</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1+2+3+5+6+7</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">995</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">38:21</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">636:01:21</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">10+11+5+6+7</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">269</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">38:20</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">171:50:02</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">2&#160;000</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">1277:57:17</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_iv_2033098965_1370008">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_21364">
+                    </a>Berechnung des Nutzeroptimums für das Beispielnetz</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Route</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Strecken</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Belastung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">tAkt [min]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Belastung • tAkt</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1+8+9</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">734</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">37:43</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">461:46:27</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">1+2+3+5+6+7</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">919</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">37:13</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">569:58:45</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">10+11+5+6+7</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">347</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">41:13</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">238:11:24</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">2&#160;000</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">1269:56:36</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_iv_2033098965_1370042">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_71847">
+                    </a>Berechnung des Systemoptimums für das Beispielnetz</p>
+            </caption>
+        </table>
+    </body>
+</html>

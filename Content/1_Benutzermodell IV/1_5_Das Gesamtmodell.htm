@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="3" MadCap:lastHeight="1355" MadCap:lastWidth="684" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;v0;VOT;CR;277s;akt;321s;360s;ver;AE;ED;Fzg;BD;CF;DF;StrNr;0ij;0i;0j;ij;r1;exp;r2;MSA;Method;of;t0;tAkt;car;fma;hveh;Landstr;Str;NCHRP;Wardrop’schen;Theory;Î;NLM;abflüsse">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1039062">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249396">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__ref152745394">
+            </a>Das Gesamtmodell</h3>
+        <p class="Text">Alle Komponenten der dynamischen Gleichgewichtsumlegung wurden vorgestellt. Hier wird das Nutzergleichgewicht, bei dem kein Nutzer seine empfundenen Kosten durch das einseitige Wechseln von Wegen reduzieren kann, als Fixpunktproblem in den Ganglinien der Kantenzuflüsse und -abflüsse beschrieben.</p>
+        <h5>Der deterministische Ansatz</h5>
+        <p class="Text">Aus dem Ansatz der impliziten Wegeaufzählung ergibt sich das in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1049117">Abbildung 1</MadCap:xref> dargestellte Modell.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_VariablesModels.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 00009px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1049117">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_64106">
+            </a>Variablen und Modelle der Fixpunktansätze für das Netzwiderstandsmodell (linke Seite) und für die dynamische Umlegung mit Rückstau (rechte Seite)</p>
+        <p class="Text">Analog zum statischen Fall ist die Netzbelastungsfunktion eine Abbildung, die für eine bestimmte Nachfrage <span class="gui_element">D </span>die Kantenbelastung <span class="gui_element">f</span> in Übereinstimmung mit den Kantenreisezeiten und -kosten <span class="gui_element">t</span> und <span class="gui_element">c</span> aus dem deterministischen Routenwahlmodell p(w(<span class="gui_element">c</span>, <span class="gui_element">t</span>), <span class="gui_element">t</span>, <span class="gui_element">c</span>) und dem Flusspropagierungsmodell <span class="symbol">w</span>(<span class="gui_element">p</span>, <span class="gui_element">t</span>; <span class="gui_element">D</span>) bestimmt. Die Umlegung benutzt eine implizite Wegeaufzählung und basiert auf den minimalen Kosten <span class="gui_element">w</span> von jedem Knoten zum Ziel sowie auf den daraus resultierenden bedingten Wahrscheinlichkeiten<span class="gui_element"> p</span> der Kanten. Das Kantenwiderstandsmodell erzeugt wiederum die Kantenabflusszeiten <span class="gui_element">t </span>und die Kantenkosten <span class="gui_element">c</span> passend zu den Kantenzuflüssen <span class="gui_element">f </span>und den Kantenabflüssen <span class="gui_element">u</span>. Das deterministische Nutzergleichgewicht ergibt sich durch Rückkopplung von Netzbelastungsfunktion und Kantenwiderstandsmodell.</p>
+        <h5>Der Probit-Ansatz</h5>
+        <p class="Text">Im Probit-Routenwahlmodell, das auf der Random Utility Theory beruht, sind die von den Nutzern empfundenen Kantenkosten nicht exakt bekannt und gelten daher als unabhängige Zufallsvariablen. Das Probit-Modell für statische Umlegungen wird dynamisiert, indem davon ausgegangen wird, dass die von Nutzern zum Zeitpunkt <span class="formula">t </span>empfundenen Kantenkosten <span class="formula">ĉ</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) der Kante<span class="formula"> a</span><span class="symbol">Î</span><span class="formula">A </span>der Summe aus den Kantenkosten <span class="formula">c</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) des Kantenwiderstandsmodells und einem zeitlich veränderlichen Zufallsfehler entsprechen, dessen Wert zum Zeitpunkt <span class="formula">t </span>normalverteilt ist. Wir setzen voraus, dass dessen Varianz proportional zu einem zeitlich veränderlichen Kostenterm <span class="formula_symbol">c</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) &gt; 0 und unabhängig vom Belastungszustand ist. </p>
+        <p class="Text">Die Kantenbelastungen, die aus der Auswertung der Probit-NLM für bestimmte Kantenwiderstände resultieren, werden wie folgt mit der bekannten Montecarlo-Methode bestimmt. </p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">
+            <span class="formula">H</span> empfundene Kantenkosten werden wie folgt zufällig gezogen.</p>
+        <p class="Text2">
+            <img src="../Resources/Images/7_262.png" />
+        </p>
+        <p class="Text2">In kompakter Form ergibt sich</p>
+        <p class="Formula_number" MadCap:autonum=" [1]">
+            <a name="1_benutzermodell_iv_2033098965_1039094">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_40944">
+            </a>
+            <img src="../Resources/Images/7_263.png" style="margin-bottom: 0, 007938385px;" />
+        </p>
+        <p class="Text2">Dabei stammt jedes <span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) aus einer Standard-Normal-Verteilung N[0,1], <span class="formula">h</span> = 1, … , <span class="formula">H</span>. </p>
+        <p class="Step" MadCap:autonum="2. &#160;">Für jede Ziehung wird mit der deterministischen NLM ein konsistenter Kantenzufluss bestimmt.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Der aus den deterministischen Kantenzuflüssen resultierende Mittelwert wird berechnet, woraus sich eine unverzerrte Schätzung des Probit-Kantenzuflusses ergibt.</p>
+        <p class="Text">Gemäß Gleichung <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1039094">[1]</MadCap:xref> wird die gesamte Ganglinie <span class="formula">ĉ</span><span class="formula_subscript">a</span><span class="formula_superscript">h</span>(<span class="symbol">t</span>) mit einer einzigen Zufallszahl gestört, das heißt der Schätzfehler der Verkehrsteilnehmer ist unabhängig von der Tageszeit. Dies stimmt mit dem Verhalten von Nutzern überein, die die Kantenkostenganglinie ganzheitlich wahrnehmen. Die Fahrzeiten, die der Flusspropagierung zu Grunde liegen, werden hingegen während der Simulation nicht gestört.</p>
+    </body>
+</html>

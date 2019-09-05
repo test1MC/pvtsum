@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="475" MadCap:lastWidth="1062" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls;max;Program;Processor;R';Factor;Stdabw;Lognormalvert;Method;Lotka;Volterra;BPR;BPR2;b’;Knotensteuerung_CR;pseudodynamic;pa">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 MadCap:autonum=" 0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1033770">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_53730">
+            </a>Rückstaumodell einstellen und berechnen</h2>
+        <p class="Text">
+            <MadCap:keyword term="Rückstaumodell" />
+            <MadCap:keyword term="IV-Umlegungsverfahren:mit Rückstaumodell" />Das Rückstaumodell (pseudodynamic assignment, pa) schließt die Lücke zwischen rein statischen Verfahren, die keinen Zeitbezug haben und keine Wartezeiten aufgrund von Stausituationen ermitteln können, und dynamischen Verfahren, die viel Rechenzeit benötigen. Das Rückstaumodell ist kein eigenständiges Umlegungsverfahren, sondern verändert die Ergebnisse während einer Umlegung oder im Anschluss an eine Umlegung <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Rueckstaumodell.htm#1_benutzermodell_iv_2033098965_1427267">Siehe "Rückstaumodell"</MadCap:xref>.</p>
+        <p class="Text">Das Rückstaumodell kann in Verbindung mit den folgenden statischen IV-Umlegungen angewendet werden:</p>
+        <ul>
+            <LI class="List0">Sukzessivumlegung</LI>
+            <LI class="List0">Gleichgewichtsumlegung</LI>
+            <LI class="List0">Lernverfahren</LI>
+            <LI class="List0">TRIBUT-Gleichgewichtsumlegung</LI>
+            <LI class="List0">TRIBUT-Lernverfahren</LI>
+            <LI class="List0">Stochastische Umlegung</LI>
+        </ul>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Wenn Sie verschiedene Szenarien rechnen und dafür die Nachfrage schrittweise erhöhen, müssen Sie darauf achten, dass das Verkehrsaufkommen realistisch bleibt. Sie sollten daher die Werte in kleinen Schritten erhöhen, beispielsweise mit Faktor 1.1 oder 1.2.</p>
+                        <p class="Text">Wenn Sie im Netz Daten ändern, die für das Rückstaumodell wichtig sind, beispielsweise die Kapazität, werden die Ergebnisse des Rückstaumodells (korrigierte Belastungen, Wartezeiten sowie absolute und relative Staulänge) nicht automatisch angepasst. Sie müssen in diesem Fall das Rückstaumodell nochmals berechnen.</p>
+                        <p class="Text">Eine Umlegung mit Rückstaumodell ermittelt zunächst die Wege mit den entsprechenden Belastungen. Im Anschluss werden die Rückstaueffekte eingerechnet, wodurch sich die Belastungen auf den Strecken ändern. Aus diesem Grund besitzen die mit der Umlegung gespeicherten Wege und die Quelle-Ziel-Beziehungen andere Belastungen als die Strecken. Die Belastungen, die eine Spinne anzeigt, können daher von den Streckenbelastungen abweichen. Auch der Beziehungsfilter berücksichtigt bei aktivierter Option <span class="gui_element">Netzbelastungen filtern</span> nur die Belastungen aus der Umlegung und nicht die Belastung nach Berechnung des Rückstaumodells.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

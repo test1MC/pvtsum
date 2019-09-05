@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="bzw" MadCap:lastBlockDepth="2" MadCap:lastHeight="852" MadCap:lastWidth="697">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1354802">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_27215">
+            </a>
+            <span class="gui_element">Algorithmus</span> zur Fahrpreisermittlung</h4>
+        <p class="Text">Die Abfolge aller Entscheidungen, die zur Auswahl der auf einem Weg verwendeten Fahrkarte(n) führen, kann als Algorithmus formuliert werden. Daran wird die Bedeutung der Ränge für Tarifsysteme und Fahrkarten besonders deutlich.</p>
+        <p class="Text">Jeder Weg besteht aus einer Folge von Teilwegen. Jeder Teilweg besitzt eine ÖV-Linie, die mit einem oder mehreren Tarifsystemen verknüpft ist (bzw. ein ÖV-Zusatz-Verkehrssystem, das ebenfalls Tarifsystemen zugeordnet ist). Der Algorithmus zur Fahrpreisermittlung lautet damit wie folgt:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Ermittlung der Tarifsysteme:</p>
+        <p class="Text2">Gehe über alle möglichen Tarifsystem-Kombinationen für die verschiedenen Teilwege, und zwar in absteigender Rang-Ordnung (wobei Rang der Kombination := Maximum der Ränge der Tarifsysteme in der Kombination). Berechne den Fahrpreis für jede Kombination gemäß Schritt 2. Wähle aus den Tarifsystem-Kombinationen vom gleichen Rang diejenige mit dem kleinsten gewichteten Fahrpreis aus. Im Gegensatz zum Fahrpreis wird beim gewichteten Fahrpreis das Preisgewicht für das jeweilige Tarifsystem berücksichtigt. Sind alle Tarifsystem-Kombinationen eines Rangs ungültig, betrachte die Kombinationen des nächsten Rangs. Gibt es keine gültige Tarifsystem-Kombination, gilt der globale Rückfall-Fahrpreis.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Betrachtung einer Tarifsystem-Kombination:</p>
+        <p class="Text2">Sind feste Tarifsystem für alle Teilwege gegeben, gehe über alle verwendeten Tarifsysteme und berechne ihre Fahrpreise gemäß Schritt 3. Führen diese Berechnungen alle zu einem gültigen Fahrpreis, ist die Summe ein gültiger Fahrpreis für den Gesamt-Weg. Falls nicht, ist diese Tarifsystem-Kombination ungültig.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Betrachtung eines Tarifsystem auf allen ihm zugeordneten Teilwegen:</p>
+        <p class="Text2">Bestimme anhand des Tarifsystem-Attributs <span class="gui_element">Fahrpreis-Bezug</span>, für welche Untermengen der Tarifsystem-Teilwege separate Fahrkartenarten verwendet werden müssen. Gehe über alle diese Teilweg-Untermengen und berechne ihre Fahrpreise gemäß Schritt 4. Liefern alle Berechnungen eine gültigen Fahrpreis, ist die Summe ein gültiger Fahrpreis für das Tarifsystem. Falls nicht, schlägt die Fahrpreisberechnung für dieses Tarifsystem fehl.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Betrachtung eines Tarifsystem auf einer Teilweg-Untermenge:</p>
+        <p class="Text2">Für ein Tarifsystem und eine vorgegebene Teilweg-Untermenge gehe über alle Fahrkartenarten, die vom Tarifsystem verwendet werden, und zwar in absteigender Rang-Ordnung. Berechne den Fahrpreis für jede Fahrkartenart gemäß Schritt 5. Wähle aus den Fahrkartenarten vom gleichen Rang diejenige mit dem kleinsten Fahrpreis aus. Sind alle Fahrkartenarten eines Rangs nicht anwendbar, betrachte die Fahrkartenarten des nächsten Rangs. Gibt es keine anwendbare Fahrkartenart, ist das Tarifsystem auf dieser Teilweg-Untermenge nicht zulässig.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Betrachtung einer Fahrkartenart auf einer Teilweg-Untermenge:</p>
+        <p class="Text2">Berechne den Grundpreis gemäß Tarifstruktur der Fahrkartenart (Entfernungstarif, Zonentarif, Von-Nach-Zonentarif, Kurzstreckentarif). Wenn die Tariftabelle keinen gültigen Eintrag enthält, ist die Fahrkartenart nicht anwendbar. Addiere den Anfangsfahrpreis für den ersten Teilweg des Wegs. Addiere den Umstiegsfahrpreis entsprechend den Tarifsystemen, zwischen denen umgestiegen wurde.</p>
+        <p class="Text2">Sofern für die Fahrkartenart entfernungsabhängige Zuschläge aktiviert sind, ermittle und addiere den entfernungsabhängigen Zuschlag für die gezählte Anzahl Tarifpunkte. Enthält die Zuschlagstabelle keinen passenden Eintrag, ist die Fahrkartenart nicht anwendbar. Ermittle und addiere den fixen Zuschlag. Vergleiche den Gesamtpreis mit den Mindestpreisen aller vorkommenden Verkehrssysteme und erhöhe ihn bei Bedarf.</p>
+    </body>
+</html>

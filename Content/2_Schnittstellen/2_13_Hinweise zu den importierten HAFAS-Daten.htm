@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="689" MadCap:lastWidth="510" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;ngruppe;IC;Verwaltungs;End;KWZ;VE;evtl;Abfahrts">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1079803">
+            </a>Hinweise zu den importierten HAFAS-Daten</h3>
+        <h5>Verkehrsgattungen</h5>
+        <p class="Text">HAFAS-Zuggattungen werden mit folgenden Daten übernommen:</p>
+        <ul>
+            <LI class="List0">Gattungscode (maximal dreistellig)</LI>
+            <LI class="List0">Kategorie Produktklasse</LI>
+            <LI class="List0">Gattungsbezeichnung</LI>
+        </ul>
+        <h5>Haltestellenverzeichnis, Koordinaten der Haltestellen</h5>
+        <p class="Text">Nummer, Name und Koordinaten der Bahnhöfe werden aus beiden Dateien übernommen.</p>
+        <p class="Text">Für jeden Bahnhof wird eine 1:1:1:1-Kombination aus Knoten, Haltestelle, Haltestellenbereich und Haltepunkt eingefügt. Name und Code werden beide aus dem HAFAS-Namen gebildet. Enthält der HAFAS-Name mehrere durch $ getrennte Alternativnamen, wird nur der erste Name übernommen.</p>
+        <p class="Text">Wenn Sie nur die Bahnhofskoordinatendatei importieren, werden keine Namen gebildet.</p>
+        <h5>Verbindungen zwischen Haltestellen</h5>
+        <p class="Text">Haltestellengruppen (2. Informationsbereich) werden als Haltestellen mit mehreren Haltestellenbereichen übernommen. </p>
+        <p class="Text">Dabei werden alle auf der rechten Seite des „:“-Zeichen stehenden Haltepunkte unter die Haltestelle auf der linken Seite aggregiert, wenn diese vorhanden ist (Metabahnhöfe werden dadurch ignoriert) und die Zuordnung nicht in einem früheren Schritt bereits stattgefunden hat. </p>
+        <p class="Text">Die Haltestellen der zu aggregierenden Haltepunkte werden gelöscht und ihre Haltestellenbereiche der übergeordneten Haltestelle auf der linken Seite zugeordnet.	</p>
+        <p class="Text">Übergangsbeziehungen (1. Informationsbereich) werden unterschiedlich interpretiert. Liegt ein Übergang innerhalb einer Haltestelle(ngruppe) vor, wird die Übergangszeit (optional auch sekundengenau) in die Matrix der Übergänge zwischen den zugehörigen Haltestellenbereichen der Haltestelle eingetragen. Die Matrix darf asymmetrisch werden.</p>
+        <p class="Text">Ist der Übergang aber zwischen Haltepunkten unterschiedlicher Haltestellen, wird eine Strecke angelegt, die in der angegebenen Richtung für den Verkehrssystemtyp ÖVFuß geöffnet ist.</p>
+        <h5>Zeitverschiebungen der Haltestellen</h5>
+        <p class="Text">-</p>
+        <h5>Haltestellenbezogene Umsteigezeiten</h5>
+        <p class="Text">Nur die allgemeinen Umsteigezeiten zwischen Gattungen ungleich IC werden übernommen. Die Übergangszeit wird in das zum angegebenen Haltepunkt gehörige Diagonalelement der Übergangsmatrix zwischen den Haltestellenbereichen (seiner Haltestelle) eingetragen. Standardmäßig wird die Diagonale mit dem unter „9999999“ stehenden Wert initialisiert und kann danach von speziellen Werten für einzelne Haltepunkte überschrieben werden.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn in den HAFAS-Dateien keine Übergangszeit zwischen Haltestellenbereichen angegeben sind, verwendet <MadCap:variable name="PTV_Manual.Programmname" /> als Gehzeit die maximale Gehzeit innerhalb der Haltestelle zwischen den Haltestellenbereichen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Fahrtpaarbezogene Umsteigezeiten</h5>
+        <p class="Text">Spezielle Umsteigegehzeiten werden auf Fahrzeitprofilebene an der betreffenden Haltestelle übernommen. Je HAFAS-Fahrtnummer/Verwaltung wird die spezielle Umsteigegehzeit für alle Fahrzeitprofile eingetragen, die beim HAFAS-Import aus Liniennummer und Betreibername festgelegt wurden. An der Haltestelle des Haltestellenbereichs wird eine spezielle Umsteigegehzeit von Fahrzeitprofil 1 nach Fahrzeitprofil 2 mit der angegeben Zeit eingefügt.</p>
+        <h5>Eckdaten, Verkehrstage der Fahrten</h5>
+        <p class="Text">Start- und Enddatum der Fahrplanperiode werden übernommen.</p>
+        <p class="Text">Wenn der Kalendertyp <span class="gui_element">kein Kalender</span> eingestellt ist, wird jeder Fahrplanfahrtabschnitt mit Verkehrstag <span class="gui_element">täglich</span> eingefügt. Wenn der Kalendertyp <span class="gui_element">Wochenkalender</span> eingestellt ist, wird die Verkehrstagskennung aus HAFAS „modulo 1 Woche“ interpretiert. Wenn der Kalendertyp <span class="gui_element">Jahreskalender</span> eingestellt ist, wird die Verkehrstagskennung aus HAFAS unverändert übernommen, lediglich der Datumsbereich wird ausgeschnitten, falls dieser kürzer als die Fahrplanperiode ist.</p>
+        <h5>Betreiberinformationen</h5>
+        <p class="Text">Nummer, Kurzname und vollständiger Name des Betreibers werden übernommen. Über die Verwaltungs-ID kann einer Fahrplanfahrt die Betreibernummer zugeordnet werden. Falls die Datei fehlt, werden keine Betreiber zugeordnet.</p>
+        <h5>Vereinigungen</h5>
+        <p class="Text">Vereinigungen werden als Kopplungen zwischen Fahrzeitprofilen übernommen.</p>
+        <p class="Text">Aus den Paaren (Zugnummer, Verwaltungs-ID) für die beiden Züge werden die zugehörigen Fahrzeitprofile ermittelt und diese zwischen den Verlaufselementen gekoppelt, die den angegebenen Start-/Endhaltestellen des Koppelabschnitts entsprechen.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">In der Vereinigungsdatei sind nur absolute Haltestellennummern zulässig, keine Indizes. Damit ist die Angabe bei Schleifen- und Stichfahrten nicht eindeutig. In diesem Fall wird das jeweils erste Vorkommen der Start-/Endhaltestelle verwendet und keine Kopplung eingefügt, wenn die End- vor der Starthaltestelle liegt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Fahrplan</h5>
+        <p class="Text">Die Fahrplandatei enthält Einträge zu Zügen (*Z), Kurswagen (*KW), Zügen eines Kurswagens (*KWZ), Ein- und Aussteigeverbot an Kurswagen (*B), Taktfahrten (*T), Verkehrstagen (*A VE), Linienkennungen (*L) und Linienwegen. Taktfahrten werden beim Import ignoriert.</p>
+        <ul>
+            <LI class="List0">Züge (*Z): Für jeden Zug wird eine 1:1:1:1-Kombination aus Linie, Linienroute, Fahrzeitprofil und Fahrplanfahrt angelegt. Der Linienname wird gemäß den Einstellungen im Register <span class="gui_element">Namen</span> <span class="gui_element">Fahrplanfahrten </span>erzeugt. Das Verkehrssystem der Linie wird auf das Verkehrssystem gesetzt, das Sie der Gattung (*G) des Zuges zugeordnet haben (bei mehreren Zeilen der höchsten Gattung = niedrigste Produktkategorie). Der Linienroutenname ist stets „1“. Die Richtung wird aus den Koordinaten des Start- und Endbahnhofes abgeleitet. Der Fahrzeitprofilname ist stets „1“. Die Fahrplanfahrtnummer wird fortlaufend vergeben, der Name wird gemäß den Einstellungen im Register <span class="gui_element">Namen Fahrplanfahrten</span> erzeugt. Der Betreiber wird aus der Verwaltungs-ID und der Information in der HAFAS-Betreiberdatei ermittelt. Die Verläufe von Linienroute und Fahrzeitprofil werden entsprechend der Zuglaufinformation aus HAFAS aufgebaut. Da das Netz zunächst keine Strecken enthält, werden dabei schrittweise Strecken zwischen den Knoten aufeinander folgender Haltepunkte eingefügt und für das Verkehrssystem der Linie geöffnet. Besteht eine Strecke bereits, so wird sie nur für das neue Verkehrssystem geöffnet. Verschiedene Züge werden auf Linienrouten einer einzigen Linie abgebildet, wenn sie gemäß der benutzerdefinierten Namensbildung denselben Liniennamen erhalten. Auf diese Weise können zum Beispiel alle Züge gemäß ihrem Verkehrssystem in Linien gruppiert werden. Falls die Attribute „Taktzahl“ und „Taktzeit“ angegeben sind, erzeugt <MadCap:variable name="PTV_Manual.Programmname" /> für getaktete HAFAS-Fahrten mehrere Fahrplanfahrten (und Fahrplanfahrtabschnitte).</LI>
+            <LI class="List0">*A VE-Zeilen (Verkehrstage): Für jede *A VE-Zeile wird ein Fahrplanfahrtabschnitt eingefügt. Sein Verkehrstag wird wie für die Eckdatendatei beschrieben ermittelt. Sofern bereits ein <MadCap:variable name="PTV_Manual.Programmname" />-Verkehrstag mit dem Bitstring existiert, wird er wieder verwendet, sonst neu angelegt. Die ID des Verkehrstags wird willkürlich gebildet, zum Beispiel wird die HAFAS-Verkehrstagsnummer verwendet. Der Verkehrstag „täglich“ ist in HAFAS eindeutig erkennbar (000000) und wird dem stets existierenden <MadCap:variable name="PTV_Manual.Programmname" />-Verkehrstag <span class="gui_element">täglich</span> (ID 1) zugeordnet. Wenn der Kalendertyp <span class="gui_element">Wochenkalender</span> eingestellt ist, werden keine Verkehrstage mit gleichem Inhalt angelegt, d.&#160;h. evtl. werden Verkehrstage, welche die gleiche „ODER-Projektion“ haben aber eine unterschiedliche HAFAS-Nummer, auf einen einzelnen Verkehrstag abgebildet.</LI>
+            <LI class="List0">*L-Zeilen (Linienkennung): Falls die Linienkennung vorhanden ist, wird sie bei der Bildung von <MadCap:variable name="PTV_Manual.Programmname" />-Linienname und Fahrplanfahrtname bei Bedarf verwendet. Außerdem wird die neu erzeugte <MadCap:variable name="PTV_Manual.Programmname" />-Linie einer <MadCap:variable name="PTV_Manual.Programmname" />-Oberlinie zugeordnet, deren Name die HAFAS-Linienkennung ist. Nur auf der Ebene der Oberlinie können Fahrten aus HAFAS sicher zusammengefasst werden, weil innerhalb einer HAFAS-Linienkennung verschiedene Gattungen und damit verschiedene Verkehrssysteme vorkommen können.</LI>
+            <LI class="List0">Kurswagen (*KW): Kurswagen werden abschnittsweise in Zügen befördert. Ein Kurswagen wird in <MadCap:variable name="PTV_Manual.Programmname" /> zu einer eigenen Fahrplanfahrt, die abschnittsweise mit den ziehenden Fahrten gekoppelt ist. Die Daten der Fahrplanfahrt ergeben sich aus den Verweisen auf den ziehenden Zug. Daher müssen die ziehenden Züge beim Import von Kurswagen schon vorhanden sein.</LI>
+        </ul>
+        <p class="List_Text0">Für jede Kurswagen-Fahrt entstehen eine Linienroute und ein Fahrzeitprofil sowie eine Linie, falls eine Linie mit den geforderten Eigenschaften nicht schon existiert. Die Namen von Fahrplanfahrt und Linie werden gemäß den Einstellungen im Register <span class="gui_element">Namen Kurswagenfahrten</span> erzeugt. Da ein Kurswagen keine Information über Verwaltung, Linie und Gattung enthält, werden die Daten aus einem Zug verwendet, der in den nachfolgenden Zeilen *KWZ aufgeführt ist. Dabei können Sie entweder den ersten Zug in der Zeile wählen oder den mit dem höchsten Rang. Bei mehreren mit gleichem Rang wird der erste mit diesem Rang verwendet. Linienrouten und Fahrzeitprofile werden wie bei gewöhnlichen Fahrplanfahrten benannt.</p>
+        <p class="List_Text0">Über die Zeile *B können Kurswagen für den Ein- oder Ausstieg gesperrt sein. Diese Information wird in das Fahrzeitprofil eingelesen. In <MadCap:variable name="PTV_Manual.Programmname" /> gibt es aber die Einschränkung, dass am Beginn eines Koppelabschnitts das Einsteigen, am Ende das Aussteigen erlaubt sein muss. Die Sperrungen können also nur insoweit übernommen werden, als sie nicht im Widerspruch zu dieser Anforderung stehen.</p>
+        <ul>
+            <LI class="List0">Linienweg: Abfahrts- und Ankunftszeiten vom Wert 9999 werden als Einstieg oder Ausstieg nicht zulässig interpretiert. Fahrten mit 9999 an Start- oder Zielbahnhof werden ignoriert. Eine Warnung wird in der Protokolldatei gespeichert.</LI>
+        </ul>
+        <p class="Tabledist">&#160;</p>
+    </body>
+</html>

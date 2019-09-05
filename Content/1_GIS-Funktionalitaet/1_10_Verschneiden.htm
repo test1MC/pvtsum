@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="699" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="of;Layern;Markierung1;geographic;coordinate;systems;projected;Erd;UTM;48N;mdb;accdb;hgr;library;whitepapers;pdfs;Wavelet;ECW;sid;Multiresolution;seamless;image;database;MrSID;Scalable;Vector;Plug;Viewer;PGD;Classes;Datasets;Class;500m;FahrzeugKm;obj;radius;ggf;zielobj;zielradius;quellobj;quellradius">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 MadCap:autonum=" 0.1 ">
+            <a name="1_gis_funktionalitaet_3291278398_1035632">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_26509">
+            </a>Verschneiden</h2>
+        <p class="Text">
+            <MadCap:keyword term="Netzobjekte:verschneiden" />Unter der aus GIS bekannten Funktion „Verschneiden” versteht man die Überlagerung von zwei Themenebenen desselben Raumausschnitts mit dem Ziel neue Informationen zu gewinnen. Damit können Sie zwei Netzobjekte, die sich räumlich überlappen (Schnittmenge), miteinander verknüpfen und die daraus erzeugten Informationen in einem Attribut speichern. Für den Aufbau eines Nachfragemodells können zum Beispiel aus einem GIS Strukturdaten (wie etwa die Anzahl Erwerbstätiger oder die Anzahl Schüler) in ein Flächen-POI eingelesen werden und diese mit Bezirken verschnitten werden. Als Ergebnis liegen dann die Ausprägung der Strukturdaten je Bezirk (Anzahl Erwerbstätige oder Schüler je Bezirk) in einem <MadCap:variable name="PTV_Manual.Programmname" />-Attribut vor.</p>
+        <p class="Text">Der Verschneidungsbereich zweier Objekte ergibt sich dabei aus der räumlichen Überlappung der beiden Objekte. <MadCap:xref class="Label_Image" href="#1_gis_funktionalitaet_3291278398_1036099">Abbildung&#160;213</MadCap:xref> zeigt Beispiele für die Überlappung von Netzobjekten.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Intersection_Examples.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_gis_funktionalitaet_3291278398_1036099">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_32141">
+            </a>Beispiele für die räumliche Überlappung von Netzobjekten</p>
+        <h5 MadCap:autonum="">Anwendungsfälle</h5>
+        <p class="Text">Ein typischer Anwendungsfall für eine Verschneidung ist der Datenimport aus einem GIS.</p>
+        <ul>
+            <LI class="List0">Flächennutzungsdaten liegen in GIS vor</LI>
+            <LI class="List0">Die Flächennutzungsdaten werden mittels einer Shapedatei, die in einen POI eingelesen wird, nach <MadCap:variable name="PTV_Manual.Programmname" /> importiert. (Alternativ kann <MadCap:variable name="PTV_Manual.Programmname" /> mit einer Personal Geodatabase verbunden werden. Die Flächennutzungsdaten liegen in <MadCap:variable name="PTV_Manual.Programmname" /> dann als GIS-Objekte vor.) </LI>
+            <LI class="List0">Als Zielobjekt, das später die erzeugten Informationen aufnehmen soll, wird der Bezirk und als Zielattribut ein editierbares Attribut des Bezirks ausgewählt.</LI>
+            <LI class="List0">Durch Verschneiden der Bezirke und POIs liegen als Ergebnis die Flächennutzungsdaten pro Bezirk vor und können zum Beispiel in einem <MadCap:variable name="PTV_Manual.Programmname" />-Nachfragemodell verwendet werden (zum Beispiel Anzahl der Haushalte pro Bezirk).</LI>
+        </ul>
+        <p class="Text">Das Verschneiden ist nicht nur auf den Datenaustausch mit GIS beschränkt. Auch innerhalb von <MadCap:variable name="PTV_Manual.Programmname" /> ergeben sich vielfältige Anwendungsmöglichkeiten. Einige Beispiele, welche Informationen sich mit Hilfe einer Verschneideoperation gewinnen lassen, werden im Folgenden vorgestellt.</p>
+        <ul>
+            <LI class="List0">Anzahl der ÖV-Einsteiger je Bezirk (<MadCap:xref class="Label_Table" href="#1_gis_funktionalitaet_3291278398_1051659">Tabelle&#160;264</MadCap:xref>)</LI>
+            <LI class="List0">Anzahl der Einwohner im Einzugsbereich von Linienrouten (<MadCap:xref class="Label_Table" href="#1_gis_funktionalitaet_3291278398_1051683">Tabelle&#160;265</MadCap:xref>)</LI>
+            <LI class="List0">Anzahl der Einwohner im Einzugsbereich von Haltestellen (<MadCap:xref class="Label_Table" href="#1_gis_funktionalitaet_3291278398_1051707">Tabelle&#160;266</MadCap:xref>)</LI>
+            <LI class="List0">Fahrzeugkilometer innerhalb von Gebieten (<MadCap:xref class="Label_Table" href="#1_gis_funktionalitaet_3291278398_1063125">Tabelle&#160;267</MadCap:xref>)</LI>
+            <LI class="List0">Nummer des Bezirks, in dem ein Haltepunkt liegt (<MadCap:xref class="Label_Table" href="#1_gis_funktionalitaet_3291278398_1037038">Tabelle&#160;268</MadCap:xref>)</LI>
+            <LI class="List0">Nummern der Haltestellen, die in einem Bezirk liegen (<MadCap:xref class="Label_Table" href="#1_gis_funktionalitaet_3291278398_1058058">Tabelle&#160;269</MadCap:xref>)</LI>
+            <LI class="List0">Durchschnittliche Anzahl der ÖV-Einsteiger an den Haltestellen eines Bezirks (<MadCap:xref class="Label_Table" href="#1_gis_funktionalitaet_3291278398_1051731">Tabelle&#160;270</MadCap:xref>)</LI>
+        </ul>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="204px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="289px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_MultiEdit_Zone.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 0, 9997844px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_StopPoints_Zones.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000074px;width: 272px;height: 162px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Verschneiden von Bezirken und Haltepunkten: Die Einsteiger in einem Bezirk berechnen sich aus Bezirk.ZWert1 = Summe der Einsteiger an allen Haltepunkten im Bezirkspolygon.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_gis_funktionalitaet_3291278398_1051659">
+                    </a>
+                    <a name="1_gis_funktionalitaet_3291278398_80388">
+                    </a>Ermittlung der Anzahl der ÖV-Einsteiger je Bezirk</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="203px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="292px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_MultiEdit_Line.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 0, 9997844px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_LineRoutes_Zones.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000074px;width: 271px;height: 162px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Verschneiden von Linienrouten und Bezirken: Die Einwohner im Einzugsbereich einer Linienroute berechnen sich aus Linienroute.ZWert1 = Summe der Einwohner in Bezirken innerhalb eines 500m Puffers um die Linienroute.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_gis_funktionalitaet_3291278398_1051683">
+                    </a>
+                    <a name="1_gis_funktionalitaet_3291278398_68027">
+                    </a>Ermittlung der Anzahl der Einwohner im Einzugsbereich von Linien</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="204px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="291px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_MultiEdit_Stops.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 0, 9997844px;width: 178px;height: 178px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_Stops_Zones.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000074px;width: 275px;height: 165px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Verschneiden von Haltestellen und Bezirken: Die Einwohner im Einzugsgebiet von Haltestellen berechnen sich aus Haltestelle.ZWert1 = Summe der Einwohner in Bezirken innerhalb eines 500m Puffers um die Haltestelle.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+                    <a name="1_gis_funktionalitaet_3291278398_1051707">
+                    </a>
+                    <a name="1_gis_funktionalitaet_3291278398_78806">
+                    </a>Ermittlung der Anzahl der Einwohner im Einzugsbereich von Haltestellen</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="202px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="293px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_MultiEdit_Territory.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 0, 9997844px;width: 176px;height: 176px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_Territories_Links.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000074px;width: 275px;height: 165px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">Verschneiden von Gebieten und Strecken: Die Fahrzeugkilometer in einem Gebiet berechnen sich aus Gebiet.ZWert1 = Summe der FahrzeugKm IV über alle Strecken im Gebiet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 4: ">
+            <a name="1_gis_funktionalitaet_3291278398_1063125">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_26472">
+            </a>Ermittlung der Fahrzeugkilometer innerhalb von Gebieten</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="202px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="293px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_MultiEdit_StopPoint.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 0, 9997844px;width: 177px;height: 177px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_StopPoints_Zones2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000074px;width: 274px;height: 165px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">Verschneiden von Haltepunkten und Bezirken: In welchem Bezirk ein Haltepunkt liegt, berechnet sich aus Haltepunkt.ZWert1 = kleinste Bezirksnummer des Bezirks, in dem der Haltepunkt liegt (Bitte beachten Sie, dass hier das Minimum gewählt wird, da es theoretisch sein könnte, dass ein Haltepunkt in zwei Bezirken liegt, wenn sich deren Polygone überlappen. Es könnte aber genau so gut eine der anderen drei Funktionen gewählt werden). Sollen alle Bezirke ermittelt werden, in denen der Haltepunkt liegt, verwenden Sie ein Zielattribut vom Typ <span class="gui_element">Text</span> und als Aggregationsfunktion <span class="gui_element">Verketten</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 5: ">
+            <a name="1_gis_funktionalitaet_3291278398_1037038">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_94266">
+            </a>Ermittlung der Nummer des Bezirks, in dem ein Haltepunkt liegt</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="202px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="293px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_MultiEdit_Zone2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 0, 9997844px;width: 175px;height: 175px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_Zones_Stops.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000074px;width: 276px;height: 166px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">Verschneiden von Bezirken und Haltestellen: Welche Haltestellen liegen in einem Bezirk. Als Zielattribut wird ein benutzerdefiniertes Attribut vom Typ <span class="gui_element">Text</span> verwendet, in das eine verkettete Liste der Nummern der Haltestellen geschrieben wird.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 6: ">
+            <a name="1_gis_funktionalitaet_3291278398_1058058">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_67378">
+            </a>Ermittlung der Nummern der Haltestellen, die in einem Bezirk liegen</p>
+        <p class="Text">Die Zielattributwerte können entweder als Summe, Mittelwert, Minimum oder Maximum der Quellattributwerte berechnet werden. Möchten Sie also zum Beispiel nicht die Gesamtzahl der ÖV-Einsteiger je Bezirk (<MadCap:xref class="Label_Table" href="#1_gis_funktionalitaet_3291278398_1051659">Tabelle&#160;264</MadCap:xref>), sondern die durchschnittliche Anzahl der ÖV-Einsteiger an den Haltestellen eines Bezirks berechnen, gehen Sie wie in <MadCap:xref class="Label_Table" href="#1_gis_funktionalitaet_3291278398_1051731">Tabelle&#160;270</MadCap:xref> beschrieben vor.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="204px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="291px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_MultiEdit_Zone.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 0, 9997844px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/WIN_Intersection_Stops_Zones3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000074px;width: 273px;height: 164px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Verschneiden von Bezirken und Haltestellen: Die durchschnittliche Anzahl der Einsteiger an den Haltestellen in einem Bezirk berechnet sich aus Bezirk.ZWert1 = Durchschnitt der Anzahl Abfahrten an allen Haltestellen innerhalb des Bezirkspolygons.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 7: ">
+                    <a name="1_gis_funktionalitaet_3291278398_1051731">
+                    </a>
+                    <a name="1_gis_funktionalitaet_3291278398_26962">
+                    </a>Ermittlung der durchschnittlichen Anzahl der ÖV-Einsteiger an den Haltestellen eines Bezirks</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn Sie die Anzahl Quellobjekte je Zielobjekt zählen möchten, dann wählen Sie als Attribut des Quellobjekts <span class="gui_element">1.0</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <span class="gui_element">Puffer</span>
+        </h5>
+        <p class="Text">
+            <MadCap:keyword term="Puffer" />
+            <MadCap:keyword term="Netzobjekte:verschneiden" />
+            <MadCap:keyword term="Netzobjekte:Puffer" />Um eine Verschneidung durchführen zu können, muss mindestens ein beteiligter Netzobjekttyp flächig sein. Um dies zu erreichen kann ein Puffer um ein Netzobjekt gebildet werden.</p>
+        <p class="Text">Ein Puffer ordnet einem Punkt-, Linien- oder Flächenobjekt eine Fläche zu, die zusammen mit dem eigentlichen Netzobjekt verschnitten wird. Ein Punktobjekt wird so bei der Berechnung der Verschneidung also zu einem Flächenobjekt.</p>
+        <p class="Text">Der Puffer wird nicht nur ausgehend vom Schwerpunkt des Polygons, sondern ausgehend von jedem Punkt des Polygons, definiert. Das heißt der Puffer wird zusätzlich wie ein Gürtel um das Polygon gelegt.</p>
+        <p class="Text">Quell- oder Zielobjekte werden also zunächst gegebenenfalls um die angegebene Puffergröße aufgebläht. Danach wird ermittelt, zu welchem Anteil jeder Quellpuffer vom Zielpuffer überlappt wird. Mit diesem Anteil geht der Attributwert des Quellobjekts in den neuen Attributwert des Zielobjekts ein. </p>
+        <p class="Text">Die Operation Puffer(obj, radius) ordnet einem Punkt-, Linien- oder Flächenobjekt obj die Fläche (Puffer) aus allen Punkten zu, die zu einem Punkt von obj einen Abstand von <span class="symbol">£</span> Radius besitzen. Für Radius = 0 ergibt sich obj selbst. Bei Flächenobjekten werden die Polygone zuzüglich Puffer verschnitten.</p>
+        <h5 MadCap:autonum="">Schnitte</h5>
+        <p class="Text">Die Verschneidungsoperation ermittelt zu jedem Zielobjekt diejenigen Quellobjekte, die sich damit überlappen. Die Attributwerte dieser Quellobjekte werden mit der gewählten Funktion aggregiert und dem Zielattribut des Zielobjekts zugewiesen. Die verfügbaren Aggregationsfunktionen und ihre Wirkung sind dabei abhängig von den Datentypen der Quell- und Zielattribute (<MadCap:xref class="Label_Table" href="#1_gis_funktionalitaet_3291278398_1061004">Tabelle&#160;271</MadCap:xref>). Die betreffenden Aggregationsfunktionen sind ausschließlich für die in der Tabelle aufgeführten Kombinationen verfügbar.</p>
+        <table style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" class="TableStyle-TableStandard" cellspacing="0">
+            <col width="119px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="119px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="119px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="139px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Aggregationsfunktion</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Datentyp Zielattribut</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Datentyp Quellattribut</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Wirkung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td rowspan="2" class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Summe</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Summe Quellattributwerte, ggf. gewichtet mit Überlappungsfläche</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Text</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td rowspan="2" class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Mittelwert</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Mittelwert der Quellattributwerte, ggf. gewichtet mit Überlappungsfläche</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Text</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td rowspan="3" class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Minimum / Maximum</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Minimum / Maximum der Quellattributwerte, ggf. gewichtet mit Überlappungsfläche</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2" style="height: 50px;">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Text</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Text</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Text</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Minimum / Maximum der Quellattributwerte (Vergleich der Zeichenketten)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td rowspan="3" class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Anzahl</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                    <td rowspan="3" class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl der überlappenden Objekte</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Text</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Text</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Text</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td rowspan="2" class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verketten</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Text</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Verkettete Liste der Quellattributwerte</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Text</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Text</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td rowspan="2" class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Häufigkeit</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Text</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Numerisch</p>
+                    </td>
+                    <td rowspan="2" class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Verkettete Liste der Quellattributwerte und der Anzahl ihrer Vorkommen bei überlappenden Objekten</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Text</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Text</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 8: ">
+            <a name="1_gis_funktionalitaet_3291278398_1061004">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_31982">
+            </a>Verfügbare Aggregatfunktionen beim Verschneiden</p>
+        <p class="Text">Bei numerischen Quell- und Zielattributen können Sie wählen, ob die Quellattributwerte in voller Höhe oder nur proportional zum Anteil der Überlappung am Quellobjekt eingehen. In diesem Abschnitt definieren wir das Ergebnis für beide Fälle.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn Sie die Anzahl Quellobjekte je Zielobjekt zählen möchten oder wenn Sie zu einem Flächen-Objekt die Nummer eines überlappenden anderen Flächen-Objekts bestimmen möchten, dann berücksichtigen Sie die Quellattributwerte in voller Höhe. In praktisch allen anderen Fällen berücksichtigen Sie die Quellattributwerte proportional.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Es gibt drei Arten von Verschneidungen.</p>
+        <ul>
+            <LI class="List0">Fläche mit Fläche</LI>
+        </ul>
+        <p class="List_Text0">Der Schnitt <img src="../Resources/Images/12_14.png" style="margin-right: 0, 01417542px;margin-bottom: 0, 01105499px;" /> zweier Flächen ist wie üblich definiert.</p>
+        <ul>
+            <LI class="List0">Fläche mit Punkt</LI>
+        </ul>
+        <p class="List_Text0">Wird eine Fläche mit einem Punkt geschnitten, dann wird der Attributwert des Punktes zu 100% gezählt, wenn der Punkt im Polygon liegt. Ansonsten wird er mit 0% gezählt.</p>
+        <ul>
+            <LI class="List0">Fläche mit Linie</LI>
+        </ul>
+        <p class="List_Text0">Der Schnitt einer Fläche mit einem Linienobjekt ist der in der Fläche liegende Teil des Linienobjekts.</p>
+        <p class="Text">Der Flächeninhalt Inhalt(F) einer Fläche ist wie üblich definiert. Außerdem gilt Folgendes.</p>
+        <ul>
+            <LI class="List0">Für Linienobjekte obj wird Inhalt(obj) = Länge(obj) definiert.</LI>
+            <LI class="List0">Für Punktobjekte obj wird Inhalt(obj) als ein infinitesimales <span class="symbol">e</span><span class="formula"> &gt; 0</span> definiert. Eine Infinitesimalzahl ist eine Zahl, deren absoluter Betrag größer ist als null, aber kleiner als jede noch so kleine positive reelle Zahl. Mit Hilfe von Inhalt wird definiert, mit welchem Anteil ein Objekt ein anderes überlappt. Ein Quellpolygon F2 überlappt zum Beispiel das Zielpolygon F1 mit folgendem Anteil.</LI>
+        </ul>
+        <p class="Text2">
+            <img src="../Resources/Images/12_2.png" />.</p>
+        <p class="Text">Wird einem Punkt- oder Linienobjekt ein Puffer &gt;0 zugeordnet, werden diese Objekte zu Polygonen.</p>
+        <p class="Text">Wenn Sie die Quellattributwerte proportional zum Anteil der Überlappung am Quellobjekt berücksichtigen, wird der Anteil folgendermaßen berechnet:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/12_3.png" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/12_4.png" style="margin-bottom: 0, 008221626px;" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/12_5.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000044px;margin-bottom: 1, 000065px;" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/12_6.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/12_7.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000065px;" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/12_8.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000065px;" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/12_9.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 1, 000065px;" />
+        </p>
+        <p class="Text">Berücksichtigen Sie dagegen die Quellattributwerte in voller Höhe, dann beträgt der Anteil 100%, sofern sich Quell- und Zielobjekt (ggf. mit Puffern) überlappen, sonst 0%. Auf die Größe der Überlappung kommt es in diesem Fall nicht an.</p>
+        <p class="Text">Dann bewirkt die Verschneidungsoperation Folgendes:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/12_10.png" />
+        </p>
+        <p class="Text">mit <span class="formula">F1</span> = Puffer(zielobj, zielradius), <span class="formula">F2</span> = Puffer(quellobj, quellradius).</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Ein Punktobjekt hat den Flächenanteil 1 an einer Fläche, wenn es in ihr liegt, sonst 0. Ein Linienobjekt hat den Flächenanteil x an einer Fläche, wenn x = Länge des in der Fläche liegenden Teils/Gesamtlänge ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Im Folgenden werden einige Beispiele für die Wirkungsweise der Verschneideoperation in <MadCap:variable name="PTV_Manual.Programmname" /> aufgeführt.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Intersect1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_gis_funktionalitaet_3291278398_1028244">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_79918">
+            </a>Verschneiden von drei Polygonobjekten mit einem Streckenpuffer</p>
+        <p class="Text">In <MadCap:xref class="Label_Image" href="#1_gis_funktionalitaet_3291278398_1028244">Abbildung&#160;214</MadCap:xref> werden Flächen mit Flächen verschnitten. Der Schnitt zweier Flächen ist hier wie üblich definiert.</p>
+        <ul>
+            <LI class="List0">Anteiliges Verschneiden von Polygon und Streckenpuffer (1)</LI>
+            <LI class="List0">Polygon befindet sich innerhalb des Streckenpuffers – Verschneidung mit 100% (2)</LI>
+            <LI class="List0">Polygon befindet sich außerhalb des Streckenpuffers – Verschneidung mit 0% (3)</LI>
+        </ul>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Intersect2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">
+            <a name="1_gis_funktionalitaet_3291278398_1028336">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_39371">
+            </a>Verschneiden von Punktobjekten mit einem Polygon</p>
+        <p class="Text">In <MadCap:xref class="Label_Image" href="#1_gis_funktionalitaet_3291278398_1028336">Abbildung&#160;215</MadCap:xref> ist für die Punktobjekte außerhalb des Polygons der Anteil der Verschneidung 0%. Für die drei Punktobjekte innerhalb des Polygons ist der Anteil der Verschneidung 100%. Wird 1,0 als Quellattribut selektiert, so werden hier zum Beispiel alle Haltestellen (Quellobjekt) je Bezirk (Zielobjekt) gezählt (da Quellobjektwert = 1,0).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Intersect3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 4: ">
+            <a name="1_gis_funktionalitaet_3291278398_1028403">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_29131">
+            </a>Verschneiden von Punktobjekten mit einem Pufferpolygon</p>
+        <p class="Text">In <MadCap:xref class="Label_Image" href="#1_gis_funktionalitaet_3291278398_1028403">Abbildung&#160;216</MadCap:xref> ist für die Punktobjekte außerhalb vom Pufferpolygon (=Polygon+Puffer) der Anteil der Verschneidung 0%. Für alle Punktobjekte innerhalb vom Pufferpolygon ist der Verschneidungsanteil 100%. Es werden also sechs Punkte mit 100% verschnitten.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Intersect4.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 5: ">
+            <a name="1_gis_funktionalitaet_3291278398_1028525">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_15929">
+            </a>Verschneiden von Punktobjektpuffern mit Polygonen</p>
+        <p class="Text">Werden Punktobjektpuffer mit Polygonen verschnitten, dann ergibt sich der Anteil der Verschneidung eines Puffers je Polygon aus der Lage des Puffers im jeweiligen Polygon. In der <MadCap:xref class="Label_Image" href="#1_gis_funktionalitaet_3291278398_1028525">Abbildung&#160;217</MadCap:xref> werden für das Polygon 1, zwei Punktobjektpuffer mit 100% Anteil verschnitten und ein Punktobjektpuffer anteilig (seine anderen Anteile fallen auf Polygon 2 und 3).</p>
+        <p class="Text">Liegen mehrere Polygone nahtlos nebeneinander und ist ein Puffer &gt;0 definiert, werden Punktobjekte im Überlappungsbereich doppelt gezählt, da sich die Puffer der Polygone überlappen und das Punktobjekt innerhalb von zwei Polygonen mit Puffern liegt. Die Anzahl der bei der Verschneidung berücksichtigten Punktobjekte ist dann größer als die eigentliche Anzahl der Punktobjekte.</p>
+    </body>
+</html>

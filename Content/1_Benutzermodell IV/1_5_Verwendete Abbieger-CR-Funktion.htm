@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="690" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;gruppen;gruppe;ICU1;ICU2;Circular;Planning;Operations;pretimed;fully;actuated;semi;actuation;type;ICAArrivalType;14a;AnteilLKW;6b;ICAEingVerlustZVerw;ICAIstCentral;BusinessDistrict;Central;District;6e;ICASneakers;ICAZuflussFaktor;10b;14b;BusFrequenz;WDDTA;xd;FS;ox;yo;BS;FIFO;dt;initialize;the;solution;flows;to;zero;for;each;destination;compute;arc;costs;and;their;if;then;UmlgAbw;ASSIGNDEVIATION;AbsRMSE;Abs;RMSE;Achsabs;ax;AnteilAkzGEH;akzept;AnteilAkzRelFehler;rel;AnzBeob;AnzKlasse;KlassenWert;Korr;Pearson;MittAbsFehler;MittBeob;MittRelFehler;R2;RSQ;RelRMSE;StdAbw;VolDem;Cap;ScalingFactor;Vol;te;flow;toNode;Lj;maxFlow;propagatingFlow;Nr;tcur;cap;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;KJ;k2;k1;s'';abflüssen;peak;hour;factor;LT;RT;vphpl;HV;bb;Lu;Lpb;Rpb;CBD;ST;Ui;PF;Ii;Ri;PA;bi;Volume;ICU;P1;P2;P3;6a;6c;6d;LUo;qr;po;ArrivalType;6j;3a;3b;pedu;pbT;rec;RTA;LTA;Funktions;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_iv_2033098965_1649525">
+            </a>Verwendete Abbieger-CR-Funktion</h4>
+        <p class="Text">Die Abbieger-CR-Funktion wird in der Umlegung mit ICA für alle geöffneten Abbieger angewendet, an deren Knoten die <span class="gui_element">Knotenwiderstandsberechnung (ICA)</span> eingestellt ist.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_27.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="61px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="435px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">tcur</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Attribut des Abbiegers, entspricht dem <span class="gui_element">tAkt</span> aus der abbiegerfeinen CR-Funktion mit den  CR-Funktions-Parametern. Das Attribut <span class="gui_element">tAkt-IVSys für Umlegung mit ICA</span> enthält den Wert am Ende der Umlegung mit ICA.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="formula">A</span> und <span class="formula">B</span></p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Attribute des jeweiligen Abbiegers</p>
+                        <p class="CellText">Die Attribute <span class="gui_element">Endgültiges CR-A für Umlegung mit ICA</span> und <span class="gui_element">Endgültiges CR-B für Umlegung mit ICA</span> enthalten die Werte am Ende der Umlegung mit ICA.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">q</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Abbiegerbelastung in der untergeordneten Umlegung (ohne Berücksichtigung von Rückstau)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Attribut des Abbiegers</p>
+                        <p class="CellText">Das Attribut <span class="gui_element">Endgültiges t0 für Umlegung mit ICA</span> enthält den Wert am Ende der Umlegung mit ICA. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">cap</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Attribut des Abbiegers, das der geglätteten Kapazität in Umlegung mit ICA entspricht. </p>
+                        <p class="CellText">Das Attribut <span class="gui_element">Endgültige Kapazität für Umlegung mit ICA</span> enthält den Wert am Ende der Umlegung mit ICA. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="_Override" style="font-family: Symbol;">D</span>
+                            <span class="formula">q</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Attribut des Abbiegers, das sich aus der Differenz von Nachfragebelastung und Belastung berechnet. Die verdrängte Belastung entspricht demjenigen Teil der Belastung, der laut Rückstauberechnung stromaufwärts des Abbiegers zurückgehalten wird und diesen nicht erreicht.</p>
+                        <p class="CellText">Das Attribut <span class="gui_element">Verdrängte Belastung stromaufwärts in Umlegung mit ICA</span> enthält den Wert am Ende der Umlegung mit ICA.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Faktoren <span class="formula">A</span> und <span class="formula">B</span> werden während der Umlegung bei jeder ICA-Widerstandsberechnung pro Abbieger aktualisiert. Die in der letzten Iteration gültigen Werte finden sich in den Abbiegerattributen <span class="gui_element">Endgültiges CR-A für Umlegung mit ICA</span> und <span class="gui_element">Endgültiges CR-B für Umlegung mit ICA</span> wieder. Ebenso werden die Werte für t0 (<span class="gui_element">Endgültiges t0 für Umlegung mit ICA</span>), die Kapazität (<span class="gui_element">Endgültige Kapazität für Umlegung mit ICA</span>) und die Differenz aus nachgefragter und aktueller Belastung (<span class="gui_element">Verdrängte Belastung stromaufwärts in Umlegung mit ICA</span>) in Abbiegerattributen gespeichert.</p>
+    </body>
+</html>

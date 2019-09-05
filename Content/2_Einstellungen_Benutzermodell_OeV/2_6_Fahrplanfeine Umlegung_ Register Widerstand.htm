@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="108" MadCap:lastWidth="510" MadCap:ignoredWords="E1;E9;V1;V9;N1;N9;G1;G9;G0;att;E2;bzw;ErhLinieName;E3;max;E5;E7;E8;V2;N2;V3;N3;NachlaufLRName;evtl;inkl;V5;N5;V6;N6;V4;N4;con;wege;RZ;UH;Wid;konst;ca;Registrierungs;Common;Misc;ProcessorInfo;angeb;empf;Abfahrts;t0" MadCap:conditions="PTV_Manual.Ready_for_translation">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1041575">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_93882">
+            </a>Fahrplanfeine Umlegung: Register Widerstand<a name="30130"></a><a name="25121"></a></h4>
+        <p class="Text">In diesem Register nehmen Sie die Einstellungen für die Aufteilung der Nachfrage auf die gefundenen Verbindungen vor. Die Nachfrage einer Quelle-Ziel-Beziehung verteilt sich abhängig von der empfundenen Reisezeit, dem Fahrpreis und der Zeitdifferenz von der Wunschabfahrtszeit auf die Verbindungen <MadCap:xref class="Grundlagen" href="../1_Benutzermodell OeV/1_6_Verbindungswahl.htm#1_benutzermodell_oev_2318507456_1027508">Siehe "Verbindungswahl"</MadCap:xref>.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="88px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="408px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">empf. Reisezeit ERZ =</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Die Tabelle stellt die Formel zur Berechnung der empfundenen Reisezeit einer Verbindung dar. Die empfundene Reisezeit ist die Summe mehrerer Summanden, die zeilenweise aufgelistet sind. Jeder dieser Summanden wird mit einem konstanten <span class="gui_element">Koeffizienten</span> multipliziert. Zwei Summanden können zusätzlich mit einem Attribut multipliziert werden. Einige Summanden berechnen sich wiederum über Formeln.</p>
+                        <p class="CellText">Die Formel für die empfundene Reisezeit lautet:</p>
+                        <p class="CellText">Koeffizient <span class="gui_element">• Fahrzeit im Fzg •</span> (in)direktes numerisches Attribut des Fahrtverlaufs</p>
+                        <p class="CellText">+ Koeffizient <span class="gui_element">• ÖV-Zusatz-Fahrzeit •</span> (in)direktes numerisches Attribut des Verkehrssystems</p>
+                        <p class="CellText">+ Koeffizient • <span class="gui_element">Zugangszeit</span></p>
+                        <p class="CellText">+ Koeffizient • <span class="gui_element">Abgangszeit</span></p>
+                        <p class="CellText">+ Koeffizient • <span class="gui_element">Gehzeit</span></p>
+                        <p class="CellText">+ Koeffizient • <span class="gui_element">Startwartezeit</span></p>
+                        <p class="CellText">+ Koeffizient • <span class="gui_element">Umsteigewartezeit</span></p>
+                        <p class="CellText">+ Koeffizient • <span class="gui_element">Umsteigehäufigkeit</span> • Formel</p>
+                        <p class="CellText">+ Koeffizient • <span class="gui_element">Anzahl Betreiberwechsel</span></p>
+                        <p class="CellText">+ Koeffizient • <span class="gui_element">Erweiterter Widerstand</span> • Formel</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Doppelklicken Sie auf einen Koeffizienten, um den Wert zu verändern.</p>
+                        <p class="CellText">Die Koeffizienten können auch negative Werte besitzen.</p>
+                        <p class="CellText">Über die Schaltflächen bei <span class="gui_element">Fahrzeit im Fzg</span> und <span class="gui_element">ÖV-Zusatz-Fahrzeit</span> öffnen Sie ein Fenster zur Auswahl des Attributs <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Fenster_zur_Auswahl_eines_Attributs.htm#2_netz_bearbeiten_23091886_2854659"><span style="color: Black;" class="mcFormatColor">(</span><u>Fenster zur Auswahl eines Attributs</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Die Schaltflächen sind mit dem aktuell ausgewählten Attribut beschriftet. Standardmäßig ist kein Attribut ausgewählt, stattdessen wird der Faktor <span class="gui_element">1.0</span> verwendet.</p>
+                        <p class="CellText">Über die Schaltflächen <span class="gui_element">Parameter</span> öffnen Sie jeweils ein Fenster, in dem Sie festlegen, wie der entsprechende Wert berechnet wird:</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Startwartezeit </span>
+                                <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_oev_2589728191_1044779">(siehe „Parameter zur Ermittlung der Startwartezeit“ auf Seite&#160;1168)</MadCap:xref>
+                            </LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Umsteigewartezeit </span>
+                                <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_oev_2589728191_1044791">(siehe „Parameter zur Ermittlung der Umsteigewartezeit“ auf Seite&#160;1169)</MadCap:xref>
+                            </LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Anzahl Betreiberwechsel</span>: Sie legen fest, über welches Attribut bestimmt wird, ob zwei Betreiber gleich sind. Standardmäßig wird die Nummer verwendet. Über ein anderes Attribut können Sie beispielsweise auch regionale Betreiberverbünde berücksichtigen.</LI>
+                        </ul>
+                        <p class="CellText">Über die Schaltflächen <span class="gui_element">Formel</span> öffnen Sie jeweils ein Fenster, in dem Sie festlegen, wie der entsprechende Wert berechnet wird:</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Umsteigehäufigkeit</span>
+                                <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_oev_2589728191_1102364">(siehe „Von der Reisezeit abhängiger Faktor der Umsteigehäufigkeit“ auf Seite&#160;1170)</MadCap:xref>
+                            </LI>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Erweiterter Widerstand</span>
+                                <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_oev_2589728191_1045426">(siehe „Formel zur Ermittlung des erweiterterten Widerstands“ auf Seite&#160;1170)</MadCap:xref>.</LI>
+                        </ul>
+                        <p class="CellText">
+                            <span class="gui_element">BoxCox</span> und <span class="gui_element">Lambda</span></p>
+                        <p class="CellText">Ist die Option <span class="gui_element">BoxCox</span> ausgewählt, wird der jeweilige Summand zum eingegebenen Parameter <span class="gui_element">Lambda</span> Box-Cox-transformiert <MadCap:xref class="Grundlagen" href="../1_Benutzermodell OeV/1_6_Aufteilung der Fahrten  auf die Verbindungen.htm#1_benutzermodell_oev_2318507456_1027550">Siehe "Aufteilung der Fahrten auf die Verbindungen"</MadCap:xref>.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Wenn die Option <span class="gui_element">BoxCox</span> ausgewählt ist, können Sie über Doppelklick den zugehörigen <span class="gui_element">Lambda</span>-Wert ändern.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Verbindungen mit DeltaT &gt; 0 berücksichtigen, wenn Verb. mit DeltaT = 0 existiert</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">DeltaT ist die Zeitdifferenz zwischen gewünschter und tatsächlicher Abfahrts- bzw. Ankunftszeit.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, stehen den Fahrgästen eines bestimmten Zeitintervalls der Ganglinie alle gefundenen Verbindungen zur Verfügung.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, stehen den Fahrgästen eines bestimmten Zeitintervalls der Ganglinie nur die Verbindungen dieses Zeitintervalls zur Verfügung. Wenn es keine Verbindungen im Intervall gibt, werden auch mit dieser Option alle Verbindungen verwendet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Widerstand =</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Die Tabelle stellt die Formel zur Berechnung des Widerstands einer Verbindung dar. Der Widerstand ist die Summe von empfundener Reisezeit, Fahrpreis und Abweichungen der Abfahrt vom Wunschzeitintervall.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText" style="mc-hyphenate-shortest-prefix: 11;">Haben Sie auf dem Register <span class="gui_element">Basis</span> die Option <span class="gui_element">Kapazitätsbeschränkung verwenden</span> gewählt, wird zusätzlich ein <span class="gui_element">auslastungsabhängiger Widerstand </span>addiert.</p>
+                        <p class="CellText">Die Summanden sind zeilenweise aufgelistet und jeder Summand wird mit einem konstanten <span class="gui_element">Koeffizienten</span> multipliziert.</p>
+                        <p class="CellText">Ist die Option <span class="gui_element">BoxCox</span> ausgewählt, wird der jeweilige Summand zum eingegebenen Parameter <span class="gui_element">Lambda</span> Box-Cox-transformiert <MadCap:xref class="Grundlagen" href="../1_Benutzermodell OeV/1_6_Aufteilung der Fahrten  auf die Verbindungen.htm#1_benutzermodell_oev_2318507456_1027550">Siehe "Aufteilung der Fahrten auf die Verbindungen"</MadCap:xref>.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Doppelklicken Sie auf einen Koeffizienten, um den Wert zu verändern.</p>
+                        <p class="CellText">Die Koeffizienten können auch negative Werte besitzen.</p>
+                        <p class="CellText">Wenn die Option <span class="gui_element">BoxCox</span> ausgewählt ist, können Sie über Doppelklick den zugehörigen <span class="gui_element">Lambda</span>-Wert ändern.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1044779">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_39872">
+            </a>Parameter zur Ermittlung der Startwartezeit<a name="30131"></a></h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="91px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="405px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Startwartezeit =</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Formel zur Berechnung der Startwartezeit.</p>
+                        <p class="CellText">
+                            <span class="formula">Startwartezeit = A • (Umlegungszeitraum / BDH)</span>
+                            <span class="formula_superscript">E</span>
+                        </p>
+                        <p class="CellText">wobei <span class="formula">BDH</span> die Bedienungshäufigkeit aller Verbindungen ist.</p>
+                        <p class="CellText">Sie können den Faktor <span class="formula">A</span> und den Exponenten <span class="formula">E</span> eingeben.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Mit <span class="formula">A</span>&#160;= 0.5 und <span class="formula">E</span>&#160;= 1 entspricht die Startwartezeit der halben mittleren Fahrzeugfolgezeit.</p>
+                        <p class="CellText">Mit <span class="formula">A</span> = 1.5 und <span class="formula">E</span> = 0.5 ergibt sich eine Wurzelfunktion, die eine bessere Fahrplankenntnis des Fahrgastes bei niedriger Bedienungshäufigkeit unterstellt.</p>
+                        <p class="CellText">Die Startwartezeit ist für alle Verbindungen einer Quelle-Ziel-Beziehung gleich. Ihre Einbeziehung in die empfundene Reisezeit wirkt daher lediglich wie ein konstanter Zuschlag. Die Ausgabe der Startwartezeit in einer Kenngrößenmatrix kann dagegen für die Netzanalyse sinnvoll sein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Max.</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Maximalwert der Startwartezeit</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1044791">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_81462">
+            </a>Parameter zur Ermittlung der Umsteigewartezeit<a name="25119"></a></h5>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Umsteigewartezeit =</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Maximalwert der Umsteigewartezeit beziehungsweise der erweiterten Umsteigewartezeit, sofern die Option <span class="gui_element">Erweiterte UWZ verwenden</span> ausgewählt ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Erweiterte Umsteigewartezeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Erweiterte UWZ verwenden</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird anstelle der normalen Umsteigewartezeit die erweiterte Umsteigewartezeit für die Berechnung der empfundenen Reisezeit verwendet. Außerdem wird die erweiterte Umsteigewartezeit auch für die Berechnung der Kenngröße verwendet, falls diese ausgegeben werden soll.</p>
+                        <p class="CellText">Die erweiterte Umsteigewartezeit wird über eine Formel berechnet, deren Parameter Sie einstellen können <MadCap:xref class="Grundlagen" href="../1_Benutzermodell OeV/1_6_Empfundene Reisezeit1.htm#1_benutzermodell_oev_2318507456_1082810">Siehe "Empfundene Reisezeit"</MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">n</span>
+                        </p>
+                        <p class="CellText">Exponent der Kurve, über die die erweiterte Umsteigewartezeit berechnet wird.</p>
+                        <p class="CellText">
+                            <span class="gui_element">t0</span>
+                        </p>
+                        <p class="CellText">Als ideal angesehene Umsteigewartezeit, die von der Umsteigegehzeit abhängig sein kann.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Standardmäßig ist n&#160;=&#160;2 und t0&#160;=&#160;5.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Konstanten Wert für Umstiege mit ÖV-Zusatz-VSys verwenden</span>
+                        </p>
+                        <p>Ist die Option ausgewählt, wird die erweiterte Umsteigewartezeit automatisch auf den eingegebenen Wert gesetzt, sofern ein ÖV-Zusatz-VSys beteiligt ist. Umstiege zwischen ÖV-Linien sind nicht betroffen.</p>
+                        <p>
+                            <span class="gui_element">Erweiterte Umsteigewartezeit auch bei Verwendung von speziellen Gehzeiten berücksichtigen</span>
+                        </p>
+                        <p>Ist die Option ausgewählt, wird das Überschreiben der erweiterten Umsteigewartezeit durch die speziellen Gehzeiten an Haltestellen unterdrückt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1102364">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_97392">
+            </a>Von der Reisezeit abhängiger Faktor der Umsteigehäufigkeit<a name="25143"></a></h5>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_AssignmProc_Timetable_Impedance_TransferTime.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <p class="Text">Hier legen Sie einen Term fest, der mit der Umsteigehäufigkeit multipliziert wird. Der Term ist von der Gesamtreisezeit des Wegs abhängig, falls der eingegebene Faktor für die Reisezeit ungleich null ist.</p>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_1045426">
+            </a>
+            <a name="2_einstellungen_benutzermodell_oev_2589728191_36970">
+            </a>Formel zur Ermittlung des erweiterterten Widerstands<a name="25102"></a></h5>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Der erweitere Widerstand besteht aus bis zu fünf Komponenten, die addiert werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Die Formel zur Berechnung der empfundenen Reisezeit enthält schon Summanden für die Zugangszeit, Abgangszeit, Gehzeit und Fahrzeit im Fahrzeug <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_oev_2589728191_1041575">(siehe „Fahrplanfeine Umlegung: Register Widerstand“ auf Seite&#160;1165)</MadCap:xref>. Sie können die hier festgelegte Berechnung dieser Zeiten zusätzlich oder anstelle der dort festgelegten Summanden verwenden. Wenn Sie sie anstelle der dortigen verwenden möchten, müssen Sie die entsprechenden Koeffizienten in der Formel zur Berechnung der empfundenen Reisezeit auf null setzen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements1" style="width: 493px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="119px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="374px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Zugangs-, Abgangs-, Gehzeiten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden die Gehzeiten nach der angegebenen Formel berechnet und zum erweiterten Widerstand addiert. Sie können die beiden Faktoren anpassen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese nicht-lineare Bewertung der Gehzeiten wird zum Beispiel für die Standardisierte Bewertung verwendet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Fahrzeit im Fahrzeug</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, wird die Fahrzeit im Fahrzeug nach der angegebenen Formel berechnet und zum erweiterten Widerstand addiert. Sie können die beiden Faktoren anpassen und über die Schaltflächen ein direktes oder indirektes Attribut der Fahrplanfahrt-Verläufe wählen <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Fenster_zur_Auswahl_eines_Attributs.htm#2_netz_bearbeiten_23091886_2854659"><span style="color: Black;" class="mcFormatColor">(</span><u>Fenster zur Auswahl eines Attributs</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Über diese nicht-lineare Bewertung der Fahrzeiten können Sie zum Beispiel Qualitäten der Verkehrsmittel hinsichtlich Komfort und Image berücksichtigen. Die Standardisierte Bewertung schlägt in Abhängigkeit von Fahrzeugausstattung und Fahrweg (Straße/Schiene) verschiedene Bewertungsfaktoren vor.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Umsteigezuschlag in Abhängigkeit von der Teilwegfahrzeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, wird ein Umsteigezuschlag nach der angegebenen Formel berechnet und zum erweiterten Widerstand addiert.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Formel entspricht den Anforderungen der Standardisierten Bewertung.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Zuschlag für Ein-/Aus- und Umstiege</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, wird ein Zuschlag für Ein-, Aus- oder Umstiege nach der angegebenen Formel berechnet und zum erweiterten Widerstand addiert. Sie können die Faktoren anpassen und über die Schaltflächen ein Attribut der Fahrplanfahrt-Verläufe wählen <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Fenster_zur_Auswahl_eines_Attributs.htm#2_netz_bearbeiten_23091886_2854659"><span style="color: Black;" class="mcFormatColor">(</span><u>Fenster zur Auswahl eines Attributs</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">So können Sie modellieren, wie die Qualität eines Umstieges von Eigenschaften der ankommenden und/oder abfahrenden Fahrplanfahrt abhängt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Zuschlag für jeden Zwischenhalt</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, wird der angegebene Zuschlag für jeden Zwischenhalt entlang der Fahrtroute zum erweiterten Widerstand addiert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

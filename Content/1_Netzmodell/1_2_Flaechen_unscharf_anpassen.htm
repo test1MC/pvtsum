@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="1340" MadCap:lastWidth="671" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1196281">
+            </a>Flächen unscharf anpassen</h3>
+        <p class="Text">
+            <MadCap:keyword term="Flächen:unscharf anpassen" />Beim Import von Flächen aus unterschiedlichen Quellen kann es zu fehlerhaften Überlappungen und Lücken zwischen den Flächen kommen. </p>
+        <p class="Text">
+            <img src="../Resources/Images/AREA_fuzzy_surface_alignment_example1.png" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Flächen nach Import</p>
+        <p class="Text">Sie können diese Abweichungen ausgleichen lassen, indem Sie die Flächen unscharf anpassen. Dabei werden die Punkte der Flächen innerhalb einer definierten Toleranz verschoben. Die Anpassung ist für folgende Flächenobjekte möglich:</p>
+        <ul>
+            <LI class="List0">Bezirke, Oberbezirke</LI>
+            <LI class="List0">Oberknoten</LI>
+            <LI class="List0">Gebiete</LI>
+            <LI class="List0">flächige Points of Interest (POI)</LI>
+            <LI class="List0">Mautsysteme</LI>
+        </ul>
+        <p>Sie können die Funktion an verschiedenen Stellen im Programm aufrufen:</p>
+        <ul>
+            <LI class="List0">Über das Kontextmenü bei den genannten Flächenobjekten </LI>
+            <LI class="List0">Shapefile-Import <MadCap:xref href="../2_GIS-Funktionalitaet_nutzen/2_10_Shapefiles importieren.htm" class="Benutzerhandbuch"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Shapefiles importieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">Netzeinstellungen der Flächen <MadCap:xref href="../2_Netz_bearbeiten/Umrandungen_von_flächigen_Netzobjekten_verwalten.htm" class="Benutzerhandbuch"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Umrandungen von flächigen Netzobjekten verwalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+        </ul>
+        <p class="Text">Das Vorgehen erfolgt in folgenden Schritten:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Referenzflächen im bestehenden Netz festlegen</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Menge der Flächen definieren, die importiert werden sollen</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Toleranzwerte für die unscharfe Anpassung festlegen</p>
+        <p class="Text">Die Festlegung der Toleranzwerte bestimmt das Ergebnis der unscharfen Anpassung. </p>
+        <p class="Text">Werden bei bestehenden Flächen und importierten Flächen Toleranzwerte &gt;0 angegeben, werden die Flächen einander angepasst. </p>
+        <p class="Text">
+            <img src="../Resources/Images/AREA_fuzzy_surface_alignment_example2.png" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">Blaue und rote Fläche wurden einander angepasst</p>
+        <p class="Text">Legen Sie eine Fläche als Referenzfläche fest, indem Sie ihren Toleranzwert auf 0 setzen, passt sich die zweite Fläche der Referenzfläche an.</p>
+        <p class="Text">
+            <img src="../Resources/Images/AREA_fuzzy_surface_alignment_example3.png">
+            </img>
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">Blaue Fläche ist Referenz, rote Fläche passt sich der blauen an</p>
+        <p class="Text">&#160;</p>
+    </body>
+</html>

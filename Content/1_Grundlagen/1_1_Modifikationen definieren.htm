@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="678" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="R2;bzw;ggf">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_grundlagen_des_programms_3110159993_1037304">
+            </a>Modifikationen definieren</h4>
+        <p class="Text">
+            <MadCap:keyword term="Szenarien:Modifikationen definieren" />Wenn Sie Ihrem Projekt eine neue Modifikation hinzufügen, vergeben Sie zunächst einen eindeutigen Namen und ggf. eine Beschreibung dafür. Sie geben zudem an, von welchen bereits existierenden Modifikationen die neue Modifikation abhängt und ggf. mit welchen anderen Modifikationen sie sich ausschließt. <MadCap:variable name="PTV_Manual.Programmname" /> lädt danach die Basisversion und alle zugrundeliegenden Modifikationen. Ein Schwebefenster informiert Sie darüber, dass alle Änderungen, die Sie nun am Modell vornehmen, zur Definition der neuen Modifikation zählen.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_SzenMgmt_DefModifikation.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000067px;" />
+        </p>
+        <p class="Text">Sie können nun alle Bearbeitungsfunktionen auf dem Modell verwenden. Die Bearbeitung der Daten in der Projektansicht ist dagegen gesperrt. Wenn Sie alle Änderungen vorgenommen haben, beenden Sie die Definition, indem Sie im Schwebefenster auf die Schaltfläche <span class="gui_element">Fertigstellen</span> klicken. <MadCap:variable name="PTV_Manual.Programmname" /> ermittelt alle Unterschiede zwischen dem aktuellen Modellzustand und demjenigen zu Beginn der Definition und speichert sie als Inhalt der neuen Modifikation.</p>
+        <p class="Text">Selbstverständlich können Sie in jedem Stadium Ihres Projekts weitere Modifikationen hinzufügen. Einmal angelegte Modifikationen lassen sich nachträglich verändern. Sie können sich zudem jederzeit den Inhalt der bestehenden Modifikationen anzeigen lassen.</p>
+        <p class="Text">Bei umfangreichen Projekten können Sie insbesondere die Erstellung der Modifikationen auf mehrere Bearbeiter verteilen. Voraussetzung dafür ist, dass die  Projektdatenbank des Szenariomanagements in SQL Server verwaltet wird <MadCap:xref href="../2_Grundlagen_Programmbedienung/2_1_Projekt für das Szenariomanagement anlegen.htm" class="Benutzerhandbuch">(siehe Benutzerhandbuch: Kap.  0.0.1 , Seite&#160;1)</MadCap:xref>. Die von einzelnen Benutzern bearbeiteten Modifikationen sind dann für die Bearbeitung durch andere Benutzer gesperrt. Das gilt ebenso für davon abhängige Modifikationen oder Szenarien, die diese Modifikationen benutzen. Einen Überblick über gesperrte Objekte im Projekt können Sie sich im Register <span class="gui_element">Mehrbenutzerbetrieb </span>verschaffen. Durch die beschriebene Vorgehensweise ist sichergestellt, dass Szenarien und Modifikationen konsistent gehalten werden. Wollen Sie Ihr Projekt durch mehrere Benutzer bearbeiten, wird die Verwendung des Mehrbenutzerbetriebs empfohlen. Durch die angebotenen Konvertierungsfunktionen haben Sie jederzeit die Möglichkeit, das Projekt wieder in eine Standard SQL-CE Datenbank ohne Mehrbenutzerbetrieb zu konvertieren.</p>
+        <p class="Text">Sollte ein Mehrbenutzerbetrieb über das Netzwerk nicht möglich sein, können Sie alternativ die Bearbeitung manuell auf mehrere Benutzer verteilen. Gehen Sie dazu am besten folgendermaßen vor:</p>
+        <ul>
+            <LI class="List0">Geben Sie jedem Bearbeiter eine Kopie der Basisversion.</LI>
+            <LI class="List0">Jeder Bearbeiter bearbeitet seine Kopie der Basisversion, ohne das Szenariomanagement zu nutzen. Sobald er eine Modifikation fertig gestellt hat, speichert er die Änderungen gegenüber der Basisversion als Modelltransferdatei.</LI>
+            <LI class="List0">Lassen Sie sich alle dezentral erstellten Modelltransferdateien geben.</LI>
+            <LI class="List0">Öffnen Sie Ihr Projekt in <MadCap:variable name="PTV_Manual.Programmname" />. Für jede Modelltransferdatei führen Sie folgende Schritte aus:</LI>
+            <LI class="List1">Fügen Sie eine Modifikation in Ihr Programm ein.</LI>
+            <LI class="List1">Wenn <MadCap:variable name="PTV_Manual.Programmname" /> Sie auffordert, die Modifikation ausgehend von der Basisversion zu modellieren, wenden Sie als einzige Aktion die Modelltransferdatei an.</LI>
+            <LI class="List1">Danach beenden Sie die Bearbeitung der Modifikation.</LI>
+            <LI class="List0">Definieren Sie auf Basis der Modifikationen Ihre Szenarien.</LI>
+            <LI class="List0">Mit diesem Ablauf erstellen mehrere Bearbeiter dezentral Modelltransferdateien, die Sie anschließend zentral unter die Szenarioverwaltung stellen.</LI>
+        </ul>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn mehrere Bearbeiter die Basisversion erweitern und Modelltransferdateien erzeugen, verwenden Sie unter Umständen die gleichen Schlüssel für neue Netzobjekte, obwohl diese inhaltlich Unterschiedliches bedeuten. <MadCap:variable name="PTV_Manual.Programmname" /> erkennt solche Schlüsselkonflikte, wenn Sie die Modelltransferdateien unter Szenariomanagement-Verwaltung anwenden, und ersetzt die doppelt verwendeten Schlüssel automatisch durch eindeutige neue.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

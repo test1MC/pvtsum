@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="473" MadCap:lastWidth="1018" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ij">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1257105">
+            </a>
+            <a name="1_nachfragemodell_2215163117_33994">
+            </a>Bezirks- und Oberbezirksmatrix ineinander umrechnen</h3>
+        <p class="Text">
+            <MadCap:keyword term="Bezirksmatrizen:aggregieren" />
+            <MadCap:keyword term="Oberbezirksmatrizen:disaggregieren" />Beim Berechnen einer Oberbezirksmatrix aus einer Bezirksmatrix addieren Sie die Matrixwerte von Bezirken, die zum gleichen Oberbezirk gehören. Dies gilt sowohl für Nachfrage- als auch für Kenngrößenmatrizen. Die summierten Matrixwerte werden in die Oberbezirksmatrix geschrieben, die Bezirksmatrix bleibt erhalten.</p>
+        <p class="Text">Beim Disaggregieren einer Oberbezirksmatrix teilen Sie die Matrixwerte der Oberbezirke in mehrere Matrixwerte für die einzelnen Bezirke auf und schreiben sie in eine Bezirksmatrix. Die Werte können gleichmäßig auf die Bezirke aufgeteilt werden, Sie können sie jedoch auch gewichten. Als Gewichtungsfaktoren können Sie die Werte von ein oder zwei Bezirksmatrizen oder von Quell- oder Ziel-Bezirksattributen verwenden.</p>
+        <p class="Text">Wenn Sie zwei Gewichtungsfaktoren wählen, werden die neuen Matrixwerte folgendermaßen berechnet:</p>
+        <p class="Text">
+            <img src="../Resources/Images/5_159.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle_TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="98px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="399px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">i, j</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Bezirksindizes</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">I, J</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">den Bezirksindizes entsprechende Oberbezirksindizes</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_Var">
+                            <span class="formula">Index</span>(<span class="formula">I</span>), <span class="formula">Index </span>(<span class="formula">J</span>)</p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Menge der zum Oberbezirk gehörenden Bezirksindizes</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">b</span>
+                            <span class="formula_subscript">ij</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Wert in der Ausgabematrix (Bezirksmatrix)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a</span>
+                            <span class="formula_subscript">ij</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Wert in der Eingangsmatrix (Oberbezirksmatrix)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">w</span>
+                            <span class="formula_subscript">ij</span>
+                            <span class="formula_superscript">(1)</span>, <span class="formula">w</span><span class="formula_subscript">ij</span><span class="formula_superscript">(2)</span></p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText">zwei Gewichtungsfaktoren</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Ist der Nenner eines Bruchs null, wird die Gewichtung ignoriert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Anwendungsfall</h5>
+        <p class="Text">Sie möchten eine Matrix korrigieren oder an Zähldaten anpassen. Die vorliegenden Zähldaten sind grober als die Bezirkseinteilung in Ihrem Netz. In diesem Fall können Sie die Bezirksmatrizen zunächst aggregieren, dann das Korrekturverfahren, zum Beispiel VStromFuzzy, durchführen und die Matrix am Ende wieder disaggregieren.</p>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="656" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1066587">
+            </a>
+            <a name="1_netzmodell_1240632468_30622">
+            </a>ÖV-Fahrzeuge: Fahrzeugeinheiten und Fahrzeugkombinationen</h3>
+        <p class="Text">
+            <MadCap:keyword term="ÖV:Fahrzeuge" />
+            <MadCap:keyword term="Netzobjekte: Fahrzeugeinheiten" />
+            <MadCap:keyword term="Fahrzeugeinheiten" />
+            <MadCap:keyword term="Netzobjekte: Fahrzeugkombinationen" />
+            <MadCap:keyword term="Fahrzeugkombinationen" />
+            <MadCap:keyword term="Netzobjekte: ÖV-Fahrzeuge" />ÖV-Fahrzeuge wie Busse, Straßenbahnen oder Intercitys werden in <MadCap:variable name="PTV_Manual.Programmname" /> durch die Netzobjekte Fahrzeugeinheit und Fahrzeugkombination abgebildet. Mit Hilfe dieser Netzobjekte ist es möglich die Zusammensetzung einer Fahrplanfahrt unterwegs zu verändern <MadCap:xref class="sieheUeberschrSeite" href="1_2_Netzobjekte der Linienhierarchie.htm#1_netzmodell_1240632468_1070058"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte der Linienhierarchie</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. So kann beispielsweise ein Zug im Vor- und Nachlauf der Fahrt mit weniger Wagen verkehren als im Hauptlauf. Der zweite Anwendungsfall für ÖV-Fahrzeuge ist im Bereich des Betreibermodells zu suchen. Kennzahlen wie etwa Servicekilometer können auf der Ebene von Fahrzeugkombinationen ausgewertet werden <MadCap:xref class="sieheUeberschrSeite" href="../1_Betreibermodell OeV/1_7_Betreibermodell OeV.htm#1_betreibermodell_oev_1878159914_1360628"><span style="color: Black;" class="mcFormatColor">(</span><u>Betreibermodell ÖV</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Jede Fahrzeugeinheit ist einem oder mehreren Verkehrssystemen zugeordnet. Es kann nur für Fahrten, Linien oder Systemrouten verwendet werden, die zu einem dieser Verkehrssysteme gehören. Ferner ist für jedes Fahrzeug spezifiziert, ob es sich um ein Triebfahrzeug handelt oder nicht. Neben den Sitzplätzen und der Gesamtzahl der Plätze können Kostensätze pro Entfernungs- und Zeiteinheit jeweils für Fahrplanfahrten und Leerfahrten getrennt eingegeben werden. Diese Daten werden im Rahmen des Betreibermodells für Auswertungen herangezogen.</p>
+        <p class="Text">Fahrzeugeinheiten werden zu Fahrzeugkombinationen zusammengefasst. Eine Fahrzeugkombination umfasst also stets eine oder mehrere Fahrzeugeinheiten. Dabei kann die gleiche Fahrzeugeinheit mehrfach in der Fahrzeugkombination auftreten. So kann beispielsweise eine Fahrzeugkombination Intercity aus einer Fahrzeugeinheit Triebfahrzeug und mehreren Fahrzeugeinheiten Wagen zusammengesetzt werden, wobei für das Triebfahrzeug und die Wagen jeweils verschiedene Kostensätze oder Kapazitäten angegeben werden können.</p>
+        <p class="Text">Die Menge der zulässigen Verkehrssysteme für eine Fahrzeugkombination bestimmt sich als Durchschnitt der zulässigen Verkehrssystemmengen der zugehörigen Fahrzeugeinheiten. Gibt es kein Verkehrssystem, das für alle zugehörigen Fahrzeugeinheiten zulässig ist, so können diese nicht zu einer Fahrzeugkombination kombiniert werden.</p>
+        <p class="Text">Auch für Fahrzeugkombinationen können weg- und zeitbezogene Kostensätze jeweils für Fahrplan- und Leerfahrten angegeben werden. Diese wirken mit den Kostensätzen der zugehörigen Fahrzeugeinheiten zusammen. Verwenden Sie diese Eingabemöglichkeit also für solche Kosten, die einmalig pro Fahrzeugkombination anfallen. Typischerweise sind Unterhaltskosten pro Fahrzeugeinheit anzugeben, Personalkosten jedoch pro Fahrzeugkombination.</p>
+        <p class="Text">Fahrzeugkombinationen können ganzen Linien oder Fahrzeitprofilen (man spricht dann von einer Standard-Fahrzeugkombination) oder aber einzelnen Fahrplanfahrtabschnitten zugeordnet werden. Dies ermöglicht eine sehr detaillierte Modellierung von zum Beispiel Zugbildungsänderungen oder auch eine sehr stark disaggregierte Auswertung von ÖV-betrieblichen Kennzahlen.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Bitte beachten Sie, dass die nachträgliche Änderung der Standard-Fahrzeugkombination einer Linie oder eines Fahrzeitprofils nicht die Fahrzeugkombinationen der bereits bestehenden Fahrplanfahrtabschnitte überschreiben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

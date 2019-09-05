@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="8" MadCap:lastHeight="679" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="bzw">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_betreibermodell_oev_1878159914_1346950">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_86253">
+            </a>Fahrkartenarten</h3>
+        <p class="Text">Eine Fahrkarte gilt für einen Teilweg einer ÖV-Verbindung, für mehrere Teilwege davon, oder sogar für die gesamte Verbindung. Die Gültigkeit hängt von den Eigenschaften des Tarifsystems ab <MadCap:xref class="sieheUeberschrSeite" href="1_7_„Fahrpreis-Bezug“ eines Tarifsystems.htm#1_betreibermodell_oev_1878159914_1347424"><span style="color: Black;" class="mcFormatColor">(</span><u>„Fahrpreis-Bezug“ eines Tarifsystems</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. In diesem Abschnitt geht es zunächst einmal nur um die Anwendbarkeit, Berechnungslogik und sonstige Eigenschaften der Fahrkartenart selbst. Im Sinne einer einfacheren Darstellung wird in diesem Kapitel nicht an jeder Stelle explizit darauf hingewiesen, dass sich eine Fahrkartenart gegebenenfalls nur auf einzelne Teilwege einer Verbindung erstreckt, sondern verkürzend von „Verbindungen” oder „Wegen” gesprochen.</p>
+        <p class="Text">Eine Fahrkartenart beschreibt, wie der Fahrpreis zu berechnen ist. Die Preiskomponenten einer Fahrkartenart umfassen den Grundfahrpreis sowie VSys-spezifische Zuschläge:</p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Preiskomponente</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">Grundpreis</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Der Grundpreis ergibt sich aus der Tarifstruktur der Fahrkartenart. Es stehen vier Tarifstrukturen zur Auswahl:</p>
+                        <ul>
+                            <LI class="List0Tab">Entfernungstarif</LI>
+                            <LI class="List0Tab">Zonentarif </LI>
+                            <LI class="List0Tab">Von-Nach-Zonentarif </LI>
+                            <LI class="List0Tab">Kurzstreckentarif</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">Verkehrssystem-spezifische Zuschläge</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Zuschläge werden je Fahrkartenart für jedes ÖV-Verkehrssystem separat definiert und enthalten folgende Komponenten:</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Entfernungsbasierte Zuschläge</span>
+                            </LI>
+                        </ul>
+                        <p class="List_Text0">Diese beruhen wie Entfernungstarife auf Tarifpunkten.</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Fixe Zuschläge</span>
+                            </LI>
+                        </ul>
+                        <p class="List_Text0">Diese können pro Teilweg oder einmal pro Verkehrssystem oder nur für das VSys mit dem höchsten Rang erhoben werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Wesentliches Merkmal einer Fahrkartenart ist die Tarifstruktur, die die Berechnungsmethode für den Grundpreis festlegt:</p>
+        <ul>
+            <LI class="List0">Der Entfernungstarif basiert auf Entfernungstarifelementen: Der Grundpreis wird anhand der Anzahl überfahrener Tarifpunkte ermittelt.</LI>
+            <LI class="List0">Der Zonentarif basiert auf Zonentarifelementen: Der Grundpreis wird anhand der Anzahl durchfahrener Tarifzonen ermittelt.</LI>
+            <LI class="List0">Der Von-Nach-Zonentarif basiert auf Von-Nach-Zonentarifelementen: Der Grundpreis ist der Eintrag für das Paar aus Start- und Zieltarifzone der Verbindung in einer Tarifmatrix, die durch (Von-Tarifzone, Nach-Tarifzone) indiziert ist.</LI>
+            <LI class="List0">Der Kurzstreckentarif basiert auf Kurzstreckentarifelementen: Der Grundpreis gilt für Fahrten, deren Länge, Dauer und Anzahl Haltestellen die definierten Schwellenwerte nicht überschreiten.</LI>
+        </ul>
+        <p class="Text">Die vier Tarifstrukturen werden im Detail in den folgenden Abschnitten erklärt .</p>
+        <p class="Text">Wichtig für die Tarifmodellierung ist die Frage, welche Fahrkartenarten für welche Verbindungen anwendbar sind. Im Fall der Tarifstruktur „Kurzstreckentarif“ ist die begrenzte Anwendbarkeit offensichtlich, jedoch können auch die anderen drei Tarifstrukturen Einschränkungen unterliegen: Zonentarife sind im Allgemeinen nicht auf Verbindungen anwendbar, die außerhalb der betrachteten Tarifzonen liegen. Und sowohl Von-Nach-Zonentarife als auch Entfernungstarife können sich nur auf bestimmte Paare von Tarifzonen bzw. auf bestimmte Entfernungsklassen beziehen.</p>
+        <p class="Text">Über den Rang definieren Sie die Hierarchie der Fahrkartenarten innerhalb eines Tarifsystems. Er ist immer dann relevant, wenn ein Tarifsystem mehrere Fahrkartenarten umfasst. Die Bedeutung des Rangs wird an mehreren Beispielen erläutert <MadCap:xref class="sieheUeberschrSeite" href="1_7_Wahl der Fahrkarte in einem Tarifsystem.htm#1_betreibermodell_oev_1878159914_1347638"><span style="color: Black;" class="mcFormatColor">(</span><u>Wahl der Fahrkarte in einem Tarifsystem</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Mithilfe der Nutzungshäufigkeit wird der Umrechnungsfaktor auf eine Einzelfahrt angegeben. Er geht in die Berechnung des Fahrpreises eines ÖV-Wegs ein.</p>
+    </body>
+</html>

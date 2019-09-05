@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="681" MadCap:lastWidth="512" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1132368">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_18252">
+            </a>LSA-Umlauf- und Grünzeiten für aktive Knoten optimieren<a name="30256"></a></h3>
+        <p class="Text">
+            <MadCap:keyword term="Signalanlagen:Umlauf- und Grünzeiten optimieren" />
+            <MadCap:keyword term="Umlauf- und Grünzeiten optimieren" />
+            <MadCap:keyword term="Signalkoordinierung" />
+            <MadCap:keyword term="Grünzeiten:optimieren" />Sie können die Umlauf- und Grünzeiten ausgewählter oder aller Signalanlagen optimieren <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_LSA-Umlauf-_und_Gruenzeitoptimierung.htm#1_benutzermodell_iv_2033098965_1241641">(siehe Grundlagen: Kap. , Seite&#160;1)</MadCap:xref>. </p>
+        <p class="Text">Das Verfahren wirkt auf alle aktiven signalgesteuerten (Ober-)Knoten, deren Methode für die Berechnung des Widerstandes <span class="gui_element">Knotenwiderstandsberechnung (ICA)</span> ist und denen eine nicht abgeschaltete Lichtsignalanlage zugeordnet ist. Alle Lichtsignalanlagen, die diesen Knoten zugeordnet sind, werden entsprechend der Einstellung im Attribut <span class="gui_element">Optimierungsmethode</span> optimiert. Die Optimierung wird dabei automatisch immer für alle (Ober-)Knoten einer Lichtsignalanlage durchgeführt.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Vor der Optimierung können Sie das Netz auf ICA-Tauglichkeit prüfen <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Netz_prüfen_und_Fehler_beheben.htm#2_netz_bearbeiten_23091886_2873260">(siehe „Netz prüfen und Fehler beheben“ auf Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass die Eingabeattribute für das Verfahren korrekt sind <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Datenmodell_fuer_LSA-Umlauf-_und_Gruenzeitoptimierung.htm#1_benutzermodell_iv_2033098965_1241527">(siehe Grundlagen: Kap. , Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Menü <span class="gui_element">Rechnen</span> den Eintrag <span class="gui_element">Allgemeine Verfahrenseinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Allgemeine Verfahrenseinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie im Navigator den Eintrag <span class="gui_element">IV-Einstellungen</span>&#160;&gt; <span class="gui_element">LSA-Umlauf- und Grünzeitoptimierung</span>.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="364px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Umlaufzeiten der Koordinierungsgruppen verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, sind für Signalanlagen, die zu einer Koordinierungsgruppe gehören, nur Umlaufzeiten aus deren Umlaufzeitfamilie zulässig. </p>
+                        <p class="CellText">Ist die Option nicht ausgewählt, sind alle Umlaufzeiten (ganzzahlig in Sekunden) im Intervall zwischen den Knotenattributen <span class="gui_element">ICAMinUmlZeitOpt</span> und <span class="gui_element">ICAMaxUmlZeitOpt</span> zulässig.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Rechengenauigkeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Keine Nachkommastellen</span>
+                        </p>
+                        <p class="CellText">Die Zeiten werden auf ganze Sekunden gerundet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Eine Nachkommastelle</span>
+                        </p>
+                        <p class="CellText">Die Zeiten werden auf Zehntelsekunden gerundet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Zwischenzeiten beibehalten </span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden die aktuellen Zwischenzeiten beibehalten. </p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, werden die Zwischenzeiten aus der Zwischenzeitmatrix verwendet. Falls diese leer ist, wird der Wert aus dem LSA-Attribut <span class="gui_element">Standard-Zwischenzeit</span> verwendet.</p>
+                        <p class="CellText">Diese Einstellung ist für Signalanlagen mit externer Steuerung nicht relevant, da in diesem Fall die Zwischenzeiten extern verwaltet werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">
+            <MadCap:snippetText src="../Resources/Snippets/A_RES_Das_Fenster_schließt_sich.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="6. &#160;">Klicken Sie in der Symbolleiste auf das Symbol <img src="../Resources/Images_4_all/ICO_procedure_flow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000347px;margin-bottom: 0, 9983615px;" /> <span class="gui_element">Verfahrensablauf öffnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Verfahrensablauf</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Fügen Sie an der gewünschten Stelle im Verfahrensablauf das Verfahren <span class="gui_element">LSA-Umlauf- und Grünzeitoptimierung</span> aus der Kategorie <span class="gui_element">Umlegungen</span> ein <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahrensablauf festlegen und starten.htm#2_verfahrensablauf_festlegen_40480990_1019020">(siehe „Verfahrensablauf festlegen und starten“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="8. &#160;">Führen Sie das Verfahren aus <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahren im Verfahrensablauf ausführen.htm#2_verfahrensablauf_festlegen_40480990_1112524">(siehe „Verfahren im Verfahrensablauf ausführen“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Result">Die LSA-Umlauf- und Grünzeitoptimierung wird durchgeführt.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Alternativ können Sie die LSA-Umlauf- und Grünzeitoptimierung auch für einen einzelnen oder mehrere ausgewählte Knoten durchführen <MadCap:xref class="siehe_1" href="../2_Netz_bearbeiten/LSA_Umlauf__und_Grünzeiten_für_eine_einzelne_LSA_optimieren.htm#2_netz_bearbeiten_23091886_1794643">(siehe „LSA-Umlauf- und Grünzeiten für eine einzelne LSA optimieren“ auf Seite&#160;1</MadCap:xref><MadCap:xref class="siehe_2" href="../2_Netz_bearbeiten/Widerstände_am_Knoten_aktualisieren.htm#2_netz_bearbeiten_23091886_2223374"> und „Widerstände am Knoten aktualisieren“ auf Seite&#160;1)</MadCap:xref>.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

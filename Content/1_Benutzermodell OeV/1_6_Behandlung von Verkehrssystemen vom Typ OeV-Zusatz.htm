@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="VorHst;EinHst;NachHst;QuellHst;ZielHst;linie;Ride;Wid" MadCap:lastBlockDepth="4" MadCap:lastHeight="727" MadCap:lastWidth="688">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_oev_2318507456_1086468">
+            </a>
+            <MadCap:keyword term="Fahrplanfeine Umlegung: ÖV-Zusatz Verkehrssysteme" />
+            <MadCap:keyword term="ÖV:Zusatz Verkehrssysteme" />
+            <a name="1_benutzermodell_oev_2318507456_58653">
+            </a>Behandlung von Verkehrssystemen vom Typ ÖV-Zusatz</h3>
+        <p class="Text">Für Verkehrssysteme vom Typ <span class="gui_element">ÖV-Zusatz </span>gilt Folgendes:</p>
+        <ul>
+            <LI class="List0">Sie werden in der fahrplanfeinen Umlegung und auch über das Menü <span class="gui_element">Grafik&#160;&gt; Kurzwegsuche</span> berücksichtigt.</LI>
+            <LI class="List0">Sie sind dazu geeignet, nachrangige Verkehrsangebote ohne Fahrplan zu modellieren. Dazu gehören zum Beispiel</LI>
+            <LI class="List1">Park &amp; Ride</LI>
+            <LI class="List1">dicht getakteter Nahverkehr im ansonsten fahrplanfein modellierten Gesamtnetz</LI>
+            <LI class="List1">Taxiverkehr</LI>
+            <LI class="List0">Sie sind nur auf Strecken und Abbiegern relevant. Durch die Definition von ÖV-Zusatz-Verkehrssystem-Zulässigkeiten auf diesen Objekten wird das je ÖV-Zusatz-Verkehrssystem freigegebene Teilnetz definiert. Für Anbindungen, Knoten oder Haltepunkte ist diese Information nicht relevant.</LI>
+        </ul>
+        <p class="Text">Ähnlich wie ÖV-Fuß-Verkehrssysteme werden ÖV-Zusatz-Verkehrssysteme für ÖV-Modi zugelassen. Bei Umlegungen von Nachfragesegmenten solcher Modi können Fahrgäste dann auch Teilwege mit diesen ÖV-Zusatz-Verkehrssystemen zurücklegen, und zwar zwischen zwei Netzknoten, die durch für das ÖV-Zusatz-Verkehrssystem offene Strecken verbunden sind. Die Knoten müssen ihrerseits durch Fußwege erreicht werden oder direkt mit einem Bezirk oder Haltestellenbereich verbunden sein.</p>
+        <p class="Text">In der Umlegung zählt ein Wechsel zu einem Teilweg mit ÖV-Zusatz-Verkehrssystem als Umstieg.</p>
+        <p class="Text">Mit dem erweiterten <span class="gui_element">modularisierten Verfahren </span>können zum Beispiel Fahrpreise im- und exportiert werden <MadCap:xref class="sieheUeberschrSeite" href="1_6_Oeffnung der fahrplanfeinen Umlegung_ Export_Import von Verbindungen.htm#1_benutzermodell_oev_2318507456_1082500"><span style="color: Black;" class="mcFormatColor">(</span><u>Öffnung der fahrplanfeinen Umlegung: Export/Import von Verbindungen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="gui_element">Vorberechnung der Teilwege</span>
+        </p>
+        <p class="Text">Die Menge der in einer Umlegung zulässigen ÖV-Zusatz-Verkehrssysteme hat unmittelbar Einfluss auf die zu berechnenden Fußwege, denn jeder Startknoten von ÖV-Zusatz-Wegen ist ein potenzielles Ziel von ÖV-Fußwegen. Dies wird bei der Vorberechnung der Fußwege und der Vorberechnung der ÖV-Zusatz-Wege berücksichtigt.</p>
+        <p class="Text" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="gui_element">Anpassung der Verbindungssuche</span>
+        </p>
+        <p class="Text">Analog zu Fußwegen wird zu jedem ÖV-Zusatz-Weg ein Teilweg erzeugt. Die trivialen ÖV-Zusatz-Umstiege an Knoten erscheinen in jedem Fall als eigener Teilweg. Teilwege werden nach Typ sortiert, also ÖV-Linie, ÖV-Fuß und ÖV-Zusatz separat.</p>
+        <p class="Text">Analog zum Verweis auf den Index des ersten Fußweg-Teilwegs zu einer Quelle gibt es einen Verweis auf den ersten Index des ersten ÖV-Zusatz-Teilwegs.</p>
+        <p class="Text">Auch für Teilwege mit ÖV-Zusatz-Verkehrssystem sind Reisezeit, Anzahl Umstiege und Verkehrssystem-Widerstände sauber definiert. Insbesondere sind für ÖV-Zusatz-Verkehrssysteme die Streckenattribute <span class="gui_element">Wid/Km</span>, <span class="gui_element">Wid/Tarifpunkt</span> und <span class="gui_element">Wid/ZWert</span> verfügbar.</p>
+    </body>
+</html>

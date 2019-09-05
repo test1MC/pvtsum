@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="626" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="AusHst;Abfahrts;VorHst;EinHst;NachHst;QuellHst;ZielHst;linie">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_oev_2318507456_1225046">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456__toc175457322">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456__toc151522575">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456__toc150322339">
+            </a>Befragungsdaten plausibilisieren</h3>
+        <p class="Text">
+            <MadCap:keyword term="Befragungsdaten: plausibilisieren" />
+            <MadCap:keyword term="Fahrgasterhebung: Befragungsdaten: plausibilisieren" />Bei der Plausibilisierung wird für jeden einzelnen Befragungsdatensatz geprüft, ob die vom Fahrgast angegebene Fahrtroute richtig sein kann. Aus einem Vergleich der Befragungsdaten mit dem im <MadCap:variable name="PTV_Manual.Programmname" />-Netzmodell gespeicherten tatsächlichen ÖV-Angebot können unplausible Fahrtrouten erkannt und korrigiert werden, indem die entsprechenden Linien (beziehungsweise Linienrouten oder Fahrzeitprofile) durch plausible Linien (beziehungsweise Linienrouten oder Fahrzeitprofile) ersetzt werden. Jeder Befragungsdatensatz wird durch zusätzliche Informationen wie Abfahrts- und Ankunftszeiten, Fahrzeit und Fahrtweite, benutzte Linien und Fußwege ergänzt.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die in den Befragungsdatensätzen angegebenen Einstiegs- und Ausstiegshaltestellen der Erhebungslinie müssen im betrachteten Netz vorhanden sein, ansonsten wird der betroffene Datensatz ignoriert. Wird eine dieser Haltestellen nach dem Einlesen gelöscht, werden auch alle Wege gelöscht.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Vorgehensweise bei der Plausibilisierung</h5>
+        <p class="Text">In der Regel findet eine Plausibilisierung in folgenden Teilschritten statt.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Plausibilisierung des Erhebungsteilwegs (<MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1075709">Abbildung 1</MadCap:xref>)</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Plausibilisierung des Vorlaufs (<MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1075719">Abbildung 2</MadCap:xref>)</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Plausibilisierung des Nachlaufs</p>
+        <p class="Text">Für jeden dieser Teilschritte können mehrere Plausibilisierungsdurchgänge vorgenommen werden, um die Befragungsdatensätze sukzessive – mit zunächst schwieriger zu erfüllenden bis hin zu immer leichter zu erfüllenden Plausibilisierungskriterien – zu überprüfen.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">In einzeiligen Befragungsdatensätzen können Vor- und Nachlauf aus jeweils maximal zwei Teilwegen bestehen <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Format der einzeiligen Befragungsdatendatei.htm#2_einstellungen_benutzermodell_oev_2589728191_1053914"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Format der einzeiligen Befragungsdatendatei</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <ul>
+                            <LI class="List0">Der innere Teilweg führt von VorHst nach EinHst oder von AusHst nach NachHst. </LI>
+                            <LI class="List0">Der äußere Teilweg führt von QuellHst nach VorHst oder von NachHst nach ZielHst. </LI>
+                        </ul>
+                        <p class="Text">Bei mehrzeiligen Befragungsdatensätzen ist die Anzahl von Teilwegen in Vor- und Nachlauf beliebig <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Format der mehrzeiligen Befragungsdatendatei.htm#2_einstellungen_benutzermodell_oev_2589728191_1052114"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Format der mehrzeiligen Befragungsdatendatei</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Plausibilisierung des Erhebungsteilwegs</h5>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_ValidityCheck_Survey_Path_Leg.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_oev_2318507456_1075709">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_50923">
+            </a>Plausibilisierung des Erhebungsteilwegs</p>
+        <p class="Text2">* Bei mehreren Fahrten wird diejenige gewählt, deren Summe aus Fahrzeit und Wartezeit am geringsten ist.</p>
+        <h5>Plausibilisierung des Vorlaufs (Beispiel für 1 bis 2 Teilwege im Vorlauf)</h5>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_ValidityCheck_Preceeding_Path_Leg.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_oev_2318507456_1075719">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_77324">
+            </a>Plausibilisierung des Vorlaufs</p>
+        <p class="Text2">* Bei mehreren Fahrten wird diejenige gewählt, deren Summe aus Fahrzeit und Wartezeit am geringsten ist.</p>
+        <h5>Plausibilisierung des Nachlaufs</h5>
+        <p class="Text">Die Plausibilisierung des Nachlaufs erfolgt analog zur Plausibilisierung des Vorlaufs (<MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1075719">Abbildung 2</MadCap:xref>).</p>
+        <h5>Status-Kennungen der Plausibilisierungsqualität</h5>
+        <p class="Text">Die Qualität einer durchgeführten Plausibilisierung wird für jeden Befragungsdatensatz mit einer Statuskennung von 0 bis 9 in einer Ergebnisdatei beziehungsweise in ÖV-Wege- und ÖV-Teilwegelisten beschrieben.</p>
+        <ul>
+            <LI class="List0">für den Erhebungsteilweg E (<MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1180179">Tabelle 1</MadCap:xref>)</LI>
+            <LI class="List0">für den Vorlauf V (<MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1180380">Tabelle 2</MadCap:xref>)</LI>
+            <LI class="List0">für den Nachlauf N (<MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1180404">Tabelle 3</MadCap:xref>)</LI>
+            <LI class="List0">für den gesamten Befragungsdatensatz G (<MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1180430">Tabelle 4</MadCap:xref>)</LI>
+        </ul>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="44px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="452px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Status für den Erhebungsteilweg (E)</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Noch nicht bearbeitet</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Plausibel</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Auf dem Erhebungsfahrzeitprofil (oder der Erhebungslinienroute oder –linie, je nach Genauigkeit der Eingabe) wurde eine Fahrt gefunden, deren Abfahrt von der Einstiegshaltestelle zur Ausstiegshaltestelle des Erhebungsteilwegs innerhalb des für den Abfahrtszeitpunkt an der Einstiegshaltestelle definierten Toleranzintervalls liegt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Auf einem anderen Fahrzeitprofil (oder einer anderen Linienroute) der Erhebungslinie wurde eine Fahrt gefunden, deren Abfahrt von der Einstiegshaltestelle zur Ausstiegshaltestelle des Erhebungsteilwegs innerhalb des für den Abfahrtszeitpunkt an der Einstiegshaltestelle definierten Toleranzintervalls liegt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Auf einem beliebigen Fahrzeitprofil einer anderen Linie im Netz (oder Linienroute) wurde eine Fahrt gefunden, deren Abfahrt von der Einstiegshaltestelle zur Ausstiegshaltestelle des Erhebungsteilwegs innerhalb des für den Abfahrtszeitpunkt an der Einstiegshaltestelle definierten Toleranzintervalls liegt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Für den Erhebungsteilweg wurde eine indirekte Verbindung (mit Umsteigen, einschließlich Fußwege) mit Abfahrt innerhalb des für den Abfahrtszeitpunkt an der Einstiegshaltestelle definierten Toleranzintervalls mit fahrplanfeiner Verbindungssuche (Kurzweg-Suche) gefunden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nicht Plausibel</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">7</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Unplausibel, weil keine der gemäß den Parametern zulässigen Linienrouten Ein- und AusHst verbindet und eine Verbindungssuche nicht erlaubt ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">8</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Unplausibel, weil es zwar gemäß den Parametern zulässige Linienrouten gibt, die Ein- und AusHst verbinden, auf ihren Fahrzeitprofilen aber keine Abfahrtszeit im eingestellten Toleranzbereich für den Abfahrtszeitpunkt an der Einstiegshaltestelle ermittelt werden konnte und eine Verbindungssuche nicht erlaubt ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">9</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Unplausibel, weil eine Verbindungssuche von Ein- nach AusHst gerechnet, dabei aber keine Verbindung gefunden wurde.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_oev_2318507456_1180179">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_92678">
+                    </a>Status-Kennungen für den Erhebungsteilweg</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="46px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="450px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Status für den Vorlauf (V)</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Nicht vorhanden</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Plausibel</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Auf dem Vorlauffahrzeitprofil (beziehungsweise der Vorlauflinienroute oder Vorlauflinie, je nach Genauigkeit der Eingabe) wurde eine Fahrt gefunden, die die für den zulässigen Zeitraum definierte Bedingung erfüllt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Auf einem anderen Fahrzeitprofil (beziehungsweise Linienroute) der Vorlauflinie wurde eine Fahrt gefunden, die die für den zulässigen Zeitraum definierte Bedingung erfüllt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Auf einem beliebigen Fahrzeitprofil einer anderen Linie im Netz (beziehungsweise Linienroute) wurde eine Fahrt gefunden, die die für den zulässigen Zeitraum definierte Bedingung erfüllt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Ersetzung des mehrteiligen, plausiblen Vorlaufs durch eine Direktverbindung von QuellHst nach EinHst, deren Reisezeit kürzer ist als die des mehrteiligen Vorlaufs (Faktor • Reisezeit Direktverbindung + Konstante &lt; Reisezeit des mehrteiligen Vorlaufs).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Ersetzung mindestens eines Vorlaufteilwegs durch eine mit fahrplanfeiner Verbindungssuche gefundene indirekte Verbindung (mit Umsteigen, einschließlich Fußwege).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">6</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Ersetzung des unplausiblen (mehrteiligen) Vorlaufs durch eine Verbindung von QuellHst nach EinHst, deren Ankunft an EinHst zur Abfahrt der Erhebungslinie an EinHst passt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nicht Plausibel</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">9</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Unplausibel, weil unter den angegebenen Plausibilisierungskriterien kein(e) Teilweg(folge) gefunden wurde.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_oev_2318507456_1180380">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_10785">
+                    </a>Status-Kennungen für den Vorlauf</p>
+            </caption>
+        </table>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="50px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="446px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Status für den Nachlauf (N)</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Nicht vorhanden</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Plausibel</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Auf dem Nachlauffahrzeitprofil (oder der Nachlauflinienroute oder –linie, je nach Genauigkeit der Eingabe) wurde eine Fahrt gefunden, die die für den zulässigen Zeitraum definierte Bedingung erfüllt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Auf einem anderen Fahrzeitprofil (oder Linienroute) der Nachlauflinie wurde eine Fahrt gefunden, die die für den zulässigen Zeitraum definierte Bedingung erfüllt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Auf einem beliebigen Fahrzeitprofil einer anderen Linie im Netz (oder Linienroute) wurde eine Fahrt gefunden, die die für den zulässigen Zeitraum definierte Bedingung erfüllt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Ersetzung des mehrteiligen, plausiblen Nachlaufs durch eine Direktverbindung von AusHst nach ZielHst, deren Reisezeit kürzer ist als die des mehrteiligen Nachlaufs (Faktor • Reisezeit Direktverbindung + Konstante &lt; Reisezeit des mehrteiligen Nachlaufs).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Ersetzung mindestens eines Nachlaufteilwegs durch eine mit fahrplanfeiner Verbindungssuche gefundene indirekte Verbindung (mit Umsteigen, einschließlich Fußwege).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">6</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Ersetzung des unplausiblen (mehrteiligen) Nachlaufs durch eine Verbindung von AusHst nach ZielHst, deren Abfahrt an AusHst zur Ankunft der Erhebungslinie an AusHst passt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nicht Plausibel</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">9</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Unplausibel, weil unter den angegebenen Plausibilisierungskriterien kein(e) Teilweg(folge) gefunden wurde.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+            <a name="1_benutzermodell_oev_2318507456_1180404">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_12758">
+            </a>Status-Kennungen für den Nachlauf</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="50px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="445px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Status für den gesamten Befragungsdatensatz (G)</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Nicht bearbeitet</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Plausibel</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Alle vorhandenen Abschnitte (Vor-, Nachlauf und/oder Erhebungsteilweg) sind plausibel.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Nicht Plausibel</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">9</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">Unplausibel, weil mindestens einer der vorhandenen Abschnitte (Vor-, Nachlauf oder Erhebungsteilweg) unplausibel ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 4: ">
+                    <a name="1_benutzermodell_oev_2318507456_1180430">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_48573">
+                    </a>Status-Kennungen für den gesamten Befragungsdatensatz</p>
+            </caption>
+        </table>
+    </body>
+</html>

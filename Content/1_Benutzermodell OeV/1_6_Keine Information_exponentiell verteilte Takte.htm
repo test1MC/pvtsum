@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;max" MadCap:lastBlockDepth="2" MadCap:lastHeight="920" MadCap:lastWidth="697">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1094861">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_59853">
+            </a>Keine Information, exponentiell verteilte Takte</h4>
+        <p class="Text">Wenn der Fahrgast über keine zusätzlichen Informationen verfügt, ist er darauf angewiesen, beim Eintreffen einer Linie ad hoc zu entscheiden, ob er einsteigt oder nicht. Das Wahlmodell ermittelt die optimale Linienmenge, und die optimale Strategie des Fahrgasts besteht darin, die erste eintreffende Linie aus dieser Menge zu wählen.</p>
+        <p class="Text">Dieses Modell ist neben dem Fehlen von Fahrgastinformation vor allem dadurch gekennzeichnet, dass die Fahrzeugfolgezeit (der Abstand zwischen zwei Abfahrten einer Linie) nicht als konstant, sondern als exponential verteilt angenommen wird. Der Erwartungswert für diesen Abstand beträgt genau wie bei konstanten Takten 1 / <span class="formula_symbol">l</span><span class="formula_subscript">i</span>, also die „Frequenz” der Linie. Im Unterschied zu konstanten Takten <span class="gui_element">streuen</span> die Fahrzeugfolgezeiten jedoch stark um diesen Wert.</p>
+        <p class="Text">Wesentliche Eigenschaft der hier zugrunde liegenden Exponentialverteilung ist, dass die bereits verstrichene Wartezeit seit der letzten Abfahrt auf der Linie <span class="gui_element">nichts</span> darüber aussagt, wie lange die Fahrgäste noch bis zur nächsten Abfahrt warten müssen. Diese Eigenschaft wird „Gedächtnislosigkeit” genannt. Es wird somit die größtmögliche Unregelmäßigkeit des Fahrplans unterstellt.</p>
+        <p class="Text">Die unter diesen Modellannahmen optimale Menge bildet man wie folgt. Zuerst setzt man Folgendes:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_15.jpg" />
+        </p>
+        <p class="Text">Dann erhält man die optimale Linienmenge durch <span class="formula">L</span><span class="formula_superscript">*</span><span class="formula"> = L</span><span class="formula_subscript">i*</span>, wobei <span class="formula">i*</span>&#160;=&#160;max{<span class="formula">i:s</span><span class="formula_subscript">i</span><span class="formula"></span>≤<span class="formula"> u</span><span class="formula_subscript">i-1</span>}.</p>
+        <p class="Text">Man kann zeigen, dass das so gebildete <span class="formula">i</span><span class="formula_superscript">*</span> die erwarteten Restkosten minimiert.</p>
+        <p class="Text">Somit gehört eine Linie <span class="formula">i</span> genau dann zur optimalen Menge, wenn ihre Rest-Reisezeit (ohne Wartezeit) nicht höher ist als die erwartete Rest-Reisezeit plus Wartezeit der kombinierten Linien <span class="formula">L</span><span class="formula_subscript">i-1</span> = {1, ..., <span class="formula">i-1</span>}. Diese Vorgehensweise bewirkt, dass nur relativ wenige Linien benutzt werden, denn bei diesem Vergleich werden die Linien <span class="formula">L</span><span class="formula_subscript">i-1</span> so behandelt, als seien sie perfekt koordiniert. Koordiniert bedeutet hier, dass sie so gleichmäßig angeordnet sind, dass sie sich gemeinsam so darstellen wie eine einzige Linie mit Frequenz <img src="../Resources/Images/8_84.jpg" />. Eine solche Additivität ist nur bei exponentieller Verteilung gegeben.</p>
+        <p class="Text">Die Anteile der Linien <span class="formula">i</span> <span class="symbol">Î</span> <span class="formula">L</span><span class="formula_superscript">*</span> sind gleich der Wahrscheinlichkeit, dass sie als erste abfahren, wie folgender Formel zu entnehmen ist.</p>
+        <p class="Text">
+            <img src="../Resources/Images/8_99.jpg" />
+        </p>
+        <p class="Text">Es sollte beachtet werden, dass die Rest-Reisezeiten der Linien nicht in der Anteilsdefinition auftauchen. Wenn Linien hinreichend gut sind, um in der optimalen Linienmenge enthalten zu sein, hängt ihr Anteil nur noch von ihrem Takt ab. Diese Eigenschaft verdeutlicht die stark vereinfachte Konstruktion dieses Wahlmodells.</p>
+        <p class="Text">Die resultierende erwartete Wartezeit ergibt sich wie folgt.</p>
+        <p class="Text">
+            <img src="../Resources/Images/8_32.jpg" />
+        </p>
+        <p class="Text">Sie sollten dieses Wahlmodell nur verwenden, wenn die Fahrzeugfolgezeiten der Linien extrem unregelmäßig sind, sich die Fahrgäste also einem sehr hohen Maß an Unsicherheit gegenüber sehen.</p>
+    </body>
+</html>

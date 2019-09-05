@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km;max;Richtungs;te;LocationFault;TimeFault;LayoverTimeFault;VehicleFault;Fahrzeugeinheits;IC;Entfernungs;TP;Town" MadCap:lastBlockDepth="2" MadCap:lastHeight="627" MadCap:lastWidth="697">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1162900">
+            </a>Zeitliches Schneiden (Zeitschnitt)</h4>
+        <p class="Text">
+            <MadCap:keyword term="Kennzahlen: zeitlich schneiden" />Das zeitliche Schneiden kommt zum Tragen, wenn Sie Kennzahlen für ein bestimmtes Analysezeitintervall berechnen wollen <MadCap:xref class="Benutzerhandbuch" href="../2_Verfahrensablauf_festlegen/2_4_Analysezeitintervalle festlegen.htm#2_verfahrensablauf_festlegen_40480990_1071745"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Analysezeitintervalle festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> oder während der Berechnung der Kennzahlen für die Analyseperiode. Im letzteren Fall werden die ganzen Tage der Analyseperiode intern genauso behandelt wie ein Zeitintervall, das von 0:00 bis 24:00&#160;Uhr dauert. Der zeitliche Schnitt erfolgt am Fahrzeitprofil.</p>
+        <p class="Text">Für den Zeitschnitt sind die abfahrenden Linienrouten-Elemente ausschlaggebend. Kennzahlen werden immer zuerst auf der Ebene der Fahrtabschnitte berechnet und dann entlang der Linienhierarchie aggregiert <MadCap:xref class="sieheUeberschrSeite" href="1_7_Aggregation entlang der Linienhierarchie.htm#1_betreibermodell_oev_1878159914_1163873"><span style="color: Black;" class="mcFormatColor">(</span><u>Aggregation entlang der Linienhierarchie</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Dauert ein Zeitintervall beispielsweise von 8:00 bis 9:00&#160;Uhr und fährt eine Fahrt um 7:55&#160;Uhr ab, dann zählt das Linienrouten-Element, das um 7:55&#160;Uhr abfährt, nicht mit in die Kennzahlenberechnung. Fährt eine andere Fahrt hingegen um 8:55&#160;Uhr ab, so zählt dieses Linienrouten-Element noch mit in die Berechnung.</p>
+        <p class="Text">Die Aufteilung von streckenbezogenen Kennzahlen erfolgt dabei auf der Feinheit einzelner Strecken. Das heißt, dass für Fahrten, die eine Zeitintervallgrenze überschreiten, einem Zeitintervall die Werte derjenigen Strecken zugeordnet werden, deren Von-Knoten innerhalb des Zeitintervalls überfahren wird. Hierzu werden zunächst aus den Fahrzeiten des Fahrzeitprofils Durchfahrzeiten an jedem überfahrenen Knoten und Haltepunkt interpoliert, die dann mit den Grenzen der Zeitintervalle verglichen werden <MadCap:xref class="sieheUeberschrSeite" href="#1_betreibermodell_oev_1878159914_1166963">(siehe „Interpolation von Durchfahrzeiten (Fahrzeiten in Minuten)“ auf Seite&#160;669)</MadCap:xref>. Einige Rechenbeispiele hierzu finden Sie auch an anderer Stelle <MadCap:xref class="sieheUeberschrSeite" href="1_7_Messung der Betriebsleistung.htm#1_betreibermodell_oev_1878159914_1141898"><span style="color: Black;" class="mcFormatColor">(</span><u>Messung der Betriebsleistung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Interpolation_Times.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_betreibermodell_oev_1878159914_1166963">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_29292">
+            </a>Interpolation von Durchfahrzeiten (Fahrzeiten in Minuten)</p>
+    </body>
+</html>

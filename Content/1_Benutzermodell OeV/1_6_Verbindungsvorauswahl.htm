@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb;AnteilAkzGEH;UH" MadCap:lastBlockDepth="4" MadCap:lastHeight="324" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_oev_2318507456_1027500">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_74802">
+            </a>Verbindungsvorauswahl</h3>
+        <p class="Text">
+            <MadCap:keyword term="Fahrplanfeine Umlegung: Verbindungsvorauswahl" />Die Verbindungsvorauswahl bewertet und vergleicht alle gefundenen Verbindungen. Dabei wird untersucht, ob eine Verbindung durch eine andere, günstigere Verbindung ersetzt und daher gelöscht werden kann. Nur die sinnvollen Verbindungen werden den Fahrgästen bei der Verbindungswahl zur Auswahl gestellt. Zur Identifizierung ungünstiger Verbindungen werden die folgenden Ausschlussregeln nacheinander angewandt.</p>
+        <ul>
+            <LI class="List0">Suchwiderstand der Verbindung &gt; minimaler Suchwiderstand • Faktor + Konstante</LI>
+        </ul>
+        <p class="List_Text0">(ohne Einschränkung; nur Branch &amp; Bound)</p>
+        <ul>
+            <LI class="List0">Reisezeit der Verbindung &gt; minimale Reisezeit • Faktor + Konstante</LI>
+        </ul>
+        <p class="List_Text0">(sofern Verbindung nicht optimal hinsichtlich Umsteigehäufigkeit)</p>
+        <ul>
+            <LI class="List0">Umsteigehäufigkeit der Verbindung &gt; minimale UH + Konstante</LI>
+        </ul>
+        <p class="List_Text0">(sofern Verbindung nicht optimal hinsichtlich Reisezeit)</p>
+        <p class="Text">Die Faktoren und Konstanten können vom Benutzer eingestellt werden.</p>
+        <p class="Text"> Zusätzlich können Verbindungen, die entweder vollständig im Vor- und Nachlauf liegen, oder vor oder nach dem Umlegungszeitraum beginnen oder enden, gelöscht werden.&#160;Die letztgenannte Regel richtet sich nach dem Zeitbezug <MadCap:xref href="../2_Einstellungen_Benutzermodell_OeV/2_6_Fahrplanfeine Umlegung_ Register Vorauswahl.htm" class="Benutzerhandbuch"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Fahrplanfeine Umlegung: Register Vorauswahl</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+    </body>
+</html>

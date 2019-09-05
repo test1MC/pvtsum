@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="418" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;Control;operationControlPoints;published;kombinationen;way;Stop;simulation;network">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1197582">
+            </a>SATURN-Import: Knoten- und Abbiegerattributwerte</h4>
+        <p class="Text">Für die Umlegung mit ICA müssen zwei Knotenattribute und ein Abbiegerattribut angepasst werden. Die Attributwerte werden automatisch beim Öffnen der aus den SATURN-Daten generierten Netzdatei in <MadCap:variable name="PTV_Manual.Programmname" /> geändert.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Diese Änderungen werden erst gespeichert, wenn Sie die Daten in <MadCap:variable name="PTV_Manual.Programmname" /> als Netz- oder Versionsdatei speichern.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Alle Knoten, die die folgenden Bedingungen erfüllen, werden angepasst:</p>
+        <ul>
+            <LI class="List0">Der Steuerungstyp entspricht einem der folgenden Typen: <span class="gui_element">geregelte Vorfahrt (Stopp)</span>, <span class="gui_element">geregelte Vorfahrt (Vorfahrt achten)</span>, <span class="gui_element">signalisiert</span>, <span class="gui_element">All-way Stop</span> oder <span class="gui_element">Kreisverkehr</span>.</LI>
+            <LI class="List0">Alle für den IV offenen Strecken am Knoten sind in SATURN Strecken des <span class="gui_element">simulation network</span>.</LI>
+        </ul>
+        <p class="Text">Folgende Attributwerte werden für diese Knoten gesetzt:</p>
+        <ul>
+            <LI class="List0">Das Knotenattribut <span class="gui_element">Eingestellte Methode für Widerstand am Knoten verwenden</span> erhält den Wert aktiv.</LI>
+            <LI class="List0">Das Knotenattribut <span class="gui_element">Methode für Widerstand am Knoten</span> erhält den Wert <span class="gui_element">Knotenwiderstandsberechnung(ICA)</span>.</LI>
+        </ul>
+        <p class="Text">Folgendes Attribut wird für Abbieger gesetzt:</p>
+        <ul>
+            <LI class="List0">Das Attribut <span class="gui_element">Typ-Nummer</span> wird automatisch belegt, entsprechend der Einstellung <span class="gui_element">automatische Belegung aller für ICA offenen Abbieger eines Knotens, sonst Typ 0</span> <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Automatische_Belegung_des_Abbiegertyps_einstellen.htm#2_netz_bearbeiten_23091886_1712400"><span style="color: Black;" class="mcFormatColor">(</span><u>Automatische Belegung des Abbiegertyps einstellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+        </ul>
+    </body>
+</html>

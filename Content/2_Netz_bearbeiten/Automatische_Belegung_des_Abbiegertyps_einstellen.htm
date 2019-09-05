@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="690" MadCap:lastWidth="510" MadCap:ignoredWords="Nr;No;xls;t0" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_netz_bearbeiten_23091886_1712400">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_80357">
+            </a>Automatische Belegung des Abbiegertyps einstellen<a name="20116"></a><a name="27196"></a></h3>
+        <p class="Text">
+            <MadCap:keyword term="Abbieger:automatische Belegung des Abbiegertyps" />Sie können festlegen, welche Abbiegetypen für neue Abbieger eingestellt werden. Dies ist zum Beispiel der Fall, wenn Sie Strecken einfügen oder splitten. Abbiegetypen bestehender Abbieger an den betroffenen Knoten werden dadurch nicht verändert. Ebenso führen Änderungen an anderen Netzobjekten, beispielsweise an Streckenattributen, nicht zu einer automatischen Neuberechnung des Typs.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Netz</span> den Eintrag <span class="gui_element">Netzeinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Netzeinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie das Register <span class="gui_element">Netzobjekte</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie im Bereich <span class="gui_element">Abbiegetypen</span> die gewünschte Option.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Initiale Belegung gemäß dem Winkel des Abbiegers</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Der Typ wird anhand des Winkels des (Ober-)Abbiegers vergeben:</p>
+                        <ul>
+                            <LI class="List0Tab">Winkel &lt; (180 - 45)°: der (Ober-)Abbieger erhält den Typ 1 (rechts).</LI>
+                            <LI class="List0Tab">(180 - 45)° ≤ Winkel ≤ (180 + 45)°: der (Ober-)Abbieger erhält den Typ 2 (geradeaus).</LI>
+                            <LI class="List0Tab">Winkel &gt; (180 + 45)°: der (Ober-)Abbieger erhält den Typ 3 (links).</LI>
+                            <LI class="List0Tab">Von-Strecke = Nach-Strecke oder Von-Arm = Nach-Arm (basierend auf der Streckenorientierung): der (Ober-)Abbieger erhält den Typ 4 (UTurn).</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Initial Belegung aller für ICA offenen Abbieger, sonst Typ 0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Der Typ wird gemäß den folgenden Regeln vergeben, wenn (Ober-)Abbieger „für ICA offen“ sind, ansonsten erhalten sie den Typ 0.</p>
+                        <p class="CellText">„Für ICA offen“ bedeutet, dass mindestens ein Fahrstreifen definiert ist für die Von-Strecke und die Nach-Strecke oder für den Von-Arm und den Nach-Arm. Außerdem muss jede der beiden Strecken oder Arme und auch der (Ober-) Abbieger selbst für mindestens ein IV-Verkehrssystem geöffnet sein. </p>
+                        <p class="CellText">Für die Belegung gelten folgende Regeln:</p>
+                        <ul>
+                            <LI class="List0Tab">ICA (Intersection Capacity Analysis) berücksichtigt nur die Typen 1 bis 4 und maximal einen Geradeaus-Abbieger (Typ 2) je Strecke, die zum Knoten führt (oder Geradeaus-Oberabbieger je Arm zum Oberknoten).</LI>
+                            <LI class="List0Tab">Unter allen (Ober-)Abbiegern eines (Ober-)Knotens, die maximal 45° von 180° abweichen, erhält der (Ober-)Abbieger den Typ 2, der am nächsten bei 180° liegt.</LI>
+                            <LI class="List0Tab">Alle (Ober-)Abbieger mit einem Winkel &gt; Geradeaus sind Linksabbieger und erhalten den Typ 3.</LI>
+                            <LI class="List0Tab">Alle (Ober-)Abbieger mit einem Winkel &lt; Geradeaus sind Rechtsabbieger und erhalten den Typ 1.</LI>
+                        </ul>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Enthält das Netz mehr als einen Geradeaus-Abbieger je Strecke zum Knoten (oder Geradeaus-Oberabbieger je Arm zum Oberknoten), wird ICA (Intersection Capacity Analysis) nicht gerechnet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Initiale Belegung aller  für IV offenen Abbieger, sonst Typ 0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Der Typ wird automatisch vergeben, wenn (Ober-)Abbieger „für IV offen“ sind, ansonsten erhalten sie den Typ 0.</p>
+                        <p class="CellText">„Für IV offen“ bedeutet, dass jede der beiden Strecken und auch der Abbieger selbst (oder jeder der beiden Arme und auch der Oberabbieger selbst) für mindestens ein IV-Verkehrssystem geöffnet sein muss. Berücksichtigt werden die Typen 0 bis 9.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Für die automatische Belegung werden immer alle (Ober-)Abbieger eines (Ober-)Knotens berücksichtigt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Einstellung wird übernommen.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Sie können die (Ober-)Abbiegertypen nachträglich manuell ändern <MadCap:xref class="siehe_1" href="Abbieger_im_Knoteneditor_bearbeiten.htm#2_netz_bearbeiten_23091886_1534870">(siehe „Abbieger im Knoteneditor bearbeiten“ auf Seite&#160;1</MadCap:xref><MadCap:xref class="siehe_2" href="Oberabbieger_im_Knoteneditor_bearbeiten.htm#2_netz_bearbeiten_23091886_1546470"> und „Oberabbieger im Knoteneditor bearbeiten“ auf Seite&#160;1)</MadCap:xref>.</p>
+                        <p class="Text">Sie können anschließend den (Ober-)Abbiegern die Attributstandardwerte für <span class="gui_element">t0</span> und <span class="gui_element">KapIV</span> je Abbiegertyp zuweisen <MadCap:xref class="sieheUeberschrSeite" href="Abbiegerstandards_verwalten.htm#2_netz_bearbeiten_23091886_1544499">(siehe „Abbiegerstandards verwalten“ auf Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

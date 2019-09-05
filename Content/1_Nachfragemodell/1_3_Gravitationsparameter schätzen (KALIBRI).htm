@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="643" MadCap:lastWidth="1018" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1228478">
+            </a>
+            <a name="1_nachfragemodell_2215163117_98940">
+            </a>Gravitationsparameter schätzen (KALIBRI)</h3>
+        <p class="Text">
+            <MadCap:keyword term="Gravitationsmodell: kalibrieren" />
+            <MadCap:keyword term="Matrizen: Gravitationsmodell: kalibrieren" />Mit der Funktion Gravitationsparameter schätzen (kurz KALIBRI) können zwei verschiedene Nutzenfunktionen für das Gravitationsmodell der Verkehrsverteilung kalibriert (geeicht) werden (Bestimmung der Parameter a, b und c).</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">
+            <img src="../Resources/Images/5_51.png" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle_TableVarDefinition" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="50px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="445px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">U</span>
+                            <span class="formula_subscript">ij</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Wert für den Nutzen (zum Beispiel abhängig von Entfernung oder Fahrzeit) zwischen Bezirk <span class="formula">i</span> und Bezirk <span class="formula">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_Var">
+                            <span class="formula">a</span>,<span class="formula">b</span>,<span class="formula">c</span></p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText">zu schätzende Parameter</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="2. &#160;">
+            <img src="../Resources/Images/5_100.png" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle_TableVarDefinition" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="60px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="435px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">U</span>
+                            <span class="formula_subscript">ij</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Wert für den Nutzen (zum Beispiel abhängig von Entfernung oder Fahrzeit) zwischen Bezirk <span class="formula">i</span> und Bezirk <span class="formula">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_Var">
+                            <span class="formula">a</span>,<span class="formula">c</span></p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText">zu schätzende Parameter</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Funktion KALIBRI passt diese Nutzenfunktionen an eine vorgegebene Fahrtweitenverteilung an.</p>
+        <p class="Text">Anschließend berechnet die Funktion Verkehrsverteilung mit Hilfe des Gravitationsmodells aus dem bekannten Quellverkehr <span class="formula">Q</span><span class="formula_subscript">i</span> eines Bezirks <span class="formula">i</span> sowie dem bekannten Zielverkehr <span class="formula">Z</span><span class="formula_subscript">j</span> eines Bezirks <span class="formula">j</span> und den hier bestimmten Parametern a, b, c (oder a, c) den Verkehrsfluss <span class="formula">F</span><span class="formula_subscript">ij</span> von Bezirk <span class="formula">i</span> nach Bezirk <span class="formula">j</span> <MadCap:xref class="sieheUeberschrSeite" href="1_3_Gravitationsmodell rechnen.htm#1_nachfragemodell_2215163117_1228718"><span style="color: Black;" class="mcFormatColor">(</span><u>Gravitationsmodell rechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Die Funktion KALIBRI bietet zwei verschiedene Möglichkeiten, die Parameter für das Gravitationsverfahren zu schätzen:</p>
+        <ul>
+            <LI class="List0">gekoppelt bezüglich Erzeugung</LI>
+            <LI class="List0">
+                <MadCap:keyword term="Multi-Verfahren" />zweiseitig gekoppelt (Multi-Verfahren)</LI>
+        </ul>
+        <p class="Text">Die Parameter <span class="formula">a</span>, <span class="formula">b</span>, <span class="formula">c</span> oder <span class="formula">a</span>, <span class="formula">c</span> werden in einem iterativen Prozess bestimmt. Dabei wird die Nutzenfunktion logarithmisch transformiert; es gilt dann:</p>
+        <p class="Formula_number" MadCap:autonum=" [1]">
+            <a name="1_nachfragemodell_2215163117_1228526">
+            </a>
+            <a name="1_nachfragemodell_2215163117_88236">
+            </a>
+            <img src="../Resources/Images/5_105.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">oder</p>
+        <p class="Formula_number" MadCap:autonum=" [2]">
+            <a name="1_nachfragemodell_2215163117_1228532">
+            </a>
+            <a name="1_nachfragemodell_2215163117_43043">
+            </a>
+            <img src="../Resources/Images/5_106.png" />
+        </p>
+        <p class="Text">Innerhalb jeder KALIBRI-Iteration wird eine vorläufige Nachfragematrix (zum Beispiel durch das Multi-Verfahren bei einer zweiseitig gekoppelten Gravitation) bestimmt. Die daraus resultierenden Funktionswerte der Nutzenfunktion werden mit Hilfe einer linearen Regression geglättet, und zwar so lange, bis die maximale Anzahl der KALIBRI-Iterationen erreicht ist oder keine Veränderung der Werte mehr auftritt. Die geglätteten Funktionswerte beschreiben dann eine Funktion des Typs <MadCap:xref class="Label_formula" href="#1_nachfragemodell_2215163117_1228526">(2)</MadCap:xref> oder <MadCap:xref class="Label_formula" href="#1_nachfragemodell_2215163117_1228532">(3)</MadCap:xref>.</p>
+    </body>
+</html>

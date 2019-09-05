@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="668" MadCap:lastWidth="510" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;Control;operationControlPoints;published;kombinationen;rim">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1033137">
+            </a>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_34485">
+            </a>Routen importieren</h3>
+        <p class="Text">
+            <MadCap:keyword term="Importieren: Routen" />
+            <MadCap:keyword term="Routen:importieren" />Sie können extern berechnete IV-Routen aus einer Routenimport-Datei <span class="path">*.rim</span> für ein Nachfragesegment importieren.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Routenimport-Dateien <span class="path">*.rim</span> können Sie in Vissim nach einer Dynamischen Umlegung zusätzlich zu einer <MadCap:variable name="PTV_Manual.Programmname" />-Netzdatei, die das abstrakte Vissim-Netz enthält (Knoten/Kanten), über das Menü <span class="gui_element">Datei&#160;&gt; Export&#160;&gt; Visum&#160;&gt; Knoten/Kanten</span> aus einem Vissim-Netz erzeugen. Sie enthalten die aggregierten Wege und Belastungen aus dem letzten Vissim-Simulationslauf, bei dem eine Wegedatei <span class="path">*.weg</span> gespeichert wurde, für jeweils ein Berechnungsintervall der Dynamischen Umlegung.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie in der Symbolleiste auf das Symbol <img src="../Resources/Images_4_all/ICO_procedure_flow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000347px;margin-bottom: 0, 9983615px;" /> <span class="gui_element">Verfahrensablauf öffnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Verfahrensablauf</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Fügen Sie an der gewünschten Stelle im Verfahrensablauf das Verfahren <span class="gui_element">Routenimport</span> aus der Kategorie <span class="gui_element">Umlegungen</span> ein <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahrensablauf festlegen und starten.htm#2_verfahrensablauf_festlegen_40480990_1019020"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahrensablauf festlegen und starten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie in der Zeile des neu eingefügten Verfahrens auf die Schaltfläche in der Spalte <span class="gui_element">Bezugsobjekt(e)</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Nachfragesegment Auswahl</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie in der Auswahlliste das Nachfragesegment, für das Sie IV-Routen importieren möchten.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">Das ausgewählte Nachfragesegment wird in die Spalte <span class="gui_element">Bezugsobjekt(e)</span> übernommen.</p>
+        <p class="Step" MadCap:autonum="6. &#160;">Klicken Sie in der Zeile des eingefügten Verfahrens in die Spalte <span class="gui_element">Variante/Datei.</span></p>
+        <p class="Stepresult">Das Symbol <img src="../Resources/Images_4_all/ICO_file_select.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 012818px;margin-bottom: 1, 012818px;" /> wird angezeigt.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Klicken Sie auf das Symbol <img src="../Resources/Images_4_all/ICO_file_select.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 012818px;margin-bottom: 1, 012818px;" />.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">IV-Routen öffnen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="8. &#160;">Wählen Sie die gewünschte Datei aus.</p>
+        <p class="Step" MadCap:autonum="9. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Öffnen</span>.</p>
+        <p class="Stepresult">Der Dateiname wird in die Spalte <span class="gui_element">Variante/Datei</span> übernommen.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Alternativ können Sie in das Feld der Spalte <span class="gui_element">Variante/Datei</span> doppelklicken und Pfad und Dateiname manuell eingeben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="10. &#160;">Führen Sie das Verfahren aus <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahren im Verfahrensablauf ausführen.htm#2_verfahrensablauf_festlegen_40480990_1112524"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahren im Verfahrensablauf ausführen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Result">Die IV-Routen werden importiert und wie ein IV-Umlegungsergebnis in das Netz eingefügt.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Alternativ können Sie extern berechnete Netz- und Routenbelastungen für mehrere Nachfragesegmente importieren <MadCap:xref class="sieheUeberschrSeite" href="2_13_Erweiterter Routenimport.htm#2_daten_ueber_schnittstellen_austauschen_1567500566_1033106"><span style="color: Black;" class="mcFormatColor">(</span><u>Erweiterter Routenimport</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Beispiel für eine Routenimport-Datei <span class="path">*.rim</span></h5>
+        <pre class="Input">$VISION</pre>
+        <pre class="Input">$ROUTENIMPORT</pre>
+        <pre class="Input">$VERSION 1</pre>
+        <pre class="Input">*VonBezNr;NachBezNr;Belastung(3Nachkommastellen);KnotNr;...KnotNr;-1</pre>
+        <pre class="Input">50;40;4.000;11;12;5;-1</pre>
+        <pre class="Input">50;10;1.000;11;18;17;6;1;-1</pre>
+        <pre class="Input">50;70;3.000;11;18;8;7;17;-1</pre>
+        <pre class="Input">50;40;2.000;11;12;-1</pre>
+    </body>
+</html>

@@ -1,0 +1,902 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="683" MadCap:lastWidth="512" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:ignoredWords="big;endian;ves;Tmpn;bzw;behandlung;xls;usw;Projekt_XY;ergebnisse" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_grundlagen_programmbedienung_1644961382_1329575">
+            </a>
+            <a name="2_grundlagen_programmbedienung_1644961382_26771">
+            </a>Szenarienberechnung auf mehrere Rechner verteilen</h4>
+        <p class="Text">
+            <MadCap:keyword term="Szenariomanagement:verteiltes Rechnen" />Sie haben die Möglichkeit, die Berechnung von Szenarien auf verschiedene Rechner zu verteilen. Dadurch können Sie Rechenkapazitäten bündeln und Ergebnisse in kürzerer Zeit erhalten. Für die Verteilung der Berechnung verwenden Sie die Software <span class="gui_element">PTV Vision Berechnungsserver</span>, die gleichzeitig mit <MadCap:variable name="PTV_Manual.Programmname" /> installiert wird. Damit Sie Szenarien verteilt berechnen können, müssen Voraussetzungen gegeben sein <MadCap:xref href="../1_Grundlagen/1_1_Voraussetzungen_für_die_Nutzung_des_verteilten_Rechnens.htm" class="Grundlagen"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Voraussetzungen für die Nutzung des verteilten Rechnens</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <h5 MadCap:autonum="">Berechnungsserver starten</h5>
+        <p class="Text">So starten Sie den Berechnungsserver:</p>
+        <ul>
+            <LI class="Stepone">Klicken Sie in der <MadCap:variable name="PTV_Manual.Programmname_VersNr_ohnePunkt" /> Programmgruppe auf das Symbol <img src="../Resources/Images_4_all/ICO_SzenzMgmt_Berechnungsserver.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 012534px;margin-bottom: 1, 012534px;" /> <span class="gui_element">PTV Vision Berechnungs-Server &lt;Versionsnummer&gt;</span> <MadCap:xref class="sieheUeberschrSeite" href="../2_Herzlich_Willkommen/2_0_Hinweise zur Installation und zum Start von Visum.htm#2_herzlich_willkommen_1745906651_1056877"><span style="color: Black;" class="mcFormatColor">(</span><u>Hinweise zur Installation und zum Start von </u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+        </ul>
+        <p class="Result">Das Symbol <img src="../Resources/Images_4_all/ICO_SzenzMgmt_Berechnungsserver.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 012534px;margin-bottom: 1, 012534px;" /> <span class="gui_element">PTV Vision Berechnungs-Server</span> wird im Infobereich der Windows-Taskleiste angezeigt und der Server ist aktiv.</p>
+        <table style="width: 495px;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" class="TableStyle-TipHint1" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Solange der Szenarioberechnungsserver aktiv ist, kann die Software <MadCap:variable name="PTV_Manual.Programmname" /> nicht aktualisiert oder neu installiert werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_grundlagen_programmbedienung_1644961382_1329602">
+            </a>
+            <a name="2_grundlagen_programmbedienung_1644961382_73527">
+            </a>Berechnungsserver einstellen</h5>
+        <p class="Text">
+            <MadCap:keyword term="Szenariomanagement:verteiltes Rechnen:Berechnungsserver einstellen" />Sie müssen die Berechnungsserver auf jedem Rechner einstellen, den Sie als Rechenknoten in das Berechnungsnetz einbinden möchten.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie auf das Symbol <img src="../Resources/Images_4_all/ICO_SzenzMgmt_Berechnungsserver.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 012534px;margin-bottom: 1, 012534px;" />.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">PTV Vision Berechnungs-Server</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <h5 MadCap:autonum="">Berechnungsserver: Register Grundeinstellungen</h5>
+        <table class="TableStyle-gui_elements1" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Basisordner</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1" style="mc-hyphenate-shortest-prefix: 10;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">Angabe des Verzeichnisses in dem alle Szenario-Dateien während der Berechnung gespeichert werden.</p>
+                        <p class="CellText">Standardmäßig ist hier</p>
+                        <p class="CellText">
+                            <span class="path">c:\Users\xxx\Documents\VisumCalculationServer</span> eingestellt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">Bereich <span class="gui_element">Service-Adresse</span></p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Port</span>
+                        </p>
+                        <p class="CellText">Sie müssen einen Port des Rechners öffnen, damit der Hauptrechner auf den Rechenknoten zugreifen kann. Der Port ist frei wählbar.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Basispfad</span>
+                        </p>
+                        <p class="CellText">Der Name des Basispfads kann frei eingegeben werden </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1" style="mc-hyphenate: always;mc-hyphenate-shortest-prefix: 15;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Berechnungs-Server beim Einloggen starten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option gewählt, wird der Berechnungsserver automatisch gestartet, sobald Sie sich an dem Rechner anmelden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <span class="gui_element">Konfiguration von anderen Rechnern aus erlauben</span>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">Ist die Option gewählt, können Sie den Berechnungsserver von einem anderen Rechner aus konfigurieren.</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Service anhalten / Service starten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche wird der Berechnungsserver inaktiv gesetzt oder gestartet. Der Rechner kann nur dann für verteiltes Rechnern genutzt werden, wenn der Berechnungsserver aktiv ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Logdatei anzeigen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Schaltfläche öffnen Sie die Datei <span class="path">LogServer.txt</span> des Berechnungsserver, in der alle Aktivitäten des Berechnungsservers protokolliert werden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Übernehmen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche übernehmen Sie alle Änderungen an den Einstellungen ohne dass sich das Fenster <span class="gui_element">PTV Vision Berechnungs-Server</span> schließt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Beenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Über die Schaltfläche beenden Sie den Berechnungsserver.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Berechnungsserver: Register Berechnung</h5>
+        <table style="mc-table-style: url('../Resources/TableStyles/gui_elements1.css');width: 476px;" class="TableStyle-gui_elements1" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <span class="gui_element">Maximale Anzahl paralleler Visum-Instanzen</span>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Auswahl der maximalen Anzahl Instanzen von <MadCap:variable name="PTV_Manual.Programmname" /> mit denen gleichzeitig gerechnet werden kann.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <span class="gui_element">Anzahl der Rechenkerne pro Visum-Instanz</span>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Auswahl der Anzahl von Rechenkernen, die pro <MadCap:variable name="PTV_Manual.Programmname" />-Instanz verwendet wird.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 495px;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" class="TableStyle-TipHint1" cellspacing="0">
+            <col class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Die mögliche Auswahl in den Listen richtet sich nach der Anzahl der Prozessorkerne des Rechners, auf dem der Server aktiviert ist. </p>
+                        <p class="CellText">Sie können die Einstellungen auch in <MadCap:variable name="PTV_Manual.Programmname" /> im Projekt auf dem Register <span class="gui_element">Verteiltes Rechnen</span> ändern <MadCap:xref class="sieheUeberschrSeite" href="#2_grundlagen_programmbedienung_1644961382_1336154"><span style="color: Black;" class="mcFormatColor">(</span><u>Rechenknoten verwalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Bei der Einstellung der Werte sollten Sie Folgendes beachten:</p>
+                        <ul>
+                            <LI class="List0Tab">Das Produkt aus den beiden Werten sollte die Anzahl der Prozessorkerne des Rechenknotens nicht übersteigen.</LI>
+                            <LI class="List0Tab">Wenn Sie viele Szenarien gleichzeitig rechnen, ist es sinnvoll, die maximale Anzahl an <MadCap:variable name="PTV_Manual.Programmname" />-Instanzen zu wählen. Bei Bedarf können Sie eine Instanz weniger einstellen, so haben Sie noch einen Kern übrig, um während der Szenarioberechnung an dem Rechenknoten gut weiterarbeiten zu können. Gleichzeitig sollten Sie dann nur einen Kern pro Instanz einstellen.</LI>
+                            <LI class="List0Tab">Wenn Sie immer nur ein Szenario rechnen, ist es sinnvoll, nur eine <MadCap:variable name="PTV_Manual.Programmname" />-Instanz zu verwenden und dieser alle Kerne zuzuweisen.</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="Register_Sperrzeiten">
+            </a>Berechnungsserver:  Register Sperrzeiten</h5>
+        <table style="mc-table-style: url('../Resources/TableStyles/gui_elements1.css');width: 476px;" class="TableStyle-gui_elements1" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <span class="gui_element">Während der Sperrzeiten keine Szenarioberechnung durchführen</span>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">Ist die Option gewählt, kann auf dem Rechenknoten in den angegebenen Zeiträumen keine Szenarioberechnung von einem anderen Rechner aus durchgeführt werden. Beispielsweise während der regelmäßigen Arbeitszeit, in der Sie die gesamte Rechenleistung benötigen. </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <span class="gui_element">Sperrzeiten</span>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">Bestehende Sperrzeiten. Sie können für jeden Wochentag Sperrzeiten festlegen. Klicken Sie auf die gewünschte Zeile in der Spalte <span class="gui_element">Sperrzeiten</span>, um die Sperrzeit zu bearbeiten.</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <span class="gui_element">Sperrzeit hinzufügen</span>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">Über die Schaltfläche könne Sie neue Sperrzeiten zu der Liste hinzufügen.</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <span class="gui_element">Markierte Sperrzeiten löschen</span>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">Über die Schaltfläche werden zuvor markierte Sperrzeiten aus der Liste gelöscht.</td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 495px;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" class="TableStyle-TipHint1" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Solange der Szenarioberechnungsserver aktiv ist, kann die Software <MadCap:variable name="PTV_Manual.Programmname" /> nicht aktualisiert oder neu installiert werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_grundlagen_programmbedienung_1644961382_1336154">
+            </a>
+            <a name="22001">
+            </a>
+            <a name="2_grundlagen_programmbedienung_1644961382_95107">
+            </a>Rechenknoten verwalten</h5>
+        <p class="Text">
+            <MadCap:keyword term="Szenariomanagement:verteiltes Rechnen:Rechenknoten verwalten" />Sie können von jedem Rechner aus dem Projekt heraus die verteilte Berechnung von Szenarien verwalten. Der Szenarioberechnungsserver muss auf dem Hauptrechner nicht aktiv sein. </p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass das gewünschte Projekt geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="2_1_Grundeinstellungen eines Projekts bearbeiten.htm#2_grundlagen_programmbedienung_1644961382_1256407"><span style="color: Black;" class="mcFormatColor">(</span><u>Grundeinstellungen eines Projekts bearbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Fenster <span class="gui_element">Projekt bearbeiten</span> das Register <span class="gui_element">Verteiltes Rechnen</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Projekt-ID</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Eingabe eines Namens für das Szenariomanagement-Projekts.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Zusätzliche Input-Dateien</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Dateien, die zusätzlich zu Basisversion, Modifikationen und Verfahrensparametern für die Szenarioberechnung benötigt werden <MadCap:xref class="sieheUeberschrSeite" href="#2_grundlagen_programmbedienung_1644961382_1330374"><span style="color: Black;" class="mcFormatColor">(</span><u>Zusätzliche Dateien auf Rechenknoten kopieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Ergebnisdateien</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Dateien, die nach der Berechnung von jedem Rechenknoten auf den Masterrechner heruntergeladen werden <MadCap:xref class="sieheUeberschrSeite" href="#2_grundlagen_programmbedienung_1644961382_1330393"><span style="color: Black;" class="mcFormatColor">(</span><u>Ergebnisdateien von Rechenknoten herunterladen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Rechenknoten verwalten</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Rechenknoten</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <a name="Verteiltes_Rechnen_Szenarien_Schritt5">
+            </a>
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table style="caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" class="TableStyle-gui_elements2" cellspacing="0">
+            <col style="width: 113px;" class="TableStyle-gui_elements2-Column-Column1" />
+            <col style="width: 363px;" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <th class="TableStyle-gui_elements2-HeadE-Column1-Header1">Element</th>
+                    <th class="TableStyle-gui_elements2-HeadD-Column1-Header1">Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Name</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Anzeige Name des Rechenknotens, <span class="gui_element">localhost</span> ist der Hauptrechner, von dem aus die verteilte Berechnung gesteuert wird.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Ist der Szenarioberechnungsserver auf dem Hauptrechner aktiviert, wird er als Rechenknoten zusätzlich aufgeführt. Sperrzeiten werden dann auch berücksichtigt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Status</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Anzeige Aktivitätsstatus des Szenarioberechnungsservers auf dem Rechenknoten.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Bereit</span>
+                        </p>
+                        <p class="CellText">Der Rechenknoten steht für verteiltes Rechnen zur Verfügung. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Sind Sperrzeiten auf dem Rechenknoten eingestellt, wird zusätzlich angezeigt wann der Knoten wieder zur Verfügung steht.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Falsche Server-Version</span>
+                        </p>
+                        <p class="CellText">Der Rechenknoten ist erreichbar, der Szenarioberechnungsserver ist aktiv, hat aber die falsche Versionsnummer .</p>
+                        <p class="CellText">
+                            <span class="gui_element">Dienst nicht erreichbar</span>
+                        </p>
+                        <p class="CellText">Der Rechenknoten wird nicht gefunden oder ist nicht aktiv. Beispielsweise wenn auf dem Rechenknoten während der aktuellen <MadCap:variable name="PTV_Manual.Programmname" />-Sitzung der Szenarioberechnungsserver angehalten oder ausgeschaltet wird.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Unbekannter Fehler</span>
+                        </p>
+                        <p class="CellText">Bei allen anderen Fehlern, die bei der Kommunikation mit dem Rechenknoten auftreten. Details zum Fehler stehen in der Quickinfo.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Sperrzeiten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">Vorhandene Sperrzeiten des Rechenknotens. Ist die Bearbeitung des Rechenknotens von einem anderen Rechner erlaubt, können die Einstellungen über die Schaltfläche geändert werden.</td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Anz. Visum-Instanzen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl der Visum Instanzen, die auf dem Berechnungsserver eingestellt ist. Sie können in der Auswahlliste die Anzahl ändern <MadCap:xref class="sieheUeberschrSeite" href="#2_grundlagen_programmbedienung_1644961382_1329602"><span style="color: Black;" class="mcFormatColor">(</span><u>Berechnungsserver einstellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Anz. Rechenkerne pro Visum-Instanz</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Anzahl der Rechenkerne, die pro <MadCap:variable name="PTV_Manual.Programmname" />-Instanz verwendet wird <MadCap:xref class="sieheUeberschrSeite" href="#2_grundlagen_programmbedienung_1644961382_1329602"><span style="color: Black;" class="mcFormatColor">(</span><u>Berechnungsserver einstellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Bei der Einstellung der Werte sollten Sie Folgendes beachten:</p>
+                        <ul>
+                            <LI class="List0Tab">Das Produkt aus den beiden Werten sollte die Anzahl der Prozessorkerne des Rechenknotens nicht übersteigen.</LI>
+                            <LI class="List0Tab">Wenn Sie viele Szenarien gleichzeitig rechnen, ist es sinnvoll, die maximale Anzahl an <MadCap:variable name="PTV_Manual.Programmname" />-Instanzen zu wählen. Bei Bedarf können Sie eine Instanz weniger einstellen, so haben Sie noch einen Kern übrig, um während der Szenarioberechnung an dem Rechenknoten gut weiterarbeiten zu können.</LI>
+                        </ul>
+                        <p class="List_Text0">Gleichzeitig sollten Sie dann nur einen Kern pro Instanz einstellen.</p>
+                        <ul>
+                            <LI class="List0Tab">Wenn Sie immer nur ein Szenario rechnen, ist es sinnvoll, nur eine <MadCap:variable name="PTV_Manual.Programmname" />-Instanz zu verwenden und dieser alle Kerne zuzuweisen.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Basisadresse</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Anzeige der Rechneradresse, die im Bereich <span class="gui_element">Serviceadresse</span> des Szenarioberechnungsserver des Rechenknotens eingestellt ist <MadCap:xref class="sieheUeberschrSeite" href="#2_grundlagen_programmbedienung_1644961382_1329602"><span style="color: Black;" class="mcFormatColor">(</span><u>Berechnungsserver einstellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <span class="gui_element">Version</span>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Anzeige der <MadCap:variable name="PTV_Manual.Programmname" />-Version auf dem Rechenknoten.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Für die verteilte Berechnung müssen auf allen Rechnern passende <MadCap:variable name="PTV_Manual.Programmname" />-Versionen installiert sein, die die gleiche Binärversion haben (Beispiel: <span class="gui_element">14.00</span>-xx).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText_mid">
+                            <img src="../Resources/Images_4_all/ICO_insert_time_profile.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Manuelles Einfügen eines Rechenknotens, falls er nicht automatisch gefunden wird <MadCap:xref class="sieheUeberschrSeite" href="#2_grundlagen_programmbedienung_1644961382_1333112"><span style="color: Black;" class="mcFormatColor">(</span><u>Rechenknoten manuell einbinden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText_mid">
+                            <img src="../Resources/Images_4_all/ICO_delete_time_profile.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Löschen eines Rechenknotens aus der Liste</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText_mid">
+                            <img src="../Resources/Images_4_all/ICO_update_any.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Status der Berechnungsserver der verknüpften Rechenknoten aktualisieren</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText_mid">
+                            <img src="../Resources/Images_4_all/ICO_Find.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 011118px;margin-bottom: 1, 012818px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Aktive Rechenknoten automatisch suchen</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Es werden alle Rechenknoten gefunden, die im gleichen Subnetz des Netzwerks liegen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText_mid">
+                            <img src="../Resources/Images_4_all/ICO_show_Log.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Log-Datei des markierten Rechenknotens öffnen</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Stepresult">Die Einstellungen des Fensters <span class="gui_element">Rechenknoten</span> werden in der Registry von <MadCap:variable name="PTV_Manual.Programmname" /> nicht im Projekt gespeichert.</p>
+        <h5 MadCap:autonum="">
+            <a name="2_grundlagen_programmbedienung_1644961382_1330374">
+            </a>
+            <a name="2_grundlagen_programmbedienung_1644961382_98811">
+            </a>
+            <a name="23719">
+            </a>Zusätzliche Dateien auf Rechenknoten kopieren</h5>
+        <p class="Text">
+            <MadCap:keyword term="Szenariomanagement:verteiltes Rechnen:Dateien auf Rechenknoten kopieren" />Die Basisversion, Modifikationen und Verfahrensparameter werden automatisch auf jeden Rechenknoten übertragen . Benötigen Sie noch andere Dateien oder möchten Sie nicht benötige Dateien von der Verteilung ausschließen, können Sie das über die Schaltfläche <span class="gui_element">Zusätzliche Input-Dateien</span> festlegen.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Sie müssen diese Einstellungen nur vornehmen, wenn Sie Szenarien auf anderen Rechnern als dem Hauptrechner berechnen möchten.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass das gewünschte Projekt geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="2_1_Grundeinstellungen eines Projekts bearbeiten.htm#2_grundlagen_programmbedienung_1644961382_1256407"><span style="color: Black;" class="mcFormatColor">(</span><u>Grundeinstellungen eines Projekts bearbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Fenster <span class="gui_element">Projekt bearbeiten</span> das Register <span class="gui_element">Verteiltes Rechnen</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Zusätzliche Input-Dateien</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Zusätzliche Input-Dateien</span> öffnet sich. Es werden zwei Bereiche angezeigt. Im linken Bereich geben Sie an, welche Dateien zusätzlich auf die Rechenknoten kopiert werden sollen, im rechten Bereich geben Sie an, welche Dateien nicht auf die Rechenknoten kopiert werden sollen.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Es wird nur der linke Bereich des Fensters beschrieben, der rechte Bereich funktioniert nach dem gleichen Prinzip, es werden jedoch die festgelegten Dateien nicht kopiert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="127px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="349px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Basisordner</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Auswahlliste der Ordner, aus denen zusätzliche Dateien auf die Rechenknoten kopiert werden. Die Dateien werden auf den Rechenknoten in den entsprechenden Ordner gespeichert <MadCap:xref class="sieheUeberschrSeite" href="#2_grundlagen_programmbedienung_1644961382_1329602"><span style="color: Black;" class="mcFormatColor">(</span><u>Berechnungsserver einstellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Sie müssen die Dateien dort manuell wieder löschen, wenn sie nicht mehr benötigt werden.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Gemeinsame Dateien</span>
+                        </p>
+                        <p class="CellText">Es werden Dateien aus dem Ordner <span class="gui_element">SharedData</span> des Projektordners auf die Rechenknoten kopiert.</p>
+                        <p class="CellText">
+                            <span class="gui_element">alle Szenarienordner</span>
+                        </p>
+                        <p class="CellText">Es werden Dateien aus dem Ordner <span class="gui_element">Scenarios</span> des Projektordners auf die Rechenknoten kopiert.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Ordner von Szenario &lt;Nummer eines Szenarios&gt;</span>
+                        </p>
+                        <p class="CellText">Es werden Dateien aus dem Ordner der festgelegten Szenarios auf die Rechenknoten kopiert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Dateiname</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Geben Sie die Namen der Dateien an, die auf die Rechenknoten kopiert werden sollen. Geben Sie in das Feld nur einen Stern <span class="gui_element">*</span> ein, werden alle Dateien des Ordners kopiert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText_mid">
+                            <img src="../Resources/Images_4_all/ICO_insert_time_profile.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über das Symbol fügen Sie einen zusätzlichen Ordner in die Liste ein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText_mid">
+                            <img src="../Resources/Images_4_all/ICO_delete_time_profile.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über das Symbol löschen Sie den markierten Ordner aus der Liste.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1" style="mc-hyphenate-shortest-prefix: 14;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Standardeinstellungen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche stellen Sie die Standardeinstellung des Fensters wieder her.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="5. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Schließen</span>.</p>
+        <p class="Stepresult">Die Einstellungen werden geändert.</p>
+        <h5 MadCap:autonum="">
+            <a name="2_grundlagen_programmbedienung_1644961382_1330393">
+            </a>
+            <a name="2_grundlagen_programmbedienung_1644961382_15417">
+            </a>
+            <a name="23721">
+            </a>Ergebnisdateien von Rechenknoten herunterladen</h5>
+        <p class="Text">
+            <MadCap:keyword term="Szenariomanagement:verteiltes Rechnen:Ergebnisdateien herunterladen" />Berechnungsergebnisse auf den Rechenknoten werden am Ende der Berechnung auf dem Hauptrechner benötigt. Sie können festlegen, welche Ergebnisdateien nach der Berechnung automatisch von den Rechenknoten heruntergeladen werden. Das ist von Bedeutung, wenn Sie beispielsweise ein langsames Netzwerk haben oder mit sehr großen Szenarien arbeiten, bei denen nicht alle Ergebnisdateien benötigt werden.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Sie müssen diese Einstellungen nur vornehmen, wenn Sie Szenarien auf anderen Rechnern als dem Hauptrechner berechnen möchten.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass das gewünschte Projekt geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="2_1_Grundeinstellungen eines Projekts bearbeiten.htm#2_grundlagen_programmbedienung_1644961382_1256407"><span style="color: Black;" class="mcFormatColor">(</span><u>Grundeinstellungen eines Projekts bearbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie im Fenster <span class="gui_element">Projekt bearbeiten</span> das Register <span class="gui_element">Verteiltes Rechnen</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Ergebnisdateien</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Ergebnisdateien</span> öffnet sich. Es werden zwei Bereiche angezeigt. Im linken Bereich geben Sie an, welche Ergebnisdateien auf den Hauptrechner heruntergeladen werden sollen, im rechten Bereich geben Sie an, welche Dateien nicht heruntergeladen werden sollen.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Einstellungen im Fenster <span class="gui_element">Ergebnisdateien</span> werden automatisch angewendet, wenn Sie im Fenster <span class="gui_element">Szenarien berechnen</span> die Option <span class="gui_element">Ergebnisdateien herunterladen</span> ausgewählt haben. Haben Sie die Option nicht ausgewählt, werden die Einstellungen angewendet, wenn Sie im dem Register <span class="gui_element">Szenarien</span> auf das Symbol <img src="../Resources/Images_4_all/ICO_sc_get_result_files.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" /> klicken, um die Ergebnisdateien herunterzuladen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Es wird nur der linke Bereich des Fensters beschrieben, der rechte Bereich funktioniert nach dem gleichen Prinzip, es werden jedoch die festgelegten Dateien nicht heruntergeladen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="126px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="350px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Basisordner</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Auswahlliste der Ordner, aus denen Dateien auf den Hauptrechner heruntergeladen werden. Die Dateien werden auf dem Hauptrechner in den entsprechenden Ordner gespeichert.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Gemeinsame Dateien</span>
+                        </p>
+                        <p class="CellText">Es werden Dateien in den Ordner <span class="gui_element">SharedData</span> des Projektordners heruntergeladen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">alle Szenarienordner</span>
+                        </p>
+                        <p class="CellText">Es werden Dateien in den Ordner <span class="gui_element">Scenarios</span> des Projektordners heruntergeladen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Ordner von Szenario &lt;Nummer eines Szenarios&gt;</span>
+                        </p>
+                        <p class="CellText">Es werden Dateien in den Ordner der festgelegten Szenarios heruntergeladen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Dateiname</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Geben Sie die Dateien an, die heruntergeladen werden sollen. Geben Sie in das Feld nur einen Stern <span class="gui_element">*</span> ein, werden alle Dateien des Ordners heruntergeladen. Sie können Unterordner auswählen, wenn Sie <span class="path">\Ordnername*</span> eingeben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText_mid">
+                            <img src="../Resources/Images_4_all/ICO_insert_time_profile.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über das Symbol fügen Sie einen zusätzlichen Ordner in die Liste ein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText_mid">
+                            <img src="../Resources/Images_4_all/ICO_delete_time_profile.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über das Symbol löschen Sie den markierten Ordner aus der Liste.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1" style="mc-hyphenate-shortest-prefix: 13;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Standardeinstellungen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche stellen Sie die Standardeinstellung wieder her.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_grundlagen_programmbedienung_1644961382_1333112">
+            </a>
+            <a name="23720">
+            </a>
+            <a name="2_grundlagen_programmbedienung_1644961382_54436">
+            </a>Rechenknoten manuell einbinden</h5>
+        <p class="Text">
+            <MadCap:keyword term="Szenariomanagement:verteiltes Rechnen:Rechenknoten manuell einbinden" />Sie können Rechenknoten manuell in Ihr Projekt einbinden. Beispielsweise, wenn sich der Rechner in Ihrem Computer-Netzwerk nicht im gleichen Subnetz wie der Hauptrechner des Projekts befindet.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass das gewünschte Projekt geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="2_1_Grundeinstellungen eines Projekts bearbeiten.htm#2_grundlagen_programmbedienung_1644961382_1256407"><span style="color: Black;" class="mcFormatColor">(</span><u>Grundeinstellungen eines Projekts bearbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Stellen Sie sicher, dass auf dem Rechenknoten, den Sie einfügen möchten, ein Szenarioberechnungsserver aktiv ist.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie im Fenster <span class="gui_element">Projekt bearbeiten</span> das Register <span class="gui_element">Verteiltes Rechnen</span>.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Rechenknoten verwalten</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Rechenknoten</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Klicken Sie auf das Symbol <img src="../Resources/Images_4_all/ICO_insert_time_profile.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" /> <span class="gui_element">Neuen Rechenknoten einfügen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Rechenknoten einfügen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="6. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Name</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Geben Sie einen Namen für den Rechenknoten ein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Basisadresse</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Geben Sie die Basisadresse des Rechenknoten ein. Sie finden sie in der Statuszeile des Szenarioberechnungsservers des Rechenknotens.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="7. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Der Rechenknoten ist in das Projekt eingebunden.</p>
+        <h5 MadCap:autonum="">Szenarien verteilt berechnen</h5>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">
+            <MadCap:keyword term="Szenariomanagement:verteiltes Rechnen:Szenarien berechnen" />Stellen Sie sicher, dass das gewünschte Projekt geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="2_1_Grundeinstellungen eines Projekts bearbeiten.htm#2_grundlagen_programmbedienung_1644961382_1256407"><span style="color: Black;" class="mcFormatColor">(</span><u>Grundeinstellungen eines Projekts bearbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Nehmen Sie die Grundeinstellungen zur Berechnung von Szenarien vor <MadCap:xref class="sieheUeberschrSeite" href="#2_grundlagen_programmbedienung_1644961382_1336154"><span style="color: Black;" class="mcFormatColor">(</span><u>Rechenknoten verwalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie im Fenster <span class="gui_element">Projekt bearbeiten</span> das Register <span class="gui_element">Szenarien</span>.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Stellen Sie sicher, dass in der Spalte <span class="gui_element">Verfahrensparametersatz</span> die gewünschten Verfahrensparameter ausgewählt sind <MadCap:xref class="sieheUeberschrSeite" href="2_1_Verfahrensparametersatz anlegen.htm#2_grundlagen_programmbedienung_1644961382_1257218"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahrensparametersatz anlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Wählen Sie in der Liste die gewünschten Szenarien.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Mehrere Szenarien können Sie auswählen, indem Sie die Taste <span class="shortcut">Strg</span> gedrückt halten, während Sie auf die Szenarien klicken.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">Klicken Sie auf das Symbol <img src="../Resources/Images_4_all/ICO_calc_scenario.png" />&#160;<span class="gui_element">Szenario berechnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Szenarien berechnen</span> öffnet sich.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Das Fenster öffnet sich nur, wenn Sie das Modul <span class="gui_element">Verteiltes Rechnen</span> aktiviert haben <MadCap:xref class="sieheUeberschrSeite" href="2_1_Zusatzmodule ein- und ausschalten.htm#2_grundlagen_programmbedienung_1644961382_1091105"><span style="color: Black;" class="mcFormatColor">(</span><u>Zusatzmodule ein- und ausschalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Verfügen Sie nicht über das Modul öffnet sich eine Sicherheitsabfrage.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="7. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nummer</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Anzeige der Nummer des Szenarios</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Code</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Anzeige des Codes des Szenarios</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Rechenknoten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Auswahlliste der Rechenknoten, die zur Verfügung stehen. Über die Auswahlliste können Sie den Rechenknoten zuordnen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Ergebnisdateien herunterladen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden die Ergebnisdateien automatisch heruntergeladen. Über die Einstellungen im Fenster <span class="gui_element">Ergebnisdateien</span> legen Sie fest, welche Dateien automatisch heruntergeladen werden <MadCap:xref class="sieheUeberschrSeite" href="#2_grundlagen_programmbedienung_1644961382_1330374"><span style="color: Black;" class="mcFormatColor">(</span><u>Zusätzliche Dateien auf Rechenknoten kopieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist automatisch ausgewählt und kann nicht geändert werden, wenn die Berechnung lokal auf dem Rechner durchgeführt wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Szenarien gleichmäßig auf Rechenknoten verteilen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Klicken Sie auf die Schaltfläche, um die Szenarien gleichmäßig auf die Rechenknoten zu verteilen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Alle Szenarien auf diesem Rechner berechnen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Klicken Sie auf die Schaltfläche, um die Szenarien ausschließlich auf dem lokalen Rechner zu berechnen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Alle Ergebnisdateien herunterladen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Alle Ergebnisdateien werden für das automatische Herunterladen markiert.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist anwendbar, wenn die Berechnung verteilt durchgeführt wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Keine Ergebnisdateien herunterladen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Keine Ergebnisdateien werden für das automatische Heruntergeladen markiert.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist anwendbar, wenn die Berechnung verteilt durchgeführt wird.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="8. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Szenarien werden neu berechnet. Nach Abschluss der Berechnung wird in der Spalte <span class="gui_element">Berechnungsstatus</span> der Status <span class="gui_element">Berechnet</span> angezeigt. In der Spalte <span class="gui_element">Rechenknoten</span> wird der Rechenknoten angezeigt, auf dem das Szenario berechnet wurde. In der Spalte <span class="gui_element">Ergebnis-Versionsdatei</span> wird der Name der Ergebnisversionsdatei angezeigt, den <MadCap:variable name="PTV_Manual.Programmname" /> automatisch vergibt. Falls die Liste zusätzliche Spalten mit den von Ihnen gewählten Kennziffern enthält, werden diese durch die Berechnung mit Werten gefüllt <MadCap:xref class="sieheUeberschrSeite" href="2_1_Grundeinstellungen eines Projekts bearbeiten.htm#2_grundlagen_programmbedienung_1644961382_1256407"><span style="color: Black;" class="mcFormatColor">(</span><u>Grundeinstellungen eines Projekts bearbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+    </body>
+</html>

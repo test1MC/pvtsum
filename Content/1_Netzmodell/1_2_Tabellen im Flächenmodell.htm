@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="675" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs;Ride;$OBERKNOTEN;NR;FLAECHEID;$FLAECHE;$FLAECHENELEMENT;TFLAECHEID;$TEILFLAECHE;$TEILFLAECHENELEMENT;KANTEID;VonPunktID;NachPunktID">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1123551">
+            </a>
+            <a name="1_netzmodell_1240632468_33609">
+            </a>Tabellen im Flächenmodell</h3>
+        <p class="Text">
+            <MadCap:keyword term="Flächenmodell: Tabellen" />Das <MadCap:variable name="PTV_Manual.Programmname" />-Flächenmodell besteht aus den folgenden sieben Tabellen. In diesen Tabellen werden die Flächen aller Netzobjekte abgebildet. Die Erklärung der Tabellen erfolgt anhand eines Beispiels.</p>
+        <ul>
+            <LI class="List0">
+                <MadCap:keyword term="Punkt" />Punkt</LI>
+            <LI class="List0">
+                <MadCap:keyword term="Kante" />Kante</LI>
+            <LI class="List0">
+                <MadCap:keyword term="Zwischenpunkte" />Zwischenpunkt</LI>
+            <LI class="List0">
+                <MadCap:keyword term="Teilflächen" />Teilfläche</LI>
+            <LI class="List0">
+                <MadCap:keyword term="Teilflächenelemente" />Teilflächenelement</LI>
+        </ul>
+        <ul>
+            <LI class="List1">Fläche</LI>
+        </ul>
+        <ul>
+            <LI class="List0">
+                <MadCap:keyword term="Flächenelemente" />Flächenelement</LI>
+        </ul>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Es ist in <MadCap:variable name="PTV_Manual.Programmname" /> möglich, die Polygone zusammen mit dem sie verwendenden Netzobjekttyp in einer Netzdatei zu speichern <MadCap:xref class="Benutzerhandbuch" href="../2_Grundlagen_Programmbedienung/2_1_Netzdatei öffnen und speichern und Kommentare ergänzen.htm#2_grundlagen_programmbedienung_1644961382_1238785"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Netzdatei öffnen und speichern und Kommentare ergänzen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Dabei werden aber stets alle Polygone mit abgespeichert, unabhängig davon, ob sie für ein Objekt des angegebenen Typs verwendet werden oder nicht.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Beispiel</h5>
+        <p class="Text">Im folgenden Beispiel werden diese sieben Tabellen für ein Netz, das drei Oberknoten mit Flächen enthält, abgebildet und erläutert.</p>
+        <p class="Text">Das Netz enthält die drei Oberknoten mit den Schlüsseln (IDs) 2, 3 und 4. Diesen Oberknoten sind über das Attribut <span class="gui_element">FlaecheID</span> die Flächen mit den IDs 866, 867 und 868 zugeordnet (<MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182475">Tabelle&#160;30</MadCap:xref>).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <pre class="Input">* Tabelle: Oberknoten</pre>
+                        <pre class="Input">$OBERKNOTEN:NR;FLAECHEID</pre>
+                        <pre class="Input">2;866</pre>
+                        <pre class="Input">3;867</pre>
+                        <pre class="Input">4;868</pre>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_netzmodell_1240632468_1182475">
+                    </a>
+                    <a name="1_netzmodell_1240632468_73291">
+                    </a>Tabelle Oberknoten</p>
+            </caption>
+        </table>
+        <p class="Text">In der Tabelle Flächen werden alle im Netz enthaltenen Flächen mit ihrer ID verwaltet. Da in diesem Beispiel nur die drei Oberknoten eine Fläche besitzen, finden sich hier genau die drei Einträge für die Oberknotenflächen (<MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182501">Tabelle&#160;31</MadCap:xref>).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <pre class="Input">* Tabelle: Flächen</pre>
+                        <pre class="Input">$FLAECHE:ID</pre>
+                        <pre class="Input">866</pre>
+                        <pre class="Input">867</pre>
+                        <pre class="Input">868</pre>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_netzmodell_1240632468_1182501">
+                    </a>
+                    <a name="1_netzmodell_1240632468_14240">
+                    </a>Tabelle Flächen</p>
+            </caption>
+        </table>
+        <p class="Text">Jede Fläche setzt sich aus einer oder mehreren Teilflächen zusammen. Die Zuordnung von Flächen zu Teilflächen wird in der Tabelle Flächenelemente vorgenommen. Im Beispiel haben die Flächen 866 und 868 genau eine Teilfläche, die Fläche 869 hingegen besitzt zwei Teilflächen. Es gibt also insgesamt vier Teilflächen mit den IDs 1139, 1141, 1144 und 1145 (<MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182527">Tabelle&#160;32</MadCap:xref>).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <pre class="Input">* Tabelle: Flächenelemente</pre>
+                        <pre class="Input">$FLAECHENELEMENT:FLAECHEID;TFLAECHEID;ENKLAVE</pre>
+                        <pre class="Input">866;1139;0</pre>
+                        <pre class="Input">868;1141;0</pre>
+                        <pre class="Input">869;1144;0</pre>
+                        <pre class="Input">869;1145;0</pre>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+                    <a name="1_netzmodell_1240632468_1182527">
+                    </a>
+                    <a name="1_netzmodell_1240632468_50091">
+                    </a>Tabelle Flächenelemente</p>
+            </caption>
+        </table>
+        <p class="Text">In der Tabelle Teilflächen werden alle im Netz enthaltenen Teilflächen mit ihrer ID verwaltet. In diesem Beispiel sind dies also vier Teilflächen (<MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182549">Tabelle&#160;33</MadCap:xref>).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <pre class="Input">* Tabelle: Teilflächen</pre>
+                        <pre class="Input">$TEILFLAECHE:ID</pre>
+                        <pre class="Input">1139</pre>
+                        <pre class="Input">1141</pre>
+                        <pre class="Input">1144</pre>
+                        <pre class="Input">1145</pre>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 4: ">
+                    <a name="1_netzmodell_1240632468_1182549">
+                    </a>
+                    <a name="1_netzmodell_1240632468_65566">
+                    </a>Tabelle Teilflächen</p>
+            </caption>
+        </table>
+        <p class="Text">In der Tabelle Teilflächenelemente werden jeder Teilfläche die IDs der Kanten, die die Teilfläche bestimmen, zugeordnet. Wie Sie <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182571">Tabelle&#160;34</MadCap:xref> entnehmen können, sind die Teilflächen mit den IDs 1141, 1144 und 1145 jeweils Vierecke, da sie durch vier Kanten bestimmt werden. Die Teilfläche 1139 hingegen ist ein Fünfeck mit fünf Kanten.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <pre class="Input">* Tabelle: Teilflächenelemente</pre>
+                        <pre class="Input">$TEILFLAECHENELEMENT:TFLAECHEID;INDEX;KANTEID;RICHTUNG</pre>
+                        <pre class="Input">1139;1;33136;0</pre>
+                        <pre class="Input">1139;2;33137;0</pre>
+                        <pre class="Input">1139;3;33138;0</pre>
+                        <pre class="Input">1139;4;33139;0</pre>
+                        <pre class="Input">1139;5;33140;0</pre>
+                        <pre class="Input">1141;1;33145;0</pre>
+                        <pre class="Input">1141;2;33146;0</pre>
+                        <pre class="Input">1141;3;33147;0</pre>
+                        <pre class="Input">1141;4;33148;0</pre>
+                        <pre class="Input">1144;1;33160;0</pre>
+                        <pre class="Input">1144;2;33161;0</pre>
+                        <pre class="Input">1144;3;33162;0</pre>
+                        <pre class="Input">1144;4;33163;0</pre>
+                        <pre class="Input">1145;1;33164;0</pre>
+                        <pre class="Input">1145;2;33165;0</pre>
+                        <pre class="Input">1145;3;33166;0</pre>
+                        <pre class="Input">1145;4;33167;0</pre>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 5: ">
+                    <a name="1_netzmodell_1240632468_1182571">
+                    </a>
+                    <a name="1_netzmodell_1240632468_84459">
+                    </a>Tabelle Teilflächenelemente</p>
+            </caption>
+        </table>
+        <p class="Text">Die Tabelle Kanten enthält alle Kanten, die für die Beschreibung der Teilflächenelemente notwendig sind. Jede Kante wird durch einen Anfangs- und Endpunkt bestimmt, die in der Tabelle die Attributnamen <span class="gui_element">VonPunktID</span> und <span class="gui_element">NachPunktID</span> tragen (<MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182621">Tabelle&#160;35</MadCap:xref>).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <pre class="Input">* Tabelle: Kanten</pre>
+                        <pre class="Input">$KANTE:ID;VONPUNKTID;NACHPUNKTID</pre>
+                        <pre class="Input">33136;9449;9450</pre>
+                        <pre class="Input">33137;9450;9451</pre>
+                        <pre class="Input">33138;9451;9452</pre>
+                        <pre class="Input">33139;9452;9453</pre>
+                        <pre class="Input">33140;9453;9449</pre>
+                        <pre class="Input">33145;9458;9459</pre>
+                        <pre class="Input">33146;9459;9460</pre>
+                        <pre class="Input">33147;9460;9461</pre>
+                        <pre class="Input">33148;9461;9458</pre>
+                        <pre class="Input">33160;9473;9474</pre>
+                        <pre class="Input">33161;9474;9475</pre>
+                        <pre class="Input">33162;9475;9476</pre>
+                        <pre class="Input">33163;9476;9473</pre>
+                        <pre class="Input">33164;9477;9478</pre>
+                        <pre class="Input">33165;9478;9479</pre>
+                        <pre class="Input">33166;9479;9480</pre>
+                        <pre class="Input">33167;9480;9477</pre>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 6: ">
+                    <a name="1_netzmodell_1240632468_1182621">
+                    </a>
+                    <a name="1_netzmodell_1240632468_76276">
+                    </a>Tabelle Kanten</p>
+            </caption>
+        </table>
+        <p class="Text">In der Tabelle Punkte schließlich sind alle Punkte abgebildet, die ihrerseits die Kanten definieren. Sie tragen jeweils eine Koordinateninformation (XKoord und YKoord). Dadurch wird der räumliche Bezug der Fläche zum Netz hergestellt (<MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182647">Tabelle&#160;36</MadCap:xref>).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <pre class="Input">* Tabelle: Punkte</pre>
+                        <pre class="Input">$PUNKT:ID;XKOORD;YKOORD</pre>
+                        <pre class="Input">9449;3456991.5413;5430055.0204</pre>
+                        <pre class="Input">9450;3456991.5413;5430004.3885</pre>
+                        <pre class="Input">9451;3457052.3873;5429991.7699</pre>
+                        <pre class="Input">9452;3457070.0872;5430048.9542</pre>
+                        <pre class="Input">9453;3457026.8560;5430057.9988</pre>
+                        <pre class="Input">9458;3458808.0227;5431086.8027</pre>
+                        <pre class="Input">9459;3458821.3171;5431061.4225</pre>
+                        <pre class="Input">9460;3458848.5102;5431078.9469</pre>
+                        <pre class="Input">9461;3458835.5180;5431101.9100</pre>
+                        <pre class="Input">9473;3456956.4483;5430005.5296</pre>
+                        <pre class="Input">9474;3456948.8422;5430060.3735</pre>
+                        <pre class="Input">9475;3456887.1928;5430052.7674</pre>
+                        <pre class="Input">9476;3456903.2057;5429996.7225</pre>
+                        <pre class="Input">9477;3456896.8005;5430097.6033</pre>
+                        <pre class="Input">9478;3456938.0336;5430071.1821</pre>
+                        <pre class="Input">9479;3456961.6525;5430097.6033</pre>
+                        <pre class="Input">9480;3456945.2393;5430125.2254</pre>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 7: ">
+                    <a name="1_netzmodell_1240632468_1182647">
+                    </a>
+                    <a name="1_netzmodell_1240632468_38485">
+                    </a>Tabelle Punkte</p>
+            </caption>
+        </table>
+        <p class="Text">Zwischenpunkte sind im vorliegenden Beispiel keine entstanden. Die Tabelle ist daher leer (<MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182672">Tabelle&#160;37</MadCap:xref>).</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <pre class="Input">* Tabelle: Zwischenpunkte</pre>
+                        <pre class="Input">$ZWISCHENPUNKT:KANTEID;INDEX;XKOORD;YKOORD</pre>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 8: ">
+                    <a name="1_netzmodell_1240632468_1182672">
+                    </a>
+                    <a name="1_netzmodell_1240632468_42441">
+                    </a>Tabelle Zwischenpunkte</p>
+            </caption>
+        </table>
+    </body>
+</html>

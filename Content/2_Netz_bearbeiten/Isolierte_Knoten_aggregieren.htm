@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="689" MadCap:lastWidth="512" MadCap:ignoredWords="Nr;No;xls;usw;5m;zwischenpunkte;bereiche;CStopArea;NumStopPoints;CStop;NumStopAreas;IsolKnotNr;StreckNrAlt;Operations">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_netz_bearbeiten_23091886_1129711">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_72163">
+            </a>Isolierte Knoten aggregieren<a name="23084"></a></h3>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Diese Operation können Sie nur ausführen, wenn im Netz isolierte Knoten vorhanden sind, zum Beispiel wenn Sie externe Netzdaten additiv eingelesen haben <MadCap:xref class="sieheUeberschrSeite" href="../2_Grundlagen_Programmbedienung/2_1_Netzdaten additiv einlesen.htm#2_grundlagen_programmbedienung_1644961382_1238898"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzdaten additiv einlesen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:keyword term="Knoten: isolierte aggregieren" />Ziel ist die automatische Integration isolierter Netzknoten in ein existierendes Netz. Sie können isolierte Knoten als Haltepunkte in das Netz einfügen, auch wenn diese keinen Haltepunkt tragen. Dies erleichtert das Einpflegen von Haltestellendaten in ein bestehendes IV-Netz.</p>
+        <p class="Text">Die Reihenfolge der Integration richtet sich nach den Abständen der isolierten Knoten vom Netz. Begonnen wird mit demjenigen Knoten, dessen Abstand vom Grundnetz minimal ist. Falls erforderlich, werden die Abstände nach dem Integrationsschritt neu festgelegt. Dann wird der nächste abstandsminimale isolierte Knoten integriert usw.</p>
+        <p class="Text">Das Verfahren endet, wenn alle isolierten Knoten integriert sind oder das Netz außerhalb des Fangradius aller verbleibenden isolierten Knoten liegt. Für Haltepunkte wird der Mindestabstand zwischen benachbarten Haltepunkten auf der Strecke berücksichtigt. Ist dieser unterschritten, wird ein Knoten mit einem Haltepunkt eingefügt.</p>
+        <p class="Text">Um keine Daten zu verlieren, werden bei der Integration nie zwei ursprünglich isolierte Knoten miteinander verschmolzen. Dieser Fall könnte auftreten, wenn nach der Integration des ersten Knotens dieser zum nächsten Netzobjekt für den zweiten wird. Dann wird der zweite Knoten nicht mit dem ersten verschmolzen, sondern bleibt entweder isoliert oder wird mit Hilfe eines Tricks auf andere Weise ins Netz integriert. Dieser Trick funktioniert nur, wenn der erste integrierte Knoten nach der Integration ein- oder zweiarmig ist. In diesem Fall wird eine parallel verlaufende Strecke des Knoten gesplittet und der zweite isolierte Knoten als Zwischenpunkt verwendet.</p>
+        <p class="Text">Die isolierten Knoten behalten in jedem Fall ihre Attribute – auch beim Verschmelzen mit Netzknoten, welche dann ihrerseits sämtliche Attribute verlieren.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Eine Ausnahme stellen hier die Koordinaten dar. Sie können einstellen, ob die Koordinaten des bestehenden Netzes oder die der isolierten Knoten verwendet werden sollen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie die Knoten aus, die Sie integrieren möchten, über</p>
+        <ul>
+            <LI class="List1">die räumliche Auswahl <MadCap:xref class="sieheUeberschrSeite" href="Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> und/oder</LI>
+            <LI class="List1">Filterkriterien <MadCap:xref class="sieheUeberschrSeite" href="Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über Filter aktiv und passiv setzen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+        </ul>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie im Fenster <span class="gui_element">Netz </span>mit der rechten Maustaste auf die Schaltfläche <span class="gui_element">Knoten</span>.</p>
+        <p class="Stepresult">Ein Kontextmenü öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie den Eintrag <span class="gui_element">Isolierte Knoten aggregieren</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Isolierte Knoten aggregieren</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="140px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="336px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td colspan="2" class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bereich <span class="gui_element">Zu integrierende Knoten (Quelle)</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur aktive Knoten integrieren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden nur die aktiven isolierten Knoten in das Netz integriert.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, werden alle isolierten Knoten in das Netz integriert.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Für vorhandene Netzknoten ist das Attribut aktiv oder passiv nicht relevant.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Fangradius</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Der Fangradius definiert, in welchem Umkreis eines isolierten Knotens nach Netzobjekten gesucht wird. Liegen innerhalb dieses Radius weder Netzknoten noch -strecken, bleibt der betreffende Knoten isoliert. Analog zu Streckenlängen berücksichtigt der Fangradius den Netzmaßstab. Der Standardwert ist 100.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Toleranzbereich beim Verschmelzen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Falls es Knoten im Toleranzbereich gibt, die innerhalb des Fangradius (Standard=5m) liegen, wird der zu integrierende Knoten mit dem nächstgelegenen Knoten verschmolzen. Dies geschieht unabhängig davon, ob eine Strecke näher am Knoten liegt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="140px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="336px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td colspan="2" class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bereich <span class="gui_element">Netzintegration (Ziel)</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Knoten integrieren: Wie vorhanden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden isolierte Knoten nur mit Haltepunkt eingefügt, wenn sie bereits vor der Integration einen Haltepunkt besitzen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Immer als Knoten mit Haltepunkt </span>(Standard)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden isolierte Knoten immer mit Haltepunkt eingefügt. Die Strecke wird an der ermittelten Einfügestelle gesplittet und der isolierte Knoten dort eingefügt.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option <span class="gui_element">Einfügen auf Strecken zulassen</span> muss ausgewählt sein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Immer nur als Haltepunkt</span>
+                        </p>
+                        <p class="CellText">(Attribute von Knoten nicht übernehmen)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, wird der isolierte Knoten als Haltepunkt an einem Netzknoten oder auf einer Netzstrecke eingefügt. Strecken werden jedoch nicht gesplittet.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Ist die Option <span class="gui_element">Einfügen auf Strecken zulassen</span> ausgewählt, können ungerichtete Streckenhaltepunkte entstehen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Einfügen auf Strecken zulassen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, erfolgt die Netzintegration ausschließlich durch das Verschmelzen mit Netzknoten. Beim Ermitteln des nächsten Netzobjekts werden somit nur Knoten betrachtet. Dadurch bleiben in der Regel mehr isolierte Knoten übrig.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden Haltepunkte auf der Strecke eingefügt; die Strecke wird nicht gesplittet. Die so eingefügten Haltepunkte sind ungerichtet und bedienen somit beide Richtungen der Strecke. Wird der Knoten mit einem bereits bestehenden gerichteten Haltepunkt verschmolzen, so ist dieser Haltepunkt nach dem Aggregieren ungerichtet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur auf aktiven Netzstrecken einfügen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, wird nur auf aktiven Strecken eingefügt. Passive Strecken werden ignoriert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Nur aktive Netzknoten verschmelzen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden isolierte Knoten nur mit aktiven Netzknoten verschmolzen.</p>
+                        <p class="CellText">Passive Netzknoten werden ignoriert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Verschmelzen mit Haltepunkten zulassen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, ist das Verschmelzen eines isolierten Knotens mit einem im Netz existierenden Haltepunkt erlaubt, sofern dieser im benutzerdefinierten Fangradius und Toleranzbereich liegt.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, ist das Verschmelzen eines isolierten Knotens mit einem im Netz existierenden Haltepunkt untersagt. Das kann sinnvoll sein, wenn eine große Anzahl Knoten als Haltepunkte importiert werden soll, denn dabei ist es üblicherweise unerwünscht, einen vorhandenen Haltepunkt mit einem anderen gerade eingefügten Objekt zu verschmelzen. Der neue Knoten bleibt also isoliert und muss bei Bedarf separat behandelt werden.</p>
+                        <p class="CellText">
+                            <a name="2_netz_bearbeiten_23091886_1129826">
+                            </a>
+                            <a name="2_netz_bearbeiten_23091886_63003">
+                            </a>Sonderfall</p>
+                        <p class="CellText">Da das Verfahren <span class="gui_element">Knoten aggregieren</span> ausschließt, dass zwei anfangs isolierte Knoten miteinander verschmolzen werden, wird bei deaktivierter Option auch nur ein Knoten, falls überhaupt möglich, in das Netz integriert. Weitere Knoten bleiben als isolierte Knoten bestehen oder teilen eine parallel verlaufende Strecke, falls dies möglich ist.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Protokolldatei <MadCap:xref class="sieheUeberschrSeite" href="../2_Grundlagen_Programmbedienung/2_1_Mit Protokolldateien arbeiten.htm#2_grundlagen_programmbedienung_1644961382_1136821"><span style="color: Black;" class="mcFormatColor">(</span><u>Mit Protokolldateien arbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> enthält auch fehlgeschlagene Integrationsvorgänge. Schlägt eine Integration fehl, da das Verschmelzen mit Haltepunkten nicht zulässig ist, wird ein entsprechender Eintrag mit der Operationsnummer „4“ ergänzt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements2-Column-Column1" style="width: 152px;" />
+            <col class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td colspan="2" class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bereich <span class="gui_element">Integrationsparameter</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Koordinaten übernehmen von</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Optionen können Sie wählen, ob die Koordinaten der isolierten Knoten oder die des bestehenden Netzes verwendet werden.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Knoten und Strecken des Netzes</span>
+                        </p>
+                        <p class="CellText">Ist die Option gewählt, rutschen die isolierten Knoten ins Netz hinein.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Isolierten Knoten</span>
+                        </p>
+                        <p class="CellText">Ist die Option gewählt, verschieben sich Knoten und Strecken(zwischenpunkte) zu den anfangs isolierten Knoten hin. In diesem Fall sind einige Besonderheiten zu beachten: Durch die schrittweise Veränderung der Netztopologie kann es vorkommen, dass noch nicht integrierte isolierte Knoten ein anderes nächstes Netzobjekt zugewiesen bekommen (und sich ihre Entfernung zum bestehenden Netz ändert) als in der Ausgangssituation. Dies kann sowohl dazu führen, dass das bestehende Netz den Fangradius eines isolierten Knotens im Laufe des Verfahrens „verlässt“, als auch dazu, dass das bestehende Netz erst im Laufe des Verfahrens in den Fangradius „hineingerät“. Grundlage für den jeweils nächsten Integrationsschritt sind immer die aktuell gültigen kürzesten Abstände der isolierten Knoten vom Netz.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Streckenlängen an Luftlinie anpassen</span>
+                        </p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, werden die Streckenlängen nicht neu berechnet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2" style="mc-hyphenate-shortest-prefix: 14;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Haltestellenzuordnung übernehmen von</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Die Zuordnung von Haltepunkten zu Haltestellenbereichen sollte durch den Integrationsvorgang nicht verändert werden. Wenn jedoch zwei Haltepunkte verschmolzen werden, kann ihr Aggregat nur auf einen der bisherigen Haltestellenbereiche verweisen. </p>
+                        <p class="CellText">Über die Optionen wählen Sie aus, welcher Haltestellenbereich verwendet werden soll. </p>
+                        <p class="CellText">
+                            <span class="gui_element">Knoten des Netzes</span>
+                        </p>
+                        <p class="CellText">Standardeinstellung</p>
+                        <p class="CellText">
+                            <span class="gui_element">Isolierten Knoten</span>
+                        </p>
+                        <p class="CellText">Haltestellen und -bereiche, die durch diese Operation vom restlichen Netz abgekoppelt wurden, können Sie löschen, zum Beispiel isolierte Objekte filtern über die Attribute <span class="gui_element">CStopArea::NumStopPoints </span>und <span class="gui_element">CStop::NumStopAreas</span> und <span class="gui_element">Mehrfach-Löschen</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="140px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="336px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td colspan="2" class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bereich <span class="gui_element">Ablauf</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Kein Protokoll schreiben</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ein Protokoll wird nicht erstellt.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Das Ablaufprotokoll bietet eine detaillierte Betrachtung der einzelnen Integrationsschritte. Jede Zeile beschreibt die Integration oder das Scheitern (ID = 0) der Integration für jeweils einen integrierten Knoten. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <span class="gui_element">Protokoll in Datei schreiben</span>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">Angabe des Verzeichnisses, in dem das Protokoll gespeichert wird <MadCap:xref class="sieheUeberschrSeite" href="#2_netz_bearbeiten_23091886_1129905">(siehe „Beschreibung des Ablaufprotokolls“ auf Seite&#160;276)</MadCap:xref>.</td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Befehlsverlauf temporär deaktivieren, um Speicherplatz zu sparen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden während des Aggregierens keine Kommandos gespeichert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Hinweise zur Integrationslogik</h5>
+        <p class="Text">Beim Integrieren werden alle Attribute (insbesondere die Schlüssel) immer von den isolierten Knoten (und von deren Haltepunkten) übernommen. Nur für die Koordinaten und die Haltestellen-Hierarchie gibt es jeweils eine eigene Wahlmöglichkeit. Falls aus einem Knoten ein Haltepunkt entsteht, erhält dieser auch Code und Namen vom Knoten. Gesondert behandelt wird lediglich der Fall, dass zwei Haltepunkte verschmolzen werden: Hier wird nie ein Verkehrssystem gesperrt, für das der im Netz enthaltene Haltepunkt zuvor geöffnet war. </p>
+        <p class="Text">Die im Netz enthaltenen Objekte werden trotz der Datenübernahme nur überschrieben, nicht aber im Sinne der Objektidentität gelöscht, d.&#160;h. abhängige Daten gehen nicht verloren (zum Beispiel Linienrouten über Haltepunkte).</p>
+        <p class="Text">Haltestellen und Haltestellenbereiche, die an isolierten Knoten existieren, sind nach dem Integrationsvorgang u.&#160;U. selbst isoliert, werden aber nicht automatisch gelöscht. Ihre Koordinaten werden in keinem Fall angepasst.</p>
+        <h5 MadCap:autonum="">Fall 1: Verschmelzen mit Netzknoten</h5>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Beim Integrieren eines isolierten Knotens kann es mehr Konstellationen geben als im <MadCap:variable name="PTV_Manual.Programmname" />8-Modell. Wie bisher entscheidet der kürzeste Abstand des isolierten Knotens zum restlichen Netz darüber, welcher der folgenden Fälle vorliegt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Beim Verschmelzen mit einem Knoten können vier verschiedene Möglichkeiten auftreten, da sowohl der isolierte als auch der Netzknoten einen Haltepunkt besitzen kann, aber nicht muss. Durch die Option <span class="gui_element">Koordinaten übernehmen von </span>ist immer eindeutig geregelt, welches Netzobjekt „gewinnt“. Das Verkehrssystem-Set eines existierenden Haltepunkts wird nicht verkleinert!</p>
+        <h5 MadCap:autonum="">Fall 2: Einfügen auf Streckenpolygon</h5>
+        <p class="Text">Wenn Sie die Option <span class="gui_element">Einfügen auf Strecken zulassen</span> ausgewählt haben und der nächste Netzpunkt zu einem isolierten Knoten ein Punkt auf einem Streckenpolygon ist, der nicht Von-Knoten oder Nach-Knoten der Strecke ist, wird der isolierte Knoten auf dem Streckenpolygon eingefügt.</p>
+        <p class="Text">Die Strecke wird entweder gesplittet und ein neuer Knoten (eventuell mit Haltepunkt) eingefügt oder ein Haltepunkt wird auf der Strecke platziert.</p>
+        <p class="Text">Hier kann eine Besonderheit auftreten: Da es einen internen Mindestabstand (= Streckenlänge/1000) zwischen benachbarten Haltepunkten auf einer Strecke gibt, kann das Einfügen eines neuen Haltepunkts an der Unterschreitung dieses Grenzwerts scheitern. In diesem Fall wird immer ein Knoten mit Haltepunkt auf der Strecke eingefügt, auch wenn die Option <span class="gui_element">Knoten immer als Haltepunkte integrieren</span> gewählt wurde. Dies ist möglich, weil es keinen Mindestabstand zwischen Haltepunkten und Streckenknoten gibt.</p>
+        <h5 MadCap:autonum="">Fall 3: Verschmelzen mit Streckenhaltepunkt</h5>
+        <p class="Text">In Ausnahmefällen ist es möglich, dass der einem isolierten Knoten am nächsten liegende Netzpunkt ein Streckenhaltepunkt ist. Dies ist eine Kombination der Fälle 1 und 2 – eine Verschmelzoperation analog zu 1, die analog zu 2 auf einer Strecke stattfindet und diese (falls ein Knoten eingefügt werden soll) zusätzlich splittet. Wie bei Fall 1 wird das Verkehrssystem-Set bestehender Haltepunkte nicht verkleinert. Das Mindestabstand-Problem kann hier nicht auftreten.</p>
+        <h5 MadCap:autonum="">
+            <a name="2_netz_bearbeiten_23091886_1129905">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_63774">
+            </a>Beschreibung des Ablaufprotokolls</h5>
+        <p class="Text">Das verwendete Format ist: </p>
+        <pre class="Input">IsolKnotNr;Operation;StreckNrAlt;StreckNrNeu1;StreckNrNeu2;<br />KnotNrAlt;Distanz</pre>
+        <p class="Text">Jede Operation ist durch eine Ziffer von 0 bis 4 mit folgender Bedeutung kennzeichnet:</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="45px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="450px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Eine Integration ist nicht möglich. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Das nächste Netzobjekt ist eine Strecke:</p>
+                        <p class="CellText">Strecke gesplittet (Attribute 3, 4 und 5 geschrieben).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Das nächste Netzobjekt ist ein Knoten: Knoten verschmolzen (Attribut 6 geschrieben).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Das nächste Netzobjekt ist ein Knoten (Attribut 6), der aber nicht verschmolzen werden kann, weil er selbst ursprünglich isoliert war und mindestens dreiarmig ist. Stattdessen Splitten einer parallelen Netzstrecke (Attribute 3, 4 und 5).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">Der Knoten bleibt isoliert, da ein Verschmelzen von Haltepunkten nicht gestattet ist <MadCap:xref class="sieheUeberschrSeite" href="#2_netz_bearbeiten_23091886_1129826">(siehe „Sonderfall“ auf Seite&#160;273)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Bei missglückter Integration (Operations-ID = 0) wird unterschieden: </p>
+        <ul>
+            <LI class="List0">Scheiterte die Integration, weil ein isolierter Knoten nicht mit einem (mehrarmigen) Knoten verschmolzen werden konnte, weil dieser selbst ursprünglich isoliert war, ist die Entfernung bekannt und kann herausgeschrieben werden.</LI>
+            <LI class="List0">Wenn das bestehende Netz außerhalb des Fangradius des isolierten Knotens liegt, ist der Abstand nicht genau bekannt und unter „Distanz“ wird –1 herausgeschrieben.</LI>
+        </ul>
+        <table class="TableStyle-TableStandard" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="45px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="96px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="355px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">IsolKnotNr.</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Nummer des isolierten Knotens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Operation</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">ID der durchgeführten Operation (siehe oben)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">StreckNrAlt</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Nummer der gesplitteten Strecke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">StreckNrNeu1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Nummer der durch Streckensplit neu entstandenen ersten Strecke (identisch mit Nummer der gesplitteten Strecke)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">StreckNrNeu2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Nummer der durch Streckensplit neu entstandenen zweiten Strecke (neue maximale Streckennummer)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">6</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">KnotNrAlt</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Nummer des verschmolzenen Netzknotens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">7</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">Distanz</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">Abstand des isolierten Knotens vom Netz zum Zeitpunkt der Integration</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Attribute 1, 2 und 7 werden immer geschrieben, die Attribute 3 bis 6 je nach durchgeführter Operation.</p>
+    </body>
+</html>

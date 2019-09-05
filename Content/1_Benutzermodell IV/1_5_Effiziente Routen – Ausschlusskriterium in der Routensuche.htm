@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="687" MadCap:lastWidth="688" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;v0;VOT;CR;277s;akt;321s;360s;ver;AE;ED;Fzg;BD;CF;DF;StrNr;0ij;0i;0j;ij;r1;exp;r2;MSA;Method;of;t0;tAkt;car;fma;hveh;Landstr;Str;NCHRP;Wardrop’schen;NLM;VerwendeUmlaufzeitfamilie;SignalKoordinierungsGruppe;VerwendeUmlaufzeitFamilie;VT">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1128465">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249386">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc130966614">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc60553498">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc508007548">
+            </a>Effiziente Routen – Ausschlusskriterium in der Routensuche</h3>
+        <p class="Text">Während von allen monokriteriellen (klassischen) Verfahren stets ein eindeutiger Bestweg (kürzeste Route) bestimmt werden kann, müssen bei TRIBUT wegen des nicht eindeutigen <span class="formula">VT</span> viele (mehrere) Bestwege in der Routensuche sowohl bestimmt als auch im Speicher gehalten werden. Die daraus folgende Komplexität der Routensuche kann allerdings über kritische Values of time (wie in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1128485">Abbildung 1</MadCap:xref> gezeigt) eingegrenzt werden.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Efficient_Routes.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1128485">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_88159">
+            </a>Effiziente Routen</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1128485">Abbildung 1</MadCap:xref> zeigt eine Routensuche mit sechs Routen. Es kann grafisch oder analytisch nachvollzogen werden, dass es keinen <span class="formula">VT</span> gibt, für den eine der Routen X oder Y gegenüber A, B, C oder D vorgezogen würde.</p>
+        <p class="Text">Allgemeiner gesagt, bilden die Verbindungsgeraden A-B, B-C, C-D eine konvexe Frontlinie. Alle Routen, die „rechts“ von dieser konvexen Front liegen, müssen nicht weiter betrachtet werden, da sie für keinen Nutzer (für keinen VT) optimal sein können.</p>
+        <p class="Text">Die relevanten Routen auf der konvexen Front werden auch als Menge der effizienten Routen bezeichnet. Nur diese effizienten Routen werden für die weitere Suche und die spätere Aufteilung gespeichert.</p>
+        <p class="Text">Zwei Aspekte sind festzuhalten.</p>
+        <ul>
+            <LI class="List0">Auch bei bikriteriellen Verfahren kann man aus der Vielzahl möglicher Routen die meisten Alternativen verwerfen, sodass die Routensuche mit endlichem Zeit- und Speicheraufwand berechenbar ist.</LI>
+            <LI class="List0">Das bikriterielle Verfahren muss sich gleichzeitig mehrere Wege merken und speichern, wogegen während und nach einer monokriteriellen Suche immer genau eine Lösung (Bestweg) pro Quelle-Ziel-Beziehung gefunden wird.</LI>
+        </ul>
+    </body>
+</html>

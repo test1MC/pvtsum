@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="572" MadCap:lastWidth="510" MadCap:ignoredWords="en;RLS;Package;INIT;v_akt;t_akt;v_min;v_max;v0;v0sind;mDTV;24h;Emis;Rls90;Nordic">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 MadCap:autonum=" 0.1 ">
+            <a name="2_einstellungen_umweltwirkungsmodell_4287321607_1037690">
+            </a>
+            <a name="2_einstellungen_umweltwirkungsmodell_4287321607_64420">
+            </a>Lärmbelastungen berechnen</h2>
+        <p class="Text">
+            <MadCap:keyword term="Umweltwirkungsmodell: Lärmbelastungen: berechnen" />
+            <MadCap:keyword term="Lärmbelastungen: berechnen" />Das folgende Beispiel beschreibt die einzelnen Arbeitsschritte, die bei einer Berechnung der Lärmbelastung durch LKW durchzuführen sind.</p>
+        <h5 MadCap:autonum="">LKW-Anteil bestimmen</h5>
+        <p class="Text">Wenn Sie den LKW-Anteil p nicht als Attributwert vorliegen haben, müssen Sie diesen zuerst bestimmen.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Lesen Sie die Nachfragematrix für die Nachfragesegment PKW und LKW ein <MadCap:xref class="sieheUeberschrSeite" href="../2_Nachfrage_modellieren/2_3_Matrizen öffnen.htm#2_nachfrage_modellieren_1800171850_1360914"><span style="color: Black;" class="mcFormatColor">(</span><u>Matrizen öffnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Führen Sie eine Umlegung für die Nachfragesegmente PKW und LKW durch <MadCap:xref class="sieheUeberschrSeite" href="../2_Einstellungen_Benutzermodell IV/2_5_IV-Umlegung parametrisieren und rechnen.htm#2_einstellungen_benutzermodell_iv_1682368020_1033196"><span style="color: Black;" class="mcFormatColor">(</span><u>IV-Umlegung parametrisieren und rechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Umlegung kann mit allen Umlegungsverfahren durchgeführt werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="3. &#160;">Berechnen Sie die LKW-Anteile <MadCap:xref class="sieheUeberschrSeite" href="../2_Netz_bearbeiten/Attributwert_aus_den_Werten_anderer_Attribute_berechnen.htm#2_netz_bearbeiten_23091886_2374360"><span style="color: Black;" class="mcFormatColor">(</span><u>Attributwert aus den Werten anderer Attribute berechnen</u><span style="color: Black;" class="mcFormatColor">)</span>.</MadCap:xref></p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_attribute_formular.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <h5 MadCap:autonum="">Lärmbelastung berechnen</h5>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Rechnen</span> den Eintrag <span class="gui_element">Umweltparameter</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Umweltparameter</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie das Register <span class="gui_element">Basis</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="116px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="361px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Berechnungsgrundlage</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Die Berechnungsgrundlage für alle Umweltberechnungsverfahren basiert auf verkehrlichen Belastungen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Belastung-IV[Fzg]</span>
+                        </p>
+                        <p class="CellText">Die Belastungswerte werden aus der Umlegung übernommen, das heißt, v_akt pro Strecke pro VSys ergibt sich aus t_akt über die streckentypspezifischen CR-Funktionen <MadCap:xref class="sieheUeberschrSeite" href="../2_Einstellungen_Benutzermodell IV/2_5_Widerstandsfunktionen definieren und verwenden.htm#2_einstellungen_benutzermodell_iv_1682368020_1034717"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstandsfunktionen definieren und verwenden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                        <p class="CellText">
+                            <span class="gui_element">ZWert1 - ZWert3</span>
+                        </p>
+                        <p class="CellText">Die Belastungswerte werden aus den ZWerten (Zählwerten) übernommen, das heißt, v_akt ergibt sich über die streckentypspezifischen CR-Funktionen <MadCap:xref class="sieheUeberschrSeite" href="../2_Einstellungen_Benutzermodell IV/2_5_Widerstandsfunktionen definieren und verwenden.htm#2_einstellungen_benutzermodell_iv_1682368020_1034717"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstandsfunktionen definieren und verwenden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Gültige Geschwindigkeiten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Sie können für alle Umweltberechnungsverfahren die gültige Geschwindigkeit für PKW und LKW festlegen. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wenn der Berechnung v_akt zugrunde liegt, gilt:</p>
+                        <p class="CellText">v_min wird berücksichtigt, wenn v_akt &lt; v_min</p>
+                        <p class="CellText">v_max wird berücksichtigt, wenn v_akt &gt; v_max</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Lärm</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Sie können spezifische Parameter für die Berechnung der Lärmbelastung angeben.</p>
+                        <p class="CellText">
+                            <span class="gui_element">v0 freie Geschwindigkeit</span>
+                        </p>
+                        <p class="CellText">Die Lärmberechnung erfolgt mit der zulässigen Höchstgeschwindigkeit v0 entsprechend der RLS-90. Geltungsbereich für minimale und maximale v0sind für PKW 30-130 km/h und für 30-80 km/h.</p>
+                        <p class="CellText">
+                            <span class="gui_element">vAkt aktuelle Geschwindigkeit</span>
+                        </p>
+                        <p class="CellText">Die Lärmberechnung erfolgt mit gebundener, belastungsabhängiger Geschwindigkeit v_akt entgegen den Rechenmodellvorgaben der RLS-90. In diesem Fall gelten die definierten gültigen Geschwindigkeiten.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">mDTV</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Die Lärmberechnung nach RLS-90 beruht auf der maßgebenden stündlichen Verkehrsstärke M in [Kfz/h]. Wenn Belastungen als durchschnittliche tägliche Verkehrsstärke DTV in [Kfz/24h] vorliegen, wird M durch die Angabe der Umrechnungsfaktoren nach RLS-90, Tabelle 3, S.14 ermittelt. Wenn geeignete projektbezogene Untersuchungsergebnisse zur Ermittlung der maßgebenden stündlichen Verkehrsstärke M vorliegen (keine Spitzenstundenwerte), können diese verwendet werden. In diesem Fall gilt die Standardeinstellung mDTV = 1.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">Die Änderungen werden übernommen.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Wählen Sie im Menü <span class="gui_element">Rechnen</span> den Eintrag <span class="gui_element">Umwelt rechnen</span>&#160;&gt;<span class="gui_element"> Lärm-Emis-Rls90</span> oder <span class="gui_element">Lärm-Emis-Nordic</span>.</p>
+        <p class="Result">Die Lärmbelastung wird entsprechend des gewählten Verfahrens streckenbezogen berechnet.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Unter 10 Kfz/h wird keine Lärmbelastung berechnet.
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

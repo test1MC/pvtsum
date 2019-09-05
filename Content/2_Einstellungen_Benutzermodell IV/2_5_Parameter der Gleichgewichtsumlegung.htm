@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="686" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls;max;Program;Processor">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1040412">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_48805">
+            </a>Parameter der Gleichgewichtsumlegung<a name="11036"></a></h4>
+        <table class="TableStyle-gui_elements1" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="98px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="399px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Bestehende Umlegung als Startlösung verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden Wege und Belastungen des vorhandenen Umlegungsergebnisses als Startlösung für das Verfahren verwendet.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Diese Option bietet sich zum Beispiel an, wenn sich die Nachfrage ändert (z.B. durch Matrix lesen oder Matrixdaten ändern im Matrixeditor). Das vorhandene Umlegungsergebnis wird zunächst passend zur neuen Nachfrage skaliert und danach wird die Umlegung zum neuen Ergebnis fortgesetzt. Das benötigt meist wesentlich weniger Iterationen als eine komplette Neuberechnung. So kann bei Modellen mit Rückkopplung von der Umlegung zur Nachfrageberechnung viel Rechenzeit gespart werden.</p>
+                        <p class="CellText">Mehrfache Netzänderungen und wiederholtes Anwenden der Option führt zu anderen Routen als eine neue Umlegung ohne die Anwendung dieser Option, da es bei der Gleichgewichtsumlegung zahlreiche mögliche Routen gibt, die das erste Wardrop´sche Prinzip erfüllen.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, wird die Startlösung mit einer Sukzessivumlegung berechnet <MadCap:xref class="sieheUeberschrSeite" href="2_5_Sukzessivumlegung (statisch).htm#2_einstellungen_benutzermodell_iv_1682368020_1034988"><span style="color: Black;" class="mcFormatColor">(</span><u>Sukzessivumlegung (statisch)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Dafür werden je Iterationsschritt die Nachfrageanteile verwendet, die im Bereich <span class="gui_element">Startlösung mit Sukzessivumlegung</span> definiert sind. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Einstellungen werden auch berücksichtigt, wenn eine bestehende Umlegung als Startlösung verwendet werden soll, aber kein Umlegungsergebnis gefunden wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Startlösung mit Sukzessivumlegung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Anteil der Nachfrage pro Iterationsschritt</span>
+                        </p>
+                        <p class="CellText">Pro Iterationsschritt der Sukzessivumlegung werden die hier angegebenen Anteile der Nachfrage umgelegt <MadCap:xref class="sieheUeberschrSeite" href="2_5_Parameter der Sukzessivumlegung.htm#2_einstellungen_benutzermodell_iv_1682368020_1043862"><span style="color: Black;" class="mcFormatColor">(</span><u>Parameter der Sukzessivumlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Diese Einstellung ist in zwei Fällen relevant:</p>
+                        <ul>
+                            <LI class="List0Tab">Die Option <span class="gui_element">Bestehende Umlegung als Startlösung verwenden</span> ist nicht ausgewählt. </LI>
+                            <LI class="List0Tab">Die Option <span class="gui_element">Bestehende Umlegung als Startlösung verwenden</span> ist ausgewählt, aber es wurde kein Umlegungsergebnis vorgefunden.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Abbruchbedingung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:variable name="PTV_Manual.Programmname" /> bricht den Iterationsprozess zur Ermittlung des Gleichgewichts ab, wenn eine der folgenden Bedingungen erfüllt ist <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Gleichgewichtsumlegung.htm#1_benutzermodell_iv_2033098965_1034670">Siehe "Gleichgewichtsumlegung"</MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Zulässige Abweichung der Widerstände alternativer Routen</span>
+                        </p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Absolute Abweichung</span>
+                            </LI>
+                        </ul>
+                        <p class="List_Text0">Absolute Differenz der Widerstände zwischen paarweise verglichenen Routen. Das Verfahren bricht ab, wenn der Wert unterschritten wird.</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <span class="gui_element">Relative Abweichung</span>
+                            </LI>
+                        </ul>
+                        <p class="List_Text0">Differenz der Widerstände zwischen paarweise verglichenen Routen in Prozent. Das Verfahren bricht ab, wenn der Wert unterschritten wird.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Maximale Anzahl Iterationen</span>
+                        </p>
+                        <p class="CellText">Das Verfahren bricht nach der eingestellten Anzahl äußerer Iterationen ab.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Diese Bedingung ist zum Beispiel bei sehr stark überlasteten Netzen relevant, wenn mit den eingestellten zulässigen Abweichungen kein Gleichgewichtszustand erreicht werden kann.</p>
+                        <p class="CellText">Sie können den Wert 0 eingeben, wenn Sie bei einer bestehenden Umlegung nur die Wegebelastungen anpassen möchten.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Maximales Gap</span>
+                        </p>
+                        <p class="CellText">Maß für die Abweichung des Belastungszustands vom Gleichgewicht <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Konvergenzkriterien_der_Umlegungsqualitaet.htm#1_benutzermodell_iv_2033098965_1222416">Siehe "Konvergenzkriterien der Umlegungsqualität"</MadCap:xref>. Das Verfahren bricht ab, wenn der Wert unterschritten wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Netzausgleich</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Maximale Anzahl Iterationen</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie die Anzahl der inneren Ausgleichsiterationen festlegen. Die Anzahl kann variieren, abhängig davon, in welcher äußeren Iteration sich die Berechnung befindet. Sie können daher die Schritte der äußeren Iteration in Klassen einteilen <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_iv_1682368020_1035128">(siehe „Anzahl der Ausgleichsiterationen festlegen“ auf Seite&#160;1071)</MadCap:xref>.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Aus Rechenzeitgründen kann es sinnvoll sein, in den ersten äußeren Iterationen eine geringere Anzahl an inneren Ausgleichsiterationen zu rechnen.</p>
+                        <p class="CellText">Die Schaltfläche ist mit einer Kurzbezeichnung der aktuellen Einstellungen beschriftet.</p>
+                        <p class="CellText">In der Standardeinstellung sind keine Klassen definiert, das heißt die Anzahl der Ausgleichsiterationen ist für alle äußeren Iterationen gleich.</p>
+                        <p class="CellText">Beim Öffnen alter Versionen oder Verfahrensparameterdateien wird eine Klasse mit einer konstanten Anzahl innerer Ausgleichiterationen definiert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1035128">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_57257">
+            </a>Anzahl der Ausgleichsiterationen festlegen<a name="50023"></a></h5>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass das Fenster <span class="gui_element">Parameter Gleichgewichtsumlegung</span> geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_iv_1682368020_1040412">(siehe „Parameter der Gleichgewichtsumlegung“ auf Seite&#160;1069)</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie bei <span class="gui_element">Maximale Anzahl Iterationen</span> auf die Schaltfläche.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Max. Anzahl Ausgleichsiterationen</span> öffnet sich. Beim ersten Öffnen enthält die Liste einen Eintrag.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">äußere Iteration</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Einteilung der Iterationsschritte der äußeren Iteration in Klassen</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Über Doppelklick in die gewünschte Zelle können Sie einen Wert ändern.</p>
+                        <p class="CellText">Die höchste Klassengrenze können Sie nicht ändern.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Sie können den Wert 0 eingeben, wenn Sie bei einer bestehenden Umlegung nur die Wegebelastungen anpassen möchten.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl Ausgleichsiterationen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl der inneren Iterationen zum Ausgleich der Belastungen auf die Routen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Über Doppelklick in die gewünschte Zelle können Sie einen Wert ändern.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Einfügen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über diese Schaltfläche fügen Sie neue Klassen ein.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Die neue Klasse wird automatisch nach der aktuell gewählten Klasse eingefügt. Die Klassengrenze der neuen Klasse wird automatisch zwischen die zwei benachbarten Klassengrenzen gelegt. Wenn Sie an der Obergrenze Klassen hinzufügen, wird der höchste Wert automatisch erhöht.</p>
+                        <p class="CellText">Über Doppelklick in die gewünschte Zelle können Sie einen Wert ändern.</p>
+                        <p class="CellText">Die höchste Klassengrenze können Sie nicht ändern.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Löschen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Über diese Schaltfläche löschen Sie die aktuell gewählte Zeile.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="3. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Anzahl der Ausgleichsiterationen ist für die definierten Klassen äußerer Iterationen festgelegt.</p>
+    </body>
+</html>

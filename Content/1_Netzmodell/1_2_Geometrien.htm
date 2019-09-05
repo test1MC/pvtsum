@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="677" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1115655">
+            </a>
+            <a name="1_netzmodell_1240632468_81936">
+            </a>Geometrien</h4>
+        <p class="Text">
+            <MadCap:keyword term="Knotentopologie" />
+            <MadCap:keyword term="Knotengeometrie" />In makroskopischen Verkehrsmodellen wird eine plangleiche Kreuzung durch einen ausdehnungslosen Knoten mit Abbiegern abgebildet. Über die genaue Geometrie oder gar den geometrischen Entwurf der Straßenkreuzung sagt die makroskopische Modellierung nichts aus. Ähnliches gilt für die Steuerung des Knotens. Die optionale Erweiterung des <MadCap:variable name="PTV_Manual.Programmname" />-Netzmodells um die Knotengeometrie und die Knotensteuerung kann für folgende Bereiche genutzt werden:</p>
+        <ul>
+            <LI class="List1">Leistungsfähigkeitsberechnungen am Knoten</LI>
+            <LI class="List1">Berücksichtigung der Knotenwiderstände während der Umlegung</LI>
+            <LI class="List1">Übergabe vollständiger Knotenpunkte an das mikroskopische Modell Vissim</LI>
+        </ul>
+        <p class="Text">Eine Knotengeometrie besteht aus den Elementen Knotenarme, Fahrstreifen, Fahrstreifenabbieger, Detektoren und Furten. Ist einem Knoten eine Signalanlage zugewiesen, so beziehen sich ihre Daten auf die Knotengeometrie. Standardmäßig sind an einem Knoten keine Geometriedaten hinterlegt. Diese werden erst beim ersten Zugriff erzeugt.</p>
+        <h5>
+            <MadCap:keyword term="Knotenmodell: Knotenarme" />
+            <MadCap:keyword term="Knotenarme" />Knotenarme</h5>
+        <p class="Text">Die Hauptelemente der Geometrie sind die Knotenarme. Ein Knoten/Oberknoten kann bis zu sechzehn Knotenarme haben. Die Menge der Knotenarme wird durch die Orientierungen der eingehenden und ausgehenden Strecken bestimmt <MadCap:xref class="sieheUeberschrSeite" href="1_2_Knotenmodellierung.htm#1_netzmodell_1240632468_1212726"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte der Knotenmodellierung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Pro verwendeter Streckenorientierung wird genau ein Knotenarm erzeugt. Knotenarme können deshalb entweder aus einer eingehenden Strecke und ihrer entgegengesetzten Richtung bestehen, oder aus einer eingehenden Einbahnstraße und einer ausgehenden Einbahnstraße.</p>
+        <p class="Text">Knotenarme können über eine Mittelinsel, über eine Dreiecksinsel oder beides verfügen. Damit eine Mittelinsel existiert, müssen Mittelinsellänge und -breite einen Wert größer null haben. Damit eine Dreiecksinsel existiert, muss die Dreiecksinsellänge größer null sein. Das Attribut <span class="gui_element">Haltlinienposition</span> findet nur beim Export nach Vissim Verwendung. Knotenarme verfügen des Weiteren über eine Menge von Fahrstreifen.</p>
+        <h5>
+            <MadCap:keyword term="Fahrstreifen" />
+            <MadCap:keyword term="Knotenmodell: Fahrstreifen" />Fahrstreifen</h5>
+        <p class="Text">Bei Fahrstreifen wird unterschieden zwischen Eingangs- und Ausgangsfahrstreifen, sowie zwischen Durchgangsfahrstreifen und Aufweitungen. Die Anzahl der Durchgangsfahrstreifen eines Knotenarms kann nicht verändert werden. Sie hängt ab von der eingestellten Anzahl von Fahrstreifen an den Strecken, die dem Knotenarm zugrunde liegen. Hat die Eingangsstrecke des Knotenarms also drei Fahrstreifen (Attribut <span class="gui_element">Anzahl Fahrstreifen</span> an der Strecke) und verfügt über mindestens ein Verkehrssystem, so gibt es am Knotenarm drei durchgehende Eingangsfahrstreifen. Wird die Anzahl der Fahrstreifen an dieser Strecke verändert, so wird die Zahl der Durchgangsfahrstreifen am Knotenarm automatisch angepasst. Es empfiehlt sich, die angepassten Geometriedaten nach einer solchen Veränderung zu überprüfen. Da jedem Knotenarm mindestens eine offene Strecke zugrunde liegt, hat jeder Knotenarm mindestens einen Durchgangsfahrstreifen.</p>
+        <p class="Text">Die Anzahl von Fahrstreifen an einem Knotenarm kann durch das Einfügen von Aufweitungsfahrstreifen (Aufweitungen) verändert werden. Aufweitungsfahrstreifen beziehen sich dabei immer auf einen Durchgangsfahrstreifen von dem sie abgehen (Quellfahrstreifen). Im Gegensatz zu Durchgangsfahrstreifen können Aufweitungen wieder entfernt werden. Für Aufweitungen kann eine Länge angegeben werden. Diese findet Verwendung beim Vissim-Export und bei bestimmten Methoden zur Widerstandsberechnung am Knoten.</p>
+        <p class="Text">Die auf einem Fahrstreifen zugelassene Verkehrssystemmenge entspricht standardmäßig der Verkehrssystemmenge auf der zugrunde liegenden Strecke. Bei Aufweitungen wird standardmäßig die Verkehrssystemmenge des Quellfahrstreifens verwendet.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Nummerierung der Fahrstreifen ist nicht die gleiche wie in Vissim.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>
+            <MadCap:keyword term="Fahrstreifen: Fahrstreifenabbieger" />
+            <MadCap:keyword term="Knotenmodell: Fahrstreifenabbieger" />Fahrstreifenabbieger</h5>
+        <p class="Text">Ein Fahrstreifenabbieger verbindet einen Eingangs- mit einem Ausgangsfahrstreifen. Beim automatischen Erzeugen einer Geometrie wird automatisch eine Menge von Fahrstreifenabbiegern mit erzeugt. Damit ein Fahrstreifenabbieger definiert werden kann, muss der Abbieger oder Oberabbieger zwischen der dem Eingangsfahrstreifen zugrunde liegenden Strecke und der dem Ausgangsfahrstreifen zugrunde liegenden Strecke offen sein. Das bedeutet, dass er über mindestens ein Verkehrssystem verfügen muss.</p>
+        <p class="Text">Normalerweise ist es nicht erwünscht, dass sich Fahrstreifenabbieger überkreuzen. Zwei Fahrstreifenabbieger überkreuzen sich beispielsweise, wenn der eine von einem rechten Fahrstreifen links abbiegt und der andere von einem linken Fahrstreifen geradeaus fährt. Dies ist jedoch möglich und erwünscht, wenn es sich bei dem Linksabbieger um einen IV-Abbieger handelt und bei dem anderen um einen ÖV-Abbieger. Auf diese Weise kann beispielsweise eine Straßenbahn in Mittellage modelliert werden.</p>
+        <p class="Text">Die Menge von Fahrstreifenabbiegern bestimmt im Wesentlichen die Ergebnisse der Widerstandsberechnung am Knoten/Oberknoten.</p>
+        <h5>
+            <MadCap:keyword term="Furten" />
+            <MadCap:keyword term="" />
+            <MadCap:keyword term="Knotenmodell: Furten" />Furten</h5>
+        <p class="Text">Bei Furten handelt es sich um Objekte, die die Seiten oder die Inseln eines Knotenarmes gerichtet miteinander verbinden. Je nach Kombination der Inseln an einem Knotenarm können bis zu sechs Furten definiert werden. Hat der Knotenarm beispielsweise eine Mittelinsel – sind also seine Mittelinsellänge und Mittelinselbreite größer als null – und eine Dreiecksinsel, so können sechs Furten definiert werden. Eine zwischen einer Seite und der Mittelinsel, eine zwischen Mittelinsel und Dreiecksinsel und eine zwischen der Dreiecksinsel und der anderen Seite, sowie jeweils die Rückrichtung.</p>
+        <p class="Text">Furten werden nach Vissim exportiert. Für Furten kann eine Fußgänger-Belastung angegeben werden. Diese spielt eine Rolle bei der Widerstandsberechnung des Knotens mittels ICA <MadCap:xref class="sieheUeberschrSeite" href="../1_Benutzermodell IV/1_5_Knotenwiderstandsberechnung nach Highway Capacity Manual (Intersection Capac.htm#1_benutzermodell_iv_2033098965_1026864"><span style="color: Black;" class="mcFormatColor">(</span><u>Knotenwiderstandsberechnung nach Highway Capacity Manual (Intersection Capacity Analysis, ICA)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <h5>
+            <MadCap:keyword term="Armschablonen" />
+            <MadCap:keyword term="Knotenschablonen" />
+            <MadCap:keyword term="Knotenmodell: Armschablonen" />
+            <MadCap:keyword term="Knotenmodell: Knotenschablonen" />
+            <a name="1_netzmodell_1240632468_13959">
+            </a>Arm- und Geometrieschablonen</h5>
+        <p class="Text">Zur einfacheren Eingabe können für Knotenarme Armschablonen verwendet werden. Mit ihrer Hilfe wird eine vordefinierte Menge von Fahrstreifen, Fahrstreifenabbiegern und Furten an einem Knotenarm erzeugt. Im Gegensatz zu früheren Programmversionen bleibt beim Anwenden von Arm- und Geometrieschablonen keine Referenz des Objekts auf die Schablone erhalten. Konnte man früher Arme nicht bearbeiten, wenn ihnen eine Schablone zugeordnet wurde, so dienen Schablonen jetzt ausschließlich zur Definition von Arm- und Knotengeometrien.</p>
+        <p class="Text">Für die Erzeugung von Armschablonen werden existierende Arme verwendet. Die Attributwerte des Armes werden hierbei auf die Schablone übertragen. Sie können jedoch nachträglich bearbeitet werden. Eine Armschablone setzt sich aus Fahrstreifenschablonen zusammen. Wenn eine Armschablone aus einem Arm erzeugt wird, dienen die Fahrstreifen des Armes als Vorlage für die Fahrstreifenschablonen. Auch die Fahrstreifenschablonen können nachträglich bearbeitet werden.</p>
+        <p class="Text">Armschablonen können nur an 3- oder 4-armigen Geometrien verwendet werden. Damit eine Armschablone an einem Arm verwendet werden kann, müssen die Daten passen. Das heißt, ist die Schablone für dreiarmige Knoten geeignet, so kann sie nicht für Arme an vierarmigen Knoten verwendet werden. Auch die Anzahl der ein- und ausgehenden Durchgangsfahrstreifen müssen an Arm und Schablone identisch sein.</p>
+        <p class="Text">Geometrieschablonen werden im Gegensatz zu Armschablonen auf alle Arme am Knoten angewendet. Auch sie können nur an 3- oder 4-armigen Knoten verwendet werden. Eine Geometrieschablone setzt sich zusammen aus mehreren Armschablonen. Bei Anwendung einer Geometrieschablone werden die Armschablonen auf die Arme des Knotens angewendet. Damit klar ist, welche Armschablone für welchen Arm verwendet werden soll, muss für die Schablone ein Bezugsarm angegeben werden. Geometrieschablonen sind nur verwendbar, wenn es mindestens einen gültigen Bezugsarm gibt, so dass alle Armschablonen dann gemäß ihrer Reihenfolge für alle Arme am Knoten verwendbar sind.</p>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="2" MadCap:lastHeight="553" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>Manuelle Bearbeitung der Haltefolge</h4>
+        <p class="Text">Die manuelle Bearbeitung der Haltefolge erfolgt mit einem grafischen Editor. Darin wird am oberen Rand die aktuelle Haltefolge als Achse mit den Namen der Haltepunkte oder Haltestellen in der aktuell verwendeten Reihenfolge angezeigt. Dabei können einzelne Haltestellen mehrfach vorkommen. In einzelnen Zeilen darunter sind jeweils die Verläufe der Linienrouten der aktuellen Linienauswahl grafisch dargestellt. Die von der Linienroute bedienten Haltestellen sind durch Kreise markiert. </p>
+        <h5>Dargestellte Halte</h5>
+        <p class="Text">Über Mausfunktionen und das Kontextmenü auf der horizontalen Achse können die Halte innerhalb der Haltefolge verschoben und geordnet werden. Weiterhin können zusätzliche Halte eingefügt und bestehende ausgeblendet oder entfernt werden. Auch auf der vertikalen Achse stehen Mausfunktionen zum Einfügen von Halten zur Verfügung, sofern von der Linienroute noch Halte bedient werden, die nicht in der aktuellen Haltefolge enthalten sind.</p>
+        <h5>Zuordnung der Halte</h5>
+        <p class="Text">Die grafische Darstellung der Linienrouten mit den Kreisen für die Halte dient der Zuordnung von Linienroutenelementen zu Halten der Haltefolge. So wird gesteuert, wie die zugehörigen Fahrten im Bildfahrplan gezeichnet werden und in welchen Zeilen in der Verlaufstabelle des tabellarischen Fahrplans die Attribute der jeweiligen Linienroutenelemente ausgegeben werden.</p>
+        <p class="Text">Die zugeordneten Halte sind blau gezeichnet und über Striche geordnet miteinander verbunden. Die Halte, die dieser Linienroute nicht zugeordnet sind, sind grau gezeichnet und nicht mit Strichen versehen.</p>
+        <p class="Text">Durch Klicken auf die Kreise kann die Zuordnung verändert werden. Durch Aufheben der Zuordnung wird der entsprechende Halt in den Fahrplandarstellungen für die Fahrplanfahrten dieser Linienroute nicht aufgeführt.</p>
+        <p class="Text">Ist eine Haltestelle mehrfach in der Haltefolge aufgeführt (beispielsweise nach der Vorberechnung mit dem hierarchischen Verfahren), so sind dafür auch mehrere Kreise in der Verlaufsansicht enthalten. Allerdings ist davon jeweils nur ein Halt aktiv zugeordnet, so dass beim Zuordnen zu einem anderen Halt die bisherige Zuordnung aufgehoben wird. Ausnahmen von dieser Regel sind tatsächlich mehrfach bedienten Halte oder Zwillingshalte, <MadCap:xref href="#Zwillingshalte" class="sieheUeberschrSeite">(siehe „Zwillingshalte“ auf Seite&#160;1)</MadCap:xref>. In diesem Fall steuert die Zuordnung, über welche Halte die Weg-Zeit-Linien im grafischen Fahrplan geführt und in welchen Zeilen der Verlaufstabelle im tabellarischen Fahrplan die Attribute ausgegeben werden.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/WIN_stopsequence_01.png" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="Abbildung_Editor_Haltefolge">
+            </a>Fenster zur grafischen Bearbeitung der Haltefolge </p>
+        <h5>
+            <a name="Zwillingshalte">
+            </a>Zwillingshalte</h5>
+        <p class="Text">Für bestimmte Darstellungen kann es erforderlich sein, die Einschränkung bezüglich der eindeutigen Zuordnung eines Linienroutenelements zu genau einem Halt zu umgehen. Dazu können Halte geteilt und sogenannte <span class="gui_element">Zwillingshalte</span> erzeugt werden. Diese werden in grafischen Darstellung der Haltefolge als Halbkreise dargestellt. Die Verbindungslinie zwischen den Halbkreisen wird gestrichelt gezeichnet (<MadCap:xref href="#Abbildung_Editor_Haltefolge" class="Label_Table">Abbildung 9)</MadCap:xref>. Zwischen die beide Teile eines Zwillingshaltes können beliebige andere Halte geschoben werden. Auf diese Weise können Sie beispielsweise Anschlusssituationen mit Ausgabe der Ankunfts- oder Abfahrtszeiten an anderen Bahnhöfen ausgeben. Dazu schieben Sie den Zielbahnhof der Anschlusslinie zwischen die zwei Teilhalte der Umsteigehaltestelle und treffen geeignete Zuordnungen.</p>
+        <h5>
+            <a name="Zweizeil">
+            </a>Zweizeilige Darstellung</h5>
+        <p class="Text">Für die Darstellung in der Verlaufstabelle im tabellarischen Fahrplan kann über das Kontextmenü je Halt eingestellt werden, ob dieser zweizeilig dargestellt werden soll. Für Halte mit dieser Einstellung werden zwei aufeinander folgende Tabellenzeilen ausgegeben, sodass beispielsweise die Ankunfts- und Abfahrtszeit untereinander aufgeführt werden können. Im Fenster <span class="gui_element">Haltefolge bearbeiten</span> werden solche Halte durch eine doppelte vertikale Linie symbolisiert <MadCap:xref href="#Abbildung_Editor_Haltefolge" class="Label_Table">(Abbildung 9</MadCap:xref>).</p>
+    </body>
+</html>

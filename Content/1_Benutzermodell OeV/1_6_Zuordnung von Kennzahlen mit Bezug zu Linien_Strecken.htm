@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb;AnteilAkzGEH;V';β;FPreis;DTfrüh;DTspät;Fak4;UZ;bzw;spaet;frueh;Fak;Tfrueh;Tspaet;DT" MadCap:lastBlockDepth="2" MadCap:lastHeight="566" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 MadCap:autonum=" 0.1 ">
+            <a name="1_benutzermodell_oev_2318507456_1038257">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_23470">
+            </a>Zuordnung von Kennzahlen mit Bezug zu Linien/Strecken</h2>
+        <p class="Text">Bestimmte Attribute, zum Beispiel die <span class="gui_element">Liniennetzlänge</span> eines Verkehrssystems oder die Attribute <span class="gui_element">Anzahl Servicefahrten</span> oder <span class="gui_element">ÖV-Belastung</span> einer Strecke nehmen eine Zwischenposition ein, weil sich ihre Definition räumlich sowohl auf eine Strecke als auch auf eine Linienroute bezieht. Da Haltepunkte optional auf Strecken liegen können und Linienrouten und Fahrplanfahrten sich von Haltepunkt zu Haltepunkt erstrecken, können Strecken teilweise von Linienrouten oder Fahrplanfahrten berührt werden.</p>
+        <p class="Text">In den meisten Fällen ist es nicht sinnvoll, solche Kennzahlen der Strecke proportional zuzurechnen, deswegen gilt einheitlich für alle solchen Kennzahlen das Folgende.</p>
+        <p class="Text">Eine Strecke gilt als (vollständig) von einem Objekt der Linienhierarchie benutzt, wenn der auf Haltepunktniveau durchfahrene Teil mindestens die Hälfte der Strecke (≥ 0.5) ausmacht. Für Kennzahlen, die sich auf Abschnitte zwischen Haltepunkten beziehen (zum Beispiel <span class="gui_element">Belastung</span>), gilt Folgendes. Jedem Haltepunkt auf einer Strecke ist der nächstgelegene Knoten (entweder der Von- oder der Nach-Knoten der Strecke) zugeordnet. Als Kennzahlenwert für die (gesamte) Strecke gilt der Kennzahlenwert zwischen dem letzten Haltepunkt, dem der Von-Knoten zugeordnet ist, und dem ersten Haltepunkt, dem der Nach-Knoten zugeordnet ist. <MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1071548">Abbildung&#160;149</MadCap:xref> zeigt ein Beispiel für die Kennzahlenberechnung bei solchen teilweise überfahrenen Strecken.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Allocation_Skims_Lines_Links.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_oev_2318507456_1071548">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_70071">
+            </a>Beispiel für die Kennzahlenberechnung bei teilweise überfahrenen Strecken</p>
+        <p class="Text">Linienroute 1 berührt Strecken 2, 3, 4 (weil der durchfahrene Anteil mindestens die Hälfte ausmacht), nicht jedoch Strecke 1, weil deren Anteil &lt; 0.5 ist. Fahrplanfahrt 1 berührt nur Strecke 3. Als ÖV-Belastung der Strecke 2 gilt diejenige zwischen den Haltepunkten B und C, für Strecke 3 gilt die Belastung C – D und für Strecke 4 die zwischen D und E.</p>
+    </body>
+</html>

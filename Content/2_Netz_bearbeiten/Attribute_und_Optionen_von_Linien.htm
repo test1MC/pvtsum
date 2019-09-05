@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="677" MadCap:lastWidth="512" MadCap:ignoredWords="Linienleistungs;erfolgsrechnung;FzgKomb">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_netz_bearbeiten_23091886_1170109">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_84664">
+            </a>Attribute und Optionen von Linien<a name="23127"></a></h3>
+        <p class="Text">
+            <MadCap:keyword term="Linien: Attribute und Optionen" />
+            <MadCap:keyword term="Attribute: Linien" />Im Fenster <span class="gui_element">Line &lt;Name&gt; bearbeiten</span> können Sie Attribute von Linien anzeigen und ändern. Beispielsweise können Sie hier das Verkehrssystem einer Linie ändern. Der obere Teil des Fensters enthält die allgemeinen Attribute der Linie. Der untere Teil enthält spezielle Attribute.</p>
+        <h5 MadCap:autonum="">Linien: Allgemeine Attribute</h5>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Name</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Langbezeichnung der Linie</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Verkehrssystem</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">In der Auswahlliste können Sie das Verkehrssystem eine Linie ändern. Zur Auswahl stehen alle im Netz angelegten ÖV-Verkehrssysteme. Eine Änderung hat diese Folgen:</p>
+                        <p class="CellText">Im Netz:</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <MadCap:variable name="PTV_Manual.Programmname" /> öffnet die betroffenen Strecken und Abbieger für das neue Verkehrssystem.</LI>
+                            <LI class="List0Tab">
+                                <MadCap:variable name="PTV_Manual.Programmname" /> öffnet die betroffenen Haltepunkte, wenn das Ein- oder Aussteigen am Haltepunkt laut Fahrzeitprofil erlaubt ist.</LI>
+                            <LI class="List0Tab">
+                                <MadCap:variable name="PTV_Manual.Programmname" /> verwirft Umlegungen und Ergebnisse der Linienleistungs- und -erfolgsrechnung (sofern vorhanden).</LI>
+                        </ul>
+                        <p class="CellText">Innerhalb der Linienhierarchie:</p>
+                        <ul>
+                            <LI class="List0Tab">
+                                <MadCap:variable name="PTV_Manual.Programmname" /> prüft die Fahrzeugkombination. Ist die zugeordnete Fahrzeugkombination nicht für das neue Verkehrssystem zulässig, löscht <MadCap:variable name="PTV_Manual.Programmname" /> die vorherige Fahrzeugkombination. Betroffen hiervon sind die Linie, das Fahrzeitprofil und der Fahrplanfahrtabschnitt. Durch eine Änderung der Fahrzeugkombination am Fahrplanfahrtabschnitt erhalten Umläufe den Status „Fahrzeugfehler”.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Oberlinie</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Anzeige der Oberlinie, falls die Linie einer Oberlinie zugeordnet wurde</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Eine Linie können Sie einer Oberlinie über das Menü <span class="gui_element">Netz&#160;&gt; ÖV-Oberlinien</span> zuordnen <MadCap:xref class="sieheUeberschrSeite" href="Oberlinien_verwalten.htm#2_netz_bearbeiten_23091886_1185454"><span style="color: Black;" class="mcFormatColor">(</span><u>Oberlinien verwalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Standard-FzgKomb</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">In der Auswahlliste können Sie eine Standardfahrzeugkombination für die Linie auswählen. Beim Einfügen neuer Fahrplanfahrten wird diese dann als Standardbelegung vorgeschlagen.</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Fahrzeugkombinationen können Sie über das Menü <span class="gui_element">Netz&#160;&gt; ÖV-Fahrzeuge</span> anlegen <MadCap:xref class="sieheUeberschrSeite" href="Fahrzeugkombination_anlegen.htm#2_netz_bearbeiten_23091886_1165525"><span style="color: Black;" class="mcFormatColor">(</span><u>Fahrzeugkombination anlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Standard-Betreiber</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">In der Auswahlliste können Sie einen Standardbetreiber für die Linie auswählen.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Beim Einfügen neuer Fahrplanfahrten wird dieser dann als Standardbelegung vorgeschlagen.</p>
+                        <p class="CellText">Wenn Sie den Standardbetreiber einer Linie nachträglich ändern, wird der Betreiber für zugehörige, bereits existierende Fahrplanfahrten nicht angepasst.</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Betreiber können Sie über das Menü <span class="gui_element">Netz&#160;&gt; ÖV-Betreiber </span>anlegen <MadCap:xref class="sieheUeberschrSeite" href="Betreiber_anlegen.htm#2_netz_bearbeiten_23091886_1160557"><span style="color: Black;" class="mcFormatColor">(</span><u>Betreiber anlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Tarifsysteme</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Hier können Sie ein Tarifsystem zuordnen oder ändern <MadCap:xref class="sieheUeberschrSeite" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Tarifzonen definieren.htm#2_einstellungen_betreibermodell_oev_1111312306_1036174"><span style="color: Black;" class="mcFormatColor">(</span><u>Tarifzonen definieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Linien: Register Basis<a name="23128"></a></h5>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl Linienrouten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Anzeige der Anzahl der zugeordneten Linienrouten</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl Fahrzeitprofile</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Anzeige der Anzahl der Fahrzeitprofile der zugeordneten Linienrouten</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl Fahrplanfahrten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Anzeige der Anzahl der Fahrplanfahrten der zugeordneten Linienrouten </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">ZWert1 - ZWert3</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Freie Attribute, die Sie für die Eingabe von zusätzlichen Werten verwenden können.</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Um einem Netzobjekt zusätzliche Informationen zuzuordnen, können Sie benutzerdefinierte Attribute anlegen. Vorteil: Benutzerdefinierten Attributen können Sie eine passende Bezeichnung geben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="635" MadCap:lastWidth="513" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;v0;VOT;CR;277s;akt;321s;360s;ver;AE;ED;Fzg;BD;CF;DF;StrNr;0ij;0i;0j;ij;r1;exp;r2;MSA;Method;of;t0;tAkt;car;fma;hveh;Landstr;Str;NCHRP;Wardrop’schen;Bundesstr;Modellierungs" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_benutzermodell_iv_2033098965_1380066">
+            </a>Beurteilung der Umlegung mit ICA</h3>
+        <p class="Text">
+            <MadCap:keyword term="Umlegung mit ICA:Beurteilung" />Die Umlegung mit ICA ist eine statische Umlegung, bei der detaillierte Knotenwiderstände berücksichtigt werden.</p>
+        <p class="Text">Die Verwendung von ICA während einer Umlegung empfehlen wir nicht, weil die CR-Funktionen nicht separabel sind. Im beschriebenen Ansatz werden die Abbieger-CR-Funktionen durch „Einfrieren” der Konfliktströme in der Gleichgewichtsumlegung „näherungsweise separabel” gemacht. Damit wird in der Regel Konvergenz erreicht. Gleichzeitig werden die Abbieger-CR-Funktionen regelmäßig an die mit ICA berechneten Wartezeiten und Kapazitäten angepasst. Die in ICA verwendete HCM-Methodik (HCM 2000 oder HCM 2010) stellt eine der weltweit anerkannten analytischen Methoden zur Berechnung der Leistungsfähigkeit für Knoten dar und berücksichtigt Fahrstreifenaufteilung und Konflikte zwischen Abbiegern im Detail.</p>
+        <p class="Text">Nachteilig ist der erhöhte Modellierungs- und Kalibrierungsaufwand, weil die Knoten, an denen die Widerstände mit ICA berechnet werden, im Detail ausmodelliert werden müssen. Falls Sie nicht alle Knoten des Netzes im Detail modellieren möchten, sollten Sie unbedingt darauf achten, an den anderen Knoten CR-Funktionen zu verwenden, die Widerstände in vergleichbarer Größenordnung liefern. Wenn ICA- und Nicht-ICA-Abbieger systematisch unterschiedliche Widerstände verursachen, verzerrt dies die Routenwahl.</p>
+        <p class="Text">Durch den iterativen Ansatz benötigt die Umlegung mit ICA mehr Rechenzeit als eine gewöhnliche Gleichgewichtsumlegung. Es sind zusätzliche Rückstau- und ICA-Berechnungen erforderlich und die Anpassung der Abbieger-CR-Funktionen nach der untergeordneten Gleichgewichtsumlegung führt meist zu einem Rückschritt bei der Konvergenz, der durch erneute Kalibration wieder ausgeglichen werden muss. </p>
+        <p class="Text">Wie bei anderen Umlegungen auch ist es möglich, eine bestehende Umlegung als Startlösung für eine Umlegung mit ICA zu verwenden. Die bestehende Umlegung muss eine Umlegung mit ICA sein, denn nur so ist sichergestellt, dass die verwendeten Attribute an Abbiegern und Strecken auch zuvor berechnet sind. Diese Vorgehensweise kann beispielsweise bei der Berechnung von Planfällen genutzt werden, in denen sich die Netzgrundlage und Nachfrage nicht radikal ändern. Die zuvor geschätzten Parameter bilden eine gute Ausgangsbasis für die erneute Kalibrierung.</p>
+        <p class="Text">Für die Umlegung mit ICA selbst kann als untergeordnetes Umlegungsverfahren die Gleichgewichtsumlegung LUCE verwendet werden. Diese Umlegung ist in der Umlegung mit ICA aus folgenden Gründen von Vorteil:</p>
+        <ul>
+            <LI class="List0">Die Routenaufteilung ist stabil, vor allem mit der Option <span class="gui_element">Optimieren der Proportionalität von Routenbelastungen an Maschen</span>.</LI>
+            <LI class="List0">Die Berechnung des Rückstaumodells unter Verwendung von Büschen ist erheblich schneller als bei der Verwendung von Wegen aus anderen Umlegungsmethoden.</LI>
+            <LI class="List0">Wegen der stabilen Verteilung auf Routen ist auch das Ergebnis der Rückstauberechnung stabiler und schnellere Konvergenz wird erreicht.</LI>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="674" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls;max;Program;Processor;R';Factor">
+    <head>
+        <link href="../Resources/TableStyles/PTVStandard_SingleCells1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1037751">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_31707">
+            </a>Parameter der Stochastischen Umlegung</h4>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1037752">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_36150">
+            </a>Stochastische Umlegung: Register Basis<a name="30026"></a><a name="30027"></a></h5>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">bestehende Umlegung als Startlösung verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden Wege und Belastungen des vorhandenen Umlegungsergebnisses als Startlösung für das Verfahren verwendet.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option bietet sich zum Beispiel an, wenn sich die Nachfrage ändert (z.B. durch Matrix lesen oder Matrixdaten ändern im Matrixeditor). Das vorhandene Umlegungsergebnis wird zunächst passend zur neuen Nachfrage skaliert und danach wird die Umlegung zum neuen Ergebnis fortgesetzt. Das benötigt meist wesentlich weniger Iterationen als eine komplette Neuberechnung. So kann bei Modellen mit Rückkopplung von der Umlegung zur Nachfrageberechnung viel Rechenzeit gespart werden.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, startet die Berechnung auf dem unbelasteten Netz.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Abbruchbedingungen – global</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">maximale Anzahl Iterationen</span>
+                        </p>
+                        <p class="CellText">Das Verfahren bricht nach der eingestellten Anzahl äußerer Iterationen ab.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Abbruchbedingungen – Ausgleich</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">maximale Anzahl Iterationen</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie die Anzahl der Ausgleichsiterationen festlegen. Die Anzahl kann variieren, abhängig davon, in welcher äußeren Iteration sich die Berechnung befindet. Sie können daher die Schritte der äußeren Iteration in Klassen einteilen <MadCap:xref class="sieheUeberschrSeite" href="2_5_Parameter der Gleichgewichtsumlegung.htm#2_einstellungen_benutzermodell_iv_1682368020_1035128"><span style="color: Black;" class="mcFormatColor">(</span><u>Anzahl der Ausgleichsiterationen festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">In den ersten äußeren Iterationen kann es aus Rechenzeitgründen sinnvoll sein, eine geringere Anzahl an inneren Ausgleichsiterationen zu rechnen, bevor neue Wege gesucht werden.</p>
+                        <p class="CellText">Die Schaltfläche ist mit einer Kurzbezeichnung der aktuellen Einstellungen beschriftet.</p>
+                        <p class="CellText">In der Standardeinstellung sind keine Klassen definiert, das heißt die Anzahl der Ausgleichsiterationen ist für alle äußeren Iterationen gleich.</p>
+                        <p class="CellText">Beim Öffnen alter Versionen oder Verfahrensparameterdateien wird eine Klasse mit einer konstanten Anzahl innerer Ausgleichiterationen definiert.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Parameter in Formeln</span>
+                        </p>
+                        <p class="CellText">Das Verfahren bricht ab, wenn die Abweichung der Widerstände und Routenbelastungen zwischen zwei aufeinander folgenden Iterationsschritten einen bestimmten Schwellenwert unterschreitet. Die Formel für den Schwellenwert können Sie anpassen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Stochastische Umlegung: Register Glättung<a name="30029"></a></h5>
+        <p class="Text">Die Parameter entsprechen denjenigen des Lernverfahrens <MadCap:xref class="sieheUeberschrSeite" href="2_5_Parameter des Lernverfahrens.htm#2_einstellungen_benutzermodell_iv_1682368020_1036407"><span style="color: Black;" class="mcFormatColor">(</span><u>Parameter des Lernverfahrens</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Im Bereich <span class="gui_element">Routenbelastungen</span> liegt im Gegensatz zum Lernverfahren der Wertebereich des Exponenten bei 0 &#160;–&#160;2.</p>
+                        <p class="Text">Wir empfehlen zur Glättung der Routenbelastungen einen Exponenten zwischen 1 und 1.5.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1139980">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_62089">
+            </a>Stochastische Umlegung: Register Suche<a name="30028"></a></h5>
+        <p class="Text">In diesem Register legen Sie fest, wie die IV-Routen ermittelt werden.</p>
+        <table class="TableStyle-PTVStandard_SingleCells1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PTVStandard_SingleCells1.css');" cellspacing="0">
+            <col width="89px" class="TableStyle-PTVStandard_SingleCells1-Column-Column1" />
+            <col width="407px" class="TableStyle-PTVStandard_SingleCells1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Head-Header1">
+                    <td class="TableStyle-PTVStandard_SingleCells1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body1">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">zufällige Suche</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">ausführen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die Bestwegsuche mehrfach ausgeführt, wobei die Streckenwiderstände zufällig erhöht oder verringert werden. Dadurch werden auch weniger optimale Routen ermittelt. Diese Option bildet die unterschiedliche Einschätzung der Verkehrsteilnehmer ab.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl zusätzliche Suchiterationen</span>
+                        </p>
+                        <p class="CellText">Über die Schaltfläche können Sie die Anzahl der Iterationen zum Auffinden weiterer Routen festlegen. Die Anzahl kann variieren, abhängig davon, in welcher äußeren Iteration sich die Berechnung befindet. Sie können daher die Schritte der äußeren Iteration in Klassen einteilen <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_iv_1682368020_1060042">(siehe „Anzahl der Suchiterationen festlegen“ auf Seite&#160;1091)</MadCap:xref>.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Aus Rechenzeitgründen kann es sinnvoll sein, in den ersten äußeren Iterationen eine andere Anzahl an inneren Ausgleichsiterationen zu rechnen.</p>
+                        <p class="CellText">Die Schaltfläche ist mit einer Kurzbezeichnung der aktuellen Einstellungen beschriftet.</p>
+                        <p class="CellText">In der Standardeinstellung sind keine Klassen definiert, das heißt die Anzahl der Suchiterationen ist für alle äußeren Iterationen gleich.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Sigma</span>
+                        </p>
+                        <p class="CellText">Standardabweichung der Normalverteilung mit Mittelwert R', aus der der zufällig variierte Widerstand gezogen wird.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">In die Berechnung geht die Potenz des Widerstands R‘ ein. Ein Exponent &gt;&#160;0.5 führt zu einer breiteren Streuung und entsprechend zu mehr Alternativrouten.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body2">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Umwegtest</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">ausführen</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden Routen verworfen, die bis auf ein Teilstück mit bereits existierenden Routen übereinstimmen und bei denen dieses Teilstück wesentlich länger ist als in den bereits existierenden Routen <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Ablauf der Stochastischen Umlegung.htm#1_benutzermodell_iv_2033098965_1223708">Siehe "Ablauf der Stochastischen Umlegung"</MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Eine Route wird gelöscht, wenn für eine Masche gilt</span>
+                        </p>
+                        <p class="CellText">Über die Formel legen Sie fest, wie viel die Fahrzeit eines Teilstücks höchstens länger sein darf, bevor die längere Route verworfen wird. Dabei wird die Fahrzeit t0 im unbelasteten Netz verwendet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1060042">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_93062">
+            </a>Anzahl der Suchiterationen festlegen</h5>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass im Fenster <span class="gui_element">Parameter Stochastische Umlegung</span> das Register <span class="gui_element">Suche</span> geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_iv_1682368020_1139980">(siehe „Stochastische Umlegung: Register Suche“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie bei <span class="gui_element">Anzahl zusätzliche Suchiterationen</span> auf die Schaltfläche.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Anzahl zusätzliche Suchiterationen</span> öffnet sich.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">äußere Iteration</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Einteilung der Iterationsschritte der äußeren Iteration in Klassen</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Über Doppelklick in die gewünschte Zelle können Sie einen Wert ändern.</p>
+                        <p class="CellText">Die höchste Klassengrenze können Sie nicht ändern.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl zusätzliche Suchiterationen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl der Suchiterationen zum Auffinden weiterer Routen</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Über Doppelklick in die gewünschte Zelle können Sie einen Wert ändern.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Einfügen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über diese Schaltfläche fügen Sie neue Klassen ein.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Die neue Klasse wird automatisch nach der aktuell gewählten Klasse eingefügt. Die Klassengrenze der neuen Klasse wird automatisch zwischen die zwei benachbarten Klassengrenzen gelegt. Wenn Sie an der Obergrenze Klassen hinzufügen, wird der höchste Wert automatisch erhöht.</p>
+                        <p class="CellText">Über Doppelklick in die gewünschte Zelle können Sie einen Wert ändern.</p>
+                        <p class="CellText">Die höchste Klassengrenze können Sie nicht ändern.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Löschen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Über diese Schaltfläche löschen Sie die aktuell gewählte Zeile.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="3. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Anzahl der Suchiterationen ist für die definierten Klassen äußerer Iterationen festgelegt.</p>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1060033">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_35826">
+            </a>Stochastische Umlegung: Register Vorauswahl<a name="30031"></a></h5>
+        <p class="Text">In diesem Register legen Sie fest, wie die gefundenen Routen ausgewählt werden.</p>
+        <table class="TableStyle-PTVStandard_SingleCells1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/PTVStandard_SingleCells1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-PTVStandard_SingleCells1-Column-Column1" />
+            <col width="382px" class="TableStyle-PTVStandard_SingleCells1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Head-Header1">
+                    <td class="TableStyle-PTVStandard_SingleCells1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body1">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Eine Route wird gelöscht, wenn</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Formel legen Sie fest, wie viel der aktuelle geschätzte Widerstand und die Fahrzeit t0 einer Route höchstens länger sein dürfen als bei der besten gefundenen Route. Sind beide Formeln erfüllt, wird die längere Route verworfen. Dabei wird die Fahrzeit <span class="formula">t</span><span class="formula_subscript">0</span> im unbelasteten Netz verwendet.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der geschätzte Widerstand ist die Summe der Widerstände der von der Route überfahrenen Netzobjekte.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PTVStandard_SingleCells1-Body-Body2">
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Test einmalig anwenden, wenn Route erstmals gefunden wird</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-PTVStandard_SingleCells1-BodyA-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, prüft <MadCap:variable name="PTV_Manual.Programmname" /> nur beim ersten Finden der Route, ob sie das Kriterium erfüllt. Danach bleibt die Route in allen weiteren Iterationen gültig.</p>
+                        <p class="CellText">Diese Option ist standardmäßig ausgewählt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1037978">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_27147">
+            </a>Stochastische Umlegung: Register Wahl<a name="30030"></a></h5>
+        <p class="Text">In diesem Register legen Sie fest, wie die Nachfrage auf die einzelnen Routen verteilt wird.</p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Aufteilungsmodell</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Über diese Auswahlliste wählen Sie das Aufteilungsmodell. Dieses bestimmt die Verteilung der Nachfrage auf die einzelnen Routen in Abhängigkeit vom Widerstand der Routen. Für jedes Aufteilungsmodell können Sie bestimmte Parameter verändern <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Aufteilungsmodelle in der Umlegung.htm#1_benutzermodell_iv_2033098965_1545529">Siehe "Aufteilungsmodelle in der Umlegung"</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Eigenständigkeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Über diese Optionen wählen Sie, wie die Eigenständigkeit der Routen berechnet wird. Sie wählen zum einen, welches Attribut verwendet wird, und zum anderen das Berechnungsverfahren <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Aehnlichkeit der Routen und Commonality-Faktor.htm#1_benutzermodell_iv_2033098965_1036720">Siehe "Ähnlichkeit der Routen und Commonality-Faktor"</MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">definieren über t0</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die Eigenständigkeit der Routen auf der Basis der Fahrzeit ermittelt. Dafür werden die Routen insgesamt berücksichtigt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">definieren über Länge</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die Eigenständigkeit der Routen auf der Basis der Länge ermittelt. Dafür wird der gemeinsame Teil der Routen berücksichtigt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">exakte Berechnung nach Cascetta</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird der Commonality Factor, der in die Berechnung der Eigenständigkeit der Routen eingeht, mit dem C-Logit-Ansatz nach Cascetta berechnet.</p>
+                        <p class="CellText">
+                            <span class="gui_element">schnelle, approximierte Berechnung nach Ben Akiva</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die Eigenständigkeit mit einem einfacheren Ansatz nach Ben Akiva berechnet.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Die Berechnung nach Cascetta ist aufgrund des paarweisen Vergleichs der Routen rechenzeitaufwändig, aber dafür sehr exakt.</p>
+                        <p class="CellText">Die Berechnung nach Ben Akiva spart zwar Rechenzeit, beeinträchtigt jedoch auch die Genauigkeit der Rechenergebnisse.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG;bearbeitung;Bearbeitungs;Nested;80er;sk;Method;of;verteilung;WAW;Stud;Schmiedel;NEmP;NEoP;Sch;GSch" MadCap:lastBlockDepth="2" MadCap:lastHeight="1272" MadCap:lastWidth="697">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_nachfragemodell_2215163117_1154355">
+            </a>
+            <a name="1_nachfragemodell_2215163117_78497">
+            </a>Standard-Vier-Stufen-Modell</h3>
+        <p class="Text">
+            <MadCap:keyword term="Standard-Vier-Stufen-Modell" />
+            <MadCap:keyword term="Nachfragemodelle: Standard-Vier-Stufen-Modell" />Die ersten drei Stufen des Vier-Stufen-Modells, Verkehrserzeugung, Verkehrsverteilung und Moduswahl, werden im Standard-Vier-Stufen-Modell meist sequentiell direkt nacheinander ausgeführt. Wie die <MadCap:xref class="Label_Image" href="#1_nachfragemodell_2215163117_1026138">Abbildung&#160;48</MadCap:xref> zeigt, fließen auf den Modellstufen Verkehrsverteilung und Moduswahl Kenngrößenmatrizen ein, die im Zuge einer Umlegung gewonnen werden. Wegen dieser zyklischen Abhängigkeit wiederholt sich der Ablauf aller vier Stufen (einschließlich Umlegung), bis das Ergebnis ein Abbruchkriterium erfüllt, meist die Stabilität der Nachfragematrizen oder der Widerstände im Netz. Hierfür können Sie den Verfahrensablauf von Hand mehrfach aufrufen oder Sie verwenden die Operation Bedingter Rücksprung <MadCap:xref class="sieheUeberschrSeite" href="1_3_Bedingter Rücksprung.htm#1_nachfragemodell_2215163117_1231035"><span style="color: Black;" class="mcFormatColor">(</span><u>Bedingter Rücksprung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Integrated4StageModel.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997538px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_nachfragemodell_2215163117_1026138">
+            </a>
+            <a name="1_nachfragemodell_2215163117_98083">
+            </a>Integriertes Vier-Stufen-Modell in <MadCap:variable name="PTV_Manual.Programmname" /></p>
+        <p class="Text">Sie können zudem die Konvergenzgeschwindigkeit verbessern, indem Sie Matrizen oder Widerstände nach der Umlegung über mehrere Iterationen mitteln, bevor Sie sie in der nächsten Iteration des Nachfragemodells verwenden. Dazu dienen die Operationen Mittelwertbildung von Matrizen und Mittelwertbildung von Attributen <MadCap:xref class="siehe_1" href="1_3_Mittelwertbildung von Matrizen.htm#1_nachfragemodell_2215163117_1231043"><span style="color: Black;" class="mcFormatColor">(</span><u>Mittelwertbildung von Matrizen</u></MadCap:xref><MadCap:xref class="siehe_2" href="1_3_Mittelwertbildung von Attributen.htm#1_nachfragemodell_2215163117_1231064"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Mittelwertbildung von Attributen</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">
+            <MadCap:keyword term="Standard-Vier-Stufen-Modell: Moduswahl: mehrstufig" />
+            <MadCap:keyword term="Moduswahl: mehrstufig (Standard-Vier-Stufen-Modell)" />Als Varianten zum klassischen Vier-Stufen-Modell können Sie die Moduswahl statt einstufig auch in mehreren Stufen berechnen (Nested Logit). Optional kann der Moduswahl eine Abfahrtszeitwahl nachgeschaltet werden. Die <MadCap:xref class="Label_Image" href="#1_nachfragemodell_2215163117_1038838">Abbildung&#160;49</MadCap:xref> zeigt exemplarisch den Ablauf in einem derart erweiterten Nachfragemodell.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Enhanced4StageModel.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_nachfragemodell_2215163117_1038838">
+            </a>
+            <a name="1_nachfragemodell_2215163117_17929">
+            </a>Erweitertes Vier-Stufen-Modell</p>
+        <p class="Text">Im Normalfall führen Sie die Operationen Verkehrserzeugung, Verkehrsverteilung und Moduswahl jeweils für alle Nachfrageschichten des Modells zusammen aus. Für spezielle Zwecke können sie aber auch für einzelne Nachfrageschichten ausgeführt werden, sofern die für sie benötigten Eingabeattribute bekannt sind.</p>
+        <p class="Text">Bei Bedarf können zwischen den einzelnen Stufen Operationen auf Matrizen eingeschoben werden, um zum Beispiel Kenngrößenmatrizen vorzubereiten (zum Beispiel die Werte auf der Matrixdiagonale zu setzen) oder extern vorgegebene Teile der Verkehrsnachfrage (zum Beispiel Durchgangsverkehr) zuzuspielen <MadCap:xref class="sieheUeberschrSeite" href="1_3_Matrixdarstellung und -bearbeitung.htm#1_nachfragemodell_2215163117_1042550"><span style="color: Black;" class="mcFormatColor">(</span><u>Matrixdarstellung und -bearbeitung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+    </body>
+</html>

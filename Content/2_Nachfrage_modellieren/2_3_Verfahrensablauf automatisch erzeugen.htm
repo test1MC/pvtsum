@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:lastBlockDepth="8" MadCap:lastHeight="483" MadCap:lastWidth="510" MadCap:ignoredWords="Symmetrize;bzw;zeilen;$O;usw;of;gpm;inkl;hh;ss;max">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_nachfrage_modellieren_1800171850_1214100">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_61952">
+            </a>Verfahrensablauf automatisch erzeugen<a name="30229"></a><a name="30232"></a></h3>
+        <p class="Text">
+            <MadCap:keyword term="Verfahrensablauf: erzeugen" />Sie können einen Standard-Verfahrensablauf mit allen Schritten und zugehörigen Parametern zur Berechnung der Nachfrage automatisch erzeugen.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Nachfrage</span> den Eintrag <span class="gui_element">Nachfragemodelle</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Nachfragemodelle</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie das Register <span class="gui_element">Basis</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie auf das gewünschte Nachfragemodell.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Verfahrensablauf erzeugen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Verfahrensablauf erzeugen</span> öffnet sich. Gemäß der aktuell für das Nachfragemodell ausgewählten Modi <MadCap:xref class="sieheUeberschrSeite" href="2_3_Attribute und Optionen von Nachfragemodellen.htm#2_nachfrage_modellieren_1800171850_1123079"><span style="color: Black;" class="mcFormatColor">(</span><u>Attribute und Optionen von Nachfragemodellen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> wird jede Nachfrageschicht (Standard-4-Stufen- und EVA-Modelle) oder jede Personengruppe (VISEM-Modelle) des Nachfragemodells mit diesen relevanten Modi verknüpft und jeder Kombination aus Nachfrageschicht und Modus oder aus Personengruppe und Modus wird das entsprechende Nachfragesegment zugeordnet.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Bei Nachfragemodellen des Typs EVA-P bestimmt der Modus-Typ (IV oder ÖV) der relevanten Modi, welche Aufwandsarten einheitlich für den Schritt EVA-Bewertung verwendet werden <MadCap:xref class="sieheUeberschrSeite" href="2_3_EVA-Bewertung berechnen.htm#2_nachfrage_modellieren_1800171850_1640562"><span style="color: Black;" class="mcFormatColor">(</span><u>EVA-Bewertung berechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <ul>
+                            <LI class="List0">Reisezeit für Modi des Typs IV</LI>
+                            <LI class="List0">Reise- und Anpassungszeit für Modi des Typs ÖV (Anpassungszeit nur bei fahrplanfeiner Umlegung)</LI>
+                        </ul>
+                        <p class="Text">Die vordefinierte Aufwandsart konkurrierende Fußwegzeit wird nicht verwendet, kann aber nachträglich ausgewählt werden <MadCap:xref class="sieheUeberschrSeite" href="2_3_EVA-Bewertung berechnen.htm#2_nachfrage_modellieren_1800171850_1640562"><span style="color: Black;" class="mcFormatColor">(</span><u>EVA-Bewertung berechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nachfragematrizen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche legen Sie in einem weiteren Fenster fest, welche Nachfragematrizen beim Erzeugen des Verfahrensablaufs angelegt werden sollen. Sie haben hier die gleichen Einstellungen zur Auswahl wie beim direkten Erzeugen von Nachfragematrizen:</p>
+                        <ul>
+                            <LI class="List0Tab">VISEM <MadCap:xref class="sieheUeberschrSeite" href="2_3_Nachfragematrizen für die VISEM-Verkehrsverteilung und Moduswahl erzeugen.htm#2_nachfrage_modellieren_1800171850_1684042"><span style="color: Black;" class="mcFormatColor">(</span><u>Nachfragematrizen für die VISEM-Verkehrsverteilung und Moduswahl erzeugen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+                        </ul>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur für Nachfragemodelle des Typs VISEM verfügbar.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Umlegungsverfahren für IV</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Verfahren zur Berechnung der IV-Umlegung des Verfahrensablaufs <MadCap:xref class="sieheUeberschrSeite" href="../2_Einstellungen_Benutzermodell IV/2_5_IV-Umlegung parametrisieren und rechnen.htm#2_einstellungen_benutzermodell_iv_1682368020_1033196"><span style="color: Black;" class="mcFormatColor">(</span><u>IV-Umlegung parametrisieren und rechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                        <p class="CellText">Über die Auswahlliste können Sie ein Verfahren wählen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Umlegungsverfahren für ÖV</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Verfahren zur Berechnung der ÖV-Umlegung des Verfahrensablaufs <MadCap:xref class="sieheUeberschrSeite" href="../2_Einstellungen_Benutzermodell_OeV/2_6_ÖV-Umlegung parametrisieren und rechnen.htm#2_einstellungen_benutzermodell_oev_2589728191_1065063"><span style="color: Black;" class="mcFormatColor">(</span><u>ÖV-Umlegung parametrisieren und rechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                        <p class="CellText">Über die Auswahlliste können Sie ein Verfahren wählen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Sie können eine verkehrssystemfeine Umlegung im Verfahrensablauf nicht automatisch einfügen, aber vor dem Ausführen nachträglich auswählen <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahren in Verfahrensablauf einfügen.htm#2_verfahrensablauf_festlegen_40480990_1033289"><span style="color: Black;" class="mcFormatColor">(</span><u>Verfahren in Verfahrensablauf einfügen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">inkl. Rücksprung-Verfahren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, wird am Ende des Verfahrensablaufs eine Gruppe <span class="gui_element">iterative Wiederholung</span> mit dem Verfahren <span class="gui_element">Bedingter Rücksprung</span> eingefügt <MadCap:xref class="sieheUeberschrSeite" href="2_3_Zu einem Verfahren im Verfahrensablauf springen (Bedingter Rücksprung).htm#2_nachfrage_modellieren_1800171850_1153209"><span style="color: Black;" class="mcFormatColor">(</span><u>Zu einem Verfahren im Verfahrensablauf springen (Bedingter Rücksprung)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, wird kein Rücksprungverfahren eingefügt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Rückgekoppelte NSegs</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche können Sie in einem separaten Fenster die Nachfragesegmente auswählen, deren Kenngrößen in der Iteration mit einem Mittelwertbildungsverfahren gemittelt werden sollen <MadCap:xref class="siehe_1" href="2_3_Gewichteten Mittelwert von Matrizen berechnen.htm#2_nachfrage_modellieren_1800171850_1153279"><span style="color: Black;" class="mcFormatColor">(</span><u>Gewichteten Mittelwert von Matrizen berechnen</u></MadCap:xref><MadCap:xref class="siehe_2" href="2_3_Gewichteten Mittelwert von Attributen berechnen.htm#2_nachfrage_modellieren_1800171850_1153232"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Gewichteten Mittelwert von Attributen berechnen</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur verfügbar, wenn die Option <span class="gui_element">inkl. Rücksprung-Verfahren</span> ausgewählt ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 11;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">NSeg zur Konvergenzüberprüfung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Auswahlliste können Sie das Nachfragesegment wählen, mit dem die Konvergenzprüfung beim bedingten Rücksprung ausgeführt werden soll <MadCap:xref class="sieheUeberschrSeite" href="2_3_Zu einem Verfahren im Verfahrensablauf springen (Bedingter Rücksprung).htm#2_nachfrage_modellieren_1800171850_1153209"><span style="color: Black;" class="mcFormatColor">(</span><u>Zu einem Verfahren im Verfahrensablauf springen (Bedingter Rücksprung)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur verfügbar, wenn die Option <span class="gui_element">inkl. Rücksprung-Verfahren</span> ausgewählt ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">zusätzlich Nachfragematrizen für Zeitintervall berechnen (VISEM)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, können Sie zusätzlich zur kombinierte VISEM-Verkehrsverteilung und Moduswahl für ein Standard-Zeitintervall von 0 bis 24 Uhr eine kombinierte VISEM-Verkehrsverteilung und Moduswahl für ein benutzerdefiniertes Zeitintervall berechnen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur für Nachfragemodelle des Typs VISEM verfügbar.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Von Zeit, Bis Zeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Start- und Endzeitpunkt des benutzerdefinierten Zeitintervalls, für das die kombinierten VISEM-Verkehrsverteilung und Moduswahl zusätzlich berechnet werden soll, im Uhrzeitformat (hh oder hh:mm oder hh:mm:ss)</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur für Nachfragemodelle des Typs VISEM verfügbar und nur, wenn die Option <span class="gui_element">zusätzlich Nachfragematrizen für Zeitintervall berechnen (VISEM)</span> ausgewählt ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Der Verfahrensablauf zur Nachfrageberechnung wird gemäß den Einstellungen erzeugt. </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Je Nachfragesegment (und je verwendete Aufwandsart für Nachfragemodelle des Typs EVA-P) werden zwei Kenngrößenmatrizen eingefügt, eine für die aktuelle Berechnung (aktuelle Matrix) und eine zum Speichern eines geglätteten Mittelwerts (gemittelte Matrix).</p>
+                        <p class="Text">Fehlen Nachfragematrizen für die Nachfrageberechnung, werden sie entsprechend Ihren Einstellungen erzeugt und den jeweiligen Nachfrageschichten zugeordnet. Ist einem Nachfragesegment keine Nachfragematrix für die Umlegung zugeordnet, wird auch diese neu erzeugt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Schritte für die Berechnung mit dem Standard-4-Stufen-Modell</h5>
+        <p class="Text">Die folgende Tabelle zeigt, welche Verfahren automatisch eingefügt werden, wenn Sie einen Verfahrensablauf für ein Nachfragemodell des Typs Standard-4-Stufen erzeugen.</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="178px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="317px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Schritt</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Parameter</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">Verkehrserzeugung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Für alle Nachfrageschichten des Modells mit Standardeinstellungen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Verteilung und Moduswahl</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 11;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">Verfahren <span class="gui_element">IV-Kenngrößenmatrix berechnen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete IV-Nachfragesegment</p>
+                        <p class="CellText">Die Kenngröße <span class="gui_element">tAkt Zeit-IVSys</span> wird in einer Datei gespeichert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 10;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">Verfahren <span class="gui_element">ÖV-Kenngrößenmatrix berechnen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete ÖV-Nachfragesegment</p>
+                        <p class="CellText">Die Kenngröße <span class="gui_element">empfundene Reisezeit</span> wird in einer Datei gespeichert, bei fahrplanfeiner Umlegung gilt dies auch für die <span class="gui_element">Anpassungszeit</span> (Umlegung wird mit Standardparametern gerechnet).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 10;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">Verfahren <span class="gui_element">Verkehrsverteilung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Für alle Nachfrageschichten des Modells mit Standardeinstellungen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">Moduswahl</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Für alle Nachfrageschichten des Modells mit Standardeinstellungen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Matrixaggregation</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">Kombination von Matrizen und Vektoren</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete Nachfragesegment</p>
+                        <p class="CellText">Ergebnismatrix = Summe der zugeordneten Nachfragematrizen (Nachfrageschicht x Modus) / Besetzungsgrad des Nachfragesegments</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">Kombination von Matrizen und Vektoren</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Für jede gemittelte Kenngrößenmatrix</p>
+                        <p class="CellText">Ergebnismatrix = aktuelle Kenngrößenmatrix</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Umlegung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">IV-Umlegung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Für die zugeordneten IV-Nachfragesegmente</p>
+                        <p class="CellText">Verfahren gemäß Einstellung, mit Standardparametern</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">ÖV-Umlegung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Für die zugeordneten ÖV-Nachfragesegmente</p>
+                        <p class="CellText">Fahrplan- oder taktfein gemäß Einstellung, mit Standardparametern, inklusive Kenngrößenberechnung für das Nachfragesegment, das im Fenster <span class="gui_element">Parameter Umlegungsverfahren</span> im Register <span class="gui_element">Nachfragesegmente</span> ausgewählt ist <MadCap:xref class="siehe_1" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Taktfeine Umlegung_ Register Nachfragesegmente.htm#2_einstellungen_benutzermodell_oev_2589728191_1038606"><span style="color: Black;" class="mcFormatColor">(</span><u>Taktfeine Umlegung: Register Nachfragesegmente</u></MadCap:xref><MadCap:xref class="siehe_2" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Fahrplanfeine Umlegung_ Register Nachfragesegmente.htm#2_einstellungen_benutzermodell_oev_2589728191_1041553"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Fahrplanfeine Umlegung: Register Nachfragesegmente</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Mittelung Kenngrößenmatrizen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">ÖV-Kenngrößenmatrix berechnen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete ÖV-Nachfragesegment, für das die Option <span class="gui_element">Rückgekoppelte NSegs</span> gewählt wurde</p>
+                        <p class="CellText">Die Kenngröße <span class="gui_element">empfundene Reisezeit</span> wird in einer Datei gespeichert, bei fahrplanfeiner Umlegung gilt dies auch für die <span class="gui_element">Anpassungszeit</span> (Umlegung wird mit Standardparametern gerechnet).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">IV-Kenngrößenmatrix berechnen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete IV-Nachfragesegment</p>
+                        <p class="CellText">Die Kenngröße <span class="gui_element">tAkt Zeit-IVSys</span> wird in einer Datei gespeichert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">Mittelwertbildung von Matrizen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Ein Verfahren für jede aktuelle Kenngrößenmatrix</p>
+                        <p class="CellText">Ergebnismatrix = i/(i+1) • gemittelte Kenngrößenmatrix + 1/(i+1) • aktuelle Kenngrößenmatrix</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: iterative Wiederholung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Die Gruppe wird nur eingefügt, wenn die Option <span class="gui_element">inkl. Rücksprung-Verfahren</span> ausgewählt ist <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1214100">(siehe „Verfahrensablauf automatisch erzeugen“ auf Seite&#160;858)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">Bedingter Rücksprung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">Das Verfahren wird nur eingefügt, wenn die Option <span class="gui_element">inkl. Rücksprung-Verfahren</span> ausgewählt ist <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1214100">(siehe „Verfahrensablauf automatisch erzeugen“ auf Seite&#160;858)</MadCap:xref>.</p>
+                        <p class="CellText">Rücksprung zum Schritt Verkehrsverteilung mit Vergleich der aktuellen Kenngrößenmatrizen der Reisezeit (durch die Mittelwertbildung gemittelt) für ein beliebiges zugeordnete IV-Nachfragesegment, mit max. Anzahl Iterationen = 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Schritte für die Berechnung mit dem EVA-P-Modell</h5>
+        <p class="Text">Die folgende Tabelle zeigt, welche Verfahren automatisch eingefügt werden, wenn Sie einen Verfahrensablauf für ein Nachfragemodell des Typs EVA-P erzeugen.</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="178px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="317px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Schritt</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Parameter</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">EVA-Verkehrserzeugung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Für alle Nachfrageschichten des Modells</p>
+                        <p class="CellText">Alle Erzeugungsraten und Untersuchungsraumanteile werden konstant auf 0 gesetzt. Die Option <span class="gui_element">Berechne Randsummenausgleich</span> wird nur aktiviert, wenn für alle Nachfrageschichten harte Randsummenbedingungen definiert sind <MadCap:xref class="sieheUeberschrSeite" href="2_3_EVA-Verkehrserzeugung berechnen.htm#2_nachfrage_modellieren_1800171850_1639768"><span style="color: Black;" class="mcFormatColor">(</span><u>EVA-Verkehrserzeugung berechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Verteilung und Moduswahl</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">Verfahren <span class="gui_element">ÖV-Kenngrößenmatrix berechnen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete ÖV-Nachfragesegment</p>
+                        <p class="CellText">Die Kenngröße <span class="gui_element">empfundene Reisezeit</span> wird in einer Datei gespeichert, bei fahrplanfeiner Umlegung gilt dies auch für die <span class="gui_element">Anpassungszeit</span> (Umlegung wird mit Standardparametern gerechnet).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">Verfahren <span class="gui_element">IV-Kenngrößenmatrix berechnen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete IV-Nachfragesegment</p>
+                        <p class="CellText">Die Kenngröße <span class="gui_element">tAkt Zeit-IVSys</span> wird in einer Datei gespeichert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">EVA-Bewertung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Für alle Nachfrageschichten des Modells</p>
+                        <p class="CellText">Die Aufwandsarten werden in Abhängigkeit vom Modus-Typ der relevanten Modi definiert <MadCap:xref class="sieheUeberschrSeite" href="2_3_EVA-Bewertung berechnen.htm#2_nachfrage_modellieren_1800171850_1640562"><span style="color: Black;" class="mcFormatColor">(</span><u>EVA-Bewertung berechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Jeder Kombination aus Nachfrageschicht, Modus und Aufwandsart wird die aktuelle Kenngrößenmatrix zugeordnet, die für das zuvor zugeordnete Nachfragesegment eingefügt wurde.</p>
+                        <p class="CellText">Die Modusverfügbarkeit wird für alle Modi auf 1.0 gesetzt, sowie die Kapazitätsauslastung.</p>
+                        <p class="CellText">Die Option <span class="gui_element">Heimatbezirk für Nachfrageschichten vom Typ 3 berücksichtigen</span> wird nicht ausgewählt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">Verfahren <span class="gui_element">EVA-Verteilung/Moduswahl</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Für alle Nachfrageschichten des Modells mit Standardeinstellungen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Matrixaggregation</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">Kombination von Matrizen und Vektoren</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete Nachfragesegment</p>
+                        <p class="CellText">Ergebnismatrix = Summe der zugeordneten Nachfragematrizen (Nachfrageschicht x Modus) / Besetzungsgrad des Nachfragesegments</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">Kombination von Matrizen und Vektoren</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Für jede gemittelte Kenngrößenmatrix</p>
+                        <p class="CellText">Ergebnismatrix = aktuelle Kenngrößenmatrix</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Umlegung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">IV-Umlegung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Für die zugeordneten IV-Nachfragesegmente</p>
+                        <p class="CellText">Verfahren gemäß Einstellung, mit Standardparametern</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">ÖV-Umlegung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Für die zugeordneten ÖV-Nachfragesegmente</p>
+                        <p class="CellText">Fahrplan- oder taktfein gemäß Einstellung, mit Standardparametern, inklusive Kenngrößenberechnung für das Nachfragesegment, das im Fenster <span class="gui_element">Parameter Umlegungsverfahren</span> im Register <span class="gui_element">Nachfragesegmente</span> ausgewählt ist <MadCap:xref class="siehe_1" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Taktfeine Umlegung_ Register Nachfragesegmente.htm#2_einstellungen_benutzermodell_oev_2589728191_1038606"><span style="color: Black;" class="mcFormatColor">(</span><u>Taktfeine Umlegung: Register Nachfragesegmente</u></MadCap:xref><MadCap:xref class="siehe_2" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Fahrplanfeine Umlegung_ Register Nachfragesegmente.htm#2_einstellungen_benutzermodell_oev_2589728191_1041553"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Fahrplanfeine Umlegung: Register Nachfragesegmente</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Mittelung Kenngrößenmatrizen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">IV-Kenngrößenmatrix berechnen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete IV-Nachfragesegment</p>
+                        <p class="CellText">Die Kenngröße <span class="gui_element">tAkt Zeit-IVSys</span> wird in einer Datei gespeichert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">Mittelwertbildung (MSA) von Matrizen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Ein Verfahren für jede aktuelle Kenngrößenmatrix</p>
+                        <p class="CellText">Ergebnismatrix = i/(i+1) • gemittelte Kenngrößenmatrix + 1/(i+1) • aktuelle Kenngrößenmatrix</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: iterative Wiederholung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Die Gruppe wird nur eingefügt, wenn die Option <span class="gui_element">inkl. Rücksprung-Verfahren</span> ausgewählt ist <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1214100">(siehe „Verfahrensablauf automatisch erzeugen“ auf Seite&#160;858)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">Bedingter Rücksprung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">Das Verfahren wird nur eingefügt, wenn die Option <span class="gui_element">inkl. Rücksprung-Verfahren</span> ausgewählt ist <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1214100">(siehe „Verfahrensablauf automatisch erzeugen“ auf Seite&#160;858)</MadCap:xref>.</p>
+                        <p class="CellText">Rücksprung zum Schritt EVA-Bewertung mit Vergleich der aktuellen Kenngrößenmatrizen der Reisezeit (durch die Mittelwertbildung gemittelt) für ein beliebiges zugeordnete IV-Nachfragesegment, mit max. Anzahl Iterationen = 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Schritte für die Berechnung mit dem VISEM-Modell</h5>
+        <p class="Text">Die folgende Tabelle zeigt, welche Verfahren automatisch eingefügt werden, wenn Sie einen Verfahrensablauf für ein Nachfragemodell des Typs VISEM erzeugen.</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="178px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="317px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Schritt</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Parameter</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">VISEM-Verkehrserzeugung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Für alle Nachfrageschichten des Modells mit Standardeinstellungen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Verteilung und Moduswahl</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">IV-Kenngrößenmatrix berechnen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete IV-Nachfragesegment</p>
+                        <p class="CellText">Die Kenngröße <span class="gui_element">tAkt Zeit-IVSys</span> wird in einer Datei gespeichert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">ÖV-Kenngrößenmatrix berechnen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete ÖV-Nachfragesegment</p>
+                        <p class="CellText">Die Kenngröße <span class="gui_element">empfundene Reisezeit</span> wird in einer Datei gespeichert, bei fahrplanfeiner Umlegung gilt dies auch für die <span class="gui_element">Anpassungszeit</span> (Umlegung wird mit Standardparametern gerechnet).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">VISEM-kombinierte Verkehrsverteilung/Moduswahl</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Für alle Nachfrageschichten des Modells mit Standardeinstellungen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Matrixaggregation</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">Kombination von Matrizen und Vektoren</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete Nachfragesegment</p>
+                        <p class="CellText">Ergebnismatrix = Summe der zugeordneten Nachfragematrizen (Personengruppe x Modus) / Besetzungsgrad des Nachfragesegments</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">Kombination von Matrizen und Vektoren</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Für jede gemittelte Kenngrößenmatrix</p>
+                        <p class="CellText">Ergebnismatrix = aktuelle Kenngrößenmatrix</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Umlegung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">IV-Umlegung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Für die zugeordneten IV-Nachfragesegmente</p>
+                        <p class="CellText">Verfahren gemäß Einstellung, mit Standardparametern</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">ÖV-Umlegung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Für die zugeordneten ÖV-Nachfragesegmente</p>
+                        <p class="CellText">Fahrplan- oder taktfein gemäß Einstellung, mit Standardparametern, inklusive Kenngrößenberechnung für das Nachfragesegment, das im Fenster <span class="gui_element">Parameter Umlegungsverfahren</span> im Register <span class="gui_element">Nachfragesegmente</span> ausgewählt ist <MadCap:xref class="siehe_1" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Taktfeine Umlegung_ Register Nachfragesegmente.htm#2_einstellungen_benutzermodell_oev_2589728191_1038606"><span style="color: Black;" class="mcFormatColor">(</span><u>Taktfeine Umlegung: Register Nachfragesegmente</u></MadCap:xref><MadCap:xref class="siehe_2" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Fahrplanfeine Umlegung_ Register Nachfragesegmente.htm#2_einstellungen_benutzermodell_oev_2589728191_1041553"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Fahrplanfeine Umlegung: Register Nachfragesegmente</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Mittelung Kenngrößenmatrizen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">-</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">IV-Kenngrößenmatrix berechnen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete IV-Nachfragesegment</p>
+                        <p class="CellText">Die Kenngröße <span class="gui_element">tAkt Zeit-IVSys</span> wird in einer Datei gespeichert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">Mittelwertbildung (MSA) von Matrizen</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Ein Verfahren für jede aktuelle Kenngrößenmatrix</p>
+                        <p class="CellText">Ergebnismatrix = i/(i+1) * gemittelte Kenngrößenmatrix + 1/(i+1) * aktuelle Kenngrößenmatrix</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: iterative Wiederholung</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Die Gruppe wird nur eingefügt, wenn die Option <span class="gui_element">inkl. Rücksprung-Verfahren</span> ausgewählt ist <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1214100">(siehe „Verfahrensablauf automatisch erzeugen“ auf Seite&#160;858)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">Bedingter Rücksprung</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Das Verfahren wird nur eingefügt, wenn die Option <span class="gui_element">inkl. Rücksprung-Verfahren</span> ausgewählt ist <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1214100">(siehe „Verfahrensablauf automatisch erzeugen“ auf Seite&#160;858)</MadCap:xref>.</p>
+                        <p class="CellText">Rücksprung zum Schritt VISEM-kombinierte Verkehrsverteilung/Moduswahl mit Vergleich der aktuellen Kenngrößenmatrizen der Reisezeit (durch die Mittelwertbildung gemittelt) für ein beliebiges zugeordnete IV-Nachfragesegment, mit max. Anzahl Iterationen = 5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Gruppe &lt;Nachfragemodellcode&gt;: Zeitabhängige Nachfrage</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Die Gruppe wird nur eingefügt, wenn die Option <span class="gui_element">zusätzlich Nachfragematrizen für Zeitintervall berechnen (VISEM)</span> ausgewählt ist <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1214100">(siehe „Verfahrensablauf automatisch erzeugen“ auf Seite&#160;858)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Verfahren <span class="gui_element">VISEM-kombinierte Verkehrsverteilung/Moduswahl</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Für alle Nachfrageschichten des Modells für ein benutzerdefiniertes Zeitintervall <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1214100">(siehe „Verfahrensablauf automatisch erzeugen“ auf Seite&#160;858)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">Verfahren <span class="gui_element">Kombination von Matrizen und Vektoren</span></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">Ein Verfahren für jedes zugeordnete Nachfragesegment für ein benutzerdefiniertes Zeitintervall <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1214100">(siehe „Verfahrensablauf automatisch erzeugen“ auf Seite&#160;858)</MadCap:xref></p>
+                        <p class="CellText">Ergebnismatrix = Summe der zugeordneten Nachfragematrizen (Personengruppe x Modus) / Besetzungsgrad des Nachfragesegments</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

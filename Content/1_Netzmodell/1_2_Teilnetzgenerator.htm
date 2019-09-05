@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs;Ride" MadCap:lastBlockDepth="4" MadCap:lastHeight="2754" MadCap:lastWidth="582">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_netzmodell_1240632468_1142023">
+            </a>
+            <MadCap:keyword term="Teilnetzgenerator" />
+            <a name="1_netzmodell_1240632468_43865">
+            </a>Teilnetzgenerator</h2>
+        <p class="Text">Mit dem Zusatzmodul <span class="gui_element">Teilnetzgenerator</span> kann ein Teilnetz mit zugehörigen Teilmatrizen aus dem Gesamtnetz in solcher Weise erzeugt werden, dass sich für das Teilnetz in der Regel vergleichbare Umlegungsresultate ergeben.</p>
+        <p class="Text">Das Teilnetz wird dabei nach folgenden Regeln erzeugt:</p>
+        <ul>
+            <LI class="List0">Ausgegangen wird von den aktiven Strecken und den aktiven Linienrouten.</LI>
+            <LI class="List0">Darüber hinaus werden folgende Netzobjekte ins Teilnetz aufgenommen:</LI>
+            <LI class="List1">Alle Von- und Nach-Knoten der aktiven Strecken.</LI>
+            <LI class="List1">Alle Knoteneditor-/Knotensteuerungsdaten für die Knoten, die mit wenigstens einem Arm im Teilnetz liegen</LI>
+            <LI class="List1">Alle Abbieger, deren Von- und Nach-Strecke zum Teilnetz gehört</LI>
+            <LI class="List1">Alle Anbindungen an einen Knoten, der im Teilnetz liegt</LI>
+            <LI class="List1">Alle Bezirke mit Anbindungen an einen Knoten, der im Teilnetz liegt</LI>
+            <LI class="List1">Alle IV-Wege, die zu Wegemengen gehören</LI>
+            <LI class="List1">Alle Zählstellen, die an einer aktiven Strecke liegen</LI>
+            <LI class="List1">Alle aktiven POIs, dabei werden alle im Teilnetz möglichen Referenzen auf Knoten, Strecken, POIs, Haltepunkte und Haltestellenbereiche mit kopiert</LI>
+            <LI class="List1">Alle Screenlines</LI>
+            <LI class="List1">Alle existierenden Mautsysteme, denen mindestens eine aktive Strecke zugeordnet ist.</LI>
+            <LI class="List1">Alle aktiven Gebiete</LI>
+            <LI class="List1">Alle Oberknoten, wenn alle zugehörigen Teilknoten aktiv sind, sowie alle zugehörigen Oberabbieger</LI>
+            <LI class="List1">Alle Haltestellen, die mindestens einen Haltepunkt an einer aktiven Linienroute oder einen Haltestellenbereich im aktiven Bereich haben, werden vollständig (inklusive aller Haltepunkte und Haltestellenbereiche) übernommen. Außerdem werden von der Haltestelle referenzierte Knoten (der Haltestellenbereiche oder Haltepunkte) und gegebenenfalls die Anbindungen und damit verbundene Bezirke übernommen. </LI>
+            <LI class="List1">Alle aktiven Linienrouten, gegebenenfalls abgeschnitten</LI>
+            <LI class="List1">Alle Haltepunkte und Strecken von <span class="gui_element">zurechtgeschnittenen</span> Linienrouten</LI>
+            <LI class="List1">Alle Linien, die mindestens eine aktive Linienroute haben</LI>
+            <LI class="List1">Alle Oberlinien, die mindestens eine Linie im entstandenen Teilnetz haben</LI>
+            <LI class="List1">Alle Linienroutenverläufe der aktiven Linienrouten</LI>
+            <LI class="List1">Alle Fahrzeitprofile und Fahrzeitprofilverläufe der aktiven Linienrouten</LI>
+            <LI class="List1">Alle Fahrplanfahrten, Fahrplanfahrtabschnitte und Fahrplanfahrtverläufe der aktiven Linienrouten</LI>
+            <LI class="List1">Alle Koordinierungsgruppen, die bezüglich der beteiligten Fahrzeitprofile und bezüglich der örtlichen Ausdehnung vollständig im Teilnetz liegen</LI>
+            <LI class="List1">Alle Abbiegestandards und Umlaufelementtypen</LI>
+        </ul>
+        <p class="Text">Folgende Netzobjekte aus dem Gesamtnetz werden außerdem ins Teilnetz aufgenommen.</p>
+        <ul>
+            <LI class="List0">Nachfragesegmente</LI>
+            <LI class="List0">Modi</LI>
+            <LI class="List0">Verkehrssysteme</LI>
+            <LI class="List0">Streckentypen</LI>
+            <LI class="List0">Oberbezirke</LI>
+            <LI class="List0">Kalenderperioden</LI>
+            <LI class="List0">Verkehrstage</LI>
+            <LI class="List0">Tarifzonen</LI>
+            <LI class="List0">Fahrkartenarten</LI>
+            <LI class="List0">Richtungen</LI>
+            <LI class="List0">Betreiber</LI>
+            <LI class="List0">Fahrzeugkombinationen</LI>
+            <LI class="List0">Fahrzeugeinheiten</LI>
+            <LI class="List0">Flächen</LI>
+            <LI class="List0">Nachfragematrizen</LI>
+            <LI class="List0">Ganglinien</LI>
+            <LI class="List0">Nachfrageganglinien</LI>
+            <LI class="List0">Aktivitäten, Aktivitätenpaare, Aktivitätenketten *</LI>
+            <LI class="List0">Personengruppen, Strukturgrößen *</LI>
+            <LI class="List0">Nachfrageschichten *</LI>
+            <LI class="List0">Kenngrößenmatrizen </LI>
+            <LI class="List0">Verfahrensparameter </LI>
+        </ul>
+        <p class="Text">* bei aktivierter Option <span class="gui_element">Nachfragemodell ins Teilnetz übernehmen</span></p>
+        <ul>
+            <LI class="List0">Nachfragematrizen</LI>
+        </ul>
+        <p class="List_Text0">Neben den ausgewählten Teilmatrizen <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Teilnetzgenerator_verwenden.htm#2_netz_bearbeiten_23091886_2463070"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Teilnetzgenerator verwenden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>, werden auch alle weiteren im Originalnetz vorhandenen Matrizen ins Teilnetz übernommen. Die Werte dieser Matrizen werden auf null gesetzt. Um ihre Zugehörigkeit zu dem Teilnetz zu kennzeichnen, werden die Matrix-Dateinamen mit einem Suffix versehen. Sind in der Versionsdatei Verweise auf Matrizen vorhanden, so werden diese entsprechend aktualisiert.</p>
+        <p class="Text2">Beispiel</p>
+        <p class="Text2">Teilnetz-Versionsname: <span class="path">tgen_ver<br /></span>Matrix-Dateiname im Originalnetz: <span class="path">pkw.mtx<br /></span>Matrix-Dateiname im Teilnetz: <span class="path">pkw</span>_<span class="path">tgen</span>.<span class="path">mtx</span></p>
+        <p class="Text">Der Teilnetzgenerator berücksichtigt die Wege einer vorhandenen Umlegung und generiert an den Schnittstellen des Netzes, an denen Verkehrsströme in das Netz ein- oder aus dem Netz ausfahren, neue Bezirke. Diese <span class="gui_element">virtuellen</span> Grenzbezirke (Kordonbezirke) ergänzen die Teilmatrizen der Nachfragesegmente, so dass keine Verkehrsnachfrage im Teilnetz verloren geht.</p>
+        <ul>
+            <LI class="List0">IV-Nachfragematrizen</LI>
+        </ul>
+        <p class="List_Text0">Kordonanbindungen werden an allen Grenzknoten generiert. Grenzknoten sind Knoten, an denen aktive und passive Strecken zusammentreffen, das heißt an denen mindestens eine Strecke nicht zum Teilnetz gehört. Für jede Kordonanbindung wird ein Kordonbezirk generiert. Über die Wege kann <MadCap:variable name="PTV_Manual.Programmname" /> die Nachfragematrix dann ergänzen. Dazu ist eine Umlegung erforderlich.</p>
+        <ul>
+            <LI class="List0">ÖV-Nachfragematrix</LI>
+        </ul>
+        <p class="List_Text0">Grenzhaltepunkte sind die ersten und letzten Haltepunkte der aktiven Linienrouten sowie alle Haltepunkte, an denen Umsteigevorgänge zu passiven Linienrouten stattfinden. An jedem Haltestellenbereich eines Grenzhaltepunktes werden Kordonanbindungen erzeugt. Für jede Kordonanbindung wird ein Kordonbezirk generiert. Dazu ist eine Umlegung erforderlich. Alternativ können zwei Arten von Haltepunktmatrizen erzeugt werden.</p>
+        <ul>
+            <LI class="List1">
+                <span class="gui_element">teilwegfein</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Für jeden einzelnen Teilweg, dessen Linienroute aktiv ist, wird jeweils ein Kordonbezirk am Start- und am Endhaltepunkt erzeugt. Die Belastung des Weges wird als Nachfrage zwischen diesen Bezirken vermerkt, das heißt sie taucht in der neuen Matrix genauso oft auf, wie der Weg Teilwege hat.</p>
+        <ul>
+            <LI class="List1">
+                <span class="gui_element">wegfein</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Für jede Route wird für den ersten Haltepunkt einer aktiven Linienroute ein Kordonbezirk erzeugt (Start). Verlässt die Route die Menge der aktiven Linienrouten oder folgt auf einen Teilweg ein Fußweg, der über eine nicht aktive Strecke führt, so wird am letzten Haltepunkt des letzten aktiven Teilwegs ein Kordonbezirk erzeugt (Ziel). Die Nachfrage wird zwischen Start und Ziel vermerkt. Sobald die Route die Menge der aktiven Linienrouten wieder betritt, wird zunächst wieder ein Kordonbezirk am ersten Haltepunkt des ersten aktiven Teilwegs erzeugt usw.</p>
+        <p class="Text">Wenn alle Linienrouten und alle Strecken aktiv sind, ist die Summe der Haltepunktmatrix gleich der Summe der Nachfragematrix.</p>
+        <p class="Text">Für wegfeine und teilwegfeine Matrizen gilt: Wird bei einer ÖV-Umlegung das Verkehrssystem ÖV-Zusatz verwendet, behandelt der Teilnetzgenerator die Routen, die ÖV-Zusatz enthalten, wie folgt:</p>
+        <ul>
+            <LI class="List0">Ist auf einem Routenabschnitt mit ÖV-Zusatz eine Strecke passiv, so wird an deren Von-Knoten ein Kordonbezirk eingefügt. Sobald wieder auf eine aktive Strecke gestoßen wird, erzeugt der Teilnetzgenerator auch an deren Von-Knoten einen Kordonbezirk. Die Belastung wird als Nachfrage von einem Kordonbezirk zum nächsten vermerkt.</LI>
+            <LI class="List0">Der Unterschied zum Verkehrssystem ÖV-Fuß ist folgender: Ist innerhalb eines Fußwegs mindestens eine Strecke passiv, werden die entsprechenden Kordonbezirke am letzten Haltepunkt vor dem Fußweg und am nächsten Haltepunkt nach dem Fußweg eingefügt, nicht an den Knoten der passiven Strecke.</LI>
+        </ul>
+        <p class="Text">In <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1113731">Abbildung&#160;45</MadCap:xref> ist ein Beispiel zur Erläuterung der Unterschiede angegeben. Es wurde die Option <span class="gui_element">Nummern der Kordonbezirke mit Offset</span> gewählt, um den Zusammenhang zu den Knoten zu verdeutlichen. Als Offset wurde 10 gewählt.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Stoppoint_matrix.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_netzmodell_1240632468_1113731">
+            </a>
+            <a name="1_netzmodell_1240632468_86185">
+            </a>Teilnetz schneiden bei wegfeinen und teilwegfeinen Haltepunktmatrizen</p>
+        <ul>
+            <LI class="List0">Verfahrensparameter</LI>
+        </ul>
+        <p class="Text2">Alle im Ursprungsnetz vorhandenen Verfahrensparameter werden in das Teilnetz über-nommen. Um ihre Zugehörigkeit zu dem Teilnetz zu kennzeichnen, werden Dateien, in denen die Verfahrensparameter gespeichert sind, mit einem Suffix versehen.</p>
+    </body>
+</html>

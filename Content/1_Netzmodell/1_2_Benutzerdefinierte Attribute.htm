@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="624" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1142219">
+            </a>
+            <a name="1_netzmodell_1240632468__toc150066291">
+            </a>
+            <a name="1_netzmodell_1240632468__toc148869097">
+            </a>
+            <a name="1_netzmodell_1240632468__toc129749736">
+            </a>
+            <a name="1_netzmodell_1240632468__toc129584512">
+            </a>
+            <a name="1_netzmodell_1240632468__ref122166537">
+            </a>
+            <MadCap:keyword term="Attribute: benutzerdefinierte" />
+            <MadCap:keyword term="Benutzerdefinierte Attribute" />Benutzerdefinierte Attribute</h3>
+        <p class="Text">Für alle Netzobjekte können Sie - wie in Datenbanken oder Geografischen Informationssystemen - zusätzlich zu den in <MadCap:variable name="PTV_Manual.Programmname" /> vordefinierten Eingabe- und Ausgabe-Attributen beliebige weitere Attribute definieren. Benutzerdefinierte Attribute lassen sich in der gleichen Weise wie vordefinierte <MadCap:variable name="PTV_Manual.Programmname" />-Attribute bearbeiten und verwalten.</p>
+        <p class="Text">Damit lassen sich zum Beispiel folgende Daten in das Modell aufnehmen.</p>
+        <ul>
+            <LI class="List0">Strukturdaten der Verkehrsbezirke (zum Beispiel Anzahl Haushalte oder Anzahl Arbeitsplätze), die als Eingangsdaten für die Nachfragemodellierung dienen.</LI>
+        </ul>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_UDA_StructuralData.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">In benutzerdefinierten Attributen gespeicherte Strukturdaten für Bezirke</p>
+        <ul>
+            <LI class="List0">Zähldaten von Strecken mehrerer Jahre (zum Beispiel DTV2005, DTV2006)</LI>
+        </ul>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_UDA_Counts.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000028px;margin-bottom: 0, 9997538px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">In benutzerdefinierten Streckenattributen gespeicherte Zähldaten</p>
+        <ul>
+            <LI class="List0">Verschiedene Kategorien von Fahrplanfahrten (Schülerfahrt, Verstärkerfahrt)</LI>
+            <LI class="List0">Benutzerdefinierte Attribute zum Speichern von Rechenergebnissen aus Mehrfach-Bearbeiten-Operationen <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Attributwerte_von_Netzobjekten_bearbeiten.htm#2_netz_bearbeiten_23091886_2374080"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Attributwerte von Netzobjekten bearbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1182368">Tabelle&#160;27</MadCap:xref> zeigt ein Beispiel, in dem die Linienkosten pro Kilometer Streckenlänge mit Hilfe einer Formel berechnet werden und das Ergebnis im benutzerdefinierten Attribut <span class="gui_element">Cost_per_Km</span> hinterlegt wird.</LI>
+        </ul>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Linienname</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Kosten [GE]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Liniennetzlänge [km]</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Cost_per_Km [GE/km]</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">001</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">13&#160;012,86</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">22,94</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">567,06</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">002</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">22&#160;797,80</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">36,02</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">632,83</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">003</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">13&#160;390,06</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">14,60</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">916,71</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">004</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">10&#160;428,43</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_right">19,99</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_right">521,58</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">005</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">10&#160;109,21</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_right">17,87</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_right">565,65</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">006</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_right">6&#160;833,93</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_right">23,03</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText_right">296,65</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_netzmodell_1240632468_1182368">
+                    </a>
+                    <a name="1_netzmodell_1240632468_23356">
+                    </a>Speicherung der Kosten pro Kilometer in einem benutzerdefinierten Attribut</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Soll das Attribut <span class="gui_element">Cost_per_Km</span> automatisch aktualisiert werden, falls sich Kosten oder Streckenlängen ändern, greifen Sie auf Formelattribute zurück <MadCap:xref class="sieheUeberschrSeite" href="1_2_Formelattribute.htm#1_netzmodell_1240632468_1192440"><span style="color: Black;" class="mcFormatColor">(</span><u>Formelattribute</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Damit müssen Sie die Rechenoperation nicht wiederholen, um das Attribut zu aktualisieren, sondern <MadCap:variable name="PTV_Manual.Programmname" /> errechnet automatisch die aktuellen Werte.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Jedes benutzerdefinierte Attribut hat einen Datentyp. Es stehen die folgenden Datentypen zur Auswahl.</p>
+        <ul>
+            <LI class="List0">Bool (zum Beispiel für ein benutzerdefiniertes Attribut „in Szenario aktiv“, das nur mit 0 oder 1 belegt werden kann)</LI>
+            <LI class="List0">Datei (zum Beispiel für ein benutzerdefiniertes Attribut an Zählstellen, in dem hinterlegt ist, in welcher Datei sich weitere Informationen zur Zählstelle befinden)</LI>
+            <LI class="List0">Formel (um berechnete Attributwerte automatisch aktuell zu halten) <MadCap:xref class="sieheUeberschrSeite" href="1_2_Formelattribute.htm#1_netzmodell_1240632468_1192440"><span style="color: Black;" class="mcFormatColor">(</span><u>Formelattribute</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">Ganzzahl</LI>
+            <LI class="List0">Genaue Zeitdauer</LI>
+            <LI class="List0">Gleitkommazahl</LI>
+            <LI class="List0">Kilometer</LI>
+            <LI class="List0">Meter</LI>
+            <LI class="List0">Langer Text</LI>
+            <LI class="List0">Text</LI>
+            <LI class="List0">Zeitdauer</LI>
+            <LI class="List0">Zeitpunkt (zum Beispiel 06:32:45)</LI>
+        </ul>
+    </body>
+</html>

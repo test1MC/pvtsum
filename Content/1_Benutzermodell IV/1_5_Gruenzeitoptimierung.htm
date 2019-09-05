@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="688" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;v0;VOT;CR;277s;akt;321s;360s;ver;AE;ED;Fzg;BD;CF;DF;StrNr;0ij;0i;0j;ij;r1;exp;r2;MSA;Method;of;t0;tAkt;car;fma;hveh;Landstr;Str;NCHRP;Wardrop’schen;NLM;VerwendeUmlaufzeitfamilie;SignalKoordinierungsGruppe;VerwendeUmlaufzeitFamilie;VT;Bundesstr;AP;46min;39s;34s;12s;FahrzeugStd;FahrzeugKm;11min;40s;370h;54min;19s;5min;47s;111h;43min;15s;7min;48s;188h;29min;DueStauWellenGeschw;DueFunDiag;PlatzProPKWE;StreckenPlatzProPKWE;vMax;IVAnteil_Q;IVAnteil_Z;Abbiegerkapazitäten;x1;x2;x3;Turns;mph;bzw;1h;etc;Belastungs;Vol;Separabilität;ci;te;38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;PkwE;Congestion;Charging;MautsystemNr">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_iv_2033098965_1591856">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_99420">
+            </a>Grünzeitoptimierung</h4>
+        <p class="Text">
+            <MadCap:keyword term="Grünzeitoptimierung" />Bei der reinen Grünzeitoptimierung gilt die vorgegebene Umlaufzeit als fest vorgegeben.</p>
+        <h5>
+            <a name="1_benutzermodell_iv_2033098965_1591858">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_76730">
+            </a>Grünzeitoptimierung für phasenbasierte Signalanlagen</h5>
+        <p class="Text">Folgende Schritte sind zur Berechnung der Grünzeitaufteilung erforderlich:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Aufteilung der Zufahrten in Fahrstreifengruppen (schon aus der Kapazitätsanalyse vorhanden).</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Berechnung des angepassten Aufkommens und der Sättigungsverkehrsstärke für jede einzelne Fahrstreifengruppe (schon aus der Kapazitätsanalyse vorhanden).</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Bestimmung der kritischen Fahrstreifengruppe für jede Phase im Signalzeitenplan.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Zuordnung der Grünzeit auf der Basis der Verhältnisse zwischen kritischer Fahrstreifengruppe/Sättigungsverkehrsstärke.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Überprüfung, ob die zugeordneten Grünzeiten alle Randbedingungen einhalten.</p>
+        <p class="Text">Die Grünzeitaufteilung wird wie folgt berechnet:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_202.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">G</span>
+                            <span class="formula_subscript">i</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">effektive Grünzeit für Phase <span class="formula">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var">(<span class="formula">v/s</span>)<span class="formula_subscript">ci</span></p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Verhältnis von Belastung <span class="formula">v</span> zu Sättigungsverkehrsstärke <span class="formula">s</span> für kritische Fahrstreifengruppe <span class="formula">ci </span>in Phase <span class="formula">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">G</span>
+                            <span class="formula_subscript">te</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">gesamte effektive Grünzeit für Umlauf</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die gesamte effektive Grünzeit für einen Umlauf ist gleich der Umlaufzeit abzüglich aller Zwischenzeiten zwischen aufeinanderfolgenden Phasen. Die Zwischenzeit zwischen zwei Phasen beträgt null, falls die Phasen Signalgruppen gemeinsam haben. Andernfalls ist die Zwischenzeit durch das Attribut <span class="gui_element">Standard-Zwischenzeit</span> der Signalanlage gegeben.</p>
+        <p class="Text">Jede Phase muss zudem die Mindestgrünzeit einhalten, die durch das Attribut <span class="gui_element">Mindestgrünzeit</span> der Signalanlage gegeben ist. Ist die berechnete Grünzeit einer Phase kürzer als die Mindestgrünzeit, wird die Gleichung der Grünzeitaufteilung nochmals berechnet, wobei die Phase mit der verletzten Mindestgrünzeit weggelassen wird. Der ausgelassenen Phase wird die Mindestgrünzeit zugeordnet, diese Mindestgrünzeit wird von der gesamten effektiven Grünzeit abgezogen und die Grünzeitaufteilung nochmals berechnet.</p>
+        <p class="Text">Als Ergebnis der Optimierung werden den Attributen <span class="gui_element">Grünzeitanfang</span> und <span class="gui_element">Grünzeitende</span> der Phasen neue Werte zugewiesen.</p>
+        <h5>
+            <a name="1_benutzermodell_iv_2033098965_26855">
+            </a>Grünzeitoptimierung für signalgruppenbasierte Signalanlagen</h5>
+        <p class="Text">Die Optimierung signalgruppenbasierter Signalanlagen wird durch folgende Schritte auf die Vorgehensweise bei phasenbasierten Signalanlagen zurückgeführt:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Aus den aktuellen Grünzeiten der Signalgruppen werden fiktive Phasen erzeugt.</p>
+        <p class="Text2">
+            <MadCap:variable name="PTV_Manual.Programmname" /> bestimmt zunächst die Menge <span class="formula">T</span> aller Schaltzeitpunkte aus den Attributen <span class="gui_element">Grünzeitanfang</span> und <span class="gui_element">Grünzeitende</span> aller Signalgruppen und sortiert diese aufsteigend. Erzeuge für jedes Intervall zwischen aufeinanderfolgenden Zeitpunkten <span class="formula">t</span><span class="formula_subscript">i</span> und <span class="formula">t</span><span class="formula_subscript">i+1</span> in <span class="formula">T</span> eine Phase, die alle Signalgruppen enthält, die während [<span class="formula">t</span><span class="formula_subscript">i</span> ; <span class="formula">t</span><span class="formula_subscript">i+1</span>) freigegeben sind.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Die fiktive phasenbasierte Signalanlage wird wie oben optimiert <MadCap:xref class="sieheUeberschrSeite" href="#1_benutzermodell_iv_2033098965_1591858"><span style="color: Black;" class="mcFormatColor">(</span><u>Grünzeitoptimierung für phasenbasierte Signalanlagen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Aus der optimalen Phasenaufteilung werden die Grünzeiten der Signalgruppen abgelesen.</p>
+        <p class="Text2">Die Grünzeit jeder Signalgruppe ergibt sich aus den Grünzeiten aller Phasen, die die Signalgruppe enthalten. Da konstruktionsbedingt alle diese Phasen benachbart sind, ergibt sich eine einzige Grünzeit für die Signalgruppe.</p>
+        <h5>Grünzeitoptimierung für externe Signalanlagen und RBC</h5>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> kann Signalanlagen vom Typ Vissig optimieren. Für die Signalanlage müssen Phasen definiert sein. Die Optimierung von Vissig-Steuerungen ohne Phasen oder von Steuerungen vom Typ RBC wird erst zu einem späteren Zeitpunkt angeboten.</p>
+        <p class="Text">Falls Sie einzelne Phasen von der Optimierung ausschließen und ihre Länge aus dem ursprünglichen Signalzeitenplan beibehalten möchten, dann setzen Sie ihr Attribut <span class="gui_element">Pseudophase</span> auf wahr.</p>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> führt folgende Schritte zur Berechnung der Grünzeitaufteilung aus:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Führe für den aktuellen Signalzeitenplan eine ICA-Berechnung aus und ermittle Sättigungsverkehrsstärken und Belastungen für jede Fahrstreifengruppe.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">
+            <a name="1_benutzermodell_iv_2033098965_1630196">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_11350">
+            </a>Löse das lineare Optimierungsproblem:</p>
+        <p class="List_Text0">
+            <img src="../Resources/Images/7_65.jpg" />
+        </p>
+        <p class="List_Text0">wobei</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="439px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">L</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Menge aller Fahrstreifengruppen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">C</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Umlaufzeit</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">s</span>
+                            <span class="formula" style="font-size: 80%;vertical-align: sub;">l</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Sättigungsverkehrsstärke von Fahrstreifengruppe <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">l</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">q</span>
+                            <span class="formula" style="font-size: 80%;vertical-align: sub;">l</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Belastung von Fahrstreifengruppe <span class="_Override" style="font-family: 'Times New Roman';font-style: italic;">l</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula" style="font-size: 80%;vertical-align: sub;">P</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Grünzeitdauer von Phase P</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">
+                                <img src="../Resources/Images/7_278.jpg" />
+                            </span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">Mindestgrünzeitdauer von Phase P</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text2">Die erste Nebenbedingung drückt aus, dass der Anteil z der Belastung jeder Fahrstreifengruppe durch die Grünzeiten der für diese Gruppe verfügbaren Phasen bedient wird. Der Anteil z wird maximiert.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Führe für den optimierten Signalzeitenplan erneut eine ICA-Berechnung aus.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Falls sich die gesamte mittlere Wartezeit nicht verbessert hat, brich ab und gehe zu <MadCap:xref class="Schrittnummer" href="#1_benutzermodell_iv_2033098965_1640069">Schritt 5</MadCap:xref>. Falls sich die Sättigungsverkehrsstärken geändert haben, gehe zu <MadCap:xref class="Schrittnummer" href="#1_benutzermodell_iv_2033098965_1630196">Schritt 2</MadCap:xref>. Sonst gehe ebenfalls zu <MadCap:xref class="Schrittnummer" href="#1_benutzermodell_iv_2033098965_1640069">Schritt 5</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <a name="1_benutzermodell_iv_2033098965_1640069">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_20372">
+            </a>Weise den Attributen <span class="gui_element">Grünzeitanfang</span> und <span class="gui_element">Grünzeitende</span> der Phasen die Werte aus der letzten Optimallösung zu.</p>
+    </body>
+</html>

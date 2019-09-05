@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs;Ride" MadCap:lastBlockDepth="4" MadCap:lastHeight="2866" MadCap:lastWidth="474">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1095337">
+            </a>Screenlines</h3>
+        <p class="Text">
+            <MadCap:keyword term="Screenlines" />
+            <MadCap:keyword term="Netzobjekte: Screenlines" />Eine Screenline ist ein Polygon, das vom Anwender mit beliebigen Zwischenpunkten in das Netz eingefügt werden kann. Die Screenline wird so eingefügt, dass sie mehrere Strecken schneidet. Mit der Screenline lassen sich dann die Werte beliebiger Attribute aller Strecken, die von der Screenline geschnitten werden, aggregieren. Es stehen dabei folgende Aggregationsfunktionen jeweils für alle oder nur für die aktiven Strecken zur Verfügung <MadCap:xref class="sieheUeberschrSeite" href="1_2_Indirekte Attribute.htm#1_netzmodell_1240632468_1028791"><span style="color: Black;" class="mcFormatColor">(</span><u>Indirekte Attribute</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <ul>
+            <LI class="List0">Anzahl der Strecken, die die Screenline schneidet</LI>
+            <LI class="List0">Minimum der Werte des gewählten Attributs aus allen von der Screenline geschnittenen Strecken</LI>
+            <LI class="List0">Maximum der Werte des gewählten Attributs aus allen von der Screenline geschnittenen Strecken</LI>
+            <LI class="List0">Summe der Werte des gewählten Attributs über alle von der Screenline geschnittenen Strecken</LI>
+            <LI class="List0">Durchschnitt der Werte des gewählten Attributs aus allen von der Screenline geschnittenen Strecken</LI>
+            <LI class="List0">Verketten der Werte des gewählten Attributs für alle von der Screenline geschnittenen Strecken</LI>
+        </ul>
+        <p class="Text">Eine Screenline hat eine Orientierung, die von der Reihenfolge der Polygonpunkte in ihrem Verlauf abhängt. Sie weist stets nach rechts in Einfügerichtung. Pfeilspitzen entlang des Verlaufs kennzeichnen standardmäßig die Orientierung. Für die Aggregation können alle Strecken in Richtung der Screenline-Orientierung, entgegen der Screenline-Orientierung oder auch alle Strecken unabhängig von der Richtung berücksichtigt werden.</p>
+        <p class="Text">Im folgenden Beispiel schneidet die Screenline zwei Strecken, deren Belastung 1&#160;000 und 3&#160;000 Personen beträgt. Die Screenline aggregiert nun die Werte der Strecken, die sie schneidet. Im Beispiel weist sie für alle Strecken in Screenline-Orientierung eine Summe von 4&#160;000 Personen und ein Durchschnitt von 2&#160;000 Personen aus.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_Screenlines_Example.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Summation und Durchschnittsbildung mit Screenlines</p>
+        <p class="Text">Mit Hilfe von Screenlines können Sie zum Beispiel in einer Verkehrsuntersuchung, die Aussagen zur Verkehrsbelastung eines Innenstadtbereichs liefern soll, ermitteln, wie viel Verkehr täglich in den Innenstadtbereich hinein und aus dem Innenstadtbereich heraus fließt. In <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1095567">Abbildung&#160;36</MadCap:xref> fahren im IV 149&#160;334&#160;Fahrzeuge in den Innenstadtbereich und im ÖV 76&#160;370&#160;Personen.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_Screenlines_InnerCity.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 0, 9997538px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_netzmodell_1240632468_1095567">
+            </a>
+            <a name="1_netzmodell_1240632468_27815">
+            </a>Berechnung der innerstädtischen Verkehrsbelastung mit Screenlines</p>
+        <p class="Text">Screenlines sind ein nützliches Konstrukt für die Kalibrierung eines Umlegungsmodells anhand von Streckenzählwerten. Eine Screenline aggregiert alle Strecken, die sie schneiden. Für die Kalibrierung des Modells ist das hilfreich, weil kumulierte Umlegungsbelastungen mit kumulierten Streckenzählwerten verglichen werden können. Für das Einfügen der Screenlines bietet es sich häufig an, diese an natürliche Gegebenheiten anzupassen. So könnte die Screenline etwa entlang eines Flusses verlaufen. Für die Kalibrierung des Modells sollten dann vom Grundprinzip her über den Tag gesehen mindestens die Summen der Belastungen auf allen Brücken übereinstimmen, auch wenn die Verteilung der Belastungen auf die einzelnen Brücken (Routensplit) noch voneinander abweichen können. Mit Hilfe der Umlegungsanalyse lassen sich die aggregierten Zähldaten und umgelegten Belastungen der Screenline statistisch auswerten <MadCap:xref class="Benutzerhandbuch" href="../2_Verfahrensablauf_festlegen/2_4_Umlegungsanalyse durchführen.htm#2_verfahrensablauf_festlegen_40480990_1073835"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Umlegungsanalyse durchführen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Mit dieser Analyse-Funktionalität lässt sich die Effizienz der Kalibrierung beträchtlich steigern.</p>
+    </body>
+</html>

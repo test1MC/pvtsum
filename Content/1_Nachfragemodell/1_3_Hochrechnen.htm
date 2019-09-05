@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="1373" MadCap:lastWidth="1018" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;zeilen;ip;jp;GF">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1260026">
+            </a>
+            <a name="1_nachfragemodell_2215163117_75054">
+            </a>Hochrechnen</h3>
+        <p class="Text">
+            <MadCap:keyword term="Matrizen: hochrechnen" />Die Funktionalität wird vor allem verwendet, wenn Quell- oder Zielsummenwerte eines Bezirks mit einem Wert multipliziert oder ein bestimmter Sollwert erreicht werden soll, was unter Umständen nach einer Verkehrsbefragung erforderlich sein kann. Dort erhobene Matrizen sind oft nur Stichproben und müssen auf Zählwerte hochgerechnet werden.</p>
+        <p class="Text">Die Matrixwerte können zeilenweise hochgerechnet werden (einseitig gekoppeltes Hochrechnen bezüglich der Erzeugung), spaltenweise (einseitig gekoppeltes Hochrechnen bezüglich der Anziehung) oder sowohl zeilen- als auch spaltenweise (zweiseitig gekoppeltes Hochrechnen) <MadCap:xref class="Benutzerhandbuch" href="../2_Nachfrage_modellieren/2_3_Matrixwerte hochrechnen.htm#2_nachfrage_modellieren_1800171850_1620441"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Matrixwerte hochrechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Einseitig gekoppeltes Hochrechnen bedeutet dabei lediglich das Multiplizieren jeder Zeile bzw. Spalte mit einer festen Zahl, die ein Parameter des Verfahrens oder - bei Bezirks- und Oberbezirksmatrizen - ein Attribut des Bezirks bzw. Oberbezirks sein kann. Die Komplexität des zweiseitig gekoppelten Hochrechnens wird aus folgendem Beispiel deutlich:</p>
+        <p class="Text">Beispiel: Ziel soll sein, den Quell- und Zielverkehr folgendermaßen hochzurechnen.</p>
+        <ul>
+            <LI class="List0">Bezirk 1 um 10&#160;%</LI>
+            <LI class="List0">Bezirk 2 um 20&#160;%</LI>
+        </ul>
+        <table class="TableStyle_TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">Bezirk</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">Quellverkehr</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">20</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">30</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText_mid">50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">40</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">50</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">90</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">Zielverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">60</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">80</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText_mid">140</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Basismatrix</p>
+            </caption>
+        </table>
+        <p class="Text">Durch zeilenweise Multiplikation, das heißt bei rein einseitig gekoppeltem Hochrechnen des Verkehrs bezüglich der Erzeugung von Bezirk 1 um 10&#160;% und Bezirk 2 um 20&#160;%, ergibt sich folgende Matrix.</p>
+        <table class="TableStyle_TableStandard" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="124px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">Bezirk</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">Quellverkehr</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">22</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">33</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">55</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">48</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">60</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">108</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText_mid">Zielverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText_mid">70</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText_mid">93</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText_mid">163</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Der Quellverkehr wurde zwar korrekt erhöht, nicht jedoch der Zielverkehr.</p>
+        <p class="Text">Der Matrixeditor verwendet für die zweiseitig gekoppelte Hochrechnung ein iteratives Verfahren, auch Multi-Verfahren genannt. Dieses Verfahren sucht in einem schrittweisen Prozess die Lösung, die die Sollwerte am besten erreicht <MadCap:xref class="sieheUeberschrSeite" href="#1_nachfragemodell_2215163117_1224457">(siehe „Das Multi-Verfahren nach Lohse (Schnabel 1980)“ auf Seite&#160;196)</MadCap:xref>. </p>
+        <p class="Text">Damit liefert der Matrixeditor folgende Lösung, bei der sowohl Quell- als auch Zielverkehr korrekt hochgerechnet sind.</p>
+        <table class="TableStyle_TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">Bezirk</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">Quellverkehr</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">21</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">34</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText_mid">55</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">45</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">62</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">107</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">Zielverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">66</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">96</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText_mid">162</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Ergebnismatrix</p>
+            </caption>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="1_nachfragemodell_2215163117_1224457">
+            </a>
+            <a name="1_nachfragemodell_2215163117_37396">
+            </a>Das Multi-Verfahren nach Lohse (Schnabel 1980)</h5>
+        <p class="Text">
+            <MadCap:keyword term="Multi-Verfahren" />Beim Multi-Verfahren werden in jedem Iterationsschritt neue Verkehrsströme <span class="formula">F</span><span class="formula_subscript">ij</span> berechnet (Schnabel 1980).</p>
+        <p class="Text">Die verwendete Iterationsformel lautet</p>
+        <p class="Formula">
+            <span class="formula">F</span>
+            <span class="formula_subscript">ij</span>(<span class="formula">n+1</span>) = <span class="formula">F</span><span class="formula_subscript">ij</span>(<span class="formula">n</span>) • <span class="formula">q</span><span class="formula_subscript">i</span>(<span class="formula">n</span>) • <span class="formula">z</span><span class="formula_subscript">j</span>(<span class="formula">n</span>) • <span class="formula">f</span>(<span class="formula">n</span>)</p>
+        <p class="Text">mit</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_122.jpg" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_123.jpg" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_124.jpg" />
+        </p>
+        <table class="TableStyle_TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Q</span>
+                            <span class="formula" style="font-size: 80%;vertical-align: sub;">ip</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Gewünschter Quellverkehr Bezirk <span class="formula">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Z</span>
+                            <span class="formula" style="font-size: 80%;vertical-align: sub;">jp</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Gewünschter Zielverkehr Bezirk <span class="formula">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">G</span>
+                            <span class="formula" style="font-size: 80%;vertical-align: sub;">p</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Gewünschter Gesamtverkehr</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">F</span>
+                            <span class="formula" style="font-size: 80%;vertical-align: sub;">ij</span>
+                            <span class="formula">(n)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Verkehrsstrom von Bezirk <span class="formula">i</span> nach Bezirk <span class="formula">j</span> in Iteration <span class="formula">n</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Q</span>
+                            <span class="formula" style="font-size: 80%;vertical-align: sub;">i</span>
+                            <span class="formula">(n)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Quellverkehr Bezirk <span class="formula">i</span>, Iteration <span class="formula">n</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Z</span>
+                            <span class="formula" style="font-size: 80%;vertical-align: sub;">j</span>
+                            <span class="formula">(n)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Zielverkehr Bezirk <span class="formula">j</span>, Iteration <span class="formula">n</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">G(n)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Gesamtverkehr, Iteration <span class="formula">n</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Dieser iterative Rechengang wird so oft ausgeführt, bis für alle Randsummen (Quell- und Zielsollwerte) die folgenden Bedingungen erfüllt sind.</p>
+        <p class="Text">
+            <span class="formula">
+                <img src="../Resources/Images/5_126.jpg" />
+            </span> für alle Bezirke <span class="formula">i</span></p>
+        <p class="Text">
+            <span class="formula">
+                <img src="../Resources/Images/5_127.jpg" />
+            </span> für alle Bezirke <span class="formula">j</span></p>
+        <p class="Text">Als Schranke <span class="symbol">e</span> wurde der Vorschlag von Lohse übernommen. Danach ist</p>
+        <p class="Text">
+            <img src="../Resources/Images/5_130.jpg" /> oder <img src="../Resources/Images/5_131.jpg" />.</p>
+        <p class="Text">
+            <span class="formula">GF</span>: Gütefaktor</p>
+    </body>
+</html>

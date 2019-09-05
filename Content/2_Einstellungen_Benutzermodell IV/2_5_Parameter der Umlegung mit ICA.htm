@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="672" MadCap:lastWidth="510" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls;max;Program;Processor;R';Factor;Stdabw;Lognormalvert" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1125615">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_27409">
+            </a>Parameter der Umlegung mit ICA<a name="29101"></a></h4>
+        <h5 MadCap:autonum="">Umlegung mit ICA: Register Eingabe<a name="29102"></a></h5>
+        <p class="Text">In diesem Register legen Sie die Basisparameter für das Verfahren fest.</p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Bestehende Umlegung als Startlösung verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden Wege und Belastungen des vorhandenen Umlegungsergebnisses als Startlösung für das Verfahren verwendet.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option bietet sich zum Beispiel an, wenn sich die Nachfrage ändert (z.B. durch Matrix lesen oder Matrixdaten ändern im Matrixeditor). Das vorhandene Umlegungsergebnis wird zunächst passend zur neuen Nachfrage skaliert und danach wird die Umlegung zum neuen Ergebnis fortgesetzt. Das benötigt meist wesentlich weniger Iterationen als eine komplette Neuberechnung. So kann bei Modellen mit Rückkopplung von der Umlegung zur Nachfrageberechnung viel Rechenzeit gespart werden.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, startet die Berechnung auf dem unbelasteten Netz.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2" colspan="2">Bereich <span class="gui_element">Initiale Belegung</span></td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td style="mc-hyphenate-shortest-prefix: 14;padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <span class="gui_element">Sättigungsverkehrsstärke der Abbieger</span>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText"> Sättigungsverkehrsstärke der Abbieger, die mit der Anzahl der Fahrstreifen multipliziert wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <th class="TableStyle-gui_elements1-BodyE-Column1-Body2">Anzahl Fahrstreifen an Mischfahrstreifen</th>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <span class="gui_element">Gesamte Kapazität für jeden Abbieger</span>
+                        <p class="CellText">Ist die Option ausgewählt, wird jedem Abbieger die Gesamtkapazität zugewiesen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Anteilige Kapazität für jeden Abbieger</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird auf jeden Abbieger anteilig Kapazität verteilt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <th class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Minimale Kapazität der Abbieger</span>
+                        </p>
+                    </th>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wählen Sie ein direktes oder indirektes numerisches Abbiegerattribut und geben Sie den Faktor ein für die Ermittlung der zu berücksichtigenden minimalen Abbiegerkapazität.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2" colspan="2">Bereich <span class="gui_element">Rückstaumodell</span></td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <span class="gui_element">Streckenkapazität für Rückstaumodell verwenden</span>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, verwenden Sie die Streckenkapazitäten für die Begrenzung des Abflusses. </p>
+                        <p class="CellText">
+                            <span class="gui_element">Kapazität IV</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, begrenzt das Streckenattribut <span class="gui_element">Kapazität IV</span> den Abfluss.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Summe der Abbiegerkapazitäten</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, begrenzt die Summe der Kapazitäten aller ausgehenden Abbieger (<span class="gui_element">Kapazität IV</span>) den Abfluss.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl der Anteile für Belastungsaufteilung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Geben Sie die Anteile für Belastungsaufteilung ein <MadCap:xref class="sieheUeberschrSeite" href="2_5_Rückstaumodell im Anschluss an eine Umlegung durchführen.htm#2_einstellungen_benutzermodell_iv_1682368020_1061322"><span style="color: Black;" class="mcFormatColor">(</span><u>Rückstaumodell im Anschluss an eine Umlegung durchführen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">durchschnittlicher Platzbedarf pro PKW-Einheit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Platz, den eine PKW-Einheit durchschnittlich braucht</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wegen der zwischen den Fahrzeugen bestehenden Freiräume ist der Wert größer als die durchschnittliche Fahrzeuglänge.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 495px;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" class="TableStyle-TipHint1" cellspacing="0">
+            <col style="width: 495px;" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Der Umlegungszeitraum für ICA und Rückstaumodell beträgt eine Stunde.</p>
+                        <p class="Text">Nach der Umlegung werden alle globalen Rückstauparameter (Menü <span class="gui_element">Rechnen</span>&#160;&gt; <span class="gui_element">Allgemeine Verfahrenseinstellungen</span>&#160;&gt; <span class="gui_element">IV-Einstellungen</span>&#160;&gt; <span class="gui_element">Rückstaumodell</span>) und alle Rückstauparameter an ICA-Knoten auf die Werte gesetzt, die Sie auf dieser Seite für das Rückstaumodell gesetzt haben. Damit stellen Sie sicher, dass die Einstellungen zu den Berechnungsergebnissen passen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Umlegung mit ICA: Register Verfahrensablauf<a name="29103"></a></h5>
+        <p class="Text">In diesem Register legen Sie das untergeordnete Umlegungsverfahren und seine Parameter fest sowie das Gewicht der neuen Lösung bei der exponentiellen Glättung der Abbiegerdaten und die Abbruchbedingungen für das Verfahren.</p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Untergeordnetes Umlegungsverfahren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">In der Auswahlliste können Sie entweder das Lernverfahren <MadCap:xref class="sieheUeberschrSeite" href="2_5_Parameter des Lernverfahrens.htm#2_einstellungen_benutzermodell_iv_1682368020_1036407"><span style="color: Black;" class="mcFormatColor">(</span><u>Parameter des Lernverfahrens</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>, die Gleichgewichtsumlegung <MadCap:xref class="sieheUeberschrSeite" href="2_5_Parameter der Gleichgewichtsumlegung.htm#2_einstellungen_benutzermodell_iv_1682368020_1040412"><span style="color: Black;" class="mcFormatColor">(</span><u>Parameter der Gleichgewichtsumlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> oder die Gleichgewichtsumlegung LUCE <MadCap:xref class="sieheUeberschrSeite" href="2_5_Gleichgewichtsumlegung LUCE.htm#2_einstellungen_benutzermodell_iv_1682368020_1129919"><span style="color: Black;" class="mcFormatColor">(</span><u>Gleichgewichtsumlegung LUCE</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> wählen.</p>
+                        <p class="CellText">Über die Schaltfläche <span class="gui_element">Parameter</span> können Sie die Umlegungsparameter für das gewählte Verfahren setzen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Gewicht der neuen Lösung bei exponentieller Glättung der Abbiegerbelastungen und Abbiegerkapazitäten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wählen Sie mit dem Schieber einen Wert zwischen 0&#160;=&#160;kein Gewicht und 1&#160;=&#160;100% und geben Sie einen geeigneten Faktor ein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Abbruchbedingungen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Maximale Anzahl äußerer Iterationen</span>
+                        </p>
+                        <p class="CellText">Geben Sie die maximale Anzahl äußerer Iterationen ein.</p>
+                        <p class="CellText">
+                            <span class="gui_element">GEH zwischen der Abbiegerbelastung vorheriger Umlegung und jetziger Umlegung ist ≤</span>
+                        </p>
+                        <p class="CellText">Geben Sie einen Zahlenwert als <span class="gui_element">Bedingung</span> ein und definieren Sie den <span class="gui_element">Anteil der Abbieger, für welche die Bedingung erfüllt ist</span>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">GEH zwischen der Abbiegerbelastung jetziger Umlegung und geglätteter ICA-Abbiegerbelastung ist ≤</span>
+                        </p>
+                        <p class="CellText">Geben Sie einen Zahlenwert als <span class="gui_element">Bedingung</span> ein und definieren Sie den <span class="gui_element">Anteil der Abbieger, für welche die Bedingung erfüllt ist</span>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Relativer Abstand zwischen ICA-Wartezeit und CR-Funktionswartezeit ist ≤</span>
+                        </p>
+                        <p class="CellText">Geben Sie einen Zahlenwert als <span class="gui_element">Bedingung</span> ein und definieren Sie den <span class="gui_element">Anteil der Abbieger, für welche die Bedingung erfüllt ist</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Umlegung mit ICA: Register Ausgabe<a name="29104"></a></h5>
+        <p class="Text">In diesem Register legen Sie fest, welche Daten gespeichert werden sollen.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="119px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="377px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Speichere Konvergenzattribute der Abbieger und Oberabbieger während des Verfahrens in *.csv-Dateien</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText"> Ist die Option ausgewählt, werden die Attributdateien im Projektverzeichnis Attribute gespeichert: <span class="path">&lt;Pfadangabe&gt;</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Speichere Konvergenzattribute der Abbieger und Oberabbieger am Ende des Verfahrens in BDAs</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden die Attributwerte als benutzerdefinierte Attribute gespeichert. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Speichere Excel-Bericht am Ende des Verfahrens</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, wird der Bericht im Projektverzeichnis ICA gespeichert: <span class="path">&lt;Pfadangabe&gt;</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" class="TableStyle-TipHint1" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Alle Parameter der untergeordneten Umlegungsverfahren sind editierbar, bis auf folgende: Für die Gleichgewichtsumlegung sind die Rückstauparameter nicht zugänglich. Außerdem ist der Parameter <span class="gui_element">Bestehende Umlegung als Startlösung verwenden</span> für die Gleichgewichtsumlegung auf TRUE gesetzt, aber nicht editierbar.</p>
+                        <p class="Text">Während das Verfahren ausgeführt wird, werden Informationen zur Konvergenz in die Liste <span class="gui_element">Qualität IV-Umlegung mit ICA</span> geschrieben <MadCap:xref href="../2_Daten_tabellarisch_grafisch_darstellen/2_12_Liste öffnen.htm" class="sieheUeberschrSeite"><span style="color: Black;" class="mcFormatColor">(</span><u>Liste öffnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Sie enthält nur berechnete Werte und ist daher nicht editierbar. Die Liste <span class="gui_element">Qualität IV-Umlegung </span>wird vor einer Umlegung mit ICA geleert und während des Verfahrens nicht wieder befüllt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

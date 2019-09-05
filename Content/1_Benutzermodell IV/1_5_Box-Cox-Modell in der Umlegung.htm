@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="857" MadCap:lastWidth="688" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;v0;VOT;CR;277s;akt;321s;360s;ver;AE;ED;Fzg;BD;CF;DF;StrNr;0ij;0i;0j;ij;r1;exp;r2;MSA;Method;of;t0;tAkt;car;fma;hveh;Landstr;Str;NCHRP;Wardrop’schen">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1545603">
+            </a>Box-Cox-Modell in der Umlegung</h3>
+        <p class="Text">
+            <MadCap:keyword term="Aufteilungsmodelle: Box-Cox Modell" />
+            <MadCap:keyword term="Box-Cox-Modell" />Grundlage dieses Aufteilungsmodells ist die Box-Cox-Transformation. Diese ist zu gegebenem <span class="formula_symbol">t</span><span class="formula">&#160;≥&#160;0</span> wie folgt erklärt:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_153.jpg" />
+        </p>
+        <p class="Text">Für die Berechnung des Nutzens wird nun <span class="formula">b</span><span class="formula_superscript">(t)</span>(<span class="formula">R</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span>) anstelle von <span class="formula">R</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span> in das Logit-Modell eingesetzt, so ergibt sich <img src="../Resources/Images/7_196.jpg" />.</p>
+        <p class="Text">Der Anteil <span class="formula">P</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span> der Route <span class="formula">i</span> an der Nachfrage des Zeitintervalls <span class="formula">a </span>berechnet sich dann folgendermaßen:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_197.jpg" />
+        </p>
+        <p class="Text">Die Bedeutung des Box-Cox-Modells verdeutlichen die beiden folgenden Sonderfälle.</p>
+        <ul>
+            <LI class="List0">
+                <span class="formula_symbol">t</span>
+                <span class="formula">&#160;=&#160;0</span> (ergibt Kirchhoff-Aufteilung)</LI>
+        </ul>
+        <p class="Text2">Unter dieser Parameterwahl gilt <span class="formula">b</span><span class="formula_superscript">(0)</span>(<span class="formula">R</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span>)<span class="formula">&#160;=&#160;</span>log(<span class="formula">R</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span>), also ist bei der Wahl</p>
+        <p class="Text2">
+            <img src="../Resources/Images/7_199.jpg" />
+        </p>
+        <p class="Text2">Damit kommt also genau das Kirchhoff-Modell zum Zuge.</p>
+        <ul>
+            <LI class="List0">
+                <span class="formula_symbol">t</span>
+                <span class="formula">&#160;=&#160;1</span> (ergibt Logit-Aufteilung)</LI>
+        </ul>
+        <p class="Text2">Unter dieser Parameterwahl gilt <span class="formula">b</span><span class="formula_superscript">(1)</span>(<span class="formula">R</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span>)&#160;=&#160;(<span class="formula">R</span><span class="formula_subscript">i</span><span class="formula_superscript">a</span><span class="formula">-1</span>), also ist bei der Wahl</p>
+        <p class="Text2">
+            <img src="../Resources/Images/7_216.jpg" />
+        </p>
+        <p class="Text2">Dies ist mit der Logit-Aufteilung identisch.</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1545648">Abbildung 1</MadCap:xref> zeigt die Parametrierung des Box-Cox-Aufteilungsmodells an der Oberfläche.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_Stoch_BoxCox.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1545648">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_44512">
+            </a>Parametrierung des Box-Cox-Aufteilungsmodells</p>
+    </body>
+</html>

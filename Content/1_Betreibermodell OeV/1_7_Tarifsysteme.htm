@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="582" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km;max">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_betreibermodell_oev_1878159914_1347371">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_45843">
+            </a>Tarifsysteme</h3>
+        <p class="Text">Ein Tarifsystem ist eine Menge von Linien, die eine gemeinsame Fahrpreislogik haben. Prinzipiell kann der Fahrgast diese Linien also mit einer Fahrkarte benutzen. Unter einem Tarifsystem kann man sich einen einzelnen Betreiber oder einen Verbund vorstellen.</p>
+        <p class="Text">Jedem Tarifsystem sind für jedes ÖV-Nachfragesegment eine oder mehrere Fahrkartenarten zugeordnet.</p>
+        <h5>
+            <span class="gui_element">Beispiel: Tarifsysteme, Fahrkartenarten und Nachfragesegmente</span>
+        </h5>
+        <p class="Text">Wir betrachten zwei Nachfragesegmente, die den Besitz beziehungsweise Nicht-Besitz einer Zeitkarte abbilden. Diese Unterscheidung erfolgt vorab auf der Ebene der Nachfragesegmente, denn der Erwerb einer Zeitkarte ist eine langfristige Entscheidung und nicht erst bei der Wahl der konkreten Verbindung relevant.</p>
+        <p class="Text">Es gibt im Beispiel drei Tarifsysteme: City, Metro und Bahn-Fernverkehr. Die drei Tarifsysteme sind für Fahrgäste ohne Zeitkarte völlig unabhängig, wobei es für City und Metro je eine Normalfahrkarte und ein Kurzstreckenticket (mit unterschiedlichen Eigenschaften) gibt. Monatskartenkäufern wird hingegen dasselbe Ticket für City und Metro angeboten.</p>
+        <p class="Text">Mittels der <MadCap:variable name="PTV_Manual.Programmname" />-Nachfragesegmente wird definiert, welche ÖV-Nutzer in welchem Tarifsystem welche Fahrkartenarten verwenden darf. Die folgende Tabelle gibt einen Überblick:</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="105px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="183px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="208px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellText_mid">NSeg „Fahrgäste ohne Zeitkarte“</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellText_mid">NSeg „Fahrgäste mit Zeitkarte“</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Tarifsystem City</p>
+                        <p class="CellText">(Bus, Tram)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">Normalpreis City (ein Zonentarif),</p>
+                        <p class="CellText_mid">Kurzstrecke City (max. 10 min)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_mid">Monatskarte Regio</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Tarifsystem </p>
+                        <p class="CellText">Metro</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">Normalpreis Metro (ein Entfernungstarif),</p>
+                        <p class="CellText_mid">Kurzstrecke Metro (max. 3 Hst)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_mid">Monatskarte Regio</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Tarifsystem Bahn-Fernverkehr</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_mid">Einzelfahrschein Bahn</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText_mid">Monatskarte Bahn</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Verknüpfung von Tarifsystemen und Nachfragesegmenten</p>
+            </caption>
+        </table>
+        <p class="Text">Der Rang eines Tarifsystems spielt genau dann eine Rolle, wenn Linien zu mehreren Tarifsystemen gehören, wie Sie mehreren Beispielen im Anschluss entnehmen können <MadCap:xref class="sieheUeberschrSeite" href="1_7_Vorgehen bei mehrdeutigen Tarifsystemen.htm#1_betreibermodell_oev_1878159914_1347750"><span style="color: Black;" class="mcFormatColor">(</span><u>Vorgehen bei mehrdeutigen Tarifsystemen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+    </body>
+</html>

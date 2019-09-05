@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="631" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="jpw;tiw">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_gis_funktionalitaet_3291278398_1042586">
+            </a>
+            <a name="1_gis_funktionalitaet_3291278398_98523">
+            </a>Automatische Positionierung des Hintergrunds im Netz mit World-Dateien</h4>
+        <p class="Text">
+            <MadCap:keyword term="World-Dateien" />
+            <MadCap:keyword term="Hintergründe: automatisch positionieren" />Soll ein Rastergrafik-Hintergrund in <MadCap:variable name="PTV_Manual.Programmname" /> eingebunden werden, so kann die Verortung des Hintergrunds im Netz automatisch erfolgen, wenn neben der eigentlichen Grafikdatei (zum Beispiel <span class="path">Hintergrund.jpg</span>) eine so genannte World-Datei (zum Beispiel <span class="path">Hintergrund.jpw</span>) vorhanden ist, die Daten zur Georeferenzierung der Bilddatei enthält. Ist eine World-Datei vorhanden, so erleichtert sich der Austausch und das Einbinden von Hintergründen erheblich, da der Hintergrund in <MadCap:variable name="PTV_Manual.Programmname" /> automatisch an die richtige Stelle eingefügt wird. Der Aufwand für die Feinjustierung des Hintergrunds entfällt dadurch.</p>
+        <p class="Text">Eine World-Datei enthält die vom Bild benutzten Transformationsinformationen für den Bezug zu den Weltkoordinaten. Das Format wurde von ESRI spezifiziert und eingeführt. Die Namenskonvention für World-Dateien sieht vor, dass der letzte Buchstabe der Dateiendung der Grafikdatei gegen ein w ausgetauscht wird, der Rest des Dateinamens entspricht der zugehörigen Grafikdatei (lautet die Grafikdatei zum Beispiel <span class="path">Karte.tif</span>, dann heißt die zugehörige World-Datei <span class="path">Karte.tiw</span>). Inhaltlich beschreibt eine World-Datei die Koordinaten, den Maßstab und die Rotation des Hintergrunds.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">World-Dateien enthalten keinen Bezug zu einem Koordinatensystem.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Jede World-Datei hat sechs Zeilen. <MadCap:xref class="Label_Table" href="#1_gis_funktionalitaet_3291278398_1051980">Tabelle&#160;275</MadCap:xref> zeigt ein Beispiel für eine World-Datei.</p>
+        <ul>
+            <LI class="List0">Zeile 1: Parameter A Pixelgröße in der x-Richtung</LI>
+            <LI class="List0">Zeile 2: Parameter D Rotation um die y-Achse</LI>
+            <LI class="List0">Zeile 3: Parameter B Rotation um die x-Achse</LI>
+            <LI class="List0">Zeile 4: Parameter E Pixelgröße in der y-Richtung</LI>
+            <LI class="List0">Zeile 5: X-Koordinate des oberen linken Pixels des Hintergrunds</LI>
+            <LI class="List0">Zeile 6: Y-Koordinate des oberen linken Pixels des Hintergrunds</LI>
+        </ul>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <pre class="Input">32.0</pre>
+                        <pre class="Input">0.0</pre>
+                        <pre class="Input">0.0</pre>
+                        <pre class="Input">-32.0</pre>
+                        <pre class="Input">691200.0</pre>
+                        <pre class="Input">4576000.0</pre>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_gis_funktionalitaet_3291278398_1051980">
+                    </a>
+                    <a name="1_gis_funktionalitaet_3291278398_95574">
+                    </a>Beispiel für eine World-Datei</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Georeferenzierung und damit die Erstellung der World-Datei kann mit GIS-Software durchgeführt werden (zum Beispiel ArcGIS von ESRI). Da die World-Datei eine Textdatei ist, ist es theoretisch aber auch möglich sie selbst in einem Texteditor zu erzeugen, wenn die notwendigen Informationen bekannt sind.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

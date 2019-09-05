@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km;max;Richtungs;te;LocationFault;TimeFault;LayoverTimeFault;VehicleFault;Fahrzeugeinheits;IC;Entfernungs;TP;Town;1s" MadCap:lastBlockDepth="4" MadCap:lastHeight="742" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1424449">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_32030">
+            </a>Zwangsbindungen</h4>
+        <p class="Text">Bei der Umlaufbildung steht in manchen Fällen bereits a priori fest, welche ankommende Fahrt mit welcher ausgehenden Fahrt verbunden werden muss. Insbesondere im Schienenverkehr ergeben sich solche Vorab-Bindungen häufig aus der knappen zeitlichen Lage der verbundenen Fahrten zueinander, verbunden mit der Tatsache, dass ein Wechsel des Fahrzeugparks im Zeitraum zwischen Ankunft und Abfahrt nicht möglich ist. Auch gewünschte Durchbindungen zwischen Fahrten sind eine Quelle für solche erzwungenen Verknüpfungen.</p>
+        <p class="Text">Eine Zwangsbindung ist eine Beziehung von einem Fahrplanfahrtabschnitt zu einem Nachfolge-Fahrplanfahrtabschnitt an einem Kalendertag. Sie bedeutet, dass dieser Übergang im Ergebnis der Umlaufbildung eingehalten werden muss. Die Umlaufbildung muss also diese so verbundenen Fahrplanfahrtabschnitte (es können transitiv ganze Ketten sein) wie eine einzige einzuplanende Leistung behandeln. Zwangsbindungen können für jeden Kalendertag anders sein, sie binden also Vorkommen von Fahrplanfahrtabschnitten aneinander.</p>
+        <p class="Text">Per Definition darf zwischen der Ankunft des Fahrplanfahrtabschnitts und der Abfahrt des Nachfolgers maximal 24h – 1s liegen. Dadurch ist der Kalendertag des Nachfolgers durch den Zeitpunkt der Ankunft, mithin durch den Kalendertag des Quell-Fahrplanfahrtabschnitts, eindeutig bestimmt. Eine Zwangsbindung heißt gültig, wenn der Quell-Fahrplanfahrtabschnitt am Kalendertag der Zwangsbindung überhaupt verkehrt, wenn im beschriebenen Zeitraum nach der Ankunft des Vorkommens des Quell-Fahrplanfahrtabschnitts ein Vorkommen des Ziel-Fahrplanfahrtabschnitts beginnt und wenn darüber hinaus die Fahrzeugkombinationen des Quell-Fahrplanfahrtabschnitts und des Ziel-Fahrplanfahrtabschnitts übereinstimmen (Umlauf hat keinen Fahrzeugaustausch) oder die jeweiligen Fahrzeugkombinations-Sets einen nichtleeren Schnitt haben (Umlauf hat Fahrzeugaustausch).</p>
+        <p class="Text">Zwangsbindungen werden in der Umlaufbildung optional berücksichtigt. In diesem Fall halten die entstehenden Umläufe die vorgegebenen gültigen Zwangsbindungen ein, soweit nicht eine der folgenden Bedingungen gilt:</p>
+        <ul>
+            <LI class="List0">Der gleiche Ziel-Fahrplanfahrtabschnitt wurde für den gleichen Kalendertag in verschiedenen Zwangsbindungen als Ziel angegeben. Es gewinnt dann die zuerst gefundene Zwangsbindung, also die mit dem kleineren Schlüssel am Quell-Fahrtabschnitt.</LI>
+            <LI class="List0">Der Endhaltepunkt des Quell-Fahrplanfahrtabschnitts stimmt nicht mit dem Starthaltepunkt des Ziel-Fahrplanfahrtabschnitts überein, und die Zeit dazwischen reicht für eine Leerfahrt nicht aus oder Leerfahrten dürfen nicht erzeugt werden. Der Umlauf trägt dann einen Zwangsbindungsfehler.</LI>
+        </ul>
+        <p class="Text">Der erste Fall kann durch eine Netz prüfen-Funktion festgestellt werden.</p>
+        <p class="Text">Liegt eine gültige Zwangsbindung vor, werden weder bei der Umlaufbildung noch bei der Umlaufprüfung Forderungen an die Einhaltung von (eventuell verkürzten) Vor- und Nachbereitungszeiten gestellt. Die Eingabe einer Zwangsbindung hat also Vorrang vor einer eventuell  widersprechenden Mindestwendezeit. Die für eine Leerfahrt notwendige Zeit muss aber eingehalten werden. Depotaufenthalte sind zwischen durch Zwangsbindung verbundenen Fahrplanfahrt-Umlaufelementen nicht erlaubt.</p>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="680" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1086109">
+            </a>
+            <a name="1_netzmodell_1240632468_28948">
+            </a>Haltepunkte</h4>
+        <p class="Text">
+            <MadCap:keyword term="Netzobjekte: Haltepunkte" />
+            <MadCap:keyword term="Haltepunkte" />Da sich die Fahrzeuge nur innerhalb des modellierten Netzes bewegen können, muss ein Haltepunkt Verbindung zum Netz haben. Dies wird erreicht, indem ein Haltepunkt entweder auf einer Strecke oder auf einem Knoten eingefügt wird. Befindet sich ein Haltepunkt auf einer Strecke, so wird er als Streckenhaltepunkt bezeichnet. Ein Haltepunkt auf einem Knoten kann von allen Linien bedient werden, die über diesen Knoten fahren. Ein Haltepunkt auf einer Strecke kann nur von den Linien bedient werden, die über diese Strecke fahren. Damit ist optional eine detaillierte richtungsfeine Modellierung auf der Basis von Masten möglich. Streckenhaltepunkte können jedoch auch ungerichtet eingefügt werden, so dass sie für beide Richtungen der Strecke befahren werden können. </p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Stoppoint_on_node.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Stoppoint_on_link.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000067px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Haltepunkt auf Knoten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Streckenhaltepunkte</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Möglichkeiten der Modellierung von Haltepunkten</p>
+            </caption>
+        </table>
+        <p class="Text">Die Differenzierung zwischen Haltepunkten auf Knoten und Strecken ermöglicht es, mit <MadCap:variable name="PTV_Manual.Programmname" /> Netzmodelle unterschiedlicher Detaillierung aufzubauen:</p>
+        <ul>
+            <LI class="List1">Für die strategische Planung genügen Haltepunkte auf Knoten, da hier die genaue Lage des Haltepunktes – vor oder hinter der Kreuzung – in der Regel nicht interessiert. Haltestellenbereich und Haltestelle werden im Hintergrund automatisch erzeugt, bleiben dem Anwender aber auf Wunsch weitgehend verborgen.</LI>
+            <LI class="List1">Für die Betriebsplanung und die Versorgung von Rechnergestützten Betriebsleitsystemen (RBL) ist eine Modellierung der Haltepunkte auf Strecken sinnvoll, da so der notwendige Detaillierungsgrad erreicht werden kann. </LI>
+        </ul>
+        <p class="Text">Grundsätzlich ist es in <MadCap:variable name="PTV_Manual.Programmname" /> auch möglich, beide Formen zu mischen, indem man zum Beispiel im Innerortsbereich die genauere streckenbezogene Modellierung und im Außerortsbereich die knotenbezogene Modellierung anwendet.</p>
+        <p class="Text">Ein Haltepunkt kann für jedes vorhandene Verkehrssystem zugelassen oder gesperrt werden. Nur die Fahrplanfahrten der Linienrouten, deren Verkehrssystem zugelassen ist, können dort halten.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Wir empfehlen, Linienrouten nur an Haltepunkten, die auf Knoten liegen, beginnen oder enden zu lassen, da im Fall von Linienrouten, die an Streckenhaltepunkten beginnen oder enden, ungenaue Ergebnisse entstehen können, beispielsweise bei der Berechnung ÖV-betrieblicher Kennzahlen oder im Fall von ÖV-Belastungen, welche streckenfein dargestellt werden.</p>
+                        <p class="Text">Da Halte von Fahrplanfahrten stets an einem Haltepunkt stattfinden, muss jede Haltestelle mindestens einen Haltepunkt haben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

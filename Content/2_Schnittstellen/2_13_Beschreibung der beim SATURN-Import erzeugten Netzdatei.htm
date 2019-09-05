@@ -1,0 +1,1939 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="697" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;V10;Cols;DUTCH;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;internal;simulation;Record;type;VIANODENO;NODE;TSYSSET;LSAT;CAPPRT;T0PRT;TPM;GAP;GAPR;$CONNECTOR">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1173300">
+            </a>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_61217">
+            </a>Beschreibung der beim SATURN-Import erzeugten Netzdatei</h3>
+        <p class="Text">Die beim Import erzeugte Netzdatei enthält Tabellen- und Attributnamen in englischer Sprache. Die Datei enthält alle Daten, die für den Import nötig sind. Sobald die Netzdatei in <MadCap:variable name="PTV_Manual.Programmname" /> geöffnet wird, ergänzt <MadCap:variable name="PTV_Manual.Programmname" /> automatisch zusätzliche Daten, beispielsweise die Rückrichtung von Einbahnstraßen oder Gehzeiten an Strecken. Wenn Sie das Netz anschließend nochmals speichern, wird es in der von Ihnen gewählten Sprache geschrieben und enthält je nach Einstellung beim Speichern der Netzdatei zusätzliche Tabellen und Attribute.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Die Tabellen und Attribute sind in der gleichen Reihenfolge aufgelistet wie in der Netzdatei. Die Bezeichnungen der <MadCap:variable name="PTV_Manual.Programmname" />-Tabellen und -Attribute entsprechen denen, die in der Netzdatei standardmäßig verwendet werden. </p>
+                        <p class="Text">Die Bezeichnungen der SATURN-Daten entsprechen denen im SATURN MANUAL (V10.8). Die Spaltennummern (<span class="gui_element">Cols</span>) beziehen sich auf Daten mit SATURN-Parameter <span class="gui_element">DUTCH</span> = FALSE.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $VERSION</h5>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="82px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="414px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">VERSNR</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">8.100. Die Netzdateien sind kompatibel zu Versionen ab Versionsnummer 11.5.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FILETYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">NET</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LANGUAGE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ENG</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">UNIT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">KM</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $USERATTDEF</h5>
+        <p class="Text">Folgende benutzerdefinierte Attribute werden angelegt. Die Herkunft der Werte wird bei den jeweiligen Netzobjekttyp-Tabellen im Detail angegeben:</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStandard" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="114px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="189px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="193px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Netzobjekttyp</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Benutzerdefiniertes Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">LINEROUTE</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">SATURNBUSTRIPSPERHOURPCU</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Anzahl der Busfahrten gewichtet mit dem PKW-E Faktor</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td rowspan="7" class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">LINK</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_V_CAP</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Geschwindigkeit bei Erreichen der Kapazität (Parameter für SATURN Geschwindigkeit-Verkehrsstärke-Funktion)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">SATURN_N</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Exponent (Parameter für SATURN Geschwindigkeit-Verkehrsstärke-Funktion)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_STACKINGCAP</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Staukapazität</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">SATURN_LINKINDEX</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Referenz zu verwendeter SATURN Geschwindigkeit-Verkehrsstärke-Funktion und Parametern</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_SIMULATIONLINK</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">= 1, wenn die Strecke Teil des Simulationsnetzes ist</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">SATURN_TRAVELTIMEPENALTY</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Minimum aus verkehrssystemspezifischen Zeitzuschlägen, falls definiert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_BANNED</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">= 1, wenn die Strecke für mindestens ein IV-Verkehrssystem gesperrt ist</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td rowspan="5" class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">TURN</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">SATURN_TRAVELTIMEPENALTY</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Minimum aus verkehrssystemspezifischen Zeitzuschlägen, falls definiert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_BANNED</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">= 1, wenn der Abbieger für mindestens ein IV-Verkehrssystem gesperrt ist</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">SATURN_PRIORITY</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">= 1, wenn der abbiegende Strom keine Vorfahrt gewähren muss</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_SATFLOW</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Sättigungsverkehrsstärke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">SATURN_GAP</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">Zeitlücke</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $NETWORK</h5>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="84px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="411px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SCALE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LEFTHANDTRAFFIC</p>
+                        <p class="CellText">RIGHTHANDTRAFFIC</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wenn SATURN-Parameter <span class="gui_element">LEFTDR</span> = T, ist <span class="gui_element">LEFTHANDTRAFFIC</span> = 1</p>
+                        <p class="CellText">&#160;</p>
+                        <p class="CellText">Wenn SATURN-Parameter <span class="gui_element">LEFTDR</span> = F, ist <span class="gui_element">RIGHTHANDTRAFFIC</span> = 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">TURNTYPEDEFAULT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">AUTOMATICICA</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $TSYS</h5>
+        <p class="Text">Die Tabelle $TSYS enthält automatisch mindestens zwei Verkehrssysteme, eines vom Typ <span class="gui_element">PrT </span>(IV) und eines vom Typ <span class="gui_element">PuTWalk</span> (ÖVFuß). Zusätzlich wird für jeden Eintrag des SATURN-Parameters <span class="gui_element">BUSPCU</span> ein Verkehrssystem vom Typ <span class="gui_element">PuT</span> (ÖV) angelegt. Die Anzahl der tatsächlich generierten IV-Verkehrssysteme wird vom SATURN-Parameter NOMADS bestimmt. Der Code dieser IV-Verkehrssysteme setzt sich aus dem Buchstaben C und einer fortlaufenden Nummer zusammen.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="82px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="414px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwerte der Verkehrssysteme vom Typ ÖV</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">B&lt;fortlaufende Nummer&gt;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">B&lt;fortlaufende Nummer&gt;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">PuT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">PCU</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Entspricht dem SATURN-Parameter <span class="gui_element">BUSPCU</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="82px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="414px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwerte des Verkehrssystems <span class="gui_element">Car</span></p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">C&lt;fortlaufende Nummer&gt;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Car</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">PrT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">PCU</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="82px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="414px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwerte des Verkehrssystems <span class="gui_element">Walk</span></p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">W</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Walk</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">PuTWalk</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">PCU</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $DIRECTION</h5>
+        <p class="Text">enthält <MadCap:variable name="PTV_Manual.Programmname" />-Standardeinträge</p>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $NODE</h5>
+        <p class="Text">Die Knoten werden aus den <span class="gui_element">nodes</span> in SATURN erzeugt. Außerdem werden durch die Änderung der Netztopologie zusätzliche Knoten erzeugt <MadCap:xref class="sieheUeberschrSeite" href="2_13_SATURN-Import_ Hinweise zu Änderungen an der Netztopologie.htm#2_daten_ueber_schnittstellen_austauschen_1567500566_1183588"><span style="color: Black;" class="mcFormatColor">(</span><u>SATURN-Import: Hinweise zu Änderungen an der Netztopologie</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="109px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="387px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="font-weight: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">55555, node number, Cols 2-5</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CONTROLTYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record Type 1: JTYPE</span>:</p>
+                        <p class="CellText">Wenn <span class="gui_element">JTYPE</span> = 1, ist <span class="gui_element">CONTROLTYPE</span> = 2 (geregelte Vorfahrt (Stopp))</p>
+                        <p class="CellText">Wenn <span class="gui_element">JTYPE</span> = 2 oder 5, ist <span class="gui_element">CONTROLTYPE</span> = 5 (Kreisverkehr)</p>
+                        <p class="CellText">Wenn <span class="gui_element">JTYPE</span> = 3, ist <span class="gui_element">CONTROLTYPE</span> = 3 (signalisiert)</p>
+                        <p class="CellText">Wenn <span class="gui_element">JTYPE</span> = 0 oder 4, ist <span class="gui_element">CONTROLTYPE</span> = 0 (unbekannt)</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Unter bestimmten Voraussetzungen können Knoten nicht für die Umlegung mit ICA verwendet werden. Sie werden beim Import auf den Steuerungstyp unbekannt gesetzt <MadCap:xref class="sieheUeberschrSeite" href="2_13_SATURN-Import_ Knoten mit Steuerungstyp „unbekannt“.htm#2_daten_ueber_schnittstellen_austauschen_1567500566_1197630"><span style="color: Black;" class="mcFormatColor">(</span><u>SATURN-Import: Knoten mit Steuerungstyp „unbekannt“</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">XCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">55555, X co-ordinate</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">YCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">= <span class="gui_element">55555, Y co-ordinate</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $ZONE</h5>
+        <p class="Text">Die Bezirke werden aus den <span class="gui_element">zones</span> in SATURN erzeugt.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="80px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="416px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="font-weight: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">55555, zone number, Cols 2-5</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">XCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= <span class="gui_element">55555, X co-ordinate</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">YCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">55555, Y co-ordinate</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $LINK</h5>
+        <p class="Text">Die Strecken werden aus den Beziehungen <span class="gui_element">ANODE</span>-<span class="gui_element">NODE</span> in <span class="gui_element">section 11111</span> und <span class="gui_element">section 33333</span> der Topologiebeschreibung von SATURN erzeugt. In SATURN gibt es <span class="gui_element">internal links</span> (im <span class="gui_element">simulation network</span>) und <span class="gui_element">external links</span> (im <span class="gui_element">buffer network</span>). Die <span class="gui_element">internal links</span> stehen in <span class="gui_element">section 11111</span>, die <span class="gui_element">external links</span> in <span class="gui_element">section 33333</span>. Beide Typen werden als Strecken nach <MadCap:variable name="PTV_Manual.Programmname" /> übernommen. Außerdem werden durch die Änderung der Netztopologie zusätzliche Strecken erzeugt <MadCap:xref class="sieheUeberschrSeite" href="2_13_SATURN-Import_ Hinweise zu Änderungen an der Netztopologie.htm#2_daten_ueber_schnittstellen_austauschen_1567500566_1183588"><span style="color: Black;" class="mcFormatColor">(</span><u>SATURN-Import: Hinweise zu Änderungen an der Netztopologie</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Attribute werden für <span class="gui_element">internal links</span> und <span class="gui_element">external links</span> getrennt beschrieben.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');width: 100%;" cellspacing="0">
+            <col width="112px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="384px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert bei <span class="gui_element">internal links</span></p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Die Strecken werden, beginnend mit 1, fortlaufend nummeriert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FROMNODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 2, ANODE</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TONODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 1, NODE</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TYPNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert hängt davon ab, ob für den entsprechenden <span class="gui_element">link</span> (<span class="gui_element">Record type 2</span>) ein <span class="gui_element">Record type 2B</span> vorhanden ist:</p>
+                        <ul>
+                            <LI class="List0Tab">Ist kein <span class="gui_element">Record type 2B</span> vorhanden, ist <span class="gui_element">TYPNO</span> = 30.</LI>
+                            <LI class="List0Tab">Ist der <span class="gui_element">Record type 2B</span> vorhanden, ist <span class="gui_element">TYPNO</span> = 40.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 2, LANES</span></p>
+                        <ul>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LANES</span> = 0, ist der Wert leer. Die Strecke ist damit für alle Verkehrssysteme gesperrt.</LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LANES</span> &lt; 0, werden alle ÖV-Verkehrssysteme zugeordnet.</LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LANES</span> &gt; 0, werden alle IV- und ÖV-Verkehrssysteme zugeordnet.</LI>
+                            <LI class="List0Tab">Abweichungen davon sind möglich, wenn für alle oder bestimmte Verkehrssysteme in 44444 ein Wert &lt;0 definiert ist. In diesem Fall ist die Strecke für das entsprechende IV Verkehrssystem gesperrt.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LENGTH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 2, IDIST</span></p>
+                        <p class="CellText">
+                            <span class="gui_element">LENGTH</span> = <span class="gui_element">IDIST</span> / 1000 (Umrechnung von Metern in Kilometer)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NUMLANES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 1, LANES</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CAPPRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 2B, LCAPY </span>(Streckenkapazität)</p>
+                        <ul>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LCAPY</span> nicht leer ist, ist <span class="gui_element">CAPPRT</span> = <span class="gui_element">LCAPY</span>.</LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LCAPY</span> leer ist oder wenn es <span class="gui_element">Record type 2B</span> nicht definiert ist, ist <span class="gui_element">CAPPRT</span> = <span class="gui_element">LANES</span> • 1600.</LI>
+                            <LI class="List0Tab">Ist der Wert in 11111 Record type 2B nicht definiert und ist ein Streckenindex angegeben, wird der Wert aus der Standarddefinition für dieses Streckenindex unter 33333 importiert.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">V0PRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 2, IDIST</span>; <span class="gui_element">11111, Record type 2B, TFF</span> und SATURN-Parameter <span class="gui_element">SPEEDS</span></p>
+                        <ul>
+                            <LI class="List0Tab">Wenn <span class="gui_element">SPEEDS</span> = <span class="gui_element">T</span> (= True), ist <span class="gui_element">V0PRT</span> = <span class="gui_element">TFF</span></LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">SPEEDS</span> = <span class="gui_element">F</span> (= False), ist <span class="gui_element">V0PRT</span> = (<span class="gui_element">IDIST</span> / <span class="gui_element">TFF)</span> • 3.6</LI>
+                            <LI class="List0Tab">Ist der Wert von TFF (Geschwindigkeit im unbelasteten Netz) in 11111 Record type 2B nicht definiert und ist ein Streckenindex angegeben, wird der Wert aus der Standarddefinition für dieses Streckenindex unter 33333 importiert. </LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_V_CAP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 2, IDIST</span> und <span class="gui_element">11111, Record type 2B, TCAP </span>und SATURN-Parameter <span class="gui_element">SPEEDS</span></p>
+                        <ul>
+                            <LI class="List0Tab">Wenn <span class="gui_element">SPEEDS</span> = <span class="gui_element">T</span> (= True), ist <span class="gui_element">SATURN_V_CAP</span> =<span class="gui_element"> TCAP</span></LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">SPEEDS</span> = <span class="gui_element">F</span> (= False), ist <span class="gui_element">SATURN_V_CAP</span> =<span class="gui_element"> (IDIST</span> / <span class="gui_element">TCAP)</span> • 3.6</LI>
+                            <LI class="List0Tab">Ist der Wert von TCAP (Streckenfahrzeit bei Erreichen der Kapazität) in 11111 Record type 2B nicht definiert und ist ein Streckenindex angegeben, wird der Wert aus der Default Liste von 33333 importiert.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SATURN_N</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 2B, N</span></p>
+                        <p class="CellText">Ist der Wert des Parameters N in 11111 Record type 2B nicht vorhanden und ist ein Streckenindex angegeben, wird der Wert aus der Standarddefinition für dieses Streckenindex unter 33333 importiert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_LINKINDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 2B, INDEX</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SATURN_STACKINGCAP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 2, STACK </span>(Staukapazität der Strecke)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_SIMULATIONLINK</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">1 = <span class="gui_element">internal link</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SATURN_TRAVELTIMEPENALTY</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wenn für mindestens ein Verkehrssystem ein Zeitzuschlag unter 44444 definiert ist, ergibt sich der Wert aus dem Minimum aller Zeitzuschläge, anderenfalls ist der Wert 0.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">SATURN_BANNED</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Das Attribut hat den Wert 1, wenn die Strecke für mindestens ein IV-Verkehrssystem gesperrt ist. Ist die Strecke für alle IV-Verkehrssysteme zugelassen, ist der Wert 0.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements1" style="caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');width: 100%;" cellspacing="0">
+            <col width="112px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="384px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert bei <span class="gui_element">external links</span></p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Die Nummer der Strecke hängt davon ab, ob die Gegenrichtung schon als <span class="gui_element">internal link</span> eingelesen wurde:</p>
+                        <ul>
+                            <LI class="List0Tab">Ist die Gegenrichtung vorhanden, ist <span class="gui_element">NO</span> = <span class="gui_element">NO</span> der Strecke der Gegenrichtung.</LI>
+                            <LI class="List0Tab">Ansonsten werden die Strecken fortlaufend nummeriert.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FROMNODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= <span class="gui_element">33333, RECORD 1, A-node (Cols 2-5)</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TONODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">33333, RECORD 1, B-node (Cols 7-10)</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TYPNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert hängt davon ab, ob für die Strecke <span class="gui_element">link flow data</span> vorhanden ist, also ob in <span class="gui_element">section 33333</span> eine Zeile beginnend mit <span class="gui_element">D</span> für diese Strecke vorhanden ist:</p>
+                        <ul>
+                            <LI class="List0Tab">Wenn keine <span class="gui_element">link flow data</span> vorhanden ist, ist <span class="gui_element">TYPNO</span> = 50</LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">link flow data</span> vorhanden ist, ist <span class="gui_element">TYPNO</span> = 60</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wenn die Strecke schon als <span class="gui_element">internal link</span> eingelesen wurde, ist <span class="gui_element">TSYSSET</span> = <span class="gui_element">TSYSSET</span> der schon bestehenden Strecke.</p>
+                        <p class="CellText">Ansonsten werden alle Verkehrssysteme zugelassen.</p>
+                        <p class="CellText">Abweichungen für IV-Verkehrssysteme sind möglich, wenn in 44444 ein Wert &lt;0 definiert ist. In diesem Fall ist die Strecke für das entsprechende IV-Verkehrssystem gesperrt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LENGTH</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert wird ermittelt aus der Streckenlänge (<span class="gui_element">33333, RECORD 1, Cols 31-35</span>)</p>
+                        <p class="CellText">
+                            <span class="gui_element">LENGTH</span> = Streckenlänge / 1000 (Umrechnung von Metern in Kilometer)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NUMLANES</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wenn die Strecke schon als <span class="gui_element">internal link</span> eingelesen wurde, ist <span class="gui_element">NUMLANES</span> = <span class="gui_element">NUMLANES</span> der schon bestehenden Strecke.</p>
+                        <p class="CellText">Ansonsten wird der Wert aus der Kapazität wie folgt berechnet (<span class="gui_element">33333, RECORD 1, Cols 21-25</span>):</p>
+                        <p class="CellText">Wenn 0 &lt; Kapazität <span class="_Override" style="line-height: 11pt;">≤</span> 1600, ist <span class="gui_element">NUMLANES</span> = 1</p>
+                        <p class="CellText">Wenn 1600 &lt; Kapazität <span class="_Override" style="line-height: 11pt;">≤</span> 3200, ist <span class="gui_element">NUMLANES</span> = 2</p>
+                        <p class="CellText">Wenn 3200 &lt; Kapazität <span class="_Override" style="line-height: 11pt;">≤</span> 4800, ist <span class="gui_element">NUMLANES</span> = 3</p>
+                        <p class="CellText">Wenn 4800 &lt; Kapazität <span class="_Override" style="line-height: 11pt;">≤</span> 6400, ist <span class="gui_element">NUMLANES</span> = 4</p>
+                        <p class="CellText">Wenn 6400 &lt; Kapazität, ist <span class="gui_element">NUMLANES</span> = 5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CAPPRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= <span class="gui_element">33333, RECORD 1, Cols 21-25</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">V0PRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wert wird ermittelt aus der Streckenlänge (<span class="gui_element">33333, RECORD 1, Cols 31-35</span>), der Reisezeit im unbelasteten Netz (<span class="gui_element">33333, RECORD 1, Cols 11-15</span>) und dem SATURN-Parameter <span class="gui_element">SPEEDS</span></p>
+                        <ul>
+                            <LI class="List0Tab">Wenn <span class="gui_element">SPEEDS</span> = <span class="gui_element">T</span> (True), ist <span class="gui_element">V0PRT</span> = Geschwindigkeit</LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">SPEEDS</span> = <span class="gui_element">F</span> (False), ist <span class="gui_element">V0PRT</span> = (Streckenlänge / Reisezeit) • 3.6</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_V_CAP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert wird ermittelt aus der Streckenlänge (<span class="gui_element">33333, RECORD 1, Cols 31-35</span>), der Reisezeit oder Geschwindigkeit bei Erreichen der Kapazität (<span class="gui_element">33333, RECORD 1, Cols 16-20</span>) und dem Indikator für Zeit/Geschwindigkeit (<span class="gui_element">33333, RECORD 1, Col 29</span>).</p>
+                        <ul>
+                            <LI class="List0Tab">Wenn Indikator = <span class="gui_element">S</span>, ist <span class="gui_element">SATURN_V_CAP</span> = Geschwindigkeit</LI>
+                            <LI class="List0Tab">Wenn Indikator &lt;&gt; <span class="gui_element">S</span>, ist <span class="gui_element">SATURN_V_CAP</span> = (Streckenlänge / Reisezeit) • 3.6</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SATURN_N</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">33333, RECORD 1, Cols 36-40</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_LINKINDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= <span class="gui_element">33333, RECORD 1, Cols 43-45</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SATURN_SIMULATIONLINK</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">0 =<span class="gui_element">external link</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_TRAVELTIMEPENALTY</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wenn für mindestens ein Verkehrssystem ein Zeitzuschlag unter 44444 definiert ist, ergibt sich der Wert aus dem Minimum aller Zeitzuschläge, anderenfalls ist der Wert 0.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">SATURN_BANNED</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Das Attribut hat den Wert 1, wenn die Strecke für mindestens ein IV-Verkehrssystem gesperrt ist. Ist die Strecke für alle IV-Verkehrssysteme zugelassen, ist der Wert 0.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $TURN</h5>
+        <p class="Text">Ein Abbieger ist in <span class="gui_element">Record type 2</span>, <span class="gui_element">section 11111</span>, definiert, wenn das Datentripel <span class="gui_element">LSAT</span>, <span class="gui_element">LANE1</span> und <span class="gui_element">LANE2</span> gültige Werte enthält, d.h. weder Leereintrag noch 0. Hinter jedem Knoten <span class="gui_element">ANODE</span> stehen in der gleichen Zeile mehrere Datentripel pro offenem Abbieger. Die Abbieger führen über den <span class="gui_element">NODE</span> in <span class="gui_element">Record type 1</span> (<MadCap:variable name="PTV_Manual.Programmname" />: VIANODENO) zu den anderen <span class="gui_element">ANODE</span>s des gleichen <span class="gui_element">NODE</span>. Sie stehen in der Reihenfolge, in der die anderen <span class="gui_element">ANODE</span>s im Uhrzeigersinn auf den jeweiligen <span class="gui_element">Record type 2</span> folgen.</p>
+        <p class="Text">Beim Import wird für jede Abbiegebeziehung ein geöffneter Abbieger angelegt. Außerdem werden durch die Änderung der Netztopologie zusätzliche Abbieger erzeugt <MadCap:xref class="sieheUeberschrSeite" href="2_13_SATURN-Import_ Hinweise zu Änderungen an der Netztopologie.htm#2_daten_ueber_schnittstellen_austauschen_1567500566_1183588"><span style="color: Black;" class="mcFormatColor">(</span><u>SATURN-Import: Hinweise zu Änderungen an der Netztopologie</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Durch die Definitionen unter 44444 werden zusätzlich verkehrssystemspezifische Zeitzuschläge und Sperrungen an Abbiegern berücksichtigt. </p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="112px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="384px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FROMNODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 2, ANODE</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">VIANODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 1, NODE</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TONODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 2, ANODE</span> (für alle vorhandenen Abbiegebeziehungen)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 2, LSAT </span>(Sättigungsverkehrsstärke)</p>
+                        <ul>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LSAT</span> &lt; 0, werden alle ÖV-Verkehrssysteme zugeordnet.</LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LSAT</span> = 0, wird kein Verkehrssystem zugeordnet.</LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LSAT</span><span class="_Override" style="line-height: 11pt;">&gt;</span> 0, werden alle IV- und ÖV-Verkehrssysteme zugeordnet.</LI>
+                            <LI class="List0Tab">Durch Werte &lt; 0 in 44444 werden Abbieger für die entsprechenden IV-Verkehrssysteme gesperrt.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">CAPPRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 2, LSAT</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">T0PRT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 2, LSAT</span></p>
+                        <ul>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LSAT</span> &lt; 0 oder <span class="gui_element">LSAT</span> &gt; 0, d.h. es gibt ein Verkehrssystem, ist <span class="gui_element">T0PRT</span> = 0.</LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LSAT</span> = 0, ist <span class="gui_element">T0PRT</span> = 100000 (Stunden)</LI>
+                            <LI class="List0Tab">Ist für mindestens ein IV-Verkehrssystem ein Zeitzuschlag (d.h. Wert &gt;0) in 44444 definiert, wird T0PRT auf den minimalen Wert der Zeitzuschläge aller IV-Verkehrssysteme gesetzt.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SATURN_PRIORITY</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 2, TPM </span>(Markierung für untergeordneten Arm)</p>
+                        <ul>
+                            <LI class="List0Tab">Wenn <span class="gui_element">TPM</span> nicht leer ist, ist <span class="gui_element">SATURN_PRIORITY</span> = 0.</LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">TPM</span> leer ist, ist <span class="gui_element">SATURN_PRIORITY</span> = 1.</LI>
+                        </ul>
+                        <p class="CellText">Dieser Wert wird verwendet um die Knotenattribute <span class="gui_element">Hauptstromorientierung1</span> und <span class="gui_element">Hauptstromorientierung2</span> zu setzen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_SATFLOW</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 2, LSAT</span> (Sättigungsverkehrsstärke)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SATURN_GAP</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 1, GAP/GAPR</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">SATURN_TRAVELTIMEPENALTY</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wenn für mindestens ein IV-Verkehrssystem ein Zeitzuschlag unter 44444 definiert ist, ergibt sich der Wert aus dem Minimum aller Zeitzuschläge, anderenfalls ist der Wert 0.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">SATURN_BANNED</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Das Attribut hat den Wert 1, wenn der Abbieger für mindestens ein IV-Verkehrssystem gesperrt ist. Ist der Abbieger für alle IV-Verkehrssysteme zugelassen, ist der Wert 0.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $CONNECTOR</h5>
+        <p class="Text">Die Anbindungen werden aus den <span class="gui_element">simulation centroid connectors</span> und bestimmten Einträgen im <span class="gui_element">buffer network/link data</span> in SATURN erzeugt. Erstere stehen in <span class="gui_element">section 22222</span>, letztere in <span class="gui_element">section 33333</span>. Beide Typen werden als Anbindungen nach <MadCap:variable name="PTV_Manual.Programmname" /> übernommen. Für jede Anbindung werden automatisch eine Quell- und eine Zielanbindung angelegt.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="82px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="414px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ZONENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <ul>
+                            <LI class="List0Tab">Wenn die Anbindung ein <span class="gui_element">simulation centroid connector</span> ist, ist <span class="gui_element">ZONENO</span> = <span class="gui_element">22222, Cols 1-5</span> (für simulation centroid connectors)</LI>
+                            <LI class="List0Tab">Wenn die Anbindung aus dem <span class="gui_element">buffer network</span> stammt und <span class="gui_element">33333</span>, <span class="gui_element">Col&#160;1</span> = <span class="gui_element">C</span>, ist <span class="gui_element">ZONENO </span>= <span class="gui_element">33333, Cols&#160;2-5</span></LI>
+                            <LI class="List0Tab">Wenn die Anbindung aus dem <span class="gui_element">buffer network</span> stammt und <span class="gui_element">33333</span>, <span class="gui_element">Col&#160;6</span> = <span class="gui_element">C</span>, ist <span class="gui_element">ZONENO </span>= <span class="gui_element">33333, Cols&#160;7-10</span></LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <ul>
+                            <LI class="List0Tab">Wenn die Anbindung ein <span class="gui_element">simulation centroid connector</span> ist, wird die Anbindung an einen neu generierten Knoten angebunden <MadCap:xref class="sieheUeberschrSeite" href="2_13_SATURN-Import_ Hinweise zu Änderungen an der Netztopologie.htm#2_daten_ueber_schnittstellen_austauschen_1567500566_1183588"><span style="color: Black;" class="mcFormatColor">(</span><u>SATURN-Import: Hinweise zu Änderungen an der Netztopologie</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Die neuen Knotennummern sind 6-stellig und im DUTCH-Format 9-stellig. </LI>
+                            <LI class="List0Tab">Wenn die Anbindung aus dem <span class="gui_element">buffer network</span> stammt und <span class="gui_element">33333</span>, <span class="gui_element">Col&#160;1</span> = <span class="gui_element">C</span>, ist <span class="gui_element">NODENO</span> = <span class="gui_element">33333, Cols&#160;7-10</span></LI>
+                            <LI class="List0Tab">Wenn die Anbindung aus dem <span class="gui_element">buffer network</span> stammt und <span class="gui_element">33333</span>, <span class="gui_element">Col&#160;6</span> = <span class="gui_element">C</span>, ist <span class="gui_element">NODENO</span> = <span class="gui_element">33333, Cols&#160;2-5</span></LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">DIRECTION</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Für jede Anbindung wird je ein Eintrag mit <span class="gui_element">D</span> und <span class="gui_element">O</span> angelegt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Es werden alle Verkehrssysteme außer ÖV-Verkehrssysteme zugeordnet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $LANE</h5>
+        <p class="Text">Für jede Strecke (Hin- und Rückrichtung zusammen) wird die Anzahl der Fahrstreifen (<span class="gui_element">NUMLANES</span>) ermittelt. Für den Von- und den Nach-Knoten werden jeweils die Fahrstreifen, vom Knotenmittelpunkt aus gesehen, gegen den Uhrzeigersinn fortlaufend nummeriert.</p>
+        <p class="Text">Außerdem werden durch die Änderung der Netztopologie zusätzliche Fahrstreifen erzeugt <MadCap:xref class="sieheUeberschrSeite" href="2_13_SATURN-Import_ Hinweise zu Änderungen an der Netztopologie.htm#2_daten_ueber_schnittstellen_austauschen_1567500566_1183588"><span style="color: Black;" class="mcFormatColor">(</span><u>SATURN-Import: Hinweise zu Änderungen an der Netztopologie</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="112px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="384px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht der Nummer des jeweils betrachteten Knotens der Strecke (<span class="gui_element">FROMNODENO</span> und <span class="gui_element">TONODENO</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MAINNODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LINKNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> der zugehörigen Strecke</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Die Fahrstreifen werden pro Knoten und Strecke von 1 bis <span class="gui_element">NUMLANES</span> der Strecke (Hin- und Rückrichtung), gegen den Uhrzeigersinn fortlaufend nummeriert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">APPTYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <ul>
+                            <LI class="List0Tab">Für eingehende Fahrstreifen ist <span class="gui_element">APPTYPE</span> = 1.</LI>
+                            <LI class="List0Tab">Für ausgehende Fahrstreifen ist <span class="gui_element">APPTYPE</span> = 0.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ORIGINLANENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 2, LSAT</span></p>
+                        <ul>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LSAT</span> &lt; 0, werden alle ÖV-Verkehrssysteme zugeordnet.</LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LSAT</span> = 0, wird kein Verkehrssystem zugeordnet.</LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LSAT</span><span class="_Override" style="line-height: 11pt;">&gt;</span> 0, werden alle IV- und ÖV-Verkehrssysteme zugeordnet.</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $LANETURN</h5>
+        <p class="Text">Fahrstreifenabbieger werden für alle definierten Abbiegebeziehungen für alle Fahrstreifen von <span class="gui_element">LANE1</span> bis <span class="gui_element">LANE2</span> geschrieben.</p>
+        <p class="Text">Außerdem werden durch die Änderung der Netztopologie Fahrstreifenabbieger angelegt <MadCap:xref class="sieheUeberschrSeite" href="2_13_SATURN-Import_ Hinweise zu Änderungen an der Netztopologie.htm#2_daten_ueber_schnittstellen_austauschen_1567500566_1183588"><span style="color: Black;" class="mcFormatColor">(</span><u>SATURN-Import: Hinweise zu Änderungen an der Netztopologie</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="112px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="384px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 1, NODE</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MAINNODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FROMLINKNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">NO</span> der Strecke, die von <span class="gui_element">ANODE</span> nach <span class="gui_element">NODE</span> generiert wurde.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TOLINKNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">NO</span> der Strecke, die von <span class="gui_element">NODE</span> nach <span class="gui_element">TONODE</span> generiert wurde.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FROMLANENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 2, LANE1</span> und <span class="gui_element">LANE2</span></p>
+                        <p class="CellText">Die Fahrstreifenabbieger werden innerhalb jeder Strecke von <span class="gui_element">LANE1</span> bis <span class="gui_element">LANE2 </span>fortlaufend nummeriert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TOLANENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Der Wert wird folgendermaßen ermittelt:</p>
+                        <ul>
+                            <LI class="List0Tab">Für Linksabbieger und Geradeausabbieger erhält der Fahrstreifenabbieger mit der <span class="gui_element">FROMLANENO</span> = 1 die höchste <span class="gui_element">TOLANENO</span> der Nach-Strecke. Der Fahrstreifenabbieger mit der <span class="gui_element">FROMLANENO</span> = 2 erhält die zweithöchste <span class="gui_element">TOLANENO</span> usw.</LI>
+                            <LI class="List0Tab">Für Rechtsabbieger und U-Turns erhält der Fahrstreifenabbieger mit der größten <span class="gui_element">FROMLANENO</span> die kleinste <span class="gui_element">TOLANENO</span> der ausgehenden Strecke. Der Fahrstreifenabbieger mit der zweitgrößten <span class="gui_element">FROMLANENO</span> erhält die zweitkleinste <span class="gui_element">TOLANENO</span> der ausgehenden Strecke usw.</LI>
+                        </ul>
+                        <p class="CellText">Wenn die Anzahl der <span class="gui_element">FROMLANENO</span> größer ist als die Anzahl der <span class="gui_element">TOLANENO</span>, werden die Abbieger ohne entsprechende <span class="gui_element">TOLANENO</span> mit der zuletzt vergebenen <span class="gui_element">TOLANENO</span> verknüpft.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">TSYSSET</span> des zugehörigen Abbiegers</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $SIGNALCONTROL</h5>
+        <p class="Text">Für jeden Eintrag in <span class="gui_element">section 11111,</span> der einen <span class="gui_element">Record type 3</span> besitzt, wird eine LSA angelegt.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="112px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="384px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Die LSAs werden, beginnend mit 1, fortlaufend nummeriert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">leer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">leer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">CYCLETIME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 1, LCY</span> (Umlaufzeit) oder <span class="gui_element">11111, Record type 3, STAGL</span> (Phasenlängen) und <span class="gui_element">11111, Record type 3, INTG </span>(Zwischenlängen)</p>
+                        <ul>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LCY</span> &lt;&gt; 0, ist <span class="gui_element">CYCLETIME</span> = <span class="gui_element">LCY</span>.</LI>
+                            <LI class="List0Tab">Wenn <span class="gui_element">LCY </span>= 0, ist <span class="gui_element">CYCLETIME</span> = Summe aller <span class="gui_element">STAGL</span> + <span class="gui_element">INTG</span> aller zugehöriger Signalgruppen in <span class="gui_element">Record type 3</span>.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TIMEOFFSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 1, OFFSET</span> (Zeitversatz)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">SIGNALIZATIONTYPE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">SIGNALIZATIONSIGNALGROUPBASED</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $SIGNALCONTROLTONODE</h5>
+        <p class="Text">Für jede LSA wird die Zuordnung zu dem zugehörigen Knoten angelegt.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="112px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="384px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SCNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> der zugehörigen LSA</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 1, NODE</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">MAINNODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $SIGNALGROUP</h5>
+        <p class="Text">Für jeden <span class="gui_element">Record type 3</span> einer LSA wird eine Signalgruppe angelegt.</p>
+        <p class="Text">Außerdem wird bei Linksverkehr für jede Lichtsignalanlage mit einem Linksabbieger und bei Rechtsverkehr mit einem Rechtsabbieger, dem im SATURN-Netz keine Signalgruppe zugeordnet ist, eine zusätzliche Signalgruppe angelegt <MadCap:xref class="sieheUeberschrSeite" href="2_13_SATURN-Import_ Neue Signalgruppe für nicht signalisierte Linksabbieger.htm#2_daten_ueber_schnittstellen_austauschen_1567500566_1197962"><span style="color: Black;" class="mcFormatColor">(</span><u>SATURN-Import: Neue Signalgruppe für nicht signalisierte Linksabbieger</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="112px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="384px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SCNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> der zugehörigen LSA</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Die Signalgruppen werden, beginnend mit 1, fortlaufend nummeriert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Der Name besteht aus <span class="gui_element">NO</span>, mit Präfix <span class="gui_element">SG_</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">GTSTART</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 1, OFFSET</span> (Zeitversatz) und <span class="gui_element">11111, Record type 3, INTG </span>(Zwischenzeiten)</p>
+                        <p class="CellText">Für die erste Signalgruppe einer LSA gilt: <span class="gui_element">GTSTART</span> = <span class="gui_element">OFFSET</span></p>
+                        <p class="CellText">Für alle weiteren Signalgruppen gilt <span class="gui_element">GTSTART</span> = <span class="gui_element">GTEND </span>der vorhergehenden Signalgruppe<span class="gui_element"> + INTG </span>der vorhergehenden Signalgruppe.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">GTEND</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 3, STAGL </span>(Phasenlängen)</p>
+                        <p class="CellText">
+                            <span class="gui_element">GTSTART</span> = <span class="gui_element">GTSTART</span> + <span class="gui_element">STAGL</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $SIGNALGROUPTOLANETURN</h5>
+        <p class="Text">In <span class="gui_element">section 11111, Record type 3,</span> werden die VonKnoten (<span class="gui_element">GNA</span>, <span class="gui_element">Cols 26-30</span>, <span class="gui_element">36-40</span> usw.) und NachKnoten (<span class="gui_element">GNC</span>, <span class="gui_element">Cols 31-35</span>, <span class="gui_element">41-45</span> usw.) der zur Signalgruppe gehörenden Fahrstreifenabbieger definiert. Pro <span class="gui_element">GNA</span>-<span class="gui_element">GNC</span>-Paar entsteht pro Fahrstreifenabbieger ein Eintrag in dieser Tabelle.</p>
+        <p class="Text">Außerdem werden durch die Änderung der Netztopologie zusätzliche Signalgruppen zu Fahrstreifenabbiegern erzeugt <MadCap:xref class="sieheUeberschrSeite" href="2_13_SATURN-Import_ Hinweise zu Änderungen an der Netztopologie.htm#2_daten_ueber_schnittstellen_austauschen_1567500566_1183588"><span style="color: Black;" class="mcFormatColor">(</span><u>SATURN-Import: Hinweise zu Änderungen an der Netztopologie</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="112px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="384px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 1, NODE</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">MAINNODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">FROMLINKNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">FROMLINKNO</span> des zugehörigen Fahrstreifenabbiegers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FROMLANENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 3, GNA</span></p>
+                        <p class="CellText">Entspricht <span class="gui_element">FROMLANENO</span> des zugehörigen Fahrstreifenabbiegers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TOLINKNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">TOLINKNO</span> des zugehörigen Fahrstreifenabbiegers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">TOLANENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">11111, Record type 3, GNC</span></p>
+                        <p class="CellText">Entspricht <span class="gui_element">TOLANENO</span> des zugehörigen Fahrstreifenabbiegers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">SGNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> der zugehörigen Signalgruppe</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $INTERGREEN</h5>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="112px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="384px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">SCNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> der zugehörigen LSA</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FROMSGNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> der zugehörigen Signalgruppe</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TOSGNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Nummer der Signalgruppe, die auf die <span class="gui_element">FROMSGNO</span> folgt.</p>
+                        <ul>
+                            <LI class="List0Tab">Wenn es sich bei der <span class="gui_element">FROMSGNO</span> nicht um die Nummer der letzten Signalgruppe der LSA handelt, ist <span class="gui_element">TOSGNO</span> = <span class="gui_element">FROMSGNO</span> + 1</LI>
+                            <LI class="List0Tab">Wenn es sich bei der <span class="gui_element">FROMSGNO</span> um die Nummer der letzten Signalgruppe der LSA handelt, ist <span class="gui_element">TOSGNO</span> = <span class="gui_element">FROMSGNO</span> der ersten Signalgruppe der LSA.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">INTERGREEN</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">= <span class="gui_element">11111, Record type 3, INTG</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $STOP</h5>
+        <p class="Text">Alle Knoten, die in Linien enthalten sind (<span class="gui_element">section 66666</span>), werden automatisch als Haltestellen eingelesen.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="82px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="414px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> des zugehörigen Knotens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">XCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Entspricht <span class="gui_element">XCOORD</span> des zugehörigen Knotens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">YCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">YCOORD</span> des zugehörigen Knotens</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $STOPAREA</h5>
+        <p class="Text">Für jede Haltestelle wird automatisch ein Haltestellenbereich angelegt.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="82px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="414px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> der zugehörigen Haltestelle</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">STOPNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> der zugehörigen Haltestelle</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">XCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">XCOORD</span> der zugehörigen Haltestelle</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">YCOORD</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Entspricht <span class="gui_element">YCOORD</span> der zugehörigen Haltestelle</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $STOPPOINT</h5>
+        <p class="Text">Alle Knoten, die in Linien enthalten sind (<span class="gui_element">section 66666</span>), werden automatisch als Haltepunkte eingelesen.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="82px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="414px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> der zugehörigen Haltestelle</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">STOPAREANO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> des zugehörigen Haltestellenbereichs</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">TSYSSET</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Es werden alle Verkehrssysteme zugeordnet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">DIRECTED</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> des zugehörigen Knotens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">FROMNODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">leer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LINKNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">leer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">RELPOS</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">leer</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $LINE</h5>
+        <p class="Text">Linien sind in den <span class="gui_element">sections 66666</span> aufgelistet. Pro ÖV-Verkehrssystem gibt es eine <span class="gui_element">section 66666</span>. Alle Linien aus allen <span class="gui_element">sections 66666</span> werden eingelesen.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="82px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="414px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">66666, Cols 1-5</span></p>
+                        <ul>
+                            <LI class="List0Tab">Ist der Name eindeutig, wird der Name direkt übernommen.</LI>
+                            <LI class="List0Tab">Gibt es einen Liniennamen mehrfach, wird ab dem zweiten Vorkommen an den Namen ein Leerzeichen und eine fortlaufende Nummer angehängt.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">TSYSCODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Wert wird daraus ermittelt, in welcher der <span class="gui_element">sections 66666</span> die Linie steht.</p>
+                        <ul>
+                            <LI class="List0Tab">Wenn die Linie in der ersten <span class="gui_element">section 66666</span> steht, ist <span class="gui_element">TSYSCODE</span> = B1</LI>
+                            <LI class="List0Tab">Wenn die Linie in der zweiten <span class="gui_element">section 66666</span> steht, ist <span class="gui_element">TSYSCODE</span> = B2 usw.</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $LINEROUTE</h5>
+        <p class="Text">Je Linie werden eine oder zwei Linienrouten angelegt, abhängig vom Eintrag in <span class="gui_element">66666, Col 6</span>.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="109px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="387px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LINENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">NAME</span> der zugehörigen Linie</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Entspricht <span class="gui_element">NAME</span> der zugehörigen Linie</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">DIRECTIONCODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">66666, Col 6</span></p>
+                        <ul>
+                            <LI class="List0Tab">Ist <span class="gui_element">Col 6</span> leer, ist <span class="gui_element">DIRECTIONCODE</span> = &gt;</LI>
+                            <LI class="List0Tab">Ist <span class="gui_element">Col 6</span> = T, wird für jede Richtung eine Linienroute angelegt.</LI>
+                            <LI class="List0Tab">Ist <span class="gui_element">Col 6</span> = R, ist <span class="gui_element">DIRECTIONCODE</span> = &lt;</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ISCIRCLELINE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">SATURNBUSTRIPSPERHOURPCU</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Wert wird ermittelt aus: <span class="gui_element">66666, Cols 7-10</span></p>
+                        <p class="CellText">
+                            <span class="gui_element">SATURNBUSTRIPSPERHOURPCU</span> = &lt;Eintrag&gt; • <span class="gui_element">PCU</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Tabelle $LINEROUTEITEM</h5>
+        <p class="Text">Für jede Linienroute wird für jeden Haltepunkt ein Linienroutenelement angelegt.</p>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="109px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="387px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.Programmname" />-Attribut</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Attributwert</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">INDEX</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Die Linienroutenelemente werden fortlaufend nummeriert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">LINENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Entspricht <span class="gui_element">NAME</span> der zugehörigen Linie</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">LINEROUTENAME</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">NAME</span> der zugehörigen Linienroute</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">DIRECTIONCODE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Entspricht <span class="gui_element">DIRECTIONCODE</span> der zugehörigen Linienroute</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ISROUTEPOINT</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">NODENO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Entspricht <span class="gui_element">NO</span> des zugehörigen Knotens</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">STOPPOINTNO</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Entspricht <span class="gui_element">NO </span>des zugehörigen Haltepunkts</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Nicht in <MadCap:variable name="PTV_Manual.Programmname" /> eingelesene SATURN-Daten</h5>
+        <p class="Text">Folgende SATURN-Daten werden nicht in <MadCap:variable name="PTV_Manual.Programmname" /> eingelesen:</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">SATURN Options</span>
+            </LI>
+            <LI class="List0">
+                <span class="gui_element">Section 11111: Record type 2: TPMod</span>
+            </LI>
+            <LI class="List0">
+                <span class="gui_element">Section 33333: Record 2</span>
+            </LI>
+            <LI class="List0">
+                <span class="gui_element">Section 55555: Cols 16-20</span> (<span class="gui_element">Sectors</span>)</LI>
+            <LI class="List0">
+                <span class="gui_element">Section 77777</span>
+            </LI>
+            <LI class="List0">
+                <span class="gui_element">Section 88888</span>
+            </LI>
+        </ul>
+    </body>
+</html>

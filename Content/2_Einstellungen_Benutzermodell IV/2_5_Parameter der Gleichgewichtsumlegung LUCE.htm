@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="669" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls;max;Program;Processor">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1129884">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_53962">
+            </a>Parameter der Gleichgewichtsumlegung LUCE<a name="30261"></a></h4>
+        <table class="TableStyle-gui_elements1" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="98px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="399px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Bestehende Umlegung als Startlösung verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden Wege und Belastungen des vorhandenen Umlegungsergebnisses als Startlösung für das Verfahren verwendet.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Diese Option bietet sich zum Beispiel an, wenn sich die Nachfrage ändert (durch Matrix lesen oder Matrixdaten ändern im Matrixeditor beispielsweise). Das vorhandene Umlegungsergebnis wird zunächst passend zur neuen Nachfrage skaliert und danach wird die Umlegung zum neuen Ergebnis fortgesetzt. Das benötigt meist wesentlich weniger Iterationen als eine komplette Neuberechnung. So kann bei Modellen mit Rückkopplung von der Umlegung zur Nachfrageberechnung viel Rechenzeit gespart werden.</p>
+                        <p class="CellText">Mehrfache Netzänderungen und wiederholtes Anwenden der Option führt zu anderen Routen als eine neue Umlegung ohne die Anwendung dieser Option, da es bei der Gleichgewichtsumlegung zahlreiche mögliche Routen gibt, die das Wardrop´sche Prinzip erfüllen.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, wird die Umlegung vollständig gerechnet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Abbruchbedingung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <MadCap:variable name="PTV_Manual.Programmname" /> bricht den Iterationsprozess zur Ermittlung des Gleichgewichts ab, wenn eine der folgenden Bedingungen erfüllt ist <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Gleichgewichtsumlegung.htm#1_benutzermodell_iv_2033098965_1034670"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Gleichgewichtsumlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">max. Anzahl Iterationen</span>
+                        </p>
+                        <p class="CellText">Das Verfahren bricht nach der eingestellten Anzahl äußerer Iterationen ab. Minimum sind drei Iterationen, da die ersten beiden Iterationen noch keine relevanten Ergebnisse produzieren.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Bedingung ist zum Beispiel bei sehr stark überlasteten Netzen relevant, wenn mit den eingestellten zulässigen Abweichungen kein Gleichgewichtszustand erreicht werden kann.</p>
+                        <p class="CellText">
+                            <span class="gui_element">max. Gap</span>
+                        </p>
+                        <p class="CellText">Maß für den Grad der Konvergenz für das Netz <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Konvergenzkriterien_der_Umlegungsqualitaet.htm#1_benutzermodell_iv_2033098965_1222416"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Konvergenzkriterien der Umlegungsqualität</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Das Verfahren bricht ab, wenn der Wert überschritten wird.</p>
+                        <p class="CellText">Hinweis </p>
+                        <p class="CellText">Vorhandene Ergebnisse sind reproduzierbar, da der Standardwert null ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Multithreading</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl parallel auszugleichender Bezirke</span>
+                        </p>
+                        <p class="CellText">Hier geben Sie an, wie viele Bezirke gleichzeitig gerechnet werden sollen. Die Anzahl orientiert sich an der Anzahl der echten Prozessorkerne ihres Computers. Die Einstellung gilt unabhängig von den Einstellungen unter <span class="gui_element">Bearbeiten</span>&#160;&gt; <span class="gui_element">Benutzereinstellungen</span>&#160;&gt; <span class="gui_element">Arbeitsumgebung </span><MadCap:xref class="sieheUeberschrSeite" href="../2_Grundlagen_Programmbedienung/2_1_Anzahl der verwendeten Prozessorkerne festlegen.htm#2_grundlagen_programmbedienung_1644961382_1136788"><span style="color: Black;" class="mcFormatColor">(</span><u>Anzahl der verwendeten Prozessorkerne festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Die höchste Rechengeschwindigkeit erreichen Sie mit 3 oder 4 Bezirken, auch wenn Ihr Computer mehr Prozessorkerne zur Verfügung hat. Wählen Sie eine größere Anzahl aus, geraten die berechneten Ausgleichsschritte stark in Konflikt und verringern die Rechengeschwindigkeit.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Sie können Ergebnisse nur reproduzieren, wenn Sie die gleiche Anzahl Bezirke eingestellt haben. Sie können die Abweichung bei unterschiedlicher Anzahl Prozessorkerne sehr gering halten, wenn Sie ein <span class="gui_element">max. Gap</span> kleiner 10<span class="Superscript">-6</span> wählen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Optimieren der Proportionalität von Routenbelastungen an Maschen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Nicht optimieren</span>
+                        </p>
+                        <p class="CellText">Wegebelastungen werden nicht harmonisiert.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Ausgleich separat für jedes Verkehrssystem vornehmen</span>
+                        </p>
+                        <p class="CellText">Wegebelastungen werden für jedes Verkehrssystem getrennt harmonisiert <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Proportionalitaet_bei_der_Routenaufteilung_optimieren.htm#1_benutzermodell_iv_2033098965_1600542"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Proportionalität bei der Routenaufteilung optimieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Ausgleich für widerstandsgleiche Maschen für alle Verkehrssysteme möglichst gemeinsam vornehmen</span>
+                        </p>
+                        <p class="CellText">Wegebelastungen werden, wenn möglich, für alle Verkehrssysteme gemeinsam harmonisiert <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Proportionalitaet_bei_der_Routenaufteilung_optimieren.htm#1_benutzermodell_iv_2033098965_1600542"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Proportionalität bei der Routenaufteilung optimieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="654" MadCap:lastWidth="510" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1090033">
+            </a>Information über verstrichene Wartezeit</h4>
+        <p class="Text">Nutzt der Fahrgast im Fall konstanter Takte die Information aus, wie lange er schon an der Haltestelle wartet, so ist er in der Lage, seine erwarteten Restkosten gegenüber den bisher vorgestellten Modellen zu reduzieren. Beispielsweise weiß der Fahrgast nach einer Wartezeit von acht Minuten, dass eine Linie mit 10-Minuten-Takt innerhalb der nächsten zwei Minuten eintreffen muss. Er kann diese Information nutzen, um eventuell zuvor eintreffende, aber um mindestens zwei Minuten langsamere Linien zu ignorieren.</p>
+        <p class="Text">Diese Information hat der Fahrgast ganz unabhängig von der äußeren Infrastruktur. Sie zu unterstellen ist somit keine starke Annahme.</p>
+        <p class="Text">In diesem Fall hängt die optimale Linienmenge <span class="formula">L</span><span class="formula_superscript">*</span> von der verstrichenen Wartezeit ab, ist also nicht mehr konstant. Die Ermittlung dieser Menge ist schwieriger als in den vorangegangenen Fällen. Es lässt sich nachweisen, dass <span class="formula">L</span><span class="formula_superscript">*</span> folgende Gestalt hat.</p>
+        <p class="Text">Es gibt ein <span class="formula">i</span><span class="formula_superscript">*</span> ≤ <span class="formula">n</span> und eine geordnete Folge von Zeitpunkten 0 ≤ <span class="formula">t</span><span class="formula_subscript">i* </span>≤ ... ≤<span class="formula_subscript"></span><span class="formula">t</span><span class="formula_subscript">l</span>, sodass im Zeitintervall <span class="formula">I</span><span class="formula_subscript">j</span><span class="formula"></span>= (<span class="formula">t</span><span class="formula_subscript">j+1</span><span class="formula">,t</span><span class="formula_subscript">j</span>] gerade <span class="formula">L</span><span class="formula_subscript">j</span> = {1, ...,<span class="formula"> j</span>} die optimale Linienmenge bildet. <span class="formula">t</span><span class="formula_subscript">j</span> ist dabei genau der Zeitpunkt <span class="formula">t</span>, ab dem die Rest-Reisezeit von Linie <span class="formula">j</span> größer oder gleich den erwarteten Restkosten (inklusive Wartezeit nach <span class="formula">t</span>) der Linien <span class="formula">L</span><span class="formula_subscript">j-1</span> ist. Anders formuliert, ist <span class="formula">t</span><span class="formula_subscript">j</span> die eindeutige Lösung für <span class="formula">t</span> in <img src="../Resources/Images/8_31.jpg" />.</p>
+        <p class="Text">Die optimale Strategie ist die folgende. Falls der Fahrgast nach Wartezeit <span class="symbol">t</span> <span class="symbol">Î</span> <span class="formula">I</span><span class="formula_subscript">j</span> eine Ankunft einer Linie aus <span class="formula">L</span><span class="formula_subscript">j</span> beobachtet, so steigt er in diese Linie ein. Andere Linien ignoriert er.</p>
+        <p class="Text">Man kann zeigen, dass diese Strategie die erwarteten Restkosten minimiert. Wie im Folgenden erläutert wird, entspricht sie dem realen Verhalten von Fahrgästen mehr, als ihre abstrakte Definition vermuten lässt.</p>
+        <p class="Text">Da der Fahrgast die Takte aller Linien kennt, erhöht sich mit fortgeschrittener Wartezeit sein Wissen darüber, welche der verfügbaren Linien sich noch lohnen. Auch vergleichsweise langsame Linien können zu Beginn der Wartezeit noch sinnvolle Alternativen darstellen. Es gibt jedoch einen Zeitpunkt, an dem die Bewertung „kippt”. Irgendwann ist der Erwartungswert für die verbleibende Wartezeit auf die schnelleren <span class="formula">j-1</span> Linien geringer als die Differenz zwischen deren erwarteter Rest-Reisezeit und der Rest-Reisezeit von Linie <span class="formula">j</span>. Genau ab diesem Zeitpunkt lohnt es sich nicht mehr, Linie <span class="formula">j</span> zu benutzen – selbst wenn sie unmittelbar eintrifft. Die oben genannten Zeitpunkte <span class="formula">t</span><span class="formula_subscript">j</span> sind genau die Momente, wo eine Linie <span class="formula">j</span> aus diesem Grund aus der optimalen Linienmenge <span class="formula">L</span><span class="formula_superscript">*</span> herausfällt.</p>
+        <h5>Beispiel</h5>
+        <p class="Text">Betrachten wir folgende einfache Situation von zwei Linien.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 228px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="76px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="76px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Linie</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Fahrzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="text-align: right;">Takt</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">10‘</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText" style="text-align: right;">15‘</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">13‘</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText" style="text-align: right;">15‘</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Berücksichtigung verstrichener Wartezeit</p>
+            </caption>
+        </table>
+        <p class="Text">Der Fahrgast wartet maximal 15 Minuten auf die Weiterfahrt. Nach <span class="formula">t</span> Minuten beträgt die erwartete Rest-Reisezeit für Linie 1 noch genau 10 + (15 - <span class="formula">t</span>) / 2 Minuten. Um den Zeitpunkt zu ermitteln, ab dem dieser Erwartungswert geringer ist als die Fahrzeit von Linie 2, löst man 10 + (15 - <span class="formula">t</span>) / 2&#160;≤&#160;13 nach <span class="formula">t</span> auf und erhält <span class="formula">t </span>≥<span class="formula"></span>9, setzt also <span class="formula">t</span><span class="formula_subscript">2</span><span class="formula"> =</span> 9.</p>
+        <p class="Text">Mit anderen Worten kann nach 9 Minuten ein Fahrzeug von Linie 2 ignoriert werden, da die um drei Minuten längere Reisezeit von Linie 2 durch die mittlere verbleibende Wartezeit auf Linie 1 nicht mehr wettgemacht wird.</p>
+    </body>
+</html>

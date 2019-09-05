@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="611" MadCap:lastWidth="510" MadCap:ignoredWords="End;Sys_B_20_40;Sys_B_20_40_1;Anfahr">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_netz_bearbeiten_23091886_2716026">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_70246">
+            </a>Systemrouten aus Fahrzeitprofilen erzeugen </h4>
+        <p class="Text">Sie können Systemrouten aus vorhandenen Fahrzeitprofilen erzeugen. Deren Verlauf und Fahrzeiten werden dabei übernommen. </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Systemrouten werden je Halteabschnitt erzeugt, d.&#160;h. jeweils zwischen aufeinander folgenden Haltepunkten.</p>
+                        <p class="Text">Da Fahrzeitprofile zwingend an Haltepunkten starten und enden, wird der gesamte Verlauf eines Fahrzeitprofils in Systemrouten umgesetzt.</p>
+                        <p class="Text">Systemrouten werden getrennt nach Verkehrssystem und Verlauf erzeugt. Das bedeutet, falls Fahrzeitprofile zu unterschiedlichen Verkehrssystemen existieren, die sich ansonsten in allen Attributen gleichen, entstehen hieraus auch mehrere Systemrouten.</p>
+                        <p class="Text">Gibt es innerhalb eines Verkehrssystems Fahrzeitprofile mit unterschiedlichen Verläufen zwischen zwei Haltepunkten, so werden ebenfalls mehrere Systemrouten erzeugt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie im Fenster <span class="gui_element">Netz</span> mit der rechten Maustaste auf die Schaltfläche <span class="gui_element">Systemrouten</span>.</p>
+        <p class="Stepresult">Das Kontextmenü <span class="gui_element">Systemrouten</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie den Eintrag <span class="gui_element">Erzeugen aus Fahrzeitprofilen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Systemrouten erzeugen aus Fahrzeitprofilen</span> öffnet sich.</p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_system_routes_generate.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Step" MadCap:autonum="3. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Namensgebung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Folgende Namensbestandteile der zu erzeugenden Systemroute können ausgewählt und geändert werden:</p>
+                        <p class="CellText">
+                            <span class="gui_element">Präfix</span>
+                        </p>
+                        <p class="CellText">Angabe eines beliebigen Texts</p>
+                        <p class="CellText">
+                            <span class="gui_element">Verkehrssystem</span>
+                        </p>
+                        <p class="CellText">Auswahl eines Verkehrssystem-Attributs</p>
+                        <p class="CellText">
+                            <span class="gui_element">Start-Haltepunkt</span>
+                        </p>
+                        <p class="CellText">Auswahl eines Haltepunkt-Attributs</p>
+                        <p class="CellText">
+                            <span class="gui_element">End-Haltepunkt</span>
+                        </p>
+                        <p class="CellText">Auswahl eines Haltepunkt-Attributs</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Existiert noch keine Systemroute mit identischem Verkehrssystem und Verlauf im Netz, gilt für die Namensgebung:</p>
+                        <ul>
+                            <LI class="List0Tab">Sind alle vier Bestandteile aktiv, ergibt sich beispielsweise folgender Name für eine erzeugte Systemroute Sys_B_20_40.</LI>
+                            <LI class="List0Tab">Um zu verhindern, dass unterschiedliche gleichzeitig erzeugte Systemrouten identische Namen erhalten, wird eine Zahl an den Namen gehängt, falls eine Namenskombination bereits besteht. Die Zählung startet bei 1, beispielsweise Sys_B_20_40_1.</LI>
+                        </ul>
+                        <p class="CellText">Existierende Systemrouten können mit Hilfe der Namensgebung überschrieben oder aktualisiert werden.</p>
+                        <ul>
+                            <LI class="List0Tab">Eine Systemroute mit identischem Verkehrssystem und Verlauf wird überschrieben, wenn deren Name mit den oben genannten Bestandteilen übereinstimmt. Möchten Sie die Systemroutendaten eines Netzes lediglich aktualisieren, müssen im Fenster die gleichen Parameter wie für existierende Systemrouten eingestellt sein. </LI>
+                            <LI class="List0Tab">Wenn Sie das Überschreiben existierender Systemrouten beim Systemrouten erzeugen verhindern möchten, müssen Sie eine neue Namenskombination wählen. Für diese können keine vorhandenen Systemrouten im Netz gefunden werden. Alle Objekte werden dann neu eingefügt, zusätzlich zu den bestehenden Systemrouten.</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Bestimmung der Systemroutenfahrzeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Wählen Sie eine der folgenden Optionen für die Fahrzeit der Systemrouten:</p>
+                        <p class="CellText">
+                            <span class="gui_element">Minimum</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die minimale Fahrzeit ermittelt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Maximum</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die maximale Fahrzeit ermittelt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Durchschnitt</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird der Mittelwert der Fahrzeit ermittelt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Bestimmung der Systemroutenlänge</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Wählen Sie eine der folgenden Optionen für die Längen der Systemrouten:</p>
+                        <p class="CellText">
+                            <span class="gui_element">Minimum</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die minimale Länge ermittelt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Maximum</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die maximale Länge ermittelt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Durchschnitt</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, wird die mittlere Länge ermittelt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Fahrzeitprofile verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden nur aus aktiven Fahrzeitprofilen Systemrouten erzeugt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Für mehrere Fahrzeitprofile mit gleichem Verkehrssystem und gleichem Verlauf ergeben sich die Attribute der Systemroute folgendermaßen:</p>
+                        <ul>
+                            <LI class="List0">Das <span class="gui_element">Verkehrssystem</span> wird übernommen, da es für alle Fahrzeitprofile identisch ist.</LI>
+                            <LI class="List0">Der Verlauf (speziell Start-Haltepunkt und End-Haltepunkt) wird übernommen, da er für alle Fahrzeitprofile identisch ist.</LI>
+                            <LI class="List0">Der <span class="gui_element">Name</span> wird gemäß den Einstellungen zur Namensgebung generiert.</LI>
+                            <LI class="List0">Die <span class="gui_element">Länge</span> ist ein Aggregat der Längen der Halteabschnitte (aus Linienrouten aller Fahrzeitprofile).</LI>
+                            <LI class="List0">Die <span class="gui_element">Durchfahrzeit</span> im Register <span class="gui_element">Basis</span> ist ein Aggregat der Fahrzeiten der Halteabschnitte (aus allen Fahrzeitprofilen)</LI>
+                            <LI class="List0">Die <span class="gui_element">Durchfahrzeit</span> im Register <span class="gui_element">Fahrzeugkombination</span> ist ein Aggregat der Fahrzeiten der Halteabschnitte (aus allen Fahrzeitprofilen dieser Fahrzeugkombination).</LI>
+                            <LI class="List0">Der <span class="gui_element">Anfahr-/Abbremszuschlag</span> wird immer auf null gesetzt.</LI>
+                            <LI class="List0">Benutzerdefinierte Attribute werden nicht übernommen.</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Systemrouten werden erzeugt.</p>
+    </body>
+</html>

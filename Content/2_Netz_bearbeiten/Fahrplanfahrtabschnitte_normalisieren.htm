@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="684" MadCap:lastWidth="510" MadCap:ignoredWords="Nr;No;xls">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_netz_bearbeiten_23091886_2276144">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_21350">
+            </a>Fahrplanfahrtabschnitte normalisieren</h4>
+        <p class="Text">
+            <MadCap:keyword term="Fahrplanfahrtabschnitte:normalisieren" />
+            <MadCap:keyword term="Servicefahrtabschnitte: siehe Fahrplanfahrtabschnitte" />Die Normalisierung ist hilfreich für die Umlaufbildung. Sie sorgt dafür, dass jeder Fahrplanfahrtabschnitt maximal lang ist und überflüssige Fahrplanfahrtabschnitte beseitigt werden. So verhindert die Normalisierung, dass während der Umlaufbildung ein unerwünschter Fahrzeugwechsel bei einer Fahrplanfahrt erfolgt, die über mehrere Fahrplanfahrtabschnitte verfügt, die örtlich aneinander grenzen ohne sich zu überschneiden. </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Den gleichen Effekt können Sie erzielen, indem Sie Zwangsbindungen zwischen zwei aneinander grenzenden Fahrplanfahrtabschnitten definieren <MadCap:xref class="sieheUeberschrSeite" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Zwangsbindungen einfügen.htm#2_einstellungen_betreibermodell_oev_1111312306_1133461"><span style="color: Black;" class="mcFormatColor">(</span><u>Zwangsbindungen einfügen   </u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Fahrplanfahrtabschnitte mit gleichen Fahrzeugkombinationen werden als eigene Gruppe normalisiert. </p>
+        <p class="Text">Die Normalisierung von Fahrplanfahrtabschnitten ist insbesondere dann nützlich, wenn Sie HAFAS-Daten einlesen.</p>
+        <p class="Text">Beispiel: Sie legen eine Fahrplanfahrt für eine Buslinie mit zwei Fahrplanfahrtabschnitten mit gleicher Fahrzeug-Kombination an. Ein Fahrplanfahrtabschnitt deckt die Strecke von A nach B ab, auf der der Bus von Montag bis Freitag verkehrt. Der zweite Fahrplanfahrtabschnitt deckt die Strecke von B nach C ab, auf der der Bus täglich (Montag bis Sonntag) verkehrt. Wenn Sie nun diese Fahrplanfahrtabschnitte normalisieren, erstellt <MadCap:variable name="PTV_Manual.Programmname" /> einen maximal langen Fahrplanfahrtabschnitt für die Strecke zwischen A und C für die Tage Montag bis Freitag und einen zweiten Fahrplanfahrtabschnitt für die Strecke zwischen B und C für Samstag und Sonntag.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie im Fenster <span class="gui_element">Netz</span> mit der rechten Maustaste auf die Schaltfläche <span class="gui_element">Linien</span>.</p>
+        <p class="Stepresult">Das Kontextmenü <span class="gui_element">Linien</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie den Eintrag <span class="gui_element">Fahrplanfahrtabschnitte normalisieren</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Mehrfach-Bearbeiten Fahrplanfahrtabschnitte</span> öffnet sich. Das Register <span class="gui_element">Sonderfunktionen</span> wird angezeigt. In der Auswahlliste ist der Eintrag <span class="gui_element">Fahrplanfahrtabschnitte normalisieren</span> ausgewählt.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie aus, ob Sie alle oder alle aktiven Fahrplanfahrtabschnitte normalisieren möchten. </p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="71px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="406px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden inaktive Fahrplanfahrtabschnitte beim Normalisieren ignoriert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Normalisieren</span>.</p>
+        <p class="Result">Die Normalisierung der Fahrplanfahrtabschnitte wird durchgeführt.</p>
+    </body>
+</html>

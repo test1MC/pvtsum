@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="657" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs;Ride">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1094320">
+            </a>
+            <a name="1_netzmodell_1240632468_90092">
+            </a>Zählstellen und Detektoren</h3>
+        <p class="Text">
+            <MadCap:keyword term="Netzobjekte: Zählstellen" />
+            <MadCap:keyword term="Zählstellen" />
+            <MadCap:keyword term="Netzobjekte: Detektoren" />
+            <MadCap:keyword term="Detektoren" />Zählstellen markieren die geografische Lage von Verkehrszählungen. Dabei kann es sich in gleicher Weise um einmalige Zählungen wie um dauerhaft installierte Zähleinrichtungen handeln. Eine Zählstelle wird durch eine Nummer identifiziert. Sie hat neben Kurzbezeichnung und Name stets eine Lage an einer Strecke, beschrieben durch die ID der Strecke (Von-Knoten und Nach-Knoten) sowie eine relative Position. Diese ist eine Zahl zwischen 0.0 und 1.0 und beschreibt, an welcher Stelle der Strecke die Zählstelle liegt. Da eine Strecke in <MadCap:variable name="PTV_Manual.Programmname" /> stets gerichtet ist, ist damit auch ein Richtungsbezug hergestellt. Ferner besitzt die Zählstelle einen Typ, um beispielsweise Dauerzählstellen und manuelle Zählstellen unterscheiden zu können. Als berechnetes Attribut liegen die Koordinaten der Zählstelle vor; diese errechnen sich aus den Koordinaten der Strecke und der Position entlang dieser Strecke. Jeder Strecke kann eine oder mehrere Zählstellen richtungsbezogen zugeordnet werden. Jeder Zählstelle können optional wiederum Detektoren zugeordnet werden.</p>
+        <p class="Text">Ein Detektor wird durch seine Nummer identifiziert und besitzt neben Kurzbezeichnung und Name eine geografische Position, festgelegt durch ein Koordinatenpaar. Es wird zwischen zwei Arten von Detektoren unterschieden:</p>
+        <ul>
+            <LI class="List0">Der Detektor ist einem Knoten oder Oberknoten zugeordnet. Diese Art von Detektoren dient der Modellierung der Signalisierung, beispielsweise bei verkehrsabhängigen Steuerungen. Ein Bezug zu Zählstellen kann nicht definiert werden.</LI>
+            <LI class="List0">Der Detektor ist frei im Netz definiert und kann optional einer Zählstelle, und damit indirekt einer Strecke zugeordnet sein. In dem Fall stellt der Detektor eine fahrstreifenbezogene Zähleinrichtung dar. Er löst die Zähldaten einer Zählstelle spurgenau auf. Die Anzahl der beobachteten Fahrstreifen wird durch das Attribut <span class="gui_element">beobachtete Fahrstreifen</span> bestimmt. Der am weitesten rechts liegende beobachtete Fahrstreifen ergibt sich durch das Attribut <span class="gui_element">Fahrstreifenposition</span>. Ist ein Detektor einer Zählstelle und somit einer Strecke zugeordnet, so müssen die beobachteten Fahrstreifen mit der Anzahl Fahrstreifen der Strecke kompatibel sein. Das bedeutet, dass kein Fahrstreifen beobachtet werden darf, der an der Strecke nicht definiert ist. Bei einer Fahrstreifenanzahl von zwei dürfen also Detektoren für die Fahrstreifen 1 und 2 definiert werden. Es ist aber zulässig, dass ein Fahrstreifen von mehreren Detektoren oder auch gar nicht beobachtet wird.</LI>
+        </ul>
+        <p class="Text">Zählstellen und deren Detektoren dienen weniger der Datenhaltung selbst, als vielmehr der Visualisierung und Aufbereitung thematischer Karten. Es ist zwar möglich, an Zählstellen Zählwerte in benutzerdefinierten Attributen zu speichern, jedoch können diese auch direkt in benutzerdefinierten Attributen der Strecke abgelegt werden <MadCap:xref class="sieheUeberschrSeite" href="1_2_Benutzerdefinierte Attribute.htm#1_netzmodell_1240632468_1142219"><span style="color: Black;" class="mcFormatColor">(</span><u>Benutzerdefinierte Attribute</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Sind Zählwerte direkt an Strecken abgelegt, so hat man den Vorteil, dass sie in Auswertungen direkt mit den errechneten Belastungswerten, die ja auch in den Streckenattributen vorliegen, verglichen werden können. Insbesondere bietet sich diese Vorgehensweise an, wenn sie das Matrixkorrekturverfahren VStromFuzzy verwenden möchten <MadCap:xref class="sieheUeberschrSeite" href="../1_Nachfragemodell/1_3_Nachfragematrix fortschreiben mit VStromFuzzy.htm#1_nachfragemodell_2215163117_1164657"><span style="color: Black;" class="mcFormatColor">(</span><u>Nachfragematrix fortschreiben mit VStromFuzzy</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Somit dienen Zählstellen in erster Linie als Markierung für den Standplatz einer Zählung im Netz. Gegebenenfalls können Sie anhand der Nummer Bezüge zu extern vorliegenden Daten herstellen. <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1095212">Abbildung&#160;33</MadCap:xref> zeigt eine Karte, in der die örtliche Lage der Zählstellen im Netz zusammen mit dem Datum der letzten Verkehrszählung dargestellt ist.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_CountLocations.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_netzmodell_1240632468_1095212">
+            </a>
+            <a name="1_netzmodell_1240632468_81868">
+            </a>Visualisierung der örtlichen Lage von Zählstellen mit Datum der Zählung</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Verwenden Sie keine Zählstellen, nur um Zählwerte in das Netz zu integrieren. Nutzen Sie stattdessen benutzerdefinierte Attribute an Strecken. Ist hingegen eine Visualisierung vorgenommener Zählungen im aktuellen Projekt verlangt oder sollen zählstellenbezogene Werte extern verwaltet werden, kann sich der Aufwand für die Erfassung von Zählstellen und Detektoren lohnen.</p>
+                        <p class="Text">Zählstellen und Detektoren haben keinen Einfluss auf Verfahren wie zum Beispiel Umlegungen. Die einzige Ausnahme stellen Detektoren im Knotenbereich dar, die bei verkehrsabhängigen Steuerungen berücksichtigt werden können. Die Informationen dieser Detektoren werden auch beim ANM-Export nach Vissim verwendet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

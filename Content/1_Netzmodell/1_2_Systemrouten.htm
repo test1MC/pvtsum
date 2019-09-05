@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs;Ride;Anfahr;bzw" MadCap:lastBlockDepth="4" MadCap:lastHeight="2869" MadCap:lastWidth="328">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_netzmodell_1240632468_1103894">
+            </a>
+            <MadCap:keyword term="Systemrouten" />
+            <MadCap:keyword term="Netzobjekte: Systemrouten" />
+            <a name="1_netzmodell_1240632468_87876">
+            </a>Systemrouten</h3>
+        <p class="Text">Eine Systemroute beschreibt einen Weg innerhalb des Netzes von einem Haltepunkt zu einem anderen zusammen mit der dafür benötigten Fahrzeit. Optional kann diese benötigte Fahrzeit wie auch Zuschläge für das Anfahren und Bremsen pro Fahrzeugkombination weiter spezifiziert werden. Wichtig ist, dass die Fahrzeiten immer unabhängig von konkreten Linien in der Systemroute hinterlegt sind. Die Systemroute repräsentiert also die Zeit, die eine bestimmte Fahrzeugkombination auf einem bestimmten Weg zwischen zwei Haltepunkten benötigt, unabhängig von der Zugehörigkeit zu einer Linie oder gar zu einer konkreten Fahrt.</p>
+        <p class="Text">Diese Fahrzeit- und Wegeinformation kann in zweierlei Weise für die Fahrplankonstruktion verwendet werden.</p>
+        <ul>
+            <LI class="List0">Digitalisieren von Linienrouten mit Hilfe von Systemrouten</LI>
+            <LI class="List0">Fahrzeiten bestehender Linienrouten und Fahrzeitprofile setzen aus Systemrouten</LI>
+        </ul>
+        <h5>Digitalisieren von Linienrouten mit Hilfe von Systemrouten</h5>
+        <p class="Text">
+            <MadCap:keyword term="Linienrouten: mit Systemrouten digitalisieren" />Die Wegeinformation der Systemroute liefert ein Stück des Verlaufs der Linienroute. Die Fahrzeitinformation geht in das erste darüber liegende Fahrzeitprofil abschnittsweise ein. Sie können wahlweise ganze Linienrouten oder einzelne Abschnitte mit Hilfe von Systemrouten erstellen. Sobald es eine am aktuellen Endpunkt anschließende Systemroute mit passendem Verkehrssystem gibt, können Sie diese verwenden, um den Linienweg bis zum Endhaltepunkt der Systemroute zu verlängern. Die Fahrzeit für diesen Abschnitt wird aus der Systemroute entnommen, und zwar bevorzugt aus derjenigen für die korrekte Fahrzeugkombination, wenn diese angegeben ist. Werden sowohl Start- als auch Endhaltepunkt der Systemroute von der Linienroute bedient, ergibt sich die Fahrzeit als Summe der Durchfahrzeit und der Anfahrt- und Bremszuschläge der Linienroute. Fährt die Linienroute an einem der anschließenden Haltepunkte durch, fällt der Anteil des korrespondierenden Zuschlags weg. Dadurch ist es möglich, Systemrouten gleichermaßen für haltende wie für durchfahrende Fahrzeitprofile zu verwenden.</p>
+        <h5>Fahrzeiten bestehender Linienrouten und Fahrzeitprofile setzen</h5>
+        <p class="Text">Sie können Systemrouten verwenden um Fahrzeiten bestehender Linienrouten und Fahrzeitprofile neu zu setzen. Dabei bleibt die Wegeinformation der Linienroute erhalten. Gibt es für den Abschnitt zwischen zwei Profilpunkten des Fahrzeitprofils eine passende Systemroute, so wird deren Fahrzeit in das Fahrzeitprofil übernommen. Abhängig davon, ob an den begrenzenden Haltepunkten ein Fahrgastwechsel vorgesehen ist oder nicht, wird nur die reine Durchfahrzeit oder die Summe aus Durchfahrzeit, Anfahr- und/oder Abbremszuschlag übernommen.</p>
+        <p class="Text">Eine Systemroute passt dabei zu einem Abschnitt zwischen zwei Profilpunkten, wenn die folgenden Bedingungen erfüllt sind.</p>
+        <ul>
+            <LI class="List0">Beide Profilpunkte liegen an Haltepunkten.</LI>
+            <LI class="List0">Diese Haltepunkte sind Start- und Endhaltepunkt der Systemroute (das bedingt insbesondere, dass diese Haltepunkte für das Verkehrssystem des Fahrzeitprofils geöffnet sein müssen).</LI>
+            <LI class="List0">Der Weg der unter dem Fahrzeitprofil liegenden Linienroute stimmt mit dem der Systemroute überein.</LI>
+            <LI class="List0">Das Verkehrssystem der Systemroute stimmt mit demjenigen des Fahrzeitprofils (das heißt der Linie) überein.</LI>
+            <LI class="List0">Ist die entsprechende Option aktiviert, so muss an der Systemroute auch eine spezielle Fahrzeit für die dem Fahrzeitprofil beziehungsweise der Linie zugeordnete Fahrzeugkombination angegeben sein.</LI>
+        </ul>
+        <p class="Text">Gibt es mehrere passende Systemrouten, werden die Zeiten für betroffene Abschnitte nicht gesetzt.</p>
+        <p class="Text">Beim Erstellen neuer Fahrzeitprofile werden die Fahrzeiten anhand der Systemroute ermittelt, sofern vorhanden. Wenn dies sowohl für die Systemroute als auch für das Fahrzeitprofil angegeben ist, werden spezielle Standardwerte für die Fahrzeugkombination dabei berücksichtigt. </p>
+        <p class="Text">Sind keine Systemrouten definiert, gelten wie bisher die Streckenfahrzeiten.</p>
+        <p class="Text">Neben der Verwendung für den Fahrplan spielen Systemrouten in der Umlaufbildung eine wichtige Rolle. Vorhandene Systemrouten können optional für Leerfahrten innerhalb der Umlaufbildung genutzt werden bzw. neue Systemrouten können zu diesem Zweck automatisch erzeugt werden <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Systemrouten_erzeugen.htm#2_netz_bearbeiten_23091886_2715804"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Systemrouten erzeugen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+    </body>
+</html>

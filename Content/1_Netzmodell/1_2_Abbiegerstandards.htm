@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="658" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="t0;$ABBIEGERSTANDARD;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;ABBIEGERSTANDARD">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1064377">
+            </a>
+            <a name="1_netzmodell_1240632468_64052">
+            </a>Abbiegerstandards</h4>
+        <p class="Text">
+            <MadCap:keyword term="Abbieger: Abbiegerstandards" />Abbiegerstandards sind Muster, aus denen ein neu entstehender Abbieger mit Werten für ihre Attribute <span class="gui_element">Abbiegezeitzuschlag</span> (<span class="gui_element">t0-IV</span>) und <span class="gui_element">Kapazität</span> belegt wird. Welcher Abbiegerstandard zur Belegung der Attribute eines einzelnen Abbiegers verwendet wird, richtet sich nach folgenden drei Kriterien.</p>
+        <ul>
+            <LI class="List0">dem Typ des Knoten, über den der Abbieger führt</LI>
+            <LI class="List0">dem Typ des Abbiegers (rechts, geradeaus, links)</LI>
+            <LI class="List0">der Stromhierarchie, die vom Rang der an einem Knoten mündenden Strecken abhängt</LI>
+        </ul>
+        <p class="Text">Für jeden Knoten wertet <MadCap:variable name="PTV_Manual.Programmname" /> den Rang der beteiligten Strecken aus und bestimmt daraus einen Hauptstrom <MadCap:xref class="sieheUeberschrSeite" href="1_2_Streckentypen.htm#1_netzmodell_1240632468_1026323"><span style="color: Black;" class="mcFormatColor">(</span><u>Streckentypen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Dieser automatisch bestimmte Hauptstrom kann manuell überarbeitet werden. Die Stromhierarchie beschreibt nun, ob ein Abbieger diesem Hauptstrom folgt, von diesem in einen Nebenstrom mündet, von einem Nebenstrom in den Hauptstrom oder von Neben- in Nebenstrom führt. Diese vier Stufen der Stromhierarchie werden mit den Symbolen aus <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1181616">Tabelle&#160;8</MadCap:xref> bezeichnet.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="60px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="435px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Symbol</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Vorfahrtberechtigte Beziehung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">++</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Hauptstrom in Hauptstrom</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">+-</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Hauptstrom in Nebenstrom</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">-+</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Nebenstrom in Hauptstrom</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">--</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Nebenstrom in Nebenstrom</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_netzmodell_1240632468_1181616">
+                    </a>
+                    <a name="1_netzmodell_1240632468_30539">
+                    </a>Symbole der Stromhierarchie</p>
+            </caption>
+        </table>
+        <p class="Text">In Kombination von Knotentyp, Abbiegetyp und Stromhierarchie können Sie den Abbiegern sehr differenzierte Abbiegezeiten als Standard zuordnen. Diese Abbiegezeiten können dann im Rahmen der Umlegung berücksichtigt werden <MadCap:xref class="sieheUeberschrSeite" href="../1_Benutzermodell IV/1_5_Widerstaende_am_Knoten.htm#1_benutzermodell_iv_2033098965_1188828"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstände am Knoten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1121702">Abbildung&#160;10</MadCap:xref> zeigt ein Beispiel für Abbiegerstandards.</p>
+        <table class="TableStyle-TableStandard" style="width: 498px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="498px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <pre class="Input">* Achtung: Zeitangabe hier immer in Sekunden</pre>
+                        <pre class="Input">* Tabelle: Abbiegestandards</pre>
+                        <pre class="Input">$ABBIEGERSTANDARD:ID;KNOTTYP;ABBTYP;STROMHIERARCHIE;T0IV;KAPIV</pre>
+                        <pre class="Input">1;10;1;--;10s;32000</pre>
+                        <pre class="Input">2;10;1;-+;10s;32000   // Rechtseinbieger von Nebenstrom in Hauptstrom</pre>
+                        <pre class="Input">3;10;1;+-;10s;32000   // Rechtsabbieger von Hauptstrom in Nebenstrom</pre>
+                        <pre class="Input">4;10;1;++;0s;32000    // Rechts abknickende Vorfahrt</pre>
+                        <pre class="Input">5;10;2;--;15s;32000   // Kreuzen von Nebenstrom in Nebenstrom</pre>
+                        <pre class="Input">6;10;2;-+;10s;32000</pre>
+                        <pre class="Input">7;10;2;+-;10s;32000</pre>
+                        <pre class="Input">8;10;2;++;0s;32000    // Geradeausfahrer von Hauptstrom in Hauptstrom</pre>
+                        <pre class="Input">9;10;3;--;20s;32000</pre>
+                        <pre class="Input">10;10;3;-+;20s;32000  // Linksabbieger von Nebenstrom in Hauptstrom</pre>
+                        <pre class="Input">11;10;3;+-;15s;32000  // Linksabbieger von Hauptstrom in Nebenstrom</pre>
+                        <pre class="Input">12;10;3;++;0s;32000</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_netzmodell_1240632468_1121702">
+            </a>
+            <a name="1_netzmodell_1240632468_17195">
+            </a>Beispiel für die Tabelle ABBIEGERSTANDARD in der Netzdatei, die der Eingabe der Standardwerte für Abbiegezuschlag und Abbiegekapazität dient</p>
+    </body>
+</html>

@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="Kostensatz1;GewServKm;GE;operator;1330km" MadCap:lastBlockDepth="6" MadCap:lastHeight="658" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/TableStyles/TableStd_TitnoHead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1122029">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_88006">
+            </a>Betreiberkosten</h4>
+        <p class="Text">
+            <MadCap:keyword term="ÖV:betriebliche Kennzahlen: Betreiberkosten" />Für jeden Betreiber können bis zu drei Kostenwerte (Attribute <span class="gui_element">Kostensatz1</span> bis 3) eingegeben werden. Für jeden dieser drei Kostenwerte kann eine der folgenden Kostenarten gewählt werden.</p>
+        <ul>
+            <LI class="List0">Abschreibungskosten, zum Beispiel Investitionskosten (Kapitaldienst für Betriebshof und sonstige Einrichtungen)</LI>
+            <LI class="List0">Laufende Kosten, zum Beispiel Unterhaltskosten (Instandhaltung für den Betriebshof und Kosten für Verwaltung und Vertrieb).</LI>
+        </ul>
+        <p class="Text">Um die Betreiberkosten aufzuteilen auf die Fahrplanfahrten, die von diesem Betreiber bedient werden, kann ein Aufteilungsschlüssel angegeben werden, der sich zusammensetzt aus den gewichteten Kennzahlen</p>
+        <ul>
+            <LI class="List0">Servicekilometer (<span class="formula">GewServKm</span>)</LI>
+            <LI class="List0">Sitzplatzkilometer (<span class="formula">GewSitzKm</span>)</LI>
+            <LI class="List0">Servicezeit (<span class="formula">GewServZ</span>)</LI>
+            <LI class="List0">Anzahl Fahrplanfahrten (<span class="formula">GewFahrten</span>)</LI>
+            <LI class="List0">Linienbeförderungsfälle (<span class="formula">GewLinBef</span>)</LI>
+            <LI class="List0">Personenkilometer (<span class="formula">GewPersKm</span>)</LI>
+        </ul>
+        <p class="Text">Sie können also die Betreiberkosten anhand der Werte beliebiger Kombinationen dieser sechs Attribute auf Fahrplanfahrten verteilen. Die Summe der Gewichte muss 100&#160;% ergeben <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_ÖV-betriebliche Kennzahlen_ Register Infrastrukturkosten.htm#2_einstellungen_betreibermodell_oev_1111312306_1087041"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>ÖV-betriebliche Kennzahlen: Register Infrastrukturkosten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="141px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="354px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Aufteilung der Betreiberkosten eines Betreibers </span>
+                            <span class="formula">B</span>
+                            <span class="gui_element"> auf eine Fahrplanfahrt</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Der Anteil einer Fahrplanfahrt <span class="formula" style="line-height: 11pt;">V</span> an den Betreiberkosten ihres Betreibers <span class="formula">B</span> beträgt:</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_16.jpg" />
+                        </p>
+                        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">
+                                <img src="../Resources/Images/9_19.jpg" />
+                            </span>
+                        </p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_43.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Kostenart Abschreibungskosten</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula" style="line-height: 11pt;">KostWert</span>
+                            <span class="formula_subscript">B</span>: zum Beispiel Investitionskosten für einen Betriebshof</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_73.jpg" /> mit q = 1 + p/100</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_74.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellCaption">
+                            <span class="gui_element">Kostenart Laufende Kosten</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula" style="line-height: 11pt;">KostWert</span>
+                            <span class="formula_subscript">B</span>: zum Beispiel jährliche Unterhaltskosten für den Betriebshof</p>
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_75.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Anteil</span>
+                            <span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">V</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Anteil einer Fahrplanfahrt <span class="formula" style="line-height: 11pt;">V</span> an den Betreiberkosten ihres Betreibers <span class="formula">B</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">F<span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">B</span></p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Menge aller Fahrplanfahrten des Betreibers <span class="formula" style="line-height: 11pt;">B</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">KostWert</span>
+                            <span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">B</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Kostenwert, der als Betreiber-Attribut eingegeben wird</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">KostBetr</span>
+                            <span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">AP, B</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Betreiberkosten des Betreibers <span class="formula" style="line-height: 11pt;">B</span> in der Analyseperiode (<span class="formula">AP</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">KostBetr</span>
+                            <span class="formula_subscript" style="font-size: 9pt;line-height: 11pt;">V</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Betreiberkosten für eine Fahrplanfahrt <span class="formula">V</span> des Betreibers <span class="formula" style="line-height: 11pt;">B</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">FakVA</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Hochrechnungsfaktor des Verkehrsangebots von AP auf AH</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">AD</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Abschreibungsdauer in Jahren</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">p</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">Zinssatz [%]</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Formeln für die Berechnung von Betreiberkosten</p>
+            </caption>
+        </table>
+        <h5>
+            <MadCap:keyword term="ÖV:betriebliche Kennzahlen: Beispiele" />Rechenbeispiel Abschreibungskosten</h5>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="223px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="272px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Kostensatz 1: Investitionskosten Betriebshof</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">7500000 GE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Abschreibungsdauer AD</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">10 Jahre</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Zinssatz</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">7%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Hochrechnungsfaktor Verkehrsangebot (FakVA)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">365</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Kosten 1 Betreiber für „Urban operator”</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_76.jpg" /> = 2925.57 GE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Gewicht Servicekilometer</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">25&#160;%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Servicekilometer Fahrt 96</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">27.5&#160;km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Servicekilometer gesamt für Betreiber „Urban operator”</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">1330km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Gewicht Sitzplatzkilometer</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">25&#160;%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Sitzplatzkilometer Fahrt 96</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">962.5&#160;km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Sitzplatzkilometer gesamt für Betreiber „Urban operator”</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">46550&#160;km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Gewicht Personenkilometer</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">50&#160;%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Personenkilometer Fahrt 96</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">2495.0&#160;km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Personenkilometer gesamt für Betreiber „Urban operator”</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">109000&#160;km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Anteil der Fahrplanfahrt 96 an den Betreiberkosten</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_53.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body2">
+                        <p class="CellText">Kosten 1 Betreiber Fahrplanfahrt 96</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">2925.57 GE • 0.022 = 63.73 GE</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Rechenbeispiel für Betreiber-Abschreibungskosten</p>
+            </caption>
+        </table>
+        <h5>Rechenbeispiel laufende Kosten</h5>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="230px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="265px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Kostensatz 2: Unterhalt Betriebshof</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">80000 GE</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Zeitbezug des Kostensatzes</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Analysehorizont</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Hochrechnungsfaktor Verkehrsangebot (FakVA)</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">365</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Kosten 2 Betreiber für „Urban operator”</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_35.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Gewicht Servicekilometer</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">25&#160;%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Servicekilometer Fahrt 96</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">27.5&#160;km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Servicekilometer gesamt für Betreiber „Urban operator”</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">1330&#160;km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Gewicht Sitzplatzkilometer</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">25&#160;%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Sitzplatzkilometer Fahrt 96</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">962.5&#160;km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Sitzplatzkilometer gesamt für Betreiber „Urban operator”</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">46550&#160;km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Gewicht Personenkilometer</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">50&#160;%</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Personenkilometer Fahrt 96</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">2495.0&#160;km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Personenkilometer gesamt für Betreiber „Urban operator”</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">109000&#160;km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Anteil der Fahrplanfahrt 96 an den Betreiberkosten</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="Formula">
+                            <img src="../Resources/Images/9_37.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText">Kosten 2 Betreiber Fahrplanfahrt 96</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/9_38.jpg" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">Rechenbeispiel für laufende Kosten des Betreibers</p>
+            </caption>
+        </table>
+    </body>
+</html>

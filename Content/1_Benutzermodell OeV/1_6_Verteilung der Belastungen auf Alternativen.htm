@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="663" MadCap:lastWidth="512" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb;AnteilAkzGEH;V';β">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_benutzermodell_oev_2318507456_1230023">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_66386">
+            </a>Verteilung der Belastungen auf Alternativen</h4>
+        <p class="Text">Um zu verhindern, dass Belastungen in zu starkem Maße auf zeitlich ungünstige Verbindungen verteilt werden, kann anstatt des Wahlmodells optional ein Verfahren angewendet werden, bei dem Belastungen zwischen Verbindungen verschoben werden.</p>
+        <p class="Text">Dabei wird für jedes Paar von Verbindungen (<span class="formula">V, V'</span>) berechnet, in welchem Maße Belastungen von Verbindung <span class="formula">V</span> auf Verbindung <span class="formula">V'</span> verdrängt werden. Die entsprechende Formel lautet:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_74.jpg" />
+        </p>
+        <p class="Text">
+            <span class="formula">P</span>
+            <span class="formula_subscript">v</span>
+            <span class="formula_superscript">B</span> ist die Belastung der Verbindung <span class="formula">V</span> vor dem Verschieben, <span class="formula">W</span> ist die Menge der möglichen alternativen Verbindungen. Die Funktion <span class="formula">d</span> ist folgendermaßen definiert:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_68.jpg" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_69.jpg" />
+        </p>
+        <p class="Text">
+            <span class="formula">c</span> und <span class="formula">β</span> sind benutzerdefinierte Parameter. Diese Funktion sorgt dafür, dass zeitlich zu weit entfernte Verbindungen nicht als Alternative angesehen werden. Für zulässige Alternativen hingegen steigt die Bereitschaft die Verbindung zu wechseln, je näher die Alternative an der ursprünglichen Verbindung liegt.</p>
+        <p class="Text">Das folgende Diagramm zeigt ein Beispiel der Funktion <span class="formula">d</span> für eine Verbindung <span class="formula">V</span> mit <img src="../Resources/Images/8_76.jpg" /> und <span class="formula">c</span> = 10:</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_WillingnessToChangeConnection.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 999792px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Wechselbereitschaft in Abhängigkeit von der Abfahrtszeit der Alternative</p>
+        <p class="Text">Die neue Belastung der Verbindung <span class="formula">V</span> ergibt sich dann durch:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/8_57.jpg" />
+        </p>
+        <p class="Text">Durch das Verschieben von Belastungen zwischen Verbindungen ergeben sich auch neue Belastungen für alle Fahrplanfahrtelemente.</p>
+        <p class="Text">Bei dieser Methode wird die Eigenständigkeit von Verbindungen nicht berücksichtigt.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Option zum Verschieben von Belastungen zwischen benachbarten Verbindungen ist nur in Kombination mit der Widerstandsfunktion <span class="gui_element">DB</span> möglich.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

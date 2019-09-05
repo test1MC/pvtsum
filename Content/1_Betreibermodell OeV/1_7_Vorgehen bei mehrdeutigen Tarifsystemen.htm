@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="689" MadCap:lastWidth="513" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="etc;Train;TI1;SitzKm;TI;vMittel;xls;bzw;LinBef;2xUmst;0xUmst;1xUmst;AusFuss;FussEin;PersKm;PersStd;perpetuo;24h;Village;Nr;Umlaufversions;OpenBlocks;12h;51min;Self;ContainedBlocks;6h;36min;HPunkt;Vehicle;journey;BUS1;Empty;trip;Linienleistungs;erfolgsrechnung;AHP;AHPI;Kostensatz1;Kostensatz3;KostenStr;Sys;Abschreibungs;GE;KostStr;10km;max;Richtungs;te;LocationFault;TimeFault;LayoverTimeFault;VehicleFault;Fahrzeugeinheits;IC;Entfernungs;TP;Town">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_nohead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_betreibermodell_oev_1878159914_1347750">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_10091">
+            </a>Vorgehen bei mehrdeutigen Tarifsystemen</h4>
+        <p class="Text">Wenn Linien zu mehreren Tarifsystemen gehören, ergeben sich potenziell sehr viele Möglichkeiten für die Wahl von Tarifsystemen (und damit Fahrkarten) auf einer Verbindung. Die folgenden Beispiele zeigen typische Situationen, in denen eine solche Mehrfach-Zuordnung erforderlich wird.</p>
+        <p class="Text">Um alle Möglichkeiten systematisch vergleichen und untersuchen zu können, erhalten auch Tarifsysteme Ränge, durch die eine vorgeschriebene Reihenfolge ausgedrückt wird. Zunächst jedoch ein Beispiel, das ohne Ränge auskommt:</p>
+        <h5 MadCap:autonum="">Beispiel: Fahrpreisermittlung bei mehrdeutigen Tarifsystemen, Fahrt bis C-Town, Teil&#160;1</h5>
+        <p class="Text">Wir betrachten folgenden Weg mit drei Teilwegen:</p>
+        <table class="TableStyle-TableStand_nohead" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="130px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="125px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="95px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="143px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellCaption">Von</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellCaption">Nach</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellCaption">Linie (VSys)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellCaption">Tarifsystem</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText">A-Town Bus Terminal</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText">A-Town Main Station</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body2">
+                        <p class="CellText">Bus 42 (Bus)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body2">
+                        <p class="CellText">City </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText">A-Town Main Station</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText">B-Town</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyE-Column1-Body1">
+                        <p class="CellText">Regionalzug</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyD-Column1-Body1">
+                        <p class="CellText">City <span class="gui_element">oder</span> Bahn</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body2">
+                        <p class="CellText">B-Town</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body2">
+                        <p class="CellText">C-Town</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyB-Column1-Body2">
+                        <p class="CellText">Intercity</p>
+                    </td>
+                    <td class="TableStyle-TableStand_nohead-BodyA-Column1-Body2">
+                        <p class="CellText">Bahn</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Wir nehmen an, dass auf dem mittleren Teilweg sowohl City- als auch Bahn-Fahrkarten anwendbar sind, also insbesondere alle Haltestellen bis einschließlich B-Town zu Tarifzonen des Tarifsystems City gehören. </p>
+        <p class="Text">Der Gesamtweg kann deshalb auf zwei unterschiedliche Weisen benutzt werden (Tarifsysteme City-City-Bahn oder Tarifsysteme City-Bahn-Bahn), und der Fahrgast wählt die günstigere der beiden Möglichkeiten. </p>
+        <p class="Hint" MadCap:autonum="Hinweis: ">In jeder der beiden Varianten gilt die Regionalzug-Fahrkarte gegebenenfalls auch für die auf dem Teilweg unmittelbar davor oder dahinter benutzte Linie – und zwar genau dann, wenn der „Fahrpreis-Bezug“ ihres Tarifsystems (City oder Bahn) „jeweils zusammenhängende Teilwege“ oder sogar „alle Teilwege zusammen“ lautet. Dieser Aspekt ist jedoch nicht Gegenstand des Beispiels.</p>
+        <p class="Text">Sind den Tarifsystemen keine Ränge zugewiesen, haben alle Tarifsysteme den Standard-Rang 1, und gibt es keine hierarchische Ordnung. Daher werden sämtliche Möglichkeiten untersucht und die billigste genutzt – was in diesem Beispiel genau das Erwünschte ist.</p>
+        <h5 MadCap:autonum="">Beispiel: Fahrpreisermittlung bei mehrdeutigen Tarifsystemen, Fahrt nur bis B-Town</h5>
+        <p class="Text">Nun betrachten wir den Fall, dass die Fahrt schon in B-Town endet:</p>
+        <table class="TableStyle-TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="132px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="126px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="75px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="155px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Von</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Nach</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Linie (VSys)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Tarifsystem (mit Rang)</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">A-Town Bus Terminal</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">A-Town Main Station</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Bus 42 (Bus)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">City (#1)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">A-Town Main Station</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">B-Town</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Regionalzug</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">City (#1) <span class="gui_element">oder</span> Bahn (#2)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Der Gültigkeitsbereich des Tarifsystems City wird nicht verlassen und wir nehmen an, dass der Regionalzug in diesem Fall nur mit Fahrkarten dieses Tarifsystems benutzt werden darf. Dies gilt selbst dann, wenn es günstiger wäre, ab Main Station ein Bahn-Ticket zu lösen.</p>
+        <p class="Text">Um diese Reihenfolge in <MadCap:variable name="PTV_Manual.Programmname" /> abzubilden, muss das Tarifsystem City einen höheren Rang (beispielsweise 1) haben als das Tarifsystem Bahn (beispielsweise 2). Im Rahmen der Fahrpreisermittlung werden die Tarifsysteme in absteigender Rangfolge betrachtet und das ranghöchste benutzt, welches anwendbar ist. Da in diesem Beispiel schon für das Rang-1-Tarifsystem eine gültige Fahrkarte existiert, wird die Rang-2-Variante gar nicht erst untersucht.</p>
+        <h5 MadCap:autonum="">Beispiel: Fahrpreisermittlung bei mehrdeutigen Tarifsystemen, Fahrt bis C-Town, Teil&#160;2</h5>
+        <p class="Text">Was bedeutet diese Definition von Rängen nun für das vorhergehende Beispiel, in dem explizit beide Tarifsysteme für die Regionalzuglinie anwendbar waren?</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="131px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="128px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="152px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Von</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Nach</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Linie (VSys)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Tarifsystem (mit Rang)</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">A-Town Bus Terminal</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">A-Town Main Station</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Bus 42 (Bus)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">City (#1)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">A-Town Main Station</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">B-Town</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Regionalzug</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">City (#1) <span class="gui_element">oder</span> Bahn (#2)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">B-Town</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">C-Town</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">Intercity</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">Bahn (#2)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Im Unterschied zum Fall, dass die Fahrt in B-Town endet, ist es hier gar nicht möglich, die komplette Verbindung im Rahmen des vorrangigen Tarifsystems City zu nutzen, denn der Intercity nach C-Town gehört nicht mehr dazu. Somit ist ein Rang-2-Tarifsystem auf diesem Weg unvermeidlich. Dies ist der Ansatzpunkt für eine Definition von Rängen von Tarifsystem-Kombinationen, die eine maximale Flexibilität bei der Modellierung solcher Tarifbestimmungen ermöglicht.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Der <span class="_Override" style="font-weight: bold;">Rang einer Kombination von Tarifsystemen</span><span class="formula">T </span>= {<span class="formula">t</span><span class="formula_subscript">1</span><span class="formula">, t</span><span class="formula_subscript">2</span><span class="formula">,…, t</span><span class="formula_subscript">n</span>} ist definiert als der maximale Rang eines ihrer Tarifsysteme: <span class="formula">Rang</span>(<span class="formula">T</span>) := max<span class="formula_subscript">i</span><span class="formula">Rang</span>(<span class="formula">t</span><span class="formula_subscript">i</span>)<span class="formula" style="font-style: normal;">.</span></p>
+                        <p class="Text">Durch diese Festlegung gewinnt man eine Ordnung auf der Menge aller Kombinationen von Tarifsystemen.</p>
+                        <p class="CellText" style="font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">Kombinationen gleichen Rangs gelten als gleichberechtigt, d.h. im Zuge der Fahrpreisermittlung betrachtet <MadCap:variable name="PTV_Manual.Programmname" /> sie alle und wählt daraus den günstigsten Gesamtpreis. Nur wenn es keine gültigen Kombinationen zu einem Rang gibt, werden Kombinationen des nächstniedrigeren Rangs in Betracht gezogen.</p>
+                        <p class="Text">Falls überhaupt keine gültige Kombination existiert, wird der globale <span class="_Override" style="font-weight: bold;">Rückfall-Fahrpreis</span> verwendet. Dieser kann mit einem Wert wie -1 belegt werden, um nach einer Umlegung Wege ohne gültige Fahrkarte(n) leicht identifizieren zu können. Falls Fahrpreise in die Widerstandsdefinition einer Umlegung eingehen, beachten Sie bitte, dass ein hoher Rückfall-Fahrpreis (etwa 99999) verhindert, dass Wege ohne gültige Fahrkarte(n) gefunden und belastet werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Im Beispiel sind die Tarifsystem-Kombinationen City-City-Bahn und City-Bahn-Bahn möglich. Ihre Ränge sind gleich, denn max {1, 1, 2} = 2 und max {1, 2, 2} = 2. Deshalb ist keine der beiden vorrangig; der Fahrgast im Regionalzug ist also nicht auf das Tarifsystem City festgelegt.</p>
+        <p class="Text">Durch die Vergabe von Rang 1 für das Tarifsystem City und von Rang 2 für das Tarifsystem Bahn wurde insgesamt also erreicht, dass der Regionalzug innerhalb des City-Verbunds nur mit City-Fahrkarten genutzt werden kann, bei Fahrten über die Verbundgrenzen hinaus aber auch im Rahmen des Bahn-Tarifsystems.</p>
+        <h5 MadCap:autonum="">Beispiel: Fahrpreisermittlung bei mehrdeutigen Tarifsystemen, Fahrt von C-Town nach A-Town Bus Terminal Teil 3</h5>
+        <p class="Text">Wie im vorigen Beispiel ergeben sich bei der Fahrt in die entgegengesetzte Richtung dieselben Kombinationen gleichen Ranges, aus denen der Tarif mit dem günstigsten Gesamtpreis gewählt wird. Es wird angenommen, dass eine Kombination 35&#160;€ (Bahn) plus 5&#160;€ (City-City), d.h. 40&#160;€ kostet, während die andere Variante 40&#160;€ (Bahn-Bahn) plus 2&#160;€ (City), d.h. 42&#160;€ kostet. Mit den bisherigen Annahmen folgt daraus, dass der Tarif für Bahn-City-City gewählt wird. Diese Wahl unterstellt, dass Fahrgäste volle Kenntnisse über alle möglichen Tarife haben. In der Realität ist dies jedoch nicht immer der Fall. Insbesondere kann davon ausgegangen werden, dass lokal begrenzte Tarife wie der City-Tarif in unserem Beispiel für Besucher oder andere Gruppen nicht genau bekannt ist, der Bahntarif aufgrund seines überregionalen Charakters aber schon. Um also abzubilden, dass beispielsweise ein Fahrgast einen möglichst großen Teil seines Weges mit einem bestimmten Tarifsystem, hier der Bahn, zurücklegt, wird ein Preisgewicht für die Auswahl auf der Ebene der „Tarifsysteme“ verwendet. Diese Gewichtung dient der Ermittlung eines „empfundenen“ Tarifs, der die Grundlage für den gewählten Tarif darstellt. Mit anderen Worten, ein Preisgewicht von 1 für das Tarifsystem Bahn und 10 für City wird die Wahl zugunsten des Tarifs Bahn-Bahn-City ändern (empfundener Tarif ist 40+20=60&#160;€ gegenüber 85&#160;€ für Bahn-City-City).</p>
+        <h5 MadCap:autonum="">Beispiel: Fahrpreisermittlung bei mehrdeutigen Tarifsystemen, Fahrt bis C-Town, Teil 4</h5>
+        <p class="Text">Nun betrachten wir noch die Variante, dass der Regionalzug selbst bis C-Town fährt:</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="130px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="120px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="93px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="145px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">Von</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">Nach</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellText">Linie (VSys)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellText">Tarifsystem (mit Rang)</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">A-Town Bus Terminal</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">A-Town Main Station</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Bus 42 (Bus)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">City (#1)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">A-Town Main Station</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">C-Town</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Regionalzug</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">City (#1) <span class="gui_element">oder</span> Bahn (#2)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">In diesem Fall sieht es zunächst so aus, als würde – genau wie bei der Fahrt nach B-Town – die alleinige Nutzung des City-Tarifsystems erzwungen. Dies gilt jedoch nur, wenn die City-Fahrkarte überhaupt bis C-Town gelöst werden kann, wenn also alle Haltestellen inklusive C-Town in Tarifzonen liegen, die zum Zonentarif des Tarifsystems City gehören. Ist dies nicht der Fall, scheitert der Versuch, die Verbindung mit Tarifsystemen des Rangs 1 zu nutzen, und auf dem zweiten Teilweg kommt das Tarifsystem Bahn zur Anwendung.</p>
+        <p class="Text">Hieran wird deutlich, dass die Zugehörigkeit einer Linie zu einem Tarifsystem noch lange nicht besagt, dass man sie auf ihrem kompletten Verlauf mit Fahrkarten dieses Tarifsystems nutzen kann. Ein noch deutlicheres Beispiel dafür ist das folgende:</p>
+        <h5 MadCap:autonum="">Beispiel: Tarifverbünde mit Zug-Tarifsystem im Hintergrund</h5>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Beschreibung des Netzes und der Tarifbestimmungen:</p>
+        <p class="Text">Eine Regionalzuglinie durchfährt den Bereich von vier Tarifsystemen (Verbünden), die allesamt Zonentarifsysteme sind. Es gibt räumliche Überlappungen zwischen dem ersten und zweiten sowie zwischen dem zweiten und dritten.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_FareModel_Ex-MultipleFareSystems.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000028px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <p class="Text">Für Fahrten auf der Regionalzuglinie innerhalb eines der Tarifsysteme sind Fahrkarten dieses Tarifsystems vorgeschrieben. Dies gilt auch dann, wenn man teilweise in Bereichen des Tarifsystems unterwegs ist, die sich mit einem anderen Tarifsystem überlappen. Für Fahrten über die Grenzen eines Tarifsystems hinaus müssen jedoch in jedem Fall Fahrkarten des Tarifsystems Bahn-Fernverkehr benutzt werden.</p>
+        <p class="Text">Diese Regel lässt noch die Frage offen, welche Fahrkarte zu lösen ist, falls man sich vollständig im Überlappungsbereich zweier Tarifsysteme bewegt. In dieser Situation gilt im Beispiel folgende Bestimmung: In den Überlappungsbereichen von Tarifsystem 2 mit Tarifsystem 1 und mit Tarifsystem 3 haben letztere Vorrang.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Resultierende Modellierung der Fahrkarte in <MadCap:variable name="PTV_Manual.Programmname" />:</p>
+        <p class="Text">Da die Linie zumindest teilweise in allen fünf Tarifsystemen genutzt werden kann, muss sie auch allen Tarifsystemen zugeordnet sein. Um die Vorrangigkeit der Tarifsysteme 1 und 3 gegenüber Tarifsystem 2 in den Überlappungsbereichen der Tarifzonen auszudrücken, müssen beide einen höheren Rang (beispielsweise 1) haben als Tarifsystem 2 (beispielsweise 2). Der Rang von Tarifsystem 4 ist ohne Bedeutung, er kann auf 3 gesetzt werden. Das nicht zonenbasierte Tarifsystem 5 (Bahn-Fernverkehr) muss den niedrigsten Rang (beispielsweise 5) haben, da jedes der vier Zonen-Tarifsysteme Vorrang vor ihm hat, falls eine Fahrt vollständig innerhalb davon stattfindet. Diese Ränge wirken sich durch folgende Modellierung in der gewünschten Weise auf die Wahl der Fahrkarte(n) aus:</p>
+        <p class="Text">Zu jedem Zonentarifsystem gehören Tarifzonen eines bestimmten Typs, etwa 1, 2, 3 und 4 und dazu passende Fahrkartenarten mit Tarifstruktur Zonentarif. Die räumliche Überlappung von Zonen-Tarifsystemen zeigt sich in der Überlappung ihrer Tarifzonen. Alle von der Linie bedienten Haltestellen liegen somit in genau einer Tarifzone oder in zwei Tarifzonen verschiedenen Typs.</p>
+        <p class="Text">So erreicht man, dass jede der Zonentarif-Fahrkartenarten nur dann anwendbar ist, wenn alle angefahrenen Haltestellen in Tarifzonen liegen, die zum Tarifsystem der Fahrkarte gehören. Nur im Überlappungsbereich der Tarifsysteme sind zwei Fahrkartenarten anwendbar und dort sorgen die Tarifsystem-Ränge für die festgelegte Bevorzugung. Das Tarifsystem „Bahn-Fernverkehr” dient als Rückfallebene, denn dafür lässt sich in jedem Fall eine gültige Fahrkarte lösen.</p>
+    </body>
+</html>

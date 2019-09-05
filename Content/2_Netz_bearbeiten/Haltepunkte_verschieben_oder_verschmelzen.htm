@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="617" MadCap:lastWidth="514" MadCap:ignoredWords="Nr;No;xls;End;nbereich">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_netz_bearbeiten_23091886_1386829">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_13081">
+            </a>Haltepunkte verschieben oder verschmelzen<a name="23210"></a></h3>
+        <p class="Text">
+            <MadCap:keyword term="Haltepunkte: verschieben" />
+            <MadCap:keyword term="Haltepunkte: verschmelzen" />
+            <MadCap:keyword term="Haltepunkte:duplizieren" />Einen Haltepunkt können Sie verschieben und bei Bedarf mit einem anderen Haltepunkt verschmelzen. Abhängig davon, ob der Haltepunkt Routenpunkt einer Linienroute ist oder nicht, gelten unterschiedliche Bedingungen:</p>
+        <ul>
+            <LI class="List0">Einen Haltepunkt, der kein Routenpunkt einer Linienroute ist, können Sie entlang des vorhandenen Knoten-Strecken-Netzes auf einen anderen Knoten oder eine andere Strecke verschieben.</LI>
+            <LI class="List0">Einen Haltepunkt, der Routenpunkt einer oder mehrerer Linienrouten ist, können Sie nur entlang einer dieser Linienrouten verschieben. Dabei wird der Linienverlauf grundsätzlich nicht verändert. Insbesondere die Reihenfolge der bedienten Haltepunkte wird nicht verändert.</LI>
+            <LI class="List1">Liegt der verschobene Haltepunkt an einer Position, die von einer seiner Linienrouten nicht erreicht werden kann, wird der Haltepunkt dupliziert. Für alle Linienrouten, die den neuen Ort nicht erreichen können, wird weiterhin der ursprüngliche Haltepunkt verwendet. Der duplizierte Haltepunkt wird von allen Linienrouten verwendet, die ihn erreichen können. Er ist dem gleichen Haltestellenbereich zugeordnet wie der ursprüngliche Haltepunkt.</LI>
+            <LI class="List1">Ein Start- oder End-Haltepunkt einer Linienroute kann nur verschoben werden, wenn er ein Streckenhaltepunkt ist, und er kann nur entlang der gleichen Strecke verschoben werden.</LI>
+        </ul>
+        <p class="Text">Wenn Sie einen Haltepunkt auf einen bestehenden Haltepunkt ziehen, werden die beiden Haltepunkte zu einem Haltepunkt verschmolzen. Dabei können Sie auswählen, von welchem Haltepunkt die Attribute übernommen werden sollen. Das gilt nicht für die zugeordneten Verkehrssysteme: Der neue Haltepunkt erhält in jedem Fall alle Verkehrssysteme beider verschmolzener Haltepunkte.</p>
+        <p class="Text">Wenn Sie einen Haltepunkt auf eine Strecke verschieben, können Sie entscheiden, ob er nach dem Verschieben gerichtet oder ungerichtet sein soll. Dafür müssen Sie den Mauszeiger entweder auf eine Strecke oder deutlich neben die Strecke positionieren. Die Form des Mauszeigers zeigt an, wie der Haltepunkt eingefügt wird.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie im Fenster <span class="gui_element">Netz</span> auf das Symbol <img src="../Resources/Images_4_all/ICO_mode_edit.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 011118px;margin-bottom: 1, 012818px;" /> <span class="gui_element" style="line-height: 11pt;">Modus Bearbeiten</span>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Haltepunkte</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie im Netz auf den Haltepunkt, den Sie verschieben möchten, und halten Sie die Maustaste gedrückt.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Ziehen Sie den Haltepunkt entlang vorhandener Strecken an die neue Position.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Form des Mauszeigers bedeutet Folgendes:</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images/SYM_double_arrow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9873065px;margin-bottom: 0, 9873065px;" /> Sie verschieben den Haltepunkt aktuell entlang einer Linie.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images/SYM_arrow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9873065px;margin-bottom: 0, 9873065px;" /> Sie verschieben den Haltepunkt aktuell quer zur Linie. Hierbei verändert sich das Attribut <span class="gui_element">Gerichtet</span>. </p>
+                        <p class="CellText">
+                            <img src="../Resources/Images/SYM_lasso1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9980792px;margin-bottom: 0, 995243px;" /> Der Haltepunkt kann mit diesem Haltepunkt verschmolzen werden.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images/SYM_forbidden.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-bottom: 0, 9873065px;" /> Der Haltepunkt kann nicht an diese Stelle verschoben werden.</p>
+                        <p class="Text">Beachten Sie außerdem die Informationen in der Statuszeile.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="5. &#160;">Lassen Sie die Maustaste an der gewünschten Position los.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Wenn Sie während des Verschiebens die Taste <span class="shortcut">Esc</span> drücken, brechen Sie den Vorgang ab und der Haltepunkt wird an die ursprüngliche Position zurückgesetzt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Gegebenenfalls öffnet sich eine Meldung mit Hinweisen zu den Auswirkungen der Operation.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Haltepunkt verschmelzen/verschieben</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="6. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 3;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText" style="mc-hyphenate-shortest-prefix: 18;">
+                            <span class="gui_element">Linienroutenelementlängen an neue Position anpassen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden die Längen der Linienroutenelemente neu berechnet.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, bleiben die Längen der Linienroutenelemente unverändert.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option ist ausgegraut, wenn der Haltepunkt nicht Routenpunkt einer Linienroute ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Fahrzeiten an neue Position anpassen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden die Fahrzeiten der Fahrzeitprofilelemente neu berechnet.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, bleiben die Fahrzeiten unverändert.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option ist ausgegraut, wenn der Haltepunkt nicht Routenpunkt einer Linienroute ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Haltestelle(nbereich) mit verschieben</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, erhalten Haltestelle und Haltestellenbereich des verschobenen Haltepunkts ebenfalls die neuen Koordinaten.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option ist ausgegraut, wenn die Haltestelle weitere Haltestellenbereiche oder der Haltestellenbereich weitere Haltepunkte hat.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Haltestelle(nbereich) löschen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden Haltestelle und Haltestellenbereich des verschmolzenen Haltepunkts gelöscht.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, bleiben Haltestelle und Haltestellenbereich am ursprünglichen Ort erhalten.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option ist nur verfügbar, wenn Sie zwei Haltepunkte ohne Kopie verschmelzen, wenn der verschmolzene Haltepunkt der einzige des Haltestellenbereichs ist und wenn der Haltestellenbereich der einzige der Haltestelle ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Attribute vom verschobenen Haltepunkt übernehmen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, erhält der neue Haltepunkt fast alle Attribute des verschobenen Haltepunkts (Ausnahme siehe Hinweis).</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, erhält der neue Haltepunkt fast alle Attribute des Haltepunkts, mit dem der verschobene Haltepunkt verschmolzen wurde (Ausnahme siehe Hinweis).</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option ist nur verfügbar, wenn Sie Haltepunkte verschmelzen.</p>
+                        <p class="CellText">Alle Verkehrssysteme, die einem der beiden verschmolzenen Haltepunkte zugeordnet waren, werden dem neuen Haltepunkt zugeordnet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="7. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Der Haltepunkt wird verschoben und gegebenenfalls mit einem anderen Haltepunkt verschmolzen.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Sie können die genaue Position eines Strecken-Haltepunkts innerhalb einer Strecke auch im Fenster <span class="gui_element">Haltepunkt bearbeiten</span> ändern <MadCap:xref class="sieheUeberschrSeite" href="Attribute_und_Optionen_von_Haltepunkten.htm#2_netz_bearbeiten_23091886_1386463"><span style="color: Black;" class="mcFormatColor">(</span><u>Attribute und Optionen von Haltepunkten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

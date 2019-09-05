@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="696" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="AHPI;NMHC;NH;100km;ca;75kg;83kg;UBA;BAFU;www;hbefa;Emis;Nordic;Rls90;Council;of;Emissions;Lm;DStrO;Dv;v_0;bis130;DStg;rls;dat;60km;ZTV">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_umweltwirkungsmodell_1611065317_1027693">
+            </a>Lärm-Streckenattribute</h3>
+        <p class="Text">Für die beiden Lärmberechnungsverfahren werden verschiedene Eingabe-Attribute benötigt (<MadCap:xref class="Label_Table" href="#1_umweltwirkungsmodell_1611065317_1031854">Tabelle 1</MadCap:xref>). Zum Verständnis dieser Eingabegrößen sei auf die Erläuterungen und Abbildungen in der RLS-90 verwiesen. Als Ergebnis wird die Ausgabegröße Lärm ausgegeben.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="114px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="381px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Anteil Lkw</p>
+                        <p class="CellText">(Eingabe)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">LKW-Anteil <span class="formula">p</span> (über 2,8 t zulässiges Gesamtgewicht) in Prozent am Gesamtverkehr</p>
+                        <p class="CellText">Standardwert: 0</p>
+                        <p class="CellText">Wertebereich: 0 bis 100</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Steigung</p>
+                        <p class="CellText">(Eingabe)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Streckenlängsneigung <span class="formula">g</span> in Prozent zur Festlegung des Korrekturfaktors <span class="formula">DStg</span> für Steigungen und Gefälle, wobei folgendes gilt.</p>
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">DStg = 0,6 |g| -3      für |g| &gt; 5%</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="formula">DStg = 0                  für |g| </span>
+                            <span class="_Override" style="line-height: 11pt;">≤</span>
+                            <span class="formula" style="font-size: 8pt;line-height: 10pt;"> 5%</span>
+                        </p>
+                        <p class="CellText">Standardwert: 0</p>
+                        <p class="CellText">Wertebereich: -50 bis 50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Flächentyp</p>
+                        <p class="CellText">EWS Flächen-Typ</p>
+                        <p class="CellText">(Eingabe)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Für verschiedene Straßenoberflächentypen werden nach RLS 90, Tabelle 4, Korrekturzuschläge gebildet und addiert. Die zugehörigen Daten werden in der Parameterdatei <span class="path">RLS.DAT</span> gehalten <MadCap:xref class="sieheUeberschrSeite" href="#1_umweltwirkungsmodell_1611065317_1028453"><span style="color: Black;" class="mcFormatColor">(</span><u>Parameterdatei rls.dat</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Standardwert: 1</p>
+                        <p class="CellText">Wertebereich: 1 bis 9</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Lärm</p>
+                        <p class="CellText">(Ausgabe)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Emissions-Mittelungspegel <span class="formula">Lm, E</span> von langen, geraden Fahrstreifen in dB.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_umweltwirkungsmodell_1611065317_1031854">
+            </a>
+            <a name="1_umweltwirkungsmodell_1611065317_33371">
+            </a>Lärm-Streckenattribute</p>
+        <h5 MadCap:autonum="">
+            <a name="1_umweltwirkungsmodell_1611065317_1028453">
+            </a>
+            <a name="1_umweltwirkungsmodell_1611065317_33915">
+            </a>Parameterdatei rls.dat</h5>
+        <pre class="Input">*Straßenoberfläche        zulässige Höchstgeschwindigkeit</pre>
+        <pre class="Input">*                         30 km/h    40 km/h    50 km/h    &gt;= 60km/h</pre>
+        <pre class="Input">*nicht geriffelte</pre>
+        <pre class="Input">*Gussasphalte,Asphaltbeton</pre>
+        <pre class="Input">* Typ 1</pre>
+        <pre class="Input">                             0          0          0          0</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">*geriffelte Gussasphalte</pre>
+        <pre class="Input">*Betone</pre>
+        <pre class="Input">* Typ 2</pre>
+        <pre class="Input">                           1.0        1.5        2.0        2.0</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">*Pflaster mit ebener</pre>
+        <pre class="Input">*Oberfläche</pre>
+        <pre class="Input">* Typ 3</pre>
+        <pre class="Input">                           2.0        2.5        3.0        3.0</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">*sonstige Pflaster</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">* Typ 4</pre>
+        <pre class="Input">                           3.0        4.5        6.0        6.0</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">* ZTV Beton 93</pre>
+        <pre class="Input">* mit Stahlbesenstrich</pre>
+        <pre class="Input">* Typ 5</pre>
+        <pre class="Input">                             0          0          0        1.0</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">* ZTV Beton 93</pre>
+        <pre class="Input">* ohne Stahlbesenstrich</pre>
+        <pre class="Input">* Typ 6</pre>
+        <pre class="Input">                             0          0          0       -2.0</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">* Asphaltbetone 0/11</pre>
+        <pre class="Input">* Splittmastixasphalte</pre>
+        <pre class="Input">* Typ 7</pre>
+        <pre class="Input">                             0          0          0       -2.0</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">* offenporiger Asphalt</pre>
+        <pre class="Input">* Kornaufbau 0/11</pre>
+        <pre class="Input">* Typ 8</pre>
+        <pre class="Input">                             0          0          0       -4.0</pre>
+        <pre class="Input">*</pre>
+        <pre class="Input">* offenporiger Asphalt</pre>
+        <pre class="Input">* Kornaufbau 0/8</pre>
+        <pre class="Input">* Typ 9</pre>
+        <pre class="Input">                             0          0          0       -5.0</pre>
+        <p class="Text">Die Werte beziehen sich auf die Korrekturzuschläge je Oberflächentyp.</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_umweltwirkungsmodell_1611065317_1028049">Abbildung 1</MadCap:xref> zeigt ein Beispiel, in dem die Lärmberechnung nach <span class="gui_element">Lärm-Emis-Rls90</span> als Streckenbalken dargestellt wird. Im Benutzerhandbuch erhalten Sie weitere Informationen zur praktischen Umsetzung <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Umweltwirkungsmodell_HBEFA/2_8_Lärmbelastungen anzeigen.htm#2_einstellungen_umweltwirkungsmodell_4287321607_1034535"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Lärmbelastungen anzeigen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_Noise_link_bars.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_umweltwirkungsmodell_1611065317_1028049">
+            </a>
+            <a name="1_umweltwirkungsmodell_1611065317_42202">
+            </a>Ausgabe der Lärmbelastung als Streckenbalken</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Für die Darstellung der Lärmbelastungen in Verkehrsnetzen empfehlen wir eine Klassifizierung nach Norm DIN 18005 Teil 2 09.91.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

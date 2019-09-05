@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="365" MadCap:lastWidth="1018" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="D3;$E;$Relationen;mtx;mx;nse;$VR;D2;$V;$O;$S;$T;$NAMES;bzw">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_anhang_3073197290_1070836">
+            </a>
+            <a name="2_anhang_3073197290_66398">
+            </a>Datenstrukturen von Matrizen in <MadCap:variable name="PTV_Manual.Programmname" />-spezifischen Textformaten</h3>
+        <p class="Text">Matrizen im Textformat haben generell folgende Datenstruktur:</p>
+        <ul>
+            <LI class="List0">Erste Zeile: Formatcode, beispielsweise $VR;D2</LI>
+            <LI class="List0">$V, $O, $E, $S, $T für das Matrixdateiformat</LI>
+            <LI class="List0">R für zufälliges Runden und oder M</LI>
+            <LI class="List0">D und die Anzahl Dezimalstellen (falls &gt; 0)</LI>
+        </ul>
+        <table class="TableStyle_TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle_TipHint2_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Für die zusätzlichen Parameter R, D und M finden Sie im Folgenden Beispiele in Kombination mit dem Format $V <MadCap:xref class="sieheUeberschrSeite" href="2_15_$V-Format.htm#2_anhang_3073197290_1038402"><span style="color: Black;" class="mcFormatColor">(</span><u>$V-Format</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Dateikopf entsprechend den gewählten Optionen, d.&#160;h. mit oder ohne Verkehrsmittelkennung (nur im Teil-V-Format)</LI>
+            <LI class="List0">Von - Bis: Umlegungszeitraum</LI>
+            <LI class="List0">Datenblock</LI>
+        </ul>
+        <p class="List_Text0">Der Datenblock wird im Folgenden anhand von Beispielmatrizen beschrieben.</p>
+        <ul>
+            <LI class="List0">$NAMES</LI>
+        </ul>
+        <p class="List_Text0">Liste der Nummern und Namen der Zeilen bzw. Spalten</p>
+        <h5 MadCap:autonum="">Kommentarzeilen</h5>
+        <ul>
+            <LI class="List0">
+                <MadCap:variable name="PTV_Manual.Programmname" /> schreibt, abhängig vom Format, bestimmte Kommentare in die Datei, beispielsweise die Summe je Quell- oder Ziel-Objekt.</LI>
+            <LI class="List0">Sie sind sowohl im Dateikopf als auch im Datenblock zulässig.</LI>
+            <LI class="List0">Sie müssen mit * beginnen.</LI>
+            <LI class="List0">Sie werden vom Programm überlesen.</LI>
+        </ul>
+    </body>
+</html>

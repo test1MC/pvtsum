@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;v0;VOT;CR;277s;akt;321s;360s;ver;AE;ED;Fzg;BD;CF;DF;StrNr;0ij;0i;0j;ij;r1;exp;r2;MSA;Method;of;t0;tAkt;car;fma;hveh;Landstr;Str;NCHRP;Wardrop’schen" MadCap:lastBlockDepth="4" MadCap:lastHeight="569" MadCap:lastWidth="688">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1417760">
+            </a>Büsche persistent speichern</h3>
+        <p class="Text">Die Wege und ihre Belastungen werden für jedes Nachfragesegment in der Versionsdatei in Form von Büschen gespeichert.</p>
+        <p class="Text">Sie werden bei folgenden Operationen auf Wegen berücksichtigt: </p>
+        <ul>
+            <LI class="List0">Kenngrößenmatrix (inklusive frei definierbarer Kenngröße) wie bei routenbezogenen Umlegungen: </LI>
+            <LI class="List1">für Gewichtung „Minimum“: es wird immer via Kurzweg gerechnet</LI>
+            <LI class="List1">für Gewichtung „Mittel über die Wegebelastungen“: Der Kurzweg wird verwendet, wenn die Quelle/Ziel-Beziehung nicht im Busch ist; ansonsten werden die Kenngrößen gewichtet mit den Belastungen der Kanten von der Quelle zu den Zielen.</LI>
+            <LI class="List0">Spinne </LI>
+            <LI class="List0">VStromFuzzy</LI>
+            <LI class="List0">COM: VStromMatrix</LI>
+            <LI class="List0">Beziehungsfilter</LI>
+            <LI class="List0">Blocking Back</LI>
+            <LI class="List0">Nachfragematrix aus Wegen erzeugen </LI>
+        </ul>
+        <p class="Text">Darüber hinaus werden sie verwendet für folgende Operationen:</p>
+        <ul>
+            <LI class="List0">Wege Listenausgabe</LI>
+            <LI class="List0">Wege zeichnen</LI>
+            <LI class="List0">COM (Wege-Interface)</LI>
+            <LI class="List0">Routenexport</LI>
+            <LI class="List0">Teilnetz erzeugen</LI>
+            <LI class="List0">ANM-Export</LI>
+            <LI class="List0">Nachfragematrix-Kalibration</LI>
+            <LI class="List0">Signalkoordinierungsoptimierung</LI>
+        </ul>
+        <p class="Text">Folgende Operationen können nicht auf LUCE-Wege angewendet werden:</p>
+        <ul>
+            <LI class="List0">Konvertierung in IV-Wege oder umgekehrt</LI>
+            <LI class="List0">Editieren des Wegeverlaufs oder der Wegebelastung</LI>
+            <LI class="List0">Routenimport</LI>
+        </ul>
+    </body>
+</html>

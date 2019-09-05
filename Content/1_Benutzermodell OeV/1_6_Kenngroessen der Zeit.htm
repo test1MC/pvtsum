@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="671" MadCap:lastWidth="510" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;ZZ;AZ;SZ;UZ;EUZ;FZ;TS;XZ;GZ;BZ;Empf;UH;EAP;SWZ">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1026079">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_66039">
+            </a>Kenngrößen der Zeit</h4>
+        <p class="Text">
+            <MadCap:keyword term="Kenngrößen: ÖV" />
+            <MadCap:keyword term="Routen: Kenngrößen" />
+            <MadCap:keyword term="Verbindungen: Kenngrößen" />Kenngrößen der Zeit (<MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1178096" />) werden innerhalb von <MadCap:variable name="PTV_Manual.Programmname" /> in der Einheit Sekunden verwaltet. Für Kenngrößenmatrizen können Sie die Einheit Minuten oder Sekunden wählen.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="117px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="378px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Kenngröße</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Definition</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Zugangszeit (ZZ)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Zeitaufwand für die Quellanbindung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Abgangszeit (AZ)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Zeitaufwand für die Zielanbindung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Startwartezeit (SZ)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Wartezeit am Starthaltepunkt (nur für taktfeines Verfahren, denn für das fahrplanfeine Verfahren ist die Startwartezeit konstant gleich null)</p>
+                        <p class="CellText">Hinweis:</p>
+                        <p class="CellText">Für das fahrplanfeine Verfahren kann eine <span class="_Override" style="font-style: italic;">angepasste</span> Startwartezeit berechnet werden <MadCap:xref class="sieheUeberschrSeite" href="#1_benutzermodell_oev_2318507456_1185056"><span style="color: Black;" class="mcFormatColor">(</span><u>Angepasste Kenngrößen der Zeit für die fahrplanfeine Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Gewichtete Startwartezeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Produkt aus der Startwartezeit und dem Gewichtungsfaktor der Startwartezeit in den Einstellungen für den Widerstand der taktfeinen Umlegung. Diese Kenngröße ist nur in der taktfeinen Umlegung verfügbar.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Umsteigewartezeit (UZ)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Wartezeit zwischen Ankunft und Abfahrt an einem Umsteigehaltepunkt.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Für das fahrplanfeine Verfahren kann zusätzlich die <span class="_Override" style="font-style: italic;">angepasste</span> Umsteigewartezeit berechnet werden <MadCap:xref class="sieheUeberschrSeite" href="#1_benutzermodell_oev_2318507456_1185056"><span style="color: Black;" class="mcFormatColor">(</span><u>Angepasste Kenngrößen der Zeit für die fahrplanfeine Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Gewichtete Umsteigewartezeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Produkt aus der Umsteigewartezeit und dem Gewichtungsfaktor der Umsteigewartezeit in den Einstellungen für den Widerstand der taktfeinen Umlegung. Diese Kenngröße ist nur in der taktfeinen Umlegung verfügbar.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Erweiterte Umsteigewartezeit (EUZ)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Erweiterte Wartezeit gemäß den Einstellungen zur Umsteigewartezeit in der Definition der empfundenen Reisezeit der fahrplanfeinen Umlegung.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrzeit im Fzg (FZ)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrzeit mit ÖV-Linien einschließlich Zwischenhaltezeiten.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrzeit nach VSys (TS)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Fahrzeit mit ÖV-Linien eines bestimmten ÖV-Linien-Verkehrssystems.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ÖV-Zusatz-Zeit (XZ)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrzeit mit ÖV-Zusatz-Verkehrssystemen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Gehzeit (GZ)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gehzeit für Fußwege zwischen zwei Haltepunkten beim Umsteigen, auch zwischen verschiedenen Haltestellenbereichen einer Haltestelle</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Reisezeit (RZ)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Zeit von der Abfahrt am Quellbezirk bis zur Ankunft am Zielbezirk</p>
+                        <p class="CellText">RZ = ZZ + SZ + <span class="_Override" style="font-family: Symbol;">S</span> FZ + <span class="_Override" style="font-family: Symbol;">S</span> UZ + <span class="_Override" style="font-family: Symbol;">S</span> GZ + AZ</p>
+                        <p class="CellText">Hinweis:</p>
+                        <p class="CellText">Für das fahrplanfeine Verfahren kann zusätzlich die <span class="_Override" style="font-style: italic;">angepasste</span> Reisezeit berechnet werden <MadCap:xref class="sieheUeberschrSeite" href="#1_benutzermodell_oev_2318507456_1185056"><span style="color: Black;" class="mcFormatColor">(</span><u>Angepasste Kenngrößen der Zeit für die fahrplanfeine Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Beförderungszeit (BZ)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Zeit von der Abfahrt am Starthaltepunkt bis zur Ankunft am Zielhaltepunkt</p>
+                        <p class="CellText">BZ =  <span class="_Override" style="font-family: Symbol;">S</span> FZ + <span class="_Override" style="font-family: Symbol;">S</span> UZ + <span class="_Override" style="font-family: Symbol;">S</span> GZ</p>
+                        <p class="CellText">Hinweis:</p>
+                        <p class="CellText">Für das fahrplanfeine Verfahren kann zusätzlich die <span class="_Override" style="font-style: italic;">angepasste</span> Beförderungszeit ermittelt werden <MadCap:xref class="sieheUeberschrSeite" href="#1_benutzermodell_oev_2318507456_1185056"><span style="color: Black;" class="mcFormatColor">(</span><u>Angepasste Kenngrößen der Zeit für die fahrplanfeine Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Empf. Reisezeit (ERZ)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Empfundene Reisezeit <MadCap:xref class="sieheUeberschrSeite" href="1_6_Empfundene Reisezeit.htm#1_benutzermodell_oev_2318507456_1026441"><span style="color: Black;" class="mcFormatColor">(</span><u>Empfundene Reisezeit</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                        <p class="CellText">ERZ = f(ZZ, AZ, SZ, UZ, UH, FZ, GZ, XZ)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Anpassungszeit (AP)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Differenz DeltaT zwischen Wunschabfahrtszeit (Wunschankunftszeit) und tatsächlichem Abfahrtszeitpunkt (Ankunftszeitpunkt) bei abfahrtsbezogenem (ankunftsbezogenem) Zeitbezug.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Erweiterte Anpassungszeit (EAP)</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Variante der Anpassungszeit, bei der unterstellt wird, dass die komplette Nachfrage jedes Zeitintervalls auf die widerstandsminimale Verbindung entfällt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_benutzermodell_oev_2318507456_1178096">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_34204">
+            </a>Kenngrößen der Zeit</p>
+        <h5>
+            <a name="1_benutzermodell_oev_2318507456_1185056">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_57199">
+            </a>Angepasste Kenngrößen der Zeit für die fahrplanfeine Umlegung</h5>
+        <p class="Text">Die Kenngrößen SWZ, UWZ, RZ und BZ in der oben erklärten Form basieren immer auf der echten Startwartezeit und der echten Umsteigewartezeit.</p>
+        <p class="Text">Für das fahrplanfeine Verfahren sind außerdem angepasste Varianten dieser Kenngrößen verfügbar, die anstelle der echten Start- und Umsteigewartezeiten diejenigen Terme enthalten, die in der Definition der empfundenen Reisezeit (ERZ) eingestellt sind.</p>
+        <p class="Text">Anders als die eigentliche Startwartezeit ist die angepasste Startwartezeit im fahrplanfeinen Verfahren somit nicht konstant null, sondern in Abhängigkeit von der Anzahl Verbindungen im Umlegungszeitraum definiert. Die angepasste Umsteigewartezeit hängt von den Benutzereinstellungen unter „Umsteigewartezeit” ab, unterliegt also einer Kappung und kann zusätzlich implizit über ein Polynom transformiert werden, um extrem kurze Wartezeiten höher zu gewichten und eine bestimmte Wartezeit (z.B. fünf Minuten) als Optimum festzulegen.</p>
+    </body>
+</html>

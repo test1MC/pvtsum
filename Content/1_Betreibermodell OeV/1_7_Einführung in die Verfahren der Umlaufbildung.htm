@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="676" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="Linienleistungs;erfolgsrechnung;bzw;Nr;VonHst;NachHst;Hst3;Hst1;BUS1">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_betreibermodell_oev_1878159914_1423569">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_76016">
+            </a>Einführung in die Verfahren der Umlaufbildung</h3>
+        <h5>Anwendungsgebiete</h5>
+        <p class="Text">
+            <MadCap:keyword term="Umlaufbildung" />Eine wesentliche Aufgabe der strategischen Planung im ÖV ist es, die Anzahl der benötigten Fahrzeuge zu bestimmen, mit der ein vorgegebener Fahrplan befahren werden kann. Die dadurch entstehenden Kosten sind dabei zu minimieren. Zur Lösung dieser Aufgabenstellung setzen Sie in <MadCap:variable name="PTV_Manual.Programmname" /> das Verfahren der Umlaufbildung ein.</p>
+        <p class="Text">Eine weitere Aufgabe der strategischen Planung ist die Planung des Fahrzeugeinsatzes abhängig von der Kapazität der einzelnen Fahrzeugkombinationen und von der Nachfrage auf Fahrtebene. Hierfür kann das Verfahren Umlaufbildung mit Fahrzeugaustausch verwendet werden.</p>
+        <p class="Text">Wird <MadCap:variable name="PTV_Manual.Programmname" /> im Gesamtkontext einer ÖV-betrieblichen Linienleistungs- und -erfolgsrechnung eingesetzt, so können die Ergebnisse der Umlaufbildung einen Baustein des Kostenmodells bereitstellen. Die Umlaufbildung liefert mit dem Fahrzeugbedarf eine Eingangsgröße für die Bestimmung der fahrzeugtypabhängigen Kosten, genauer gesagt geht der Fahrzeugbedarf in das Attribut <span class="gui_element">Kosten Fahrzeug</span> ein. Außerdem werden in der Umlaufbildung die notwendigen Leerfahrten ermittelt. Die Leerzeit geht dabei in das Attribut <span class="gui_element">Kosten Zeit</span>, die Leerkilometer in das Attribut <span class="gui_element">Kosten Entfernung</span> ein. Eine Übersicht über das ÖV-Kosten- und -Erlösmodell finden Sie in <MadCap:xref class="Label_Image" href="1_7_Berechnung von Betriebskosten und Fahrgeldeinnahmen (Erloesen).htm#1_betreibermodell_oev_1878159914_1129373">Abbildung 1</MadCap:xref>.</p>
+        <h5>
+            <MadCap:keyword term="Umlaufbildung" />Grundbegriffe</h5>
+        <p class="Text">Ausgangspunkt der Umlaufbildung ist der Fahrplan mit den Fahrplanfahrten, die von den Umläufen zu absolvieren sind (<MadCap:variable name="PTV_Manual.Programmname" /> bildet die Umläufe auf der Ebene der Fahrplanfahrtabschnitte). Umläufe ergeben sich durch die Verknüpfung einzelner Fahrten zu Fahrtenketten, die jeweils von einer Fahrzeugkombination abgeleistet werden können. Im einfachsten Fall wird eine Fahrt an ihrer Endhaltestelle mit einer nachfolgenden Fahrt, die an diesem Haltepunkt beginnt, verknüpft. Ist eine derartige Verknüpfung nicht möglich oder sinnvoll, dann kann die Fahrzeugkombination in einer <span class="gui_element">Leerfahrt</span> zu einem anderen Haltepunkt umgesetzt werden. Als Umsetzen zählen nur die Leerfahrten mit einem echten Ortswechsel zwischen zwei Haltepunkten. Wechselt ein Fahrzeug von einem Haltepunkt in das Depot am gleichen Haltepunkt oder umgekehrt, wird dies als Aussetzen beziehungsweise Einsetzen bezeichnet. Diese Unterscheidung ist wichtig bei der Wahl der Option <span class="path">Umsetzen zulässig </span><MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Betreibermodell_OeV/2_7_Parameter der Umlaufbildung.htm#2_einstellungen_betreibermodell_oev_1111312306_1064843">(siehe Benutzerhandbuch: Kap. , Seite 1)</MadCap:xref>. Beim Ein- oder Aussetzen ohne Ortswechsel fallen weder Leerzeiten noch Leerkilometer an.</p>
+        <p class="Text">Wie in der <MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1177981">Abbildung 1</MadCap:xref> dargestellt, gehören dazu folgende Zeiten.</p>
+        <ul>
+            <LI class="List0">Umsetzzeiten</LI>
+        </ul>
+        <p class="List_Text0">Zeiten für Umsetzfahrten zwischen zwei Fahrplanfahrten, die an unterschiedlichen Haltepunkten enden bzw. beginnen.</p>
+        <ul>
+            <LI class="List0">Standzeiten</LI>
+        </ul>
+        <p class="List_Text0">Wartezeiten an einem Haltepunkt bis zur nächsten Abfahrt einer Fahrplanfahrt.</p>
+        <p class="Text">Diese unproduktiven Leerzeiten ohne Fahrgastbeförderung können in <MadCap:variable name="PTV_Manual.Programmname" /> bei der Umlaufbildung ermittelt und dann bei der Kostenberechnung der Linien berücksichtigt werden. Das gleiche gilt für die Leerkilometer.</p>
+        <p class="Text">Nach der Umlaufbildung sind die Leerzeiten und die Leerkilometer für jeden Umlauf bekannt und werden in der Umlaufliste dargestellt.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Empty_trips.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_betreibermodell_oev_1878159914_1177981">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_53420">
+            </a>Beispiel für einen Umlauf mit Ein-, Aus- und Umsetzfahrten</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="27px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="80px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="46px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="48px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="55px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="55px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="71px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="55px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="58px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Nr</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Tätigkeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">VonHst</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">NachHst</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">ab</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">an</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Linie</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Zeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Länge</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Einsetzen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">06:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">06:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellCaption">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">30 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">10 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Fahrplanfahrt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hst3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hst1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">06:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">07:15</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">BUS1-1&gt;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">45 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">30 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Umsetzen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">07:15</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">07:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">15 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">10 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">4</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Stand</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hst2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hst2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">07:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">08:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">30 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">0 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrplanfahrt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">08:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">08:15</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">BUS1-2&gt;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">15 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">10 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">6</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Stand</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hst1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hst1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">08:15</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">08:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">15 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">0 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">7</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrplanfahrt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">08:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">09:15</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">BUS1-1&gt;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">45 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">30 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">8</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Stand</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hst3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Hst3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">09:15</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">09:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">15 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">0 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">9</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Fahrplanfahrt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst3</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Hst1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">09:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">10:15</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">BUS1-1&gt;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">45 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">30 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Aussetzen</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Hst1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">10:15</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">10:45</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">30 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">10 km</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Beispiel für einen Umlauf mit Ein-, Aus- und Umsetzfahrten</p>
+        <h5>
+            <MadCap:keyword term="Umlaufbildung: Optimierungsproblem" />Optimierungsproblem</h5>
+        <p class="Text">Bei der Optimierungsaufgabe der Umlaufbildung besteht grundsätzlich ein Zielkonflikt zwischen der Anzahl der Leerfahrten (oder vielmehr der Summe der auf den Leerfahrten zurückgelegten Leerkilometer) und der Anzahl der einzusetzenden Fahrzeuge. Durch Einfügen von Leerfahrten kann meist die Anzahl der benötigten Fahrzeuge reduziert werden, allerdings entstehen Kosten für die zusätzlichen Leerfahrten (<MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1230587">Abbildung 2</MadCap:xref> unten). Umgekehrt können bei Einsatz von weiteren Fahrzeugen Leerfahrten eingespart werden (<MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1230587">Abbildung 2</MadCap:xref> oben). Abhängig davon, wie Leerfahrten auf der einen Seite und zusätzliche Fahrzeuge auf der anderen Seite durch den Anwender kostenseitig bewertet werden, können sich unterschiedliche optimale Lösungen für die Umlaufpläne ergeben. Neben diesen beiden Eingangsgrößen bietet <MadCap:variable name="PTV_Manual.Programmname" /> noch weitere Kennzahlen an, die in die Kostenfunktion einfließen können. Die exakte Kostenfunktion, die dabei minimiert wird, finden Sie in der Verfahrensbeschreibung der Umlaufbildung <MadCap:xref class="sieheUeberschrSeite" href="1_7_Graphenaufbau.htm#1_betreibermodell_oev_1878159914_1180400">(siehe „Graphenaufbau“ auf Seite 1)</MadCap:xref>. Hier ist auch das Lösungsprinzip der Umlaufbildung in <MadCap:variable name="PTV_Manual.Programmname" /> durch Aufbau eines Graphen und der Lösung als Flussproblem beschrieben.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Tradeoff_LineBlocking.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_betreibermodell_oev_1878159914_1230587">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_63986">
+            </a>Zielkonflikt zwischen Leerfahrten und Fahrzeugbedarf</p>
+        <h5>Bewertung der Umlaufbildung</h5>
+        <p class="Text">
+            <MadCap:keyword term="Umlaufbildung: Bewertung des Verfahrens" />Sowohl das Datenmodell für die Umlaufbildung als auch das Verfahren zur Umlaufbildung selbst, erlauben Ihnen komplexe Fragestellungen zu Umläufen und dem daraus resultierenden Fahrzeugbedarf zu analysieren. Im Folgenden werden die Vorteile des Verfahrens zur Umlaufbildung bewertet.</p>
+        <ul>
+            <LI class="List0">Die Lösung als Graphenflussproblem ermöglicht es nun auch, lange Stillstände von Fahrzeugkombinationen – zum Beispiel in Depots – zu verarbeiten. Es gibt keine maximale Aufenthaltszeit, d.h. ein Fahrzeug darf beliebig lange im Depot oder auch außerhalb stehen. Der Aufenthalt ist nun durch einen vom Anwender frei definierbaren Kostensatz bewertbar und kann somit in die Zielfunktion des Optimierungsproblems <MadCap:xref class="sieheUeberschrSeite" href="1_7_Graphenaufbau.htm#1_betreibermodell_oev_1878159914_1180400">(siehe „Graphenaufbau“ auf Seite 1)</MadCap:xref> aufgenommen werden.</LI>
+            <LI class="List0">Die Abschätzung der für die Absolvierung der Umläufe benötigten Fahrzeuge ist genauer.</LI>
+            <LI class="List1">Werden geschlossene Umläufe gebildet, so können die Leerfahrten bestimmt werden, die notwendig sind, um die von einem Ort zum anderen verlagerten Fahrzeuge wieder an ihren Ausgangspunkt zurück zu befördern. Eine Vernachlässigung dieses Aufwandes für die Rückverlagerung von Fahrzeugen würde zu einer Unterschätzung des Fahrzeugbedarfs und der Leerkilometer bzw. der Leerzeit führen.</LI>
+            <LI class="List1"> Die Dauer der Umläufe wird durch den Umlegungszeitraum, der über einen oder mehrere Kalendertage definiert werden kann, beschränkt,  wodurch die Fahrzeuganzahl korrekt ermittelt wird.</LI>
+            <LI class="List1">Mindestwendezeiten haben einen erheblichen Einfluss darauf, welche Übergänge möglich sind. Analog der in der Praxis gebräuchliche Handhabung können Sie Restriktionen durch Mindestwendezeiten bei der Umlaufbildung als weich interpretieren und so eine Abwägung zwischen Unterschreitung der Mindestwendezeit und Fahrzeugeinsatz vornehmen.</LI>
+            <LI class="List0">Umläufe können manuell nachbearbeitet werden. Dabei können Sie insbesondere auch benutzerdefinierte Umlaufelementtypen anlegen. So können Sie zum Beispiel manuell Wartungstätigkeiten oder das Waschen von Fahrzeugen in Umläufe einplanen.</LI>
+            <LI class="List0">Viele Parameter können je Umlaufversion eingestellt werden, so dass sich  verschiedene Varianten der Umlaufbildung leicht miteinander vergleichen lassen. </LI>
+            <LI class="List0">Umläufe sind jederzeit konsistent zu den darin gebundenen Fahrtabschnitten. Mögliche Inkonsistenzen betreffen lediglich verkürzte Vor- und Nachbereitungszeiten oder Leerfahrten, wenn das Netz nach einer Umlaufbildung noch geändert wird.</LI>
+            <LI class="List0">Umläufe unterliegen der Forderung nach Korrektheit nur zum Zeitpunkt ihrer Verwendung, sie müssen also nicht zwingend fehlerfrei sein. Das bedeutet: Sie können in vielen Fällen die Netzgrundlage bearbeiten, ohne dass die Umläufe gelöscht werden. Fehlerfrei müssen die Umläufe erst dann sein, wenn sie in anderen Verfahren eingesetzt werden, so zum Beispiel als Lieferant für Fahrzeugbedarf, Leerkilometer und Leerzeiten für die Berechnung der fahrzeugabhängigen Kosten im Verfahren ÖV-betriebliche Kennzahlen (<MadCap:xref class="Label_Image" href="1_7_Berechnung von Betriebskosten und Fahrgeldeinnahmen (Erloesen).htm#1_betreibermodell_oev_1878159914_1129373">Abbildung 1</MadCap:xref>). Die Umlaufprüfung <MadCap:xref class="sieheUeberschrSeite" href="1_7_Umlaufprüfung.htm#1_betreibermodell_oev_1878159914_1360122">(siehe „Umlaufprüfung“ auf Seite 1)</MadCap:xref> unterstützt Sie dabei, eventuelle Fehler aufzudecken und zu korrigieren.</LI>
+            <LI class="List0">Verschiedene weitere betriebliche Fragestellungen können bei der Umlaufbildung berücksichtigt werden. Hierunter fallen die angestrebte Dauer der Umläufe (Anzahl Umlauftage), Verteilung der Stillstandszeiten, Einplanung von wiederkehrenden ortsfesten Tätigkeiten (Wartung) und die Berücksichtigung der Fahrtrichtung.</LI>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="2079" MadCap:lastWidth="1019" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG;bearbeitung;Bearbeitungs;Nested;80er;Zuyten;Willumsen;Bosserhoff;Rosinowski;sk;Fuzzy;Gaußverfahrens;Newtoniteration">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1032471">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc148165093">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc129148444">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc112739189">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc112047343">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc88627385">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc56320072">
+            </a>
+            <a name="1_nachfragemodell_2215163117__toc506714326">
+            </a>
+            <a name="1_nachfragemodell_2215163117__ref444072321">
+            </a>Methodische Grundlagen von VStromFuzzy</h4>
+        <p class="Text">Seit den 80er Jahren werden vornehmlich im angelsächsischen Sprachraum so genannte Matrixkorrekturverfahren eingesetzt, um aus einer alten Verkehrsnachfragematrix und aktuellen querschnittsbezogenen Messwerten auf eine aktuelle Verkehrsnachfragematrix zu schließen. PTV hat aufbauend auf den Arbeiten von Van Zuyten/Willumsen (1980), Bosserhoff (1985) und Rosinowski (1994) diese vornehmlich IV-bezogenen Verfahren für den ÖPNV erweitert.</p>
+        <p class="Text">Ausgangspunkt des klassischen Verfahrens ist die Nachfrage auf den einzelnen Fahrtbeziehungen <span class="formula">f</span><span class="formula_subscript">ij</span>. Sie wird üblicherweise in Matrixform notiert, aber für das hier diskutierte Verfahren empfiehlt sich die Darstellung als Vektor der von null verschiedenen Fahrtbeziehungen.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_111.png" />
+        </p>
+        <p class="Text">Während meist angenommen wird, dass eine auf einen früheren Zeitpunkt bezogene Matrix bekannt ist, liegt über den aktuellen Zustand nur partielle Information vor. Wichtig ist die Situation, in der insbesondere keine relationsfeinen Daten (aus einer Quelle-Ziel-Befragung) verfügbar sind, sondern nur Zählwerte an einzelnen Stellen im Netz. Dies können sowohl Quell-/ Zielverkehr als auch Streckenbelastungen sein. Wir notieren die Zählwerte als einen weiteren Vektor.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_112.png" style="margin-right: 0, 00793457px;" />
+        </p>
+        <p class="Text">Die Fahrtanzahl einer Relation liefert einen gewissen Beitrag zu den Zählwerten. Im Falle von Quell-/Zielverkehr sind gerade die Randsummen der zu schätzenden Matrix bekannt, Streckenbelastungen entsprechen der Summe aller (anteiligen) Fahrtbeziehungen, die über die Strecke verlaufen. Allgemein besteht ein linearer Zusammenhang zwischen der Nachfrage auf den Fahrtbeziehungen und den Zählwerten.</p>
+        <p class="Formula" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="formula">A • f = v</span>
+        </p>
+        <p class="Text">wobei <span class="formula">A</span> die Anteilsmatrix genannt wird. Die Bedeutung von <span class="formula">a</span><span class="formula_subscript">sk</span> ist „der Anteil der Fahrgäste auf Fahrtbeziehung <span class="formula">k</span>, der Strecke <span class="formula">s</span> befährt“. Für Quell-/ Zielverkehr-Zählwerte hat <span class="formula">A</span> eine besonders regelmäßige Gestalt, wie am Beispiel für <span class="formula">n</span> = 3, <span class="formula">m</span> = 6 angegeben.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_134.png" />
+        </p>
+        <p class="Text">Insbesondere hängt in diesem Fall <span class="formula">A</span> nicht vom Fahrplanangebot ab. Für Streckenbelastungen geht dagegen die angebotsabhängige Wegewahl in <span class="formula">A</span> ein; man gewinnt die Anteilsmatrix zum Beispiel durch Umlegung einer beliebigen Matrix (zum Beispiel der alten Nachfragematrix) auf das Angebot zum Zeitpunkt der Zählung. Beide Arten von Zählwerten lassen sich auch problemlos nebeneinander verwenden.</p>
+        <p class="Text">Problematisch bei der Matrixkorrektur ist, dass meist <span class="formula">m &lt;&lt; n</span><span class="formula_superscript">2</span> und damit die neue Matrix durch die Zählwerte unterbestimmt ist. Aus den unzähligen Matrizen, die auf die Zählwerte „passen“, wählt man daher die beste gemäß einer Bewertungsfunktion <span class="formula">q</span> aus, löst also</p>
+        <p class="Text">max<span class="formula"> q</span>(<span class="formula">f</span>),<span class="formula"></span>sodass <span class="formula">A • f = v</span></p>
+        <p class="Text">Als Bewertungsfunktion dient oft eine Kombination aus Entropie und Gewichtung mit den Proportionen der alten Matrix; <span class="formula">q</span> ist meist nichtlinear, weshalb das Problem iterativ (zum Beispiel mit dem Newton-Verfahren) gelöst wird.</p>
+        <p class="Text">In dieser Formulierung des Matrixkorrekturproblems liegt jedoch eine weitere Schwäche der klassischen Verfahren: der Vektor <span class="formula">v</span> der Zählwerte wird als bekannte Größe, frei jeder Unsicherheit, angenommen. Nur unter den Matrizen, die die Nebenbedingungen exakt erfüllen, wird eine <span class="formula">q</span>-maximale ausgewählt. Dadurch erhalten die Zählwerte ein unangemessenes Gewicht, denn jede Erhebung liefert eine Momentaufnahme, die mit einer Stichprobenunsicherheit behaftet ist. Klassische Verfahren (zum Beispiel von Willumsen) tragen diesem Umstand nicht Rechnung, da sie die Randsummen als „scharfe“ Nebenbedingungen auffassen. </p>
+        <p class="Text">Deshalb hat PTV einen Ansatz von Rosinowski (1994) aufgegriffen, der die Zählwerte als unscharfe Messwerte gemäß der Fuzzy-Sets-Theorie modelliert hat. Weiß man zum Beispiel, dass in einem Bezirk der Quellverkehr von Tag zu Tag um bis zu 20&#160;% schwankt, in anderen Bezirken aber um 25&#160;%, wird dies durch entsprechende Bandbreiten abgebildet. In den Nebenbedingungen des Matrixschätzproblems treten demnach Fuzzy Sets <img src="../Resources/Images/5_114.png" /> mit unterschiedlich breiten Trägermengen an die Stelle scharfer Werte. </p>
+        <p class="Text">max <span class="formula">q</span>(<span class="formula">f</span>),<span class="formula"></span>sodass <span class="formula">A • f = </span><span class="formula" style="font-size: 8pt;line-height: 10pt;"><img src="../Resources/Images/5_98.jpg" /></span></p>
+        <p class="Text">Die Darstellung als Fuzzy Sets gegenüber reinen Schranken erlaubt, die Bevorzugung zentraler Werte innerhalb der Trägermenge auszudrücken, das heißt im allgemeinen bevorzugt man Werte nahe dem Mittelwert der Zählwerte, akzeptiert aber auch Werte am Rand, wenn dadurch ein wesentlich besserer <span class="formula">q</span>-Wert erreicht wird.</p>
+        <p class="Text">Wie lassen sich nun die Fuzzy Sets numerisch bei der Lösung des Optimierungsproblems behandeln? Der naheliegende Weg ist, die Zugehörigkeitsfunktion der einzelnen Fuzzy Sets in die Bewertungsfunktion aufzunehmen und gegenüber dieser geeignet zu gewichten. Damit weiterhin Standardverfahren der nichtlinearen Optimierung anwendbar sind, muss die resultierende Zielfunktion ebenfalls zweimal stetig differenzierbar sein, wodurch sich Einschränkungen hinsichtlich der Form der Zugehörigkeitsfunktionen ergeben. Insbesondere die üblichen abschnittsweise linearen (meist Dreiecke oder Trapeze) scheiden aus. Stattdessen benutzen wir den gleichen Mechanismus wie für die Gewichtung mit der Ausgangsmatrix auch, um die Wahl zentraler Werte aus den Trägermengen zu begünstigen. Hierzu als Vergleich die Bewertungsfunktion der gewichteten Entropiemaximierung.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_135.png" />
+        </p>
+        <p class="Text">Setzt man hierbei als <img src="../Resources/Images/5_76.jpg" /> die Nachfrage aus der Ausgangsmatrix, so begünstigt die Maximierung von <span class="formula">q</span> Matrizen, die wenig von der Ausgangsmatrix abweichen. Dieses Prinzip lässt sich auf das neue Optimierungsproblem übertragen:</p>
+        <p class="Formula">
+            <span class="formula">Max q</span>
+            <span class="_Override" style="font-family: Arial;">(</span>
+            <span class="formula">f</span>, <span class="formula">s</span>, <span class="formula">s‘</span><span class="_Override" style="font-family: Arial;">), sodass</span></p>
+        <p class="Text2">
+            <span class="formula">A</span> • <span class="formula">f</span> + <span class="formula">s</span> = <span class="formula" style="text-decoration: overline;">v</span></p>
+        <p class="Text2">
+            <span class="formula">A</span> • <span class="formula">f</span> - <span class="formula">s‘</span> = <span class="formula" style="text-decoration: underline;">v</span></p>
+        <p class="Text2">
+            <span class="formula">s</span> ≥ 0</p>
+        <p class="Text2">
+            <span class="formula">s‘</span> ≥ 0</p>
+        <p class="Text">wobei <img src="../Resources/Images/5_118.png" /> = Maximum oder Minimum der Trägermengen der Fuzzy Sets</p>
+        <p class="Text">Schließt man die Schlupfvariablen <span class="formula">s, s‘</span> in die gewichtete Entropiemaximierung mit <img src="../Resources/Images/5_116.png" style="margin-right: 0, 01247025px;" /> ein, so werden Matrizen bevorzugt, die <span class="formula">A • f = v</span> „möglichst gut“ erfüllen. Nachteilig erscheint zunächst die Verdopplung der Gleichungen, da diese unmittelbar auf den Rechenaufwand des laufzeitbestimmenden Gaußverfahrens innerhalb der Newtoniteration durchschlägt. Symmetrien im resultierenden Gleichungssystem gestatten jedoch, nach wie vor nur ein System halber Größe zu lösen und daraus eine Lösung des gesamten Systems abzuleiten.</p>
+        <p class="Text">Durch die Fuzzy-Formulierung vergrößern sich der Lösungsraum des Schätzproblems und damit die Freiheitsgrade für die Bewertung (hier: Entropiemaximierung), sodass im Allgemeinen höhere Zielfunktionswerte erreicht werden. Anschaulich gesprochen wird somit die „wahrscheinlichste“ Nachfragematrix geschätzt, die die Zählwerte <span class="gui_element">innerhalb der Bandbreiten</span> nachbildet. </p>
+        <h5 MadCap:autonum="">Veranschaulichung von Fuzzy Sets anhand eines Beispiels</h5>
+        <p class="Text">Ein Fuzzy Set ist im allgemeinen Fall durch eine Menge möglicher Werte (die Trägermenge) und eine Zugehörigkeitsfunktion mit Werten zwischen 0 und 1 definiert, die angibt „wie sehr ein Element der Trägermenge als zugehörig zur unscharfen Menge“ empfunden wird. Ist die Zugehörigkeitsfunktion 0, gehört das Element überhaupt nicht zur unscharfen Menge. Bei einem Wert von 1 gehört das Element „voll“ zur Menge, Zwischenwerte drücken die Güte der Näherung aus. Will man zum Beispiel den Wert „ungefähr 4“ als unscharfe Menge ausdrücken, so könnte die Trägermenge das Intervall [3;5] umfassen und die Zugehörigkeitsfunktion vom Wert 0 an den Rändern des Intervalls zu einem Maximum bei 4 ansteigen.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Membership_Function1.wmf" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Text">Um die Modellierung der Schwankungsbreite in VStromFuzzy besser handhabbar zu machen, wird zur Vereinfachung der Bedienung angenommen, dass die Zugehörigkeitsfunktion eine ganz spezielle Form besitzt. Vom Wert 1, der genau für den erhobenen Zählwert angenommen wird, fällt sie symmetrisch zu beiden Seiten ab. Sie bildet also ein Dreieck, das durch folgende Werte festgelegt wird.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Membership_Function2.wmf" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <table class="TableStyle_TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="46px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="450px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">z</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">der Zählwert selbst, bei dem die Zugehörigkeitsfunktion ihr Maximum annimmt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">s</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">der Abstand vom Zählwert, bei dem die Zugehörigkeitsfunktion auf 0 abfällt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText_Var" style="font-family: Symbol;font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="symbol">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">ein vorgegebener Skalierungsfaktor (<span class="symbol" style="font-style: italic;">a</span><span class="formula" style="line-height: 11pt;">&#160;</span>&gt;&#160;0)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Werte <span class="formula">z</span>, <span class="formula">s</span> und <span class="symbol">a</span> sind Eingaben für VStromFuzzy <MadCap:xref class="Benutzerhandbuch" href="../2_Nachfrage_modellieren/2_3_Matrizen mit VStromFuzzy fortschreiben.htm#2_nachfrage_modellieren_1800171850_1038990"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Matrizen mit VStromFuzzy fortschreiben</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. <span class="formula">z</span> und <span class="formula">s</span> werden für jeden Zählwert (Streckenbelastung, Quell-/Zielverkehr, Abbiegerbelastung oder Oberabbiegerbelastung, sofern ein Oberknoten definiert ist) getrennt angegeben, wogegen <span class="symbol">a</span> ein globaler Parameter für das Verfahren ist.</p>
+    </body>
+</html>

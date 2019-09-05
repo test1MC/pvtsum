@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="490" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;v0;VOT;CR;277s;akt;321s;360s;ver;AE;ED;Fzg;BD;CF;DF;StrNr;0ij;0i;0j;ij;r1;exp;r2;MSA;Method;of;t0;tAkt;car;fma;hveh;Landstr;Str;NCHRP;Wardrop’schen;NLM;VerwendeUmlaufzeitfamilie;SignalKoordinierungsGruppe;VerwendeUmlaufzeitFamilie;VT;Bundesstr;AP;46min;39s;34s;12s;FahrzeugStd;FahrzeugKm;11min;40s;370h;54min;19s;5min;47s;111h;43min;15s;7min;48s;188h;29min;DueStauWellenGeschw;DueFunDiag;PlatzProPKWE;StreckenPlatzProPKWE;vMax;IVAnteil_Q;IVAnteil_Z;Abbiegerkapazitäten;x1;x2;x3;Turns;mph;bzw;1h;etc;Belastungs;38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;PkwE;csv;way;stop" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1380267">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_27860">
+            </a>Eingabe- und Ausgabeattribute der Umlegung mit ICA</h3>
+        <p class="Text">Bevor Sie die Umlegung mit ICA ausführen können, müssen Sie bestimmte Netzattribute und Verfahrensparameter belegen. Nach der Berechnung liegen die Ergebnisse in den Ausgabeattributen vor und können in der Listenansicht <MadCap:xref class="Benutzerhandbuch" href="../2_Daten_tabellarisch_grafisch_darstellen/2_12_Mit Listen arbeiten.htm#2_daten_tabellarisch_und_grafisch_darstellen_4210690224_1032715"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Mit Listen arbeiten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> oder im Netzeditor <MadCap:xref class="Benutzerhandbuch" href="../2_Daten_tabellarisch_grafisch_darstellen/2_12_Grundeinstellungen für das Netzfenster vornehmen.htm#2_daten_tabellarisch_und_grafisch_darstellen_4210690224_1077190"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Grundeinstellungen für das Netzfenster vornehmen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> dargestellt werden. Die <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1400834">Tabelle 1</MadCap:xref> gibt einen Überblick, welche Eingabeattribute gepflegt werden müssen. Besonders wichtig ist, dass Sie für die Knoten bzw. Oberknoten, deren Abbiegewiderstände detailliert mit ICA berechnen wollen, das Attribut <span class="gui_element">Methode für Widerstand am Knoten</span> mit <span class="gui_element">Knotenwiderstandsberechnung (ICA)</span> belegen und das Attribut <span class="gui_element">Eingestellte Methode für Widerstand am Knoten verwenden</span> aktivieren. <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1426710">Tabelle 2</MadCap:xref> zeigt die wichtigsten Ausgabeattribute des Verfahrens für Abbieger.</p>
+        <p class="Text">Folgende Voraussetzungen sind für die Umlegung mit ICA erforderlich:</p>
+        <ul>
+            <LI class="List0">Bevor Sie eine Umlegung mit ICA durchführen, müssen Sie Geometrie und Steuerung der Knoten korrekt modellieren, für die die ICA-Widerstandsberechnung aktiviert ist. Ob an allen diesen Knoten die Berechnung korrekt durchgeführt werden kann, können Sie über das Menü <span class="gui_element">Rechnen&#160;&gt; </span>Eintrag<span class="gui_element"> Netz prüfen </span>mit der Option<span class="gui_element"> Tauglichkeit für ICA</span> überprüfen.</LI>
+            <LI class="List0">Die Bemessungsverkehrsstärke für die Abbieger muss ein Belastungsattribut sein (<span class="gui_element">Belastung IV</span> oder <span class="gui_element">Belastung-IV mit Grundbelastung</span>). Die Einstellung erfolgt über das Menü <span class="gui_element">Rechnen&#160;&gt; Allgemeine Verfahrenseinstellungen&#160;&gt; </span>Navigatoreintrag<span class="gui_element"> IV-Einstellungen&#160;&gt; Widerstände am Knoten</span>. Als Faktor für die Bemessungsverkehrsstärke ist nur 1,0 zulässig. Der Grund hierfür ist, dass die Kalibrierung der abbiegerfeinen CR-Funktionen sonst nicht gelingt. Die verwendete CR-Funktion für Abbieger basiert auf den von ICA ausgegebenen Kapazitäten, die stündliche Werte darstellen. Das bedeutet, dass Sie die Umlegung mit ICA nur für Umlegungszeiträume von 1h ausführen können. Infolgedessen müssen auch die Kapazitäten für Strecken und Abbieger als Stundenwerte definiert werden. </LI>
+        </ul>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_IO_ICA_In.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1400834">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_69679">
+            </a>Eingabeattribute des Verfahrens Umlegung mit ICA</p>
+        <p class="Text">Die verwendeten Abkürzungen haben folgende Bedeutung:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css'); mc-table-style-original: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="47px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="449px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">x1</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Maut-IVSys muss manuell in die Widerstandsfunktion eingefügt werden, um sich auszuwirken</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText">x2</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">wirkt sich im Rahmen des Rückstaumodells aus</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText">(x)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Optional anwendbar</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Folgende Möglichkeiten bestehen für die Ausgabe der Ergebnisse:</p>
+        <p class="Text">Es gibt verschiedene Arten von Ausgaben. In erster Linie belegt die Umlegung mit ICA die üblichen Attribute der verschiedenen Netzobjekte (Strecke, Abbieger, etc.) mit den berechneten Belastungen und Widerständen. Zusätzlich zu den üblichen Belastungs- und Reisezeitattributen existieren die folgenden berechneten Attribute an (Ober-) Abbiegern und Strecken, die nur bei der Umlegung mit ICA belegt werden:</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px; caption-side: bottom; mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css'); mc-table-style-original: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="151px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="345px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bedeutung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Ist ICA-Abbieger in Umlegung mit ICA</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Zeigt, ob für diesen Abbieger in der Umlegung mit ICA die abbiegerfeine CR-Funktion verwendet wird. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Endgültige Kapazität für Umlegung mit ICA</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Letzte während der Umlegung mit ICA verwendete Kapazität. Das Attribut <span class="gui_element">Kapazität IV</span> wird für Abbieger an mit ICA berechneten (Ober-)Knoten nicht verwendet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Endgültiges t0 für Umlegung mit ICA</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Letztes während der ICA Umlegung verwendetes <span class="gui_element">t0</span>. Das Attribut <span class="gui_element">t0-IV</span> wird für (Ober-)Abbieger an mit ICA berechneten Knoten nicht verwendet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Endgültige geglättete Belastung für Umlegung mit ICA</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Geglättete Belastung der letzten Iteration</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">tAkt -IVSys für Umlegung mit ICA</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">tAkt</span> aus der abbiegerfeinen CR-Funktion mit den endgültigen CR-Funktionsparametern. Das Attribut <span class="gui_element">tAkt-IVSys</span> enthält dagegen das Ergebnis aus der letzten ICA-Berechnung.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Endgültiges CR-A für Umlegung mit ICA</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Endgültiger CR-Funktionsparameter A für die abbiegerfeine CR-Funktion</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Endgültiges CR-B für Umlegung mit ICA</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Endgültiger CR-Funktionsparameter B für die abbiegerfeine CR-Funktion</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Endgültige Kapazität für Umlegung mit ICA</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">entspricht der geglätteten, durch ICA ermittelten Kapazität des (Ober-) Abbiegers</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Verdrängte Belastung stromaufwärts in Umlegung mit ICA</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText">Die verdrängte Belastung entspricht demjenigen Teil der Belastung, der laut Rückstauberechnung an Engpässen stromaufwärts vom (Ober-) Abbieger zurückgehalten wird und diesen nicht erreicht.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_iv_2033098965_1426710">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_29802">
+                    </a>Zusätzliche berechnete Abbieger-/Oberabbieger-Attribute für die Umlegung mit ICA</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px; caption-side: bottom; mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css'); mc-table-style-original: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="151px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="345px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bedeutung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Effektive Kapazität für Umlegung mit ICA</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Die effektive Kapazität entspricht der Streckenkapazität für Strecken, auf denen kein Stau ist, d.h. auf Strecken ohne Stau entspricht sie dem Attribut Kapazität IV. Auf Strecken mit Stau entspricht sie der Verkehrsmenge, die aus der Strecke abfließt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Verdrängte Belastung stromaufwärts in Umlegung mit ICA</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Die verdrängte Belastung stromaufwärts  entspricht demjenigen Teil der Belastung, der laut Rückstauberechnung an Engpässen stromaufwärts vom (Ober-) Abbieger zurückgehalten wird und diesen nicht erreicht.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">Zusätzliche berechnete Strecken-Attribute für die Umlegung mit ICA</p>
+            </caption>
+        </table>
+        <p class="Text">Außerdem gibt es zahlreiche diagnostische Ausgaben, mit denen Sie die Konvergenz überprüfen können. Falls das Verfahren nicht oder langsam konvergiert, geben die Ausgaben wertvolle Hinweise, beispielsweise darüber, bei welchen Abbiegern die Widerstandsberechnungen mit ICA beziehungsweise aus der CR-Funktion stark voneinander abweichen.</p>
+        <ul>
+            <LI class="List0">Während der Ausführung des Verfahrens kann der Ablauf mit der Liste „Qualität IV-Umlegung mit ICA” verfolgt werden.</LI>
+            <LI class="List0">Es werden Dateien <span class="path">*.csv</span> angelegt, die die Abbiegerattribute nach jeder Iteration enthalten. Diese Dateien sind hilfreich, um die Entwicklung der Attributwerte einzelner Abbieger im Verlaufe der Umlegung mit ICA  zu vergleichen.</LI>
+            <LI class="List0">Einige Ergebnisattribute der Umlegung mit ICA werden nach Bedarf in benutzerdefinierten Attributen gespeichert. Diese Daten können zum Vergleich der Konvergenz verschiedener Durchläufe der Umlegung mit ICA dienen. Dafür müssen Sie die Werte der generierten benutzerdefinierten Attribute kopieren, bevor sie im Zuge der nächsten Berechnung überschrieben werden.</LI>
+            <LI class="List0">Optional wird ein Excel-Bericht mit den Ergebnissen der letzten ICA-Berechnung verfasst. Dem Bericht können Sie entnehmen, mit welchen Belastungen gerechnet wurde und welche Kapazitäten daraus resultierten. Für Knoten mit der Methode All-way stop wird der Wert <span class="formula">v/c</span> ebenso ausgegeben wie für Knoten mit der Methode geregelte Vorfahrt.</LI>
+        </ul>
+        <p class="Text">Die genauen Zeitpunkte der Speicherung von Attributwerten innerhalb der Iterationen sind hier <MadCap:xref class="sieheUeberschrSeite" href="1_5_Ablauf der Umlegung mit ICA.htm#1_benutzermodell_iv_2033098965_1652910"><span style="color: Black;" class="mcFormatColor">(</span><u>Ablauf der Umlegung mit ICA</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> beschrieben. </p>
+    </body>
+</html>

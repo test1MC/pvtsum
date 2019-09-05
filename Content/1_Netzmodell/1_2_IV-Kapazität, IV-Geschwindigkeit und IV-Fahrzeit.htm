@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="571" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;max;akt;BPR">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1056139">
+            </a>IV-Kapazität, IV-Geschwindigkeit und IV-Fahrzeit</h4>
+        <p class="Text">
+            <MadCap:keyword term="Strecken: IV-Kapazität" />
+            <MadCap:keyword term="Strecken: IV-Geschwindigkeit" />
+            <MadCap:keyword term="Strecken: IV-Fahrzeit" />Im unbelasteten Netz bei freiem Verkehrsfluss ergibt sich die Fahrzeit <span class="gui_element">t0</span> für eine Strecke aus der Streckenlänge und der Geschwindigkeit bei freiem Verkehrsfluss <span class="gui_element">v0</span>.</p>
+        <ul>
+            <LI class="List1">Input: Länge L [m],</LI>
+            <LI class="List1">Input: Geschwindigkeit bei freiem Verkehrsfluss <span class="gui_element">v0</span> [km/h]</LI>
+            <LI class="List1">Ergebnis: Fahrzeit bei freiem Verkehrsfluss <span class="gui_element">t0</span> [s] = L x 3,6 / <span class="gui_element">v0</span></LI>
+        </ul>
+        <p class="Text">Die Geschwindigkeit<span class="gui_element"> v0-VSys </span>der Fahrzeuge eines bestimmten Verkehrssystems kann niedriger sein als die Geschwindigkeit <span class="gui_element">v0</span> einer Strecke, da für diese Fahrzeuge eine besondere Geschwindigkeitsbegrenzung gelten kann oder die Fahrzeuge nicht schneller fahren können. Die zulässige Höchstgeschwindigkeit eines IV-Verkehrssystems <span class="gui_element">vMax-VSys</span> ist ein Attribut des Streckentyps. </p>
+        <p class="Text">Für die Geschwindigkeit<span class="gui_element"> v0-VSys</span> und die Fahrzeit<span class="gui_element"> t0-VSys</span> gilt daher Folgendes:</p>
+        <ul>
+            <LI class="List0">
+                <span class="formula">v0-VSys = MIN (v0, vMax-VSys)</span>
+            </LI>
+            <LI class="List0">
+                <span class="formula">t0-VSys = L x 3,6 / v0-VSys</span>
+            </LI>
+        </ul>
+        <p class="Text">Im belasteten Netz ergibt sich die Streckenfahrzeit aus einer so genannten Capacity-Restraint-Funktion (CR-Funktion), die den Zusammenhang zwischen der aktuellen Verkehrsbelastung <span class="formula">q</span> und der Kapazität <span class="formula">q</span><span class="formula_subscript">max</span> beschreibt. Ergebnis der CR-Funktion ist die Fahrzeit im belasteten Netz <span class="formula">t</span><span class="formula_subscript">akt</span>.</p>
+        <ul>
+            <LI class="List1">Input: Fahrzeit bei freiem Verkehrsfluss <span class="formula">t0</span> [s]</LI>
+            <LI class="List1">Input: Belastung <span class="formula">q</span> [Pkw-Einheiten/Analysezeitintervall]</LI>
+            <LI class="List1">Input: Kapazität <span class="formula">q</span><span class="formula_subscript">max</span> [Pkw-Einheiten/Analysezeitintervall]</LI>
+            <LI class="List1">Input: CR-Funktion, zum Beispiel BPR-Funktion des Traffic Assignment Manual</LI>
+            <LI class="List1">Ergebnis: aktuelle Fahrzeit im belasteten Netz, zum Beispiel</LI>
+        </ul>
+        <p class="Text2">
+            <img src="../Resources/Images/4_10.png" /> (abhängig von CR-Funktionstyp)</p>
+        <ul>
+            <LI class="List1">Ergebnis: aktuelle Fahrzeit eines VSys = <span class="formula">MAX (t</span><span class="formula_subscript">akt</span><span class="formula">, t0-VSys)</span></LI>
+        </ul>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1056230">Abbildung&#160;13</MadCap:xref> veranschaulicht, wie sich die Geschwindigkeiten <span class="formula">v</span><span class="formula_subscript">akt</span> zweier IV-Verkehrssysteme in Abhängigkeit von der Belastung entwickeln.</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="231px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="112px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="152px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">Streckentyp Autobahn</p>
+                        <ul>
+                            <LI class="List1Tab">
+                                <span class="formula" style="line-height: 11pt;">v</span>
+                                <span class="formula_subscript">max</span> (Pkw) = 150 km/h</LI>
+                            <LI class="List1Tab">
+                                <span class="formula" style="line-height: 11pt;">v</span>
+                                <span class="formula_subscript">max</span> (Lkw) = 100 km/h</LI>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">Strecke</p>
+                        <p class="CellText">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">0</span> =130 km/h</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_speed.wmf" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997767px;margin-bottom: 0, 9997805px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText">freier Verkehrsfluss</p>
+                        <ul>
+                            <LI class="List1Tab">
+                                <span class="formula" style="line-height: 11pt;">v</span>
+                                <span class="formula_subscript">akt</span> (Pkw) = 130 km/h</LI>
+                            <LI class="List1Tab">
+                                <span class="formula" style="line-height: 11pt;">v</span>
+                                <span class="formula_subscript">akt</span> (Lkw) = 100 km/h</LI>
+                        </ul>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Free_traffic_flow.wmf" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997824px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText">teilgebundener Verkehrsfluss</p>
+                        <ul>
+                            <LI class="List1Tab">
+                                <span class="formula" style="line-height: 11pt;">v</span>
+                                <span class="formula_subscript">akt</span> (Pkw) = 110 km/h</LI>
+                            <LI class="List1Tab">
+                                <span class="formula" style="line-height: 11pt;">v</span>
+                                <span class="formula_subscript">akt</span>(Lkw) = 100 km/h</LI>
+                        </ul>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Dense_traffic_flow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997824px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText">gebundener Verkehrsfluss</p>
+                        <ul>
+                            <LI class="List1Tab">
+                                <span class="formula" style="line-height: 11pt;">v</span>
+                                <span class="formula_subscript">akt</span> (Pkw) = 80 km/h</LI>
+                            <LI class="List1Tab">
+                                <span class="formula" style="line-height: 11pt;">v</span>
+                                <span class="formula_subscript">akt</span> (Lkw) = 80 km/h</LI>
+                        </ul>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Saturated_traffic_flow.wmf" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997824px;" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_netzmodell_1240632468_1056230">
+            </a>
+            <a name="1_netzmodell_1240632468_83988">
+            </a>Beispiel für die unterschiedlichen Geschwindigkeiten zweier IV-Verkehrssysteme in Abhängigkeit von der Belastung</p>
+    </body>
+</html>

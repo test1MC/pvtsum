@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="687" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="1km">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_umweltwirkungsmodell_1611065317_1032800">
+            </a>
+            <a name="1_umweltwirkungsmodell_1611065317_82058">
+            </a>Berechnungsgrundlagen der Kaltstartzuschläge</h4>
+        <p class="Text">
+            <MadCap:keyword term="Kaltstartzuschläge:Berechnung nach HBEFA" />
+            <MadCap:keyword term="HBEFA:Berechnungsgrundlagen der Kaltstartzuschläge" />Zur Ermittlung der Kaltstartzuschläge werden zunächst pro benutzter Innerorts-Verkehrszusammensetzung und für jeden Schadstoff die über die Anteile gewichteten Kaltstartzuschläge berechnet. Dazu werden die Zuschläge pro Schadstoff und Fahrzeugschicht aus der HBEFA-Datenbank abgefragt. </p>
+        <p class="Text">Die Verteilung dieser Emission auf Strecken erfolgt auf zwei verschiedene Arten, die über das Attribut <span class="gui_element">Berechne Kaltstart-Emission auf Basis von Wegen</span> am Quellbezirk umgeschaltet wird:</p>
+        <ul>
+            <LI class="List0">Flächige Berechnung</LI>
+            <LI class="List0">Berechnung auf Wegen</LI>
+        </ul>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">In HBEFA werden Kaltstartzuschläge nicht für alle Fahrzeugschichten angegeben. Für Schichten, bei denen kein Zuschlag verfügbar ist, wird ein Kaltstartzuschlag von 0 g/Start angesetzt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Flächige, geometrische Berechnung</h5>
+        <p class="Text">Idee der geometrischen Berechnung ist, dass der Beginn eines Wegs diffus ist. Im Modell beginnt er zwar am Quellbezirk und betritt das Streckennetz über einen Anbindungsknoten, die realen Wege beginnen aber an einem nahegelegenen, nicht genau bekannten Ort im Netz. Dort entsteht auch die Kaltstart-Emission. Dies macht man sich zunutze, um die Ermittlung auf Wegen wie folgt zu umgehen.</p>
+        <p class="Text">Für jeden Quellbezirk wird die absolute Kaltstart-Emission zunächst berechnet als Summe über die Nachfragesegmente über die Produkte aus dem Wert des Quellverkehrsaufkommen-Attributs des Nachfragesegments multipliziert mit dem Kaltstartanteil und dem Emissionsfaktor des jeweiligen Schadstoffs für die anzusetzende Verkehrszusammensetzung. Diese absolute Emission pro Schadstoff wird längenanteilig auf alle nicht für den IV gesperrten Strecken verteilt, die in 1km Umkreis um die konvexe Hülle der Anbindungsknoten des Bezirks liegen. Kaltstart-Emissionen, die aus verschiedenen Bezirken herrühren, werden akkumuliert.</p>
+        <h5>
+            <a name="1_umweltwirkungsmodell_1611065317_16243">
+            </a>Berechnung auf Wegen</h5>
+        <p class="Text">Zur Ermittlung der Kaltstartzuschläge auf Wegen werden alle Wege der zu berechnenden Nachfragesegmente von der Quelle bis zum Ziel ausgewertet. Für jede überquerte Strecke wird ein Kaltstartzuschlag-Anteil <span class="formula">A</span><span class="formula_subscript">P,S</span> berechnet als das Integral der Abklingfunktion über die Streckenlänge. Dieser Anteil wird mit der Belastung des Wegs und dem Kaltstartanteil des Quellbezirks des Wegs multipliziert. Als Belastungswert kann bei der Berechnung der warmen Emissionen ein beliebiges Attribut verwendet werden, dessen Inhalt nicht mit der Summe der Belastungen der Wege korrespondieren muss. Um dennoch sinnvolle Kaltstartzuschläge berechnen zu können, wird der Wert anschließend durch die Belastung des Nachfragesegments geteilt und mit dem Wert des Belastungsattributs multipliziert. Das bedeutet, das Verhältnis zwischen Wege- und Streckenbelastung multipliziert mit dem Wert des Belastungsattributs ergibt die angenommene Wegebelastung auf der Strecke, die dann aber nicht mehr konstant sein muss entlang des Wegs. Der Wert wird pro Strecke über alle Wege addiert. Die Auswertung der Wege kann enden, sobald die ersten vier Kilometer des Wegs überschritten sind, weil danach die Abklingfunktion konstant 0 ist.</p>
+        <p class="Text">Anschließend wird pro Strecke, Schadstoff und Nachfragesegment der so berechnete Wert mit dem Kaltstart-Emissionsfaktor der für innerorts zugewiesenen Verkehrszusammensetzung multipliziert und auf AP und AH hochgerechnet. </p>
+        <p class="Text">Dann wird die wie im Fall der flächigen Methode berechnete absolute Emission des Bezirks proportional zu dieser Kennzahl pro Strecke auf die Strecken verteilt. Bitte beachten Sie, dass dies nicht die dynamischen Wegebelastungen sind, sondern nur eine gute Näherung daran. Um die dynamischen Wegebelastungen im Verfahren verwenden zu können, müsste das Bewegungsmodell der verwendeten dynamischen Umlegung nachgebildet werden. Benutzt wird stattdessen die aus diesen dynamischen Wegebelastungen während der Umlegung berechnete Belastung pro Analysezeitintervall.</p>
+        <p class="Text">Die Kaltstartzuschläge werden wie die übrigen Emissionswerte netzweit aggregiert und in der Statistikliste <span class="gui_element">Emissionen (HBEFA) </span>ausgegeben. </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Liegen für ein Nachfragesegment keine Wege vor und ist die Berechnung auf Wegen am Bezirk verlangt, werden für diesen Bezirk keine Kaltstartzuschläge berechnet. Dies ist neben dem expliziten Verwerfen der Routen beispielsweise der Fall, wenn Emissionen von Linienbussen über ein separates, künstliches Nachfragesegment berechnet werden sollen, dessen Belastungen sich beispielsweise aus der Anzahl Servicefahrten ergibt. Hier steht die Auslassung von Kaltstartzuschlägen mit der Tatsache im Einklang, dass die Fahrten fast ausschließlich warm erfolgen. Das Verfahren kann aber trotzdem ausgeführt werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">&#160;</p>
+    </body>
+</html>

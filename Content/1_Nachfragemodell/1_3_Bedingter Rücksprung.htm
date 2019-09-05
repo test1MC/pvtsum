@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="685" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_nachfragemodell_2215163117_1231035">
+            </a>
+            <a name="1_nachfragemodell_2215163117_28681">
+            </a>Bedingter Rücksprung</h4>
+        <p class="Text">
+            <MadCap:keyword term="Bedingter Rücksprung (Verfahren)" />Die Operation Bedingter Rücksprung führt eine Konvergenzprüfung aus. Es stehen verschiedene Prüfungen zur Auswahl: </p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;"> Es wird geprüft, ob sich ein Attribut oder eine Matrix in der letzten Iteration um weniger als einen benutzerdefinierten Schwellenwert verändert hat. Zur Ermittlung der Änderung von Werten wird die folgende Formel verwendet:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_95.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="56px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="441px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Faktor für die relative Abweichung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">b</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Toleranzwert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">absoluter Wert für die maximale Änderung</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die folgende Abbildung zeigt die Wirkungsweise des Toleranzwertes. Er ermöglicht, dass bei kleineren Attributwerten größere relative Abweichungen akzeptiert werden als bei großen Werten. Die in der <MadCap:xref class="Label_Image" href="#1_nachfragemodell_2215163117_1271566">Abbildung&#160;54</MadCap:xref> grün dargestellte Kurve stellt die relative Abweichung dar, wobei der Toleranzwert als Teil des Attributwerts berücksichtigt wurde.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Goto_procedure.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997996px;margin-bottom: 0, 9997691px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_nachfragemodell_2215163117_1271566">
+            </a>
+            <a name="1_nachfragemodell_2215163117_21301">
+            </a>Wirkungsweise des Toleranzwertes beim bedingten Rücksprung</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Es wird geprüft, ob ein bestimmtes benutzerdefiniertes Attribut unter einem bestimmten Wert liegt. Dieser Fall ist beispielsweise sinnvoll, wenn Sie ein Skript vorschalten, das den entsprechenden Wert neu berechnet.</p>
+        <p class="Text">Ist die Konvergenzbedingung erreicht, wird der Verfahrensablauf mit dem nächsten Schritt fortgesetzt. Wenn nicht, „springt“ <MadCap:variable name="PTV_Manual.Programmname" /> zu dem als Rücksprungadresse festgelegten Schritt (Operation oder Gruppe) zurück und wiederholt den Verfahrensablauf ab diesem Schritt (Operation) oder ab dem nächstfolgenden Schritt (Gruppe). Unabhängig vom Konvergenztest können Sie die Wiederholung der Schleife steuern, in dem Sie eine Mindestanzahl an Iterationen vorgeben oder die Anzahl der Iterationen durch ein Maximum beschränken.</p>
+    </body>
+</html>

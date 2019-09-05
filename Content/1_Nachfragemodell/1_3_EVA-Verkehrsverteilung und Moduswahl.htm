@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="5871" MadCap:lastWidth="1021" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1154337">
+            </a>
+            <a name="1_nachfragemodell_2215163117_65856">
+            </a>EVA-Verkehrsverteilung und Moduswahl</h4>
+        <p class="Text">
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Verkehrsverteilung" />
+            <MadCap:keyword term="Verkehrsverteilung: EVA-Modell-Personenverkehr" />
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Moduswahl" />
+            <MadCap:keyword term="Moduswahl: EVA-Modell-Personenverkehr" />Die Verkehrsverteilung oder Zielwahl erfolgt bei Gravitationsmodellen nach dem bilinearen Ansatz (zum Beispiel Kirchhoff 1970) mit verschiedenen <MadCap:keyword term="EVA-Modell Personenverkehr: Bewertung: Bewertungsfunktionen" /><MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen" />Bewertungsfunktionen oder Nutzenfunktionen <span class="formula">W</span><span class="formula_subscript">ij</span>.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_40.png" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_41.png" style="margin-bottom: 0, 0141716px;" />
+        </p>
+        <p class="Text">Dabei sind <span class="formula">T</span><span class="formula_subscript">ij</span> die Zahl der Ortsveränderungen von <span class="formula">i</span> nach <span class="formula">j</span>, <span class="formula">W</span><span class="formula_subscript">ij</span> eine Funktion der Kosten für die Fahrt von <span class="formula">i</span> nach <span class="formula">j</span>, <span class="formula">Q</span><span class="formula_subscript">i</span> das Quellaufkommen von Bezirk <span class="formula">i</span> und <span class="formula">Z</span><span class="formula_subscript">j</span> das Zielaufkommen von Bezirk <span class="formula">j</span>. Die Faktoren <span class="formula">fq</span><span class="formula_subscript">i</span>, <span class="formula">fz</span><span class="formula_subscript">j</span> werden so berechnet, dass die Quell-/Zielaufkommen als Randsummen eingehalten werden.</p>
+        <p class="Text">Das EVA-Modell verallgemeinert diesen Ansatz für die simultane Verkehrsverteilung und Verkehrsaufteilung zu einem trilinearen Modell.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_45.png" style="margin-right: 0, 01417542px;" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_46.png" />
+        </p>
+        <p class="Text">Hier bezeichnet der Index <span class="formula">k</span> den Modus (Verkehrsmittel) und <span class="formula">W</span><span class="formula_subscript">ijk</span> bewertet die Kosten der Fahrt von <span class="formula">i</span> nach <span class="formula">j</span> mit Modus <span class="formula">k</span>. Für jede Nachfrageschicht <span class="formula">c</span> existiert ein eigenes Gleichungssystem, das separat gelöst wird. Der Übersichtlichkeit ist der Index <span class="formula">c</span> in den Problemformulierungen oben bei allen Variablen weggelassen.</p>
+        <p class="Text">Für die Lösung des Gleichungssystems wird im trilinearen Fall außer Quell- und Zielverkehr auch die Gesamtzahl <span class="formula">VK</span><span class="formula_subscript">k</span> der Fahrten mit Modus <span class="formula">k</span> benötigt. Dafür gibt es zwei Möglichkeiten.</p>
+        <ul>
+            <LI class="List0">Wenn Sie die Operation EVA-Verkehrsverteilung und Moduswahl für den Analysefall, das heißt ohne vorangegangenen Rechenlauf für den gleichen Untersuchungsraum, ausführen, geben Sie die Anteile der Modi (Modal Split) als Eingabedaten vor.</LI>
+            <LI class="List0">Berechnen Sie dagegen einen Prognosefall, können Sie die Modusanteile aus dem Analysefall wieder verwenden. Sie drücken damit die Annahme aus, dass sich zwar auf einzelnen Relationen die Aufteilung zwischen den Modi verschieben kann, der Modal Split im Gesamtmodell (über alle Relationen) jedoch unverändert bleibt.</LI>
+        </ul>
+        <p class="Text">Die Problemformulierung gilt für den Fall harter Randsummenbedingungen. Bei weichen, elastischen oder offenen Randsummenbedingungen treten bei den Nebenbedingungen Ungleichungen an die Stelle der Gleichungen oder die Nebenbedingung entfällt ganz. Wir kommen darauf bei der Beschreibung der Lösungsverfahren weiter unten zurück.</p>
+        <p class="Text">Die wahrscheinlichkeitstheoretische Begründung der Modelle kann über das Bayes‘sche Axiom oder über die Minimierung des Informationsgewinns erfolgen. Beide Wege führen zum gleichen Ergebnis.</p>
+        <p class="Text">Die Minimierung des Informationsgewinns zielt darauf, dass die Verkehrsteilnehmer möglichst geringe Abweichungen von ihren a priori Bewertungen der Verkehrsbeziehungen, die zu den eigentlich gewünschten Ortsveränderungen führen würden, hinnehmen müssen, die durch die Randsummenbedingungen des Systems erforderlich werden.</p>
+        <p class="Text">Die Nachfragematrix <span class="formula">T</span> kann als Lösung der konvexen Optimierungsaufgabe</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_47.png" style="margin-bottom: 0, 007938385px;" />
+        </p>
+        <p class="Formula">mit <img src="../Resources/Images/5_48.png" style="margin-bottom: 0, 01247025px;" /></p>
+        <p class="Text">unter Beachtung der Randsummenbedingungen aufgefasst werden. Als Lösung ergibt sich das schon aufgeschriebene trilineare Gleichungssystem.</p>
+        <p class="Text">Die Größe <span class="formula">I</span> stellt den Informationsgewinn dar, der beim Ersetzen der Verteilung <span class="formula">w</span><span class="formula_subscript">ijk</span> (die allein durch die Bewertungsmatrix bestimmt ist) durch die zusätzlich aus den Randsummen abgeleitete Verteilung <span class="formula">p</span><span class="formula_subscript">ijk</span> entsteht.</p>
+        <h5 MadCap:autonum="">Bewertungswahrscheinlichkeiten (Widerstandsfunktionen)</h5>
+        <p class="Text">
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Bewertung" />
+            <MadCap:keyword term="Bewertung (EVA)" />
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Bewertung: Bewertungswahrscheinlichkeiten" />
+            <MadCap:keyword term="Bewertung (EVA): Bewertungswahrscheinlichkeiten" />
+            <MadCap:keyword term="Widerstandsfunktionen: EVA-Modell Personenverkehr" />Die Gesamtkosten einer Fahrt setzen sich im Allgemeinen aus mehreren Anteilen (zum Beispiel Reisezeit, Zu-/Abgangszeit, monetäre Kosten, Anzahl Umsteigevorgänge im ÖV usw.) zusammen, die im EVA-Modell <MadCap:keyword term="EVA-Modell Personenverkehr: Aufwandsarten" /><MadCap:keyword term="Aufwandsarten" />Aufwandsarten genannt werden. Im EVA-Modell werden die Aufwände jeder Aufwandsart getrennt durch eine Nutzenfunktion transformiert und danach multipliziert.</p>
+        <p class="Text">Bezeichnet <span class="formula">c</span><span class="formula_subscript">aijk</span> den Aufwand in Aufwandsart <span class="formula">a</span> einer Fahrt von <span class="formula">i</span> nach <span class="formula">j</span> mit Modus <span class="formula">k</span>, so gilt:</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_136.jpg" />
+        </p>
+        <p class="Text">wobei</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_138.jpg" />
+        </p>
+        <p class="Text">Hierbei steht <span class="formula">M</span><span class="formula_subscript">ijk</span> für die Modusverfügbarkeit des Modus <span class="formula">k</span> auf der Beziehung (<span class="formula">i,j</span>) und <span class="formula">C</span><span class="formula_subscript">ijk</span> für die Kapazitätsauslastung des Modus <span class="formula">k</span> auf (<span class="formula">i,j</span>). <span class="formula">a</span>‘, <span class="formula">a</span>‘‘ und <span class="formula">a</span>‘‘‘ sind die vordefinierten Aufwandsarten Reisezeit, konkurrierende Fußwegzeit und externe Bewertungsmatrix, A entspricht der Menge der vom Benutzer definierten Aufwandsarten.</p>
+        <p class="Text">
+            <span class="formula">M</span>
+            <span class="formula_subscript">ijk</span> und <span class="formula">C</span><span class="formula_subscript">ijk</span> werden abhängig vom Quelle-Ziel-Typ der betrachteten Nachfrageschicht wie folgt definiert:</p>
+        <table class="TableStyle_TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="65px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="430px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Quelle-Ziel-Typ</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Definition von <span class="formula">M</span><span class="formula_subscript">ijk</span> und <span class="formula">C</span><span class="formula_subscript">ijk</span></p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Typ 1</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <span class="formula">M</span>
+                            <span class="formula_subscript">ijk</span> = <span class="formula">m</span><span class="formula_subscript">k</span>(<span class="formula">i</span>) für alle <span class="formula">j</span>, also der Wert des eingestellten Bezirksattributs <span class="formula">m</span><span class="formula_subscript">k</span> am Quellbezirk <span class="formula">i</span></p>
+                        <p class="CellText">
+                            <span class="formula">C</span>
+                            <span class="formula_subscript">ijk</span> = <span class="formula">c</span><span class="formula_subscript">k</span>(<span class="formula">j</span>) für alle <span class="formula">i</span>, also der Wert des eingestellten Bezirksattributs <span class="formula">c</span><span class="formula_subscript">k</span> am Zielbezirk <span class="formula">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Typ 2</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <span class="formula">M</span>
+                            <span class="formula_subscript">ijk</span> = <span class="formula">m</span><span class="formula_subscript">k</span>(<span class="formula">j</span>) für alle <span class="formula">i</span>, also der Wert des eingestellten Bezirksattributs <span class="formula">m</span><span class="formula_subscript">k</span> am Zielbezirk <span class="formula">j</span></p>
+                        <p class="CellText">
+                            <span class="formula">C</span>
+                            <span class="formula_subscript">ijk</span> = <span class="formula">c</span><span class="formula_subscript">k</span>(<span class="formula">i</span>) für alle <span class="formula">j</span>, also der Wert des eingestellten Bezirksattributs <span class="formula">c</span><span class="formula_subscript">k</span> am Quellbezirk <span class="formula">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Typ 3</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">
+                            <span class="gui_element">ohne Berücksichtigung des Heimatbezirks</span>
+                        </p>
+                        <p class="CellText">
+                            <span class="formula">M</span>
+                            <span class="formula_subscript">ijk</span> = 1 für alle i,j,k</p>
+                        <p class="CellText">
+                            <span class="formula">C</span>
+                            <span class="formula_subscript">ijk</span> = <span class="formula">c</span><span class="formula_subscript">k</span>(<span class="formula">i</span>)<span class="formula"> • c</span><span class="formula_subscript">k</span>(<span class="formula">j</span>)</p>
+                        <p class="CellText">
+                            <span class="gui_element">mit Berücksichtigung des Heimatbezirks</span>
+                        </p>
+                        <p class="CellText">
+                            <img src="../Resources/Images/5_143.jpg" />
+                        </p>
+                        <p class="CellText">
+                            <span class="formula">C</span>
+                            <span class="formula_subscript">ijk</span> = <span class="formula">c</span><span class="formula_subscript">k</span>(<span class="formula">i</span>)<span class="formula"> • c</span><span class="formula_subscript">k</span>(<span class="formula">j</span>)</p>
+                        <p class="CellText">wobei <span class="formula">h</span><span class="formula_subscript">n</span> das Heimataufkommen an Bezirk <span class="formula">n</span> bezeichnet und <img src="../Resources/Images/5_113.jpg" /> die Produktmatrix von oben bezeichnet, wobei die vordefinierte Aufwandsart externe Bewertungsmatrix hier nicht ins Produkt eingeht:</p>
+                        <p class="CellText" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <img src="../Resources/Images/5_37.jpg" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Definition der Modusverfügbarkeit und Kapazitätsauslastung in Abhängigkeit vom Quelle-Ziel-Typ</p>
+        <p class="Text">Bei Nachfrageschichten vom Quelle-Ziel-Typ 3, die unter Berücksichtigung des Heimatbezirks berechnet werden, dient die Aufwandsart externe Bewertungsmatrix also dazu, eine spezifische Gewichtung zwischen den Bezirken und Modi vorzunehmen. Diese Gewichtung wirkt unmittelbar auf das Gesamtprodukt, da sie nicht Bestandteil der Normierung über Heimatbezirke ist, wie sie in der Formel für <span class="formula">M</span><span class="formula_subscript">ijk</span> zum Ausdruck kommt. In allen anderen Fällen wirkt diese Aufwandsart genau wie eine vom Benutzer eingefügte.</p>
+        <p class="Text">
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Bewertung: Bewertungsfunktionen" />
+            <MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen" />Als Bewertungsfunktionen <span class="formula">f</span><span class="formula_subscript">a</span> können Sie verschiedene Funktionstypen verwenden. Alle Verteilungsfunktionen aus dem Gravitationsmodell stehen auch hier zur Verfügung, zusätzlich die Funktionen EVA1, EVA2, Schiller und Box-Tukey <MadCap:xref class="sieheUeberschrSeite" href="1_3_Gravitationsmodell rechnen.htm#1_nachfragemodell_2215163117_1228718"><span style="color: Black;" class="mcFormatColor">(</span><u>Gravitationsmodell rechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <table class="TableStyle_TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="87px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="408px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen: EVA1" />EVA1</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <img src="../Resources/Images/5_54.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000063px;" /> wobei <img src="../Resources/Images/5_55.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000063px;" /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen: EVA2" />EVA2</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="Formula">
+                            <img src="../Resources/Images/5_56.png" style="margin-right: 0, 006233215px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen: Schiller" />Schiller</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="Formula">
+                            <img src="../Resources/Images/5_57.png" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen: Logit" />Logit</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="Formula">
+                            <img src="../Resources/Images/5_58.png" style="margin-bottom: 0, 007938385px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen: Kirchhoff" />Kirchhoff</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="Formula">
+                            <img src="../Resources/Images/5_59.png" style="margin-right: 0, 004817963px;margin-bottom: 0, 007938385px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen: BoxCox" />BoxCox</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="Formula">
+                            <img src="../Resources/Images/5_60.png" style="margin-bottom: 0, 004817963px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen: Box-Tukey" />Box-Tukey</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <img src="../Resources/Images/5_61.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 012533px;margin-bottom: 0, 9890059px;" /> wobei <img src="../Resources/Images/5_62.png" /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen: kombiniert" />Kombiniert</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="Formula">
+                            <img src="../Resources/Images/5_63.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000063px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen: TModel" />TModel</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="Formula">
+                            <img src="../Resources/Images/5_64.png" style="margin-bottom: 0, 006235123px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Keine</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="Formula">
+                            <span class="formula">f</span>(<span class="formula">x</span>)<span class="formula"> = x</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Funktionstypen für die Bewertung</p>
+        <p class="Text">In der Praxis haben sich besonders die Funktionen EVA1 und EVA2 bewährt. Die EVA1-Funktionen sind monoton fallend mit <span class="formula">f</span>(<span class="formula">w</span>)&#160;≤&#160;1 für w&#160;≥&#160;0. In <MadCap:xref class="Label_Image" href="#1_nachfragemodell_2215163117_1030595">Abbildung&#160;52</MadCap:xref> sind einige von ihnen dargestellt. Ihre Parameter haben eine geometrische Interpretation.</p>
+        <table class="TableStyle_TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="61px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="435px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Parameter, der die horizontale Asymptote der Funktion <span class="symbol" style="font-style: italic;">j</span>(<span class="formula">w</span>) markiert und damit die Stärke des Anschmiegens der Funktion <span class="formula">f</span>(<span class="formula">w</span>) an die w-Asymptote beeinflusst</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">b</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Parameter, der die Stärke des Anschmiegens an die Horizontale <span class="formula">F</span>(<span class="formula">w</span>)=1 in der Nähe geringen Aufwands beeinflusst</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Parameter, der die Neigung der Funktion <span class="formula">f</span>(<span class="formula">w</span>) beeinflusst</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">b/c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText">Lage des Wendepunktes WP=F/G der Funktion <span class="symbol" style="font-style: italic;">f</span>(<span class="formula">w</span>), bei dem die Funktion <span class="symbol" style="font-style: italic;">f</span>(<span class="formula">w</span>) den größten Anstieg oder die größte „Widerstandsempfindlichkeit“ besitzt</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 3: ">Parameter der Bewertungsfunktion EVA1</p>
+        <p class="Text">
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Elastizitätsfunktionen" />Die zugehörigen Elastizitätsfunktionen sind gegeben durch</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_67.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000061px;" />
+        </p>
+        <p class="Text">Die Elastizitätsfunktion <img src="../Resources/Images/5_68.png" /> ist als Grenzwert des Quotienten aus der relativen Änderung der Funktion <span class="formula">f</span> und der relativen Änderung des Widerstandes <span class="formula">w</span> definiert.</p>
+        <p class="Text">Es ist ersichtlich, dass die Elastizitätsfunktionen zuerst bei kleinen Widerstandswerten nahezu bei null verlaufen, danach in einem begrenzten Bereich, in dem die „Widerstandsempfindlichkeit“ am größten ist, wesentlich von null verschiedene Werte annehmen und sich bei großen Widerständen an den Grenzwert -E „anschmiegen“.</p>
+        <p class="Text">Somit unterscheidet sich dieser Elastizitätsverlauf stark von den konstanten oder linearen Elastizitätsfunktionen der einfachen Potenz- und Exponentialfunktionen. Mit diesem Funktionstyp ist es daher möglich, sich verschiedenen grundsätzlichen Bewertungssituationen (Personengruppen, Fahrtzwecken, Verkehrsmitteln usw.) anzupassen. Im geringen Aufwands- oder Nutzensbereich sollte die Bewertungswahrscheinlichkeit nahe bei Eins liegen und erst im deutlich spürbaren und für die jeweilige Verkehrsart- und Zweckklasse maßgebenden Aufwands- oder Nutzensbereich stärker absinken, bevor sie sich asymptotisch dem Wert null anschmiegt. Beispielsweise spielt der Aufwand im Nahbereich oder in kleineren Städten bei den Verkehrsteilnehmern sowohl für die Zielwahl als auch für die Verkehrsmittelwahl keine oder eine geringe Rolle (hier gilt weitgehend das Zufallsmodell mit BW = 1).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_EVA1_Function.wmf" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_EVA1_Elastic.wmf" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_nachfragemodell_2215163117_1030595">
+            </a>
+            <a name="1_nachfragemodell_2215163117__ref167707448">
+            </a>EVA1-Funktion in Abhängigkeit vom Widerstand w</p>
+        <p class="Text">Die EVA2-Funktion hat folgende Parameter.</p>
+        <table class="TableStyle_TableVarDefinition" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="58px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="437px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="formula">a</span>, <span class="formula">b</span> ...</p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Exponenten, deren Produkt das asymptotische Verhalten für große Widerstandwerte bestimmt. Für <span class="formula">b</span> &gt; 1 ähnelt der Kurvenverlauf dem der EVA-Funktion (1).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="formula">c</span> ...</p>
+                    </td>
+                    <td class="TableStyle_TableVarDefinition_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText">Skalenparameter für die Widerstandswerte.</p>
+                        <p class="CellText">Es gilt <img src="../Resources/Images/5_69.png" style="margin-bottom: 0, 007938385px;" />.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 4: ">Parameter der Bewertungsfunktion EVA2</p>
+        <p class="Text">
+            <MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen: EVA2" />Die <MadCap:xref class="Label_Image" href="#1_nachfragemodell_2215163117_1030621">Abbildung&#160;53</MadCap:xref> zeigt den Einfluss von a und b auf den Funktionsverlauf. Die anderen beiden Parameter sind dabei jeweils konstant gehalten.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_EVA2_alpha.wmf" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000028px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_EVA2_beta.wmf" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_nachfragemodell_2215163117_1030621">
+            </a>
+            <a name="1_nachfragemodell_2215163117_96004">
+            </a>EVA2-Funktion in Abhängigkeit von den Parametern a und b</p>
+        <p class="Text">
+            <MadCap:keyword term="Bewertung (EVA): Bewertungsfunktionen: Schiller" />Die Schiller-Funktion ist ein Sonderfall der EVA2-Funktion, besitzt jedoch einen Parameter weniger. Wie sich in ersten Anwendungen in der Praxis gezeigt hat, lässt sich die Funktion auch damit meist ausreichend gut an beobachtete Daten anpassen. Der Kalibrierungsaufwand liegt dabei durch die geringere Parameterzahl niedriger als bei EVA2.</p>
+        <h5 MadCap:autonum="">Lösungsverfahren 1: Das trilineare FURNESS-Verfahren</h5>
+        <p class="Text">
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Furness-Verfahren: trilinear" />
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Bilanzfaktoren" />Das in der Fachliteratur am umfassendsten untersuchte Verfahren zur Lösung des bilinearen Problems wurde nach K. P. Furness benannt (Furness 1962, 1965); tatsächlich wurde es jedoch bereits in den 30er Jahren von Bregman verwendet (Bregman 1967a, 1967b). Es lässt sich direkt auf den trilinearen Fall verallgemeinern.</p>
+        <p class="Text">Beim dreidimensionalen FURNESS-Verfahren werden nach der Festlegung von Startwerten</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_39.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">im p-ten Iterationsschritt (p=1,2,<span class="_Override" style="font-family: Symbol;">¼</span>) Näherungen für <span class="formula">fq</span><span class="formula_subscript">i</span>, <span class="formula">fz</span><span class="formula_subscript">j</span> und <span class="formula">fa</span><span class="formula_subscript">k</span> wie folgt berechnet.</p>
+        <p class="Text">
+            <img src="../Resources/Images/5_1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />  (<span class="formula">i</span> = 1,<span class="_Override" style="font-family: Symbol;">¼</span>,<span class="formula">m</span>)</p>
+        <p class="Text">
+            <img src="../Resources/Images/5_3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" />  (<span class="formula">j</span> = 1,<span class="_Override" style="font-family: Symbol;">¼</span>,<span class="formula">n</span>)</p>
+        <p class="Text">
+            <img src="../Resources/Images/5_75.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" />  (<span class="formula">k</span> = 1,<span class="_Override" style="font-family: Symbol;">¼</span>,<span class="formula">K</span>).</p>
+        <p class="Text">Für die Konvergenz des Verfahrens (gegen die Lösung des trilinearen Problems) ist die Bedingung für die eindeutige Lösbarkeit des betrachteten Optimierungsproblems notwendig und hinreichend, das heißt die Existenz irgendeiner Matrix <span class="formula">T</span><span class="formula_subscript">ijk</span>, die den Randsummenbedingungen genügt und für die <span class="formula">T</span><span class="formula_subscript">ijk</span> = 0 genau für alle Paare (<span class="formula">i,j</span>) mit <span class="formula">W</span><span class="formula_subscript">ij</span> = 0 gilt. Diese Bedingung ist stets erfüllt, wenn <span class="formula">W</span><span class="formula_subscript">ij</span> &gt; 0 für alle (<span class="formula">i,j</span>) gilt, da dann als zulässige Lösung die Matrix mit den Elementen <img src="../Resources/Images/5_79.png" style="margin-right: 0, 01248169px;margin-bottom: 0, 01417351px;" /> gewählt werden kann (die dem Zufallsmodell entsprechende Matrix). Für diesen Spezialfall gab A. W. Evans einen Konvergenzbeweis an, der auch eine (allerdings grobe) Abschätzung der Konvergenzrate gestattet (Evans 1970). Die bisherigen praktischen Erfahrungen besagen, dass das Verfahren in den weitaus meisten Anwendungsfällen rasch konvergiert.</p>
+        <h5 MadCap:autonum="">Lösungsverfahren 2: Das trilineare Multi-Verfahren</h5>
+        <p class="Text">
+            <MadCap:keyword term="Multi-Verfahren: trilinear (EVA)" />
+            <MadCap:keyword term="EVA-Modell Personenverkehr: Multi-Verfahren: trilinear" />Eine weitere Lösungsvariante besteht darin, Fixpunktgleichungen für die Vektoren <span class="formula">fq</span><span class="formula_subscript">i</span>, <span class="formula">fz</span><span class="formula_subscript">j</span> und <span class="formula">fa</span><span class="formula_subscript">k</span> allein aufzustellen und mit deren Hilfe entsprechende Vorschriften zur Bestimmung sukzessiver Näherungen für diese Vektoren abzuleiten (Schnabel 1997). Das Multi-Verfahren lässt sich ebenfalls auf den dreidimensionalen Fall erweitern <MadCap:xref class="sieheUeberschrSeite" href="1_3_Hochrechnen.htm#1_nachfragemodell_2215163117_1260026"><span style="color: Black;" class="mcFormatColor">(</span><u>Hochrechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Näherungen für die Lösung des trilinearen Problems können demnach gemäß der folgenden Iterationsvorschrift ermittelt werden.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_82.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_83.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">(<span class="formula">p</span> = 1, 2,<span class="_Override" style="font-family: Symbol;">¼</span>)</p>
+        <p class="Text">mit</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_84.png" style="margin-right: 0, 01105499px;margin-bottom: 0, 01417542px;" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_85.png" style="margin-right: 0, 01248169px;margin-bottom: 0, 006225586px;" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_86.png" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_87.png" style="margin-right: 0, 004806519px;margin-bottom: 0, 006225586px;" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_88.png" style="margin-bottom: 0, 01417542px;" />
+        </p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_89.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <p class="Text">Genau genommen löst das dargestellte Verfahren nur das Problem mit harten Randsummenbedingungen. Sind einige Randsummenbedingungen weich oder elastisch, ergibt sich ein Optimierungsproblem mit Ungleichungen als Nebenbedingungen an Stelle von Gleichungen. Am Beispiel von weichen Randbedingungen zeigen wir, wie sich das Problem und entsprechend das Lösungsverfahren verändert (nach Schiller 2004). Wir nehmen an, eine Nachfrageschicht besitze auf der Zielseite weiche Randsummenbedingungen, das heißt das in der Verkehrserzeugung berechnete Zielaufkommen stellt eine obere Schranke dar. Dadurch verändert sich das trilineare Problem zu</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_90.png" />
+        </p>
+        <p class="Text">unter den Randbedingungen</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_91.png" style="margin-right: 0, 00907135px;margin-bottom: 0, 00907135px;" />
+        </p>
+        <p class="Text">Das Multi-Lösungsverfahren ist weitgehend identisch mit dem für Gleichungs-Nebenbedingungen, nur werden <span class="formula">z</span><span class="formula_subscript">j</span>(<span class="formula">p</span>) und <span class="formula">zz</span><span class="formula_subscript">j</span>(<span class="formula">p</span>) abweichend berechnet.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_92.png" style="margin-right: 0, 006225586px;margin-bottom: 0, 01105499px;" />
+        </p>
+        <p class="Text">Falls einige der Nachfrageschichten nicht über harte Randsummenbedingungen verfügen, muss nicht nur das Lösungsverfahren angepasst, sondern auch der Randsummenausgleich nun nachgeholt werden.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Randsummendifferenzen können nur dann bereits nach der Verkehrserzeugung ausgeglichen werden, wenn alle Nachfrageschichten harte Randsummenbedingungen besitzen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Das trilineare Problem wird in diesem Fall zuerst für alle Nachfrageschichten <span class="gui_element">außer der ausgleichenden</span> gelöst. Daraus ergibt sich das Gesamt-Quell-/-Zielaufkommen der Bezirke über diese Nachfrageschichten und alle Modi. Nach den Formeln zur Berechnung von Quell- und Zielaufkommen <MadCap:xref class="sieheUeberschrSeite" href="1_3_EVA-Verkehrserzeugung.htm#1_nachfragemodell_2215163117_1154313"><span style="color: Black;" class="mcFormatColor">(</span><u>EVA-Verkehrserzeugung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> werden nun die Quell- und Zielaufkommen der ausgleichenden Nachfrageschicht modifiziert. Zuletzt löst <MadCap:variable name="PTV_Manual.Programmname" /> auch für diese letzte Nachfrageschicht die Verkehrsaufteilung und Moduswahl.</p>
+        <p class="Text">Die Vorgehensweise unterstellt, dass Differenzen nur im Rahmen des Gesamtaufkommens ausgeglichen werden müssen. Das stimmt nur dann, wenn alle Modi austauschbar sind, das heißt im Laufe einer geschlossenen Fahrtkette abwechselnd genutzt werden können. Ist wenigstens ein Modus nicht austauschbar, schließt sich an den Gesamt-Randsummenausgleich eine zweite Phase an, die für jeden nicht-austauschbaren Modus einzeln sowie für die austauschbaren Modi gemeinsam berechnet wird. Hierbei werden die Quell- und Zielaufkommen <span class="gui_element">der jeweiligen Modi</span> über die nicht-ausgleichenden Nachfrageschichten berechnet, ihre Differenzen durch Abänderung der Aufkommen in der ausgleichenden Nachfrageschicht kompensiert und mit diesen veränderten Aufkommen ein letztes Mal die Verkehrsverteilung und Moduswahl berechnet. Für die nicht-austauschbaren Modi entspricht dieser letzte Schritt einer reinen Verkehrsverteilung.</p>
+        <p class="Text">Die Implementierung des EVA-Modells für Verkehrsverteilung und Moduswahl verteilt sich auf zwei getrennte Operationen. <MadCap:keyword term="Bewertung (EVA)" /><MadCap:keyword term="Bewertung (EVA): Bewertungsmatrizen" /><MadCap:keyword term="Matrizen: Bewertungsmatrizen" />Die Operation EVA-Bewertung berechnet aus Kenngrößenmatrizen die Bewertungsmatrizen <span class="formula">W</span><span class="formula_subscript">ijk</span> (je eine Bewertungsmatrix pro Nachfrageschicht). In der nachfolgenden Operation EVA-Verkehrsverteilung und Moduswahl werden entsprechend den Randsummenbedingungen der Nachfrageschichten die Gleichungssysteme für die Bestimmung der Nachfragematrizen aufgestellt und mit einem der oben beschriebenen Verfahren gelöst. Das Ergebnis der Operation ist je eine Nachfragematrix pro Nachfrageschicht und Modus. Die <MadCap:keyword term="EVA-Modell Personenverkehr: Bilanzfaktoren" />Bilanzfaktoren für Quell- und Zielaufkommen <span class="formula">fq</span><span class="formula_subscript">i</span> und <span class="formula">fz</span><span class="formula_subscript">j</span>, die sich beim Lösen des Gleichungssystems ergeben, können ebenfalls ausgegeben werden. Der Bilanzfaktor für Moduswahl <span class="formula">fa</span><span class="formula_subscript">k</span> wird im Analysefall ausgegeben, im Prognosefall nicht.</p>
+        <p class="Text">Das Verfahren EVA-Bewertung kann auf aktive Beziehungen oder aber auf die Beziehungen, von denen Quell- oder Zielbezirk aktiv sind, eingeschränkt werden. Somit kann die Bewertung durch das Lesen von Filtern auf verschiedenen Relationen mit unterschiedlichen Parametern ausgeführt werden. Für die kombinierte Verteilung und Moduswahl besteht diese Möglichkeit dagegen nicht, da für einen erfolgreichen Randsummenausgleich alle Verkehre des Modells in einem Schritt betrachtet werden müssen.</p>
+    </body>
+</html>

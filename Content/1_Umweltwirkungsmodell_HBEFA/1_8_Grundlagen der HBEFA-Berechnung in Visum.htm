@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="548" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="AHPI;NMHC;NH;100km;ca;75kg;83kg">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_umweltwirkungsmodell_1611065317_1032592">
+            </a>
+            <a name="1_umweltwirkungsmodell_1611065317_17971">
+            </a>Grundlagen der HBEFA-Berechnung in <MadCap:variable name="PTV_Manual.Programmname" /></h3>
+        <p class="Text">Die Emissionsberechnung nach HBEFA berechnet in <MadCap:variable name="PTV_Manual.Programmname" /> die gewünschten Emissionen und optional Kaltstartzuschläge. Dabei werden die Verkehrssituation, Belastungen und Verkehrszusammensetzungen berücksichtigt. </p>
+        <p class="Text">Emissionen werden in <MadCap:variable name="PTV_Manual.Programmname" /> auf der Basis von Strecken berechnet. Für Abbieger, Oberabbieger und Anbindungen werden keine Emissionen berechnet.</p>
+        <p class="Text">Für eine Emissionsberechnung nach HBEFA müssen Sie zunächst Ihre gewünschten Verkehrszusammensetzungen definieren, wobei die in HBEFA je Land, Kalenderjahr und Kategorie (beispielsweise Pkw, Lkw) vorgeschlagenen Verkehrszusammensetzungen als Grundlage dienen können.</p>
+        <p class="Text">Anschließend erfolgt die Berechnung der Emissionen mit dem Verfahren <span class="gui_element">Emissionsberechnung nach HBEFA</span>, das Sie für ein oder mehrere Nachfragesegmente gleichzeitig berechnen können. </p>
+        <p class="Text">Das Verfahren kann auf zwei Arten berechnet werden:</p>
+        <ul>
+            <LI class="List0">statisch (für Analyseperiode und Analysehorizont)</LI>
+            <LI class="List0">dynamisch (zusätzlich pro Analysezeitintervall)</LI>
+        </ul>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Sie können die dynamische Variante rechnen, wenn Belastungen für einzelne Analysezeitintervalle vorliegen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Belastungen für warme Emissionen und Kaltstartzuschläge stammen je Nachfragesegment aus einem wählbaren Attribut. Dieses Attribut wird als Belastung mit Zeitbezug Analyseperiode (AP) interpretiert. Bei der Berechnung der AP-bezogenen Belastungen wird durch den AP-Hochrechnungsfaktor geteilt und mit dem AH-Hochrechnungsfaktor multipliziert.</p>
+        <p class="Text">Bei der Kraftstoffberechnung wird als Indikator für die Plausibilität der Berechnungen der netzweit pro Nachfragesegment erhobene Kraftstoffverbrauch (Masse [g]) getrennt nach Diesel und Benzin in den spezifischen Verbrauch ([l/100km]) umgerechnet. Dazu wird die Masse zunächst durch die Dichte des Kraftstoffs (Benzin ca. 0,75kg/l, Diesel ca. 0,83kg/l) geteilt und anschließend auf die Fahrleistung des Nachfragesegments bezogen. Der spezifische Verbrauch pro Nachfragesegment wird in der Liste <span class="gui_element">Statistik &gt; Emissionen (HBEFA)</span> angezeigt und in der Protokolldatei gespeichert.</p>
+    </body>
+</html>

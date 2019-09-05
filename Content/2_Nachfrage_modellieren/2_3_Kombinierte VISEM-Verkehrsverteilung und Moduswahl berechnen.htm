@@ -1,0 +1,880 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="674" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:ignoredWords="Symmetrize;bzw;zeilen;$O;usw;of;gpm;hh;ss">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_nachfrage_modellieren_1800171850_1641645">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_68379">
+            </a>Kombinierte VISEM-Verkehrsverteilung und Moduswahl berechnen<a name="30245"></a><a name="30245"></a><a name="11152"></a><a name="11136"></a><a name="11137"></a><a name="11150"></a><a name="11151"></a></h4>
+        <p class="Text">
+            <MadCap:keyword term="Verkehrsverteilung: VISEM-Modell" />
+            <MadCap:keyword term="Moduswahl: VISEM-Modell" />Bei der kombinierten VISEM-Verkehrsverteilung und Moduswahl werden für jeden Übergang einer Aktivitätenkette simultan eine Gesamtnachfragematrix und eine Nachfragematrix pro Modus berechnet <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Kombinierte VISEM-Verkehrsverteilung_Moduswahl.htm#1_nachfragemodell_2215163117_1225822">(siehe Grundlagen: Kap. , Seite&#160;1)</MadCap:xref>.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass das Aufkommen der einzelnen Bezirke pro Nachfrageschicht als Bezirksattribut <span class="gui_element">Heimataufkommen</span> vorliegt <MadCap:xref class="siehe_1" href="2_3_VISEM-Verkehrserzeugung berechnen.htm#2_nachfrage_modellieren_1800171850_1641343">(siehe „VISEM-Verkehrserzeugung berechnen“ auf Seite&#160;1</MadCap:xref><MadCap:xref class="siehe_2" href="2_3_Aufkommen von VISEM-Nachfrageschichten ändern.htm#2_nachfrage_modellieren_1800171850_1641489"> und „Aufkommen von VISEM-Nachfrageschichten ändern“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Stellen Sie sicher, dass jeder Personengruppe, für die die VISEM-Verkehrsverteilung und Moduswahl berechnet werden soll, eine Nachfragematrix zugeordnet ist, in die die Ergebnisse gespeichert werden <MadCap:xref class="sieheUeberschrSeite" href="2_3_Nachfragematrizen für die VISEM-Verkehrsverteilung und Moduswahl erzeugen.htm#2_nachfrage_modellieren_1800171850_1684042">(siehe „Nachfragematrizen für die VISEM-Verkehrsverteilung und Moduswahl erzeugen“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie in der Symbolleiste auf das Symbol <img src="../Resources/Images_4_all/ICO_procedure_flow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000347px;margin-bottom: 0, 9983615px;" /> <span class="gui_element">Verfahrensablauf öffnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Verfahrensablauf</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Fügen Sie an der gewünschten Stelle im Verfahrensablauf das Verfahren <span class="gui_element">VISEM-kombinierte Verkehrsverteilung/Moduswahl</span> aus der Kategorie <span class="gui_element">Nachfragemodell</span> ein <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahrensablauf festlegen und starten.htm#2_verfahrensablauf_festlegen_40480990_1019020">(siehe „Verfahrensablauf festlegen und starten“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Klicken Sie in der Zeile des neu eingefügten Verfahrens auf die Schaltfläche in der Spalte <span class="gui_element">Bezugsobjekt(e)</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Nachfrageschichten Auswahl VISEM</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="6. &#160;">Wählen Sie in der Auswahlliste <span class="gui_element">Nachfragemodell auswählen</span> das Nachfragemodell, zu dem die Nachfrageschichten gehören.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Wählen Sie in der Auswahlliste <span class="gui_element">Nachfrageschichten</span> die Nachfrageschichten, für die Sie die kombinierte VISEM-Verkehrsverteilung und Moduswahl rechnen möchten.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Tipps" MadCap:autonum="Tipps: ">Sie können mehrere Nachfrageschichten auswählen, indem Sie die Taste <span class="shortcut">Strg</span> drücken, diese gedrückt halten und auf die gewünschten Einträge klicken.</p>
+                        <p class="Text">Alternativ können Sie für bestimmte Personengruppen und Aktivitätenpaare die zugehörigen Nachfrageschichten vorauswählen. Wählen Sie dazu in den Auswahllisten <span class="gui_element">Personengruppen</span> und <span class="gui_element">Aktivitätenpaare</span> die gewünschten Nachfrageobjekte und klicken Sie auf die Schaltfläche <span class="gui_element">Vorauswahl übernehmen</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="8. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">Die ausgewählten Nachfrageschichten werden im Eingabefeld <span class="gui_element">NSchichten</span> und in die Spalte <span class="gui_element">Bezugsobjekt(e)</span> übernommen.</p>
+        <p class="Step" MadCap:autonum="9. &#160;">Stellen Sie sicher, dass das eingefügte Verfahren markiert ist, und klicken Sie im Bereich <span class="gui_element">Aktionen</span> auf die Schaltfläche <span class="gui_element">Bearbeiten</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Parameter kombinierte VISEM-Verkehrsverteilung/Moduswahl</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="10. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Fehlen innerhalb einer Zeile Eingaben, die für die Berechnung notwendig sind, markiert <MadCap:variable name="PTV_Manual.Programmname" /> die Felder rot. Wählen Sie beispielsweise aus, dass eine Nutzenmatrix gespeichert werden soll, müssen Sie eine Ausgabematrix angeben. Andernfalls wird das Feld in der Spalte <span class="gui_element">Ausgabematrix Nutzen</span> rot markiert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nutzen bei Moduswahl je Zielaktivität definieren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, können Sie für jede Zielaktivität andere Parameter festlegen. Ist die Option ausgewählt, wird im Register <span class="gui_element">Nutzen Moduswahl </span>eine zusätzliche Spalte <span class="gui_element">Aktivität</span> eingeblendet. Für jede Zielaktivität kann jetzt eine separate Nutzendefinition festgelegt werden <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1641891">(siehe „Parameter der Nutzenfunktion für die VISEM-Verkehrsverteilung oder VISEM-Moduswahl einstellen“ auf Seite&#160;8)</MadCap:xref>.</p>
+                        <p class="CellText">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Maximale Anzahl Iterationen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl Iterationen, nach der das Verfahren abgebrochen wird, falls mit dem eingestellten Iterationsalgorithmus keine Konvergenz erreicht wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1" style="mc-hyphenate-shortest-prefix: 11;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Genauigkeitsfaktor</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Genauigkeitsfaktor für Randsummenbedingungen <MadCap:xref class="sieheUeberschrSeite" href="2_3_Attribute und Optionen von Aktivitäten.htm#2_nachfrage_modellieren_1800171850_1123770">(siehe „Attribute und Optionen von Aktivitäten“ auf Seite&#160;1)</MadCap:xref></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="116px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="358px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td colspan="2" class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Register <span class="gui_element">Nutzen Verteilung</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Schlüssel</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Eindeutiger Wert, den <MadCap:variable name="PTV_Manual.Programmname" /> für jede Kombination aus <span class="gui_element">Personengruppe</span> und <span class="gui_element">Aktivität</span> erstellt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Personengruppe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Personengruppe der Verkehrsverteilung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Aktivität</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Zielaktivität der Verkehrsverteilung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Nutzendefinition</span>
+                        </p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_file_selection.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000063px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Schaltfläche können Sie eine Kombination von Matrizen und Attributsvektoren in einem separaten Fenster definieren, die als Nutzenmatrix bei der Verkehrsverteilung für die jeweilige Personengruppe und Aktivität verwendet wird <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1641891">(siehe „Parameter der Nutzenfunktion für die VISEM-Verkehrsverteilung oder VISEM-Moduswahl einstellen“ auf Seite&#160;8)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Funktionstyp</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Typ der Nutzenfunktion für die Berechnung der Verkehrsverteilung <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Kombinierte VISEM-Verkehrsverteilung_Moduswahl.htm#1_nachfragemodell_2215163117_1225822">(siehe Grundlagen: Kap. , Seite&#160;1)</MadCap:xref></p>
+                        <p class="CellText">Die Auswahl erfolgt über die Auswahlliste.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der Funktionstyp kann einzeln oder für Kombinationen aus Personengruppe und Aktivität eingestellt werden. Markieren Sie dazu die gewünschte Kombination, indem Sie die <span class="shortcut">Strg</span>-Taste gedrückt halten und auf die gewünschten Zeilen klicken.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">a, b, c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Parameter der Nutzenfunktion für die Verkehrsverteilung <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Kombinierte VISEM-Verkehrsverteilung_Moduswahl.htm#1_nachfragemodell_2215163117_1225822">(siehe Grundlagen: Kap. , Seite&#160;1)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Graph</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche können Sie den Kurvenverlauf der Nutzenfunktion in einem separaten Fenster anzeigen und bei Bedarf bearbeiten <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1642342">(siehe „Kurvenverlauf der Nutzenfunktion anzeigen und ändern“ auf Seite&#160;9)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Nutzenmatrix speichern</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, wird die Zielwahlnutzenmatrix gespeichert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Ausgabematrix Nutzen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche öffnet sich das Fenster <span class="gui_element">Matrix auswählen</span>, in dem Sie eine Ausgabematrix auswählen können, in der die Zielwahlnutzenmatrix gespeichert wird <MadCap:xref href="2_3_Matrizen_auswaehlen.htm" class="sieheUeberschrSeite">(siehe „Matrizen auswählen“ auf Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Ausgabematrix Nutzen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Verweis auf die Matrix, die über die Schaltfläche ausgewählt wurde. als Kombination aus Matrixnummer und Matrixname. Ist noch keine Matrix vorhanden, weil sie erst während des Verfahrens erzeugt wird, bleibt das Feld leer.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_spatial_select_all_object_types.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000062px;" /> <img src="../Resources/Images_4_all/ICO_spatial_deselect_all_object_types.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000062px;" /></p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Symbole wählen Sie in der Spalte <span class="gui_element">Nutzenmatrix speichern</span> alle markierten Zeilen aus oder setzen die Auswahl zurück.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_Matrixeditor_Insert_Matrix.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000063px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Über das Symbol legen Sie für die markierte Zeile eine neue Ausgabematrix an, wenn in der Spalte <span class="gui_element">Ausgabematrix Nutzen</span> keine Ausgabematrix angegeben ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="117px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="357px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td colspan="2" class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Register <span class="gui_element">Nutzen Moduswahl</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Schlüssel</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Eindeutiger Wert, den <MadCap:variable name="PTV_Manual.Programmname" /> für jede Kombination aus <span class="gui_element">Personengruppe</span> und <span class="gui_element">Modus</span> erstellt.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Ist die Option <span class="gui_element">Nutzen der Moduswahl je Zielaktivität definieren</span> ausgewählt, wird der Schlüssel um <span class="gui_element">Aktivität</span> erweitert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2" style="height: 5px;">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 11;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Personengruppe</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Personengruppe der Moduswahl</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Aktivität</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Zielaktivität der Moduswahl</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option ist nur dann für die Nutzenfunktion der Moduswahl verfügbar, wenn Sie die Option <span class="gui_element">Nutzen der Moduswahl je Zielaktivität definieren</span> ausgewählt haben.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Modus</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ausgewählter Modus</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nutzendefinition</span> <img src="../Resources/Images_4_all/ICO_file_selection.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 011118px;margin-bottom: 1, 011118px;" /></p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche können Sie eine Kombination von Matrizen und Attributsvektoren in einem separaten Fenster definieren, die als Nutzenmatrix bei der Moduswahl für die jeweilige Personengruppe und den jeweiligen Modus verwendet wird <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1641891">(siehe „Parameter der Nutzenfunktion für die VISEM-Verkehrsverteilung oder VISEM-Moduswahl einstellen“ auf Seite&#160;8)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Funktionstyp</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Typ der Nutzenfunktion für die Berechnung der Moduswahl <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Kombinierte VISEM-Verkehrsverteilung_Moduswahl.htm#1_nachfragemodell_2215163117_1225822">(siehe Grundlagen: Kap. , Seite&#160;1)</MadCap:xref></p>
+                        <p class="CellText">Die Auswahl erfolgt über die Auswahlliste.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der Funktionstyp kann einzeln oder für Kombinationen aus Personengruppe und Modus eingestellt werden. Markieren Sie dazu die gewünschte Kombination, indem Sie die <span class="shortcut">Strg</span>-Taste gedrückt halten und auf die gewünschten Zeilen klicken.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">a, b, c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Parameter der Nutzenfunktion für die Moduswahl <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_Kombinierte VISEM-Verkehrsverteilung_Moduswahl.htm#1_nachfragemodell_2215163117_1225822">(siehe Grundlagen: Kap. , Seite&#160;1)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Graph</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Über die Schaltfläche können Sie den Kurvenverlauf der Nutzenfunktion in einem separaten Fenster anzeigen und bei Bedarf bearbeiten <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1642342">(siehe „Kurvenverlauf der Nutzenfunktion anzeigen und ändern“ auf Seite&#160;9)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="117px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="357px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td colspan="2" class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Register <span class="gui_element">Ausgabe Nachfragematrizen</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Berechnen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, berechnet <MadCap:variable name="PTV_Manual.Programmname" /> die Nachfragematrix für die Kombination aus Personengruppe, Modi, Aktivitätenkette dieser Tabellenzeile.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Personengruppen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Schaltfläche legen Sie fest für welche Personengruppen der Verkehrsverteilung eine Ausgabematrix berechnet wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Modi</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche legen Sie fest, für welche Modi eine Matrix berechnet wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Quellaktivitäten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Schaltfläche legen Sie die Quellaktivitäten fest, für die eine Ausgabematrix berechnet werden kann.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Zielaktivitäten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche legen Sie die Zielaktivitäten fest, für die eine Ausgabematrix berechnet werden kann.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Von-Zeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Startzeitpunkt des Zeitintervalls, für das die Berechnung durchgeführt werden soll, im Uhrzeitformat (hh oder hh:mm oder hh:mm:ss)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Bis-Zeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Endzeitpunkt des Zeitintervalls, für das die Berechnung durchgeführt werden soll, im Uhrzeitformat (hh oder hh:mm oder hh:mm:ss)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Typ</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Anzeige des Matrixtyps, der berechnet wird. Der Wert ist abhängig von den Einstellungen, die Sie unter <span class="gui_element">Modi</span>, <span class="gui_element">Quellaktivität</span> und <span class="gui_element">Zielaktivität</span> ausgewählt haben.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Verteilungsmatrix</span>
+                        </p>
+                        <p class="CellText">Sie haben alle Modi, alle Quellaktivitäten und alle Zielaktivitäten ausgewählt.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Moduswahlmatrix</span>
+                        </p>
+                        <p class="CellText">Sie haben nicht alle Modi ausgewählt, aber alle Quellaktivitäten und alle Zielaktivitäten.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Aktivitätsmatrix</span>
+                        </p>
+                        <p class="CellText">Sie haben nicht alle Zielaktivitäten ausgewählt, aber alle Quellaktivitäten und alle Modi.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Andere</span>
+                        </p>
+                        <p class="CellText">Für alle anderen möglichen Kombinationen aus Modi, Quellaktivität und Zielaktivität.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Ausgabematrix</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p>Über die Schaltfläche öffnet sich das Fenster <span class="gui_element">Matrizen auswählen</span> in dem Sie die Matrix auswählen können, in der die Ergebnisse gespeichert werden<MadCap:xref href="2_3_Matrizen_auswaehlen.htm" class="sieheUeberschrSeite">(siehe „Matrizen auswählen“ auf Seite&#160;1)</MadCap:xref> .</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <span class="gui_element">Ausgabematrix</span>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">Verweis auf die Matrix, die über die Schaltfläche ausgewählt wurde. als Kombination aus Matrixnummer und Matrixname. Ist noch keine Matrix vorhanden, weil sie erst während des Verfahrens erzeugt wird, bleibt das Feld leer.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Über die Symbole im unteren Teil des Registers <span class="gui_element">Ausgabe Nachfragematrizen</span> können Sie die Tabelle der Ausgabeelemente bearbeiten.</p>
+        <table class="TableStyle-TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="75px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="106px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="313px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Symbol</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Name</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_insert_any.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Ausgabeelement einfügen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Fügt eine neue Zeile ein</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_duplicate2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Markierte Ausgabeelemente kopieren</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Kopiert alle markierten Zeilen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_delete_any.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Markierte Ausgabeelemente löschen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Löscht alle markierten Zeilen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_move_row_down.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9924105px;margin-bottom: 0, 9895743px;" />
+                            <img src="../Resources/Images_4_all/ICO_move_row_up.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9924105px;margin-bottom: 0, 9895743px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Markierte Ausgabeelemente nach unten/oben verschieben</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Verschiebt alle markierten Zeilen nach unten/oben</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_sort_rows.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000065px;margin-bottom: 1, 000063px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Ausgabeelemente nach Standardreihenfolge sortieren</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Sortiert die Tabelle nach der Standardreihenfolge</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_spatial_select_all_object_types.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000062px;" />&#160;<img src="../Resources/Images_4_all/ICO_spatial_deselect_all_object_types.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000062px;" /></p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Markierte Ausgabeelemente berechnen/nicht berechnen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Symbole wählen Sie in der Spalte <span class="gui_element">Berechnen</span> alle markierten Zeilen aus oder setzen die Auswahl zurück.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_insert_matrix_for_all_elements.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 005449px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Getrennte Ausgabematrizen für markierte Ausgabeelemente...</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Über diese Schaltfläche können Sie die Tabelle mit allen gewünschten Ausgabematrizen erstellen. Markieren Sie die gewünschten Zeilen in der Tabelle und klicken Sie auf das Symbol. Wählen Sie aus den folgenden Optionen:</p>
+                        <p class="CellText">
+                            <span class="gui_element">Getrennte Matrizen pro Personengruppe</span>
+                        </p>
+                        <p class="CellText">Für jede Personengruppe wird eine eigene Zeile erstellt, die Einträge in den Spalten <span class="gui_element">Modi</span>, <span class="gui_element">Quellaktivitäten</span> und <span class="gui_element">Zielaktivitäten</span> werden übernommen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Getrennte Matrizen pro Modus</span>
+                        </p>
+                        <p class="CellText">Für jeden Modus wird eine eigene Zeile erstellt, die Einträge in den Spalten <span class="gui_element">Personengruppe</span>, <span class="gui_element">Quellaktivitäten</span> und <span class="gui_element">Zielaktivitäten</span> werden übernommen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Getrennte Matrizen pro Quellaktivität</span>
+                        </p>
+                        <p class="CellText">Für jede Quellaktivität wird eine eigene Zeile erstellt, die Einträge in den Spalten <span class="gui_element">Modus</span>, <span class="gui_element">Personengruppe</span> und <span class="gui_element">Zielaktivitäten</span> werden übernommen.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Getrennte Matrizen pro Zielaktivität</span>
+                        </p>
+                        <p class="CellText">Für jede Zielaktivität wird eine eigene Zeile erstellt, die Einträge in den Spalten <span class="gui_element">Modi</span>, <span class="gui_element">Personengruppe und</span> <span class="gui_element">Quellaktivitäten</span> werden übernommen.</p>
+                        <p class="CellText">Tipp</p>
+                        <p class="CellText">Sie können beispielsweise die Tabelle sehr komfortabel aufbauen, indem Sie in der leeren Tabelle auf das Symbol <img src="../Resources/Images_4_all/ICO_insert_any.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997805px;margin-bottom: 1, 002615px;" /> klicken und eine Standardzeile als Ausgangspunkt einfügen. In dieser Standardzeile sind alle Personengruppen, Modi, Quellaktivitäten und Zielaktivitäten vorhanden. Diese Standardzeile können Sie mit den genannten Optionen nach Bedarf zu der benötigten Tabelle ausbauen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_Matrixeditor_Insert_Matrix.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 000063px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Fehlende Matrizen für markierte Ausgabeelemente einfügen</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">Über das Symbol legen Sie für die markierte Zeile eine neue Ausgabematrix an, wenn in der Spalte <span class="gui_element">Ausgabematrix </span>keine Ausgabematrix angegeben ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="11. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="12. &#160;">Führen Sie das Verfahren aus <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahren im Verfahrensablauf ausführen.htm#2_verfahrensablauf_festlegen_40480990_1112524">(siehe „Verfahren im Verfahrensablauf ausführen“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Result">Die kombinierte VISEM-Verteilung und Moduswahl wird für das eingestellte Zeitintervall berechnet. Die Berechnungsergebnisse der Verkehrsverteilung werden in je einer Nachfragematrix pro Personengruppe und Zielaktivität gespeichert  und die der Moduswahl in je einer Nachfragematrix pro Personengruppe und Modus <MadCap:xref class="sieheUeberschrSeite" href="2_3_Nachfragematrizen für die VISEM-Verkehrsverteilung und Moduswahl erzeugen.htm#2_nachfrage_modellieren_1800171850_1684042">(siehe „Nachfragematrizen für die VISEM-Verkehrsverteilung und Moduswahl erzeugen“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Sie können die Nachfragematrizen anzeigen und ändern <MadCap:xref class="sieheUeberschrSeite" href="2_3_Matrizen verwalten, anzeigen und analysieren.htm#2_nachfrage_modellieren_1800171850_1033444">(siehe „Matrizen verwalten, anzeigen und analysieren“ auf Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Wenn Sie die Nachfragematrizen für mehrere Zeitintervalle berechnen möchten, müssen Sie die kombinierte VISEM-Verkehrsverteilung und Moduswahl wiederholt ausführen und verschiedene Nachfragematrizen für das Speichern der Berechnungsergebnisse je Zeitintervall einfügen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_nachfrage_modellieren_1800171850_1641891">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_83056">
+            </a>Parameter der Nutzenfunktion für die VISEM-Verkehrsverteilung oder VISEM-Moduswahl einstellen<a name="30242"></a><a name="11138"></a><a name="30244"></a></h5>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">
+            <MadCap:keyword term="Verkehrsverteilung: VISEM-Modell: Nutzenfunktion" />Stellen Sie sicher, dass das Fenster <span class="gui_element">Parameter kombinierte VISEM-Verkehrsverteilung/Moduswahl</span> geöffnet ist <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1641645">(siehe „Kombinierte VISEM-Verkehrsverteilung und Moduswahl berechnen“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie das gewünschte Register <span class="gui_element">Nutzen Verteilung</span> oder <span class="gui_element">Nutzen Moduswahl</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie für die gewünschte Personengruppe auf die jeweilige Schaltfläche <span class="gui_element">Nutzendefinition</span> <img src="../Resources/Images_4_all/ICO_file_selection.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 011118px;margin-bottom: 1, 011118px;" />.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Nutzendefinition für Personengruppe/Zielaktivität &lt;Schlüssel&gt;</span> oder <span class="gui_element">Nutzendefinition für Personengruppe/Modus &lt;Schlüssel&gt;</span> öffnet sich.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Haben Sie die Option <span class="gui_element">Nutzen der Moduswahl je Zielaktivität definieren</span> ausgewählt, öffnet sich im Register <span class="gui_element">Nutzen Moduswahl</span> das Fenster <span class="gui_element">Nutzendefinition für Personengruppe/Modus/Zielaktivität &lt;Schlüssel&gt;</span>. Sie können dann für jede Zielaktivität eine separate Nutzendefinition festgelegen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="106px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="371px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nutzen U =</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">In dem Fenster definieren Sie die gewünschte Linearkombination von Matrizen, Attributsvektoren und/oder Konstanten <MadCap:xref class="sieheUeberschrSeite" href="2_3_Matrizen und Attributsvektoren im Matrixfenster kombinieren.htm#2_nachfrage_modellieren_1800171850_1472372">(siehe „Matrizen und Attributsvektoren im Matrixfenster kombinieren“ auf Seite&#160;1)</MadCap:xref>.</p>
+                        <p class="CellText">Die Nutzenfunktion der Verkehrsverteilung enthält als ersten Term außerdem die LogSumme der modusspezifischen Nutzen, die Sie mit einem Faktor multiplizieren können.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">Auswahlliste <span class="gui_element">Transformation</span></p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Auswahlliste können Sie eine Funktion wählen, mit der das Gesamtergebnis der Kombination (Ergebnismatrix) transformiert wird <MadCap:xref class="sieheUeberschrSeite" href="2_3_Matrixwerte bearbeiten.htm#2_nachfrage_modellieren_1800171850_1069896">(siehe „Matrixwerte bearbeiten“ auf Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">Eingabefeld Formel
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">In dem Eingabefeld definieren Sie die restlichen Bestandteile der Nutzendefinition als Formel aus <MadCap:variable name="PTV_Manual.Programmname" />-Kenngrößenmatrizen, Bezirksattributen oder Konstanten <MadCap:xref href="2_3_Aus Formel berechnete Matrix erstellen.htm" class="siehe_1">(siehe „Aus Formel berechnete Matrix erstellen“ auf Seite&#160;1</MadCap:xref><MadCap:xref href="2_3_Matrix_mit_Nullwerten_erstellen.htm#Matrizen" class="siehe_2"> und „Matrizen über einen Matrixbezug einfügen“ auf Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_arrow_left_large.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-bottom: 3px;" />
+                            <img src="../Resources/Images_4_all/ICO_arrow_right_large.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-bottom: 3px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Über die Symbole navigieren Sie durch die Liste der Nutzenfunktionen des ausgewählten Registers im Fenster <span class="gui_element">Parameter kombinierte VISEM-Verkehrsverteilung/Moduswahl</span> nach oben oder unten.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:snippetBlock src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        <p class="Result">Die Änderungen werden übernommen.</p>
+        <h5 MadCap:autonum="">Rubberbanding bei der kombinierten VISEM-Verkehrsverteilung oder Moduswahl verwenden</h5>
+        <p class="Text">Sie können im Verfahren das sogenannte Rubberbanding verwenden. Dieser Funktionalität ermöglicht das Aufstellen von Wegeketten, die auf eine zuvor definierte Hauptaktivität ausgerichtet sind.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">
+            <MadCap:keyword term="Verkehrsverteilung: VISEM-Modell: Rubberbanding" />Stellen Sie sicher, dass das Fenster <span class="gui_element">Parameter kombinierte VISEM-Verkehrsverteilung/Moduswahl</span> geöffnet <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1641645">(siehe „Kombinierte VISEM-Verkehrsverteilung und Moduswahl berechnen“ auf Seite&#160;1)</MadCap:xref> und das Register <span class="gui_element">Rubberbanding</span> ausgewählt ist.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Rubberbanding verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, wird für die Aktivitätenkette Rubberbanding verwendet <MadCap:xref href="../1_Nachfragemodell/1_3_Funktionalitaet_Rubberbanding_bei_der_Verkehrsverteilung.htm" class="Grundlagen">(siehe Grundlagen: Kap.  0.0.0.1 , Seite&#160;1)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Rubberbanding-Gewicht</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Geben Sie einen Zahlwert ein, der das Rubberbanding-Gewicht der Aktivität bestimmt. In einer Aktivitätenkette gilt die Aktivität mit dem niedrigsten Zahlenwert als Hauptaktivität, bei Gleichstand die erste davon.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="3. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <h5 MadCap:autonum="">
+            <a name="2_nachfrage_modellieren_1800171850_1642342">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_90416">
+            </a>Kurvenverlauf der Nutzenfunktion anzeigen und ändern</h5>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">
+            <MadCap:keyword term="Verkehrsverteilung: VISEM-Modell: Kurvenverlauf ändern" />Stellen Sie sicher, dass das Fenster <span class="gui_element">Parameter kombinierte VISEM-Verkehrsverteilung/Moduswahl</span> geöffnet und das Register <span class="gui_element">Nutzen Verteilung</span> oder <span class="gui_element">Nutzen Moduswahl</span> ausgewählt ist <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1641645">(siehe „Kombinierte VISEM-Verkehrsverteilung und Moduswahl berechnen“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie für die gewünschte Personengruppe auf die jeweilige Schaltfläche <span class="gui_element">Graph</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Funktionsgraph</span> öffnet sich. Der Kurvenverlauf der Nutzenfunktion wird mit den aktuell eingestellten Parametern a, b und c angezeigt.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Ändern Sie bei Bedarf im Bereich <span class="gui_element">Bereich</span> die Skalierung der X- und Y-Achse.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">X Min</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Minimaler Wert für die X-Achse (negative Werte sind erlaubt)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">X Max</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Maximaler Wert für die X-Achse</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Y Min</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Minimaler Wert für die Y-Achse (negative Werte sind erlaubt)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Y Max</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Maximaler Wert für die Y-Achse</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Setzen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche übernehmen Sie die eingegebenen Werte im Diagramm und aktualisieren den Kurvenverlauf.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Ändern Sie bei Bedarf im Bereich <span class="gui_element">Parameter</span> die Parameter <span class="gui_element">a</span>, <span class="gui_element">b</span> und <span class="gui_element">c</span> der Nutzenfunktion.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Alternativ können Sie die Parameter im Register <span class="gui_element">Nutzen Verteilung</span> oder <span class="gui_element">Nutzen Moduswahl</span> ändern <MadCap:xref class="sieheUeberschrSeite" href="#2_nachfrage_modellieren_1800171850_1641645">(siehe „Kombinierte VISEM-Verkehrsverteilung und Moduswahl berechnen“ auf Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="5. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Setzen</span>.</p>
+        <p class="Stepresult">Die eingegebenen Parameter werden im Diagramm übernommen und der Kurvenverlauf wird aktualisiert.</p>
+        <MadCap:snippetBlock src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+    </body>
+</html>

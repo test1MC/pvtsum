@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="8" MadCap:lastHeight="688" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs;Ride;Kiss;Bike;Kapazitätsabhängige">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1063362">
+            </a>
+            <a name="1_netzmodell_1240632468_97990">
+            </a>Verkehrssysteme</h4>
+        <p class="Text">
+            <MadCap:keyword term="Netzobjekte: Verkehrssysteme" />
+            <MadCap:keyword term="Verkehrssysteme" />Das Verkehrsangebot setzt sich aus verschiedenen (Teil-)Verkehrssystemen zusammen. Strecken, Abbieger und Anbindungen können in Abhängigkeit vom Verkehrssystem („verkehrssystemfein“) attribuiert werden. Insbesondere kann festgelegt werden, ob ein Verkehrssystem eines dieser Netzobjekte befahren darf oder nicht. Beispielsweise können Strecken nur für das Verkehrssystem Pkw, nicht jedoch für das Verkehrssystem Lkw geöffnet werden. Außerdem werden die Widerstandsfunktionen <MadCap:xref class="sieheUeberschrSeite" href="../1_Benutzermodell IV/1_5_Widerstand und CR-Funktionen.htm#1_benutzermodell_iv_2033098965_1026242"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstand und CR-Funktionen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> für die Umlegung verkehrssystemabhängig definiert. </p>
+        <p class="Text">Ein Verkehrssystem hat folgende Eigenschaften:</p>
+        <ul>
+            <LI class="List0">Verkehrssystemtyp (zur Auswahl stehen IV, ÖV, ÖVFuß oder ÖVZusatz)</LI>
+            <LI class="List0">Verkehrsmittel (= Fahrzeugtyp), zum Beispiel Pkw, Straßenbahn, Taxi, Rollstuhl</LI>
+        </ul>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Anzahl der modellierten Verkehrssysteme, Modi oder Nachfragesegmente ist <span class="gui_element">nicht</span> nach oben beschränkt.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die vier Verkehrssystemtypen unterscheiden sich in folgenden Merkmalen.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">IV</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Die Fahrzeiten der IV-Verkehrssysteme sind abhängig von folgenden Attributen:</p>
+        <ul>
+            <LI class="List1">Höchstgeschwindigkeit des Verkehrsmittels, zum Beispiel 100 km/h für LKW</LI>
+            <LI class="List1">zulässige Geschwindigkeit der befahrenen Strecke, zum Beispiel 80 km/h</LI>
+            <LI class="List1">Kapazität der befahrenen Strecke</LI>
+            <LI class="List0">
+                <span class="gui_element">ÖV</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Die Fahrzeiten der Fahrzeuge eines ÖV-Verkehrssystems sowie die Haltestellenaufenthaltszeiten sind durch den Fahrplan vorgegeben.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">ÖVFuß</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Dieser Modus dient zur Beschreibung der Zu- und Abgangswege des ÖV und von Umsteigefußwegen zwischen Haltepunkten einer Haltestelle oder mehreren Haltestellen. Um eine ÖV-Umlegung zu berechnen, muss mindestens ein Verkehrssystem vom Typ <span class="gui_element">ÖVFuß </span>vorhanden sein. Mehrere Verkehrssysteme vom Typ <span class="gui_element">ÖVFuß </span>können definiert werden.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">ÖVZusatz</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">Dieser Typ beschreibt untergeordnete ÖV-Verkehrssysteme ohne Vorgabe eines Fahrplans. Er eignet sich für folgende Anwendungsfälle.</p>
+        <ul>
+            <LI class="List1">Abbildung des nachgeordneten ÖV-Angebotes:</LI>
+        </ul>
+        <p class="List_Text1">In großräumigen Netzen, zum Beispiel in Bahnnetzen, möchte man die Erreichbarkeit der Fernbahnhöfe oft nicht direkt durch eine Anbindung angeben, sondern stattdessen das nachgeordnete ÖV-Angebot grob abbilden. Für eine derartige vereinfachte Abbildung ist es sinnvoll, ein oder mehrere ÖV-Zusatzverkehrssysteme zu definieren. Das nachgeordnete ÖV-Angebot wird dabei nur durch ein Streckennetz mit Fahrzeiten beschrieben. Auf Linienwege und Fahrpläne wird verzichtet.</p>
+        <ul>
+            <LI class="List1">Abbildung unterschiedlicher ÖV-Anbindungen:</LI>
+        </ul>
+        <p class="List_Text1">Ein Bezirk wird über eine oder mehrere ÖV-Haltestellen an das ÖV-Angebot angebunden. Fahrgäste wählen als Starthaltestelle für ihre ÖV-Fahrt oft nicht nur nah gelegene Haltestellen, die sie zu Fuß erreichen können, sondern auch entferntere Haltestellen, die sie mit dem Fahrrad oder dem Pkw erreichen (Park&amp;Ride, Kiss&amp;Ride, Bike&amp;Ride). Um diese Alternativen besser modellieren zu können, ist es bei den Anbindungen möglich, einzelne Verkehrssysteme vom Typ <span class="gui_element">ÖVFuß</span> zu sperren oder unterschiedliche Anbindungszeiten zu definieren. Für die ÖV-Umlegung können dann zwei Modi definiert werden; ein Modus, der nur zu Fuß zur Haltestelle geht, und ein Modus, der auch den Pkw oder das Rad verwenden kann.</p>
+        <table class="TableStyle-TipHint2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="476px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Verkehrssysteme vom Typ <span class="gui_element">ÖVZusatz</span> werden nur bei der verkehrssystemfeinen und fahrplanfeinen Umlegung berücksichtigt. In der taktfeinen Umlegung hingegen werden sie nicht berücksichtigt. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:xref class="Label_Table" href="#1_netzmodell_1240632468_1175891">Tabelle&#160;7</MadCap:xref> gibt einen Überblick über die Eigenschaften der Verkehrssystemtypen:</p>
+        <table class="TableStyle-TableStand_withTitle" style="mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');caption-side: bottom;" cellspacing="0">
+            <caption>
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_netzmodell_1240632468_1175891">
+                    </a>
+                    <a name="1_netzmodell_1240632468_49164">
+                    </a>Eigenschaften der Verkehrssystemtypen</p>
+            </caption>
+            <col width="84px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="319px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="92px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">VSys-Typ</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Erläuterung</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beispiel</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">IV</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <ul>
+                            <LI class="List0Tab">Verkehrssystem des Individualverkehrs</LI>
+                            <LI class="List0Tab">Kapazitätsabhängige Fahrzeiten aus Streckengeschwindigkeit und Abbiegezeiten</LI>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Pkw, </p>
+                        <p class="CellText">Lkw</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">ÖV</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <ul>
+                            <LI class="List0Tab">ÖV-Verkehrssystem mit Fahrplan</LI>
+                            <LI class="List0Tab">Fahrzeiten aus Fahrplan</LI>
+                            <LI class="List0Tab">Verkehrssystem ist nicht für Umsteigewege oder auf einer Anbindung zulässig</LI>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Bus,</p>
+                        <p class="CellText">Tram,</p>
+                        <p class="CellText">Zug</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">ÖVZusatz</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <ul>
+                            <LI class="List0Tab">ÖV-Verkehrssystem ohne Fahrplan oder IV-Zugangsverkehrssystem zum ÖV</LI>
+                            <LI class="List0Tab">Fahrzeiten aus Strecken</LI>
+                            <LI class="List0Tab">Verkehrssystem ist nicht für Umsteigewege innerhalb einer Haltestelle zulässig, nur zwischen Haltestellen</LI>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Bus,</p>
+                        <p class="CellText">Taxi,</p>
+                        <p class="CellText">P&amp;R-Zugang</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">ÖVFuß</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <ul>
+                            <LI class="List0Tab">Verkehrssystem für</LI>
+                            <LI class="List1Tab">Zu-/Abgangswege zu/von Haltestellen oder</LI>
+                            <LI class="List1Tab">Umsteigewege innerhalb einer Haltestelle oder zwischen Haltestellen</LI>
+                            <LI class="List0Tab">Fahrzeiten aus Strecken oder aus der Umsteigegehzeitmatrix einer Haltestelle</LI>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Fußweg,</p>
+                        <p class="CellText">Rolltreppe,</p>
+                        <p class="CellText">Lift</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

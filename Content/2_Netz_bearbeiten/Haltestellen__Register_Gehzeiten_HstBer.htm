@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="569" MadCap:lastWidth="510" MadCap:ignoredWords="Nr;No;xls">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_netz_bearbeiten_23091886_1327101">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_29667">
+            </a>Haltestellen: Register Gehzeiten HstBer<a name="23105"></a></h4>
+        <p class="Text">
+            <MadCap:keyword term="Haltestellen: Matrix ändern" />Im Register <span class="gui_element">Gehzeiten HstBer</span> können Sie für jedes Verkehrssystem vom Typ ÖVFuß die Matrix der erforderlichen Übergangsgehzeiten für Umsteigevorgänge zwischen den Haltestellenbereichen der Haltestelle bearbeiten.</p>
+        <p class="Text">Sie können die neuen Werte mit oder ohne Zeiteinheit (h, min, s) angeben. Wenn Sie keine Einheit angeben, wird Ihre Eingabe als Minuten interpretiert.</p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Verkehrssysteme vom Typ ÖVFuß</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">Über die Auswahlliste können Sie das Verkehrssystem vom Typ ÖVFuß wählen, für das Sie die Matrix der Übergangsgehzeiten ändern möchten.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Ein Leereintrag bedeutet, dass der Übergang zwischen den Haltestellenbereichen gesperrt ist. </p>
+                        <p class="Text">Ist ein Wert eingetragen, ist ein Übergang mit der angegebenen Zeit möglich.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Sind für eine Haltestelle sowohl spezielle Gehzeiten für Verkehrssystemwechsel als auch Gehzeiten zwischen Haltestellenbereichen definiert, verwendet <MadCap:variable name="PTV_Manual.Programmname" /> die speziellen Gehzeiten für Verkehrssystemwechsel in der Umlegung für Umsteigevorgänge zwischen diesen Verkehrssystemen. </p>
+                        <p class="Text">Sind darüber hinaus für eine Haltestelle spezielle Gehzeiten für Fahrzeitprofilwechsel definiert, werden diese in der Umlegung für Umsteigevorgänge zwischen diesen Fahrzeitprofilen an der Haltestelle verwendet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Rot eingefärbt sind in der Gehzeitenmatrix alle Einträge, die größer sind als der kürzeste (indirekte) Weg zwischen den beiden Haltestellenbereichen. Die Quickinfo zeigt die Erklärung sowie die Zeit des kürzesten Wegs.</p>
+                        <p class="Text">Durch verschiedene Optionen können Sie für Umlegungen (taktfein, fahrplanfein) die Kurzwegsuche innerhalb der Haltestelle auf bestimmte ÖV-Fuß-Teilwege einschränken. </p>
+                        <p class="Text">Die Optionen erreichen Sie über Menü <span class="gui_element">Rechnen&#160;&gt; Allgemeine Verfahrenseinstellungen&#160;&gt; ÖV-Einstellungen&#160;&gt; Umlegung</span>&#160;<MadCap:xref class="sieheUeberschrSeite" href="../2_Einstellungen_Benutzermodell_OeV/2_6_Fußwegsuche einschränken.htm#2_einstellungen_benutzermodell_oev_2589728191_1033462"><span style="color: Black;" class="mcFormatColor">(</span><u>Fußwegsuche einschränken</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

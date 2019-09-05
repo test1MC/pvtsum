@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="870" MadCap:lastWidth="1062" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls;max;Program;Processor;R';Factor;Stdabw;Lognormalvert;Method;Lotka;Volterra;BPR;BPR2;b’;Knotensteuerung_CR">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1088187">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_74627">
+            </a>Rechts-vor-links-geregelte Knoten (TModel)<a name="50024"></a></h4>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Für Knoten mit Steuerungstyp <span class="gui_element">rechts-vor-links</span> und <span class="gui_element">Methode für den Widerstand am Knoten</span> Auswahl <span class="gui_element">Knotenwiderstandsberechnung (ICA)</span> wird das Berechnungsmodell <span class="gui_element">Knoten CR-Funktion</span> verwendet <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Rechts-vor-links-geregelte Knoten.htm#1_benutzermodell_iv_2033098965_1166794">Siehe "Rechts-vor-links-geregelte Knoten"</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">
+            <MadCap:keyword term="TModel: Rechts-vor-links-geregelte Knoten" />Stellen Sie sicher, dass die Knoten-Eingabeattribute <span class="gui_element">Kapazität IV </span>und<span class="gui_element"> t0 IV</span> (identisch für alle Abbieger am Knoten) an den Knoten mit Steuerungstyp <span class="gui_element">rechts vor links</span> sinnvoll belegt sind.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Prüfen und ändern Sie bei Bedarf die Parameter auf der Seite <span class="gui_element">Rechts vor Links</span>.</p>
+        <table class="TableStyle_gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="87px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="390px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">CR-Kurve</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Alle CR-Funktionen stehen zur Auswahl <MadCap:xref class="sieheUeberschrSeite" href="2_5_CR-Funktion für Knotentypen auswählen.htm#2_einstellungen_benutzermodell_iv_1682368020_1076393"><span style="color: Black;" class="mcFormatColor">(</span><u>CR-Funktion für Knotentypen auswählen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">maximales tAkt</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText">Ist die Option ausgewählt, geben Sie in die Eingabefelder zwei Werte ein. Aus der Formel ergibt sich der benutzerdefinierte maximale Abbiegezuschlag am Knoten.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Durch die Möglichkeit, alle CR-Funktionen auszuwählen und einen maximalen Abbiegezuschlag <span class="gui_element">tAkt</span> definieren zu können, sind die resultierenden Abbiegezuschläge realistischer. Wird die BPR-Funktion mit den Standardparametern a&#160;=&#160;2, b&#160;=&#160;4 und c&#160;=&#160;1 verwendet, können die Abbiegezuschläge für Nebenströme bei voller Auslastung sehr hoch sein. Bei der Routensuche können sich diese Abbieger fast wie gesperrte Abbieger verhalten, was während der Umlegung zu starken Schwingungen führen kann. Es wird deshalb empfohlen, Parameter zu wählen, die eine geringere Steigung nach Erreichen der Auslastung gewährleisten. Dies kann mit einem Parameter b&#160;&lt;&#160;4 oder besser mit der Funktion BPR2 und einem Parameter b’&#160;=&#160;1 erzielt werden, falls Auslastung &gt;&#160;100%. Außerdem kann es nützlich sein, einen maximalen Zuschlag in folgender Form zu definieren.</p>
+                        <p class="CellText">
+                            <span class="gui_element">tAkt</span> = MIN (<span class="gui_element">tAkt</span> aus Knotensteuerung_CR-Funktion; <span class="gui_element">t0</span> x Faktor; Max tAkt)</p>
+                        <p class="CellText">Beispiel mit Funktion <span class="gui_element">BPR</span></p>
+                        <p class="CellText">t0 = 20 s</p>
+                        <p class="CellText">Auslastung = 250 %</p>
+                        <p class="CellText">a = 2, b = 4</p>
+                        <p class="CellText">tAkt = 1583 s = 26.4 min</p>
+                        <p class="CellText">Beispiel mit Funktion <span class="gui_element">BPR2</span></p>
+                        <p class="CellText">t0 = 20 s</p>
+                        <p class="CellText">Auslastung = 250 %</p>
+                        <p class="CellText">a = 2, b = 4, b’ = 0.8</p>
+                        <p class="CellText">tAkt = 103 s = 1.7 min</p>
+                        <p class="CellText">Eine Auslastung von 250% ist im wirklichen Leben unrealistisch, aber sie kann bei der Umlegung leicht auftreten, wenn die gesamte Belastung auf einen Kurzweg umgelegt wird. Wird für Aktualisierung von tAkt die Option nach Umlegung gewählt, verwendet der Kurzweg-Algorithmus für alle Abbieger die tAkt-Werte, die zu Beginn der Umlegung vorliegen. Die Werte werden nicht initialisiert, sie werden also nicht auf t0 gesetzt.</p>
+                        <p class="CellText">Stellen Sie sicher, dass <span class="gui_element">t0 IV</span> &gt; 0 für alle wichtigen Abbieger.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

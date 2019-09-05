@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb;wahl" MadCap:lastBlockDepth="2" MadCap:lastHeight="434" MadCap:lastWidth="513">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 MadCap:autonum=" 0.1 ">
+            <a name="1_benutzermodell_oev_2318507456_1026741">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_22923">
+            </a>Taktfeine Umlegung</h2>
+        <p class="Text">
+            <MadCap:keyword term="Taktfeine Umlegung" />
+            <MadCap:keyword term="ÖV-Umlegungsverfahren: taktfein" />Beim taktfeinen Verfahren wird jede Linie durch den Linienweg, die Fahrzeiten zwischen den Linienhaltestellen und einen Takt beschrieben. Tatsächlich tragen die einzelnen Fahrzeitprofile diese Informationen und das taktfeine Verfahren arbeitet auf dieser Modellstufe <MadCap:xref class="sieheUeberschrSeite" href="../1_Netzmodell/1_2_Netzobjekte der Linienhierarchie.htm#1_netzmodell_1240632468_1070058"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte der Linienhierarchie</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Nachfolgend wird dennoch zur sprachlichen Vereinfachung durchgehend der Begriff Linie verwendet und damit betont, dass nicht der Fahrplan der einzelnen Fahrplanfahrten maßgeblich ist.</p>
+        <p class="Text">Die Berücksichtigung der Umsteigewartezeit erfolgt im Regelfall pauschal, das heißt die Abfahrten verschiedener Linien sind voneinander unabhängig. Eine Fahrplan-Koordinierung wird standardmäßig nicht berücksichtigt. Durch explizite Modellierung können Sie jedoch ausdrücken, dass Linien auf einem gemeinsam bedienten Abschnitt gleichabständig verkehren beziehungsweise, dass eine feste Umsteigewartezeit zwischen zwei Linien existiert <MadCap:xref class="sieheUeberschrSeite" href="1_6_Anschlusskoordination.htm#1_benutzermodell_oev_2318507456_1088359"><span style="color: Black;" class="mcFormatColor">(</span><u>Anschlusskoordination</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. ÖV-Zusatz-Verkehrssysteme werden bisher ignoriert.</p>
+        <p class="Text">Das taktfeine Umlegungsverfahren umfasst die folgenden drei Arbeitsschritte.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Taktermittlung <MadCap:xref class="sieheUeberschrSeite" href="1_6_Taktermittlung.htm#1_benutzermodell_oev_2318507456_1026830"><span style="color: Black;" class="mcFormatColor">(</span><u>Taktermittlung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+        <p class="Step" MadCap:autonum="2. &#160;">Routensuche &amp; -wahl <MadCap:xref class="siehe_1" href="1_6_Beispiel fuer die taktfeine Umlegung.htm#1_benutzermodell_oev_2318507456_1079109"><span style="color: Black;" class="mcFormatColor">(</span><u>Routensuche</u></MadCap:xref><MadCap:xref class="siehe_2" href="1_6_Beispiel fuer die taktfeine Umlegung.htm#1_benutzermodell_oev_2318507456_1078728"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Routenwahl</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+        <p class="Step" MadCap:autonum="3. &#160;">Routenbelastung</p>
+        <p class="Text">In der Zusammenlegung von Suche und Wahl unterscheidet sich das taktfeine Verfahren von der fahrplanfeinen Umlegung. In diesem zweiten Schritt werden mögliche Wege zwischen zwei Verkehrsbezirken gesucht und gleichzeitig wird eine Aufteilung zwischen diesen bestimmt. Die Wege stellen keine Verbindungen, sondern Routen dar <MadCap:xref class="sieheUeberschrSeite" href="1_6_OeV-Wege.htm#1_benutzermodell_oev_2318507456_1026063"><span style="color: Black;" class="mcFormatColor">(</span><u>ÖV-Wege</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>, da nicht auf der Zeitachse gerechnet wird, sondern lediglich Fahrzeiten und Takte zugrunde liegen. Im dritten Schritt werden die in der Suche ermittelten Routen mit der Nachfrage aus der Nachfragematrix belastet und gespeichert (falls gewünscht).</p>
+    </body>
+</html>

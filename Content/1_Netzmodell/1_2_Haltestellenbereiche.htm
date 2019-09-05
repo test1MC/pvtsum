@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="541" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;Nutzergruppenabhängige">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1087041">
+            </a>
+            <a name="1_netzmodell_1240632468_51228">
+            </a>Haltestellenbereiche</h4>
+        <p class="Text">
+            <MadCap:keyword term="Netzobjekte: Haltestellenbereiche" />
+            <MadCap:keyword term="Haltestellen: Bereiche" />Ein <span class="gui_element" style="font-weight: normal;">Haltestellenbereich</span> unterteilt eine Haltestelle in Bereiche. Ein Bereich kann zum Beispiel einen Bus- oder Bahnsteig, eine Kreuzung mit Haltepunkten, einen P&amp;R-Parkplatz oder eine Bahnhofshalle darstellen. Ein Haltestellenbereich ist genau einer Haltestelle zugeordnet und kann mehrere Haltepunkte umfassen.</p>
+        <p class="Text">Haltestellenbereiche dienen zum einen zur Festlegung von Übergangsgehzeiten zwischen den Haltestellenbereichen einer Haltestelle. Sie fassen solche Haltepunkte zusammen, die sich bezüglich der Übergangsgehzeiten zu anderen Haltepunkten nicht unterscheiden. Wenn beispielsweise an einem Bahnhof die Haltepunkte der einzelnen Bahnsteige einerseits und die Bushaltepunkte auf dem Vorplatz andererseits zu je einem Haltestellenbereich zusammengefasst werden, lassen sich kompakt getrennte Mindestübergangszeiten Schiene – Schiene, Schiene – Bus und Bus – Bus angeben. Die Matrix der Übergangsgehzeiten (Von-Haltestellenbereich – Nach-Haltestellenbereich) kann nach dem auf dem Umsteigeweg benutzten ÖVFuß-Verkehrssystem (zum Beispiel Treppe, Rolltreppe, Aufzug, ebenerdig) differenziert werden. Die Übergangszeit für ein Nachfragesegment bestimmt sich stets als Minimum über alle zugelassenen ÖVFuß-Verkehrssysteme. Nutzergruppenabhängige Übergangszeiten, zum Beispiel für mobilitätsbehinderte Personen, lassen sich dann abbilden, indem für bestimmte Nachfragesegmente nur ausgewählte ÖVFuß-Verkehrssysteme (zum Beispiel nur ebenerdig und Aufzug) zugelassen werden. Haltestellenbereiche können auch Zwischengeschosse innerhalb größerer Haltestellenanlagen repräsentieren. In diesem Fall existieren zwar Übergangszeiten zu anderen Haltestellenbereichen, der Haltestellenbereich enthält aber selbst keine Haltepunkte.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Festlegung der Übergangsgehzeiten (Übergangsgehzeiten-Matrix) zwischen den Haltestellenbereichen erfolgt an der Haltestelle.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die zweite Funktion der Haltestellenbereiche ist die Anbindung von Haltestellen an Bezirke und das Fußwegenetz außerhalb der Haltestelle. Jedem Haltestellenbereich kann optional ein Netzknoten zugeordnet werden, der mit den gleichen Übergangszeiten erreicht wird wie jeder Haltepunkt des Bereichs. Die Zeit innerhalb eines Haltestellenbereichs (Diagonale der Übergangsmatrix) wird nicht beim Übergang zum Zugangsknoten verwendet. ÖV-Wege können über diesen Netzknoten von einer ÖV-Linie auf Strecken mit ÖVFuß- oder ÖVZusatz-Verkehrssysteme sowie auf Anbindungen an Bezirke übergehen und umgekehrt.</p>
+    </body>
+</html>

@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="681" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Std;L1;ServiceKm;SitzplatzKm;Anz;H2;H3;H4">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStd_TitnoHead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1102420">
+            </a>
+            <a name="1_netzmodell_1240632468_48906">
+            </a>Kopplung von Fahrzeitprofilen</h4>
+        <p class="Text">
+            <MadCap:keyword term="Fahrzeitprofile: koppeln" />
+            <MadCap:keyword term="Kopplung von Fahrzeitprofilen" />Beim Flügeln und Koppeln werden die Wagen von zwei oder mehr Zügen auf gemeinsamen Abschnitten gekoppelt. Die Abbildung zeigt eine Reihe von Beispielen für das Koppeln von zwei und drei Linienrouten. Um zwei Linienrouten auf einem Abschnitt zu koppeln, müssen die Haltepunkte der Fahrzeitprofile übereinstimmen. Dagegen müssen Fahrzeiten und Haltezeiten auf dem Koppelabschnitt nicht unbedingt identisch sein, gegebenenfalls werden sie angepasst.</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="248px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Example_Coupling1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000067px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Example_Coupling2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997767px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Example_Coupling3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997805px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Example_Coupling4.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">Beispiele für Flügeln und Koppeln von zwei und drei Linienrouten</p>
+        <p class="Text">Die Zahl der Fahrplanfahrten und ihre Abfahrtszeiten an den gekoppelten Haltestellen müssen nicht unbedingt übereinstimmen, fehlende Fahrten werden generiert.</p>
+        <p class="Text">Werden in <MadCap:variable name="PTV_Manual.Programmname" /> Linienrouten gekoppelt, bilden sie eine Koppelgruppe. <MadCap:variable name="PTV_Manual.Programmname" /> passt die Zeiten und den Fahrplan der betroffenen Linienrouten an. Bei Änderungen des Fahrzeitprofils einer gekoppelten Linienroute werden diese Änderungen automatisch für die anderen Linienrouten der Koppelgruppe übernommen.</p>
+        <h5>Änderung der Fahrtenmenge</h5>
+        <p class="Text">In folgenden Fällen kann es zu Änderungen der Fahrtenmenge auf einem Koppelabschnitt kommen.</p>
+        <ul>
+            <LI class="List0">Einfügen oder Löschen von Fahrten <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Grafischen_und_tabellarischen_Fahrplan_verwenden.htm#2_netz_bearbeiten_23091886_1141534"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Grafischen und tabellarischen Fahrplan verwenden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">Einfügen oder Löschen von Fahrtabschnitten <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Grafischen_und_tabellarischen_Fahrplan_verwenden.htm#2_netz_bearbeiten_23091886_1141534"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Grafischen und tabellarischen Fahrplan verwenden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+            <LI class="List0">Verändern der Ausdehnung von Fahrten <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Grafischen_und_tabellarischen_Fahrplan_verwenden.htm#2_netz_bearbeiten_23091886_1141534"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Grafischen und tabellarischen Fahrplan verwenden</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></LI>
+        </ul>
+        <p class="Text">Diese Änderungen müssen sich auf die mitgekoppelten Fahrzeitprofile auswirken, damit das Fahrtenangebot auf jedem Koppelabschnitt wieder synchronisiert wird.</p>
+        <h5>Änderung der zeitlichen Lage von Fahrten</h5>
+        <p class="Text">In folgenden Fällen kann es zu Änderungen der zeitlichen Lage von Fahrten kommen. Diese Änderungen müssen sich auf die mitgekoppelten Fahrten auswirken, damit die gemeinsame Abfahrt am Beginn eines Koppelabschnitts wieder synchronisiert wird.</p>
+        <ul>
+            <LI class="List0">Fahrzeit-/Haltezeit-Änderung am Fahrzeitprofil</LI>
+        </ul>
+        <p class="List_Text0">Hiervon sind alle Fahrten betroffen, bei denen der Bereich Startelement --&gt; Referenzpunkt oder Referenzpunkt --&gt; Startelement in den geänderten Abschnitt einschließt.</p>
+        <ul>
+            <LI class="List0">Ändern einer Abfahrtszeit einer oder mehrerer Fahrten durch <span class="gui_element">Fahrplanfahrt bearbeiten</span> im tabellarischen Fahrplan, durch <span class="gui_element">Mehrfach bearbeiten</span>im Netzeditor oder durch Verschieben im tabellarischen Fahrplan</LI>
+        </ul>
+        <h5>Kopplungen bei der Berechnung von ÖV-betrieblichen Kennzahlen</h5>
+        <p class="Text">Kopplungen wirken sich in einigen Fällen auf die Berechnung von ÖV-betrieblichen Kennzahlen aus <MadCap:xref class="sieheUeberschrSeite" href="../1_Betreibermodell OeV/1_7_Einfluss von Kopplungen.htm#1_betreibermodell_oev_1878159914_1167260"><span style="color: Black;" class="mcFormatColor">(</span><u>Einfluss von Kopplungen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Auf welche Kennzahlen genau sie sich auswirken können Sie der Datei <span class="path">Kennzahlenverfügbarkeit.xls</span> in Ihrer <MadCap:variable name="PTV_Manual.Programmname" />-Installation entnehmen. Die Wirkung von Kopplungen soll an einigen Beispielen verdeutlicht werden.</p>
+        <ul>
+            <LI class="List0">Servicezeit der Linienrouten</LI>
+        </ul>
+        <p class="List_Text0">Wie bei den Kilometern, wird die Servicezeit nur einmal gerechnet und gleichmäßig aufgeteilt.</p>
+        <ul>
+            <LI class="List0">Infrastrukturkosten der Linienrouten für Strecke und Haltepunkte</LI>
+        </ul>
+        <p class="List_Text0">Streckenkosten (zum Beispiel Trassenpreise) und Haltepunktkosten fallen nur einmal an. Diese Kosten werden gleichmäßig auf die gekoppelten Linienrouten aufgeteilt.</p>
+        <ul>
+            <LI class="List0Tab">Anzahl Linienroutenfahrten und Fahrzeugkilometer der Strecke fallen auch nur einmal an.</LI>
+        </ul>
+        <p class="Text">Servicekilometer, Servicezeit und Infrastrukturkosten beeinflussen die Betriebskosten einer Linienroute, so dass sich für gekoppelte Linienrouten normalerweise niedrigere Kosten ergeben.</p>
+        <p class="Text">Auf die Umlaufbildung und auf die Umlegung hat das Koppeln keinen Einfluss.</p>
+        <p class="Text">Bei der Umlegung wird somit davon ausgegangen, dass der Sitzplatzwechsel beim Umsteigen innerhalb gekoppelter Linienrouten wie ein Umsteigevorgang behandelt wird.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Example_Coupling.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000044px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">Rechenbeispiel für die Berechnung von Kennzahlen bei Kopplungen</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="248px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="248px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Anzahl Fahrten</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">10 Fahrten</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Leerzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">10 min/Fahrt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Kilometer-Kosten</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">1 Euro/km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Stunden-Kosten</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">60 Euro/Std</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Trassenpreis</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">1 Euro/km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body2">
+                        <p class="CellText">Sitzplätze</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">100 Plätze/Fahrzeugkombination</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Eingangsdaten für das Rechenbeispiel</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="99px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: bold;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&#160;</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">nicht gekoppelt</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">nicht gekoppelt</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">gekoppelt</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">gekoppelt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Linienroute</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">L1-1</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">L1-2</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_mid">L1-1</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_mid">L1-2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">ServiceKm</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_right">1&#160;300 km</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_right">1&#160;300 km</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_right">1&#160;050 km</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_right">1&#160;050 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">SitzplatzKm</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">13&#160;000 km</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">13&#160;000 km</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">13&#160;000 km</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_right">13&#160;000 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Servicezeit</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_right">900 min</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_right">1&#160;000 min</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_right">750 min</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_right">850 min</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Einsatzzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">1&#160;000 min</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">1&#160;100 min</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">850 min</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_right">950 min</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Kosten</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_right">1&#160;300 Euro</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_right">1&#160;300 Euro</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_right">1&#160;050 Euro</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_right">1&#160;050 Euro</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Kosten</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">1&#160;000 Euro</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">1&#160;100 Euro</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">850 Euro</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_right">950 Euro</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Trassen-Kosten</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_right">1&#160;300 Euro</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_right">1&#160;300 Euro</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_right">1&#160;050 Euro</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_right">1&#160;050 Euro</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Gesamtkosten</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">3&#160;500 Euro</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">3&#160;600 Euro</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">2&#160;950 Euro</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_right">3&#160;050 Euro</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 3pt;padding-right: 3pt;padding-top: 3pt;padding-bottom: 3pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">Anz Servicefahrten</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText_right">10</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText_right">10</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText_right">10</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText_right" style="font-family: 'Times New Roman';font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">10</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Berechnung von Kennzahlen für die Linienroute</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="99px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="99px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Strecke</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">H2-H3</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">H3-H4</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText_mid">H2-H3</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText_mid">H3-H4</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">ServiceKm</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">1&#160;000 km</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">400 km</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText_right">500 km</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText_right">400 km</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 3pt;padding-right: 3pt;padding-top: 3pt;padding-bottom: 3pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">Anz Servicefahrten</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText_right">20</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText_right">10</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText_right">10</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText_right" style="font-family: 'Times New Roman';font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">10</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">Berechnung von Kennzahlen für die Strecken</p>
+            </caption>
+        </table>
+    </body>
+</html>

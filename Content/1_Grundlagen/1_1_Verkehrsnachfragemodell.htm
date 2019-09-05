@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="R2;bzw;ggf;usw;DiffNet;Be;v0IV;DIFFNET;Netz1;Netz2;steuerung;horizonte;of;Bevölkerungs;Erzeugungs;erkehr;tädten;rzeugungs;odell;24h;Wohn" MadCap:lastBlockDepth="4" MadCap:lastHeight="2535" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_grundlagen_des_programms_3110159993_1026003">
+            </a>
+            <a name="1_grundlagen_des_programms_3110159993_50373">
+            </a>Verkehrsnachfragemodell</h2>
+        <p class="Text">
+            <MadCap:keyword term="Nachfragemodelle" />
+            <MadCap:keyword term="Verkehrsnachfrage: Modell" />
+            <MadCap:keyword term="Verkehrsnachfragemodell" />
+            <MadCap:keyword term="Verkehrsnachfrage" />Verkehrsnachfrage entsteht, wenn eine Folge von Aktivitäten (Wohnen&#160;– Arbeiten&#160;– Einkaufen&#160;– Wohnen) nicht am selben Ort ausgeübt werden kann und daher ein Ortswechsel notwendig ist. </p>
+        <p class="Text">
+            <MadCap:keyword term="Matrizen" />
+            <MadCap:keyword term="Nachfragematrizen" />
+            <MadCap:keyword term="Verkehrsnachfragematrizen: siehe Nachfragematrizen" />Die Verkehrsnachfrage wird in einer Matrix gespeichert, in deren Spalten und Zeilen jeweils alle im Verkehrsmodell enthaltenen Bezirke stehen.</p>
+        <ul>
+            <LI class="List0">Ein Element einer Matrix des IV hat die Einheit Kfz-Fahrten, ein Element einer Matrix des ÖV hat die Einheit Personenfahrten (nicht mit der Fahrplanfahrt einer ÖV-Linie verwechseln!). Es enthält die Zahl der Fahrtwünsche von einem Verkehrsbezirk i zu einem Verkehrsbezirk j.</LI>
+            <LI class="List0">Eine Nachfragematrix bezieht sich auf ein Zeitintervall (Untersuchungszeitraum) und enthält daher nur die Fahrten, die innerhalb des Zeitintervalls durchgeführt werden.</LI>
+            <LI class="List0">Die Fahrten einer Nachfragematrix können sich auf das Gesamtverkehrssystem, auf Teilverkehrssysteme (zum Beispiel Fuß, Rad, ÖV, motorisierter IV), auf Personengruppen (zum Beispiel Erwerbstätige, Schüler) oder auf Fahrtzwecke (zum Beispiel Beruf, Einkaufen, Freizeit) beziehen.</LI>
+            <LI class="List0">Eine Nachfragematrix wird genau einem Nachfragesegment zugeordnet. Ein Nachfragesegment beschreibt dabei eine Gruppe von Verkehrsteilnehmern mit homogenem Verkehrsverhalten.</LI>
+        </ul>
+        <p class="Text">
+            <MadCap:keyword term="Verkehrsnachfrage" />Bei der <span class="gui_element">Verkehrsnachfrage</span> kann zwischen einer erhobenen und einer berechneten Nachfrage sowie zwischen der heutigen und einer zukünftigen Nachfrage unterschieden werden.</p>
+        <p class="Text">Die <span class="gui_element">erhobene</span> Verkehrsnachfrage beschreibt die Fahrtenzahl und Fahrtenverteilung innerhalb eines begrenzten Zeitraumes bei einem vorhandenen Verkehrsangebot. Sie stellt einen Schnappschuss der aktuellen Verkehrssituation dar und kann unter praktischen Bedingungen kein zweites Mal exakt reproduziert werden. Eine exakte Erhebung der vorhandenen <span class="gui_element">heutigen Verkehrsnachfrage</span> in einem Verkehrsraum ist in der Praxis nicht verwirklichbar, da eine gleichzeitige Befragung aller Verkehrsteilnehmer durchgeführt werden müsste. Bei der Bestimmung der Verkehrsnachfrage für die Zwecke der Verkehrsplanung wird daher meist eine repräsentative Stichprobe von Verkehrsteilnehmern befragt. Aus dieser Befragung wird dann eine Matrix der heute vorhandenen Verkehrsnachfrage ermittelt. Sie stellt die Verkehrsnachfrage für die Verkehrsbedingungen des vorhandenen Zustands dar.</p>
+        <p class="Text">Die <span class="gui_element">berechnete Verkehrsnachfrage</span> enthält Annahmen über die Fahrtenzahl und Fahrtenverteilung. Zur Berechnung der Verkehrsnachfrage werden Verkehrsnachfragemodelle eingesetzt, die zum Beispiel die drei Stufen Verkehrserzeugung, Verkehrsverteilung und Verkehrsmittelwahl unterscheiden. Die berechnete Verkehrsnachfrage kann in Abhängigkeit von verwendeten Eingangsdaten verschieden benannt werden.</p>
+        <ul>
+            <LI class="List0">Eine berechnete Verkehrsnachfrage wird als <span class="gui_element">heutige Verkehrsnachfrage</span> bezeichnet, wenn die Grundlage der Nachfrageberechnung die heutige Siedlungsstruktur, die heutige Bevölkerungs- und Wirtschaftsstruktur und das heutige Verkehrsangebot ist.</LI>
+            <LI class="List0">Der <span class="gui_element">prognostizierten Verkehrsnachfrage</span> liegen Prognosedaten über die zukünftige Siedlungsstruktur, die zukünftige Bevölkerungs- und Wirtschaftsstruktur und das zukünftige Verkehrsangebot zugrunde.</LI>
+        </ul>
+        <p class="Text">Einen Überblick über die Verfahren zur Ermittlung der Verkehrsnachfrage findet sich bei Leutzbach et al. (1988).</p>
+        <p class="Text">
+            <MadCap:keyword term="Verkehrserzeugung" />
+            <MadCap:keyword term="Verkehrsverteilung" />
+            <MadCap:keyword term="Moduswahl" />Innerhalb von <MadCap:variable name="PTV_Manual.Programmname" /> können Sie alle vier Stufen des klassischen Verkehrsmodells (4-Stufen-Modell) berechnen, neben der Verkehrsumlegung (Wahl und Belastung der Route um vom Quellbezirk zum Zielbezirk zu gelangen) also auch die drei Schritte <span class="gui_element">Verkehrserzeugung</span>, <span class="gui_element">Verkehrsverteilung</span> und <span class="gui_element">Moduswahl</span> (Verkehrsmittelwahl).</p>
+        <p class="Text">Im ersten Schritt des klassischen Modells, der Verkehrserzeugung, wird die Erzeugung und Anziehung (Quell- und Zielverkehr) jedes Bezirks anhand soziodemografischer Daten (wie Einwohnerzahlen und Arbeitsplätze) festgelegt. Diese Erzeugungs- und Anziehungswerte definieren die Summen der Gesamtverkehrsmatrix, die im zweiten Schritt, der Verkehrsverteilung, mittels relevanter Kenngrößen (zum Beispiel Reisezeiten, Fahrpreise) bestimmt wird. Die Gesamtnachfragematrix wird im dritten Schritt anhand modusspezifischer Kenngrößen auf die einzelnen Verkehrsmodi (zum Beispiel IV, ÖV) aufgeteilt. Die resultierenden modusabhängigen Nachfragematrizen können mit Hilfe der IV- und ÖV-Umlegungsverfahren in einem vierten Schritt auf das Angebot (<MadCap:variable name="PTV_Manual.Programmname" />-Netz) umgelegt werden, um Streckenbelastungen und neue Kenngrößen zu erhalten. Diese Kenngrößen können wiederum als Input der Verkehrsverteilung oder Moduswahl einer neuen Nachfrageberechnung benutzt werden. <MadCap:keyword term="Bedingter Rücksprung (Verfahren)" />Durch die Operation <span class="gui_element">Bedingter Rücksprung</span> können die Verfahren iterativ so lange durchgeführt werden, bis ein auf Streckenbelastungen oder Matrixwerten festgelegtes Konvergenzkriterium erfüllt ist.</p>
+        <p class="Text">
+            <MadCap:variable name="PTV_Manual.Programmname" /> enthält drei alternative Berechnungsmodelle für die Nachfragemodellierung.</p>
+        <ul>
+            <LI class="List0">
+                <MadCap:keyword term="Standard-Vier-Stufen-Modell" />
+                <MadCap:keyword term="Nachfragemodelle: Standard-Vier-Stufen-Modell" />Das Standard-4-Stufen-Modell orientiert sich an der in Nordamerika für aggregierte Nachfragemodelle üblichen Vorgehensweise <MadCap:xref class="sieheUeberschrSeite" href="../1_Nachfragemodell/1_3_Standard-Vier-Stufen-Modell.htm#1_nachfragemodell_2215163117_1154355"><span style="color: Black;" class="mcFormatColor">(</span><u>Standard-Vier-Stufen-Modell</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">
+                <MadCap:keyword term="EVA-Modell Personenverkehr" />
+                <MadCap:keyword term="Nachfragemodelle: EVA-Modell Personenverkehr" />Das EVA-Modell ist ebenfalls ein aggregiertes Nachfragemodell für den Personenverkehr. Es unterscheidet sich vom Standard-4-Stufen-Modell durch simultane Verkehrsverteilung und Moduswahl sowie durch eine besondere Methode zum Ausgleich von Unterschieden zwischen Quell- und Zielverkehren <MadCap:xref class="sieheUeberschrSeite" href="../1_Nachfragemodell/1_3_EVA-Modell Personenverkehr.htm#1_nachfragemodell_2215163117_1153924"><span style="color: Black;" class="mcFormatColor">(</span><u>EVA-Modell Personenverkehr</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">
+                <MadCap:keyword term="VISEM-Modell" />
+                <MadCap:keyword term="Nachfragemodelle: VISEM-Modell" />Das VISEM-Modell (<span class="gui_element">V</span>erkehr <span class="gui_element">i</span>n <span class="gui_element">S</span>tädten – <span class="gui_element">E</span>rzeugungs-<span class="gui_element">M</span>odell) berücksichtigt bei der Berechnung von Nachfragematrizen die Aktivitäten<span class="gui_element" style="font-weight: normal;">ketten</span>, die verhaltenshomogene Benutzergruppen (zum Beispiel Erwerbstätige mit oder ohne PKW, Schüler, Studenten) im Laufe eines Tages ausüben <MadCap:xref class="sieheUeberschrSeite" href="../1_Nachfragemodell/1_3_Aktivitätenketten-basiertes Modell (VISEM).htm#1_nachfragemodell_2215163117_1087738"><span style="color: Black;" class="mcFormatColor">(</span><u>Aktivitätenketten-basiertes Modell (VISEM)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+        </ul>
+        <p class="Text">
+            <MadCap:keyword term="Matrixeditor" />Der in <MadCap:variable name="PTV_Manual.Programmname" /> integrierte Matrixeditor ermöglicht die Aufbereitung von vorhandenen Matrixdaten und Berechnungen nach dem Gravitationsansatz.</p>
+        <p class="Text">
+            <MadCap:keyword term="Nachfrageobjekte" />
+            <MadCap:keyword term="Personengruppen" />
+            <MadCap:keyword term="Aktivitäten" />
+            <MadCap:keyword term="Aktivitätenpaare" />Die Berechnungsmodelle stützen sich auf spezielle <MadCap:variable name="PTV_Manual.Programmname" />-Nachfrageobjekte, welche die Eigenschaften der Fahrtzwecke und der Verkehrsteilnehmer beschreiben. <span class="gui_element">Personengruppen</span> fassen Verkehrsteilnehmer in Gruppen mit vergleichbarem Mobilitätsverhalten zusammen. Sie können etwa über den Erwerbstätigkeitsstatus (Erwerbstätige, Schüler, Rentner) und (optional) den PKW-Besitz (mit / ohne PKW) abgegrenzt werden. <span class="gui_element">Aktivitäten</span> entsprechen den nicht verkehrsbezogenen Tätigkeiten oder Aufenthaltsorten einer Person im Laufe eines Tages (Arbeit, Schule, Wohnung). <span class="gui_element">Aktivitätenpaare</span> sind Übergänge zwischen zwei Aktivitäten und können zu einer Ortsveränderung führen (Wohnung – Arbeit, Wohnung – Schule). Dann bezeichnet man sie auch als Fahrtzweck.</p>
+        <p class="Text">
+            <MadCap:keyword term="Nachfrageschichten" />Eine <span class="gui_element">Nachfrageschicht</span> fasst eine oder mehrere <span class="gui_element">Personengruppen</span> mit einer <span class="gui_element">Aktivität</span> zusammen. Fast alle Berechnungen in den ersten drei Modellstufen werden getrennt für jede Nachfrageschicht ausgeführt und ihre Ergebnisse werden für Veranschaulichung und Überprüfung getrennt abgespeichert. Die resultierenden Nachfragematrizen haben stets die Einheit [Personen].</p>
+        <p class="Text">Durch Aggregation von Nachfrageschichten auf <span class="gui_element">Nachfragesegmente</span> werden gemeinsam umzulegende Teile der Nachfrage vor der vierten Stufe, der Umlegung, zusammengefasst. Hierbei werden Nachfragematrizen für den IV auf die Einheit [Fahrzeuge] transformiert, indem die Nachfrageschicht-Matrizen durch den Besetzungsgrad des jeweiligen Verkehrssystems dividiert werden.</p>
+        <h5>
+            <a name="1_grundlagen_des_programms_3110159993_1026028">
+            </a>
+            <a name="1_grundlagen_des_programms_3110159993_28869">
+            </a>Zeitliche Verteilung des Fahrgastaufkommens</h5>
+        <p class="Text">Die Fahrten von einem Verkehrsbezirk zu einem Verkehrsbezirk finden in der Realität zu unterschiedlichen Zeiten statt. Die zeitliche Verteilung der Fahrtwünsche innerhalb des Untersuchungszeitraums wird bei der Modellierung in <MadCap:variable name="PTV_Manual.Programmname" /> durch die Angabe eines Startzeitpunkts und einer Ganglinie beschrieben. Die Ganglinie wird bei den ÖV-Umlegungen und bei der dynamischen IV-Umlegung berücksichtigt. Bei statischen IV-Umlegungen wird die Ganglinie ignoriert, bei diesen Verfahren ist also keine zeitliche Verteilung der Fahrtwünsche innerhalb des Untersuchungszeitraums einstellbar.</p>
+        <p class="Text">Der Startzeitpunkt legt fest, zu welchem Zeitpunkt und – bei Verwendung eines Wochen- oder Jahreskalenders – an welchem Tag der Zeitraum beginnt, auf den sich die Nachfrage in der Matrix bezieht. Das Ende des Zeitraums ergibt sich aus der Länge der zugeordneten Ganglinie.</p>
+        <p class="Text">
+            <MadCap:keyword term="Nachfragemodelle: Ganglinien" />
+            <MadCap:keyword term="Ganglinien: prozentual" />
+            <MadCap:keyword term="Ganglinien: Matrixnummern" />Ganglinien können auf zwei verschiedene Weisen definiert werden.</p>
+        <ul>
+            <LI class="List0">prozentuale Ganglinie zu <span class="gui_element">einer</span> Nachfragematrix</LI>
+            <LI class="List0">Ganglinie aus <span class="gui_element">mehreren</span> Nachfragematrizen</LI>
+        </ul>
+        <p class="Text">Eine prozentuale Ganglinie legt für verschiedene Zeitintervalle des Untersuchungszeitraums den Prozentanteil der Fahrtwünsche mit Wunschabfahrtszeit in dem jeweiligen Zeitintervall fest. Ganglinien können sich bei Verwendung eines Wochen- oder Jahreskalenders auch über mehr als 24h erstrecken. Als Standard wird eine Gleichverteilung der Verkehrsnachfrage über den Untersuchungszeitraum angenommen. Anstelle dieser Voreinstellung kann eine benutzerdefinierte Ganglinie für die ganze Matrix festgelegt werden. Diese benutzerdefinierte Ganglinie kann noch einmal für ausgewählte Paare von Quell-/Zielbezirkstyp durch spezielle Ganglinien überschrieben werden. Dadurch ist es zum Beispiel möglich, bei Verkehrsbezirken mit bekannten Strukturmerkmalen (zum Beispiel reinen Wohn- oder reinen Gewerbegebieten) abweichende Ganglinien vorzugeben, die den tageszeitlich unterschiedlichen Richtungsüberhang (<MadCap:xref class="Label_Image" href="#1_grundlagen_des_programms_3110159993_1026041">Abbildung&#160;2</MadCap:xref>) bei Fahrten zwischen Wohnung und Arbeitsplatz widerspiegeln.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Example_Time_Series.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_grundlagen_des_programms_3110159993_1026041">
+            </a>
+            <a name="1_grundlagen_des_programms_3110159993_91302">
+            </a>Beispiel für eine Ganglinie der Verkehrsnachfrage mit vier Halbstundenintervallen</p>
+        <p class="Text">Eine Ganglinie von Nachfragematrizen ordnet jedem Zeitintervall eine eigene Matrix zu, die die Nachfrage mit Wunschabfahrtszeit im betreffenden Zeitintervall enthält. Sie bietet sich an, wenn zum Beispiel aus einem Verkehrserzeugungsmodell bereits stundenfeine Matrizen vorliegen. Im Gegensatz zur zeitlichen Ganglinie ist hier der zeitliche Nachfrageverlauf für jedes Matrixelement völlig frei wählbar, jedoch sind der Dateneingabeaufwand und der Speicherplatzbedarf entsprechend höher, da mehrere vollständige Matrizen vorgehalten werden. </p>
+    </body>
+</html>

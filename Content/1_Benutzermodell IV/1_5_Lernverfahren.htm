@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;Wardrop’schen" MadCap:lastBlockDepth="2" MadCap:lastHeight="544" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_iv_2033098965_1602281">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_21859">
+            </a>Lernverfahren</h2>
+        <p class="Text">
+            <MadCap:keyword term="Lernverfahren" />
+            <MadCap:keyword term="IV-Umlegungsverfahren: Lernverfahren" />Das <span class="gui_element">Lernverfahren</span> wurde von Professor Lohse entwickelt und ist in Schnabel (1997) beschrieben. Dieses Verfahren bildet den Lernprozess der Verkehrsteilnehmer bei der Benutzung des Netzes ab. Ausgehend von einer Alles-oder-Nichts-Umlegung berücksichtigen die Fahrer die Informationen der letzten Fahrt für die neue Routensuche. In einem iterativen Prozess werden mehrfach kürzeste Wege gesucht, wobei der Widerstand für die Routensuche aus dem Widerstand bei der aktuellen Belastung und aus dem zuletzt geschätzten Widerstand abgeleitet wird. In jedem Teilschritt wird das gesamte Verkehrsaufkommen auf die bisher gefundenen kürzesten Wege umgelegt.</p>
+        <p class="Text">Beim ersten Iterationsschritt werden nur die Netzwiderstände im unbelasteten Zustand berücksichtigt (wie 100&#160;% Bestwegumlegung). </p>
+        <p class="Text">Die Berechnung des Widerstandes in jedem weiteren Iterationsschritt erfolgt mit den bisher berechneten mittleren Widerständen und den Widerständen aufgrund der aktueller Belastung, das heißt jeder Iterationsschritt <span class="formula">n </span>setzt auf die mit <span class="formula">n-1 </span>ermittelten Widerstände auf. </p>
+        <p class="Text">Die Umlegung der Nachfragematrix auf das Netz entspricht der Häufigkeit, wie oft der Weg gefunden wurde (von <MadCap:variable name="PTV_Manual.Programmname" /> gemerkt). </p>
+        <p class="Text">Das Verfahren bricht erst dann ab, wenn die der Fahrtwegewahl zugrunde gelegten Schätzzeiten und die sich aus diesen Fahrtwegen ergebenden Fahrtzeiten im belasteten Netz mit hinreichender Genauigkeit übereinstimmen; dieser stabile Zustand im Verkehrsnetz entspricht dem Wegewahlverhalten der Verkehrsteilnehmer mit großer Wahrscheinlichkeit.</p>
+        <p class="Text">Die Schätzung der Fahrtzeit je Strecke für den folgenden Iterationsschritt <span class="formula">n+1 </span>addiert die für <span class="formula">n</span> geschätzte Fahrtzeit zur Differenz zwischen der (anhand CR-Funktionen) bei n berechneten tatsächlichen Fahrtzeit und der für n geschätzten Fahrtzeit. Diese Differenz wird mit einem Wert DELTA (0,15...0,5) multipliziert, was zu einer gedämpften Schwingung führt.</p>
+        <p class="Text">Die Abbruchbedingung ergibt sich aus der Forderung nach hinreichender Übereinstimmung der geschätzten Fahrtzeiten für die Iterationsschritte <span class="formula">n</span> und <span class="formula">n-1</span> sowie der im Iterationsschritt <span class="formula">n</span> ermittelten tatsächlichen Fahrtzeit, die durch die variable Genauigkeitsschranke EPSILON definiert wird.</p>
+    </body>
+</html>

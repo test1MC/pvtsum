@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="659" MadCap:lastWidth="510" MadCap:ignoredWords="Nr;vStd;usw">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_netz_bearbeiten_23091886_1133718">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_63927">
+            </a>Attribute und Optionen von Verkehrssystemen</h4>
+        <table class="TableStyle-gui_elements1" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="91px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="405px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Code</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <MadCap:keyword term="Verkehrssysteme (VSys): Attribute und Optionen" />
+                            <MadCap:keyword term="Attribute: Verkehrssysteme (VSys)" />Kurzbezeichnung des Verkehrssystems</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Name</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Langbezeichnung des Verkehrssystems</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Typ</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Typ des Verkehrssystems (IV, ÖV, ÖVFuß oder ÖVZusatz)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Pkw-Einheiten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Nur für Verkehrssysteme des Typs IV</p>
+                        <p class="CellText">Anzahl Pkw-Einheiten je Fahrzeug des IV-Verkehrssystems. Der Wert gibt die Belastungswirkung eines Fahrzeugs des IV-Verkehrssystems an.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Netz-Attribute übernehmen von</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Wenn Sie diese Option auswählen, können Sie ein Bezugs-Verkehrssystem angeben.</p>
+                        <p class="CellText">
+                            <MadCap:variable name="PTV_Manual.Programmname" /> prüft dann, welchen Netzobjekten dieses Bezugs-Verkehrssystem via VSysSet zugeordnet ist und weist das neue Verkehrssystem denselben Netzobjekten zu. Zusätzlich werden verkehrssystembezogene Attribute übernommen: z.B. <span class="gui_element">vMax-IVSys</span> am Streckentyp bei IV, <span class="gui_element">vStd-ÖVSys</span> am Streckentyp und <span class="gui_element">t-ÖVSys</span> an der Strecke bei ÖV. Das bedeutet: Das Verkehrssystem wird für die gleichen Streckentypen, Abbieger, Anbindungen usw. geöffnet, die für das Bezugs-Verkehrssystem geöffnet sind.</p>
+                        <p class="CellText">Als Bezugs-Verkehrssysteme werden alle Verkehrssysteme gleichen Typs angeboten. Beim Typ <span class="gui_element">ÖV</span> werden zusätzlich bereits vorhandene Verkehrssysteme vom Typ <span class="gui_element">ÖVZusatz</span> angeboten. Beim Typ <span class="gui_element">ÖVZusatz</span> werden zusätzlich vorhandene Verkehrssysteme vom Typ <span class="gui_element">ÖV</span> angeboten.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Nur Streckentyp-Attribute eingeben</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Wenn Sie diese Option auswählen, können Sie angeben, welche Streckentypen für das Verkehrssystem geöffnet werden.</p>
+                        <p class="CellText">Außerdem geben Sie die Höchst- (IV) oder mittlere Geschwindigkeit (ÖV) für die Streckentypen an.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Defaultwerte für Streckentypen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">vMax IV</span>
+                        </p>
+                        <p class="CellText">Nur für Verkehrssysteme des Typs IV</p>
+                        <p class="CellText">Höchstgeschwindigkeit des IV-Verkehrssystems</p>
+                        <p class="CellText">
+                            <span class="gui_element">v ÖV</span>
+                        </p>
+                        <p class="CellText">Nur für Verkehrssysteme der Typen ÖV, ÖVFuß und ÖVZusatz</p>
+                        <p class="CellText">Mittlere Geschwindigkeit des ÖV-Verkehrssystems</p>
+                        <p class="CellText">
+                            <span class="gui_element">zugelassen für Streckentyp</span>
+                        </p>
+                        <p class="CellText">Über die Auswahlliste wählen Sie die Streckentypen, auf denen das Verkehrssystem zugelassen sein soll.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

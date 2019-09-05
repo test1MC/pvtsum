@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="1630" MadCap:lastWidth="688" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;v0;VOT;CR;277s;akt;321s;360s;ver;AE;ED;Fzg;BD;CF;DF;StrNr;0ij;0i;0j;ij;r1;exp;r2;MSA;Method;of;t0;tAkt;car;fma;hveh;Landstr;Str;NCHRP;Wardrop’schen;NLM;VerwendeUmlaufzeitfamilie;SignalKoordinierungsGruppe;VerwendeUmlaufzeitFamilie">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_iv_2033098965_1615475">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_62992">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249398">
+            </a>Dynamische Stochastische Umlegung</h2>
+        <p class="Text">
+            <MadCap:keyword term="IV-Umlegungsverfahren: Dynamische Stochastische Umlegung" />
+            <MadCap:keyword term="Dynamische Stochastische Umlegung" />Die Dynamische Stochastische Umlegung unterscheidet sich von allen anderen IV-Umlegungsverfahren durch die explizite Modellierung der Zeit, die Fahrten im Netz in Anspruch nehmen. Hierfür sind für die Netzobjekte – unabhängig von der Länge des Zeitintervalls, für das Nachfragedaten vorliegen – Stundenkapazitäten anzugeben.</p>
+        <ul>
+            <LI class="List0">Die dynamische stochastische Umlegung berücksichtigt zeitabhängige Attribute überfahrener Strecken, Abbieger, Oberabbieger und Anbindungen (<span class="gui_element">t0</span>, <span class="gui_element">tAkt</span>, <span class="gui_element">Auslastung je Zeitintervall</span>, die sich ergeben aus deren befristeten Attributen, zum Beispiel <span class="gui_element">Kapazität</span> und <span class="gui_element">v0</span> beziehungsweise <span class="gui_element">t0</span>).</LI>
+            <LI class="List0">Die dynamische stochastische Umlegung gibt die Berechnungsergebnisse, zum Beispiel Belastung oder Widerstand der Verbindungen (Routen im Zeitintervall) und ihrer überfahrenen Netzobjekte, das heißt der Strecken, Abbieger, Oberabbieger und Anbindungen, für jedes benutzerdefinierte Zeitintervall aus. Da der Widerstand in den meisten Anwendungen der Stau-Reisezeit entspricht, können auf diese Art Fahrzeitprofile für den Umlegungszeitraum erstellt werden. Für die Routen werden zusätzlich auch Maut und ZWerte je Zeitintervall ausgegeben.</LI>
+        </ul>
+        <p class="Text">Dagegen vollziehen sich bei statischen Umlegungsverfahren alle Fahrten ohne Zeitverbrauch, die Kapazitäten sind entsprechend der Länge des Zeitintervalls anzugeben, für das Nachfragedaten vorliegen, und die Belastungen aller Fahrten sowie die daraus resultierenden Widerstände überlagern sich an den einzelnen Netzobjekten. Verkehrsteilnehmer haben dementsprechend nur die Wahl zwischen verschiedenen Routen für ihre Relation, die Abfahrtszeit spielt keine Rolle.</p>
+        <p class="Text">Bei der dynamischen Umlegung hingegen wird ein Umlegungszeitraum <span class="formula">T</span> (zum Beispiel 24 Stunden) vorgegeben und in Zeitscheiben <span class="formula">T</span><span class="formula_subscript">i</span> gleicher Länge (zum Beispiel jeweils 15 Minuten) unterteilt. Nur die Suche nach (Alternativ-) Routen für jede Relation wird unabhängig vom konkreten Zeitpunkt durchgeführt. Wie bei der statischen Stochastischen Umlegung werden hierzu mehrere Kurzwegsuchen mit zufällig variierten Netzobjekt-Widerständen ausgeführt. Alle weiteren Operationen beziehen explizit die zeitliche Dimension mit ein. Wie in der Stochastischen Umlegung besteht die Option, zusätzliche zufällige Suchen durchzuführen <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell IV/2_5_Parameter der Dynamischen Stochastischen Umlegung.htm#2_einstellungen_benutzermodell_iv_1682368020_1060608"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Parameter der Dynamischen Stochastischen Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Aus der Gesamtnachfrage und ihrer zeitlichen Ganglinie wird für jede Zeitscheibe der Anteil mit einer Wunschabfahrtszeit innerhalb dieses Zeitintervalls bestimmt. Auf Angebotsseite stehen Paare aus Route und Abfahrtszeitintervall zur Auswahl, die in Anlehnung an die Terminologie der ÖV-Umlegungen hier ebenfalls Verbindungen genannt werden. Der Widerstand einer Verbindung setzt sich aus ihrem Netzwiderstand und dem Unterschied zwischen tatsächlicher und Wunsch-Abfahrtszeitscheibe (zeitliche Nutzbarkeit) zusammen. Zur Bestimmung des Netzwiderstands werden für jedes Netzobjekt die Belastung und die auslastungsabhängige Fahrzeit getrennt für jede Zeitscheibe gespeichert. Der zeitliche Fahrtverlauf durch das Netz wird entlang der Route abgetragen, wobei für jedes Netzobjekt die Fahrzeit der Zeitscheibe(n) relevant ist, in der/denen das Netzobjekt befahren wird.</p>
+        <p class="Text">Die <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1048659">Abbildung 1</MadCap:xref> zeigt qualitativ den Vorgang der Widerstandsermittlung entlang der Zeit-Weg-Linie der Verbindung.</p>
+        <p class="Text">Dabei sollen S (= schnell) und L (= langsam) für die auslastungsabhängige Geschwindigkeit des Netzobjekts in der jeweiligen Zeitscheibe stehen. Der korrekte Fahrtverlauf – und damit der korrekte Netzwiderstand der Verbindung – ergibt sich nur, wenn auf jeder Strecke (hier besonders B) die Fahrzeit entsprechend der aktuell erreichten Zeitscheibe berücksichtigt wird.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Impedance_Connection.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1048659">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_44096">
+            </a>Beispiel für die Widerstandsberechnung einer Verbindung</p>
+        <p class="Text">Nach der Aufteilung auf einzelne Verbindungen werden die Netzobjekte wie bei der Widerstandsberechnung zeitscheibenfein mit der Nachfrage belastet, wodurch sich neue Netzobjektwiderstände ergeben. Dabei wird angenommen, dass die Abfahrtszeitpunkte der einzelnen Fahrten innerhalb der Abfahrtszeitscheibe gleich verteilt sind, das heißt anstelle einer einzelnen Zeit-Weg-Linie wird ein Belastungsband abgetragen (Beispiel <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1560188">Abbildung 2</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Example_NetVolume.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997538px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1560188">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_22338">
+            </a>Beispiel für die Netzbelastung entlang einer Verbindung</p>
+    </body>
+</html>

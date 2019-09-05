@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="1359" MadCap:lastWidth="671" MadCap:ignoredWords="Dekompositions;Wartungs">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1180342">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_37011">
+            </a>Dekomposition des Flusses in Umläufe</h4>
+        <p class="Text">Der aus dem vorherigen Schritt vorliegende kostenminimale Fluss im Graphen kann in verschiedener Weise in Umläufe aufgezeichnet werden. Jede dieser möglichen Lösungen ist bezüglich der Kosten gleichwertig und somit optimal. Der Dekompositions-Schritt hat die Aufgabe, den Fluss im Graphen in Ketten zu zerlegen, indem an jedem Knoten jeder eingehenden eine ausgehende Flusseinheit zugeordnet wird. Jede so entstehende Kette entspricht dann jeweils einem Umlauf. <MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1185718">Abbildung&#160;186</MadCap:xref> und <MadCap:xref class="Label_Image" href="#1_betreibermodell_oev_1878159914_1188394">Abbildung&#160;187</MadCap:xref> zeigen beispielhaft zwei Möglichkeiten, den kostenminimalen Fluss in Umläufe zu dekomponieren.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Graph8.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 1873454px;margin-bottom: 0, 3123759px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_betreibermodell_oev_1878159914_1185718">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_84365">
+            </a>Beispiel 1 für die Dekomposition zu Umläufen</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Graph9.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 1873454px;margin-bottom: 0, 2500132px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_betreibermodell_oev_1878159914_1188394">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_98002">
+            </a>Beispiel 2 für die Dekomposition zu Umläufen</p>
+        <p class="Text">Dieses eigenständige Optimierungsproblem kann nach verschiedenen Kriterien gelöst werden. In <MadCap:variable name="PTV_Manual.Programmname" /> stehen zwei Dimensionen von Kriterien zur Verfügung, die auch miteinander kombiniert werden können:</p>
+        <ul>
+            <LI class="List0">Die Struktur der Übergänge zwischen Fahrplanfahrtabschnitten im Umlauf kann beeinflusst werden mit den Optionen</LI>
+            <LI class="List1">Ausdifferenzierte Dauer der Stillstände: Die Verteilung der Stillstandsdauern ist möglichst ungleichmäßig, es gibt also mehr kurze und lange Stillstände zuungunsten mittlerer Stillstandsdauern. Ziel hierbei ist es, lange, als Wartungs-Zeitfenster nutzbare Stillstände zu erzielen.</LI>
+            <LI class="List1">Gleichmäßige Dauer der Stillstände: Die Verteilung der Stillstandsdauern ist möglichst gleichmäßig. Solche Umläufe sind besonders robust gegen Störungen.</LI>
+            <LI class="List1">Linienreinheit: Es wird versucht, in einem Umlauf möglichst nur Fahrten derselben Linie zu befahren oder zumindest innerhalb eines Umlaufs möglichst selten die Linie zu wechseln.</LI>
+            <LI class="List1">Keine spezifischen Anforderungen: In dieser Dimension werden keine Anforderungen an das Ergebnis gestellt.</LI>
+            <LI class="List1">Gleichmäßige Umläufe: Bei einem Umlaufzeitraum größer als einem Tag wird versucht, Umläufe zu berechnen, die an allen Kalendertagen möglichst gleich aussehen.</LI>
+            <LI class="List0">Wenn abgeschlossene Umläufe gebildet werden, kann zusätzlich die Dauer der Umläufe beeinflusst werden mit den Optionen</LI>
+            <LI class="List1">Bevorzugt lange Umläufe bilden: Die Umläufe haben möglichst viele Umlauftage. Die einzelnen Fahrzeuge befahren dann insbesondere mehrere Linienwege. Im Extremfall werden alle Fahrplanfahrten einer Partition durch einen einzigen Umlauf abgedeckt.</LI>
+            <LI class="List1">Bevorzugt kurze Umläufe bilden: Die Umläufe haben möglichst wenig Umlauftage.</LI>
+            <LI class="List1">Keine spezifischen Anforderungen: In dieser Dimension werden keine Anforderungen an das Ergebnis gestellt.</LI>
+        </ul>
+    </body>
+</html>

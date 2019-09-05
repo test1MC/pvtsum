@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="PTV_Manual.Topic Benutzerhandbuch" MadCap:lastBlockDepth="6" MadCap:lastHeight="623" MadCap:lastWidth="510" MadCap:ignoredWords="Symmetrize;bzw;zeilen;$O;usw" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_nachfrage_modellieren_1800171850_1641085">
+            </a>
+            <a name="2_nachfrage_modellieren_1800171850_58009">
+            </a>EVA-Verkehrsverteilung und Moduswahl berechnen<a name="30223"></a><a name="30221"></a><a name="30220"></a><a name="30222"></a></h4>
+        <p class="Text">
+            <MadCap:keyword term="Verkehrsverteilung: EVA-Modell-Personenverkehr" />
+            <MadCap:keyword term="Moduswahl: EVA-Modell Personenverkehr" />Im Verfahren EVA-Verkehrsverteilung und Moduswahl werden aus den in der EVA-Verkehrserzeugung berechneten Quell- und Zielaufkommen pro Bezirk Nachfragematrizen berechnet, die für jede Nachfrageschicht modusfein die Anzahl der Fahrten zwischen je zwei Bezirken beinhalten. Anders als im Standard-4-Stufen-Modell erfolgt die Berechnung von Verteilung und Moduswahl simultan in einem verzahnten Verfahren. Zur approximativen Berechnung stehen zwei verschiedene Iterationsalgorithmen zur Auswahl <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_EVA-Verkehrsverteilung und Moduswahl.htm#1_nachfragemodell_2215163117_1154337">(siehe Grundlagen: Kap.  0.0.0.1 , Seite&#160;1)</MadCap:xref>.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie in der Symbolleiste auf das Symbol <img src="../Resources/Images_4_all/ICO_procedure_flow.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000347px;margin-bottom: 0, 9983615px;" />&#160;<span class="gui_element">Verfahrensablauf öffnen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Verfahrensablauf</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Fügen Sie an der gewünschten Stelle im Verfahrensablauf das Verfahren <span class="gui_element">EVA-Verteilung/Moduswahl</span> aus der Kategorie <span class="gui_element">Nachfragemodell</span> ein <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahrensablauf festlegen und starten.htm#2_verfahrensablauf_festlegen_40480990_1019020">(siehe „Verfahrensablauf festlegen und starten“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie in der Zeile des neu eingefügten Verfahrens auf die Schaltfläche in der Spalte <span class="gui_element">Bezugsobjekt(e)</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Nachfrageschichten Auswahl</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie in der Auswahlliste <span class="gui_element">Nachfragemodell auswählen</span> das Nachfragemodell, zu dem die Nachfrageschichten gehören.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Wählen Sie in der Auswahlliste <span class="gui_element">Nachfrageschicht</span> die Nachfrageschichten, für die Sie die EVA-Verteilung und Moduswahl rechnen möchten.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Sie können mehrere Nachfrageschichten auswählen, indem Sie die Taste <span class="shortcut">Strg</span> drücken, diese gedrückt halten und auf die gewünschten Einträge klicken.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Stepresult">Die ausgewählten Nachfrageschichten werden im Eingabefeld <span class="gui_element">NSchichten</span> und in die Spalte <span class="gui_element">Bezugsobjekt(e)</span> übernommen.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Stellen Sie sicher, dass das eingefügte Verfahren markiert ist, und klicken Sie im Bereich <span class="gui_element">Aktionen</span> auf die Schaltfläche <span class="gui_element">Bearbeiten</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Parameter EVA-Verteilung/Moduswahl</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="8. &#160;">Wählen Sie das Register <span class="gui_element">Allgemeine Parameter</span>.</p>
+        <p class="Step" MadCap:autonum="9. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Projektart</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Option legen Sie die Behandlung der Modusanteile fest.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Analyse</span>
+                        </p>
+                        <p class="CellText">Mit der Analyse ermitteln Sie Bilanzfaktoren für Moduswahl.</p>
+                        <p class="CellText">Ist die Option ausgewählt, können Sie die globalen Anteile der Modi am Gesamtaufkommen im Register <span class="gui_element">Modal Split</span> eingeben.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Prognose</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die vorhandenen Bilanzfaktoren für Moduswahl als Grundlage für die Berechnung verwendet <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_EVA-Verkehrsverteilung und Moduswahl.htm#1_nachfragemodell_2215163117_1154337">(siehe Grundlagen: Kap.  0.0.0.1 , Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Berechne Randsummenausgleich</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, wird am Ende der EVA-Verteilung und Moduswahl der Randsummenausgleich berechnet <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_EVA-Verkehrsverteilung und Moduswahl.htm#1_nachfragemodell_2215163117_1154337">(siehe Grundlagen: Kap.  0.0.0.1 , Seite&#160;1)</MadCap:xref>.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Die Option ist nur verfügbar, wenn Sie für eine Nachfrageschicht den Randsummenausgleich gewählt haben.</p>
+                        <p class="CellText">Die Nachfrageschicht (vom Quelle-Ziel-Typ 3), für die der Randsummenausgleich zu rechnen ist, stellen Sie ein über das Menü <span class="gui_element">Nachfrage&#160;&gt; Nachfragemodelle&#160;&gt;</span> Register <span class="gui_element">Randsummenbedingungen</span>&#160;<MadCap:xref class="sieheUeberschrSeite" href="2_3_Randsummenbedingungen definieren.htm#2_nachfrage_modellieren_1800171850_1639565">&#160;(siehe „Randsummenbedingungen definieren“ auf Seite&#160;1)</MadCap:xref>.</p>
+                        <p class="CellText">Wurde der Randsummenausgleich am Ende der EVA-Verkehrserzeugung bereits berechnet, wird er hier nicht noch einmal berechnet <MadCap:xref class="sieheUeberschrSeite" href="2_3_EVA-Verkehrserzeugung berechnen.htm#2_nachfrage_modellieren_1800171850_1639768">(siehe „EVA-Verkehrserzeugung berechnen“ auf Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Maximale Anzahl Iterationen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Anzahl Iterationen, nach der das Verfahren abgebrochen wird, falls mit dem eingestellten Iterationsalgorithmus keine Konvergenz erreicht wird.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Toleranz bei harten RSB</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Genauigkeitsfaktor für harte Randsummenbedingungen <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_EVA-Verkehrserzeugung.htm#1_nachfragemodell_2215163117_1154313">(siehe Grundlagen: Kap.  0.0.0.1 , Seite&#160;1)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Toleranz bei nicht-harten RSB</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Genauigkeitsfaktor für nicht-harte Randsummenbedingungen (d.&#160;h. weich, elastisch oder offen) <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_EVA-Verkehrserzeugung.htm#1_nachfragemodell_2215163117_1154313">(siehe Grundlagen: Kap.  0.0.0.1 , Seite&#160;1)</MadCap:xref></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">gespeicherte Bilanzfaktoren als Startlösung verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option ist nur verfügbar bei Auswahl der Projektart <span class="gui_element">Analyse.</span></p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, gehen vorhandene Bilanzfaktoren für Quell- und Zielaufkommen und Moduswahl in die Berechnung ein <MadCap:xref class="sieheUeberschrSeite" href="2_3_Aufkommen_von_EVA_P_Nachfrageschichten_ändern.htm#2_nachfrage_modellieren_1800171850_1640424"><span style="color: Black;" class="mcFormatColor">(</span><u>Aufkommen von EVA-P-Nachfrageschichten ändern</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, gehen keine Bilanzfaktoren in die Berechnung ein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">gespeicherte Bilanzfaktoren für Quell- und Zielaufkommen als Startlösung verwenden</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diese Option ist nur verfügbar bei Auswahl der Projektart <span class="gui_element">Prognose.</span></p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, gehen vorhandene Bilanzfaktoren für Quell- und Zielaufkommen und Moduswahl in die Berechnung ein <MadCap:xref class="sieheUeberschrSeite" href="2_3_Aufkommen_von_EVA_P_Nachfrageschichten_ändern.htm#2_nachfrage_modellieren_1800171850_1640424"><span style="color: Black;" class="mcFormatColor">(</span><u>Aufkommen von EVA-P-Nachfrageschichten ändern</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, gehen nur die Bilanzfaktoren für Moduswahl in die Berechnung ein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">berechnete Bilanzfaktoren für Quell- und Zielaufkommen speichern</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden die Bilanzfaktoren für Quell- und Zielaufkommen gespeichert <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_EVA-Verkehrsverteilung und Moduswahl.htm#1_nachfragemodell_2215163117_1154337">(siehe Grundlagen: Kap.  0.0.0.1 , Seite&#160;1)</MadCap:xref>.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, werden die Bilanzfaktoren für Quell- und Zielaufkommen nicht gespeichert.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Bilanzfaktoren für Moduswahl werden bei der Analyse immer gespeichert und bei der Prognose nie gespeichert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="10. &#160;">Wählen Sie das Register <span class="gui_element">Verfahren</span>.</p>
+        <p class="Step" MadCap:autonum="11. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="72px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="405px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Verfahren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Auswahlliste können Sie je Nachfrageschicht das Iterationsverfahren zur Lösung des trilinearen Gleichungssystems auswählen <MadCap:xref class="Grundlagen" href="../1_Nachfragemodell/1_3_EVA-Verkehrsverteilung und Moduswahl.htm#1_nachfragemodell_2215163117_1154337">(siehe Grundlagen: Kap.  0.0.0.1 , Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Fixierung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Zur Beschleunigung der Konvergenz des Multiverfahrens können Sie die Quell- oder die Zielaufkommen fixieren, d.&#160;h. dass diese während des Iterationsverfahrens konstant gehalten werden.</p>
+                        <p class="CellText">Über die Auswahlliste können Sie die Art der Fixierung wählen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Option ist nur für das Verfahren <span class="gui_element">MULTI</span> verfügbar.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Sie können die Einträge einer Zeile in alle anderen Zeilen übernehmen. Klicken Sie dafür mit der rechten Maustaste in die gewünschte Zeile und wählen Sie den Eintrag <span class="gui_element">Alle Attribute für alle NSchichten übernehmen</span>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="12. &#160;">Wählen Sie das Register <span class="gui_element">Modal Split</span>.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Das Register <span class="gui_element">Modal Split</span> ist nur zugänglich, wenn im Register <span class="gui_element">Allgemeine Parameter</span> die Option <span class="gui_element">Analyse</span> als Projektart eingestellt ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="13. &#160;">Geben Sie für jeden Modus den Anteil am gesamten Verkehr der Nachfrageschicht ein.</p>
+        <p class="Step" MadCap:autonum="14. &#160;">Klicken Sie bei Bedarf auf die Schaltfläche <span class="gui_element">Zeilen normieren</span>.</p>
+        <p class="Stepresult">Je Nachfrageschicht werden alle Anteile so normiert, dass ihre Summe 1 ergibt.</p>
+        <p class="Step" MadCap:autonum="15. &#160;">Wählen Sie das Register <span class="gui_element">Moduswahlmatrizen</span>.</p>
+        <p class="Step" MadCap:autonum="16. &#160;">Klicken Sie in der gewünschten Zeile in der ersten Spalte <span class="gui_element">Moduswahlmatrix</span> auf die Schaltfläche.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Matrix auswählen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="17. &#160;">Wählen Sie die Matrix aus, auf die die jeweilige Nachfrage bei der Moduswahl addiert werden soll. Dafür stehen Ihnen zwei Methoden zur Verfügung <MadCap:xref href="2_3_Matrizen_auswaehlen.htm" class="sieheUeberschrSeite">(siehe „Fenster Matrizen auswählen“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <table style="caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" class="TableStyle-gui_elements2" cellspacing="0">
+            <col style="width: 495px;" class="TableStyle-gui_elements2-Column-Column1">
+            </col>
+            <col style="width: 495px;" class="TableStyle-gui_elements2-Column-Column1">
+            </col>
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <th class="TableStyle-gui_elements2-HeadE-Column1-Header1">Element</th>
+                    <th class="TableStyle-gui_elements2-HeadD-Column1-Header1">Beschreibung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Matrix auswählen nach Nummer</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Wählen Sie aus der Liste aller Matrizen anhand der Nummer die gewünschte Matrix aus.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Matrix auswählen nach Eigenschaften</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">Wählen Sie anhand bestimmter Attribute und deren Werte die Matrix aus.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="18. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp">
+            </MadCap:snippetText>
+        </p>
+        <p class="Stepresult">Die Nachfragematrix wird dem Modus zugeordnet.</p>
+        <p class="Step" MadCap:autonum="19. &#160;">Wählen Sie auf die gleiche Weise für alle Nachfrageschichten die gewünschte Matrix.</p>
+        <p class="Step" MadCap:autonum="20. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Step" MadCap:autonum="21. &#160;">Führen Sie das Verfahren aus <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Verfahren im Verfahrensablauf ausführen.htm#2_verfahrensablauf_festlegen_40480990_1112524">(siehe „Verfahren im Verfahrensablauf ausführen“ auf Seite&#160;1)</MadCap:xref>.</p>
+        <p class="Result">Die EVA-Verteilung und Moduswahl werden berechnet, die Berechnungsergebnisse werden pro Nachfrageschicht und Modus in einer Nachfragematrix gespeichert.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Tipps" MadCap:autonum="Tipps: ">Sie können die Nachfragematrizen anzeigen und ändern <MadCap:xref class="sieheUeberschrSeite" href="2_3_Matrixwerte bearbeiten.htm#2_nachfrage_modellieren_1800171850_1069896">(siehe „Matrixwerte bearbeiten“ auf Seite&#160;1)</MadCap:xref>.</p>
+                        <p class="Text">Wenn Sie die Ergebnisse plausibilisieren möchten, empfehlen wir, eine Fahrtweitenverteilung durch Klassifikation der Nachfragematrizen mit einer Kenngrößenmatrix der Entfernung zu erstellen <MadCap:xref class="sieheUeberschrSeite" href="2_3_Matrizen als Histogramm anzeigen.htm#2_nachfrage_modellieren_1800171850_1510869">(siehe „Matrizen als Histogramm anzeigen“ auf Seite&#160;1)</MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="676" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;gruppen;gruppe;ICU1;ICU2;Circular;Planning;Operations;pretimed;fully;actuated;semi;actuation;type;ICAArrivalType;14a;AnteilLKW;6b;ICAEingVerlustZVerw;ICAIstCentral;BusinessDistrict;Central;District;6e;ICASneakers;ICAZuflussFaktor;10b;14b;BusFrequenz;WDDTA;xd;FS;ox;yo;BS;FIFO;dt;initialize;the;solution;flows;to;zero;for;each;destination;compute;arc;costs;and;their;if;then;UmlgAbw;ASSIGNDEVIATION;AbsRMSE;Abs;RMSE;Achsabs;ax;AnteilAkzGEH;akzept;AnteilAkzRelFehler;rel;AnzBeob;AnzKlasse;KlassenWert;Korr;Pearson;MittAbsFehler;MittBeob;MittRelFehler;R2;RSQ;RelRMSE;StdAbw;VolDem;Cap;ScalingFactor;Vol;te;flow;toNode;Lj;maxFlow;propagatingFlow;Nr;tcur;cap;BPR;Bureau;Public;Roads;INRETS;recherche;sur;les;transports;leur;sécurité;sat;crit;cur;b’;BPR2;BPR3;CONICAL;CONICAL_MARGINAL;EXPONENTIAL;Ramp;Metering;SIGMOIDAL_MMF_NODES;SIGMOIDAL_MMF;SIGMOIDAL_MMF_LINKS;SIGMOIDAL_MMF2;AKCELIK;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;KJ;k2;k1;s'';abflüssen;peak;hour;factor;LT;RT;vphpl;HV;bb;Lu;Lpb;Rpb;CBD;ST;Ui;PF;Ii;Ri;PA;bi;Volume;ICU;P1;P2;P3;6a;6c;6d;LUo;qr;po;ArrivalType;6j;3a;3b;pedu;pbT;rec;RTA;LTA;Bottleneck;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStd_TitnoHead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1026243">
+            </a>
+            <MadCap:keyword term="CR-Funktionen" />
+            <MadCap:keyword term="IV-Umlegungsverfahren: CR-Funktionen" />
+            <MadCap:keyword term="tAkt" />
+            <a name="1_benutzermodell_iv_2033098965_12944">
+            </a>Vordefinierte CR-Funktionen</h3>
+        <p class="Text">Im IV werden die Reisezeiten anhand der Auslastung der Strecken und Abbieger bestimmt, die sich aus der Verkehrsbelastung und der Kapazität dieser Netzobjekte ergibt. Daher schwanken die IV-Reisezeiten im Gegensatz zu den ÖV-Reisezeiten und lassen sich vor Fahrtantritt nur mit einer gewissen Wahrscheinlichkeit prognostizieren. Die IV-Reisezeit einer Route zwischen zwei Bezirken setzt sich zusammen aus folgenden Bestandteilen:</p>
+        <ul>
+            <LI class="List0">Zu- und Abgangszeit</LI>
+            <LI class="List0">Fahrzeit auf den Strecken</LI>
+            <LI class="List0">Abbiegezeit an Knotenpunkten</LI>
+        </ul>
+        <p class="Text">Bei freiem Verkehrsfluss ergibt sich die Fahrzeit <span class="formula">t</span><span class="formula_subscript">0</span> für eine Strecke aus der Streckenlänge und der zulässigen Geschwindigkeit <span class="formula">v</span><span class="formula_subscript">0</span>. Für Abbieger an einem Knotenpunkt wird die Abbiegezeit <span class="formula">t</span><span class="formula_subscript">0</span> direkt angegeben. Im belasteten Netz ergeben sich die Streckenfahrzeit und die Abbiegezeit aus einer so genannten Capacity-Restraint-Funktion (CR-Funktion). Diese Kapazitätsbeschränkungsfunktion beschreibt den Zusammenhang zwischen der aktuellen Verkehrsbelastung <span class="formula">q</span> und der Kapazität <span class="formula">q</span><span class="formula_subscript">Max</span>. Ergebnis der CR-Funktion ist die Fahrzeit im belasteten Netz <span class="formula">t</span><span class="formula_subscript">akt</span>. <MadCap:variable name="PTV_Manual.Programmname" /> stellt mehrere Funktionstypen für die CR-Funktionen zur Verfügung:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">die BPR-Funktion aus dem Traffic Assignment Manual des U.S.-amerikanischen Bureau of Public Roads (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1026329">Abbildung 1</MadCap:xref>)</p>
+        <p class="Step" MadCap:autonum="2. &#160;">eine modifizierte BPR-Funktion mit unterschiedlichem Parameter <span class="formula">b </span>für den nicht-ausgelasteten Zustand und den ausgelasteten Zustand (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1365935">Tabelle 3</MadCap:xref>)</p>
+        <p class="Step" MadCap:autonum="3. &#160;">eine modifizierte BPR-Funktion, bei der im ausgelasteten Zustand ein zusätzlicher Zuschlag <span class="formula">d</span> je Fahrzeug angegeben werden kann (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1365963">Tabelle 4</MadCap:xref>)</p>
+        <p class="Step" MadCap:autonum="4. &#160;">die INRETS-Funktion des französischen Institut National de recherche sur les transports et leur sécurité (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1244022">Abbildung 2</MadCap:xref>)</p>
+        <p class="Step" MadCap:autonum="5. &#160;">eine konstante Funktion, bei der die Kapazität keinen Einfluss auf die Fahrzeit hat (<span class="formula">t</span><span class="formula_subscript">akt</span>&#160;= <span class="formula">t</span><span class="formula_subscript">0</span>)</p>
+        <p class="Step" MadCap:autonum="6. &#160;">diverse Funktionen für Abbiegevorgänge (das heißt, <span class="formula">t</span><span class="formula_subscript">0</span> wird addiert, nicht multipliziert) sowie den Funktionstyp Linearer Engpass, die je Abbiegertyp verwendet werden</p>
+        <p class="Step" MadCap:autonum="7. &#160;">eine weitere modifizierte BPR-Funktion (LOHSE) mit linearem Anstieg im Überlastbereich, entsprechend den Warteschlangentheorien, um realistische Zeiten im Überlastbereich und ein besseres Verhalten in Umlegungen zu erreichen, da kleinere Belastungsänderungen keine überproportionale Fahrzeitänderungen zur Folge haben. Die Funktion ist monoton, stetig und differenzierbar, auch an der Nahtstelle<span class="formula"> sat = sat</span><span class="formula_subscript">crit</span>.</p>
+        <table class="TableStyle-TipHint2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="476px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Zusätzlich zu den in <MadCap:variable name="PTV_Manual.Programmname" /> zur Verfügung gestellten CR-Funktionen können auch benutzerdefinierte CR-Funktionen eingestellt werden <MadCap:xref class="sieheUeberschrSeite" href="1_5_Benutzerdefinierte CR-Funktionen.htm#1_benutzermodell_iv_2033098965_1026637"><span style="color: Black;" class="mcFormatColor">(</span><u>Benutzerdefinierte CR-Funktionen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1531311">Tabelle 1</MadCap:xref> zeigt die in den Beschreibungen der CR-Funktionen verwendeten Variablen.</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="50px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="445px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">sat</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Auslastung <img src="../Resources/Images/7_112.jpg" /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">sat</span>
+                            <span class="formula_subscript">crit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Sättigungsgrad, von dem an der lineare Abschnitt der CR-Funktion beginnt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">cur</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">aktuelle Fahrzeit auf einem Netzobjekt im belasteten Netz [s] (<span class="formula">t</span><span class="formula_subscript">akt</span>)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">0</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Fahrzeit auf einem Netzobjekt bei freiem Verkehrsfluss [s]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">q</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">aktuelle Belastung = Summe der Belastungen aller IV-Verkehrssysteme [Pkw-E/Zeiteinheit] einschließlich Vorbelastung</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images/7_232.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">q</span>
+                            <span class="formula_subscript">max</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">Kapazität [Pkw-E/Zeiteinheit]</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_iv_2033098965_1531311">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_66858">
+                    </a>In CR-Funktionen verwendete Variablen</p>
+            </caption>
+        </table>
+        <p class="Text">Die in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1365907">Tabelle 2</MadCap:xref> genannten Parameter gelten für alle CR-Funktionen. Funktionsspezifische Parameter werden bei der Beschreibung der jeweiligen CR-Funktion aufgeführt.</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="44px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="451px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/VDFunction_BPR.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997805px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a, b ,c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">benutzerdefinierte Parameter</p>
+                        <p class="CellText">
+                            <span class="formula">a</span>
+                            <span class="symbol" style="line-height: 11pt;">Î</span> [0.00;<span class="_Override" style="font-family: Symbol;">¥</span>), <span class="formula">b</span><span class="symbol" style="line-height: 11pt;">Î</span> {0.00...10.00}, <span class="formula">c</span><span class="symbol" style="line-height: 11pt;">Î</span> [0.00;<span class="_Override" style="font-family: Symbol;">¥)</span></p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_iv_2033098965_1365907">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_32515">
+                    </a>Parameter für alle CR-Funktionen</p>
+            </caption>
+        </table>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_CR-Curve_BPR.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1026329">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_79836">
+            </a>
+            <MadCap:keyword term="CR-Funktionen: BPR (nach Traffic Assignment Manual)" />
+            <MadCap:keyword term="BPR (CR-Funktion)" />CR-Funktionstyp BPR nach Traffic Assignment Manual</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="60px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="435px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/VDFunction_BPR2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellCaption" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">sat</span>
+                            <span class="formula_subscript">crit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula">sat</span>
+                            <span class="formula_subscript">crit</span> = 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellCaption" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a, b, b’ ,c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">Parameter <span class="formula">a</span><span class="symbol" style="line-height: 11pt;">Î</span> [0.00;<span class="_Override" style="font-family: Symbol;">¥</span>), <span class="formula">b</span>, <span class="formula">b’</span><span class="symbol" style="line-height: 11pt;">Î</span> {0.00...10.00}, <span class="formula">c</span><span class="symbol" style="line-height: 11pt;">Î</span> [0.00;<span class="_Override" style="font-family: Symbol;">¥</span>)</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+                    <a name="1_benutzermodell_iv_2033098965_1365935">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_96363">
+                    </a>CR-Funktionstyp BPR2 – BPR modifiziert</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="59px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="436px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/VDFunction_BPR3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9941233px;margin-bottom: 1, 00403px;" />, wobei <img src="../Resources/Images/VDFunction_CONICAL_MARGINAL3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9955271px;margin-bottom: 1, 005165px;" /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">sat</span>
+                            <span class="formula_subscript">crit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula">sat</span>
+                            <span class="formula_subscript">crit</span> = 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a, b, c, d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">a</span>
+                            <span class="symbol" style="line-height: 11pt;">Î</span> [0.00;<span class="_Override" style="font-family: Symbol;">¥</span>), <span class="formula">b</span><span class="symbol" style="line-height: 11pt;">Î</span> {0.00 ...10.00}, <span class="formula">c</span><span class="symbol" style="line-height: 11pt;">Î</span> [0.00;<span class="_Override" style="font-family: Symbol;">¥</span>), <span class="formula">d</span><span class="symbol" style="line-height: 11pt;">Î</span> {0.00...100.00}</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 4: ">
+                    <a name="1_benutzermodell_iv_2033098965_1365963">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_84129">
+                    </a>CR-Funktionstyp BPR3 – BPR modifiziert</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="32px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="181px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="282px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellCaption">
+                            <img src="../Resources/Images/VDFunction_CONICAL1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997796px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">mit <img src="../Resources/Images/VDFunction_CONICAL2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007715px;margin-bottom: 1, 006866px;" /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a, c</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellCaption" style="font-weight: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a</span>
+                            <span class="symbol" style="line-height: 11pt;">Î</span> [1.1;100), <span class="formula">c</span><span class="symbol" style="line-height: 11pt;">Î</span> [0.00;100)</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 5: ">
+                    <MadCap:keyword term="CR-Funktionen: Conical" />
+                    <MadCap:keyword term="Conical (CR-Funktion)" />CR-Funktionstyp CONICAL (Spiess)</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="36px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="213px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="246px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellCaption">
+                            <img src="../Resources/Images/VDFunction_CONICAL_MARGINAL1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">mit <img src="../Resources/Images/VDFunction_CONICAL3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007715px;margin-bottom: 1, 006866px;" />, wobei <img src="../Resources/Images/VDFunction_CONICAL_MARGINAL4.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9955271px;margin-bottom: 1, 005165px;" /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a, c</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellCaption" style="font-weight: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a</span>
+                            <span class="symbol" style="line-height: 11pt;">Î</span> [1.1;100), <span class="formula">c</span><span class="symbol" style="line-height: 11pt;">Î</span> [0.00;100)</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 6: ">
+                    <MadCap:keyword term="CR-Funktionen: Conical marginal" />
+                    <MadCap:keyword term="Conical marginal (CR-Funktion)" />CR-Funktionstyp CONICAL_MARGINAL</p>
+            </caption>
+        </table>
+        <p class="Text">
+            <MadCap:keyword term="Nutzeroptimum" />
+            <MadCap:keyword term="Systemoptimum" />Grenzkosten-Variante der CONICAL-Funktion, die von Spiess entwickelt wurde, um statt eines Nutzeroptimums ein Systemoptimum in der Gleichgewichtsumlegung zu berechnen.</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="63px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="432px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/VDFunction_Exponential.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9867228px;margin-bottom: 1, 005731px;" />, wobei <img src="../Resources/Images/VDFunction_CONICAL_MARGINAL5.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9955271px;margin-bottom: 1, 005165px;" /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">sat</span>
+                            <span class="formula_subscript">crit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula">sat</span>
+                            <span class="formula_subscript">crit</span>
+                            <span class="_Override" style="font-family: Symbol;">Î</span> [0.00;10]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a, b, c, d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">a</span>
+                            <span class="symbol" style="line-height: 11pt;">Î</span> [0.0001;100], <span class="formula">b</span><span class="symbol" style="line-height: 11pt;">Î</span> [0.0001;10000], <span class="formula">c</span><span class="symbol" style="line-height: 11pt;">Î</span> [0.00;100], <span class="formula">d</span><span class="symbol" style="line-height: 11pt;">Î</span> [0.0001;10000]</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 7: ">CR-Funktionstyp EXPONENTIAL</p>
+            </caption>
+        </table>
+        <p class="Text">
+            <MadCap:keyword term="Ramp Metering" />
+            <MadCap:keyword term="Warteschlangen" />Die Funktion modelliert Warteschlangen an Zufahrten, deren Zufluss durch Lichtsignalanlagen begrenzt ist (Ramp Metering).</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 496px;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="49px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="447px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/VDFunction_INRETS.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 012823px;margin-bottom: 1, 009699px;" />, wobei <img src="../Resources/Images/VDFunction_CONICAL_MARGINAL6.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9955271px;margin-bottom: 1, 005165px;" /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">sat</span>
+                            <span class="formula_subscript">crit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula">sat</span>
+                            <span class="formula_subscript">crit</span> = 1</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">q</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">aktuelle Belastung = Summe der Belastungen aller IV-Nachfragesegmente [Pkw-E/Zeiteinheit] einschließlich Vorbelastung</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images/7_207.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">benutzerdefinierter Parameter <span class="formula">a</span><span class="symbol" style="line-height: 11pt;">Î</span> {0.00..1.10}</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">benutzerdefinierter Kapazitätsparameter <span class="formula">c</span><span class="symbol" style="line-height: 11pt;">Î</span> [0;<span class="_Override" style="font-family: Symbol;">¥</span>)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 8: ">CR-Funktionstyp INRETS </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_CR-Curve_INRETS.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1244022">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_47129">
+            </a>
+            <MadCap:keyword term="CR-Funktionen: INRETS" />
+            <MadCap:keyword term="INRETS (CR-Funktion)" />CR-Funktionstyp INRETS</p>
+        <p class="Text">Die in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1659276">Tabelle 9</MadCap:xref> aufgeführten Widerstandsfunktionen eignen sich besonders zur Modellierung von Abbiegewiderständen. Dabei wird der Basiswartezeit <span class="formula">t</span><span class="formula_subscript">0</span> jeweils eine auslastungsabhängige Wartezeit additiv zugeschlagen.</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 496px;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="63px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="112px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="321px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/VDFunction_Logistic.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000065px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">LOGISTISCH</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images/VDFunction_Quadra.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997796px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">QUADRATISCH</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/VDFunction_Sigmoidal_Nodes.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000061px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">SIGMOIDAL_MMF_NODES (ehemals SIGMOIDAL_MMF)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images/VDFunction_Sigmoidal_Links.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000061px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">SIGMOIDAL_MMF_LINKS (ehemals SIGMOIDAL_MMF2)</p>
+                        <p class="CellText">Im Gegensatz zu SIGMOIDAL_MMF_NODES wird der Wartezeitterm nicht zu <span class="formula">t</span><span class="formula_subscript">0</span> addiert, sondern multipliziert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a, b, c, d</span>
+                        </p>
+                    </td>
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">a</span>, <span class="formula">b</span>, <span class="formula">c</span>, <span class="formula">d</span><span class="symbol" style="line-height: 11pt;">Î</span> [0.00…100.00}, <span class="formula">f</span><span class="symbol" style="line-height: 11pt;">Î</span> {0.00...10.00}. </p>
+                        <p class="CellText">Der Wertebereich für Parameter <span class="formula">f</span> in den CR-Funktionstypen SIGMOIDAL_MMF_NODES und SIGMOIDAL_MMF_LINKS beträgt 0..100.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 9: ">
+            <a name="1_benutzermodell_iv_2033098965_1659276">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_36838">
+            </a>
+            <MadCap:keyword term="CR-Funktionen: logistisch" />
+            <MadCap:keyword term="CR-Funktionen: quadratisch" />
+            <MadCap:keyword term="CR-Funktionen: SIGMOIDAL_MMF_LINKS" />
+            <MadCap:keyword term="CR-Funktionen: SIGMOIDAL_MMF_NODES" />CR-Funktionstypen LOGISTISCH, QUADRATISCH, SIGMOIDAL_MMF_NODES, SIGMOIDAL_MMF_LINKS</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="297px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="198px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/VDFunction_Akcelik.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 0, 9997786px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">AKCELIK</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">Die Funktion beschreibt Wartezeiten am Knoten mit</p>
+                        <p class="CellText">
+                            <span class="formula">a</span> = Zeitdauer in Stunden</p>
+                        <p class="CellText">
+                            <span class="formula">b</span> = Scharparameter</p>
+                        <p class="CellText">
+                            <span class="formula">d</span> = Kapazität einer Spur pro Stunde</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 10: ">
+                    <MadCap:keyword term="CR-Funktionen: Akcelik" />
+                    <MadCap:keyword term="Akcelik (CR-Funktion)" />CR-Funktionstyp AKCELIK</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="298px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="197px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/VDFunction_Akcelik2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">AKCELIK2</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula">a</span> = Zeitdauer in Stunden</p>
+                        <p class="CellText">
+                            <span class="formula">b</span> = Scharparameter</p>
+                        <p class="CellText">
+                            <span class="formula">d</span> = 1 / Anzahl Fahrstreifen (der Strecke)</p>
+                        <p class="CellText">
+                            <span class="formula">q</span>
+                            <span class="formula_subscript">max</span> = Kapazität des Netzobjekts (der Strecke)</p>
+                        <p class="CellText">Im Gegensatz zu AKCELIK referenziert diese Funktion im Nenner direkt auf die Kapazität des Netzobjekts. Zudem ist AKCELIK2 keine Wartezeitfunktion am Knoten, sondern bildet die Geschwindigkeitsabnahme auf einer Strecke ab. Der Wert <span class="formula">d</span> ist absichtlich ein freier Parameter, obwohl alternativ direkt das Streckenattribut <span class="gui_element">Anzahl Fahrstreifen</span> ausgewertet werden könnte. Durch Lösung von diesem Attribut, das stets die physikalisch vorhandene Anzahl Fahrstreifen (beispielsweise für den Vissim-Export) enthalten soll, können Sie durch einen geeigneten Wert von <span class="formula">d</span> zum Beispiel den Reibungsverlust durch Ein-/Ausparkvorgänge abbilden. So entspräche <span class="formula">d </span>= 0.6 einer etwas geringeren Kapazität als zwei Spuren.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 11: ">CR-Funktionstyp AKCELIK2</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="49px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="446px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images/VDFunction_Lohse.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">sat</span>
+                            <span class="formula_subscript">crit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula">sat</span>
+                            <span class="formula_subscript">crit</span>
+                            <span class="symbol" style="line-height: 11pt;">Î</span> [0.00;10]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">[(<span class="formula">a + </span>1)<span class="formula"> • t</span><span class="formula_subscript">0</span>] gibt <span class="formula">t</span><span class="formula_subscript">cur</span> bei <span class="formula">sat</span> = 1 an</p>
+                        <p class="CellText">
+                            <span class="formula">a</span>
+                            <span class="symbol" style="line-height: 11pt;">Î</span> [0.00;1000]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">b</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">Bestimmt die Stärke des zunehmenden Anstiegs bis zu <span class="formula">sat</span> = <span class="formula">sat</span><span class="formula_subscript">crit</span></p>
+                        <p class="CellText">
+                            <span class="formula">b</span>
+                            <span class="symbol" style="line-height: 11pt;">Î</span> [0.00;10]</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;font-size: 8pt;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">Skalierungsparameter zur Abstimmung der Dimensionen von <span class="formula">q</span> und <span class="formula">q</span><span class="formula_subscript">max</span></p>
+                        <p class="CellText">
+                            <span class="formula">c</span>
+                            <span class="symbol" style="line-height: 11pt;">Î</span> [0.00;100]</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 12: ">CR-Funktionstyp LOHSE</p>
+            </caption>
+        </table>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_CR-Curve_LOHSE.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">
+            <MadCap:keyword term="CR-Funktionen: Lohse" />
+            <MadCap:keyword term="Lohse (CR-Funktion)" />CR-Funktionstyp LOHSE</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="342px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="153px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellCaption">
+                            <img src="../Resources/Images/VDFunction_Linear_Bottleneck.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997767px;margin-bottom: 1, 000063px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">Linearer Engpass</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">Der Funktionstyp wurde aus Metropolis übernommen und sollte nicht für statische Umlegungen verwendet werden, da bei Erreichen der Sättigung ein extrem starker Anstieg erfolgt, während zuvor die zunehmende Auslastung nicht berücksichtigt wird.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 13: ">
+                    <MadCap:keyword term="CR-Funktionen: linearer Engpass" />
+                    <MadCap:keyword term="Linearer Engpass (CR-Funktion)" />CR-Funktionstyp Linearer Engpass (Linear Bottleneck)</p>
+            </caption>
+        </table>
+        <p class="Text">Manche Projekte erfordern jedoch nicht-standardisierte CR-Kurven, weil sie beispielsweise weitere Streckenattribute enthalten oder weil die Konvertierung von Belastungen in Pkw-Einheiten (PkwE) projektspezifisch ist. In diesem Fall können Anwender die vordefinierten CR-Kurven mit ihren eigenen Formeln erweitern <MadCap:xref class="sieheUeberschrSeite" href="1_5_Benutzerdefinierte CR-Funktionen.htm#1_benutzermodell_iv_2033098965_1026637"><span style="color: Black;" class="mcFormatColor">(</span><u>Benutzerdefinierte CR-Funktionen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+    </body>
+</html>

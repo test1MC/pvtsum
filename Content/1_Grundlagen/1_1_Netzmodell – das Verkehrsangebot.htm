@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="R2;bzw;ggf;usw;DiffNet;Be" MadCap:lastBlockDepth="4" MadCap:lastHeight="666" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_grundlagen_des_programms_3110159993_1027586">
+            </a>Netzmodell – das Verkehrsangebot</h2>
+        <p class="Text">
+            <MadCap:keyword term="Netzmodell" />Ein <span class="gui_element">Netzmodell</span> für das System Verkehr muss die räumliche und zeitliche Struktur des Verkehrsangebotes abbilden. Das Netzmodell besteht dazu aus einer Menge von Netzobjekten, die alle relevanten Daten des Verkehrswegenetzes, der Linien und Fahrpläne sowie der Verkehrszellen beinhalten. Im Folgenden werden die wichtigsten Netzobjekttypen in <MadCap:variable name="PTV_Manual.Programmname" /> beschrieben.</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Bezirke</span> (auch Verkehrszellen genannt) beschreiben die Lage von Nutzungen im Netz (zum Beispiel Wohngebiete, Arbeitsstätten, Einkaufszentren, Schulen). Sie sind Ausgangspunkt und Ziel von Ortsveränderungen, das heißt von Verkehr, und über Anbindungen mit dem Netz verbunden.</LI>
+            <LI class="List0">
+                <span class="gui_element">Knoten</span> sind Punktobjekte, die die räumliche Lage von Straßenkreuzungen und von Verzweigungen im Schienennetz definieren. Sie sind Anfangs- oder Endpunkte von Strecken.</LI>
+            <LI class="List0">
+                <span class="gui_element">Strecken</span> verbinden Knoten und beschreiben so die Struktur des Straßen- und Schienennetzes. Eine Strecke ist eine gerichtete Kante, das heißt Hin- und Rückrichtung sind eigenständige Netzobjekte.</LI>
+            <LI class="List0">
+                <span class="gui_element">Abbieger</span> geben an, ob an einem Knoten abgebogen werden darf und wie viel Zeitzuschlag für den Abbiegevorgang berücksichtigt wird.</LI>
+            <LI class="List0">
+                <span class="gui_element">Anbindungen</span> schließen Bezirke an das Streckennetz an. Sie entsprechen den Zu- und Abgangswegen zwischen Bezirksschwerpunkt und Knoten.</LI>
+            <LI class="List0">
+                <span class="gui_element">Haltestellen</span> sind untergliedert in Haltestellenbereiche und Haltepunkte, welche den Ort darstellen, an dem eine Linie zum Beispiel für den Fahrgastwechsel oder für das Be- und Entladen hält.</LI>
+            <LI class="List0">
+                <span class="gui_element">Linien</span>, die im Fahrplanbuch mit einem Liniennamen gelistet sind, haben in der Regel eine Hin- und eine Rückrichtung. Eine Linie kann aus mehreren Linienvarianten bestehen, so genannten Linienrouten, die sich zum Beispiel in ihrem Linienweg unterscheiden. Jede Linienroute beschreibt den räumlichen Verlauf einer Linie, auf dem ein oder mehrere zeitliche Verläufe (Fahrzeitprofile) definiert sind.</LI>
+            <LI class="List0">
+                <span class="gui_element">Gebiete</span> sind Netzobjekte, mit denen sich zum Beispiel Stadt- und Kreisgrenzen abbilden lassen. Basierend auf einem Polygon, das die Gebietsgrenze definiert, können Kenngrößen des IV und für Linienverkehre oder Einzelfahrten des ÖV für jedes Gebiet schnittscharf ausgewiesen werden.</LI>
+        </ul>
+        <p class="Text">Jedes dieser Netzobjekte wird durch Attribute beschrieben. Attribute können wie folgt untergliedert werden.</p>
+        <ul>
+            <LI class="List0">Eingabe-Attribute, wie Streckenlänge oder Streckennummer</LI>
+            <LI class="List0">berechnete Attribute (Ausgabe-Attribute), wie Einsteiger an einer Haltestelle oder die Anzahl der umgelegten Fahrzeuge. Sie werden erst im Laufe von Berechnungsverfahren mit Werten befüllt.</LI>
+        </ul>
+        <p class="Text">Für alle Netzobjekttypen können zusätzlich so genannte benutzerdefinierte Attribute angelegt werden. Sie können Zusatzinformationen oder temporäre Werte enthalten, die wie „normale“ Attribute in tabellarischen und grafischen Darstellungen sowie in Filtern zur Verfügung stehen. Da diese zum Verständnis der Grundlagen nicht erforderlich sind, wird an dieser Stelle darauf nicht weiter eingegangen.</p>
+        <p class="Text">Das integrierte Netzmodell unterscheidet zwischen Verkehrssystemen vom Typ IV und Typ ÖV. IV-Verkehrssysteme sind abhängig von der zulässigen Geschwindigkeit und der Streckenkapazität, ÖV-Verkehrssysteme verkehren nach einem Fahrplan.</p>
+    </body>
+</html>

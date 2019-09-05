@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="588" MadCap:lastWidth="510" MadCap:ignoredWords="Nr;No;xls">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_netz_bearbeiten_23091886_1132075">
+            </a>Streckenattributwerte aus Abbiegerattributwerten erzeugen<a name="27112"></a><a name="27027"></a></h3>
+        <p class="Text">
+            <MadCap:keyword term="Strecken: Streckenattribute erzeugen" />Mit dieser Funktion können Sie aus den vorliegenden Werten eines Abbiegerattributs oder Oberabbiegerattributs die Streckenattributwerte erzeugen. </p>
+        <p class="Text">Folgende Regeln gelten:</p>
+        <ul>
+            <LI class="List0">Sind beide Endknoten einer Strecke nicht Teil eines Oberknotens, werden die Streckenattribute aus Abbiegerattributen belegt.</LI>
+            <LI class="List0">Handelt es sich um eine innere Strecke, sind also beide Endknoten einer Strecke Teil des gleichen Oberknotens, werden die Streckenattribute aus Abbiegerattributen belegt. </LI>
+            <LI class="List0">Ist ein Endknoten (Knoten 1) einer Strecke Teil eines Oberknotens und der andere Endknoten (Knoten 2) nicht Teil eines Oberknotens, so werden für die Berechnung die Werte des Oberabbiegers (Knoten 1) und die Werte des Abbiegers (Knoten 2) verwendet.</LI>
+            <LI class="List0">Ist ein Endknoten (Knoten 1) einer Strecke Teil eines Oberknotens und der andere Endknoten (Knoten 2) Teil eines anderen Oberknotens, so werden für die Berechnung nur die Werte der Oberabbieger verwendet. </LI>
+        </ul>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Voraussetzung ist, dass für Abbieger Belastungszähldaten als Abbiegerattribute vorliegen.</p>
+                        <p class="Text">Sie können Streckenattributwerte auch aus anderen Attributen der Abbieger am Von-Knoten oder Nach-Knoten der Strecke erzeugen. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Setzen Sie bei Bedarf die Strecken aktiv, deren Streckenattribute sie aus den Werten von Abbieger- oder Oberabbiegerattributen belegen möchten, über</p>
+        <ul>
+            <LI class="List1">die räumliche Auswahl <MadCap:xref class="sieheUeberschrSeite" href="Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> und/oder</LI>
+            <LI class="List1">Filter <MadCap:xref class="sieheUeberschrSeite" href="Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><u>Netzobjekte über Filter aktiv und passiv setzen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+        </ul>
+        <p class="Stepresult">Die ausgewählten Strecken sind aktiv.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Klicken Sie im Fenster <span class="gui_element">Netz</span> mit der rechten Maustaste auf die Schaltfläche <span class="gui_element">Strecken</span>.</p>
+        <p class="Stepresult">Das Kontextmenü <span class="gui_element">Strecken </span>öffnet sich.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie den Eintrag <span class="gui_element">ZWerte belegen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Mehrfach-Bearbeiten Strecken</span> öffnet sich.</p>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_link_turnaddvals.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000074px;" />
+        </p>
+        <table class="TableStyle-TipHint2" style="width: 478px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="478px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Tipp" MadCap:autonum="Tipp: ">Ist der Netzobjekttyp Strecken ausgewählt, können Sie das Fenster <span class="gui_element">Mehrfach-</span><span class="gui_element">Bearbeiten</span><span class="gui_element"> Strecken</span> auch über das Menü <span class="gui_element">Bearbeiten&#160;&gt; ZWerte belegen</span> aufrufen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Stellen Sie sicher, dass das Register <span class="gui_element">Sonderfunktionen</span> aktiv und in der Auswahlliste der Eintrag <span class="gui_element">Abbiege-ZWerte</span> ausgewählt sind.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_PKT.flsnp" />
+        </p>
+        <table class="TableStyle-gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nur aktive</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, wird der Wert der ausgewählten Attribute aller aktiven Strecken geändert.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, wird der Wert der ausgewählten Attribute aller Strecken geändert.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Streckenattribut</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Schaltfläche können Sie das Attribut auswählen, das mit den Werten eines Abbiegerattributs belegt werden soll.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">setzen auf</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Gewünschte Einstellung in der Auswahlliste auswählen</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Die Attributwerte je Knoten der Strecke werden verglichen und der Wert abhängig von der ausgewählten Einstellung ermittelt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Abbiegerattribut</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Schaltfläche können Sie das Attribut auswählen, aus dem Sie das Streckenattribut belegen möchten.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Oberabbiegerattribut</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche können Sie das Attribut auswählen, aus dem Sie das Streckenattribut belegen möchten.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">addieren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Ist die Option ausgewählt, werden die ermittelten Attributwerte und bereits vorhandene Streckenattributwerte addiert.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Belegen</span>.</p>
+        <p class="Stepresult">Die neuen Werte werden für das gewählte Streckenattribut ermittelt.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">Schließen</span>.</p>
+    </body>
+</html>

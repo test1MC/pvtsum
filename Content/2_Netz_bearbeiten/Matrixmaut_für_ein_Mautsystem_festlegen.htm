@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="533" MadCap:lastWidth="510" MadCap:ignoredWords="Nr;No;xls" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_netz_bearbeiten_23091886_2305306">
+            </a>
+            <a name="2_netz_bearbeiten_23091886_97987">
+            </a>Matrixmaut für ein Mautsystem festlegen<a name="20144"></a><a name="31006"></a><a name="20320"></a></h3>
+        <p class="Text">
+            <MadCap:keyword term="Kordonknoten:Mautsystem" />
+            <MadCap:keyword term="Straps" />
+            <MadCap:keyword term="Matrixmaut" />
+            <MadCap:keyword term="Mautsysteme:Matrixmaut festlegen" />Für das TRIBUT-Lernverfahren können Sie Mautsysteme verwenden. Für Mautsysteme vom Typ Matrixmaut müssen Sie die Maut für jede mögliche Relation von Kordonknoten und pro Verkehrssystem explizit festlegen. Ein Kordonknoten ist ein (Ober-)Knoten am Rand des Mautsystems. Er ist zum einen verbunden mit Strecken eines Mautsystems und zum anderen mit Strecken, die nicht zu diesem Mautsystem gehören, oder mit einer Anbindung. <MadCap:variable name="PTV_Manual.Programmname" /> stellt alle Relationen von Kordonknoten in einer Liste zur Verfügung.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Es ist aus zwei Gründen ratsam, die Anzahl der Kordonknoten und damit der Relationen gering zu halten. Zum einen sparen Sie Rechenzeit, zum anderen müssen Sie nicht so viele Mautbeträge definieren. Um die Anzahl zu reduzieren, können Sie beispielsweise folgende Maßnahmen treffen:</p>
+                        <ul>
+                            <LI class="List0">Fassen Sie Knoten zu Oberknoten zusammen, beispielsweise an Autobahnanschlüssen.</LI>
+                            <LI class="List0">Nehmen Sie die Zu- und Abfahrtsstrecken von Autobahnen mit in das Mautsystem auf.</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Stellen Sie sicher, dass Ihr Modell ein Mautsystem vom Typ Matrixmaut enthält <MadCap:xref class="sieheUeberschrSeite" href="Mautsystem_einfügen.htm#2_netz_bearbeiten_23091886_2019859"><span style="color: Black;" class="mcFormatColor">(</span><u>Mautsystem einfügen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Öffnen Sie die Liste <span class="gui_element">Mautmatrizen</span>&#160;<MadCap:xref href="../2_Daten_tabellarisch_grafisch_darstellen/2_12_Liste öffnen.htm" class="sieheUeberschrSeite"><span style="color: Black;" class="mcFormatColor">(</span><u>Liste öffnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Klicken Sie in der Symbolleiste der Liste auf die Schaltfläche hinter der Beschriftung <span class="gui_element">Mautsystem</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Mautsystem suchen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie das oder die gewünschten Mautsysteme aus.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Bestätigen Sie mit <span class="gui_element">Auswahl übernehmen</span>.</p>
+        <p class="Stepresult">Die Liste enthält automatisch alle Relationen von Kordonknoten der gewählten Mautsysteme. Wenn Sie dem Mautsystem weitere Strecken zuordnen, wird die Liste automatisch aktualisiert.</p>
+        <table class="TableStyle-TipHint2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="477px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Wenn Sie die Liste mit dem Fenster <span class="gui_element">Netzeditor</span> synchronisieren, werden die Verläufe, die zur aktuell ausgewählten Relation gehören, im Fenster <span class="gui_element">Netzeditor</span> farblich hervorgehoben. Zu einer Relation können mehrere Verläufe (= Straps) gehören, abhängig von der Eingangs- und Ausgangsstrecke und auch abhängig vom Verkehrssystem.</p>
+                        <p class="Text">Sie können verschiedene Eigenschaften der Straps als Attribute der Liste anzeigen.</p>
+                        <p class="Text">Wenn Sie bestimmte Eigenschaften des Netzes ändern, beispielsweise Strecken sperren oder Geschwindigkeiten ändern, kann es sein, dass die zuletzt berechneten Straps nicht mehr die kürzesten Verläufe darstellen. Um die Straps neu zu berechnen und die entsprechenden Werte in der Liste zu aktualisieren, klicken Sie auf die Schaltfläche <span class="gui_element">Straps neu berechnen</span>.</p>
+                        <p class="Text">Außerdem können Sie festlegen, dass Straps immer dann automatisch neu berechnet werden, wenn sie benötigt werden, beispielsweise um die Länge anzuzeigen (Menü <span class="gui_element">Bearbeiten</span>&#160;&gt; <span class="gui_element">Benutzereinstellungen</span>&#160;&gt; Eintrag <span class="gui_element">Netz</span>&#160;&gt; <span class="gui_element">Matrixmaut</span>&#160;&gt; Option <span class="gui_element">Straps automatisch neu berechnen</span>).</p>
+                        <p class="Text">Vor einer Umlegung, die Mautsysteme berücksichtigt, werden die Straps immer automatisch neu berechnet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="6. &#160;">Geben Sie in die Spalten <span class="gui_element">Maut-IVSys</span> und <span class="gui_element">Maut Gegenrichtung-IVSys</span> pro Verkehrssystem und Relation die gewünschten Mautbeträge ein.</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Legen Sie die Mautbeträge für alle Mautsysteme vom Typ Matrixmaut fest.</p>
+        <p class="Result">Die Einstellungen für die Matrixmaut sind vorgenommen.</p>
+    </body>
+</html>

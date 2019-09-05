@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;Umlegungs;netz;nachfrageseitige;Wardrop’schen" MadCap:lastBlockDepth="4" MadCap:lastHeight="583" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1615492">
+            </a>Hinweise für die praktische Modellierung für eine DUE-Umlegung</h3>
+        <p class="Text">Da bei der dynamischen Gleichgewichtsumlegung Netzmodellierungsfehler drastische Auswirkungen haben können, sollten Sie bei der Erstellung von Modellen für eine DUE-Umlegung folgende Hinweise beachten:</p>
+        <ul>
+            <LI class="List0">Die Streckenkapazität entspricht der Sättigungsverkehrsstärke. Der für einen Fahrstreifen typische Wert ist mit der Anzahl der Fahrstreifen der Strecke zu multiplizieren.</LI>
+            <LI class="List0">Engpässe an Knoten, zum Beispiel durch Steuerung, sind durch die Abbiegekapazitäten abzubilden. Letztere sind zum einen dafür verantwortlich, dass Stau durch überlastete Abbieger abgebildet werden kann, zum anderen wird dadurch der Zufluss auf überlastete Strecken stromaufwärts gesteuert.</LI>
+            <LI class="List0">Durch Ausgangskapazitäten von Strecken können Einflüsse von Mischfahrstreifen auf Abbiegekapazitäten korrigiert werden. Mischfahrstreifen werden bei der Definition von Abbiegekapazitäten vernachlässigt, was zu einer Überschätzung in der Summe der Kapazitäten aller Ausgangsabbieger einer Strecke führt. Ausgangskapazitäten sollten Sie in jedem Fall definieren, wenn auf detaillierte Abbiegekapazitäten verzichtet wird.</LI>
+            <LI class="List0">Bezirke sind im untergeordneten Netz anzubinden. Um ungewünschte Effekte beim Zufluss ins Netz zu vermeiden, empfehlen wir Ihnen, zusätzliche Strecken einzufügen, sodass an einarmige Knoten angebunden werden kann.</LI>
+            <LI class="List0">Wir empfehlen Ihnen, Zeitintervalle von maximal 5 bis 15&#160;min für die Umlegung zu verwenden. Dies gilt auch, wenn Sie sich bei der Analyse nur für Stundenwerte interessieren. In dem Fall können Umlegungs- und Analysezeitintervalle abweichend definiert werden.</LI>
+            <LI class="List0">Umlegungszeitintervalle und Nachlauf sind so zu definieren, dass alle Fahrzeuge ihr Ziel innerhalb dieses Zeitraums erreichen. Nach der Umlegung sollte mindestens im letzten Zeitintervall die Belastung für alle Netzobjekte null sein.</LI>
+            <LI class="List0">Es wird empfohlen, die Option <span class="gui_element">Rückstau</span> erst zu aktivieren, wenn plausible Ergebnisse ohne Stauausbreitung erzielt wurden. Auch bei nicht aktiviertem Rückstau werden Staulängen berechnet und ausgewiesen, allerdings repräsentieren sie in diesem Fall vertikale Staus, das heißt sie breiten sich nicht stromaufwärts aus. Insofern können Sie in der Analyse potentielle Netzmodellierungsfehler aufdecken. Auch über mehrere Zeitintervalle andauernde Staus auf Anbindungen sind ein Indikator für netz- oder nachfrageseitige Modellierungsfehler, die Sie korrigieren sollten. </LI>
+            <LI class="List0">Wir empfehlen, die Standardparameter für die Abbruchbedingungen anzupassen, da  ein frühzeitiger Abbruch der Umlegung zu falschen Ergebnissen führen kann.</LI>
+            <LI class="List0">Bei großen Modellen empfehlen wir auf das Speichern der Wege zu verzichten. Dadurch reduziert sich zum einen der Speicherverbrauch und zum anderen verbessert sich die Laufzeit.</LI>
+        </ul>
+    </body>
+</html>

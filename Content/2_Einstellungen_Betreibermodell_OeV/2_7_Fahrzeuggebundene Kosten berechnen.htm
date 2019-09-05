@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="Fahrzeugkombinations;kms;HP30;HP40;Init;Linienleistungs;erfolgsrechnung;TP;max;Anz;End;Mindest;Entf" MadCap:lastBlockDepth="4" MadCap:lastHeight="458" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_einstellungen_betreibermodell_oev_1111312306_1047755">
+            </a>Fahrzeuggebundene Kosten berechnen</h4>
+        <p class="Text">Die Fahrzeugkosten sind Teil der Betriebskosten (Allgemein) und werden mit dem Verfahren <span class="gui_element">ÖV-betriebliche Kennzahlen</span> berechnet <MadCap:xref class="sieheUeberschrSeite" href="2_7_Das Verfahren ÖV-betriebliche Kennzahlen durchführen.htm#2_einstellungen_betreibermodell_oev_1111312306_1096909"><span style="color: Black;" class="mcFormatColor">(</span><u>Das Verfahren ÖV-betriebliche Kennzahlen durchführen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Für die Berücksichtigung von Leerzeiten und Leerkilometern muss eine Umlaufbildung berechnet worden sein.</p>
+        <p class="Text">Nach der Eingabe der Kostensätze werden Kosten für den Fahrzeugeinsatz von <MadCap:variable name="PTV_Manual.Programmname" /> automatisch berechnet.</p>
+        <ul>
+            <LI class="List0">Stundenkosten = Stundensatz • Einsatzzeit</LI>
+        </ul>
+        <p class="Text2">Die Einsatzzeit setzt sich folgendermaßen zusammen.</p>
+        <ul>
+            <LI class="List1">Servicezeit (Lastzeit) für die Beförderung der Fahrgäste. Sie kann dem Fahrplan entnommen werden.</LI>
+            <LI class="List1">Wendezeiten für Verspätungspuffer, Fahrerpausen oder Umsetzen. Für die Ermittlung der Wendezeiten ist eine Umlaufbildung erforderlich, die Mindestwendezeiten für Fahrerpausen und Umsetzzeiten berücksichtigt sowie Standzeiten am Ende einer Fahrplanfahrt berechnet.</LI>
+            <LI class="List0">Kilometerkosten = Kilometersatz • Fahrzeugkilometer</LI>
+            <LI class="List1">Fahrzeugkilometer ergeben sich aus Fahrplanfahrten, Umsetzfahrten sowie Ein- und Aussetzfahrten einer Linie. </LI>
+            <LI class="List1">Die Fahrzeugkilometer für die Beförderung der Fahrgäste errechnen sich unmittelbar aus den Fahrplanfahrten des Fahrplans. </LI>
+            <LI class="List1">Die Berechnung der Umsetzkilometer erfordert eine Umlaufbildung.</LI>
+            <LI class="List0">Fahrzeugkosten = Fixkosten • Fahrzeuganzahl</LI>
+            <LI class="List1">Die Fixkosten erhöhen sich mit jedem zusätzlich notwendigen Fahrzeug. </LI>
+            <LI class="List1">Die Zahl der Fahrzeuge ergibt sich aus der Zahl der notwendigen Fahrzeugumläufe.</LI>
+        </ul>
+    </body>
+</html>

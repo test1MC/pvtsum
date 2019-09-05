@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W" MadCap:lastBlockDepth="2" MadCap:lastHeight="895" MadCap:lastWidth="697">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1083286">
+            </a>
+            <MadCap:keyword term="Netzobjekte: Oberabbieger" />
+            <MadCap:keyword term="Oberabbieger" />Oberabbieger</h4>
+        <p class="Text">Oberabbieger sind Bestandteile von Oberknoten. Sie werden automatisch erstellt, wenn ein Oberknoten definiert wird, und können anschließend manuell bearbeitet werden.</p>
+        <p class="Text">Oberabbieger besitzen die gleichen Attribute wie Abbieger. Sie werden automatisch bei allen Änderungen der Kordonstrecken, also beim Einfügen oder Entfernen von Kordonstrecken und bei Änderungen der Oberknotenzuordnung oder relevanter Attribute (<span class="gui_element">VSysSet</span>, <span class="gui_element">AnzFahrstreifen</span>), eingefügt oder entfernt.</p>
+        <p class="Text">Jede der Fahrtbeziehungen über den Oberknoten hinweg wird durch einen Oberabbieger repräsentiert. Ein Oberabbieger ist also der Übergang von einer Kordonstrecke auf eine andere. Wenn der Oberknoten nur aus einem einzigen Knoten besteht, entspricht dieser Oberabbieger also genau dem Abbieger zwischen den betroffenen Strecken. Es handelt sich also um eine Verallgemeinerung der gewöhnlichen Abbieger am Knoten auf die Ebene des Oberknotens.</p>
+        <p class="Text">Wenn wir nochmals den Kreuzungsbereich in <MadCap:xref class="Label_Image" href="1_2_Oberknoten.htm#1_netzmodell_1240632468_1082548"></MadCap:xref> betrachten und davon ausgehen, dass alle gezeigten Knoten zu einem Oberknoten zusammengefasst wurden, so bestehen sieben Kordonstrecken. Da von jeder in jede Kordonstrecke ein Oberabbieger führt, gibt es an diesem Oberknoten 49 Oberabbieger. Von diesen sind jedoch nicht alle sinnvoll befahrbar, weil sie in gegenläufige Einbahnstraßen münden <MadCap:xref class="sieheUeberschrSeite" href="#1_netzmodell_1240632468_1082778">(siehe „Nicht befahrbarer Oberabbieger“ auf Seite&#160;52)</MadCap:xref>. Als befahrbare Oberabbieger <MadCap:xref class="sieheUeberschrSeite" href="#1_netzmodell_1240632468_1082987">(siehe „Befahrbarer Oberabbieger“ auf Seite&#160;52)</MadCap:xref> verbleiben genau die 16 (oder bei gesperrten U-Turns 12) sinnvollen Fahrtbeziehungen über den Oberknoten hinweg.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_MainTurns_Closed.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997767px;margin-bottom: 0, 9997767px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_netzmodell_1240632468_1082987">
+            </a>
+            <a name="1_netzmodell_1240632468_93207">
+            </a> Befahrbarer Oberabbieger</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_MainTurns_Open.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997767px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_netzmodell_1240632468_1082778">
+            </a>
+            <a name="1_netzmodell_1240632468_30069">
+            </a>Nicht befahrbarer Oberabbieger</p>
+        <p class="Text">Innerhalb eines Oberknotens tritt der Oberabbieger vollkommen an die Stelle des Netzes. Das bedeutet, dass die verkehrstechnischen Eigenschaften, die beim Überqueren des Oberknotens wirksam werden, ausschließlich durch die Attribute des Oberabbiegers und des Oberknotens beschrieben werden. Ein Weg, der den Oberknoten überquert, befährt zwischen der eingehenden und der ausgehenden Kordonstrecke ausschließlich den Oberabbieger. Weder werden die Attribute der dazwischen liegenden (inneren) Strecken, Knoten und Abbieger ausgewertet, noch werden diese Netzobjekte in der Umlegung belastet.</p>
+    </body>
+</html>

@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="678" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="way;Way;Stop;wchar_t;langid;typ;numlanes;cap;v0;t0;gradient;pcuvol;vehvolsys;uval1;uval2;uval3;uvaltsys;10E10;BelPkwE;Fzg;f2;sat;crit;HGV;tchar;indHGV;index;of;the;tsys;_T;VDFID;MANEX;INTERFACE_VERSION;return;for;if;_tcscmp;else;std;pfd;MPA;multi;point;akt;CONICAL;CONICAL_MARGINAL;Ramp;Metering;Intersection;INRETS;sur;les;leur;Sécurité;SIGMOIDAL_MMF_NODES;Morgan;Mercer;Flodin;SIGMOIDAL_MMF_LINKS;TMODEL_LINKS;bzw;inkl;etc;xls;max;Program;Processor">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1037911">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_81406">
+            </a>Parameter der Dynamischen Gleichgewichtsumlegung (DUE)</h4>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1038047">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_34532">
+            </a>Dynamische Gleichgewichtsumlegung: Register Basis<a name="23203"></a><a name="23204"></a></h5>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Min. Kapazitätsfaktor für Gridlockbedingungen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Bilden mehrere verkehrsreiche Strecken einen geschlossenen Kreis im Netz, kann die dynamische Umlegung zu einem Gridlock führen - das Netz wird zugestaut. Im einfachsten Fall geschieht das bei einem Kreisverkehrsplatz, der in mehrere Einzelknoten aufgelöst ist. Ein Gridlock kann tatsächlich eine reale Überlastung darstellen, manchmal handelt es sich jedoch um ein Artefakt, das nur als Zwischenzustand während der Iterationen auftritt. Um diese künstlichen Gridlocks zu umgehen, kann eine (kleine) Menge der Streckenkapazität immer verfügbar gemacht werden, selbst unter sehr verkehrsreichen Bedingungen. </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Ein Gridlock ist stark von Verflechtungsprioritäten beeinflusst, besonders im Fall von Kreisverkehren, in denen – wie in der Realität – die Fahrzeuge Vorrang haben sollten, die sich bereits im Kreisverkehr befinden. Innerhalb von DUE werden Verflechtungsprioritäten jedoch bei Auftreten von Rückstau auf der stromabwärts liegenden Kante auf der Basis der Abbiegerkapazitäten bestimmt <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Stochastische Umlegung.htm#1_benutzermodell_iv_2033098965_1385331"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Stochastische Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Das ermöglicht es, Abbiegerkapazitäten so zu definieren, dass sie den Abbiegerprioritäten entsprechen, wie im Beispiel unten, wo Strecken die echten Straßenkapazitäten simulieren, während Abbieger mit sehr hoher (unbegrenzter) Kapazität priorisierte Zuflüsse simulieren. Auch Dummy-Strecken können zu dem Zweck verwendet werden. </p>
+                        <p class="CellText">
+                            <img src="../Resources/Images/AREA_TurnCap3.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Kurzwegsuche</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Maximale erwartete Kosten</span>
+                        </p>
+                        <p class="CellText">Maximale generalisierte Kosten für jede Verbindung im Netz.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Auf dem Stand der jetzigen Implementierung verwendet DUE eine Kurzwegsuche, die auf der Schätzung der maximalen Kosten basiert. Die generalisierten Kosten werden in monetären Werten wiedergegeben und der standardmäßige value of time (10 Währungseinheiten / h) und die standardmäßig maximalen Kosten von 100 entsprechen einer maximalen Reisezeit von 10 h je Quelle-Ziel-Beziehung. Die Werte sind zu ändern, falls sie im aktuellen Netz größer sind.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Diskretisierung der Kosten</span>
+                        </p>
+                        <p class="CellText">Kleinste Differenz generalisierter Kosten, die als ungleich null gilt.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Je kleiner die Diskretisierung der Kosten, desto langsamer die Simulation.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Abbruchbedingung</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Maximale Rechenzeit</span>
+                        </p>
+                        <p class="CellText">Das Verfahren bricht nach der eingestellten Rechenzeit ab.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Maximale Anzahl Iterationen</span>
+                        </p>
+                        <p class="CellText">Das Verfahren bricht nach der eingestellten Anzahl äußerer Iterationen ab.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Maximale relative Abweichung</span>
+                        </p>
+                        <p class="CellText">Das Verfahren bricht ab, wenn die relative Abweichung des Widerstands das Konvergenzkriterium erreicht hat <MadCap:xref class="Grundlagen" href="../1_Benutzermodell IV/1_5_Konvergenzkriterien_der_Umlegungsqualitaet.htm#1_benutzermodell_iv_2033098965_1222416"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Grundlagen: </span><u>Konvergenzkriterien der Umlegungsqualität</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Rückstau</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Rückstau berechnen</span>
+                        </p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, wird im Modell horizontaler Stau berücksichtigt. Falls der horizontale Stau über die Länge der Strecke hinausgeht, setzt er sich auf stromaufwärts liegende Strecken fort.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Ein Rückstau ist ein eigenständiges Teilproblem des Netzausgleichs, das durch eine geschachtelte innere Iteration gelöst wird.</p>
+                        <p class="CellText">Horizontale Staus führen zu realistischeren Staueffekten. Ihre Berechnung dauert jedoch länger.</p>
+                        <p class="CellText">Das Streckenattribut <span class="gui_element">PlatzProPKWE</span> ist entscheidend für die horizontale Staupropagierung. Wird der Stau in Bezug auf beobachtete oder erwartete Daten zu schnell rückwärts propagiert, sollte der Wert <span class="gui_element">PlatzProPKWE</span> herabgesetzt werden.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, geht das Modell von vertikalem Stau aus.</p>
+                        <p class="CellText">Auch dieser erfasst, wo Strecken überlastet sind, leitet aber Belastungen nicht auf stromaufwärts liegende Strecken weiter.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Gibt es vertikalen Stau (die Rückstauberechnung ist also nicht aktiv), sind die Streckenattribute <span class="gui_element">PlatzProPKWE</span> und <span class="gui_element">DUEStauWellenGeschw</span> nicht erforderlich.</p>
+                        <p class="CellText">Wir empfehlen, das Verfahren in einem neuen Netz zuerst ohne Rückstau zu rechnen, da Sie so Probleme oder Eingabefehler, zum Beispiel inkorrekte Strecken- oder Abbiegerkapazitäten, leicht identifizieren können.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Maximale Anzahl Iterationen</span>
+                        </p>
+                        <p class="CellText">Maximale Anzahl der Iterationsschritte für die Rückstauberechnung</p>
+                        <p class="CellText">
+                            <span class="gui_element">Maximale relative Abweichung</span>
+                        </p>
+                        <p class="CellText">Die Rückstauberechnung bricht ab, wenn für alle Strecken die relative Abweichung der Ausgangskapazitäten zwischen der aktuellen und der vorigen Rückstauiteration kleiner als der angegebene Wert ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_1038050">
+            </a>
+            <a name="2_einstellungen_benutzermodell_iv_1682368020_70867">
+            </a>Dynamische Gleichgewichtsumlegung: Register Umlegungszeitraum<a name="23202"></a></h5>
+        <p class="Text">In diesem Register legen Sie den Umlegungszeitraum fest und unterteilen ihn für die Berechnung in Zeitintervalle. Die Zeitintervalle können unterschiedlich lang sein, beispielsweise können nachts längere Zeitintervalle und während Spitzenzeiten kürzere genutzt werden. Dafür unterteilen Sie den Umlegungszeitraum in mehrere größere Zeitabschnitte, innerhalb derer Sie jeweils die Anzahl und damit die Länge der Zeitintervalle festlegen.</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Die Rechenzeit erhöht sich in etwa proportional mit der Summe der definierten Zeitintervalle.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_AssignmProc_DUE_Timeintervall.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <table class="TableStyle-gui_elements1" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="92px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="405px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">von</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Beginn des Umlegungszeitraums</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Der Umlegungszeitraum kann länger als 24 Stunden sein, damit auch bei einer Ganztagsumlegung ein angemessener Nachlauf eingestellt werden kann.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">bis</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Ende des Umlegungszeitraums</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Diesen Wert können Sie nicht ändern. <MadCap:variable name="PTV_Manual.Programmname" /> berechnet ihn anhand der in der Tabelle festgelegten Zeitintervalle.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">bis Zeit</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ende der definierten Zeitabschnitte</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl Zeitintervalle</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl der Zeitintervalle im angegebenen Zeitabschnitt.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Aus der <span class="gui_element">bis Zeit</span> und der <span class="gui_element">Anzahl Zeitintervalle</span> berechnet <MadCap:variable name="PTV_Manual.Programmname" /> die <span class="gui_element">Länge eines Zeitintervalls</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Nachlaufintervall</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden die Gewichte einer bestehenden Ganglinie für die Nachfrage in diesem Zeitraum auf 0 gesetzt. Durch diese Option wird vermieden, dass die Ganglinie angepasst werden muss, wenn der Umlegungszeitraum früher als die Nachfrageganglinie endet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Einfügen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Über die Schaltfläche fügen Sie eine neue Zeile ein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Löschen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Über die Schaltfläche löschen Sie die aktuell ausgewählte Zeile.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Zeitintervalle als Analysezeitintervalle übernehmen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden die hier definierten Zeitintervalle auch als Analysezeitintervalle genutzt.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Falls in den allgemeinen Verfahrenseinstellungen Analysezeitintervalle definiert sind, werden diese ignoriert.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, werden die hier definierten Zeitintervalle nicht als Analysezeitintervalle übernommen. Stattdessen werden die in den allgemeinen Verfahrenseinstellungen definierten Analysezeitintervalle für die Berechnung der Ergebnisse (zum Beispiel Belastungen) verwendet <MadCap:xref class="sieheUeberschrSeite" href="../2_Verfahrensablauf_festlegen/2_4_Analysezeitintervalle festlegen.htm#2_verfahrensablauf_festlegen_40480990_1071745"><span style="color: Black;" class="mcFormatColor">(</span><u>Analysezeitintervalle festlegen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wenn Sie die hier definierten Zeitintervalle nicht als Analysezeitintervalle übernehmen, sollten Sie darauf achten, dass die verschiedenen Intervalle zusammenpassen. Beispielsweise können Sie mehrere Zeitintervalle zu längeren Analysezeitintervallen zusammenfassen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Dynamische Gleichgewichtsumlegung: Register Wahl<a name="23205"></a></h5>
+        <p class="Image">
+            <img src="../Resources/Images/WIN_AssignmProc_DUE_Choice.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Anzahl deterministischer Iterationen vor den Probit-Iterationen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Anzahl der ersten Iterationen des Verfahrens, die eine Alles-oder-Nichts-Umlegung verwenden, bis der günstigste Weg je Quelle-Ziel-Beziehung gefunden ist. Danach folgen die Probit-Iterationen, bei denen die Netzbelastungen gestört werden, um alternative Wege zu erzeugen.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wenn Sie Probit deaktivieren möchten, setzen Sie den Wert auf die <span class="gui_element">Maximale Anzahl Iterationen</span> im Bereich <span class="gui_element">Abbruchbedingung </span><MadCap:xref class="sieheUeberschrSeite" href="#2_einstellungen_benutzermodell_iv_1682368020_1038047"><span style="color: Black;" class="mcFormatColor">(</span><u>Dynamische Gleichgewichtsumlegung: Register Basis</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Multiplikator für die Maut</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">b</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Multiplikator für die Fahrzeit, d.&#160;h. value of time</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">c</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Multiplikator für eine frühe Abfahrt, d&#160;h. für die Differenz zwischen gewünschter Abfahrtszeit und tatsächlicher Abfahrtszeit (falls die tatsächliche Abfahrtszeit vor der gewünschten liegt)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">d</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Multiplikator für eine späte Abfahrt, d.&#160;h. für die Differenz zwischen tatsächlicher Abfahrtszeit und gewünschte Abfahrtszeit (falls die tatsächliche Abfahrtszeit nach der gewünschten liegt)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">max. DeltaT(früh)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Maximale Verschiebung der tatsächlichen Abfahrtszeit auf einen Zeitpunkt, der eher ist als die Wunschabfahrtszeit.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wenn Sie die Wahl der Abfahrtszeit deaktivieren möchten, setzen Sie den Wert auf 0.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">max. DeltaT(spät)</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Maximale Verschiebung der tatsächlichen Abfahrtszeit auf einen Zeitpunkt, der später ist als die Wunschabfahrtszeit.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Wenn Sie die Wahl der Abfahrtszeit deaktivieren möchten, setzen Sie den Wert auf 0.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Varianz</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Für Probit-Iterationen die Varianz der Normalverteilung, aus der die gestörten Netzwiderstände gewonnen werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

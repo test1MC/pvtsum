@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="598" MadCap:lastWidth="511" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb;AnteilAkzGEH;V';β;FPreis;DTfrüh;DTspät;Fak4;UZ;bzw;spaet;frueh;Fak;Tfrueh;Tspaet;Verfrühungs;DT">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_benutzermodell_oev_2318507456_1071482">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_24996">
+            </a>Zeitliche Nutzbarkeit</h3>
+        <p class="Text">
+            <MadCap:keyword term="Fahrplanfeine Umlegung: Zeitliche Nutzbarkeit" />
+            <MadCap:keyword term="Zeitliche Nutzbarkeit" />Beim fahrplanfeinen Umlegungsverfahren geht die zeitliche Nutzbarkeit einer Verbindung als weitere Kenngröße in die Definition des Widerstands ein <MadCap:xref class="sieheUeberschrSeite" href="1_6_Widerstandsfunktionen im OeV.htm#1_benutzermodell_oev_2318507456_1066686"><span style="color: Black;" class="mcFormatColor">(</span><u>Widerstandsfunktionen im ÖV</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Unter zeitlicher Nutzbarkeit wird verstanden, wenn die Wunschabfahrtszeit der Nachfrage und Abfahrtszeiten des Angebots berücksichtigt werden. Gleiches gilt analog für die Wunschankunftszeit bzw. Ankunftszeiten des Angebots, wenn als Zeitbezug der Nachfrage die Ankunftszeit definiert ist. Dieser Fall wird nachfolgend nicht mehr explizit beschrieben. </p>
+        <p class="Text">Die zeitliche Nutzbarkeit einer Verbindung hängt ab von folgenden Größen.</p>
+        <ul>
+            <LI class="List0">Wunschabfahrtszeit, die durch die Ganglinie der Verkehrsnachfrage angegeben wird</LI>
+            <LI class="List0">Zeitdifferenz <span class="symbol">D</span><span class="formula">T</span> zwischen angebotener Abfahrtszeit und Wunschabfahrtszeit </LI>
+            <LI class="List0">Toleranz gegenüber Abweichungen der angebotenen Zeit von der Wunschabfahrtszeit, die Verfrühungs- oder Verspätungsempfindlichkeit genannt wird</LI>
+        </ul>
+        <p class="Text">Damit kann modelliert werden, dass auch die<span class="gui_element"> zeitliche Lage</span> einer Verbindung Einfluss auf ihre Attraktivität besitzt.</p>
+        <p class="Text">Die zeitliche Nutzbarkeit einer Verbindung ist für dasjenige Zeitintervall am größten, in dem die Verbindung liegt, denn dort gilt <span class="formula">T = 0</span>. Je größer <span class="symbol">D</span><span class="formula">T</span> wird, desto mehr nimmt die zeitliche Nutzbarkeit ab.</p>
+        <p class="Text">Im fahrplanfeinen Verfahren wird die zeitliche Nutzbarkeit auf unterschiedliche Weise in die Definition des Widerstands eingebaut – einmal durch Verwendung einer Funktion <span class="formula">N = f</span><span class="symbol">D</span><span class="formula">T</span>, einmal durch direkten Gebrauch von <span class="symbol">D</span><span class="formula">T</span>. In beiden Fällen kann die Verfrühungs- oder Verspätungsempfindlichkeit durch Parameter eingestellt werden.</p>
+        <p class="Text">Für beide Varianten gilt folgendes.</p>
+        <p class="Text">Je geringer der Abstand zwischen tatsächlicher und Wunschabfahrtszeit, desto höher ist die zeitliche Nutzbarkeit der Verbindung und desto geringer ist ihr Widerstand.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px; caption-side: bottom; mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css'); mc-table-style-original: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="247px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="249px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText">Ganglinie mit Stundenintervallen</p>
+                        <p class="CellText">
+                            <span class="_Override" style="font-family: Symbol;">D</span>T (6-7) = 7.20 – 7.00 = 20 min</p>
+                        <p class="CellText">
+                            <span class="_Override" style="font-family: Symbol;">D</span>T (7-8) = 0 min</p>
+                        <p class="CellText">
+                            <span class="_Override" style="font-family: Symbol;">D</span>T (8-9) = 8.00 – 7.20 = 40 min</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="ImageOH" style="font-weight: normal;font-style: normal;font-size: 8pt;letter-spacing: 0em;color: #000000;line-height: 11pt;text-decoration: none;">
+                            <img src="../Resources/Images/DIAG_Determination_DT.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;width: 239px;height: 104px;" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Beispiel für die Ermittlung der Zeitdifferenz <span class="_Override" style="font-family: Symbol;font-style: italic;">D</span>T</p>
+            </caption>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="399" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen,PTV_Manual.Ready_for_translation" MadCap:ignoredWords="R2;bzw;ggf;usw;DiffNet;Be;v0IV;DIFFNET;Netz1;Netz2;steuerung;horizonte;xx">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>Ausführen der verteilten Berechnung von Verfahren</h3>
+        <p class="Text">
+            <MadCap:keyword term="Verteilte Berechnung:Verfahren berechnen" />Die Ausführung bestimmter Berechnungsverfahren des Verfahrensablaufes kann im Rahmen des Verteilten Rechnens auf andere Rechenknoten ausgelagert werden.</p>
+        <p class="Text">Dazu wird im Verfahrensablauf in der Spalte <span class="gui_element">Rechenknoten</span> der für die Berechnung vorgesehene Rechenknoten ausgewählt. Bei der Ausführung des Verfahrens überträgt <MadCap:variable name="PTV_Manual.Programmname" /> automatisch die benötigten Daten an den Rechenknoten und startet dort die Berechnung.</p>
+        <p class="Text">Gleichzeitig werden die weiteren Verfahren des Verfahrensablaufes ausgeführt. So können voneinander unabhängige Berechnungen, wie beispielsweise Umlegungen für IV und ÖV, oder VISEM-Berechnungen für verschiedene Nachfrageschichten gleichzeitig durchgeführt werden.</p>
+        <p class="Text">Mittels des neuen Verfahrens <span class="gui_element">Verfahrensergebnisse zusammenführen</span> werden die Ergebnisse vom Rechenknoten heruntergeladen und stehen für die weiteren Berechnungsschritte zur Verfügung. Dieses Verfahren muss also im Verfahrensablauf zwischen dem verteilten Verfahren und den von seinen Ergebnissen abhängigen weiteren Schritten eingefügt werden.</p>
+        <p class="Text">Die Verteilte Berechnung steht für die folgenden Verfahren zur Verfügung:</p>
+        <ul>
+            <LI class="List0">IV-Umlegung</LI>
+            <LI class="List0">IV-Kenngrößenmatrix berechnen</LI>
+            <LI class="List0">ÖV-Umlegung</LI>
+            <LI class="List0">ÖV-Kenngrößenmatrix berechnen</LI>
+            <LI class="List0">VISEM-kombinierte Verkehrsverteilung/Moduswahl</LI>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="3009" MadCap:lastWidth="740" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;Control;operationControlPoints;published;kombinationen;ini;Sektionsnamen;Verknüpfungs;LinkDefaults;Condition;Ways;Way;highway;motorway;trunk;rail;junction;yes;no;xxx;etc" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1293626">
+            </a>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_33849">
+            </a>Konfigurationsdatei für Importparameter</h4>
+        <p class="Text">Die Konfigurationsdatei <span class="path">*.cfg</span> ist eine Textdatei, die ähnlich den Windows-Dateien des Typs <span class="path">*.ini</span> aufgebaut ist. In ihr werden Parameterwerte für den Importvorgang definiert, die insbesondere die Zuweisung von Verkehrssystemen und Streckentypen anhand der Tag-Werte in den OSM-Daten steuern. Sie können diese Dateien anpassen, um beispielsweise die Zuordnung von Streckentypen zu Strecken zu steuern. Die Anpassungen sollten mit den Änderungen an der Netzdatei mit Voreinstellungen übereinstimmen.</p>
+        <p class="Text">Die Einstellungen in dieser Datei sind auf mehrere Sektionen aufgeteilt, die mit dem Sektionsnamen in eckigen Klammern beginnen. Innerhalb der Sektion stehen entweder einzelne Einstellungen als Schlüssel-Wert-Paare der Form Schlüssel = Wert, oder umfangreichere Konfigurationstabellen, in denen beispielsweise für sämtliche Streckentypen die Standardbelegungen für Tags definiert werden. Diese Tabellen enthalten eine Kopfzeile mit Tag-Namen oder speziellen Bezeichnern und darunter mehrere Zeilen mit Werten oder Ausdrücken für diese Tags. Alle Werte in diesen Tabellen werden durch ein Semikolon getrennt. Textwerte stehen in einfachen oder doppelten Anführungszeichen. Texte, die nicht in Anführungszeichen stehen, werden als Namen von Tags interpretiert und entsprechend ausgewertet. Basierend auf Zahlen, Texten, Tag-Namen und diversen Vergleichs-, Verknüpfungs- und Rechenoperatoren, können Ausdrücke und Bedingungen in die Tabellen eingetragen werden.</p>
+        <p class="Text" style="font-weight: bold;font-style: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+            <span class="gui_element">Beispiel:</span>
+        </p>
+        <p class="Text">
+            <img src="../Resources/Images/AREA_OSM_Example.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <h5>Die wichtigsten Sektionen in dieser Datei sind im Folgenden kurz beschrieben.</h5>
+        <h5>
+            <span class="gui_element">[SetTSysSet]</span>
+        </h5>
+        <p class="Text">Steuert die Zuordnung von OSM-Verkehrsmitteln zu <MadCap:variable name="PTV_Manual.Programmname" />-Verkehrssystemen. Die OSM-Verkehrsmittel werden im Importvorgang über Tags mit Namen wie O2V_CAR angesprochen. In dieser Sektion werden jedem verwendeten OSM-Verkehrsmittel ein oder mehrere, durch Komma getrennte, Verkehrssystem-Codes entsprechend der Netzdatei mit Voreinstellungen zugeordnet. <MadCap:variable name="PTV_Manual.Programmname" />-Verkehrssysteme können mehreren OSM-Verkehrsmitteln zugeordnet sein. OSM-Verkehrsmittel, die in dieser Sektion nicht aufgeführt sind oder einen leeren Code enthalten, werden nicht ins Ergebnis übernommen. </p>
+        <h5>
+            <span class="gui_element">[LinkDefaults]</span>
+        </h5>
+        <p class="Text">In dieser Sektion werden Standardbelegungen für einige Tags definiert, die erst während des Importvorgangs angelegt werden. Hier werden Rückfallwerte definiert, die das Formulieren von Ausdrücken und Filterbedingungen vereinfachen, da nicht auf das mögliche Fehlen der verwendeten Tags geachtet werden muss. Die Konfigurationstabelle besteht aus einer Spalte <span class="gui_element">Condition</span> und beliebig vielen weiteren Spalten, deren Name jeweils für ein künstlich generiertes Tag an allen Ways verwendet wird.</p>
+        <p class="Text">In der Spalte <span class="gui_element">Condition</span> können Sie jeweils eine Bedingung definieren. Für jeden Way werden später alle diese Bedingungen Zeile für Zeile ausgewertet. Aus der ersten Zeile, bei der die Bedingung erfüllt ist, werden dann für alle übrigen Spaltennamen neue Tags mit den Spaltenwerten dieser Zeile als Wert generiert. Eine spezielle Zeile mit dem Eintrag „<span class="gui_element">*</span>“ als Bedingung definiert die Standardwerte, falls keine der Bedingungen zutrifft. Die Bedingungen in der Spalte <span class="gui_element">Condition</span> sollten sich ausschließlich auf solche Tags beziehen, die in den OSM-Daten in der Regel vorhanden sind, insbesondere auf das Tag <span class="gui_element">highway</span>.</p>
+        <p class="Text">Die Namen der durch diese Sektion generierten Tags müssen zu den im Importprozess und den in der Konfiguration verwendeten Tags passen. In den mitgelieferten Prozessdefinitionen werden die folgenden künstlichen Tags verwendet.</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="106px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="121px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="268px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Tag</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Werte</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">O2V_CATEGORY</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">motorway, trunk, rail,…</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Art der Strecke, Inhalt von highway-, junction- und rail-Tags (es sollte nur eins davon vorhanden sein)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">O2V_LANES</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">1...n</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Anzahl Fahrspuren</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">O2V_ONEWAY</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">yes|no|-1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Angabe, ob es sich im eine Einbahnstraße handelt. Der Wert -1 gibt an, dass die Fahrtrichtung entgegengesetzt der Digitalisierungsrichtung ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">O2V_MAXSPEED-</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0...</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Erlaubte Geschwindigkeit für PKW</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">O2V_CAR</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">yes|no</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Benutzung durch PKW möglich</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">O2V_HGV</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">yes|no</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Benutzung durch LKW möglich</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">O2V_LGV</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">yes|no</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Benutzung Lieferwagen möglich</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">O2V_PUT</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">yes|no</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Benutzung durch ÖPNV (Bus) möglich</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">O2V_BIKE</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">yes|no</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Benutzung durch Fahrrad möglich</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">O2V_FOOT</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">yes|no</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">Fußgänger</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Für diese Tags sollten Sie Standardwerte definieren. Wenn während des Importprozesses konkrete Werte für die Tags gefunden werden, überschreibt <MadCap:variable name="PTV_Manual.Programmname" /> die Standardwerte. Üblicherweise werden die so gesetzten Werte im Verlauf des Importprozesses überschrieben, sofern konkrete Informationen beispielsweise zur Befahrbarkeit durch LKW für einzelne Ways vorliegen.</p>
+        <h5>
+            <span class="gui_element">[LinkTypeRules]</span>
+        </h5>
+        <p class="Text">In dieser Sektion definieren Sie die Zuordnung von Streckentypen zu Strecken. Die Regeln für die Zuordnung sind in einer Konfigurationstabelle als eine Reihe von Kriterien für jeden einzelnen Streckentyp angegeben. Die Streckentypen werden der Reihe nach durchlaufen. Sind für einen Streckentyp alle definierten Kriterien erfüllt, wird dieser den aus einem Way generierten Strecken zugewiesen. In der Sektion vor der Tabelle können Sie einen <span class="gui_element">Default Type</span> definieren. Er legt fest, wie mit den Strecken verfahren wird, denen kein Streckentyp zugewiesen werden kann, weil für keinen Streckentyp alle Kriterien erfüllt werden.</p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">DefaultType = 99</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Strecken erhalten den Wert „99“</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">DefaultType = DELETE</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Strecken werden nicht ins Ergebnis übernommen</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Konfigurationstabelle besteht aus einer Spalte <span class="gui_element">LinkType</span> und beliebig vielen weiteren Spalten, deren Namen jeweils den auszuwertenden Tags entsprechen.</p>
+        <p class="Text">In der Spalte <span class="gui_element">LinkType</span> sind jeweils die Nummern der Streckentypen aufgeführt, die betrachtet werden. Die übrigen Spalten sind entweder leer oder enthalten einen Kriteriumsausdruck. Der Ausdruck wird aus dem Tag-Namen der Spalte und dem Wert gebildet.</p>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="382px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Feldinhalt</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Form des Kriteriumsausdrucks</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">eine numerische oder alphanumerische Konstante (in Anführungsstrichen)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Spaltenname ~= Wert</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ein Tag-Name (alphanumerischer Wert ohne Anführungsstriche)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">Spaltenname == Wert (Tag-Name)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">Wert der Form [xxx]</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">Spaltenname € Wert </p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">„Wert“ kann dabei entweder eine Werteliste oder eine Bereichsdefinition [x...y] sein</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellText">Beginnt der Feldwert mit einem bekannten Operator</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">Spaltenname Wert (Operator, etc.)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1298187">
+            </a>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_56340">
+            </a>[NodeAttributeMappings], [LinkAttributeMappings],...</h5>
+        <p class="Text">In diesen Sektionen wird definiert, welche Attribute nach <MadCap:variable name="PTV_Manual.Programmname" /> übernommen werden. Es wird jeweils über Zeilen der Form <span class="input"><MadCap:variable name="PTV_Manual.Programmname" />-Attributname = Tagname </span>angegeben, welches (interne) Tag welchem Attribut in <MadCap:variable name="PTV_Manual.Programmname" /> zugewiesen werden soll. Die <MadCap:variable name="PTV_Manual.Programmname" />-Attributnamen werden vom Importer in benutzerdefinierte Attribute des jeweiligen Objekttypes umgesetzt. Sollen stattdessen <MadCap:variable name="PTV_Manual.Programmname" />-interne Attribute beschrieben werden, wird dem Attributnamen ein ‚*‘ vorangestellt, wie im obigen Beispiel bei <span class="gui_element">*Name</span> und <span class="gui_element">*NumLanes</span>.</p>
+    </body>
+</html>

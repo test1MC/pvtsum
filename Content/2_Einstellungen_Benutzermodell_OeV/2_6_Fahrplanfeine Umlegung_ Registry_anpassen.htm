@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1177" MadCap:lastWidth="1029" MadCap:ignoredWords="E1;E9;V1;V9;N1;N9;G1;G9;G0;att;E2;bzw;ErhLinieName;E3;max;E5;E7;E8;V2;N2;V3;N3;NachlaufLRName;evtl;inkl;V5;N5;V6;N6;V4;N4;con;wege;RZ;UH;Wid;konst;ca;wegefein;teilwegefein;Registrierungs;Common;Misc;ProcessorInfo" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <MadCap:variable name="PTV_Manual.Programmname" />-Registry für schnellere Berechnung der fahrplanfeinen Umlegung anpassen</h4>
+        <p class="Text">
+            <MadCap:keyword term="Fahrplanfeine Umlegung: schnellere Berechnung" />
+            <MadCap:keyword term="Fahrplanfeine Umlegung: Registry anpassen" />Sie können die Berechnung der fahrplanfeinen Umlegung auf einem Rechner mit mehr als zwölf Kernen beschleunigen, indem Sie Änderungen an der Registry Ihrer <MadCap:variable name="PTV_Manual.Programmname" />-Installation vornehmen.</p>
+        <p class="Text">Es lässt sich keine allgemeingültige, optimale Einstellung angeben, da sich die Rechnerhardware bei jedem Benutzer unterscheidet. Beschrieben werden die Schlüssel in der Registry, an denen verschiedene Konfigurationen zu Verbesserungen in der Rechengeschwindigkeit führen können. Wir empfehlen, verschiedene Einstellungen zu testen. Die folgende Beschreibung gilt für Windows 7.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Klicken Sie in der Windows Taskleiste auf das Start-Symbol</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Geben Sie in das Eingabefeld zur Suche <span class="input">Regedit</span> ein.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Drücken sie die Taste <span class="shortcut">Eingabe</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Registrierungs-Editor</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Navigieren Sie zu <span class="path">HKEY_CURRENT_USER\Software\PTV AG\Vision\Visum\130\Common\Misc</span>.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Fügen Sie den Schlüssel <span class="path">ProcessorInfo</span> ein.</p>
+        <p class="Step" MadCap:autonum="6. &#160;">Fügen Sie im Schlüssel <span class="path">ProcessorInfo</span> die Schlüssel <span class="path">AvoidMemoryDonationsToOtherProcessors</span>, <span class="path">CoreEnumerationOrder</span> und <span class="path">NumberOfProcessors</span> des Typs REG-DWORD ein.</p>
+        <table class="TableStyle_gui_elements2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements2-Column-Column1" style="width: 150px;" />
+            <col class="TableStyle-gui_elements2-Column-Column1" style="width: 325px;" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Registry-Schlüssel</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">NumberOfProcessors</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Geben Sie hier die Anzahl der vorhandenen physikalischen Prozessoren an, die Ihr Rechner besitzt. Die Anzahl der Kerne ist hier nicht relevant.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Geben Sie eine höhere Anzahl Prozessoren an, als Ihr Rechner besitzt, erhöht sich der Bedarf an Arbeitsspeicher während der Berechnung.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">CoreEnumeration-Order</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Gibt die Verteilung der echten und virtuellen Kerne auf den Prozessoren an.</p>
+                        <ul>
+                            <LI class="List0Tab">Der Wert 0 sagt aus, dass die echten und die virtuellen Kerne abwechselnd nummeriert sind.</LI>
+                        </ul>
+                        <p class="List_Text0">Beispiel bei einem Rechner mit 2 Prozessoren und 16 Kernen:</p>
+                        <p class="List_Text0">Kerne 1 bis 8 gehören zu Prozessor 1, davon sind 1, 3, 5, 7 echte Kerne und 2, 4, 6, 8 virtuelle Kerne. Kerne 9 bis 16 gehören zu Prozessor 2, davon sind 9, 11, 13, 15 echte Kerne und 10, 12, 14, 16 virtuelle Kerne.</p>
+                        <ul>
+                            <LI class="List0Tab">Der Wert 1 sagt aus, dass echte und virtuelle Kerne in zwei Hälften nummeriert sind. Die erste Hälfte besteht aus den echten und die zweite Hälfte aus den virtuellen Kernen.</LI>
+                        </ul>
+                        <p class="List_Text0">Beispiel bei einem Rechner mit 2 Prozessoren und 16 Kernen:</p>
+                        <p class="List_Text0">Kerne 1, 2, 3, 4, 9, 10, 11, 12 gehören zu Prozessor 1 wobei 1, 2, 3, 4 echte Kerne sind und 9, 10, 11, 12 virtuelle Kerne. Entsprechend gehören 5, 6, 7, 8, 13, 14, 15, 16 zu Prozessor 2 wobei 5, 6, 7, 8 echte Kerne sind und 13, 14, 15, 16 virtuelle Kerne.</p>
+                        <p class="CellText">Hinweise</p>
+                        <p class="CellText">Wenn Ihnen die Architektur Ihres Rechners nicht bekannt ist, müssen Sie ausprobieren, welcher Wert zu schnelleren Rechenergebnissen führt.</p>
+                        <p class="CellText">Die kostenlose Software CoreInfo aus der SysInternals Suite von Microsoft kann Informationen über die Prozessoren und Kerne Ihres Rechners liefern. Das Analyseergebnis der Software kann hilfreich bei der Bestimmung der richtigen Einstellungen für Ihren Rechner sein.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColSep" style="mc-hyphenate-shortest-prefix: 15;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">AvoidMemoryDonationsToOtherProcessors</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Bestimmt den Austausch von Speicher zwischen den Prozessoren.</p>
+                        <ul>
+                            <LI class="List0Tab">Der Wert 0 bewirkt, dass während der Berechnung freier Arbeitsspeicher zwischen den Prozessoren ausgetauscht wird. Das kann bei manchen Rechnern den Berechnungsprozess verlangsamen.</LI>
+                            <LI class="List0Tab">Der Wert 1 bewirkt, dass der Austausch von Speicher verhindert wird.</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="7. &#160;">Klicken Sie mit der rechten Maustaste auf den gewünschten Schlüssel im Ordner <span class="path">ProcessorInfo</span> und wählen Sie im Kontextmenü den Eintrag <span class="gui_element">Ändern</span>.</p>
+        <p class="Step" MadCap:autonum="8. &#160;">Nehmen Sie im Eingabefeld <span class="gui_element">Wert</span> die gewünschten Einstellungen vor.</p>
+        <p class="Step" MadCap:autonum="9. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Der Wert des Schlüssels wird geändert.</p>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="707" MadCap:lastWidth="510">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">Automatische Berechnung der Haltefolge</h4>
+        <p class="Text"> Für die automatische Berechnung der Haltefolge, die optional bei Veränderungen der Linienauswahl oder interaktiv ausgelöst wird, stehen die beiden Berechnungsarten 'klassisch' und 'hierarchisch' zur Verfügung.
+
+Bei der klassischen Berechnungsart werden Teilsequenzen von Haltepunkten aus unterschiedlichen Linienrouten einfach aneinandergehängt, wodurch sie mehrfach in der Haltefolge vorkommen können.
+</p>
+        <p class="Text">
+        </p>
+        <p class="Text">Bei der hierarchischen Berechnungsart werden die Linienrouten einer Linie hinsichtlich gemeinsam bedienter Teilstücke betrachtet. Das Teilstück welches von den meisten Fahrten genutzt wird ist der Stamm, der von Verzweigungshalten begrenzt wird, von denen Äste abgehen.</p>
+        <p class="Text">das Beispiel zeigt eine Linie 1 mit einem Stamm <span class="gui_element">V-W-X-Y-Z </span>und mehreren Ästen (beispielsweise <span class="gui_element">A-B-V</span> oder <span class="gui_element">Z-N-O-P</span>). </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_TTE_hierarchical_sequence.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;">
+            </img>
+        </p>
+        <p class="Text">Der Stamm ist der von der Linie am meisten überfahrene Abschnitt (<span class="gui_element">V-Z</span>). Vor und nach dem Stamm verzweigt sich die Linie. Daher entstehen an diesen Punkten Verzweigungsbahnhöfe (<span class="gui_element">V</span> und <span class="gui_element">Z</span>). Alle Abschnitte, die sich daran anschließen, sind Äste. </p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px; caption-side: top; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1">
+            </col>
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Welche Fahrzeitprofile im Navigator ausgewählt sind, ist für die Berechnung nicht relevant.</p>
+                        <p class="Text">Die Auswahl sehr vieler Linien kann in der hierarchischen Ansicht zu unübersichtlichen Ergebnissen führen und ist daher nicht ratsam. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Für die im Beispiel dargestellte Linie 1 ergibt sich bei einer hierarchischen Haltefolge folgende Ansicht im tabellarischen Fahrplan:</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_TTE_hierarchical_tableau.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997538px;margin-bottom: 1, 00009px;">
+            </img>
+        </p>
+        <p class="Text">Jede Linie hat nur einen Stamm und einen Sortierbahnhof. Werden mehrere Linien für die hierarchische Folge ausgewählt, gibt es auch mehrere Stämme. Im Beispiel werden die Fahrplanfahrten der Linie 1 und Linie 2 ausgegeben. Der Stamm der Linie 2 reicht von <span class="gui_element">ff-jj</span>.</p>
+        <p class="Text">Im grafischen Fahrplan sieht die Anzeige aller Fahrplanfahrten der Linie 1 in der klassischen Ansicht wie folgt aus. Jede Fahrplanfahrt wird durchgehend gezeichnet.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_TTE_classic_graphical_TT.png" />
+        </p>
+        <p class="Text">Die hierarchische Ansicht der gleichen Fahrplanfahrten sieht folgendermaßen aus:</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_TTE_hierarchical_graphical_TT.png" />
+        </p>
+        <p class="Text">Im Beispiel bedienen sämtliche Fahrplanfahrten den Stamm <span class="gui_element">V-Z,</span> der den Bahnhof <span class="gui_element">3V</span> enthält. Die Fahrplanfahrten werden im Abschnitt <span class="gui_element">V-Z </span>untereinander dargestellt. Wird ein Abschnitt von einer Fahrplanfahrt nicht bedient, so wird dies in der hierarchischen Ansicht durch eine Strichelung gekennzeichnet, wenn der Abschnitt von einer oder mehreren anderen Fahrplanfahrten bedient wird. Diese Strichelung verbindet die Verzweigungsbahnhöfe, an denen eine Fahrplanfahrt mit einem anderen Verlauf fortgesetzt wird. Ein Verzweigungsbahnhof (beispielsweise <span class="gui_element">7Z</span>) wird jeweils vor und nach dem gestrichelten Bereich eingetragen.</p>
+    </body>
+</html>

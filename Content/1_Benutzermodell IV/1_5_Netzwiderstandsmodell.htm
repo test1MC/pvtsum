@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="474" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;FS;BS;xd;KJ;k2;k1;abflüsse;FIFO;s'';abflüssen;of;Wardrop’schen;dG" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1038494">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249394">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__ref152745345">
+            </a>Netzwiderstandsmodell</h3>
+        <p class="Text">Zur Darstellung des Rückstau-Phänomens ist jede Kante durch zwei zeitlich veränderliche Engpässe gekennzeichnet, die Zuflusskapazität am Anfang und die Abflusskapazität am Ende.</p>
+        <p class="Text">Die Zuflusskapazität, die durch die Eingangskapazität begrenzt wird, soll den Effekt des sich rückwärts auf der Kante selbst ausbreitenden Staus wiedergeben, der den Anfangsabschnitt erreichen und somit Rückstaubedingungen auf den stromaufwärtigen Kanten herbeiführen kann. In diesem Fall stellt sich die Zuflusskapazität während der Umlegung so ein, dass der aktuelle Zufluss auf den Wert begrenzt wird, bei dem die Anzahl der Fahrzeuge auf der Kante dem der aktuell verfügbaren Aufstellkapazität entspricht. Diese ist eine Funktion der Ganglinie der Abflussbelastung, da sich die maximale Staudichte entlang der Kante entsprechend der STKW zeitlich und räumlich dynamisch verändert. Genau genommen ist der frei gewordene Platz, der durch am Nach-Knoten der Warteschlange von der Kante abfließende Fahrzeuge entsteht, am Von-Knoten der Warteschlange erst nach einer Weile tatsächlich verfügbar, sodass die maximale Staudichte multipliziert mit der Länge nur die obere Grenze der Aufstellkapazität darstellt, welche nur erreicht werden kann, wenn sich der Stau nicht bewegt.</p>
+        <p class="Text">Die Abflusskapazität, die durch die Ausgangskapazität begrenzt wird, soll den Effekt des sich von den stromabwärts liegenden Kanten rückwärts ausbreitenden Staus wiedergeben, der überkritische Belastungszustände auf der Kante selbst erzeugen kann. Für gegebene Kantenzuflüsse  und -abflüsse ergeben sich die Abflusskapazitäten als Funktion der Zuflusskapazitäten der stromabwärts liegenden Kanten und aus der Flusserhaltung am Knoten.</p>
+        <p class="Text">Das Netzwiderstandsmodell besteht aus drei wechselseitig abhängigen Teilmodellen, dem „Abfluss- und Reisezeitenmodell für zeitlich variierende Kapazitäten“, dem „Zuflusskapazitätsmodell“ und dem „Abflusskapazitätsmodell“, die iterativ berechnet werden. Die drei Modelle zeigt <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1050067">Abbildung 1</MadCap:xref> im Kontext. Die Reisezeiten, die sich als Lösung aus den drei rückgekoppelten Modellkomponenten ergeben, werden durch ein Kantenkostenmodell mit den monetären Kosten zu generalisierten Kosten zusammengefasst. </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_FixedPointFormulation.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1050067">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_79781">
+            </a>Übersicht über den Fixpunktansatz für das Netzwiderstandsmodell</p>
+        <h5>Abfluss- und Reisezeitenmodelle für zeitlich veränderliche Abflusskapazitäten</h5>
+        <p class="Text">Unter der Voraussetzung, dass die FIFO-Regel gilt und somit das Überholen von Fahrzeugen nicht erfolgen kann, wird ein Kantenwiderstandsmodell mit zeitlich veränderlicher Abflusskapazität vorgestellt. Dabei wird die Abfluss-Ganglinie gewonnen, indem die Zufluss-Ganglinie entlang der Kante propagiert und daraus die entsprechende Ganglinie der Reisezeit berechnet wird. </p>
+        <p class="Text">In der Annahme, dass die Kapazität am Ende einer bestimmten Kante <span class="formula">a</span><span class="symbol">Î</span><span class="formula">A </span>nicht aufgrund von Rückstaueffekten reduziert ist, kann für ein Fahrzeug, das die Kante zum Zeitpunkt <span class="formula_symbol">t</span> betritt, die <span class="gui_element">unterkritische Ausgangszeit</span> <span class="formula">r</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) abhängig vom bisherigen Teil der Zuflussganglinie ausgedrückt werden, was dem Zufluss <span class="formula">f</span><span class="formula_subscript">a</span>(<span class="formula_symbol">s</span>) zu jedem Zeitpunkt <span class="formula_symbol">s</span> ≤ <span class="formula_symbol">t</span> entspricht.</p>
+        <p class="Formula_number" MadCap:autonum=" [1]">
+            <a name="1_benutzermodell_iv_2033098965_1688471">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_30099">
+            </a>
+            <img src="../Resources/Images/7_233.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 999792px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">Gleichung <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1688471">[1]</MadCap:xref> wird weiter unten beschrieben.</p>
+        <ul>
+            <LI class="List0">für das trapezförmige Fundamentaldiagramm <MadCap:xref href="#1_benutzermodell_iv_2033098965_1049863" class="sieheUeberschrSeite"><span style="color: Black;" class="mcFormatColor">(</span><u>Ausgangszeitmodell für ein trapezförmiges Fundamentaldiagramm</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> (<MadCap:xref class="Label_Image" href="1_5_Mathematischer Hintergrund der Dynamischen Gleichgewichtsumlegung.htm#1_benutzermodell_iv_2033098965_1050243">Abbildung 3</MadCap:xref>)</LI>
+            <LI class="List0">für das parabolische Fundamentaldiagramm <MadCap:xref href="#1_benutzermodell_iv_2033098965_1688571" class="sieheUeberschrSeite"><span style="color: Black;" class="mcFormatColor">(</span><u>Ausgangszeitmodell für ein parabolisches Fundamentaldiagramm</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> (<MadCap:xref class="Label_Image" href="1_5_Mathematischer Hintergrund der Dynamischen Gleichgewichtsumlegung.htm#1_benutzermodell_iv_2033098965_1061502">Abbildung 2</MadCap:xref>)</LI>
+        </ul>
+        <p class="Text">Befindet sich jedoch am Ende der Kante ein Engpass mit einer zeitlich veränderlichen Kapazität <span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)<span class="formula">&#160;</span>≤&#160;<span class="formula">S</span><span class="formula_subscript">a</span> für jede Zeit <span class="formula_symbol">s</span>, so wird zunächst die Ganglinie des <span class="gui_element">kumulierten Abflusses</span> bestimmt, deren Wert <span class="formula">E</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) zum Zeitpunkt <span class="formula">t </span>wie folgt definiert ist. </p>
+        <p class="Formula_number" MadCap:autonum=" [2]">
+            <a name="1_benutzermodell_iv_2033098965_1688508">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_44114">
+            </a>
+            <img src="../Resources/Images/7_111.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997691px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">Dabei drückt <span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) die <span class="gui_element">kumulierte Abflusskapazität</span> zum Zeitpunkt<span class="formula"> t </span>aus.</p>
+        <p class="Formula_number" MadCap:autonum=" [3]">
+            <a name="1_benutzermodell_iv_2033098965_10247">
+            </a>
+            <img src="../Resources/Images/7_235.jpg" />
+        </p>
+        <p class="Text">Das heißt, dass <span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)&#160;<span class="formula">-&#160;</span><span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">s</span>) Fahrzeuge die Kante zwischen Zeitpunkt <span class="formula_symbol">s</span> und <span class="formula_symbol">t</span>, verlassen können. </p>
+        <p class="Text">Die obige Gleichung <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1688508">[2]</MadCap:xref> basiert auf folgender Definition der FIFO-Regel, die besagt, dass die kumulierte Abflusszeit zum Abflusszeitpunkt <span class="formula">t</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) eines Fahrzeugs, das die Kante zum Zeitpunkt <span class="formula">t </span>erreicht, dem kumulierten Zufluss zum Zeitpunkt <span class="formula">t </span>entspricht. Das bedeutet Folgendes: </p>
+        <p class="Formula_number" MadCap:autonum=" [4]">
+            <a name="1_benutzermodell_iv_2033098965_1038553">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_90138">
+            </a>
+            <img src="../Resources/Images/7_236.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">Dann kann Gleichung <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1688508">[2]</MadCap:xref> wie folgt erklärt werden. Gibt es zu einem bestimmten Zeitpunkt <span class="formula">t</span> keinen Stau, dann ist die Reisezeit identisch mit der unterkritischen Reisezeit, sodass, basierend auf der FIFO-Regel <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1038553">[4]</MadCap:xref>, der kumulierte Abfluss gleich dem kumulierten Zufluss zum Zeitpunkt <span class="formula">r</span><span class="formula_subscript">a</span><span class="formula_superscript">-1</span>(<span class="formula_symbol">t</span>) ist (ein Fahrzeug, das die Kante zum Zeitpunkt <span class="formula">r</span><span class="formula_subscript">a</span><span class="formula_superscript">-1</span>(<span class="formula_symbol">t</span>) erreicht, verlässt sie zum Zeitpunkt <span class="formula">t</span>). Entsteht ein Stau zum Zeitpunkt<span class="formula"> s &lt; t , </span>dann entspricht der Abfluss von diesem Zeitpunkt an bis zu jenem, an dem sich der Stau auflöst, stattdessen der Abflusskapazität. Dann ergibt sich, basierend auf der FIFO-Regel, der kumulierte Abfluss <span class="formula">E</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) aus dem kumulierten Zufluss zum Zeitpunkt <span class="formula">r</span><span class="formula_subscript">a</span><span class="formula_superscript">-1</span>(<span class="formula_symbol">s</span>) zuzüglich des Integrals der Abflusskapazität zwischen <span class="symbol">s</span> und<span class="formula"> t</span>, also <span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)&#160;-&#160;<span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">s</span>). </p>
+        <p class="Text">Definitionsgemäß ist der Abfluss <span class="formula">e</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) von Kante<span class="formula"> a </span>zum Zeitpunkt <span class="formula">t</span> folgender:</p>
+        <p class="Formula_number" MadCap:autonum=" [5]">
+            <a name="1_benutzermodell_iv_2033098965_1049932">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_92097">
+            </a>
+            <img src="../Resources/Images/7_237.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">Definitionsgemäß ist <span class="formula">e</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)<span class="formula">&#160;</span>≤&#160;<span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) zu jedem Zeitpunkt <span class="symbol">t</span> und überkritische Abflüsse treten auf, wenn <span class="formula">e</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)&#160;=&#160;<span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>).</p>
+        <p class="Text">Sind die Ganglinien des kumulierten Zuflusses und Abflusses bekannt, ergibt die FIFO-Regel <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1038553">[4]</MadCap:xref> eine implizite Gleichung für die Ganglinie der Abflusszeit der Kante. </p>
+        <p class="Formula_number" MadCap:autonum=" [6]">
+            <a name="1_benutzermodell_iv_2033098965_1049913">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_31328">
+            </a>
+            <img src="../Resources/Images/7_238.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1049862">Abbildung 2</MadCap:xref> zeigt eine grafische Interpretation der Gleichung <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1049913">[6]</MadCap:xref>, wobei die Ganglinie des kumulierten Abflusses <span class="formula">E</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) der unteren Einhüllenden folgender Verläufe entspricht: </p>
+        <p class="Text2">a) der kumulierte Zufluss <span class="formula">F</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>), der um die unterkritische Reisezeit <span class="formula">r</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)<span class="formula">&#160;-&#160;</span><span class="formula_symbol">t</span>  nach rechts verschoben wird und die Ganglinie <span class="formula">F</span><span class="formula_subscript">a</span>[<span class="formula">r</span><span class="formula_subscript">a</span><span class="formula_superscript">-1</span>(<span class="formula_symbol">t</span>)] ergibt. Dies stellt die Zahl der am Ende der Kante ankommenden Fahrzeuge dar.</p>
+        <p class="Text2">b) für jeden Zeitpunkt <span class="formula">s</span> wird die kumulierte Ganglinie der Abflusskapazität vertikal verschoben, sodass sie durch den Punkt (<span class="formula_symbol">s</span>,<span class="formula">F</span><span class="formula_subscript">a</span>[<span class="formula">r</span><span class="formula_subscript">a</span><span class="formula_superscript">-1</span>(<span class="formula_symbol">s</span>)]) verläuft. Dies stellt den Anteil der Fahrzeuge dar, die die Kante nach Zeitpunkt <span class="formula">s </span>verlassen können. Es gibt keinen Stau, wenn Verlauf a) unterhalb der Abflusskurven liegt. Ein Stau entsteht, sobald die kumulierte Abflusskurve unter die zeitlich verschobene kumulierte Zuflusskurve fällt, das heißt wenn mehr Fahrzeuge am letzten Abschnitt des Verlaufs ankommen, als abfließen können. Im Diagramm entsteht der Stau daher zum Zeitpunkt <span class="formula">s''.</span> In der <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1049862">Abbildung 2</MadCap:xref> wird ebenfalls die Berechnung der Abflusszeit auf der Basis der kumulierten Ganglinien der Zu- und Abflüsse anhand von dicken Pfeilen angezeigt.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_ArcTVCap.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1049862">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_15593">
+            </a>Verlauf mit zeitlich veränderlicher Kapazität</p>
+        <h5>
+            <a name="1_benutzermodell_iv_2033098965_1049863">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_24828">
+            </a>Ausgangszeitmodell für ein trapezförmiges Fundamentaldiagramm</h5>
+        <p class="Text">Wird das trapezförmige Fundamentaldiagram genutzt, um Belastungen auf der Kante darzustellen, so ist die unterkritische Geschwindigkeit auf der Strecke konstant und Gleichung <MadCap:xref class="Label_formula" href="1_5_Mathematischer Hintergrund der Dynamischen Gleichgewichtsumlegung.htm#1_benutzermodell_iv_2033098965_1050397">[2]</MadCap:xref> ist einfach wie folgt definiert. </p>
+        <p class="Formula_number" MadCap:autonum=" [7]">
+            <a name="1_benutzermodell_iv_2033098965_1038619">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_81602">
+            </a>
+            <img src="../Resources/Images/7_240.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">In dem Fall kann Gleichung <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1688508">[2]</MadCap:xref> unter Nutzung von Gleichung <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1038619">[7]</MadCap:xref> konkretisiert werden.</p>
+        <p class="Formula_number" MadCap:autonum=" [8]">
+            <a name="1_benutzermodell_iv_2033098965_47352">
+            </a>
+            <img src="../Resources/Images/7_241.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />
+        </p>
+        <h5>
+            <a name="1_benutzermodell_iv_2033098965_1688571">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_19495">
+            </a>Ausgangszeitmodell für ein parabolisches Fundamentaldiagramm</h5>
+        <p class="Text">Wird das parabolische Fundamentaldiagramm genutzt, entsteht eine kompliziertere Situation, da Fahrzeuge selbst bei unterkritischen Verkehrsdichten mit unterschiedlichen Geschwindigkeiten fahren. Ist die Zuflussganglinie der Kante stückweise konstant, kann die Ganglinie der Streckenabflusszeit zumindest näherungsweise aus der STKW bestimmt werden. Der Grundgedanke ist, die Trajektorie eines Fahrzeugs zu verfolgen, das Kante <span class="formula">a </span>zum Zeitpunkt <span class="formula">t </span>erreicht, die unterschiedlichen Geschwindigkeiten, auf die es entlang der Kante trifft, zu betrachten, und daraus seine Ausgangszeit <span class="formula">t</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) zu bestimmen. Unten erfolgt zunächst eine Beschreibung des präzisen Modells. Da dies zu einem sehr großen Rechenaufwand führen kann, wird es dann durch ein einfacheres Modell ersetzt, das Verkehrszustände mittelt, wodurch die Anzahl der unterschiedlichen Verkehrssituationen eingeschränkt wird, in die ein Fahrzeug auf der Kante gerät. Leser, die nur einen allgemeinen Überblick über das Modell wünschen, können zum Ende des Abschnitts springen <MadCap:xref class="sieheUeberschrSeite" href="1_5_Eingabe- und Ausgabeattribute der Dynamischen Gleichgewichtsumlegung.htm#1_benutzermodell_iv_2033098965_1665037"><span style="color: Black;" class="mcFormatColor">(</span><u>Eingabe- und Ausgabeattribute der Dynamischen Gleichgewichtsumlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_FlowPattern_neu.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">
+            <a name="1_benutzermodell_iv_2033098965_1128807">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_93317">
+            </a>Durch die vereinfachte Theorie kinematischer Wellen bedingtes Belastungsmuster</p>
+        <p class="Text">Auf der Basis der STKW verändern Fahrzeuge ihre Geschwindigkeiten unmittelbar. Wie <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1128807">Abbildung 3</MadCap:xref> zeigt, sind Trajektorien stückweise linear, wenn die Ganglinie des Zuflusses stückweise konstant ist. Zudem ist das Raum-Zeit-Diagramm in Regionen mit jeweils homogenen Belastungszuständen unterteilt, die durch lineare Stoßwellen begrenzt sind. Die Steigung <span class="formula">W</span><span class="formula_subscript">a</span><span class="formula_superscript">ij</span> der Stoßwelle, welche die zwei unterkritischen Belastungszustände <span class="formula_symbol">F</span>(<span class="formula">f</span><span class="formula_subscript">a</span><span class="formula_superscript">i</span>) und <span class="formula_symbol">F</span>(<span class="formula">f</span><span class="formula_subscript">a</span><span class="formula_superscript">j</span>) trennt, ist folgende:</p>
+        <p class="Formula_number" MadCap:autonum=" [9]">
+            <a name="1_benutzermodell_iv_2033098965_52783">
+            </a>
+            <img src="../Resources/Images/7_242.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000074px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">Theoretisch ist es bei einer stückweise konstanten Zufluss-Ganglinie möglich, die Trajektorie eines Fahrzeugs zu ermitteln, das die Kante zu einem Zeitpunkt <span class="formula">t</span> erreicht, und folglich seine unterkritische Abflusszeit <span class="formula">r</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) zu bestimmen. <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1128807">Abbildung 3</MadCap:xref> zeigt jedoch, warum es extrem mühsam sein kann, diese Trajektorien zu ermitteln.</p>
+        <ul>
+            <LI class="List0">Viele Stoßwellen können gleichzeitig auf der Kante aktiv sein. </LI>
+            <LI class="List0">Stoßwellen können entweder am Anfangsabschnitt durch Belastungsunstetigkeiten zu den Zeiten <span class="formula_symbol">t</span><span class="formula_superscript">i</span>,<span class="formula"> 0 </span><span class="symbol">£</span><span class="formula"> i </span><span class="symbol">£</span><span class="formula"> n-1</span>, oder durch Stoßwellen-Knotenpunkte auf jedem Kantenabschnitt zu jeder Zeit erzeugt werden. </LI>
+            <LI class="List0">Ein Fahrzeug kann auf viele Stoßwellen stoßen, während es die Kante befährt, und alle Schnittpunkte müssen explizit ausgewertet werden, um dessen Trajektorie zu bestimmen.</LI>
+        </ul>
+        <p class="Text">Um diese Schwierigkeiten zu überwinden, wird – wie <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1038692">Abbildung 4</MadCap:xref> darstellt – davon ausgegangen, dass zu jedem Zeitpunkt <span class="formula">r</span><span class="formula_superscript">i</span>,<span class="formula"> 0 </span><span class="symbol">£</span><span class="formula"> i </span><span class="symbol">£</span><span class="formula"> n-1</span>, eine fiktive Stoßwelle auf dem Anfangsabschnitt der Kante erzeugt wird, die die tatsächlichen Belastungen <span class="formula_symbol">F</span>(<span class="formula">f</span><span class="formula_subscript">a</span><span class="formula_superscript">i+1</span>) von einer Region trennt, in der die durchschnittliche Geschwindigkeit <span class="formula_symbol">l</span><span class="formula_subscript">i</span>&#160;=&#160;<span class="formula">L</span>&#160;/&#160;(<span class="formula">r</span><span class="formula_subscript">a</span><span class="formula_superscript">i</span><span class="formula">&#160;-&#160;</span><span class="formula_symbol">t</span><span class="formula_superscript">i</span>) des Fahrzeugs, das die Kante zum Zeitpunkt <span class="formula_symbol">t</span><span class="formula_superscript">i</span> erreicht, herrscht.</p>
+        <p class="Text">Fiktive Stoßwellen sind aus folgenden Gründen sehr einfach zu behandeln: </p>
+        <ul>
+            <LI class="List0">Sie berühren sich nie und werden daher alle auf dem laufenden Streckenanfangsabschnitt ausschließlich zum Zeitpunkt  <span class="formula_symbol">t</span><span class="formula_superscript">i</span>,<span class="formula"> 0 </span><span class="symbol">£</span><span class="formula"> i </span><span class="symbol">£</span><span class="formula"> n-1</span>, erzeugt.</LI>
+            <LI class="List0">Jedes Fahrzeug trifft höchstens auf die zuletzt erzeugte fiktive Stoßwelle, sodass dessen Trajektorie sehr leicht zu ermitteln ist. </LI>
+        </ul>
+        <p class="Text">Basierend auf <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1049932">[5]</MadCap:xref> ergibt sich die Steigung <span class="formula">W</span><span class="formula_subscript">a</span><span class="formula_superscript">i</span> der fiktiven Stoßwelle folgendermaßen:</p>
+        <p class="Formula_number" MadCap:autonum=" [10]">
+            <a name="1_benutzermodell_iv_2033098965_28334">
+            </a>
+            <img src="../Resources/Images/7_21.png" style="margin-right: 0, 009353638px;" />
+        </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_FlowPattern2_neu.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000028px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 4: ">
+            <a name="1_benutzermodell_iv_2033098965_1038692">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_68188">
+            </a>Durch das Gemittelte Modell kinematischer Wellen bedingtes Belastungsmuster </p>
+        <p class="Text">Es ist zu beachten, dass die Trajektorie eines Fahrzeugs, das die aktuelle Strecke zum Zeitpunkt <span class="formula_symbol">t</span><span class="formula"></span><span class="symbol">Î</span><span class="formula"></span>(<span class="formula_symbol">t</span><span class="formula_superscript">i-1</span><span class="formula">,</span><span class="formula_symbol">t</span><span class="formula_superscript">i</span>] erreicht, nur von der angenäherten Trajektorie des Fahrzeugs, das die Kante zum Zeitpunkt <span class="formula_symbol">t</span><span class="formula_superscript">i-1</span> erreichte, direkt beeinflusst ist, wobei darin die Vorgeschichte der Verkehrszustände auf der Kante zusammengefasst ist. </p>
+        <p class="Text">Die eingeführte Näherung hat kaum Einfluss auf die Wirksamkeit des Modells. Außerdem hat sie keinen Einfluss hinsichtlich der FIFO-Regel, die nach wie vor zwischen dem ersten und dem letzten Kantenabschnitt gilt, während Verstöße auf den Zwischenabschnitten vernachlässigt werden.</p>
+        <p class="Text">Darauf basierend kann die unterkritische Reisezeit <span class="formula_symbol">t</span><span class="formula_subscript">a</span><span class="formula_superscript">i</span>&#160;=&#160;<span class="formula_symbol">t</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)<span class="formula_superscript">i</span>, 0&#160;≤&#160;i&#160;≤&#160;<span class="formula">n</span>-1, wie folgt definiert werden:</p>
+        <p class="Text2">a) Trifft ein zum Zeitpunkt <span class="formula_symbol">t</span><span class="formula_superscript">i</span> auf die Kante fahrendes Fahrzeug vor dem Ende der Kante nicht auf die fiktive Stoßwelle <span class="formula">W</span><span class="formula_subscript">a</span><span class="formula_superscript">i-1</span>, so ergibt sich dessen unterkritische Abflusszeit einfach folgendermaßen:</p>
+        <p class="Text2">
+            <img src="../Resources/Images/7_244.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />,</p>
+        <p class="Text2">Dabei entspricht <span class="formula">f</span><span class="formula_subscript">a</span><span class="formula_superscript">i</span> dem Kantenzufluss während des Zeitintervalls (<span class="formula_symbol">t</span><span class="formula_superscript">i-1</span><span class="formula">,</span><span class="formula_symbol">t</span><span class="formula_superscript">i</span>].</p>
+        <p class="Text2">b) Ansonsten wird dessen unterkritische Abflusszeit folgendermaßen auf der Basis der zwei Geschwindigkeiten bestimmt, die es vor und nach dem Treffen auf die fiktive Stoßwelle hat:</p>
+        <p class="Text2">
+            <img src="../Resources/Images/7_245.png" />,</p>
+        <p class="Text2">Dabei ist <span class="formula_symbol">w</span><span class="formula_superscript">i</span> die Fahrzeit vor dem Erreichen der fiktiven Stoßwelle (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1211793">Abbildung 5</MadCap:xref>).</p>
+        <p class="Text2">
+            <img src="../Resources/Images/7_59.png" />.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_DeterminationArcTime.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 5: ">
+            <a name="1_benutzermodell_iv_2033098965_1211793">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_59412">
+            </a>Bestimmung der unterkritischen Abflusszeit der Kante</p>
+        <p class="Text">Die <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1688471">[1]</MadCap:xref> definierende, unterkritische Reisezeit <span class="formula">r</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) ergibt sich dann folgendermaßen:</p>
+        <p class="Formula_number" MadCap:autonum=" [11]">
+            <a name="1_benutzermodell_iv_2033098965_64385">
+            </a>
+            <img src="../Resources/Images/7_246.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000065px;" />
+        </p>
+        <h5>Zuflusskapazitätsmodell</h5>
+        <p class="Text">In diesem Abschnitt wird erklärt, wie ein Rückstau, der auf dem letzten Abschnitt der Kante durch die Abflusskapazität entsteht, sich entgegen der Fahrtrichtung fortpflanzt und schließlich die Zuflusskapazität der Kante verringert. Dieser Teil des Modells wird nur verwendet, wenn DUE mit aktiver Option <span class="gui_element">Rückstau berechnen</span> ausgeführt wird <MadCap:xref class="Benutzerhandbuch" href="../2_Einstellungen_Benutzermodell IV/2_5_Rückstaumodell einstellen und berechnen.htm#2_einstellungen_benutzermodell_iv_1682368020_1033770"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Rückstaumodell einstellen und berechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Ist die Option nicht aktiv, wird von einer unbegrenzten Aufstellkapazität der Kanten ausgegangen und die Zuflusskapazität einer Strecke unterschreitet die Eingangskapazität nie.</p>
+        <p class="Text">Zum besseren Verständnis wird von der Vorstellung ausgegangen, dass der Stau nicht komprimierbar ist, das heißt es existiert nur eine überkritische Dichte. Die Stauwellengeschwindigkeit ist dann nicht begrenzt – aus <MadCap:xref class="Label_Image" href="1_5_Mathematischer Hintergrund der Dynamischen Gleichgewichtsumlegung.htm#1_benutzermodell_iv_2033098965_1061502">Abbildung 2</MadCap:xref> beziehungsweise <MadCap:xref class="Label_Image" href="1_5_Mathematischer Hintergrund der Dynamischen Gleichgewichtsumlegung.htm#1_benutzermodell_iv_2033098965_1050243">Abbildung 3</MadCap:xref> wird ersichtlich, dass <span class="formula">w</span><span class="formula_subscript">a</span>&#160;=&#160;<span class="symbol">¥</span> bei <span class="formula">KJ</span><span class="formula_subscript">a</span><span class="formula">&#160;=&#160;k2</span><span class="formula_subscript">a</span> – sodass jede am letzten Abschnitt auftretende überkritische Belastung sofort rückwärts propagiert würde. Dieser Umstand bedeutet nicht, dass der Stau sofort den Anfangsabschnitt erreicht. Dort hat die abfließende überkritische Belastung tatsächlich keinen Einfluss auf die einfließende unterkritische Belastung, bis die Kante gänzlich gefüllt ist. Das heißt, dass die kumulierte Anzahl der Fahrzeuge, die auf die Kante gefahren sind, gleich der Anzahl der Fahrzeuge ist, die die Kante verlassen haben, zuzüglich der Aufstellkapazität. Diese ist zeitkonstant und ergibt sich aus der Kantenlänge multipliziert mit der maximalen Staudichte. Sobald der Stau länger als die Kantenlänge ist, wird die Zuflusskapazität gleich der Abflusskapazität, das heißt alle Fahrzeuge auf der Kante bewegen sich wie eine starre Schlange.</p>
+        <p class="Text">Überkritische Belastungszustände können in der Realität sogar bei unterschiedlichen Dichten auftreten. Ihre Stauwellengeschwindigkeiten sind nicht nur geringer als v0, sodass sie ausgehend vom letzten Kantenabschnitt den ersten mit Verzögerung erreichen, sondern unterscheiden sich auch voneinander, was zu Verzerrungen bei der zeitlichen Vorwärtspropagierung führt. Die hier verwendeten Fundamentaldiagramme bilden zwar die (wichtigeren) Verzögerungseffekte nach, nicht aber die Verzerrungseffekte, da alle rückwärts gerichteten Stauwellen die gleiche Steigung haben.</p>
+        <p class="Text">Wir berechnen den Rückstaueffekt auf die Zuflusskapazität analytisch gemäß der STKW. Der Belastungszustand auf einem Kantenabschnitt ist das Ergebnis der Wechselwirkung zwischen unterkritischen Belastungen von stromaufwärts und überkritischen Belastungen von stromabwärts. Beim Anfangsabschnitt einer Kante entspricht der Belastungszustand von stromaufwärts dem Zufluss, während die Belastungszustände von stromabwärts der Abflusskapazität entsprechen, die rückwärts propagiert wird, woraus sich die Ganglinie des so genannten „maximalen kumulierten Zuflusses" ergibt.</p>
+        <p class="Text">Gemäß dem Newell-Luke-Prinzip ist der mit dem Rückstauphänomen übereinstimmende konsistente Belastungszustand, der sich am Anfangsabschnitt ergibt, jener mit der niedrigsten kumulierten Belastung. Daher kann, wenn der kumulierte Zufluss dem maximalen kumulierten Zufluss entspricht oder größer ist als dieser, sodass ein Rückstau entsteht, die Ableitung der Ganglinie des maximalen kumulierten Zuflusses als Obergrenze des Zuflusses gedeutet werden. So kann der richtige Wert der Zuflusskapazität bestimmt werden, welche die Staulänge auf die Kantenlänge begrenzt.</p>
+        <p class="Text">Der Moment <span class="formula_symbol">u</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>), an dem die zum Zeitpunkt <span class="symbol">t</span> auf dem letzten Abschnitt der Kante <span class="formula">a</span><span class="symbol">Î</span><span class="formula">A </span>durch die überkritische Abflussbelastung <span class="formula">e</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)&#160;=&#160;<span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) erzeugte rückwärtige Stauwelle den ersten Abschnitt erreichen würde, ist wie folgt definiert.</p>
+        <p class="Formula_number" MadCap:autonum=" [12]">
+            <a name="1_benutzermodell_iv_2033098965_1162874">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_99078">
+            </a>
+            <img src="../Resources/Images/7_248.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">Definitionsgemäß sind die Punkte in Zeit und Raum, die einen geraden Linienverlauf ausmachen, der durch eine Stauwelle erzeugt wird, durch den gleichen Belastungszustand gekennzeichnet. Zudem zeigt <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1227100">Abbildung 6</MadCap:xref>, dass die Anzahl der Fahrzeuge, auf die die überkritische Welle trifft, bezüglich der Abflussbelastung <span class="formula">q</span> für eine kleine in Gegenrichtung zurückgelegte Strecke d<span class="formula">s </span>dem Zeitintervall d<span class="formula">s </span><img src="../Resources/Images/7_249.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />, multipliziert mit dieser Belastung, entspricht. Durch Integrieren entlang der Kante vom letzten bis zum ersten Abschnitt ergibt sich der max. kumulierte Fluss <span class="formula">H</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>), der zum Zeitpunkt <span class="formula_symbol">u</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) am ersten Abschnitt beobachtet würde, wie folgt.</p>
+        <p class="Formula_number" MadCap:autonum=" [13]">
+            <a name="1_benutzermodell_iv_2033098965_1049523">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_11677">
+            </a>
+            <span class="formula">H</span>
+            <span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) = <img src="../Resources/Images/7_250.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" /></p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_Trajectories.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997538px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 6: ">
+            <a name="1_benutzermodell_iv_2033098965_1227100">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_88884">
+            </a>Verläufe einer überkritischen Stauwelle und der darauf treffenden Fahrzeuge</p>
+        <p class="Text">In den verwendeten Fundamentaldiagrammen ist der überkritische Ast linear und <span class="formula_symbol">u</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) folglich umkehrbar. Da <span class="formula">w</span><span class="formula_subscript">a</span>(<span class="formula">q</span>)&#160;=&#160;<span class="formula">w</span><span class="formula_subscript">a</span>, ist die Zeit bei <span class="formula_symbol">u</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)<span class="formula"> = </span><span class="formula_symbol">t</span>, basierend auf <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1162874">[12]</MadCap:xref>, <span class="formula_symbol">s</span>&#160;=&#160;<span class="formula_symbol">t</span>&#160;-&#160;<span class="formula">L</span><span class="formula_subscript">a</span><span class="formula">&#160;/w</span><span class="formula_subscript">a</span>. Außerdem ergibt sich <span class="formula">H</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) = <span class="formula">E</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) + <span class="formula">L</span><span class="formula_subscript">a</span> • <span class="formula">KJ</span><span class="formula_subscript">a</span>, basierend auf <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1049523">[13]</MadCap:xref> <span class="formula">q/v</span><span class="formula_subscript">a</span>(<span class="formula">q</span>)&#160;=&#160;<span class="formula">KJ</span><span class="formula_subscript">a</span>&#160;-&#160;<span class="formula">q/w</span><span class="formula_subscript">a</span>. Daher ergibt sich der <span class="gui_element">maximale kumulierte Zufluss</span> <span class="formula">G</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>), der die Kante zum Zeitpunkt <span class="formula">t</span> entsprechend der Zuflussbelastung hätte befahren können, gemäß folgender Gleichung:</p>
+        <p class="Formula_number" MadCap:autonum=" [14]">
+            <a name="1_benutzermodell_iv_2033098965_1038821">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_97648">
+            </a>
+            <img src="../Resources/Images/7_119.jpg" />
+        </p>
+        <p class="Text">Ist der kumulierte Zufluss <span class="formula">F</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) zum Zeitpunkt <span class="formula">t </span>gleich oder größer als der maximale kumulierte Zufluss <span class="formula">G</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>), sodass sich zu dem Zeitpunkt ein Rückstau bildet, dann ist die Zuflusskapazität <span class="formula_symbol">m</span><span class="formula_subscript">a</span><span class="formula">(</span><span class="formula_symbol">t</span><span class="formula">)</span> durch die Ableitung <span class="formula">dG</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)<span class="formula">/d</span><span class="formula_symbol">t</span> des maximalen kumulierten Zufluss definiert; andernfalls entspricht sie der Eingangskapazität <span class="formula">Q</span><span class="formula_subscript">a</span>.</p>
+        <p class="Text">Die Ableitung von <span class="formula">G</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) ergibt Folgendes:</p>
+        <p class="Text">
+            <img src="../Resources/Images/7_31.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9904269px;margin-bottom: 1, 009134px;" /> = <img src="../Resources/Images/7_213.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 001478px;margin-bottom: 1, 009134px;" /></p>
+        <p class="Text">Da <span class="formula">e</span><span class="formula_subscript">a</span><span class="formula">(</span><span class="formula_symbol">t</span><span class="formula">&#160;-&#160;L</span><span class="formula_subscript">a</span><span class="formula">&#160;/w</span><span class="formula_subscript">a</span><span class="formula">)</span> gilt, ergibt sich daraus Folgendes:</p>
+        <p class="Formula_number" MadCap:autonum=" [15]">
+            <a name="1_benutzermodell_iv_2033098965_98141">
+            </a>
+            <img src="../Resources/Images/7_117.jpg" />
+        </p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1049369">Abbildung 7</MadCap:xref> zeigt, dass man die Ganglinie des maximalen kumulierten Zuflusses auf der Basis von Gleichung <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1038821">[14]</MadCap:xref> durch eine Verschiebung (breite Pfeile) der Ganglinie des kumulierten Abflusses um <span class="formula">L</span><span class="formula_subscript">a</span><span class="formula"> / w</span><span class="formula_subscript">a</span> in der Zeit und <span class="formula">L</span><span class="formula_subscript">a</span> •<span class="formula"> KJ</span><span class="formula_subscript">a</span> im Wert grafisch erhält. Zudem zeigt sich, dass, falls <span class="formula">G</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) größer ist als <span class="formula">F</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>), der Stau kürzer ist als <span class="formula">L</span><span class="formula_subscript">a</span> und <span class="formula_symbol">m</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)<span class="formula"> = Q</span><span class="formula_subscript">a</span>.</p>
+        <p class="Text">Andernfalls tritt ein Rückstau auf und <span class="formula_symbol">m</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)&#160;=&#160;<span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>&#160;-&#160;<span class="formula">L</span><span class="formula_subscript">a</span><span class="formula">&#160;/w</span><span class="formula_subscript">a</span>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_GraphicalDetermination_neu.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 7: ">
+            <a name="1_benutzermodell_iv_2033098965_1049369">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_86064">
+            </a>Grafische Bestimmung der Ganglinien der Zuflusskapazitäten im Fall des Fundamentaldiagramms in Dreiecksform, stückweise konstantem Zufluss und konstanter Abflusskapazität </p>
+        <h5>Abflusskapazitätsmodell</h5>
+        <p class="Text">In diesem Abschnitt wird ein Modell beschrieben, mit welchem in Bezug auf einen festgelegten Knoten die Abflusskapazitäten der stromaufwärtigen Kanten auf der Basis der Zuflusskapazitäten der stromabwärtigen Kanten und der Abbiegebelastungen bestimmt werden. So wie der Graph aus dem <MadCap:variable name="PTV_Manual.Programmname" />-Netz aufgebaut wird, kommen nur zwei Knotenformen vor. Diese sind Verflechtungen und Verzweigungen. In diesem Fall kann das Modell anhand von Kantenzuflüssen und -abflüssen beschrieben werden.</p>
+        <p class="Text">Wird eine <span class="gui_element">Verflechtung</span> <span class="formula">x</span><span class="symbol">Î</span><span class="formula">N </span>betrachtet, die aus einem Knotenpunkt mit einer einzigen ausgehenden Kante besteht, so muss die Zuflusskapazität <span class="formula_symbol">m</span><span class="formula_subscript">b</span>(<span class="formula_symbol">t</span>) dieser Kante <span class="formula">b</span> = <span class="formula">FS</span>(<span class="formula">x</span>) zum Zeitpunkt <span class="formula">t </span>unter den eingehenden Kanten aufgeteilt werden, deren Abflüsse darum konkurrieren, den Knotenpunkt zu durchfahren. Prinzipiell wird vorausgesetzt, dass die vorhandene Kapazität proportional zur Ausgangskapazität <span class="formula">S</span><span class="formula_subscript">a</span> jeder Kante <span class="formula">a</span><span class="symbol">Î</span><span class="formula">BS</span>(<span class="formula">x</span>)<span class="formula"></span>verteilt wird. Unter Umständen ist jedoch auf einer Kante <span class="formula">a </span>der Abfluss <span class="formula_symbol">m</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) geringer als der ihr zugewiesene Anteil der Zuflusskapazität, sodass nur ein kleinerer Teil davon tatsächlich ausgenutzt wird. Die verbleibende Zuflusskapazität wird dann auf die anderen Kanten verteilt. Gibt es keinen Rückstau, so wird die Abflusskapazität <span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) mit der Ausgangskapazität <span class="formula">S</span><span class="formula_subscript">a</span> gleichgesetzt.</p>
+        <p class="Text">Wird eine <span class="gui_element">Verzweigung</span> <span class="formula">x</span><span class="symbol">Î</span><span class="formula">N </span>betrachtet, die aus einem Knotenpunkt mit einer einzigen eingehenden Kante besteht, so wird der Abfluss von dieser Kante <span class="formula">a = BS</span>(<span class="formula">x</span>) durch die restriktivste Zuflusskapazität unter den ausgehenden Kanten bestimmt. Gibt es auf keiner Kante einen Rückstau, so wird die Abflusskapazität wiederum mit der Ausgangskapazität gleichgesetzt. Gibt es nur auf einer Kante <span class="formula">b</span><span class="symbol">Î</span><span class="formula">FS</span>(<span class="formula">x</span>)<span class="formula"></span>einen Rückstau, das heißt <span class="formula">f</span><span class="formula_subscript">b</span>(<span class="formula_symbol">t</span>) ≥ <span class="formula_symbol">m</span><span class="formula_subscript">b</span>(<span class="formula_symbol">t</span>), wird die Abflusskapazität <span class="formula_symbol">m</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>), skaliert mit dem Anteil der Fahrzeuge, die auf Kante <span class="formula">b </span>abbiegen, mit der Zuflusskapazität von <span class="formula">b</span> gleichgesetzt, um die Kapazitätserhaltung am Knoten zu garantieren, wobei die FIFO-Regel <span class="formula_symbol">y</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)&#160;•&#160;<span class="formula">f</span><span class="formula_subscript">b</span>(<span class="formula_symbol">t</span>)&#160;/&#160;<span class="formula_symbol">m</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)&#160;=&#160;<span class="formula_symbol">m</span><span class="formula_subscript">b</span>(<span class="formula_symbol">t</span>) eingehalten wird, die auf die Fahrzeuge, die Kante <span class="formula">a </span>verlassen, angewandt wird. Gibt es auf mehr als einer Kante<span class="formula"> b</span><span class="symbol">Î</span><span class="formula">FS(x)</span> einen Rückstau, dann ist die Abflusskapazität die kleinste dieser Größen. Auf dieser Basis ergibt sich folgende Gleichung:</p>
+        <p class="Formula_number" MadCap:autonum=" [16]">
+            <a name="1_benutzermodell_iv_2033098965_61364">
+            </a>
+            <img src="../Resources/Images/7_257.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">Es ist zu beachten, dass dieses Modell, im Gegensatz zu den in den zwei vorigen Abschnitten vorgestellten Modellen, räumlich nicht separabel ist, da die Abflusskapazitäten aller Kanten, die zur eingehenden Kante desselben Knotens gehören, gemeinsam ermittelt werden, wohl aber zeitlich separabel, da alle Relationen auf den gleichen Zeitpunkt verweisen.</p>
+        <p class="Text">Es wird vorausgesetzt, dass Fahrzeuge den Knotenpunkt nicht belegen, falls sie ihn aufgrund eines Rückstaus auf der darauf folgenden Kante nicht überqueren können, sondern warten, bis der notwendige Platz verfügbar wird. Das Modell kann die Verschlechterung von Widerständen aufgrund des Missbrauchs der Knotenpunktkapazität nicht abbilden.</p>
+        <h5>Kantenkostenmodell</h5>
+        <p class="Text">Die Kosten für Fahrzeuge, die Kante <span class="formula">a </span>zum Zeitpunkt <span class="formula">t</span> befahren, ergeben sich folgendermaßen.</p>
+        <p class="Formula_number" MadCap:autonum=" [17]">
+            <a name="1_benutzermodell_iv_2033098965_54827">
+            </a>
+            <img src="../Resources/Images/7_258.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">Dabei bezeichnet <span class="formula">m</span><span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>) die <span class="gui_element">monetären Kosten</span> und <span class="formula_symbol">h</span> den <span class="gui_element">value of time</span>.</p>
+    </body>
+</html>

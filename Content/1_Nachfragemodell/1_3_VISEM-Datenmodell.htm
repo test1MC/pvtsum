@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="1059" MadCap:lastWidth="1021" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr;vektoren;AE;Arbeits;PA;P1;P2;P3;PG;bearbeitung;Bearbeitungs;Nested;80er;sk;Method;of;verteilung;WAW;Stud;Schmiedel;NEmP;NEoP;Sch;GSch;WAEW;'A';'E';'F';'S';'B';RandsummeMinFaktorZiel;RandsummeMaxFaktorZiel;StrukturgrößenCodes;KopplungZiel;GanglinienNr" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1165889">
+            </a>
+            <a name="1_nachfragemodell_2215163117_56156">
+            </a>VISEM-Datenmodell</h4>
+        <p class="Text">Das Modell VISEM geht davon aus, dass außerhäusliche Aktivitäten die Ursache von Mobilität sind. In den folgenden Beispielen werden die bereits vorher definierten Aktivitäten benutzt <MadCap:xref class="sieheUeberschrSeite" href="1_3_Aktivitäten, Aktivitätenpaare, Aktivitätenketten.htm#1_nachfragemodell_2215163117_1156571"><span style="color: Black;" class="mcFormatColor">(</span><u>Aktivitäten, Aktivitätenpaare, Aktivitätenketten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">
+            <MadCap:keyword term="Aktivitätenketten" />Eine Aktivitätenkette beschreibt eine Abfolge typisierter Aktivitäten im Tagesablauf einer Person, zum Beispiel die Kette Wohnung&#160;– Arbeit&#160; – Einkauf&#160;– Wohnung (WAEW). Eine solche Abfolge von Aktivitäten impliziert Ortsveränderungen, in diesem Beispiel drei Wege (WA, AE, EW). Für VISEM wird das durchschnittliche Mobilitätsprogramm von Personen durch solche Aktivitätenketten beschrieben.</p>
+        <p class="Text">Die Attribute des Nachfrageobjekts Aktivitätenkette finden Sie in der allgemeinen Beschreibung der Nachfrageobjekte <MadCap:xref class="sieheUeberschrSeite" href="1_3_Aktivitäten, Aktivitätenpaare, Aktivitätenketten.htm#1_nachfragemodell_2215163117_1156571"><span style="color: Black;" class="mcFormatColor">(</span><u>Aktivitäten, Aktivitätenpaare, Aktivitätenketten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Einige Änderungen an den Nachfrageobjekten, die speziell für das VISEM-Modell notwendig sind, werden im Folgenden beschrieben.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">In einem VISEM-Nachfragemodell in <MadCap:variable name="PTV_Manual.Programmname" /> wird eine Nachfrageschicht durch genau eine Personengruppe (zum Beispiel EmP) und genau eine Aktivitätenkette (zum Beispiel WAEW) definiert. In den anderen Nachfragemodellen können einer Nachfrageschicht mehrere Personengruppen zugeordnet werden.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">Änderungen an den Aktivitäten für das VISEM-Modell</h5>
+        <p class="Text">Jeder Aktivität aus der Aktivitätenkette außer der Heimataktivität muss genau eine Strukturgröße zugeordnet werden, dessen Wert als Zielpotential in die Verkehrsverteilung einfließt.</p>
+        <p class="Text">
+            <MadCap:keyword term="Strukturgrößen: VISEM-Modell" />
+            <MadCap:keyword term="VISEM-Modell: Strukturgrößen" />Die folgende Tabelle zeigt Beispiele für Aktivitäten und entsprechende Strukturgrößen.</p>
+        <table class="TableStyle_TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="97px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="121px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="277px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellText">Aktivität</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellText">Strukturgröße</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellText">Strukturgrößenwert = Zielpotential</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Arbeit ('A')</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Arbeitsplätze</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Anzahl der Arbeitsplätze</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Einkaufen ('E')</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Einkaufsmöglichkeiten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Verkaufsfläche des Einzelhandels</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Freizeit ('F')</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Freizeitmöglichkeiten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Anzahl der Nennungen des Bezirks als Freizeit-Ziel in einer Haushaltsbefragung</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Schule ('S')</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Schulplätze</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Anzahl der Schulplätze (bis 18 Jahre)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Studium ('B')</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Berufs-/Hochschulplätze</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Anzahl der Berufs-/Hochschulplätze</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Beispiele für Aktivitäten und deren Strukturgröße</p>
+        <p class="Text">
+            <MadCap:keyword term="Randsummenbedingungen" />
+            <MadCap:keyword term="VISEM-Modell: Randsummenbedingungen" />Pro Aktivität kann angegeben werden, ob bei der Verkehrsverteilung eine mögliche Zielkopplung mitberücksichtigt werden soll. Falls dies gewünscht wird, kann analog zum EVA-Nachfragemodell mit Hilfe zweier reellwertiger Faktoren <span class="gui_element">RandsummeMinFaktorZiel</span> und <span class="gui_element">RandsummeMaxFaktorZiel</span> eine Randsummenbedingung für die Zielseite (zum Beispiel hart, weich, elastisch, offen) definiert werden. Je nach Art der Randsummenbedingung auf Quell- und Zielseite wird dann die beidseitig gekoppelte Verkehrsverteilung für jeden Aktivitätenübergang berechnet.</p>
+        <p class="Text">Daraus ergeben sich die folgenden neuen Attribute.</p>
+        <table class="TableStyle_TableStandard" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="86px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="174px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="237px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Nachfrageobjekttyp</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Attribut und Wertebereich</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Bedeutung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Aktivität</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">StrukturgrößenCodes</span>
+                        </p>
+                        <p class="CellText">Wertebereich: Menge von Strukturgrößen</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Verweis auf die zur Aktivität gehörige(n) Strukturgröße(n)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Aktivität</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">KopplungZiel</span>
+                        </p>
+                        <p class="CellText">Wertebereich: bool {0, 1}</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Zielseitige Kopplung bei der Verkehrsverteilung (ja / nein). Für die Heimataktivität immer =1.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Aktivität</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">RandsummeMinFaktorZiel</span> /</p>
+                        <p class="CellText">
+                            <span class="gui_element">RandsummeMaxFaktorZiel</span>
+                        </p>
+                        <p class="CellText">Wertebereich: Gleitkommazahl <span class="_Override" style="font-family: Symbol;">³</span> 0</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Faktor für die Unter- oder Obergrenze der Randsumme auf Zielseite, falls KopplungZiel = 1. </p>
+                        <p class="CellText">Für die Heimataktivität sind beide Faktoren immer = 1.0.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Attribute der Aktivität im VISEM-Modell</p>
+        <h5 MadCap:autonum="">Änderungen an den Aktivitätenpaaren für das VISEM-Modell</h5>
+        <p class="Text">VISEM bietet eine stundenfeine Berechnung der Nachfrage an. Diese Berechnung erfordert als Input prozentuale Ganglinien, die pro Aktivitätenpaar und Personengruppe getrennt definiert werden können. </p>
+        <p class="Text">Daraus ergibt sich das folgende neue Attribut.</p>
+        <table class="TableStyle_TableStandard" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="103px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="163px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="93px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="137px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Nachfrageobjekttyp</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Attribut und Wertebereich</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Subattribut</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Bedeutung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Aktivitätenpaar</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">GanglinienNr</span>
+                        </p>
+                        <p class="CellText">Wertebereich: Menge von Standardganglinien <MadCap:xref class="sieheUeberschrSeite" href="1_3_Ganglinien.htm#1_nachfragemodell_2215163117_1149712"><span style="color: Black;" class="mcFormatColor">(</span><u>Ganglinien</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref></p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColSep">
+                        <p class="CellText">Personengruppe</p>
+                    </td>
+                    <td class="TableStyle_TableStandard_Body_0_0_RowEnd_ColEnd">
+                        <p class="CellText">Verweis auf eine Standardganglinie, die vom prozentualen Typ sein muss</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 3: ">Attribut eines Aktivitätenpaars im VISEM-Modell</p>
+    </body>
+</html>

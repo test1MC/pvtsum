@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="1073" MadCap:lastWidth="556" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;VIPS">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1116763">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_89362">
+            </a>Koordinierte Fahrzeitprofile als ununterscheidbar annehmen</h4>
+        <p class="Text">Die Wirkungsweise von Koordinierung bei gleichem Takt ist klar definiert. Da Koordinierungsgruppen in <MadCap:variable name="PTV_Manual.Programmname" /> aber für beliebige Fahrzeitprofile angelegt sein können, gibt es nicht immer eine natürliche Definition des aggregierten Takts.</p>
+        <p class="Text">Der bisher implementierte Ansatz, der der Vorgehensweise im Programm VIPS entspricht, basiert auf der Annahme, dass die Fahrgäste zwischen den einzelnen Fahrzeitprofilen in einem koordinierten Bündel unterscheiden können und ihre Wahl auch in Abhängigkeit von Attributen des jeweiligen Fahrzeitprofils treffen.</p>
+        <p class="Text">Der neue Ansatz, der im Programm über die Option <span class="gui_element">Koordinierte Fahrzeitprofile als ununterscheidbar annehmen</span> realisiert ist, basiert auf folgendem Algorithmus. <span class="formula">T</span><span class="formula_subscript">i</span> seien die Takte der koordinierten Fahrzeitprofile.</p>
+        <ul>
+            <LI class="List0">Im ersten Schritt wird der aggregierte Takt <span class="formula">T</span> für die Koordinierungsgruppe folgendermaßen gesetzt.</LI>
+        </ul>
+        <p class="List_Text0">
+            <span class="formula">T </span>:= 1 / (1 / <span class="formula">T</span><span class="formula_subscript">1</span><span class="formula"></span>+ ... + 1 / <span class="formula">T</span><span class="formula_subscript">m</span>)</p>
+        <ul>
+            <LI class="List0">Dies ist das harmonische Mittel des gegebenen <span class="formula">T</span><span class="formula_subscript">i</span>. Die taktgemäße Anzahl Fahrten ist gleich der Summe der Fahrten der einzelnen Fahrzeitprofile. Beispiel: <span class="formula">T</span><span class="formula_subscript">1</span><span class="formula"></span>= 6', <span class="formula">T</span><span class="formula_subscript">2</span><span class="formula"></span>= 7,5 (das heißt 10 + 8 Fahrten/h) ergibt aggregiert <span class="formula">T</span> = 10/3, was ebenso 18&#160;Fahrten/h entspricht.</LI>
+            <LI class="List0">Der Anteil eines Fahrzeitprofils am Verkehrsangebot ergibt sich nach <span class="symbol">b</span><span class="formula_subscript">i</span><span class="formula"> = T / T</span><span class="formula_subscript">i</span> und wird auch als relativer Anteil an der Nachfrage des Fahrzeitprofil-Bündels verwendet, das heißt <span class="formula">p</span><span class="formula_subscript">i</span><span class="formula"></span>:= <span class="symbol">b</span><span class="formula_subscript">i</span>. Der aggregierte Widerstand ergibt sich aus <span class="formula">C := c</span><span class="formula_subscript">1</span><span class="formula"> • p</span><span class="formula_subscript">1</span><span class="formula"> + … + c</span><span class="formula_subscript">m</span><span class="formula"> • p</span><span class="formula_subscript">m</span>, wobei <span class="formula">c</span><span class="formula_subscript">i</span> die Widerstände der Fahrzeitprofile bezeichnen.</LI>
+            <LI class="List0">Das virtuelle aggregierte Fahrzeitprofil <span class="formula">m*</span> mit Takt <span class="formula">T</span> und Widerstand <span class="formula">C</span> wird mit den anderen Fahrzeitprofilen verglichen, dafür wird der Standardalgorithmus verwendet <MadCap:xref class="siehe_1" href="1_6_Beispiel fuer die taktfeine Umlegung.htm#1_benutzermodell_oev_2318507456_1079109"><span style="color: Black;" class="mcFormatColor">(</span><u>Routensuche</u></MadCap:xref><MadCap:xref class="siehe_2" href="1_6_Beispiel fuer die taktfeine Umlegung.htm#1_benutzermodell_oev_2318507456_1078728"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Routenwahl</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+        </ul>
+        <h5>Modellansatz</h5>
+        <p class="Text">Es wird davon ausgegangen, dass die Fahrzeitprofile innerhalb der koordinierten Fahrzeitprofile nicht unterscheidbar sind. Die Attribute Takt und Widerstand eines Fahrzeitprofils spielen keine Rolle, stattdessen wird der Takt anhand der Bedienungshäufigkeit berechnet.</p>
+        <p class="Text">Demzufolge kann der prozentuale Anteil an der Gesamtanzahl Fahrten als Nachfrageanteil je Fahrzeitprofil verwendet werden. Fahrgäste ohne Kenntnis der einzelnen Fahrzeitprofile des Bündels werden die erste ankommende Alternative wahrnehmen. Daher ist die Fahrgastbelastung jedes Fahrzeitprofils proportional zur Anzahl an Fahrten dieser Alternative.</p>
+        <p class="Text">Darüber hinaus ist der aggregierte Widerstand definiert als das gewichtete Mittel der Widerstände der einzelnen Fahrzeitprofile, wobei die Gewichtung anhand der BDH-Anteile <span class="formula_symbol">b</span><span class="formula_subscript">i</span> erfolgt. Das ist deshalb sinnvoll, weil der resultierende aggregierte Wert der mittlere Widerstand aller Fahrten ist. Für den Fahrgast ist dies der erwartete Widerstand beim Einsteigen in die zuerst verfügbare Fahrt des Bündels.</p>
+        <h5>Beispiel</h5>
+        <p class="Text">Anhand eines Beispiels wird der Unterschied zum bisherigen Ansatz deutlich.</p>
+        <p class="Text">Bei ununterscheidbar entspricht der aggregierte Takt 6/7, das heißt nur 46&#160;Sekunden. Der aggregierte Widerstand beläuft sich auf <span class="formula">C</span> = 22,77 und ist somit deutlich höher als zuvor, da Fahrzeitprofil&#160;1 mit dem hohen Widerstand hier stärker ins Gewicht fällt.</p>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TableStandard" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="54px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="72px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="45px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="160px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">FZP</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Widerstand</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Takt</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">unterscheidbar (Standard)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">ununterscheidbar</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">24‘</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">1‘</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">0,0166</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">0,7692</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">20‘</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">5‘</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">0,3366</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">0,1538</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">3</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">16‘</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">10‘</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body1">
+                        <p class="CellText">0,6466</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body1">
+                        <p class="CellText">0,0769</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

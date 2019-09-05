@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="669" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;Cap;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;TL;FS;BS;xd;zuflusszeit;FIFO;STKW;KJ;k2;k1;and;go;ko;vo;ku;vu;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1038288">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__ref153793086">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965__toc153249393">
+            </a>Mathematischer Hintergrund der Dynamischen Gleichgewichtsumlegung</h3>
+        <p class="Text">Da die Analyse in einem dynamischen Kontext ausgeführt wird, sind die Modellvariablen Ganglinien, die hier als stückweise konstante Funktionen der zeitlichen Variable <span class="formula">t</span> dargestellt werden. </p>
+        <p class="Text">Nutzerfahrten im Streckennetz werden mit einem gerichteten Graph <span class="formula">G </span>= (<span class="formula">N, A</span>) modelliert, wobei <span class="formula">N</span> die Menge der Knoten und <span class="formula">A</span><span class="symbol">Í</span><span class="formula">N ´ N</span> die Menge der Kanten ist. Jede Strecke, jeder Abbieger und jede Anbindung im <MadCap:variable name="PTV_Manual.Programmname" />-Netz entspricht einer Kante. Jeder <MadCap:variable name="PTV_Manual.Programmname" />-Netzknoten und Bezirk entspricht einem Knoten von <span class="formula">G</span>.</p>
+        <p class="Text">Jede Kante <span class="formula">a </span>wird definiert durch ihren Anfangsknoten <span class="formula">TL(a)</span> und ihren Endknoten <span class="formula">HD(a)</span>. </p>
+        <p class="Text">Also ergibt sich <span class="formula">a = </span>(<span class="formula">TL</span>(<span class="formula">a</span>), <span class="formula">HD</span>(<span class="formula">a</span>)).</p>
+        <h5>
+            <span class="gui_element">Beispiel</span>
+        </h5>
+        <p class="Text">Im Fall einer Kante <span class="formula">a</span>, die eine Strecke im <MadCap:variable name="PTV_Manual.Programmname" />-Netz darstellt, würde <span class="formula">TL(a) </span>deren Von-Knoten und <span class="formula">HD</span>(<span class="formula">a</span>)<span class="formula"></span>deren Nach-Knoten entsprechen. Ausgehende und eingehende Kanten des Knoten <span class="formula">x</span><span class="symbol">Î</span><span class="formula">N </span>sind angegeben als <span class="formula">FS</span>(<span class="formula">x</span>) ={<span class="formula">a</span><span class="symbol">Î</span><span class="formula">A: x = TL</span>(<span class="formula">a</span>)} oder <span class="formula">BS</span>(<span class="formula">y</span>) = {<span class="formula">a</span><span class="symbol">Î</span><span class="formula">A: y = HD</span>(<span class="formula">a</span>)}. Die Bezirke bilden eine Teilmenge <span class="formula">Z </span><span class="symbol">Í</span><span class="formula"> N</span> der Knoten. </p>
+        <p class="Text">Nutzer, die von einem Knoten <span class="formula">o</span><span class="symbol">Î</span><span class="formula">N </span>zu einem Knoten <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z </span>fahren, ziehen die Menge <span class="formula">K</span><span class="formula_subscript">od</span> aller Wege in Betracht, die <span class="formula">o</span> und <span class="formula">d</span> auf<span class="formula"> G </span>verbinden. Im Vordergrund steht das<span class="formula"> n:1 </span>Kurzwegproblem von jedem Knoten <span class="formula">o</span><span class="symbol">Î</span><span class="formula">N </span>zu einem gegebenen Ziel <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span>. Es wird davon ausgegangen, dass Graph <span class="formula">G</span> stark zusammenhängend ist, sodass <span class="formula">K</span><span class="formula_subscript">xd</span> mit <span class="formula">x</span><span class="symbol">Î</span><span class="formula">N </span><span class="symbol">¹</span><span class="formula"> d</span><span class="symbol">Î</span><span class="formula">Z</span> nicht leer ist.</p>
+        <p class="Text">Folgende festgelegte Schreibweise beschreibt die Wegetopologie: </p>
+        <p class="Text">
+            <span class="formula">A</span>(<span class="formula">k</span>)<span class="formula"></span>= Folge von Kanten, die den Weg <span class="formula">k</span><span class="symbol">Î</span><span class="formula">K</span><span class="formula_subscript">od</span> von<span class="formula"> o</span><span class="symbol">Î</span><span class="formula">N</span> nach <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span> festlegt</p>
+        <p class="Text">Für die Netzbelastungen werden folgende Schreibweisen genutzt:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 497px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="58px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="439px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">D</span>
+                            <span class="formula_superscript">od</span>(<span class="formula_symbol">t</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Nachfrage von Fahrzeugen, die sich von Quelle <span class="formula">o</span><span class="symbol">Î</span><span class="formula">N</span> zu Ziel<span class="formula" style="font-size: 10pt;line-height: 12pt;"></span><span class="formula" style="font-size: 8pt;line-height: 10pt;">d</span><span class="symbol">Î</span><span class="formula">Z</span><span class="formula" style="font-size: 10pt;line-height: 12pt;"></span>bewegen und zum Zeitpunkt <span class="formula_symbol" style="line-height: 11pt;">t</span> abfahren</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="formula">f</span>
+                            <span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Fluss von Fahrzeugen, die zum Zeitpunkt <span class="formula_symbol" style="line-height: 11pt;">t</span> Kante <span class="formula">a</span><span class="symbol">Î</span><span class="formula">A</span> befahren</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">F</span>
+                            <span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">kumulierter Fluss von Fahrzeugen, die zum Zeitpunkt <span class="formula_symbol" style="line-height: 11pt;">t</span> Kante <span class="formula">a</span><span class="symbol">Î</span><span class="formula">A</span> befahren</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="formula">u</span>
+                            <span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Abfluss von Kante <span class="formula">a</span><span class="symbol">Î</span><span class="formula">A</span> zum Zeitpunkt <span class="formula_symbol" style="line-height: 11pt;">t</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Definitionsgemäß gilt Folgendes:</p>
+        <p class="Formula_number" MadCap:autonum=" [1]">
+            <a name="1_benutzermodell_iv_2033098965_88640">
+            </a>
+            <img src="../Resources/Images/7_127.jpg" />
+        </p>
+        <p class="Text">Für die Netzleistungen werden Reisezeiten durch Zu- und Abflussfunktionen dargestellt und folgende Schreibweisen genutzt:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="51px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="444px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">c</span>
+                            <span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Kosten, um Kante <span class="formula">a</span><span class="symbol">Î</span><span class="formula">A</span> zu befahren<span class="formula" style="font-size: 10pt;line-height: 12pt;"></span>für Fahrzeuge, die zum Zeitpunkt <span class="formula_symbol" style="line-height: 11pt;">t</span> auffahren</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">a</span>(<span class="formula_symbol">t</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Abflusszeit von Kante <span class="formula">a</span><span class="symbol">Î</span><span class="formula">A</span> für Fahrzeuge, die zum Zeitpunkt <span class="formula_symbol" style="line-height: 11pt;">t</span> auffahren</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">f</span>
+                            <span class="formula_subscript">a</span>
+                            <span class="formula_superscript">-1</span>(<span class="formula_symbol">t</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Zuflusszeit von Kante <span class="formula">a</span><span class="symbol">Î</span><span class="formula">A</span> für Fahrzeuge, die die Kante zum Zeitpunkt <span class="formula_symbol" style="line-height: 11pt;">t</span> verlassen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var">
+                            <span class="formula">C</span>
+                            <span class="formula_subscript">k</span>(<span class="formula_symbol">t</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Kosten von Weg <span class="formula">k</span><span class="symbol">Î</span><span class="formula">K</span><span class="formula_subscript">od</span> von <span class="formula">o</span><span class="symbol">Î</span><span class="formula">N</span> nach <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span> für Fahrzeuge, die Knoten <span class="formula">o</span> zum Zeitpunkt <span class="formula_symbol" style="line-height: 11pt;">t</span> verlassen</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var">
+                            <span class="formula">T</span>
+                            <span class="formula_subscript">k</span>(<span class="formula_symbol">t</span>)</p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Abflusszeit von Weg <span class="formula">k</span><span class="symbol">Î</span><span class="formula">K</span><span class="formula_subscript">od</span> von <span class="formula">o</span><span class="symbol">Î</span><span class="formula">N</span> nach <span class="formula">d</span><span class="symbol">Î</span><span class="formula">Z</span> für Fahrzeuge, die <span class="formula">o</span> zum Zeitpunkt <span class="formula_symbol" style="line-height: 11pt;">t</span> verlassen</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Da es zeitlich veränderliche Kosten gibt, kann es vorteilhaft sein, an Knoten zu warten, um eine bestimmte Kante zu einem späteren Zeitpunkt zu befahren. Im Folgenden wird davon ausgegangen, dass Fahrzeuge nicht an Knoten warten dürfen, stattdessen können aber Wege mit Zyklen vorteilhaft erscheinen. Die dynamischen Kurzwege enthalten jedoch höchstens eine endliche Anzahl von Zyklen.</p>
+        <p class="Text">Da das Warten an Knoten nicht zugelassen ist, ist die Reisezeit <span class="formula">T</span><span class="formula_subscript">k</span>(<span class="formula_symbol">t</span>) eines Weges die Summe der Reisezeiten seiner Kanten <span class="formula">A</span>(<span class="formula">k</span>), wobei jeweils die zu dem Zeitpunkt gültige Kantenreisezeit verwendet wird, zu dem die Fahrzeuge die Kante erreichen. Gleiches gilt für die Berechnung der Wegekosten <span class="formula">C</span><span class="formula_subscript">k</span>(<span class="formula_symbol">t</span>) als Summe der Kosten der Kanten <span class="formula">A</span>(<span class="formula">k</span>)<span class="formula">.</span> Die Abflusszeit beziehungsweise die Kosten von Weg <span class="formula">k </span>können dann über folgende rekursive Gleichungen ermittelt werden:</p>
+        <p class="Formula_number" MadCap:autonum=" [2]">
+            <a name="1_benutzermodell_iv_2033098965_1050397">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_40630">
+            </a>
+            <img src="../Resources/Images/7_226.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Formula_number" MadCap:autonum=" [3]">
+            <a name="1_benutzermodell_iv_2033098965_1038368">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_84229">
+            </a>
+            <img src="../Resources/Images/7_227.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000063px;" />
+        </p>
+        <p class="Text">Dabei ist<span class="formula"> a = (o, x)</span><span class="symbol">Î</span><span class="formula">A</span> die erste Kante von <span class="formula">k</span> und <span class="formula">h</span><span class="symbol">Î</span><span class="formula">K</span><span class="formula_subscript">xd</span> der Rest des Weges <span class="formula">k </span>(<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1050379">Abbildung 1</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_RecursiveExpressions.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 00009px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1050379">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_43123">
+            </a>Rekursive Gleichungen der Wegabflusszeit, -zuflusszeit und Kosten</p>
+        <p class="Text">Die strikte FIFO-Regel gilt, wenn folgende Eigenschaft für jede Kante <span class="formula">a</span><span class="symbol">Î</span><span class="formula">A </span>erfüllt wird:</p>
+        <p class="Formula_number" MadCap:autonum=" [4]">
+            <a name="1_benutzermodell_iv_2033098965_1050384">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_17609">
+            </a>
+            <img src="../Resources/Images/7_228.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000063px;margin-bottom: 1, 009134px;" />, für alle <span class="formula">t‘ &gt; t </span></p>
+        <p class="Text">Die durch <MadCap:xref class="Label_formula" href="#1_benutzermodell_iv_2033098965_1050384">[4]</MadCap:xref> ausgedrückte Monotonie garantiert, dass die Ganglinien der Kantenabflusszeit umkehrbar sind. Die FIFO-Regel gilt ferner auch für die Zuflusszeiten. </p>
+        <p class="Formula_number" MadCap:autonum=" [5]">
+            <a name="1_benutzermodell_iv_2033098965_83235">
+            </a>
+            <img src="../Resources/Images/7_229.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007429px;margin-bottom: 0, 996662px;" />, für alle <span class="formula">t‘ &gt; t </span></p>
+        <p class="Text">Jede Kante <span class="formula">a</span><span class="symbol">Î</span><span class="formula">A</span> besteht aus einer homogenen Verbindung mit zwei Engpässen, die am Anfang und am Ende liegen. Die Belastungen entlang der Kante werden auf der Basis der <span class="gui_element">Vereinfachten Theorie kinematischer Wellen</span> (STKW) und des Fundamentaldiagramms in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1061502">Abbildung 2</MadCap:xref> ermittelt und geben die Fahrzeugbelastung <span class="formula">q</span><span class="formula_subscript">a</span>(<span class="formula">x,</span><span class="formula_symbol">t</span>) auf einem bestimmten Abschnitt <span class="formula">x</span> der Kante zu einem bestimmten Zeitpunkt <span class="formula">t</span> als Funktion der Fahrzeugdichte <span class="formula">k</span><span class="formula_subscript">a</span>(<span class="formula">x,</span><span class="formula_symbol">t</span>) auf demselben Abschnitt zum selben Zeitpunkt wieder.</p>
+        <p class="Text">Die Kante ist dann folgendermaßen gekennzeichnet:</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="41px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="454px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">L</span>
+                            <span class="formula_subscript">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Länge der Kante <span class="formula">a</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Q</span>
+                            <span class="formula_subscript">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Kapazität des ersten Engpasses und der mit Kante<span class="formula" style="font-size: 10pt;line-height: 12pt;"> a </span>assoziierten homogenen Verbindung, Eingangskapazität genannt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">S</span>
+                            <span class="formula_subscript">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Kapazität des letzten mit Kante <span class="formula">a</span> assoziierten Engpasses, welche den durchschnittlichen Effekt der Reduzierung der Kapazität an Knotenpunkten simuliert (zum Beispiel durch vorhandene Signalanlagen), Ausgangskapazität genannt <span class="formula">S</span><span class="formula_subscript">a</span> ≤ <span class="formula">Q</span><span class="formula_subscript">a</span>;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">V</span>
+                            <span class="formula_subscript">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">maximale auf Kante <span class="formula">a</span> erlaubte Geschwindigkeit, in <MadCap:variable name="PTV_Manual.Programmname" /> üblicherweise v0 genannt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">KJ</span>
+                            <span class="formula_subscript">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">maximale Dichte auf Kante <span class="formula">a</span><span class="formula" style="font-size: 10pt;line-height: 12pt;">, </span>maximale Staudichte genannt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">W</span>
+                            <span class="formula_subscript">a</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body2">
+                        <p class="CellText">Fortpflanzungsgeschwindigkeit der überkritischen Belastungen auf Kante <span class="formula">a</span>, Stauwellengeschwindigkeit genannt </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Vor diesem Hintergrund ist die Eingangskapazität gleich der physikalischen Kapazität auf der freien Strecke, wogegen die Ausgangskapazität gleich der auf Signalanlagen oder Vorfahrtsregeln beruhenden Engpasskapazität am stromabwärtigen Knotenpunkt ist. Zielanbindungen <span class="formula">(x, d)</span><span class="symbol">Î</span><span class="formula">A: x</span><span class="symbol">Î</span><span class="formula">N </span>\ <span class="formula">Z, d</span><span class="symbol">Î</span><span class="formula">Z </span>sind Kanten mit unbegrenzter Eingangskapazität, Quellanbindungen <span class="formula">(o, y)</span><span class="symbol">Î</span><span class="formula">A: o</span><span class="symbol">Î</span><span class="formula">Z, y</span><span class="symbol">Î</span><span class="formula">N </span>\ <span class="formula">Z</span> sind Kanten mit unbegrenzter Ausgangskapazität. <span class="gui_element">Abbieger</span> sind hingegen Kanten der Länge null, deren Eingangskapazitäten und Ausgangskapazitäten gleich sind.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_ParabolicTrapeziodalFundDiagNeu.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1061502">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_33110">
+            </a>Das parabolische Fundamentaldiagramm, das die Relation zwischen Verkehrsstärke, Geschwindigkeit und Dichte entlang einer bestimmten Kante wiedergibt.</p>
+        <p class="Text">In <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1061502">Abbildung 2</MadCap:xref> muss <span class="formula">k2</span><span class="formula_subscript">a</span> ≥ <span class="formula">k1</span><span class="formula_subscript">a</span> gelten, was folgende Ungleichung unter den obigen Parametern voraussetzt: </p>
+        <p class="footer_uger">
+            <img src="../Resources/Images/7_5.jpg" />
+        </p>
+        <p class="Text">Auf der Basis des Fundamentaldiagramms können zwei Flusszustände unterschieden werden. </p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Unterkritische Flussbedingungen</span>, das heißt nicht überlasteter oder leicht überlasteter Verkehr. Wenn unter diesen Bedingungen die Fahrzeugdichte zunimmt, nimmt auch die Verkehrsstärke zu.</LI>
+            <LI class="List0">
+                <span class="gui_element">Überkritische Flussbedingungen</span>, das heißt stark überlasteter Verkehr. Staus und „Stop and go”-Phänomene kommen vor. Nimmt unter diesen Bedingungen die Fahrzeugdichte weiter zu, so nimmt die Verkehrsstärke ab.</LI>
+        </ul>
+        <p class="Text">Dann drücken <span class="formula">ko</span><span class="formula_subscript">a</span>(<span class="formula">q</span>) und <span class="formula">vo</span><span class="formula_subscript">a</span>(<span class="formula">q</span>) die Dichte und die Geschwindigkeit als Funktionen der Belastung unter überkritischen Belastungszuständen aus, während <span class="formula">ku</span><span class="formula_subscript">a</span>(<span class="formula">q</span>) und <span class="formula">vu</span><span class="formula_subscript">a</span>(<span class="formula">q</span>) der Dichte und Geschwindigkeit als Funktionen der Belastung unter unterkritischen Belastungszuständen entsprechen. </p>
+        <p class="Text">Werden Kanten mit niedrigen Geschwindigkeitsbegrenzungen modelliert, die innerstädtische Strecken darstellen, kann unter unterkritischen Belastungsbedingungen von einer konstanten Fahrzeuggeschwindigkeit ausgegangen werden, die der Geschwindigkeitsbegrenzung entspricht, bis die Kapazität erreicht ist. In diesem Fall kann das in <MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1050243">Abbildung 3</MadCap:xref> dargestellte einfachere trapezförmige Fundamentaldiagramm angewandt werden, wobei folgende Gleichung erfüllt sein muss, damit <span class="formula">k2</span><span class="formula_subscript">a</span> ≥ <span class="formula">k1</span><span class="formula_subscript">a</span> gilt: </p>
+        <p class="Formula">
+            <img src="../Resources/Images/7_4.jpg" />
+        </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_DUE_TrapezoidalFundDiag2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">
+            <a name="1_benutzermodell_iv_2033098965_1050243">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_72626">
+            </a>Das für innerstädtische Strecken empfohlene trapezförmige Fundamentaldiagramm </p>
+        <p class="Text">Um die vorgeschlagenen Modelle zu implementieren, wird die Analyseperiode [<span class="formula">0, Q</span>] in <span class="formula">n </span>Zeitintervalle unterteilt, gekennzeichnet durch die Folge der Zeitpunkte <span class="formula_symbol">t</span><span class="formula"></span>= {<span class="formula_symbol">t</span><span class="formula_superscript">0</span><span class="formula">, … , </span><span class="formula_symbol">t</span><span class="formula_superscript">i</span><span class="formula">, … , </span><span class="formula_symbol">t</span><span class="formula_superscript">n</span>},<span class="formula"></span>wobei <span class="formula_symbol">t</span><span class="formula_superscript">0</span><span class="formula"> = 0, </span><span class="formula_symbol">t</span><span class="formula_superscript">i</span><span class="formula"> &lt; </span><span class="formula_symbol">t</span><span class="formula_superscript">j</span> für alle 0 ≤<span class="formula"> i</span> &lt; <span class="formula">j</span> ≤ <span class="formula">n</span>, und <span class="formula_symbol">t</span><span class="formula_superscript">n</span><span class="formula">= Q.</span> Für Berechnungszwecke wird zudem ein zusätzlicher Zeitpunkt <span class="formula_symbol">t</span><span class="formula_superscript">n+1</span><span class="formula">= </span><span class="symbol">¥</span><span class="formula"></span>eingeführt.</p>
+        <p class="Text">Nachfolgend wird die Ganglinie <span class="formula">g</span>(<span class="formula_symbol">t</span>) jeder Variable entweder über eine stückweise lineare oder eine stückweise konstante Funktion angenähert, definiert durch die Werte <span class="formula">g</span><span class="formula_superscript">i</span><span class="formula"> = g</span>(<span class="formula_symbol">t</span><span class="formula_superscript">i</span>) zu jedem Zeitpunkt <span class="formula_symbol">t</span><span class="formula_superscript">i</span><span class="symbol">Î</span><span class="formula_symbol">t</span>. So kann jede Ganglinie <span class="formula">g</span>(<span class="formula_symbol">t</span>) über den Vektor <span class="formula">g</span> = (<span class="formula">g</span><span class="formula_superscript">0</span><span class="formula">, … , g</span><span class="formula_superscript">i</span><span class="formula">, … , g</span><span class="formula_superscript">n</span>) numerisch dargestellt werden.</p>
+    </body>
+</html>

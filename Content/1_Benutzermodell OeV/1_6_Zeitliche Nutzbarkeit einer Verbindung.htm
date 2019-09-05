@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="639" MadCap:lastWidth="510" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen,PTV_Manual.Ready_for_translation" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb;AnteilAkzGEH;V';β;FPreis;DTfrüh;DTspät;Fak4;UZ;bzw;spaet;frueh;Fak;Tfrueh;Tspaet">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1082833">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_41405">
+            </a>Zeitliche Nutzbarkeit einer Verbindung</h4>
+        <p class="Text">
+            <MadCap:keyword term="Fahrplanfeine Umlegung: Zeitliche Nutzbarkeit einer Verbindung" />
+            <MadCap:keyword term="deltaT" />
+            <MadCap:keyword term="deltaT:früh" />
+            <MadCap:keyword term="deltaT:spät" />Die zeitliche Nutzbarkeit wird beim fahrplanfeinen Verfahren für auf die Abfahrtszeit bezogene Nachfrage wie folgt modelliert.</p>
+        <ul>
+            <LI class="List0">
+                <span class="formula_symbol">D</span>
+                <span class="formula">T</span>
+                <span class="formula_superscript">a</span>
+                <span class="formula_subscript">i</span>
+                <span class="formula_superscript">früh</span> = Zeit, die Verbindung <span class="formula">i</span> <span class="gui_element">früher</span> abfährt als für das Abfahrtszeitintervall <span class="formula">a</span> gewünscht (<span class="symbol">®</span> Ganglinie); gleich null, falls <span class="formula">i</span> <span class="gui_element">innerhalb</span> von <span class="formula">a</span> oder <span class="gui_element">nach</span> <span class="formula">a</span> abfährt.</LI>
+        </ul>
+        <p class="Text2">
+            <img src="../Resources/Images/8_33.jpg" />
+        </p>
+        <ul>
+            <LI class="List0">
+                <span class="formula_symbol">D</span>
+                <span class="formula">T</span>
+                <span class="formula_superscript">a</span>
+                <span class="formula_subscript">i</span>
+                <span class="formula_superscript">spaet</span> = Zeit, die Verbindung <span class="formula">i</span> <span class="gui_element">später</span> abfährt als für das Abfahrtszeitintervall <span class="formula">a</span> gewünscht (<span class="symbol">®</span> Ganglinie); gleich null, falls <span class="formula">i</span> <span class="gui_element">innerhalb</span> von <span class="formula">a</span> oder <span class="gui_element">vor</span> <span class="formula">a</span> abfährt.</LI>
+        </ul>
+        <p class="Text2">
+            <img src="../Resources/Images/8_20.jpg" />
+        </p>
+        <ul>
+            <LI class="List0">
+                <span class="formula_symbol">D</span>
+                <span class="formula">T</span>
+                <span class="formula_superscript">a</span>
+                <span class="formula_subscript">i</span>
+                <span class="formula_superscript">frueh</span> <span class="gui_element">•</span> <span class="formula">Fak</span><span class="formula_symbol_subscript">D</span><span class="formula_subscript">Tfrueh</span> + <span class="formula_symbol">D</span><span class="formula">T</span><span class="formula_superscript">a</span><span class="formula_subscript">i</span><span class="formula_superscript">spaet</span> <span class="gui_element">•</span> <span class="formula">Fak</span><span class="formula_symbol_subscript">D</span><span class="formula_subscript">Tspaet</span> = zeitlicher Abstand von Verbindung <span class="formula">i</span> und Intervall <span class="formula">a</span>. Der erste Faktor steuert die Verfrühungsempfindlichkeit, der zweite die Verspätungsempfindlichkeit.</LI>
+        </ul>
+        <p class="Text">Eine analoge Übertragung unter Nutzung des Ankunftszeitintervalls erfolgt bei Verwendung einer auf die Ankunftszeit bezogenen Ganglinie. Der zeitliche Abstand geht als weiterer Summand in die Definition des Widerstands ein, um geringere Nutzbarkeiten zu bestrafen.</p>
+        <p class="Tabledist">
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Für Verbindungen ohne zeitliche Lage ist <span class="formula_symbol">D</span><span class="formula">T</span> immer null.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:xref class="Label_Table" href="#1_benutzermodell_oev_2318507456_1179625">Tabelle&#160;165</MadCap:xref> zeigt ein Beispiel für die Berechnung von <span class="formula_symbol">D</span><span class="formula">T</span><span class="formula_subscript">früh</span> und <span class="formula_symbol">D</span><span class="formula">T</span><span class="formula_subscript">spät</span> wenn das Intervall der Wunschabfahrtszeit [6:00;7:00] ist.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Abfahrt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="font-weight: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula_symbol">D</span>
+                            <span class="formula">T</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption" style="font-weight: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula_symbol">D</span>
+                            <span class="formula">T</span>
+                            <span class="formula_subscript">früh</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption" style="font-weight: normal;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula_symbol">D</span>
+                            <span class="formula">T</span>
+                            <span class="formula_subscript">spät</span>
+                        </p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">5:30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">30</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">6:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">6:40</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">7:00</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_mid">7:10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_mid">10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body1">
+                        <p class="CellText_mid">0</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body1">
+                        <p class="CellText_mid">10</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_oev_2318507456_1179625">
+                    </a>
+                    <a name="1_benutzermodell_oev_2318507456_68174">
+                    </a>Berechnung des zeitlichen Abstands bei auf die Abfahrtszeit bezogener Nachfrage</p>
+            </caption>
+        </table>
+    </body>
+</html>

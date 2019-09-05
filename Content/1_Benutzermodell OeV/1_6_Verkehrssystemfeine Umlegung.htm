@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb;AnteilAkzGEH;UZ" MadCap:lastBlockDepth="4" MadCap:lastHeight="548" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_oev_2318507456_1026677">
+            </a>
+            <MadCap:keyword term="Verkehrssystemfeine Umlegung" />
+            <MadCap:keyword term="ÖV-Umlegungsverfahren: verkehrssystemfein" />
+            <a name="1_benutzermodell_oev_2318507456_16856">
+            </a>Verkehrssystemfeine Umlegung</h2>
+        <p class="Text">Bei der verkehrssystemfeinen Umlegung wird nicht zwischen den einzelnen Linien eines ÖV-Angebots unterschieden. Die Modellierung des ÖV-Angebots berücksichtigt nur die Strecken eines Grundnetzes mit ihren zugehörigen Fahrzeiten. Das Grundnetz kann dabei die folgenden Mengen von Strecken umfassen.</p>
+        <ul>
+            <LI class="List0">Alle Straßen- und Schienenstrecken des Streckennetzes</LI>
+            <LI class="List0">Nur die von Linien befahrenen Strecken des Streckennetzes</LI>
+            <LI class="List0">Nur die von aktiven Linien befahrenen Strecken des Streckennetzes</LI>
+        </ul>
+        <p class="Text">Aus den Strecken dieses Grundnetzes wird ein Graph aufgebaut, der die Grundlage für eine Bestwegsuche bildet. </p>
+        <p class="Text">Da zwischen einzelnen Linien nicht unterschieden wird, können Umsteigehaltestellen mit den zugehörigen Umsteigezeiten nicht in die Suche einbezogen werden. Allerdings ist es möglich, Übergangszeiten zwischen verschiedenen Verkehrssystemen (Umsteigezuschläge für Verkehrssystemwechsel, beispielsweise zwischen Bus und Bahn) zu berücksichtigen.</p>
+        <p class="Text">Die verkehrssystemfeine Umlegung ermittelt für jede Beziehung zwischen Quell- und Zielbezirk genau eine Route, die jeweils aus einer Quellanbindung und einer Zielanbindung für den ÖV besteht und aus Strecken und Abbiegern, die für ein ÖV-Verkehrssystem zugelassen sind. Umsteigevorgänge sind Verkehrssystem-Wechsel, die mit einem Zeitzuschlag in die Routensuche eingehen.</p>
+        <ul>
+            <LI class="List0">Für Strecken wird t-ÖVSys berücksichtigt</LI>
+            <LI class="List0">Ein Verkehrssystemwechsel kann nur an ausgewählten Knoten stattfinden</LI>
+            <LI class="List0">An Knoten, an denen ein Verkehrssystemwechsel nötig ist, wird ein Umsteigezeitzuschlag UZ vergeben</LI>
+            <LI class="List0">UZ = knotentypspezifischer Zeitzuschlag + Zuschlag je Umsteigevorgang</LI>
+            <LI class="List0">An Knoten, an denen zwischen den Strecken kein Abbieger für das ÖV-Verkehrssystem definiert ist, wird der Zeitzuschlag UZ ebenfalls vergeben, sofern die Option <span class="gui_element">Abbiegeverbote berücksichtigen </span>aktiv ist.</LI>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="428" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="AHPI;NMHC;NH;100km;ca;75kg;83kg;UBA;BAFU;www;hbefa;Emis;Nordic;Rls90;Council;of;Emissions;Lm;DStrO;Dv;v_0;bis130;DStg">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_umweltwirkungsmodell_1611065317_1025967">
+            </a>Lärm-Emis-Rls90 Verfahren</h3>
+        <p class="Text">
+            <MadCap:keyword term="RLS-90" />
+            <MadCap:keyword term="Lärmbelastung: Lärm-Emis-Rls90 Verfahren" />Das Verfahren ermittelt den Emissions-Mittelungspegel von langen, geraden Fahrstreifen nach RLS-90. <MadCap:variable name="PTV_Manual.Programmname" /> berücksichtigt für die Berechnung von <span class="formula">Lm, E</span> in Dezibel folgende Schritte.</p>
+        <ul>
+            <LI class="List0">Berechnung des Mittelungspegels <span class="formula">Lm(25)</span> nach Gleichung (7), RLS-90.</LI>
+            <LI class="List1">
+                <img src="../Resources/Images/10_1.png" />
+            </LI>
+            <LI class="List1" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="formula">M = maßgebende stündliche Verkehrsstärke (Kfz/h)</span>
+            </LI>
+            <LI class="List1" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                <span class="formula">p = maßgebender LKW-Anteil in Prozent am Gesamtverkehr (über 2,8 t zulässiges Gesamtgewicht)</span>
+            </LI>
+            <LI class="List0">Ermittlung des Korrekturfaktors <span class="formula">DStrO</span> für unterschiedliche Straßenoberflächen nach Tabelle 4, RLS-90. <MadCap:variable name="PTV_Manual.Programmname" /> hält die in dieser Tabelle angegebenen Korrekturfaktoren als ASCII-Datei <span class="path">RLS.DAT</span> im Hintergrund.</LI>
+            <LI class="List0">Ermittlung der Geschwindigkeitskorrektur <span class="formula">Dv</span> für von 100 km/h abweichende zulässige Höchstgeschwindigkeiten nach Gleichung (8), RLS-90. Der Geltungsbereich von v_0 beträgt 30 bis130 km/h für PKW und 30 bis 80 km/h für LKW.</LI>
+            <LI class="List0">Ermittlung des Korrekturfaktors <span class="formula">DStg</span> für Steigung und Gefälle nach Gleichung (9), RLS-90.</LI>
+        </ul>
+        <table class="TableStyle-TipHint2" style="width: 476px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" cellspacing="0">
+            <col width="476px" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Der Korrekturfaktor <span class="formula">DE</span> zur Berücksichtigung der Absorptionseigenschaften von reflektierenden Flächen wird nicht berechnet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <LI class="List0">Als Endergebnis wird für jede aktive Strecke der Emissionspegel <span class="formula">Lm, E</span> als Addition nach Gleichung (6), RLS-90 berechnet.</LI>
+        </ul>
+        <p class="Text2">
+            <img src="../Resources/Images/10_2.png" />
+        </p>
+    </body>
+</html>

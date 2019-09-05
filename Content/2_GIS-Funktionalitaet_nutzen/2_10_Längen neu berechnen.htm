@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="692" MadCap:lastWidth="510" MadCap:ignoredWords="PGD;emf;sid;Projections;Well;Known;Geographic;Coordinate">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="2_gis_funktionalitaet_nutzen_1884258370_1039020">
+            </a>
+            <a name="2_gis_funktionalitaet_nutzen_1884258370_92125">
+            </a>Längen neu berechnen</h3>
+        <p class="Text">
+            <MadCap:keyword term="Längen neu berechnen" />Sie können die Längen von Linienobjekten, zum Beispiel von Strecken, Anbindungen und Linienwegen, nach manuellen Anpassungen im Netz oder nach Änderungen am Netzmaßstab neu berechnen.</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Die Längen werden nur dann korrekt berechnet, wenn Ihr Netz ein längentreues (=&#160;metrisches) Koordinatensystem besitzt <MadCap:xref class="sieheUeberschrSeite" href="2_10_Koordinatensystem wählen.htm#2_gis_funktionalitaet_nutzen_1884258370_1054640"><span style="color: Black;" class="mcFormatColor">(</span><u>Koordinatensystem wählen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                        <p class="Text">Wenn Sie die Anzahl der Nachkommastellen oder den Netzmaßstab ändern, ändern sich auch die Strecken- und Anbindungslängen. Durch die veränderten Streckenlängen wiederum ändern sich der Streckenwiderstand und damit das Umlegungsergebnis.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Netz</span> den Eintrag <span class="gui_element">Netzeinstellungen</span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element">Netzeinstellungen</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Wählen Sie das Register <span class="gui_element">Maßstab</span>.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie die gewünschten Optionen.</p>
+        <table class="TableStyle_gui_elements2" style="width: 477px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="122px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="355px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Head_0_0_RowSep_ColEnd">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Strecken- und Anbindungslängen neu berechnen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">Die Längen der Strecken und Anbindungen werden gemäß dem Koordinatensystem neu berechnet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">Linienweglängen aus Streckenlängen neu berechnen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">Ist die Option ausgewählt, werden zusätzlich zu den Strecken und Anbindungen auch die Längen der Linienwege neu berechnet.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">
+                            <span class="gui_element">nur aktive Strecken, Anbindungen, Linienrouten berücksichtigen</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_activ.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option ausgewählt, werden nur aktive Strecken, Anbindungen und Linien berücksichtigt.</p>
+                        <p class="CellText">
+                            <img src="../Resources/Images_4_all/ICO_checkbox_inactiv.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 007433px;margin-bottom: 1, 007433px;" /> Ist die Option nicht ausgewählt, werden alle Strecken, Anbindungen und Linien berücksichtigt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowEnd_ColSep" style="padding-left: 2px;padding-right: 2px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Berechnungsmethode</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle_gui_elements2_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText">
+                            <span class="gui_element">Länge = Luftlinienlänge x Netzmaßstab</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Streckenlängen ermittelt, indem der Luftlinienabstand der beiden Knoten mit dem Netzmaßstab multipliziert wird.</p>
+                        <p class="CellText">
+                            <span class="gui_element">Länge = Polygonlänge x Netzmaßstab (bei digitalisierten Strecken werden die Zwischenpunkte berücksichtigt)</span>
+                        </p>
+                        <p class="CellText">Ist die Option ausgewählt, werden die Streckenlängen ermittelt, indem der tatsächliche Verlauf der Strecke mit dem Netzmaßstab multipliziert wird.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="4. &#160;">Klicken Sie auf die Schaltfläche <span class="gui_element">neu berechnen</span>.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Längen werden neu berechnet.</p>
+    </body>
+</html>

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="1198" MadCap:lastWidth="1018" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="5min;en;29min;35s;26min;22min;28min;t0;10min;bzw;usw">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_interaktive_auswertungen_949040047_1031068">
+            </a>
+            <a name="1_interaktive_auswertungen_949040047_33080">
+            </a>Spinnendefinition durch Auswahl von Verkehrsarten</h3>
+        <p class="Text">
+            <MadCap:keyword term="Spinnen:Verkehrsarten auswählen" />Durch Aktiv- und Passiv-Setzen von Strecken oder Netzobjekten der Linienhierarchie (Linien, Linienrouten usw.) können Sie im Rahmen der Spinne Wege nach der Verkehrsart filtern (Binnenverkehr, Quellverkehr, Zielverkehr, Durchgangsverkehr, Außenverkehr oder Umgehungsbinnenverkehr).</p>
+        <p class="Text">In folgendem Beispiel wird mit Hilfe der Verkehrsartenspinne der Durchgangsverkehr durch die Stadtmitte von Lynnwood dargestellt. Es werden nur die Wege in der Spinne angezeigt, die in einem Außenbezirk beginnen und auch wieder in einem Außenbezirk enden, dazwischen aber die Stadtmitte durchqueren. In der <MadCap:xref class="Label_Image" href="#1_interaktive_auswertungen_949040047_1033932">Abbildung&#160;225</MadCap:xref> wird die Spinne für den Durchgangsverkehr und außerdem einer der Spinnenwege vom Außenbezirk 136 zum Außenbezirk 27 gezeigt.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_FlowBundle_ThroughTraffic_LY.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997538px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_interaktive_auswertungen_949040047_1033932">
+            </a>
+            <a name="1_interaktive_auswertungen_949040047_54596">
+            </a>Darstellung des Durchgangsverkehrs mit Hilfe einer Spinne für aktive Strecken</p>
+        <table class="TableStyle_TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle_TipHint1_Body_0_0_RowEnd_ColEnd">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Um eine Verkehrsartenspinne berechnen zu können, muss mindestens eine Strecke oder ein Netzobjekt der Linienhierarchie passiv sein. Benutzen Sie für das Passiv-Setzen den Filter <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Netzobjekte_über_Filter_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1105242"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Netzobjekte über Filter aktiv und passiv setzen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref> oder die räumliche Auswahl <MadCap:xref class="Benutzerhandbuch" href="../2_Netz_bearbeiten/Netzobjekte_über_die_räumliche_Auswahl_aktiv_und_passiv_setzen.htm#2_netz_bearbeiten_23091886_1103071"><span style="color: Black;" class="mcFormatColor">(</span><span style="color: Blue;" class="mcFormatColor">Anwendung: </span><u>Netzobjekte über die räumliche Auswahl aktiv und passiv setzen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">In beiden Fällen (Strecken bzw. Netzobjekte der Linienhierarchie) werden die Verkehrsarten Binnenverkehr, Quellverkehr, Zielverkehr, Durchgangsverkehr, Außenverkehr und Umgehungsbinnenverkehr unterschieden. Diese Verkehrsarten partitionieren die Menge aller Wege, d.h. jeder Weg besitzt eine eindeutige Verkehrsart.</p>
+        <p class="Text">Die Beispiele in der folgenden Aufzählung gehen von einer Strecken-Verkehrsartenspinne aus, in der innerstädtische Strecken aktiv und Strecken im Umland passiv gesetzt sind.</p>
+        <ul>
+            <LI class="List0">Binnenverkehr: Wege, die nur aktive Netzobjekte benutzen. Beispiel: Die Spinne zeigt die Wege innerhalb des Stadtgebiets an.</LI>
+            <LI class="List0">Quellverkehr: Wege, die mit einem aktiven Netzobjekt beginnen und mit einem passiven Netzobjekt enden. Beispiel: Die Spinne zeigt alle Pendlerströme aus dem Stadtgebiet hinaus in das Umland an.</LI>
+            <LI class="List0">Zielverkehr: Wege, die mit einem passiven Netzobjekt beginnen und mit einem aktiven Netzobjekt enden. Beispiel: Die Spinne zeigt alle Pendlerströme aus dem Umland in das Stadtgebiet an.</LI>
+            <LI class="List0">Durchgangsverkehr: Wege, die mit einem passiven Objekt beginnen und enden, dazwischen aber mindestens ein aktives Objekt benutzen. Beispiel: Die Spinne zeigt den Lkw-Verkehr an, der den Ballungsraum durchfährt.</LI>
+            <LI class="List0">Außenverkehr: Wege, die kein aktives Netzobjekt benutzen. Beispiel: Die Spinne zeigt den Verkehr an, der den Ballungsraum umfährt.</LI>
+            <LI class="List0">Umgehungsbinnenverkehr: Wege, die mit einem aktiven Netzobjekt beginnen und enden, dazwischen jedoch mindestens ein passives Netzobjekt benutzen. Beispiel: Die Spinne zeigt den Verkehr an, der im Stadtgebiet beginnt und endet, auf seinem Weg aber in das Umland fährt, etwa weil es eine Umgehungsstraße gibt, die Geschwindigkeitsvorteile bietet.</LI>
+        </ul>
+        <p class="Text">
+            <MadCap:xref class="Label_Table" href="#1_interaktive_auswertungen_949040047_1049037">Tabelle&#160;276</MadCap:xref> zeigt, welche Abfolgen von Strecken (im Fall einer Strecken-Verkehrsartenspinne) oder ÖV-Linien auf den Teilwegen des ÖV-Wegs (im Fall einer ÖV-Linien-Verkehrsartenspinne) zu welcher Verkehrsart gehören. Für Abfolgen mit mehr als vier Objekten ergeben sich entsprechend mehr Varianten.</p>
+        <table class="TableStyle_TableStand_withTitle" style="width: 494px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="154px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="85px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="85px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="85px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="85px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle_TableStand_withTitle_Head_0_0_RowSep_ColSep">
+                        <p class="CellCaption">Anzahl Strecken bzw. ÖV-Linien</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Head_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Head_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Head_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">3</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Head_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">4</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Binnenverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">a</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">a-a</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">a-a-a</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">a-a-a-a</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Quellverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">a-p</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">a-x-p</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">a-x-x-p</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Zielverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">p-a</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">p-x-a</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">p-x-x-a</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">Durchgangsverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColSep">
+                        <p class="CellText">p-a-p</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText">p-a-x-p oder</p>
+                        <p class="CellText">p-x-a-p</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">Außenverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">p</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">p-p</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColSep">
+                        <p class="CellText">p-p-p</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText">p-p-p-p</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText">Umgehungsbinnenverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText">-</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText">a-p-a</p>
+                    </td>
+                    <td class="TableStyle_TableStand_withTitle_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText">a-p-x-a oder</p>
+                        <p class="CellText">a-x-p-a</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_interaktive_auswertungen_949040047_1049037">
+                    </a>
+                    <a name="1_interaktive_auswertungen_949040047_73397">
+                    </a>Verkehrsart in Abhängigkeit vom Status (aktiv / passiv) der Strecken bzw. ÖV-Linien</p>
+            </caption>
+        </table>
+        <p class="Text">Die Abkürzungen in <MadCap:xref class="Label_Table" href="#1_interaktive_auswertungen_949040047_1049037">Tabelle&#160;276</MadCap:xref> haben dabei die folgende Bedeutung.</p>
+        <p class="Text">a: Strecke bzw. ÖV-Linie aktiv</p>
+        <p class="Text">p: Strecke bzw. ÖV-Linie passiv</p>
+        <p class="Text">x: nicht relevant, ob Strecke oder ÖV-Linie aktiv oder passiv</p>
+    </body>
+</html>

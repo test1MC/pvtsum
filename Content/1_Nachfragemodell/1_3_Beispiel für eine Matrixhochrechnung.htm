@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ij" MadCap:lastBlockDepth="6" MadCap:lastHeight="438" MadCap:lastWidth="1018">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_nohead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 MadCap:autonum=" 0.0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1032672">
+            </a>Beispiel für eine Matrixhochrechnung</h4>
+        <p class="Text">Als Basismatrix dient die <span class="formula">F</span><span class="formula_subscript">ij</span>-Matrix der letzten Umlegung.</p>
+        <table class="TableStyle_TableStand_nohead" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="124px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">Bezirk</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">Quellverkehr</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">20</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">30</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText_mid">50</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">40</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">50</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">90</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">Zielverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">60</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">80</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText_mid">140</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Will man jetzt den Verkehr von Bezirk 1 um 10&#160;% und von Bezirk 2 um 20&#160;% hochrechnen, so ergibt sich bei nur quellbezogenem Hochrechnen folgende Matrix.</p>
+        <table class="TableStyle_TableStand_nohead" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="124px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">Bezirk</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">Quellverkehr</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">22</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">33</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText_mid">55</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">48</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">60</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">108</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">Zielverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">70</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">93</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText_mid">163</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Es ist ersichtlich, dass sich zwar der Quellverkehr im geforderten Maße erhöht hat, nicht jedoch der Zielverkehr, da </p>
+        <p class="Text">1,1 • 60 = 66 und 1,2 • 80 = 96</p>
+        <p class="Text">Wie beim Matrixeditor wird aus diesem Grund für die quell- und zielbezogene Hochrechnung ein iteratives Verfahren – das Multi-Verfahren nach Lohse (Schnabel 1980) – verwendet, das in einem iterativen Prozess genau die Lösung sucht, mit der die Sollwerte am besten erreicht werden <MadCap:xref class="sieheUeberschrSeite" href="1_3_Hochrechnen.htm#1_nachfragemodell_2215163117_1224457"><span style="color: Black;" class="mcFormatColor">(</span><u>Das Multi-Verfahren nach Lohse (Schnabel 1980)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Für das obige Beispiel ergibt dies folgende Lösung:</p>
+        <table class="TableStyle_TableStand_nohead" style="width: 496px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStand_nohead.css');" cellspacing="0">
+            <col width="124px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <col width="124px" class="TableStyle-TableStand_nohead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">Bezirk</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">Quellverkehr</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">21</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColSep">
+                        <p class="CellText_mid">34</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowSep_ColEnd">
+                        <p class="CellText_mid">55</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body1">
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">45</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColSep">
+                        <p class="CellText_mid">62</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_0_0_RowSep_ColEnd">
+                        <p class="CellText_mid">107</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_nohead-Body-Body2">
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">Zielverkehr</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">66</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColSep">
+                        <p class="CellText_mid">96</p>
+                    </td>
+                    <td class="TableStyle_TableStand_nohead_Body_1_0_RowEnd_ColEnd">
+                        <p class="CellText_mid">162</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">&#160;</p>
+    </body>
+</html>

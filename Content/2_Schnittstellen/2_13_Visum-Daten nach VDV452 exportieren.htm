@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="663" MadCap:lastWidth="514" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;Control;operationControlPoints;published;kombinationen;etc;x10;DD;YYYY;iNNNDDD0;NNN;DDD;REC_UMLAUF;i310DDD0" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/gui_elements2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="-Daten">
+            </a>
+            <MadCap:variable name="PTV_Manual.Programmname" />-Daten nach <MadCap:variable name="PTV_Manual.VDV_452" /> exportieren</h3>
+        <p class="Text">Für den Export von <MadCap:variable name="PTV_Manual.Programmname" /> nach <MadCap:variable name="PTV_Manual.VDV_452" /> werden folgende Elemente berücksichtigt:</p>
+        <table class="TableStyle-gui_elements1" style="width: 476px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="Standard">Netz</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <ul>
+                            <LI class="List0Tab">Knoten</LI>
+                            <LI class="List0Tab">Strecken</LI>
+                            <LI class="List0Tab">Streckenpolygone</LI>
+                            <LI class="List0Tab">Haltestellenhierarchie</LI>
+                            <LI class="List0Tab">Tarifzonen</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="Standard">Rahmendaten</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <ul>
+                            <LI class="List0Tab">Verkehrssysteme</LI>
+                            <LI class="List0Tab">Kalender</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="Standard">ÖV-Angebot</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <ul>
+                            <LI class="List0">Fahrplan (Fahrplanfahrten)</LI>
+                            <LI class="List0">Umläufe</LI>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <span class="Standard">Fahrzeuge</span>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <ul>
+                            <LI class="List0">Fahrzeuge (einfach)</LI>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Beim Export wird prinzipiell von den im ÖV-Angebot vorhandenen Fahrplanfahrtabschnitten ausgegangen. Es werden die Fahrplanfahrtabschnitte und alle daran beteiligten Netzelemente (Fahrten, Fahrzeitprofile, Linien, Haltepunkte, Strecken, Umläufe etc.) exportiert. Optional kann der Export auf die aktiven Fahrplanfahrtabschnitte eingeschränkt werden <MadCap:xref href="../1_Interaktive_Auswertungen/1_11_ÖV-Angebotsfilter.htm" class="Grundlagen">(siehe Grundlagen: Kap. , Seite&#160;1), dann werden auch nur die weiteren Netzelemente exportiert, die von aktiven Fahrtabschnitten berührt werden.</MadCap:xref></p>
+        <p class="Text">Der Export von Umlaufinformationen ist optional möglich, wenn Sie das Zusatzmodul <span class="gui_element">Linienleistungs- und Erfolgsrechnung</span> eingeschaltet haben <MadCap:xref href="../2_Grundlagen_Programmbedienung/2_1_Zusatzmodule ein- und ausschalten.htm" class="sieheUeberschrSeite">(siehe „Zusatzmodule ein- und ausschalten“ auf Seite&#160;1).</MadCap:xref></p>
+        <p class="Text">Beim Export nach <MadCap:variable name="PTV_Manual.VDV_452" /> muss das <MadCap:variable name="PTV_Manual.Programmname" /> Verkehrstagemodell in das <MadCap:variable name="PTV_Manual.VDV_452" /> Betriebstagemodell umgerechnet werden. Betriebstage sind nach einem Tag abgeschlossen, Verkehrstage können mehr als einen Tag lang sein. Über den Kalendertag und die Umlaufversion wählen Sie aus, welche Umlaufinformationen <MadCap:variable name="PTV_Manual.Programmname" /> exportiert.</p>
+        <table style="width: 100%; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" class="TableStyle-TipHint1" cellspacing="0">
+            <col class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">In <MadCap:variable name="PTV_Manual.Programmname" /> muss für den Export das Koordinatensystem WGS84 eingestellt sein <MadCap:xref href="../2_GIS-Funktionalitaet_nutzen/2_10_Koordinatensystem wählen.htm" class="sieheUeberschrSeite">(siehe „Koordinatensystem wählen“ auf Seite&#160;1)</MadCap:xref>. Für den Import setzt <MadCap:variable name="PTV_Manual.Programmname" /> das Koordinatensystem automatisch auf WGS84.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Datei</span> den Eintrag <span class="gui_element">Exportieren</span>&#160;&gt; <span class="gui_element"><MadCap:variable name="PTV_Manual.VDV_452" /></span>.</p>
+        <p class="Stepresult">Das Fenster <span class="gui_element"><MadCap:variable name="PTV_Manual.VDV_452" />Export</span> öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Nehmen Sie die gewünschten Einstellungen vor.</p>
+        <table class="TableStyle-gui_elements2" style="width: 476px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements2.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements2.css');" cellspacing="0">
+            <col width="113px" class="TableStyle-gui_elements2-Column-Column1" />
+            <col width="363px" class="TableStyle-gui_elements2-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements2-Head-Header1">
+                    <td class="TableStyle-gui_elements2-HeadE-Column1-Header1">
+                        <p class="CellCaption">Element</p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">
+                                <MadCap:variable name="PTV_Manual.VDV_452" />-Pfad</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Geben Sie in das Eingabefeld das Verzeichnis der gewünschten Dateien <span class="path">*.x10</span> ein oder wählen Sie es über das Symbol <img src="../Resources/Images_4_all/ICO_file_selection.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 011118px;margin-bottom: 1, 011118px;width: 25px;height: 25px;" />.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2">
+                        <p class="CellText">
+                            <span class="gui_element">Referenzdatum</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Datum, auf das die <MadCap:variable name="PTV_Manual.VDV_452" />-Version referenziert im Format DD.MM.YYYY. Das Datum wird verwendet, um die Basisversion in den VDV-Dateien zu definieren und die Dateinamen zu erstellen.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #666666;">
+                        <p class="CellText">
+                            <span class="gui_element">Benutzerdefinierte Attribute (BDAs) exportieren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, werden alle BDAs exportiert, die sich in für den Export relevanten Tabellen befinden.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Nur die aktiven Fahrplanfahrtabschnitte (zusammen mit allen dafür benötigten Grunddaten) exportieren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">Ist die Option ausgewählt, werden nur aktive Fahrplanfahrtabschnitte und die damit verbundenen Objekte des ÖV-Angebotes und des Netzes exportiert.</td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Umläufe exportieren</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Ist die Option ausgewählt, können Sie eine bestimmte Umlaufversion exportieren <MadCap:xref href="#Export" class="sieheUeberschrSeite"><span style="color: Black;" class="mcFormatColor">(</span><u>Export einer Umlaufversion</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Kalendertag</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body2">
+                        <p class="CellText">Angabe des gewünschten Datums des <MadCap:variable name="PTV_Manual.Programmname" />-Kalenders, das in einem Umlaufbildungszeitraum liegt <MadCap:xref href="#Export" class="sieheUeberschrSeite"><span style="color: Black;" class="mcFormatColor">(</span><u>Export einer Umlaufversion</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body1">
+                    <td class="TableStyle-gui_elements2-BodyE-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="CellText">
+                            <span class="gui_element">Umlaufversion</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyD-Column1-Body1">
+                        <p class="CellText">Auswahlliste aller Umlaufversionen, bei denen der gewählte Kalendertag im Umlaufbildungszeitraum liegt.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements2-Body-Body2">
+                    <td class="TableStyle-gui_elements2-BodyB-Column1-Body2" style="mc-hyphenate-shortest-prefix: 9;padding-left: 2pt;padding-right: 2pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #666666;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p>
+                            <span class="gui_element">Attributauswahl</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-gui_elements2-BodyA-Column1-Body2">
+                        <p class="CellText">Hier können Quellattribute für die IDs der Datensätze in den exportierten Daten gewählt werden. Insbesondere können im Fall eines Re-Exportes von zuvor aus VDV importierten Daten die BDA gewählt werden, in denen beim Import die Original-IDs gespeichert wurden. So kann die Datenkonsistenz mit externen Systemen gewährleistet werden.</p>
+                        <p class="CellText">Hinweis</p>
+                        <p class="CellText">Es sind nur numerische Attribute zulässig.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Step" MadCap:autonum="3. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Daten werden exportiert und es wird für jede <MadCap:variable name="PTV_Manual.VDV_452" />-Tabelle eine Datei gespeichert.</p>
+        <table class="TableStyle-gui_elements1" style="width: 476px; caption-side: top; mc-table-style: url('../Resources/TableStyles/gui_elements1.css'); mc-table-style-original: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <col class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Datei-Name</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">
+                            <MadCap:variable name="PTV_Manual.VDV_452" />-Tabelle</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">i222DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">MENGE_FGR.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption">i225DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">REC_UEB</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">i226DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">REC_LID</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption"> i229DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">REC_HP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">i246DDD.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">LID_VERLAUF</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption">i247DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">UEB_FZT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">  i253DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p>REC_ORT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption">i282DDD.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">SEL_FZT_FELD</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption"> i290DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">MENGE_TAGESART</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption"> i293DDD.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">MENGE_FZG_TYP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption"> i295DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">REC_OM</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption">i299DDD.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">REC_SEL</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">i310DDD0.x10 (optional)</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">REC_UMLAUF</td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption">i332DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">MENGE_FAHRTART </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption"> i333DDD.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">MENGE_BEREICH</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption">  i348DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">FIRMENKALENDER</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption">  i485DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">BASIS_VER_GUELTIGKEIT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption">i715DDD.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">REC_FRT</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption"> i992DDD.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">ZUL_VERKEHRSBETRIEB</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption">   i993DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">MENGE_BASIS_VERSIONEN</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption"> i994DDD.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">REC_ZNR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption"> i995DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">REC_SEL_ZP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption"> i996DDD.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">REC_ANR</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellCaption"> i997DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p>MENGE_ORT_TYP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellCaption"> i998DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">MENGE_ONR_TYP</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body2">
+                        <p class="CellCaption">i999DDD0.x10</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body2">
+                        <p class="CellText">ORT_HZTF</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table style="width: 100%; mc-table-style: url('../Resources/TableStyles/TipHint1.css'); mc-table-style-original: url('../Resources/TableStyles/TipHint1.css');" class="TableStyle-TipHint1" cellspacing="0">
+            <col class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1" style="mc-hyphenate-shortest-prefix: 9;padding-left: 5pt;padding-right: 3pt;padding-top: 1pt;padding-bottom: 1pt;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Alle erstellten <MadCap:variable name="PTV_Manual.VDV_452" /> Dateien werden in einen Verzeichnisordner gespeichert und gemäß dem in VDV 451 definierten Schema benannt: <span class="path">iNNNDDD0.x10</span>, wobei NNN die Tabellennummer und DDD die Tagesnummer des angegebenen Referenzdatums ist.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5 MadCap:autonum="">
+            <a name="Export">
+            </a>Export einer Umlaufversion</h5>
+        <p class="Text">Der Export von Umlaufinformationen ist optional möglich, wenn Sie das Zusatzmodul <span class="gui_element">Linienleistungs- und Erfolgsrechnung</span> eingeschaltet haben <MadCap:xref href="../2_Grundlagen_Programmbedienung/2_1_Zusatzmodule ein- und ausschalten.htm" class="sieheUeberschrSeite">(siehe „Zusatzmodule ein- und ausschalten“ auf Seite&#160;1).</MadCap:xref></p>
+        <p class="Text">Beim Export nach <MadCap:variable name="PTV_Manual.VDV_452" /> wird das <MadCap:variable name="PTV_Manual.Programmname" /> Verkehrstagemodell in das <MadCap:variable name="PTV_Manual.VDV_452" /> Betriebstagemodell konvertiert. Betriebstage sind nach einem Tag abgeschlossen, Verkehrstage können sich über mehrere Tage erstrecken. Über den Kalendertag und die Umlaufversion wählen Sie aus, welche Umlaufinformationen <MadCap:variable name="PTV_Manual.Programmname" /> exportiert.</p>
+        <p class="Text">Es werden die folgenden Informationen aus <MadCap:variable name="PTV_Manual.Programmname" /> exportiert:</p>
+        <ul>
+            <LI class="List0">Fahrplanfahrten, die der gewählten Umlaufversion und dem gewählten Kalendertag zugeordnet sind.</LI>
+            <LI class="List0">Umsetzfahrten, die zwischen zwei Fahrplanfahrten des gewählten Kalendertags liegen</LI>
+            <LI class="List0">Fahrplanfahrten die nicht dem gewählten Kalendertag zugeordnet sind, aber zwischen Fahrplanfahrten des Kalendertags liegen, werden als Umsetzfahrten exportiert.</LI>
+            <LI class="List0">Die Zwischenknoten des Systemroutenverlaufs von Umsetzfahrten werden als <MadCap:variable name="PTV_Manual.VDV_452" /> Linienverlaufspunkte exportiert.</LI>
+        </ul>
+        <p class="Text">Nicht exportiert werden:</p>
+        <ul>
+            <LI class="List0">Standzeiten</LI>
+            <LI class="List0">Wendezeiten</LI>
+        </ul>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Wählen Sie im Menü <span class="gui_element">Datei</span>&#160;&gt; <span class="gui_element">Exportieren</span> den Eintrag <span class="gui_element">VDV452</span>.</p>
+        <p class="Stepresult">Das Fenster VDV452 Export öffnet sich.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Nehmen_Sie_gew_Einst_vor_QV.flsnp" />
+            <MadCap:xref href="#-Daten" class="sieheUeberschrSeite">(siehe „-Daten nach  exportieren“ auf Seite&#160;1)</MadCap:xref>
+        </p>
+        <p class="Step" MadCap:autonum="3. &#160;">Wählen Sie die Option <span class="gui_element">Umläufe exportieren</span>.</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Wählen Sie im Feld <span class="gui_element">Kalendertag</span> einen <MadCap:variable name="PTV_Manual.Programmname" />-Kalendertag aus, der im Umlegungsbildungszeitraum der Umlaufversion liegt, die Sie exportieren möchten.</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Wählen Sie in der Auswahlliste die gewünschte Umlaufversion aus.</p>
+        <p class="Step" MadCap:autonum="6. &#160;">Klicken Sie bei Bedarf in der Tabelle in der Spalte <MadCap:variable name="PTV_Manual.Programmname" style="mc-tag-and-class: span;" /><span class="gui_element">-Attribute</span> auf die Schaltfläche, wenn Sie die Zuordnung von <MadCap:variable name="PTV_Manual.VDV_452" />-Schlüsselattribut zu <MadCap:variable name="PTV_Manual.Programmname" />-Attribut ändern möchten.</p>
+        <p class="Stepresult">Das Fenster Attributauswahl (&lt;Netzobjekt&gt;) öffnet sich.</p>
+        <p class="Step" MadCap:autonum="7. &#160;"> Wählen Sie das Attribut aus, das Sie dem <MadCap:variable name="PTV_Manual.VDV_452" />-Schlüsselattribut zuordnen möchten.</p>
+        <p class="Step" MadCap:autonum="8. &#160;">
+            <MadCap:snippetText src="../Resources/Snippets/A_STEP_Best_Sie_m_OK.flsnp" />
+        </p>
+        <p class="Result">Die Daten werden exportiert und es wird für jede VDV 452-Tabelle eine Datei gespeichert.</p>
+    </body>
+</html>

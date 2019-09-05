@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="451" MadCap:lastWidth="510" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;Control;operationControlPoints;published;kombinationen;sig">
+    <head>
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1114320">
+            </a>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_19276">
+            </a>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_86211">
+            </a>LSA-Steuerung in Vissig bearbeiten<a name="4089"></a></h2>
+        <p class="Tabledist">&#160;</p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Diese Funktion ist nur verfügbar, wenn Sie das Zusatzmodul <span class="gui_element">Vissig</span> aktiviert haben <MadCap:xref class="sieheUeberschrSeite" href="../2_Grundlagen_Programmbedienung/2_1_Zusatzmodule ein- und ausschalten.htm#2_grundlagen_programmbedienung_1644961382_1091105"><span style="color: Black;" class="mcFormatColor">(</span><u>Zusatzmodule ein- und ausschalten</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">
+            <MadCap:keyword term="Vissig" />
+            <MadCap:keyword term="Signalanlagen:bearbeiten:in Vissig" />
+            <MadCap:keyword term="Signalanlagen:externe" />Das Zusatzmodul <span class="gui_element">Vissig</span> ist ein externes Programm, das Ihnen die Verwaltung komplexer Signalisierungsdaten ermöglicht. Dabei können vorhandene Signalisierungsdaten in neue externe Steuerungen konvertiert werden. Die externen LSA-Daten werden in einer Datei *.<span class="path">sig</span> gespeichert. Beim Öffnen einer Versionsdatei und bei der Berechnung von Knotenwiderständen mittels ICA werden die Daten aus der Vissig-Datei gelesen und temporär in <MadCap:variable name="PTV_Manual.Programmname" />-Daten konvertiert.</p>
+        <p class="Text">Wenn Sie eine Signalanlage in Vissig bearbeiten, können Sie die Attribute der Signalanlage anschließend nicht mehr in <MadCap:variable name="PTV_Manual.Programmname" /> bearbeiten. Dies ist nur möglich, wenn Sie die Signalanlage anschließend wieder in eine <MadCap:variable name="PTV_Manual.Programmname" />-Steuerung konvertieren <MadCap:xref class="sieheUeberschrSeite" href="2_13_Vissig-Signalanlage in Visum-Signalanlage konvertieren.htm#2_daten_ueber_schnittstellen_austauschen_1567500566_1208991"><span style="color: Black;" class="mcFormatColor">(</span><u>Vissig-Signalanlage in -Signalanlage konvertieren</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">In Vissig können Sie beispielsweise folgende Bearbeitungen vornehmen:</p>
+        <ul>
+            <LI class="List0">Grünzeiten grafisch bearbeiten</LI>
+            <LI class="List0">Phasen, sowie Darstellung und Bearbeitung der Phasenzuordnung von Signalgruppen grafisch bearbeiten</LI>
+            <LI class="List0">Zeitabhängige Zuordnung unterschiedlicher Signalprogramme zu unterschiedlichen Zeitintervallen an identischen Knoten</LI>
+            <LI class="List0">Komplexe Signalanlagen im <MadCap:variable name="PTV_Manual.Programmname" />-Netz verortet verwalten</LI>
+            <LI class="List0">Bearbeiten der Signalisierungsdaten für einen späteren Vissim-Export</LI>
+        </ul>
+    </body>
+</html>

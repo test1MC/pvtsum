@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="688" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="KONTIV;EMNID;Key;WA;DEFAULT;Aktivitäts;ZMax;UntersuchungsraumanteilHeimatKonstant;UntersuchungsraumanteilQuelleKonstant;WB;WD;WE;WF;WS;AS;BW;DW;EW;FW;SW;SA;SS;NSch;pc;epc;usw;EmP;EoP;KK;ic;jc;max;Qmax;Zmax;isc;ep;SG;ec;pot;tert;Arbeitspl;QP;ZP;Bez;Einw;Bes;zielverkehr;QuellaufkommenSoll;ZielaufkommenSoll;ij;fq;fz;ijk;VK;Bayes;sche;aijk;EVA1;EVA2;Tukey;FURNESS;Furness;30er;Bregman;1967a;1967b;ten;fa;Evans;Gleichungs;zz;bzw;Entfernungs;Attraktions;bzgl;$GQH;BezirksNummern;BezNr">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableVarDefinition.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TipHint1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 MadCap:autonum=" 0.0.1 ">
+            <a name="1_nachfragemodell_2215163117_1228718">
+            </a>
+            <a name="1_nachfragemodell_2215163117_48892">
+            </a>Gravitationsmodell rechnen</h3>
+        <p class="Text">
+            <MadCap:keyword term="Matrizen: Gravitationsmodell: rechnen" />
+            <MadCap:keyword term="Gravitationsmodell: rechnen" />
+            <MadCap:keyword term="Gravitationsmodell" />Das Gravitationsmodell ist ein mathematisches Modell zur Berechnung der Verkehrsverteilung <MadCap:xref class="siehe_1" href="1_3_Verkehrsverteilung.htm#1_nachfragemodell_2215163117_1026193"><span style="color: Black;" class="mcFormatColor">(</span><u>Verkehrsverteilung</u></MadCap:xref><MadCap:xref class="siehe_2" href="1_3_Kombinierte VISEM-Verkehrsverteilung_Moduswahl.htm#1_nachfragemodell_2215163117_1225822"><span style="color: Black;" class="mcFormatColor"> und </span><u><span style="color: Blue;" class="mcFormatColor">Kombinierte VISEM-Verkehrsverteilung/Moduswahl</span></u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>. Dabei wird von der Annahme ausgegangen, dass die durchgeführten Fahrten in einem Planungsraum direkt proportional sind zu dem jeweiligen Quell- und Zielverkehrsaufkommen aller Bezirke und den Funktionswerten der Nutzenfunktion zwischen den Bezirken (Ortúzar 2001).</p>
+        <p class="Text">Das Gravitationsmodell berechnet aus bereits vorhandenen Matrixrandsummen (Quell- und Zielverkehre der einzelnen Bezirke) eine vollständige Matrix der Verkehrsbeziehungen <span class="formula">F</span><span class="formula_subscript">ij</span>. Dazu ist eine konsistente Nutzenmatrix des Planungsraumes nötig.</p>
+        <p class="Text">Das Gravitationsmodell arbeitet mit Verteilungsparametern, das heißt mit Größen innerhalb der Nutzenfunktion, die die Reaktion der Verkehrsteilnehmer auf Entfernungs- oder Zeitverhältnisse abbilden. Diese Parameter werden bestimmt, indem die Verkehrsbeziehungen, die sich aus dem Modell ergeben, mit gemessenen Verkehrsbeziehungen verglichen werden (Kalibrieren).</p>
+        <p class="Text">Die Fähigkeit der Modelle, zukünftige Zustände vorherzusagen (Prognose), hängt davon ab, ob es gelingt, neben der Kenntnis der für die Zukunft gültigen Eingangsdaten (zum Beispiel zukünftiges Verkehrsaufkommen) auch das Verhalten der Verkehrsteilnehmer bezüglich der Netzwiderstände vorherzusagen.</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="87px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="408px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td colspan="2" class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="gui_element">Allgemeine Form der Verteilungsformel</span>
+                        </p>
+                        <p class="CellText">
+                            <img src="../Resources/Images/5_38.jpg" /> wobei</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Logit</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="Formula">&#160;<img src="../Resources/Images/5_42.jpg" /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Kirchhoff</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="Formula">
+                            <img src="../Resources/Images/5_43.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">BoxCox</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="Formula">
+                            <img src="../Resources/Images/5_44.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Kombiniert</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="Formula">
+                            <img src="../Resources/Images/5_49.jpg" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">TModel</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="Formula">
+                            <img src="../Resources/Images/5_50.jpg" />
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die Verteilungsformel wird als Attraktions- oder Nutzenfunktion bezeichnet, mit folgenden Größen.</p>
+        <table class="TableStyle-TableVarDefinition" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableVarDefinition.css');" cellspacing="0">
+            <col width="57px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <col width="438px" class="TableStyle-TableVarDefinition-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">U</span>
+                            <span class="formula_subscript">ij</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Wert für den Nutzen zwischen Bezirken, zum Beispiel abhängig von der Entfernung oder Fahrzeit von Bezirk <span class="formula">i </span>nach Bezirk <span class="formula">j</span>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Q</span>
+                            <span class="formula_subscript">i</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Quellverkehr Bezirk <span class="formula">i</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">Z</span>
+                            <span class="formula_subscript">j</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body1">
+                        <p class="CellText">Zielverkehr Bezirk <span class="formula">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body2">
+                    <td class="TableStyle-TableVarDefinition-BodyE-Column1-Body2">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">k</span>
+                            <span class="formula_subscript">ij</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyD-Column1-Body2">
+                        <p class="CellText">Normierungsfaktor (Lagegunstfaktor) für die Beziehung von Bezirk <span class="formula">i </span>nach Bezirk <span class="formula">j</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableVarDefinition-Body-Body1">
+                    <td class="TableStyle-TableVarDefinition-BodyB-Column1-Body1">
+                        <p class="CellText_Var" style="font-family: 'Times New Roman';font-weight: normal;font-style: italic;letter-spacing: 0em;color: #000000;text-decoration: none;">
+                            <span class="formula">n</span>
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableVarDefinition-BodyA-Column1-Body1">
+                        <p class="CellText">Anzahl Bezirke</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Wesentlich für die verschiedenen Modifikationen und Erweiterungen sind die Bestimmung des Normierungsfaktors <span class="formula">k</span><span class="formula_subscript">ij</span> und die Formulierung der Nutzenfunktion <span class="formula">f</span>(<span class="formula">U</span><span class="formula_subscript">ij</span>).</p>
+        <p class="Text">Der Normierungsfaktor <span class="formula">k</span><span class="formula_subscript">ij</span> muss so gewählt werden, dass die Ausrichtungen der Verteilungsmodelle</p>
+        <p class="Formula_number2" MadCap:autonum=" [1.1]">
+            <a name="1_nachfragemodell_2215163117_1228798">
+            </a>
+            <a name="1_nachfragemodell_2215163117_24525">
+            </a>
+            <img src="../Resources/Images/5_53.jpg" />
+        </p>
+        <p class="Text">und</p>
+        <p class="Formula_number2ff" MadCap:autonum=" [1.2]">
+            <a name="1_nachfragemodell_2215163117_1228804">
+            </a>
+            <a name="1_nachfragemodell_2215163117_12997">
+            </a>
+            <img src="../Resources/Images/5_72.jpg" />
+        </p>
+        <p class="Text">(wenigstens näherungsweise) eingehalten werden.</p>
+        <p class="Text">Bei Einhaltung von lediglich der ersten Ausrichtung der Verteilung spricht man von Kopplung bezüglich der Erzeugung. Bei Einhaltung von lediglich der zweiten Ausrichtung der Verteilung spricht man von Kopplung bezüglich der Anziehung. Bei gleichzeitiger Einhaltung beider Ausrichtungen der Verteilung wird von zweiseitiger Kopplung gesprochen. Bei Kopplung bezüglich der Erzeugung hängt <span class="formula">k</span><span class="formula_subscript">ij</span> nur von <span class="formula">i</span> ab, daher schreiben wir <img src="../Resources/Images/5_73.jpg" />.</p>
+        <p class="Text">Aus logischen Gründen ist bei der Kopplung bezüglich der Erzeugung zu fordern, dass so viele freie Parameter wie Bezirke vorgesehen werden müssen.</p>
+        <p class="Text">Dies führt zu der Formulierung</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_74.jpg" />
+        </p>
+        <p class="Text">mit folgenden Nebenbedingungen für jeden Bezirk <span class="formula">i</span>.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_77.jpg" />
+        </p>
+        <p class="Text">Aus den n Nebenbedingungen lassen sich damit durch Einsetzen in die Verteilungsfunktion alle <img src="../Resources/Images/5_78.jpg" /> bestimmen.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_80.jpg" />
+        </p>
+        <p class="Text">Daraus ergibt sich</p>
+        <p class="Formula">
+            <span class="formula" style="font-size: 8.5pt;line-height: 10.5pt;">
+                <img src="../Resources/Images/5_93.jpg" />
+            </span> für <span class="formula">Q</span><span class="formula_subscript">i</span> ≠ 0</p>
+        <p class="Text">Daraus resultiert das folgende gekoppelte Zielwahlmodell bezüglich der Erzeugung.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_97.jpg" /> für alle <span class="formula">i</span>, <span class="formula">j</span></p>
+        <p class="Text">Analog ergibt sich das gekoppelte Zielwahlmodell bezüglich der Anziehung.</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_99.jpg" /> für alle <span class="formula">i</span>, <span class="formula">j </span>mit <img src="../Resources/Images/5_103.jpg" /></p>
+        <p class="Text">Der Anpassung des Modells an die Wirklichkeit (Kalibrierung) durch Variation der freien Parameter kommt eine große Bedeutung zu.</p>
+        <p class="Text">Da die Eingabegrößen <span class="formula">Q</span><span class="formula_subscript">i</span> und <span class="formula">Z</span><span class="formula_subscript">j</span> festliegen, bleiben neben den Normierungsfaktoren <img src="../Resources/Images/5_107.jpg" /> bzw.  <img src="../Resources/Images/5_108.jpg" /><span class="formula"></span>als freie Parameter nur die Parameter in der Nutzenfunktion <span class="formula">f</span>(<span class="formula">U</span><span class="formula_subscript">ij</span>) übrig.</p>
+        <p class="Text">Da für eine zweiseitige Kopplung beide Ausrichtungen der Verteilung <MadCap:xref class="Label_formula" href="#1_nachfragemodell_2215163117_1228798">(4.1)</MadCap:xref> und <MadCap:xref class="Label_formula" href="#1_nachfragemodell_2215163117_1228804">(4.2)</MadCap:xref> gleichzeitig erfüllt sein müssen, muss für die Normierungsfaktoren <img src="../Resources/Images/5_137.jpg" /> und <img src="../Resources/Images/5_141.jpg" /> auch <img src="../Resources/Images/5_144.jpg" /> = <img src="../Resources/Images/5_145.jpg" /> für <span class="formula">i</span> = <span class="formula">j</span> gelten. Dies wird jedoch in der Praxis selten erreicht, deshalb ist eine echte zweiseitige Kopplung nur durch wesentlich aufwändigere Iterationsverfahren zu erreichen.</p>
+        <p class="Text">
+            <MadCap:keyword term="Multi-Verfahren" />Der Matrixeditor verwendet als Iterationsverfahren das so genannte Multi-Verfahren nach Lohse (Schnabel 1980) <MadCap:xref class="sieheUeberschrSeite" href="1_3_Hochrechnen.htm#1_nachfragemodell_2215163117_1224457"><span style="color: Black;" class="mcFormatColor">(</span><u>Das Multi-Verfahren nach Lohse (Schnabel 1980)</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <p class="Text">Die allgemeine Form der Nutzenfunktion <span class="formula">f</span>(<span class="formula">U</span><span class="formula_subscript">ij</span>) ist</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_147.jpg" />
+        </p>
+        <p class="Text">Sie ist für verschiedene Werte der Parameter <span class="formula">b</span> und <span class="formula">c</span> in den folgenden beiden Abbildungen dargestellt.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Attractiveness1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Attractiveness2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000059px;margin-bottom: 1, 000074px;" />
+        </p>
+        <table class="TableStyle-TipHint1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint1.css');" cellspacing="0">
+            <col width="495px" class="TableStyle-TipHint1-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint1-Body-Body1">
+                    <td class="TableStyle-TipHint1-BodyA-Column1-Body1">
+                        <p class="Hints" MadCap:autonum="Hinweise: ">Wählen Sie eine geeignete Spezifikation der Nutzenfunktionen, das heißt geeignete Parameter. Die Spezifikation hängt u.&#160;a. vom Fahrzweck und vom benutzten Verkehrsmittel ab. Beispielsweise ist eine Fahrt zur Arbeit im Durchschnitt weiter als eine Fahrt zum Einkaufen. Das heißt, die Nutzenfunktion für die Arbeitswege ist je nach Ortsgröße überhaupt nicht oder nur in geringem Maße abhängig vom Nutzen (Entfernung oder Fahrzeit). Einkaufswege sind hingegen in erhöhtem Maße abhängig vom Nutzen.</p>
+                        <p class="Text">Die Anwendung eines Verteilungsmodells kann also eine Trennung der Verkehre nach Fahrzwecken erfordern. Im Wesentlichen hängt dies von Genauigkeitsanforderungen und den Ansprüchen an die zu berechnende Matrix ab. Eckdaten für die prozentuale Aufteilung nach Fahrzwecken kann man zum Beispiel der KONTIV 89 (EMNID 1991) oder lokalen Verkehrsbefragungen entnehmen.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Text">Die folgenden vier Beispiele zeigen Gravitationsmodelle mit unterschiedlicher Kopplung, sowohl mit als auch ohne Randsummenausgleich.</p>
+        <h5 MadCap:autonum="">Beispiel 1: Gravitationsmodell gekoppelt bzgl. Erzeugung, ohne und mit Randsummenausgleich</h5>
+        <p class="Text">Die Auswirkung des Lagegunstfaktors auf die Berechnung der Verkehrsverteilung nach dem Verteilungsverfahren ist von der Art der „Kopplung“ des Verteilungsverfahrens abhängig.</p>
+        <p class="Text">Beim Verteilungsverfahren mit Kopplung bezüglich entweder Anziehung oder Erzeugung wird der Quell- oder Zielverkehr den in der Codedatei angegebenen Randsummen angeglichen. Der Lagegunstfaktor wirkt sich dabei nur auf die „komplementären“ Ziel- oder Quellverkehre aus. Dabei gilt jedoch</p>
+        <p class="Text">
+            <img src="../Resources/Images/5_152.jpg" /> oder <img src="../Resources/Images/5_153.jpg" /></p>
+        <p class="Text">wobei <span class="formula">k</span><span class="formula_subscript">i</span> oder <span class="formula">k</span><span class="formula_subscript">j</span> Lagegunstfaktoren des <span class="formula">i</span>-ten oder <span class="formula">j</span>-ten Bezirks sind.</p>
+        <p class="Text">Beim Verteilungsverfahren mit Kopplung bezüglich sowohl Anziehung als auch Erzeugung ist die Auswirkung des Lagegunstfaktors auf den Quell- oder Zielverkehr abhängig von der Angabe des Funktionsbefehls in der Codedatei. Wird zum Beispiel als Funktionsbefehl $GQH angegeben, so wird der Quellverkehr durch den Lagegunstfaktor verändert, der in der gleichen Zeile wie dieser innerhalb der Codedatei angeführt ist. Dabei gilt jedoch</p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_154.jpg" />
+        </p>
+        <p class="Text">wobei <span class="formula">k</span><span class="formula_subscript">i</span> der Lagegunstfaktor der <span class="formula">i</span>-ten Beobachtungszelle ist.</p>
+        <ul>
+            <LI class="List0">Eingabedatei Nutzen</LI>
+            <pre class="Input">*  BezirksNummern</pre>
+            <pre class="Input">               1       2       3       4</pre>
+            <pre class="Input">*           2.66    1.75    1.99    1.50</pre>
+            <pre class="Input">*      1         2.08</pre>
+            <pre class="Input">            1.00    0.50    0.33    0.25</pre>
+            <pre class="Input">*      2         2.33</pre>
+            <pre class="Input">            0.33    0.50    1.00    0.50</pre>
+            <pre class="Input">*      3         1.41</pre>
+            <pre class="Input">            0.33    0.25    0.33    0.50</pre>
+            <pre class="Input">*      4         2.08</pre>
+            <pre class="Input">            1.00    0.50    0.33    0.25</pre>
+            <pre class="Input">*     7.90</pre>
+            <LI class="List0">Eingabedaten für die Berechnung ohne Randsummenausgleich</LI>
+            <pre class="Input_tabwide">*Bezirk	Erzeugung		Anziehung		Faktor		Extern</pre>
+            <pre class="Input_tabwide"> 1	10.0000		50.0000		0.50000000		0</pre>
+            <pre class="Input_tabwide"> 2	20.0000		10.0000		1.00000000		0</pre>
+            <pre class="Input_tabwide"> 3	30.0000		20.0000		1.00000000		0</pre>
+            <pre class="Input_tabwide"> 4	40.0000		20.0000		1.00000000		1</pre>
+        </ul>
+        <p class="Text2">Die Parameter werden folgendermaßen gesetzt:</p>
+        <ul>
+            <LI class="List1">Kombinierte Nutzenfunktion (exponentiell)</LI>
+            <LI class="List1">Parameter <span class="formula">a</span> = 1, <span class="formula">b</span> = 0,5 und <span class="formula">c</span> = -1</LI>
+            <LI class="List1">Ausrichtung gekoppelt bezüglich Erzeugung ohne Randsummenausgleich</LI>
+            <LI class="List0">Ergebnismatrix</LI>
+            <pre class="Input">*  BezirksNummern</pre>
+            <pre class="Input">               1       2       3       4</pre>
+            <pre class="Input">*          36.76   15.91   30.79   16.55</pre>
+            <pre class="Input">*      1        10.00</pre>
+            <pre class="Input">            3.11    1.45    2.80    2.64</pre>
+            <pre class="Input">*      2        20.01</pre>
+            <pre class="Input">            6.76    2.81    4.82    5.62</pre>
+            <pre class="Input">*      3        30.00</pre>
+            <pre class="Input">            9.97    3.76    7.98    8.29</pre>
+            <pre class="Input">*      4        40.00</pre>
+            <pre class="Input">           16.92    7.89   15.19    0.00</pre>
+            <pre class="Input">*   100.01</pre>
+            <LI class="List0">Eingabedaten für die Berechnung mit Randsummenausgleich und Normierung nach Mittelwert</LI>
+            <pre class="Input_tabwide">*Bezirk	Erzeugung		Anziehung		Faktor		Extern</pre>
+            <pre class="Input_tabwide"> 1	10.0000		50.0000		0.50000000		0</pre>
+            <pre class="Input_tabwide"> 2	20.0000		10.0000		1.00000000		0</pre>
+            <pre class="Input_tabwide"> 3	30.0000		20.0000		0.30000000		0</pre>
+            <pre class="Input_tabwide"> 4	40.0000		20.0000		1.00000000		1</pre>
+        </ul>
+        <p class="Text2">Die Parameter werden folgendermaßen gesetzt:</p>
+        <ul>
+            <LI class="List1">Ausrichtung gekoppelt bezüglich Erzeugung mit Randsummenausgleich (Multi-Verfahren)</LI>
+            <LI class="List1">Kombinierte Nutzenfunktion (exponentiell)</LI>
+            <LI class="List1">Parameter <span class="formula">a</span> = 1, <span class="formula">b</span> = 0,5 und <span class="formula">c</span> = -1</LI>
+            <LI class="List1">Normierung nach Mittelwert der beiden Summen</LI>
+            <LI class="List1">Max. Anzahl Iterationen = 10, Gütefaktor = 3</LI>
+            <LI class="List0">Ergebnismatrix</LI>
+            <pre class="Input">*  BezirksNummern</pre>
+            <pre class="Input">               1       2       3       4</pre>
+            <pre class="Input">*          32.99   13.19    7.92   26.39</pre>
+            <pre class="Input">*      1         8.04</pre>
+            <pre class="Input">            2.22    0.94    0.56    4.32</pre>
+            <pre class="Input">*      2        16.10</pre>
+            <pre class="Input">            4.62    1.74    0.93    8.81</pre>
+            <pre class="Input">*      3        24.16</pre>
+            <pre class="Input">            6.95    2.38    1.57   13.26</pre>
+            <pre class="Input">*      4        32.19</pre>
+            <pre class="Input">           19.20    8.13    4.86    0.00</pre>
+            <pre class="Input">*    80.49</pre>
+        </ul>
+        <h5 MadCap:autonum="">Beispiel 2: Gravitationsmodell gekoppelt bzgl. Erzeugung, mit Randsummenausgleich</h5>
+        <ul>
+            <LI class="List0">Eingabedatei Nutzen</LI>
+            <pre class="Input">*  BezirksNummern </pre>
+            <pre class="Input">                 1        2        3        4        5</pre>
+            <pre class="Input">*          166.183  107.560   88.972  134.710  155.725</pre>
+            <pre class="Input">*       1       165.571</pre>
+            <pre class="Input">             0.001   22.700   35.183   50.387   57.300</pre>
+            <pre class="Input">*       2       107.414</pre>
+            <pre class="Input">            22.700    0.001   15.991   31.017   37.705</pre>
+            <pre class="Input">*       3        90.008</pre>
+            <pre class="Input">            35.926   16.284    0.001   15.153   22.644</pre>
+            <pre class="Input">*       4       134.633</pre>
+            <pre class="Input">            50.387   31.017   15.153    0.001   38.075</pre>
+            <pre class="Input">*       5       155.524</pre>
+            <pre class="Input">            57.169   37.558   22.644   38.152    0.001</pre>
+            <pre class="Input">*   653.150</pre>
+            <LI class="List0">Eingabedaten</LI>
+            <pre class="Input_tabwide">*Bezirk	Erzeugung		Anziehung	</pre>
+            <pre class="Input_tabwide"> 1	18990.0		18990.0</pre>
+            <pre class="Input_tabwide"> 2	4960.0		4960.0</pre>
+            <pre class="Input_tabwide"> 3	7110.0		7110.0</pre>
+            <pre class="Input_tabwide"> 4	16080.0		16080.0</pre>
+            <pre class="Input_tabwide"> 5	2300.0		2300.0</pre>
+        </ul>
+        <p class="Text2">Lagegunstfaktor und Bezirkseigenschaft extern werden nicht angegeben, es werden die entsprechenden Standardwerte gesetzt.</p>
+        <p class="Text2">Die Parameter werden folgendermaßen gesetzt:</p>
+        <ul>
+            <LI class="List1">Ausrichtung gekoppelt bezüglich Erzeugung mit Randsummenausgleich (Multi-Verfahren)</LI>
+            <LI class="List1">Kombinierte Nutzenfunktion (exponentiell)</LI>
+            <LI class="List1">Parameter <span class="formula">a</span> = 1, <span class="formula">b</span> = 0,5 und <span class="formula">c</span> = -1</LI>
+            <LI class="List1">Normierung nach Summe der Erzeugungen</LI>
+            <LI class="List1">Max. Anzahl Iterationen = 10, Gütefaktor = 3</LI>
+            <LI class="List0">Ergebnismatrix</LI>
+            <pre class="Input">*  BezirksNummern</pre>
+            <pre class="Input">                   1         2         3         4         5</pre>
+            <pre class="Input">*          18990.000  4959.951  7109.758 16080.290  2300.000</pre>
+            <pre class="Input">*        1      18990.000</pre>
+            <pre class="Input">           18990.000     0.000     0.000     0.000     0.000</pre>
+            <pre class="Input">*        2       4959.999</pre>
+            <pre class="Input">               0.000  4959.897     0.102     0.000     0.000</pre>
+            <pre class="Input">*        3       7110.000</pre>
+            <pre class="Input">               0.000     0.054  7109.426     0.520     0.000</pre>
+            <pre class="Input">*        4      16080.000</pre>
+            <pre class="Input">               0.000     0.000     0.230 16079.770     0.000</pre>
+            <pre class="Input">*        5       2300.000</pre>
+            <pre class="Input">               0.000     0.000     0.000     0.000  2300.000</pre>
+            <pre class="Input">*  49439.999</pre>
+        </ul>
+        <h5 MadCap:autonum="">
+            <a name="1_nachfragemodell_2215163117_1229024">
+            </a>
+            <a name="1_nachfragemodell_2215163117_33894">
+            </a>Beispiel 3: Gravitationsmodell gekoppelt bzgl. Anziehung, ohne Randsummenausgleich</h5>
+        <ul>
+            <LI class="List0">Eingabedatei Widerstände</LI>
+            <pre class="Input">* Bezirksnummern</pre>
+            <pre class="Input">     1      2       3      4</pre>
+            <pre class="Input">  1.00   0.50    0.33   0.25</pre>
+            <pre class="Input">  0.33   0.50    1.00   0.50</pre>
+            <pre class="Input">  0.33   0.25    0.33   0.50</pre>
+            <pre class="Input">  1.00   0.50    0.33   0.25</pre>
+            <LI class="List0">Eingabedaten Randsummen</LI>
+            <pre class="Input_tabwide">*Bezirk	Erzeugung		Anziehung</pre>
+            <pre class="Input_tabwide"> 1	10		50</pre>
+            <pre class="Input_tabwide"> 2	20		10</pre>
+            <pre class="Input_tabwide"> 3	30		20</pre>
+            <pre class="Input_tabwide"> 4	40		20</pre>
+        </ul>
+        <p class="Text2">Die Parameter werden folgendermaßen gesetzt:</p>
+        <ul>
+            <LI class="List1">Ausrichtung gekoppelt bezüglich Anziehung, ohne Randsummenausgleich</LI>
+            <LI class="List1">Kombinierte Nutzenfunktion (exponentiell)</LI>
+            <LI class="List1">Parameter <span class="formula">a</span> = 1, <span class="formula">b</span> = 0,5 und <span class="formula">c</span> = -1</LI>
+            <LI class="List1">
+                <span class="formula">k</span>
+                <span class="formula_subscript">j</span> = 1 für alle <span class="formula">j</span></LI>
+        </ul>
+        <p class="Text">Daraus ergeben sich als Funktionswerte der Nutzen <span class="formula">f</span>(<span class="formula">U</span><span class="formula_subscript">ij</span>)</p>
+        <pre class="Input_tabwide">Bezirk	1	2	3	4</pre>
+        <pre class="Input_tabwide">1	0,37	0,43	0,41	0,39</pre>
+        <pre class="Input_tabwide">2	0,41	0,43	0,37	0,43</pre>
+        <pre class="Input_tabwide">3	0,41	0,39	0,41	0,43</pre>
+        <pre class="Input_tabwide">4	0,37	0,43	0,41	0,39</pre>
+        <p class="Text">und somit <span class="formula" style="font-size: 8pt;line-height: 10pt;"><img src="../Resources/Images/5_155.jpg" /></span></p>
+        <p class="Formula">
+            <img src="../Resources/Images/5_65.jpg" />
+        </p>
+        <p class="Text">
+            <span class="formula">F</span>
+            <span class="formula_subscript">11</span> = 4.71</p>
+        <p class="Text">Nach Berechnung der 15 weiteren Gleichungen ergibt sich die Matrix:</p>
+        <ul>
+            <LI class="List0">Ergebnismatrix</LI>
+            <pre class="Input">*  BezirksNummern </pre>
+            <pre class="Input">               1       2       3       4</pre>
+            <pre class="Input">*          50.00   10.00   19.99   19.99</pre>
+            <pre class="Input">*      1         9.68</pre>
+            <pre class="Input">            4.71    1.03    2.04    1.90</pre>
+            <pre class="Input">*      2        20.47</pre>
+            <pre class="Input">           10.58    2.06    3.64    4.19</pre>
+            <pre class="Input">*      3        31.09</pre>
+            <pre class="Input">           15.87    2.80    6.13    6.29</pre>
+            <pre class="Input">*      4        38.74</pre>
+            <pre class="Input">           18.84    4.11    8.18    7.61</pre>
+            <pre class="Input">*    99.98</pre>
+        </ul>
+        <p class="Text">Die gewünschten Werte der Zielverkehre wurden recht gut angenähert, die Werte der Quellverkehre wurden dagegen nicht so gut erreicht. Dieser Umstand ist für solche Verteilungsformeln bezeichnend. Entweder werden die Quell- oder die Zielsummen nahe genug erreicht. Sollen beide Randsummen möglichst genau angepasst werden, so ist die Anwendung eines Randausgleichsverfahrens notwendig. Hierzu bietet sich die Funktion zweiseitig gekoppeltes Hochrechnen an (Multi-Verfahren) <MadCap:xref class="sieheUeberschrSeite" href="1_3_Hochrechnen.htm#1_nachfragemodell_2215163117_1260026"><span style="color: Black;" class="mcFormatColor">(</span><u>Hochrechnen</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</p>
+        <h5 MadCap:autonum="">Beispiel 4: Gravitationsmodell gekoppelt bzgl. Anziehung, mit Randsummenausgleich</h5>
+        <p class="Text">Die Verkehrsverteilung aus Beispiel 3 <MadCap:xref class="sieheUeberschrSeite" href="#1_nachfragemodell_2215163117_1229024">(siehe „Beispiel 3: Gravitationsmodell gekoppelt bzgl. Anziehung, ohne Randsummenausgleich“ auf Seite&#160;187)</MadCap:xref> soll nun unter Anwendung eines Randsummenausgleichsverfahrens (Multi-Verfahren) berechnet werden.</p>
+        <ul>
+            <LI class="List0">Eingabedatei Widerstände</LI>
+            <pre class="Input">* Bezirksnummern</pre>
+            <pre class="Input">     1      2       3      4</pre>
+            <pre class="Input">  1.00   0.50    0.33   0.25</pre>
+            <pre class="Input">  0.33   0.50    1.00   0.50</pre>
+            <pre class="Input">  0.33   0.25    0.33   0.50</pre>
+            <pre class="Input">  1.00   0.50    0.33   0.25</pre>
+            <LI class="List0">Eingabedaten</LI>
+            <pre class="Input">* BezNr      Quell-     Zielaufkommen</pre>
+            <pre class="Input">    1        10         50</pre>
+            <pre class="Input">    2        20         10</pre>
+            <pre class="Input">    3        30         20</pre>
+            <pre class="Input">    4        40         20</pre>
+        </ul>
+        <p class="Text2">Die Parameter werden folgendermaßen gesetzt:</p>
+        <ul>
+            <LI class="List1">Ausrichtung gekoppelt bezüglich Erzeugung mit Randsummenausgleich (Multi-Verfahren)</LI>
+            <LI class="List1">Kombinierte Nutzenfunktion (exponentiell)</LI>
+            <LI class="List1">Parameter <span class="formula">a</span> = 1, <span class="formula">b</span> = 0,5 und <span class="formula">c</span> = -1</LI>
+            <LI class="List1">Normierung nach Mittelwert der beiden Summen</LI>
+            <LI class="List1">Max. Anzahl Iterationen = 10, Gütefaktor = 3</LI>
+            <LI class="List0">Ergebnismatrix</LI>
+            <pre class="Input">*  BezirksNummern </pre>
+            <pre class="Input">               1       2       3       4</pre>
+            <pre class="Input">*          50.00   10.01   20.00   20.00</pre>
+            <pre class="Input">*      1        10.01</pre>
+            <pre class="Input">            4.87    1.06    2.11    1.97</pre>
+            <pre class="Input">*      2        20.00</pre>
+            <pre class="Input">           10.34    2.01    3.55    4.10</pre>
+            <pre class="Input">*      3        30.00</pre>
+            <pre class="Input">           15.32    2.70    5.91    6.07</pre>
+            <pre class="Input">*      4        40.00</pre>
+            <pre class="Input">           19.47    4.24    8.43    7.86</pre>
+            <pre class="Input">*   100.01</pre>
+        </ul>
+    </body>
+</html>

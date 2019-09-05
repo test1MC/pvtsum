@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="686" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="Mindest">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_betreibermodell_oev_1878159914_1186696">
+            </a>
+            <a name="1_betreibermodell_oev_1878159914_22177">
+            </a>Aufenthalte in Depots und an Haltepunkten</h4>
+        <p class="Text">
+            <MadCap:keyword term="Umlaufbildung: Depots" />
+            <MadCap:keyword term="Umlaufbildung: Standzeiten" />An Haltepunkten können Sie für jede Fahrzeugkombination festlegen, ob der Haltepunkt für die Fahrzeugkombination als Depot dienen soll. Es können eine Kapazität und eine minimale Aufenthaltszeit pro Fahrzeugkombination angegeben werden. Die Kapazität beschränkt die Zahl von Fahrzeugkombinationen, die sich gleichzeitig an diesem Haltepunkt (als Depot) aufhalten dürfen, sofern die Kapazität &gt; 0 ist; bei Kapazität = 0 ist die Kapazität des Depots unbegrenzt. Depots sind also Haltepunkte mit Aufenthaltsfunktion. Der Aufenthalt im Depot wird mit einem anderen (gewöhnlich geringeren) Kostensatz für den Umlaufelementtyp Stand bewertet als der Aufenthalt am Haltepunkt. Dabei wird zwischen dem gleichen Haltepunkt in seiner Rolle als Depot oder als Haltepunkt unterschieden.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="150px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="345px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Beschreibung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Ist Depot</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Gibt an, dass es sich um ein Depot handelt. Ein Haltepunkt ist ein Depot, wenn wenigstens eine Fahrzeugkombination zulässig ist oder der Eintrag<span class="path"> Default-Werte</span> zulässig ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Ist Depot für Standard-Fahrzeugkombination</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Gibt an, ob der Eintrag<span class="path"> Default-Werte</span> (<span class="path">keine Kombination</span> = nicht fahrzeugkombinationsspezifisch) zulässig ist.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Mindest-Standzeit im Depot</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Minimale Aufenthaltszeit im Depot pro Fahrzeugkombination</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Mindest-Standzeit im Depot für Standard-Fahrzeugkombination</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Minimale Aufenthaltszeit im Depot für die Standard-Fahrzeugkombination (Eintrag<span class="path"> Default-Werte</span>).</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Depot-Kapazität</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Kapazität pro zulässiger Fahrzeugkombination. Dies ist die Anzahl von Fahrzeugen je Kombination, die sich gleichzeitig im Depot aufhalten können. Bei Wert = 0 ist die Kapazität unbegrenzt für die jeweilige Fahrzeugkombination.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Depot-Kapazität für Standard-Fahrzeugkombination</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Kapazität für die Fahrzeugkombination <span class="path">keine Kombination</span> (Eintrag<span class="path"> Default-Werte</span>). Bei Wert = 0 ist die Kapazität unbegrenzt für die für Standard-Fahrzeugkombination.</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">Depot-Attribute am Haltepunkt</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="150px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="345px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Kostensatz Depot-Stunde</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Kostensatz für Depotaufenthalt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Kostensatz je Stunde Standzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Kostensatz für Aufenthalte, die nicht in Depots stattfinden</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Kostensätze für Aufenthalte in Depots und Haltepunkten an der Fahrzeugeinheit (Kostensätze in <MadCap:xref class="Label_Table" href="1_7_Attribute der Kostenfunktion in der Umlaufbildung.htm#1_betreibermodell_oev_1878159914_1305220">Tabelle 2</MadCap:xref> beziehen sich hierauf)</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 495px;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="150px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="345px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Kostensatz je Stunde Standzeit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Kostensatz für Aufenthalte, die nicht in Depots stattfinden</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Kostensatz je Stunde Standzeit aus Fahrzeugeinheiten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Summe der Kostensätze der Fahrzeugeinheiten für Aufenthalte, die nicht in Depots stattfinden</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Kostensatz je Stunde Standzeit gesamt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Kostensatz gesamt für Aufenthalte, die nicht in Depots stattfinden (= Kostensatz je Stunde Standzeit + Kostensatz je Stunde Standzeit aus Fahrzeugeinheiten)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body2">
+                        <p class="CellText">Kostensatz Depot-Stunde</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body2">
+                        <p class="CellText">Kostensatz für Depotaufenthalt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText">Kostensatz Depot-Stunde aus Fahrzeugeinheiten</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText">Summe der Kostensätze der Fahrzeugeinheiten für Depotaufenthalt</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText">Kostensatz Depot-Stunde gesamt</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText">Kostensatz gesamt für Depotaufenthalt (= Kostensatz für Depotaufenthalt + Kostensatz der Fahrzeugeinheiten für Depotaufenthalt)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_table" MadCap:autonum=" Tabelle 3: ">Kostensätze für Aufenthalte in Depots und Haltepunkten an der Fahrzeugkombination (Kostensätze in <MadCap:xref class="Label_Table" href="1_7_Attribute der Kostenfunktion in der Umlaufbildung.htm#1_betreibermodell_oev_1878159914_1305220">Tabelle 2</MadCap:xref> beziehen sich hierauf)</p>
+    </body>
+</html>

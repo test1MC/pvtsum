@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="600" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="kapazitäten;Abbiegerbelastungen;Bez;è;BPR;MPA;OD;of;Zul;v0;VOT;CR;277s;akt;321s;360s">
+    <head>
+        <link href="../Resources/TableStyles/TableStd_TitnoHead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1193702">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_31070">
+            </a>Beispiel für die Berechnung des Streckenwiderstands</h3>
+        <p class="Text">
+            <MadCap:keyword term="Widerstände: Beispiele" />
+            <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1366244">Tabelle 1</MadCap:xref> bis <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1366318">Tabelle 4</MadCap:xref> zeigen ein Beispiel, bei dem sich der Streckenwiderstand aus der aktuellen Fahrzeit und der Maut zusammensetzt. Beim Verkehrssystem Lkw, das sich durch einen höheren value of time auszeichnet, ist der Einfluss der Mautgebühren auf den Streckenwiderstand niedriger als beim Verkehrssystem Pkw.</p>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="195px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="301px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Streckenlänge</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">10&#160;000 m</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Zul. Höchstgeschwindigkeit v0-PKW</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">130 km/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Zul. Höchstgeschwindigkeit v0-LKW</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">100 km/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Maut Pkw</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">1 €</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Maut Lkw</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">5 €</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Kapazität</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">3&#160;000 Pkw-E/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Belastung Pkw</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">1&#160;000 Pkw/h = 1&#160;000 Pkw-E/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Belastung Lkw</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">100 Lkw/h = 200 Pkw-E/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Value of time VOT<span class="formula">Pkw</span></p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">18 €/h = 0,005 €/s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Value of time VOT<span class="formula">Lkw</span></p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">36 €/h = 0,010 €/s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText">CR-Funktion nach BPR</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">mit <span class="formula">a</span> = 1, <span class="formula">b</span> = 2, <span class="formula">c</span> = 1</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_iv_2033098965_1366244">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_87633">
+                    </a>Eingangsdaten für die Berechnung des Streckenwiderstands</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="196px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="299px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Pkw-Fahrzeit im unbelasteten Netz</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">0</span>-PKW = 10&#160;000 • 3,6 / 130 = 277s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Pkw-Fahrzeit im belasteten Netz</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">akt</span>-PKW = 277 • (1+(1&#160;200/3&#160;000)²) = 321s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body1">
+                        <p class="CellText">Pkw-Geschwindigkeit im belasteten Netz</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">akt</span>-PKW = 10&#160;000 • 3,6 / 321 = 112&#160;km/h</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">Fahrzeiten und Geschwindigkeiten Pkw</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 496px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="197px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="299px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Lkw-Fahrzeit im unbelasteten Netz</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">0</span>-LKW = 10&#160;000 • 3,6 / 100 = 360s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Lkw-Fahrzeit im belasteten Netz</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">akt</span>-LKW = MAX (321s; 360s) = 360s</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Lkw-Geschwindigkeit im belasteten Netz</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">v</span>
+                            <span class="formula_subscript">akt</span>-LKW = 100 km/h</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td colspan="2" class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">Die Lkw-Geschwindigkeit reduziert sich erst ab einer Belastung von mehr als 1644 Pkw-E/h, wenn:</p>
+                        <p class="CellText">
+                            <span class="formula">t</span>
+                            <span class="formula_subscript">akt</span> = 277 • (1+(1644/3000)²) = 360s</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">Fahrzeiten und Geschwindigkeiten Lkw</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="200px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="295px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Pkw-Widerstand im belasteten Netz</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="formula">R</span>
+                            <span class="formula_subscript">Pkw</span> = 1 + 0,005 • 321 = 2,61&#160;€</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body2">
+                        <p class="CellText">Lkw-Widerstand im belasteten Netz</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="formula">R</span>
+                            <span class="formula_subscript">Lkw</span> = 5 + 0,010 • 360 = 8,60&#160;€</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 4: ">
+                    <a name="1_benutzermodell_iv_2033098965_1366318">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_98162">
+                    </a>Berechnung eines Streckenwiderstands für Lkw und Pkw</p>
+            </caption>
+        </table>
+    </body>
+</html>

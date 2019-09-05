@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="686" MadCap:lastWidth="510" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s;v0;DTV2005;DTV2006;Cost_per_Km;GE;MRZ;usw;FlaecheID;Nr;No;xls;of;Pers;LAENGE;LAENGELUFT;Percent;LANGELUFT;RBL;Übergangsgeh;à;akt;BPR;Layern;IR;RB;SE;Umsteigens;HPunkt;ý;Ankunfts;Abfahrts;è;Sa;Mo;IC1;6W;1W;Entfernungs;Ride;Wohn;00h">
+    <head>
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1026330">
+            </a>Zulässige Verkehrssysteme</h4>
+        <p class="Text">
+            <MadCap:keyword term="Strecken: zulässige Verkehrssysteme" />Über die zulässigen Verkehrssysteme wird die bauliche Ausprägung einer Strecke festgelegt. Hier kann es beispielsweise die folgenden Arten geben:</p>
+        <ul>
+            <LI class="List1">eine einfache Straße, die von IV-Fahrzeugen und vom straßengebundenen ÖV benutzt werden darf</LI>
+            <LI class="List1">eine Schienenstrecke, die nur von Zügen (Eisenbahn, U-Bahn) befahren werden darf</LI>
+            <LI class="List1">eine Straße mit Straßenbahnschienen</LI>
+            <LI class="List1">eine Einbahnstraße, die nur in einer Richtung befahren werden kann</LI>
+            <LI class="List1">einen Umsteigefußweg zwischen ÖV-Haltestellen</LI>
+        </ul>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1077700">Abbildung&#160;12</MadCap:xref> zeigt drei Beispiele für zulässige Verkehrssysteme auf verschiedenen Arten von Strecken.</p>
+        <table class="TableStyle-TableStandard" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="165px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="165px" class="TableStyle-TableStandard-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Road_with_tramlines.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000059px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText_mid">
+                            <img src="../Resources/Images/DIAG_OnewayRoad_without_tramlines.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000059px;" />
+                        </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="ImageOH">
+                            <img src="../Resources/Images/DIAG_Transfer_WalkingLink.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000067px;margin-bottom: 1, 000059px;" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Straße mit Schienen für die Tram</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Einbahnstraße ohne Schiene</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">Umsteigefußweg</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_netzmodell_1240632468_1077700">
+            </a>
+            <a name="1_netzmodell_1240632468_93069">
+            </a>Beispiele für die Definition von Verkehrssystemen einer Strecke</p>
+        <p class="Text">Die Zahl der Fahrstreifen einer Strecke wird als Attribut eingegeben, muss aber auch bei der Kapazität berücksichtigt werden (das bedeutet, dass sich die eingegebene Kapazität nicht auf einen Fahrstreifen bezieht, sondern auf alle zusammen). Eine Strecke existiert immer in beiden Richtungen. Um eine Einbahnstraße abzubilden, werden die Verkehrssysteme der Gegenrichtung gesperrt.</p>
+        <ul>
+            <LI class="List1">Strecken, die für <span class="gui_element">IV-Verkehrssysteme</span> zugelassen sind, werden bei der <span class="gui_element">Umlegung des Individualverkehrs</span> berücksichtigt.</LI>
+            <LI class="List1">Strecken, die für <span class="gui_element">ÖV-Verkehrssysteme</span> zugelassen sind, werden beim Entwurf <span class="gui_element">von Linienrouten für ÖV-Linien</span> berücksichtigt. ÖV-Umlegungen (taktfein und fahrplanfein) basieren nicht auf den Streckendaten, sondern auf den Fahrplänen der ÖV-Linien.</LI>
+        </ul>
+        <p class="Text">Um Umsteigefußwege zwischen ÖV-Haltestellen abzubilden, kann ein spezielles Verkehrssystem ÖV-Fußwege definiert werden. Diese Strecken werden bei ÖV-Umlegungen berücksichtigt.</p>
+    </body>
+</html>

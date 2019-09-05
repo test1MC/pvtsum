@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="651" MadCap:lastWidth="510" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="38s;26min;35s;332h;23min;8min;103h;52min;23s;15min;74h;3min;56s;36s;37h;1min;58s;x2;x3;PkwE;Congestion;Charging;MautsystemNr;t0;TT0;tAkt;TTC;akt;AD1;AD3;DIS;DID;v0;VP0;vAkt;VPC;TOL;IMP;ADS;UDS;Intersection;CR;way;stops;Way;Stop;TD;The;Geometric;Roundabouts;TRL;se;Turns;Fzg;Wid;hypothet;TEC;Excess;ij;AEC;VT;QZ;bzw;Î;FSB;Forward;BSB;Backward;Ï;å;ò;xj;max;Í;od;Program;Furness;STKW;of;pseudodynamic;assignment;pa;gruppen;gruppe;ICU1;ICU2;Circular;Planning;Operations;pretimed;fully;actuated;semi;actuation;type;ICAArrivalType;14a;AnteilLKW;6b;ICAEingVerlustZVerw;ICAIstCentral;BusinessDistrict;Central;District;6e;ICASneakers;ICAZuflussFaktor;10b;14b;BusFrequenz;WDDTA;xd;FS;ox;yo;BS;FIFO;dt;initialize;the;solution;flows;to;zero;for;each;destination;compute;arc;costs;and;their;if;then;UmlgAbw;ASSIGNDEVIATION;AbsRMSE;Abs;RMSE;Achsabs;ax;AnteilAkzGEH;akzept;AnteilAkzRelFehler;rel;AnzBeob;AnzKlasse;KlassenWert;Korr;Pearson;MittAbsFehler;MittBeob;MittRelFehler;R2;RSQ;RelRMSE;StdAbw;VolDem;Cap;ScalingFactor;Vol;te;flow;toNode;Lj;maxFlow;propagatingFlow;Nr;KVEinfahrtsbreite;KVZufahrtsbreite;ICAEntryRadius;ICAEntryAngle;ICAGradeSeparation;SEP;KimberHollis;ICAKimberHollisC;KVAbstandAusfahrt;ICAEndgültigeKapazität;KVKimberHollisC;ÎÂ;ÎW;Wolfe;aÎ;Armijo;¶a;¶f;KJ;k2;k1;s'';abflüssen;peak;hour;factor;LT;RT;vphpl;HV;bb;Lu;Lpb;Rpb;CBD;ST;Ui;PF;Ii;Ri;PA;bi;Volume;ICU;P1;P2;P3;6a;6c;6d;LUo;qr;po;ArrivalType;6j;3a;3b;pedu;pbT;rec;RTA;LTA;Wardrop’schen">
+    <head>
+        <link href="../Resources/TableStyles/TableStand_withTitle.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStd_TitnoHead.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1545792">
+            </a>Vergleich der Aufteilungsmodelle für die Umlegung</h3>
+        <p class="Text">Die Wirkungen der vier Aufteilungsmodelle Kirchhoff, Logit, Box-Cox und Lohse werden in einem einfachen Beispiel illustriert. <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1545860">Tabelle 1</MadCap:xref> bis <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1545964">Tabelle 3</MadCap:xref> zeigen drei einfache Fälle einer Wahl zwischen zwei Alternativen, die Routen oder Verbindungen darstellen können. Die dabei verwendeten Modell-Parameter können Sie <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1545996">Tabelle 4</MadCap:xref> entnehmen.</p>
+        <ul>
+            <LI class="List0">Beispiel 1</LI>
+        </ul>
+        <p class="Text2">Alternative 1 hat einen Widerstand von 5, Alternative 2 einen Widerstand von 10. Alternative 2 hat also einen um 5 Einheiten höheren Widerstand beziehungsweise einen doppelt so hohen Widerstand wie Alternative 1.</p>
+        <ul>
+            <LI class="List0">Beispiel 2</LI>
+        </ul>
+        <p class="Text2">Der Widerstand von Beispiel 1 wird um 100 Einheiten erhöht, sodass sich für Alternative 1 ein Widerstand von 105 und für Alternative 2 ein Widerstand von 110 ergibt. Alternative 2 hat damit also wie in Beispiel 1 einen um 5 Einheiten höheren Widerstand, das Verhältnis der Widerstände beträgt aber nicht 0,5, sondern 0,95.</p>
+        <ul>
+            <LI class="List0">Beispiel 3</LI>
+        </ul>
+        <p class="Text2">Der Widerstand von Beispiel 1 wird verzehnfacht, sodass sich für Alternative 1 ein Widerstand von 50 und für Alternative 2 ein Widerstand von 100 ergibt. Alternative 2 hat damit also einen um 50 Einheiten höheren Widerstand, das Verhältnis der Widerstände beträgt 0,5 wie in Beispiel 1.</p>
+        <p class="Text">Die dargestellten Aufteilungen belegen, dass im Logit-Modell die <span class="gui_element">Differenz</span> der Widerstände ausschlaggebend ist und sich so in den Beispielen 1 und 2 die gleichen Aufteilungswerte ergeben. Im Gegensatz dazu bewertet das Kirchhoff-Modell das <span class="gui_element">Verhältnis</span> der Widerstände und erzeugt so die gleichen Aufteilungswerte für die Beispiele 1 und 3. Das Box-Cox-Modell ermöglicht, wie auch die Aufteilungswerte verdeutlichen, eine <span class="gui_element">Kombination</span> von Logit und Kirchhoff.</p>
+        <p class="Text">Für den praktischen Einsatz erscheint das Logit-Modell wenig empfehlenswert, da ein Verkehrsteilnehmer bei kurzen und langen Verbindungen sicher ein anderes Wahlverhalten zeigt. In der Praxis wird es sehr wohl einen Unterschied machen, ob man 5 oder 10 Minuten (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1545860">Tabelle 1</MadCap:xref>) oder aber 105 oder 110 Minuten (<MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1545912">Tabelle 2</MadCap:xref>) fährt. Bei langen Reisezeiten fallen die 5 Minuten Mehraufwand weniger ins Gewicht als bei kurzen Reisezeiten. Die Schwächen des Kirchhoff-Modells im Beispiel in <MadCap:xref class="Label_Table" href="#1_benutzermodell_iv_2033098965_1545964">Tabelle 3</MadCap:xref>, in dem man sicher erwarten darf, dass alle Verkehrsteilnehmer Alternative 1 wählen, sind bei der Umlegung nicht relevant, da derartig unterschiedliche Verbindungen bei der Suche überhaupt nicht gefunden werden und somit dem Verkehrsteilnehmer nicht zur Wahl stehen.</p>
+        <table class="TableStyle-TableStand_withTitle" style="width: 498px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Nr.</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">R</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Kirchhoff</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Logit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Box-Cox</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Lohse</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">5</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">94 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">78 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">86 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_mid">100 %</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">10</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">6 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">22 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">14 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText_mid">0 %</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 1: ">
+                    <a name="1_benutzermodell_iv_2033098965_1545860">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_38777">
+                    </a>Aufteilung auf zwei Alternativen mit Widerstand 5 und 10</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 498px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Nr.</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">R</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Kirchhoff</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Logit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Box-Cox</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Lohse</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">105</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">55 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">78 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">62 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_mid">51 %</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">110</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">45 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">22 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">38 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText_mid">49 %</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 2: ">
+                    <a name="1_benutzermodell_iv_2033098965_1545912">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_55262">
+                    </a>Aufteilung auf zwei Alternativen mit Widerstand 105 und 110</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStand_withTitle" style="width: 498px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStand_withTitle.css');" cellspacing="0">
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <col width="83px" class="TableStyle-TableStand_withTitle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStand_withTitle-Head-Header1">
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Nr.</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">R</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Kirchhoff</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Logit</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadE-Column1-Header1">
+                        <p class="CellCaption">Box-Cox</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-HeadD-Column1-Header1">
+                        <p class="CellCaption">Lohse</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body1">
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">1</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">50</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">94 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">100 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyE-Column1-Body1">
+                        <p class="CellText_mid">100 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyD-Column1-Body1">
+                        <p class="CellText_mid">100 %</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStand_withTitle-Body-Body2">
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">2</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">100</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">6 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">0 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyB-Column1-Body2">
+                        <p class="CellText_mid">0 %</p>
+                    </td>
+                    <td class="TableStyle-TableStand_withTitle-BodyA-Column1-Body2">
+                        <p class="CellText_mid">0 %</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 3: ">
+                    <a name="1_benutzermodell_iv_2033098965_1545964">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_84319">
+                    </a>Aufteilung auf zwei Alternativen mit Widerstand 50 und 100</p>
+            </caption>
+        </table>
+        <table class="TableStyle-TableStd_TitnoHead" style="width: 495px;caption-side: bottom;mc-table-style: url('../Resources/TableStyles/TableStd_TitnoHead.css');" cellspacing="0">
+            <col width="61px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <col width="434px" class="TableStyle-TableStd_TitnoHead-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Kirchhoff</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="_Override" style="font-family: Symbol;">b</span> = 4</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body2">
+                        <p class="CellText">Logit</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body2">
+                        <p class="CellText">
+                            <span class="_Override" style="font-family: Symbol;">b</span> = 0,25</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body1">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyE-Column1-Body1">
+                        <p class="CellText">Box-Cox</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyD-Column1-Body1">
+                        <p class="CellText">
+                            <span class="_Override" style="font-family: Symbol;">b</span> = 1, <span class="symbol">t</span>= 0,5</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStd_TitnoHead-Body-Body2">
+                    <td class="TableStyle-TableStd_TitnoHead-BodyB-Column1-Body2">
+                        <p class="CellText">Lohse</p>
+                    </td>
+                    <td class="TableStyle-TableStd_TitnoHead-BodyA-Column1-Body2">
+                        <p class="CellText">
+                            <span class="_Override" style="font-family: Symbol;">b</span> = 4</p>
+                    </td>
+                </tr>
+            </tbody>
+            <caption valign="bottom" style="padding-bottom: 4pt;">
+                <p class="Label_table" MadCap:autonum=" Tabelle 4: ">
+                    <a name="1_benutzermodell_iv_2033098965_1545996">
+                    </a>
+                    <a name="1_benutzermodell_iv_2033098965_52083">
+                    </a>Modell-Parameter</p>
+            </caption>
+        </table>
+    </body>
+</html>

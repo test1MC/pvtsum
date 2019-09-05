@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="t0;KNOTTYP;ABBTYP;T0IV;KAPIV;10s;0s;15s" MadCap:lastBlockDepth="4" MadCap:lastHeight="974" MadCap:lastWidth="677">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_netzmodell_1240632468_1099210">
+            </a>Aggregation von Linienrouten</h4>
+        <p class="Text">
+            <MadCap:keyword term="Linienrouten: aggregieren" />Unter der Aggregation von Linienrouten wird die Zusammenfassung mehrerer Linienrouten oder Fahrzeitprofile zu gebündelten Objekten verstanden. Insbesondere beim Import alter Netze aus <MadCap:variable name="PTV_Manual.Programmname" /> 8 oder beim Einlesen von Fahrplandaten aus einer externen Quelle kann es zu einer Vielzahl von Linienrouten mit gleichen oder ähnlichen Informationen kommen. Im Extremfall werden sogar für jede einzelne Fahrt eine eigene Linienroute und ein eigenes Fahrzeitprofil erzeugt. Damit gehen wesentliche Vorteile des hierarchischen Aufbaus des <MadCap:variable name="PTV_Manual.Programmname" /> ÖV-Modells, wie etwa die Wiederverwendung von Daten der Linienroute für viele Fahrten, verloren. Weiterhin erschwert die Vielzahl an Linienrouten die Übersicht und das Bearbeiten. Die Funktion Linienrouten aggregieren unterstützt Sie dabei nach dem Import von Fremddaten von eben diesen Vorteilen wieder Gebrauch zu machen.</p>
+        <h5>Kriterien für das Aggregieren von Linienrouten</h5>
+        <p class="Text">Beim Aggregieren werden im ersten Schritt je zwei Linienrouten aggregiert. Es wird verlangt, dass beide Linienrouten gemeinsame Linienwegabschnitte haben, nicht notwendigerweise aber vollständig übereinstimmen. Wird festgestellt, dass zwei Linienrouten erfolgreich aggregiert werden können, so wird in einem zweiten Schritt versucht, die Fahrzeitprofile der Linienroute zu aggregieren. Folgende generelle Kriterien für die Aggregation von Linienrouten gelten.</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Beide Linienrouten haben einen gemeinsamen Teilweg.</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Der Beginn des gemeinsamen Teilwegs ist auch der Beginn (mindestens) einer der beiden Linienrouten.</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Das Ende des gemeinsamen Teilwegs ist auch das Ende (mindestens) einer der beiden Linienrouten.</p>
+        <p class="Text">
+            <MadCap:xref class="Label_Image" href="#1_netzmodell_1240632468_1099595">Abbildung&#160;28</MadCap:xref> zeigt anhand von Beispielen, in welchen Fällen eine Aggregation möglich ist und in welchen Fällen nicht.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Lineroutes_Aggregation.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_netzmodell_1240632468_1099595">
+            </a>
+            <a name="1_netzmodell_1240632468_47031">
+            </a>Beispiele für die Aggregation von Linienrouten</p>
+        <p class="Text">Optional kann die Aggregation von Linienrouten durch folgende Bedingungen weiter erschwert werden.</p>
+        <ul>
+            <LI class="List0">Linienrouten müssen derselben Linie zugeordnet sein.</LI>
+            <LI class="List0">Linienrouten müssen auf dem gemeinsamen Abschnitt die gleichen Längen haben.</LI>
+            <LI class="List0">Linienrouten müssen die gleiche Richtung besitzen.</LI>
+            <LI class="List0">Linienrouten müssen den gleichen Start-Haltepunkt haben</LI>
+            <LI class="List0">Linienrouten müssen den gleichen End-Haltepunkt haben</LI>
+        </ul>
+        <p class="Text">Auch die Aggregation von Fahrzeitprofilen kann optional weiter erschwert werden.</p>
+        <ul>
+            <LI class="List0">Fahrzeitprofile müssen die gleichen Fahr- und Haltezeiten besitzen.</LI>
+            <LI class="List0">Fahrzeitprofile müssen die gleichen Zulässigkeiten für Ein- und Ausstiege haben.</LI>
+            <LI class="List0">Fahrzeitprofile müssen die gleiche Fahrzeugkombination besitzen.</LI>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="EIG;RZ;Nr;Abf;Ank;FakFZ;FakXZ;FakZZ;FakAZ;FakGZ;FakSZ;FakUZ;FakUH;FakOC;FakEW;WID;FakERZ;AnzahlTarifpunkte;FakTarif;usw;zuschläge;Î;EUZ;FZ;TS;XZ;GZ;BZ;Empf;ZAnb;takt;Abfahrts" MadCap:lastBlockDepth="4" MadCap:lastHeight="1257" MadCap:lastWidth="671">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>
+            <a name="1_benutzermodell_oev_2318507456_1025951">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_86412">
+            </a>Überblick über die ÖV-Umlegungsverfahren</h2>
+        <p class="Text">Um Ortsveränderungen mit dem ÖV zu modellieren, bietet <MadCap:variable name="PTV_Manual.Programmname" /> drei Arten von ÖV-Umlegungsverfahren an, die sich durch die erforderlichen Eingangsdaten, durch die Genauigkeit der Ergebnisse und durch den Rechenaufwand unterscheiden.</p>
+        <ul>
+            <LI class="List0">Das <span class="gui_element">verkehrssystemfeine Verfahren</span>, das auf einer ÖV-spezifischen Alles-oder-Nichts-Umlegung basiert, gibt einen Überblick über die Struktur der Verkehrsnachfrage. Es erfordert kein Liniennetz und eignet sich im Rahmen einer Grobplanung zur Ermittlung eines „Wunschliniennetzes“, bei dem die Fahrgäste ohne Beschränkungen durch Linienwege und Fahrpläne die für sie schnellste Route im Netz wählen <MadCap:xref class="sieheUeberschrSeite" href="1_6_Verkehrssystemfeine Umlegung.htm#1_benutzermodell_oev_2318507456_1026677"><span style="color: Black;" class="mcFormatColor">(</span><u>Verkehrssystemfeine Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Das <span class="gui_element">taktfeine Verfahren</span> eignet sich für städtische Netze mit kurzen Fahrzeugfolgezeiten und für konzeptuelle Planungen mit langem Vorlauf, bei dem der exakte Fahrplan für die Untersuchungsperiode noch unbekannt ist. Das taktfeine Verfahren ermittelt die Umsteigewartezeit beim Linienwechsel aus den mittleren Fahrzeugfolgezeiten der Folgelinien. Bei Bedarf können Koordinierungen sowohl beim Umstieg zwischen Linien als auch zwischen den Fahrplänen mehrerer Linien auf gemeinsam bedienten Abschnitten berücksichtigt werden, dann gelten abweichend vorgegebene Umsteigewartezeiten. Der Verzicht auf den Fahrplan auf der Ebene einzelner Fahrten ermöglicht auch in großen Netzen kurze Rechenzeiten <MadCap:xref class="sieheUeberschrSeite" href="1_6_Taktfeine Umlegung.htm#1_benutzermodell_oev_2318507456_1026741"><span style="color: Black;" class="mcFormatColor">(</span><u>Taktfeine Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+            <LI class="List0">Das <span class="gui_element">fahrplanfeine Verfahren</span> sollte immer dann angewendet werden, wenn das ÖV-Angebot große Fahrzeugfolgezeiten aufweist und die Koordinierung des Fahrplans für Umsteigevorgänge wichtig ist. Es berücksichtigt den genauen Fahrplan und eignet sich daher insbesondere für die Nahverkehrsplanung im ländlichen Raum oder für Bahnnetze. Es existieren zwei Varianten, die sich nur im Verbindungssuchverfahren unterscheiden <MadCap:xref class="sieheUeberschrSeite" href="1_6_Fahrplanfeine Umlegung.htm#1_benutzermodell_oev_2318507456_1027323"><span style="color: Black;" class="mcFormatColor">(</span><u>Fahrplanfeine Umlegung</u><span style="color: Black;" class="mcFormatColor">)</span></MadCap:xref>.</LI>
+        </ul>
+        <p class="Text">In großen Netzen lässt sich oft unterscheiden zwischen einem Hauptnetz, das in erster Linie untersucht werden soll, und einem nachgeordneten Netz, das Zubringerfunktionen zum Hauptnetz erfüllt. Beispiele sind überregionale Bahnnetze mit nachgeordneten regionalen oder städtischen Busnetzen, aber auch die Benutzung von Pkw oder Taxi für den Zu- oder Abgang. Für die Modellierung des nachgeordneten Netzes gibt es prinzipiell zwei Alternativen.</p>
+        <ul>
+            <LI class="List0">Verkehrsbezirke, die nicht unmittelbar durch das Hauptnetz bedient werden, werden dennoch durch lange Anbindungen an Haltestellen des Hauptnetzes angebunden. Diese Alternative bürdet dem Planer bei der Auswahl und Attributierung der Anbindungen die Aufgabe auf, die Routenwahl im nachgeordneten Netz richtig einzuschätzen. Diese kann sich zudem bei Angebotsänderungen im Hauptnetz ändern.</LI>
+            <LI class="List0">Mit Blick auf die Modellierungsgenauigkeit empfiehlt es sich stattdessen, auch das nachgeordnete Netz als ÖV-Angebot zu modellieren. Neben dem u.U. beträchtlichen Aufwand für die Beschaffung der Fahrplandaten wachsen hierbei Speicherbedarf und Rechenzeit für die Umlegung. Besonders bei kurzen Fahrzeugfolgezeiten im nachgeordneten Netz explodiert die Zahl der Verbindungen.</LI>
+        </ul>
+        <p class="Text">Eine Kompromisslösung besteht darin, das Hauptnetz vollständig zu modellieren und hierauf takt- oder fahrplanfein umzulegen. Das nachgeordnete ÖV-Angebot wird dagegen nur in Form des befahrenen Streckennetzes modelliert und im Rahmen der takt-/fahrplanfeinen Umlegung wie im verkehrssystemfeinen Verfahren (Bestwegsuche) behandelt (vergleiche <MadCap:xref class="Label_Image" href="#1_benutzermodell_oev_2318507456_1025964">Abbildung&#160;145</MadCap:xref>).</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Modeling_Main_Network.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000074px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_oev_2318507456_1025964">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_16853">
+            </a>Unterschiedliche Modellierung von Hauptnetz und nachgeordnetem Netz</p>
+        <p class="Text">Für diese Modellierung werden die im nachgeordneten Netz befahrenen Strecken und Abbieger für Verkehrssysteme des besonderen Typs <span class="gui_element">ÖVZusatz</span> geöffnet und mit spezifischen Fahrzeiten für diese Verbindungen versehen. Falls ÖVZusatz-Verkehrssysteme nicht allen Nachfragesegmenten zur Verfügung stehen (zum Beispiel der Pkw für den P+R-Zugang), wird dies durch gezielte Aufnahme in die entsprechenden Modi ausgedrückt. So enthält beispielsweise der Modus zum Nachfragesegment <span class="gui_element">Erwerbstätige mit Pkw</span> das ÖVZusatz-Verkehrssystem <span class="gui_element">P+R</span>, nicht jedoch der Modus zum Nachfragesegment <span class="gui_element">Erwerbstätige ohne Pkw</span>.</p>
+        <p class="Text">Die ÖV-Umlegungsverfahren werden hauptsächlich für folgende Anwendungsfälle eingesetzt.</p>
+        <ul>
+            <LI class="List0">Zur Ermittlung von Belastungen, also Linienbelastungen, Streckenbelastungen, Ein-, Aus- und Umsteiger an Haltestellen.</LI>
+            <LI class="List0">Zur Berechnung benutzerbezogener ÖV-Kenngrößen, zum Beispiel Reisezeit, Umsteigehäufigkeit, Bedienungshäufigkeit.</LI>
+            <LI class="List0">Als Fahrplanauskunftssystem, das die Abfahrts- und Ankunftszeiten einzelner Verbindungen ausweist.</LI>
+        </ul>
+    </body>
+</html>

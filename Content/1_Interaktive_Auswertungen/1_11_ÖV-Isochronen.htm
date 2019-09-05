@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:ignoredWords="5min;en;29min;35s;26min;22min;28min;t0;10min;bzw;Abfahrts" MadCap:lastBlockDepth="4" MadCap:lastHeight="2504" MadCap:lastWidth="582">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_interaktive_auswertungen_949040047_1036439">
+            </a>
+            <MadCap:keyword term="Isochronen: ÖV-Isochronen" />
+            <a name="1_interaktive_auswertungen_949040047_93800">
+            </a>ÖV-Isochronen</h3>
+        <p class="Text">ÖV-Isochronen analysieren die Erreichbarkeit von Knoten, Haltestellen, Haltestellenbereichen, Haltepunkten und Bezirken innerhalb eines vorgegebenen Zeitintervalls. Die Erreichbarkeit wird auf der Basis einer fahrplanfeinen Verbindungssuche ermittelt. Sie kann sich sowohl auf ein Abfahrts- als auch auf ein Ankunftszeitintervall beziehen.</p>
+        <p class="Text">Im einen Fall lassen Sie alle Verbindungen ermitteln, die am ausgewählten Netzobjekt in einem bestimmten Zeitraum abfahren, und geben zusätzlich einen Nachlauf an. Dies ist die Zeitspanne im Anschluss an den angegebenen Abfahrtszeitraum, in dem Verbindungen ihr Fahrtziel erreicht haben müssen.</p>
+        <p class="Text">Im anderen Fall analysieren Sie alle Verbindungen, die am ausgewählten Netzobjekt in einem vorgegebenen Zeitraum ankommen, und stellen dazu einen Vorlauf ein. Dies ist die Zeitspanne direkt vor dem angegebenen Ankunftszeitraum, in dem Verbindungen ihren Startpunkt verlassen haben müssen.</p>
+        <p class="Text">Als Bezugspunkte von ÖV-Isochronen können Sie Knoten, Haltestellenbereiche und Bezirke verwenden - oder auch Kombinationen davon.</p>
+        <p class="Text">Die Ergebnisse einer ÖV-Isochronen-Berechnung finden Sie in den Attributen <span class="gui_element">Isochronenzeit ÖV</span> und <span class="gui_element">Umsteigehäufigkeit ÖV</span> an Knoten, Haltestellen, Haltestellenbereichen, Haltepunkten und Bezirken. Für jedes Netzobjekt können Sie die minimal benötigte Fahrzeit und die minimal benötigte Anzahl Umstiege ablesen. Beachten Sie, dass beide Werte aus unterschiedlichen Verbindungen stammen können, also keine einzelne Verbindung existieren muss, die sowohl eine minimale Fahrzeit als auch eine minimale Umsteigehäufigkeit aufweist.</p>
+        <p class="Text">Die Ergebnisse hängen unmittelbar vom betrachteten Zeitintervall ab. Vom Zeitbezug abgesehen können Sie die Berechnung beeinflussen, indem Sie die Suche auf aktive Fahrplanfahrtabschnitte beschränken oder eine maximale Anzahl Umsteigevorgänge vorgeben.</p>
+        <p class="Text">Es gibt folgende Möglichkeiten, ÖV-Isochronen grafisch im Netzeditor darzustellen:</p>
+        <ul>
+            <LI class="List0">Zeichnen als 2D-Darstellung</LI>
+        </ul>
+        <p class="List_Text0">Die Attribute <span class="gui_element">Isochronenzeit ÖV</span> und <span class="gui_element">Isochronen-Umsteigehäufigkeit ÖV</span> können für die Klassifizierung der Erreichbarkeitsintervalle in der zweidimensionalen Darstellung herangezogen werden.</p>
+        <ul>
+            <LI class="List0">Klassifizierte Darstellung von Knoten, Bezirken, Haltestellen, Haltestellenbereichen und Haltepunkten</LI>
+        </ul>
+        <p class="List_Text0">Die Attribute <span class="gui_element">Isochronenzeit ÖV</span> und <span class="gui_element">Isochronen-Umsteigehäufigkeit ÖV</span> können für eine klassifizierte Darstellung eines oder mehrerer Netzobjekttypen dienen.</p>
+        <h5>Isochronen in 2D-Darstellung</h5>
+        <p class="Text">Bei der 2D-Darstellung wird der Hintergrund des Netzes abhängig von den Erreichbarkeitsintervallen eingefärbt.</p>
+        <p class="Text">In <MadCap:xref class="Label_Image" href="#1_interaktive_auswertungen_949040047_1038464">Abbildung&#160;236</MadCap:xref> wird diese Darstellungsform für das Attribut Isochronenzeit ÖV verwendet, um die zeitliche Erreichbarkeit von Haltestellenbereichen zu visualisieren. Markiert ist der Hauptbahnhof, d.h. die Isochronen geben die ÖV-Reisezeit vom Hauptbahnhof aus wieder.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_Isochrones_PuT_KA_2D_IsocTimePuT.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 2, 499876px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_interaktive_auswertungen_949040047_1038464">
+            </a>
+            <a name="1_interaktive_auswertungen_949040047_11143">
+            </a>2D-Darstellung der Erreichbarkeit von Haltestellenbereichen vom Hauptbahnhof aus</p>
+        <h5>Klassifizierte Darstellung von Netzobjekten</h5>
+        <p class="Text">Wie alle anderen Attribute auch können die Ergebnisse der ÖV-Isochronen als Grundlage für eine klassifizierte Darstellung von Knoten, Bezirken, Haltestellen, Haltestellenbereichen oder Haltepunkten dienen:</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Isochronenzeit ÖV</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">
+            <MadCap:xref class="Label_Image" href="#1_interaktive_auswertungen_949040047_1038412">Abbildung&#160;237</MadCap:xref> zeigt ein Beispiel, in dem die Haltestellen klassifiziert dargestellt werden. Als Start ist die Haltestelle Karlsruhe Hauptbahnhof markiert. Die Haltestellen werden als Kreise dargestellt, ihre Einfärbung ist dabei abhängig von der Zeit, in der die jeweilige Haltestelle vom Hauptbahnhof aus erreicht werden kann.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_Isochrones_PuT_KA_ClassifiedStops.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 2, 499876px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_interaktive_auswertungen_949040047_1038412">
+            </a>
+            <a name="1_interaktive_auswertungen_949040047_40975">
+            </a>Klassifizierte Darstellung von Haltestellen auf Basis der Isochronenzeit ÖV</p>
+        <ul>
+            <LI class="List0">
+                <span class="gui_element">Isochronen-Umsteigehäufigkeit ÖV</span>
+            </LI>
+        </ul>
+        <p class="List_Text0">In <MadCap:xref class="Label_Image" href="#1_interaktive_auswertungen_949040047_1036777">Abbildung&#160;238</MadCap:xref> wurde die <span class="gui_element" style="font-weight: normal;">Isochronen-Umsteigehäufigkeit ÖV</span> als Klassifizierungskriterium gewählt. So ist leicht ersichtlich, welche Haltestellen vom Hauptbahnhof aus mit keinem, einem oder auch mehr als einem Umstieg erreichbar sind.</p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/AREA_Isochrones_PuT_KA_ClassifiedStops_IsocTransfers.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997538px;margin-bottom: 0, 9997844px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 3: ">
+            <a name="1_interaktive_auswertungen_949040047_1036777">
+            </a>
+            <a name="1_interaktive_auswertungen_949040047_87004">
+            </a>Klassifizierte Darstellung von Haltestellen auf Basis der Isochronen-Umsteigehäufigkeit</p>
+    </body>
+</html>

@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:lastBlockDepth="6" MadCap:lastHeight="691" MadCap:lastWidth="510" MadCap:ignoredWords="VorHst;EinHst;NachHst;QuellHst;ZielHst;linie;Ride;Wid;Branch;Bound;FZ;UZ;UH;Fak;timetab1;par;frueh;spaet;ΔT;gleichabständig;WID;Fzg;18min;Wid1;Wid2;P1;P2;M1;M2;A_DORF;X_STADT;UWZ;Beförd;Mittl;Bus1;$ODMATRIX;$MATRIXSINGLELISTITEM;PuT;dmd;$TIMESERIES;$TIMESERIESITEM;$VISION;VisumInst;Table;$VERSION;VERSNR;FILETYPE;LANGUAGE;UNIT;Demand;ODMATRIX;NO;CONTENT;ROUND;NUMDECPLACES;Car;HVeh;MATRIXSINGLELISTITEM;MATRIXNO;FROMZONENO;TOZONENO;VALUE;TIMESERIESDOMAINTYPE;$TIMESERIESDOMAINTYPE;DESCRIPTION;UNITYSTRING;MAXVALUE;MINVALUE;No;series;TYPENO;UNITX;NUMINTERVALS;LENGTHINTERVAL;USEVALUELIST;VALUELISTTYPE;VALUEREFTYPE;DECSEPARATOR;VALUESEPARATOR;TIMESERIESITEM;TIMESERIESNO;STARTINTERVALINDEX;ENDINTERVALINDEX;$DEMANDDESCRIPTION;DSEGCODE;DEMANDTIMESERIESNO;STARTDAYINDEX;α;ß;γ;and;MSA;export;BinaryVersionNo;byte;NumberOfFiles;ContainsFarePoints;for;each;contained;key;order;string;vgl;DefaultStringValue;SourceZoneNo;DestZoneNo;Connection;ConnectionDepartureTime;NumLegs">
+    <head>
+        <link href="../Resources/TableStyles/gui_elements1.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4>
+            <a name="1_benutzermodell_oev_2318507456_1217690">
+            </a>
+            <a name="1_benutzermodell_oev_2318507456_63393">
+            </a>Dateiformat für Verbindungsimport und -export</h4>
+        <p class="Text">Der Im- und Export von Wegen verwendet ein einheitliches Dateiformat – aufgrund der großen Datenmenge ein binäres.</p>
+        <p class="Text">Da die Umlegung relationsweise durchgeführt wird, muss auch die Verbindungsdatei in dieser Weise aufgebaut sein, das heißt, alle Verbindungen derselben Relation müssen am Stück gelesen beziehungsweise geschrieben werden, und dies in sortierter Reihenfolge gemäß den Bezirksnummern.</p>
+        <p class="Text">Übersteigt eine Verbindungsdatei die vorgegebene Größe, wird automatisch eine weitere begonnen. Die Größenbeschränkung garantiert, dass auch Verbindungsexporte mit sehr vielen Wegen (Größe &gt; 4 GB) einlesbar bleiben.</p>
+        <p class="Text">Eine Verbindungsdatei enthält folgende Daten in folgender Reihenfolge:</p>
+        <p class="StepFirst" MadCap:autonum="1. &#160;">Eine Versionsnummer, die spätere Formatänderungen ermöglicht</p>
+        <p class="Step" MadCap:autonum="2. &#160;">Anzahl Wegedateien, damit <MadCap:variable name="PTV_Manual.Programmname" /> beim Wiedereinlesen erkennt, ob und welche zusätzlichen Dateien gesucht werden müssen</p>
+        <p class="Step" MadCap:autonum="3. &#160;">Angabe, ob die Datei die Anzahl Tarifpunkte am Teilweg enthält</p>
+        <p class="Step" MadCap:autonum="4. &#160;">Level der in der Datei enthaltenen Fahrpreis-Daten (0 = keine Fahrpreise)</p>
+        <p class="Step" MadCap:autonum="5. &#160;">Angabe, ob die Datei Fahrpreise für alle Nachfragesegmente enthält</p>
+        <p class="Step" MadCap:autonum="6. &#160;">Angabe, ob die Datei Anbindungsknoten enthält</p>
+        <p class="Step" MadCap:autonum="7. &#160;">Angabe, ob die Datei Belastungen enthält. Anzahl und Schlüssel der umgelegten Nachfragesegmente, damit Belastungen und Fahrpreise beim Wiedereinlesen zuordenbar sind. Beim Verbindungsexport ohne Belastungen und ohne Fahrpreise je Nachfragesegment werden keine Nachfragesegmente geschrieben, also wird die Anzahl = 0 gesetzt.</p>
+        <p class="Step" MadCap:autonum="8. &#160;">Die Schlüssel sämtlicher ÖV-Verkehrssysteme und Fahrzeitprofile des Netzes in sortierter Reihenfolge. So muss bei den späteren (sehr zahlreichen) Referenzen auf ÖV-Verkehrssysteme oder Fahrzeitprofile nicht mehr der komplette String-Schlüssel herausgeschrieben werden, sondern der Index kann genutzt werden. Wichtig ist, dass die Gleichheit von ÖV-VSys- und Fahrzeitprofil-Angebot in Netz und Verbindungsdatei verlangt wird. Der Begriff ÖV-Verkehrssysteme umfasst alle ÖV-Linien-VSys, ÖV-Fuß-VSys und ÖV-Zusatz-VSys.</p>
+        <p class="Step" MadCap:autonum="9. &#160;">Definition der benutzerdefinierten Attribute an ÖV-Wegen</p>
+        <p class="Step" MadCap:autonum="10. &#160;">Sämtliche Verbindungen getrennt nach Relationen</p>
+        <ul>
+            <LI class="List1">Jede Verbindung besteht aus mehreren ÖV-Teilwegen.</LI>
+            <LI class="List1">Nur reine Fußwegverbindungen haben null ÖV-Teilwege.</LI>
+            <LI class="List1">Ein Teilweg ist entweder vom Typ ÖV-Linie und verbindet Fahrzeitprofil-Elemente oder vom Typ ÖV-Zusatz und verbindet Knoten.</LI>
+        </ul>
+        <h5>Beispiel: Verbindungsdatei im Binärformat</h5>
+        <pre class="Code">BinaryVersionNo (4 byte-integer)</pre>
+        <pre class="Code">NumberOfFiles (4 byte-integer)</pre>
+        <pre class="Code">ContainsFarePoints (1 byte-integer)</pre>
+        <pre class="Code">LevelOfFareInformation (1 byte-integer)//value in {0,1,2}</pre>
+        <pre class="Code">FaresForEachDemandSegment (1 byte-integer)</pre>
+        <pre class="Code">ContainsConnectorNodes (1 byte-integer)</pre>
+        <pre class="Code">ContainesVolumes (1 byte-integer)</pre>
+        <pre class="Code">NumDemandSegments (4 byte-integer)</pre>
+        <pre class="Code">for each contained DemandSegment in key order:</pre>
+        <pre class="Code">{</pre>
+        <pre class="Code">  DemandSegment.Code (string)</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code">NumPuTTSys (4 byte-integer)</pre>
+        <pre class="Code">for each contained PuTTSys in key order:</pre>
+        <pre class="Code">{</pre>
+        <pre class="Code">  TSys.Code (string)</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code">NumTimeProfiles (4 byte-integer)</pre>
+        <pre class="Code">for each contained TimeProfile in key order:</pre>
+        <pre class="Code">{</pre>
+        <pre class="Code">  Line.Name (string)</pre>
+        <pre class="Code">  LineRoute.Name (string)</pre>
+        <pre class="Code">  Direction.Code (string)</pre>
+        <pre class="Code">  TimeProfile.Name (string)</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code">NumUserDefinedAttributes (4 byte-integer)</pre>
+        <pre class="Code">for each contained UserDefinedAttribute:</pre>
+        <pre class="Code">{</pre>
+        <pre class="Code">  ID (string)</pre>
+        <pre class="Code">  ShortName (string)</pre>
+        <pre class="Code">  LongName (string)</pre>
+        <pre class="Code">  Comment (string)</pre>
+        <pre class="Code">  ValueType (4 byte-integer)</pre>
+        <pre class="Code">  HasDefaultValue (1 byte-integer)</pre>
+        <pre class="Code">  DefaultValue (8 byte-real)</pre>
+        <pre class="Code">  MinimumValue (8 byte-real)</pre>
+        <pre class="Code">  MaximumValue (8 byte-real)</pre>
+        <pre class="Code">  NumDecPlaces (4 byte-integer)</pre>
+        <pre class="Code">  MaxStringLength (4 byte-integer)</pre>
+        <pre class="Code">  DefaultStringValue (string)</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code">for each contained OD relation in key order:</pre>
+        <pre class="Code">{</pre>
+        <pre class="Code">  SourceZoneNo (4 byte-integer)</pre>
+        <pre class="Code">  DestZoneNo (4 byte-integer)</pre>
+        <pre class="Code">  for each contained Connection:</pre>
+        <pre class="Code">  {</pre>
+        <pre class="Code">    ConnectionDepartureTime (4 byte-integer)</pre>
+        <pre class="Code">    NumLegs (1 byte-integer)</pre>
+        <pre class="Code">    for each contained ConnectionLeg in logical order:</pre>
+        <pre class="Code">    {</pre>
+        <pre class="Code">      DepartureTime (4 byte-integer)</pre>
+        <pre class="Code">      LegIsPuTLine (1 byte-integer)</pre>
+        <pre class="Code">      if LegIsPuTLine</pre>
+        <pre class="Code">      {</pre>
+        <pre class="Code">        TimeProfileIndex (see above) (4 byte-integer)</pre>
+        <pre class="Code">        FromTimeProfileItem.Index (2 byte-integer)</pre>
+        <pre class="Code">        ToTimeProfileItem.Index (2 byte-integer)</pre>
+        <pre class="Code">      }</pre>
+        <pre class="Code">      else // 2nd case, leg is of type PuTAux</pre>
+        <pre class="Code">     {</pre>
+        <pre class="Code">        TSysIndex (see above) (4 byte-integer)</pre>
+        <pre class="Code">        FromNodeNo (4 byte-integer)</pre>
+        <pre class="Code">        ToNodeNo (4 byte-integer)</pre>
+        <pre class="Code">     }</pre>
+        <pre class="Code">     if ContainsFarePoints (4 byte-integer)</pre>
+        <pre class="Code">     {</pre>
+        <pre class="Code">       NumFarePoints (4 byte-integer)</pre>
+        <pre class="Code">     }</pre>
+        <pre class="Code">     if LevelOfFareInformation = 2</pre>
+        <pre class="Code">     {</pre>
+        <pre class="Code">  if(FaresForEachDemandSegment){</pre>
+        <pre class="Code"> for each contained DemandSegment in key order:</pre>
+        <pre class="Code">       {</pre>
+        <pre class="Code">        LegFare (8 byte-double)</pre>
+        <pre class="Code">       }</pre>
+        <pre class="Code">  }</pre>
+        <pre class="Code">  else {</pre>
+        <pre class="Code">       LegFare (8 byte-real)</pre>
+        <pre class="Code">  }</pre>
+        <pre class="Code">     }</pre>
+        <pre class="Code">    }</pre>
+        <pre class="Code">    for each contained DemandSegment in key order:</pre>
+        <pre class="Code">    {</pre>
+        <pre class="Code">     Volume (8 byte-double)</pre>
+        <pre class="Code">    }</pre>
+        <pre class="Code">    if LevelOfFareInformation = 1</pre>
+        <pre class="Code">    {</pre>
+        <pre class="Code"> if(FaresForEachDemandSegment){</pre>
+        <pre class="Code">        for each contained DemandSegment in key order:</pre>
+        <pre class="Code">      {</pre>
+        <pre class="Code">       ConnectionFare (8 byte-double)</pre>
+        <pre class="Code">      }</pre>
+        <pre class="Code"> }</pre>
+        <pre class="Code">  else {</pre>
+        <pre class="Code">      ConnectionFare (8 byte-real)</pre>
+        <pre class="Code">    }</pre>
+        <pre class="Code">    if ContainsConnectorNodes</pre>
+        <pre class="Code">    {</pre>
+        <pre class="Code">      FromNodeNo (4 byte-integer)</pre>
+        <pre class="Code">      ToNodeNo (4 byte-integer)</pre>
+        <pre class="Code">    }</pre>
+        <pre class="Code">	for each contained UserDefinedAttribute:</pre>
+        <pre class="Code">	{</pre>
+        <pre class="Code">	  HasValue (1 byte-integer)</pre>
+        <pre class="Code">	  if HasValue</pre>
+        <pre class="Code">	  {</pre>
+        <pre class="Code">	    Value (1 byte-integer/4 byte-integer/8 byte-double/string)</pre>
+        <pre class="Code">      }</pre>
+        <pre class="Code">	}</pre>
+        <pre class="Code">  }</pre>
+        <pre class="Code">-1 (4 byte-integer)</pre>
+        <pre class="Code">}</pre>
+        <pre class="Code">-1</pre>
+        <p class="Text">Hinsichtlich der Semantik ist Folgendes zu beachten:</p>
+        <ul>
+            <LI class="List0">Werden zwischen zwei ÖV-Teilwegen Umsteigefußwege benutzt, so sind diese nicht Bestandteil der Datei. Sie ergeben sich aus Start- und Endpunkt des Weges (jeweils Bezirk oder Haltestellenbereich) und den zulässigen Verkehrssystemen (VSysSet) der Umlegung.</LI>
+            <LI class="List0">Es findet – im Gegensatz zur internen Verbindungssuche – keine Überprüfung statt, ob die in den eingelesenen Verbindungen benutzten Fahrtabschnitte aktiv sind.</LI>
+        </ul>
+        <p class="Text">Hinsichtlich des exakten Formats ist Folgendes zu beachten:</p>
+        <ul>
+            <LI class="List0">Die Intel-Order („Little-Endian“) ist einzuhalten:</LI>
+            <LI class="List0">Es gibt kein Alignment, also werden 4+1+2 Bytes wirklich nur als 7 Bytes exportiert.</LI>
+            <LI class="List0">Strings werden wie folgt geschrieben:</LI>
+            <LI class="List1">Länge als 2 Byte-Integer</LI>
+            <LI class="List1">Zeichen als Folge von Characters (je 1 Byte)</LI>
+        </ul>
+        <p class="Text">Für benutzerdefinierte Attribute gilt Folgendes:</p>
+        <ul>
+            <LI class="List0">Die Attributwerte einer Verbindung werden in der Reihenfolge geschrieben, in der auch die Attribute im Header definiert sind.</LI>
+            <LI class="List0">Die erlaubten Werte für ValueType entsprechen denen in der COM-Dokumentation aufgeführten (vgl. in der Online-Hilfe, Teil Visum – COM&#160;&gt; Enumerations&#160;&gt; EnumValueType Enumeration). Formelattribute dürfen nicht in der Verbindungsdatei definiert werden. Die entsprechenden Datentypen sind in der untenstehenden Tabelle aufgeführt.</LI>
+        </ul>
+        <table class="TableStyle-gui_elements1" style="width: 495px;caption-side: top;mc-table-style: url('../Resources/TableStyles/gui_elements1.css');" cellspacing="0">
+            <col width="170px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="167px" class="TableStyle-gui_elements1-Column-Column1" />
+            <col width="158px" class="TableStyle-gui_elements1-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-gui_elements1-Head-Header1">
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Identifier</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadE-Column1-Header1">
+                        <p class="CellCaption">Numerischer Wert</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-HeadD-Column1-Header1">
+                        <p class="CellCaption">Datentyp</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ValueType_Int</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">1</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">4 byte-integer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ValueType_Real</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">2</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">8 byte-double</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ValueType_String</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">5</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">string</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ValueType_Duration</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">6</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">4 byte-integer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ValueType_TimePoint</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">7</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">4 byte-integer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ValueType_Filename</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">8</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">string</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ValueType_Bool</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">9</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">1 byte-integer</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ValueType_LongLength</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">12</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">8 byte-double</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">ValueType_ShortLength</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body1">
+                        <p class="CellText">13</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body1">
+                        <p class="CellText">8 byte-double</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body2">
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">ValueType_StringLong</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyE-Column1-Body2">
+                        <p class="CellText">62</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyD-Column1-Body2">
+                        <p class="CellText">string</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-gui_elements1-Body-Body1">
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">ValueType_LongDuration</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyB-Column1-Body1">
+                        <p class="CellText">165</p>
+                    </td>
+                    <td class="TableStyle-gui_elements1-BodyA-Column1-Body1">
+                        <p class="CellText">4 byte-integer</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

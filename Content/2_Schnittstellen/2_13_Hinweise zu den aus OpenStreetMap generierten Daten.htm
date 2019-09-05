@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:lastBlockDepth="6" MadCap:lastHeight="665" MadCap:lastWidth="510" MadCap:ignoredWords="TURNS;LANES;LANETURNS;CROSSWALKS;LINKID;POCKET;POCKETLENGTH;BLOCKEDVEHICLECLASSES;STOPLINEPOS;TRAFFICSIGN;DETECTORS;SCNO;PORTNO;POSOFFSET;LENGTH;AFFECTEDPTLINES;AFFECTEDVEHCLASSES;FROMLINKID;FROMLANEINDEX;TOLINK;TOLANEINDEX;BLOCKEDVEHCLASSES;LANETURNPOLY;SGNO;ORSGNO;CROSSWALK;CROSSWALKSIDE;LEFTSIDE;RIGHTSIDE;INLINKID;OUTLINKID;CHANNELIZEDTURN;CROSSWALKSIDES;PEDVOL;BIKEVOL;CONNECTORS;NODENO;DIRECTION;DRIVINGBEHAVIOUR;FROMNODENO;TONODENO;LINKTYPENO;SPEED;v0;REVERSELINK;LINKPOLY;TURNONRED;TRIANGLEISLANDLENGTH;SLO;ELO;SLOL;ELOL;CLO;FROMNODERADIUS;TONODERADIUS;SIGNALGROUPS;INTERGREENS;CYCLETIME;TIMEOFFSET;SIGNALIZATIONTYPE;Programfile;CYCLETIMEFIXED;PROGRAMNO;PROGRAMFILE;SUPPLYFILE1;SUPPLYFILE2;WTT1;GTSTART;GTSTART2;GTEND;GTEND2;RATIME;ATIME;MINGTIME;MINRTIME;ALLRED;SIGNALGROUPTYPE;FROMSGNO;TOSGNO;INTERGREEN;VEHTYPETIS;ROUTES;DEMANDS;FROMZONENO;TOZONENO;FALSE;NET;$USERATTDEF;LINEROUTE;SATURNBUSTRIPSPERHOURPCU;SATURN_V_CAP;SATURN_N;SATURN_STACKINGCAP;SATURN_LINKINDEX;SATURN_SIMULATIONLINK;SATURN_TRAVELTIMEPENALTY;SATURN_BANNED;SATURN_PRIORITY;SATURN_SATFLOW;SATURN_GAP;$NETWORK;SCALE;LEFTHANDTRAFFIC;RIGHTHANDTRAFFIC;LEFTDR;TURNTYPEDEFAULT;AUTOMATICICA;$TSYS;PrT;PuTWalk;BUSPCU;PuT;NOMADS;PCU;Walk;$DIRECTION;$NODE;nodes;NO;node;number;CONTROLTYPE;RailML®;punkt;Nodes;Ways;Edit;Way;ggf;etc">
+    <head>
+        <link href="../Resources/TableStyles/TipHint2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/TableStandard.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1301001">
+            </a>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_83149">
+            </a>Hinweise zu den aus OpenStreetMap generierten Daten</h3>
+        <p class="Text">Der OSM-Importer übernimmt je nach Konfiguration unterschiedliche Bestandteile des OSM-Datenbestandes nach <MadCap:variable name="PTV_Manual.Programmname" />. Nach <MadCap:variable name="PTV_Manual.Programmname" /> können folgende Elemente übernommen werden:</p>
+        <ul>
+            <LI class="List0">das grundlegende Streckennetz mit Knoten, Strecken, Streckenpolygonen und Abbiegern sowie diversen Attributen sowohl für das Straßennetz als auch für Schienennetze</LI>
+            <LI class="List0">die Haltestellen und Linienverläufe des ÖV, sofern gepflegt</LI>
+            <LI class="List0">punkt- und flächenhafte POIs z.B. zur Landnutzung oder zur Lage von Einrichtungen </LI>
+        </ul>
+        <p class="Text">Der OSM-Importer übernimmt das grundlegende Streckennetz mit den Attributen, die für den Aufbau eines Netzmodells relevant und verfügbar sind. Es werden Knoten, Strecken und gesperrte Abbieger in das <MadCap:variable name="PTV_Manual.Programmname" />-Netz übertragen. Ein wesentlicher Teil der Konvertierung ist dabei der Aufbau einer für <MadCap:variable name="PTV_Manual.Programmname" /> geeigneten Netztopologie, die in den OSM-Daten nicht vorhanden ist. Beispielsweise gibt es in OSM keine Unterscheidung zwischen topologischen Knoten und einfachen Stützpunkten. Zudem sind parallele Kanten zwischen zwei Knoten und sogar Schleifen möglich. Diese Besonderheiten werden beim Import durch eine geeignete Konvertierung der OSM-Daten berücksichtigt. Im Resultat erscheint nur ein Teil der ursprünglichen Nodes als Knoten und die Ways werden, falls nötig, in mehrere einzelne Strecken aufgeteilt.</p>
+        <p class="Text">Generell kann nicht vorausgesetzt werden, dass in den OSM-Daten flächendeckend bestimmte Attributwerte versorgt sind. Insbesondere solche Attribute, die nicht in der Kartendarstellung sichtbar werden, wie beispielsweise die zugelassene Höchstgeschwindigkeit, sind nur selten vorhanden. Der OSM-Importer verwendet daher für viele Attribute zunächst Standardwerte, die in der Regel über Streckentypen definiert werden. Je nach Konfiguration werden die Standardwerte dann sofern verfügbar von den konkreten Attributen für Einzelobjekte überschrieben, oder diese individuellen Werte werden lediglich in benutzerdefinierten Attributen der Strecken gespeichert. Bei Bedarf können die Standardwerte dann manuell durch Multi-Edit-Funktionen mit diesen objektspezifischen Daten überschrieben werden. </p>
+        <p class="Text">In der folgenden Tabelle ist unter <span class="gui_element">Bemerkungen</span> jeweils vermerkt, ob die Werte in der Regel direkt aus OSM oder aus dem Streckentyp entnommen werden. Die Darstellung entspricht den Ergebnissen bei Verwendung der mitgelieferten Konfigurationen. Insbesondere bei benutzerdefinierten Konfigurationen sind Abweichungen von diesem Schema möglich und es können weitere Attribute befüllt werden.</p>
+        <p class="Text">
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1296712">
+            </a>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_11610">
+            </a>
+            <a name="2_daten_ueber_schnittstellen_austauschen_1567500566_1296712">
+            </a>
+        </p>
+        <table class="TableStyle-TableStandard" style="width: 494px;caption-side: top;mc-table-style: url('../Resources/TableStyles/TableStandard.css');" cellspacing="0">
+            <col width="83px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="140px" class="TableStyle-TableStandard-Column-Column1" />
+            <col width="271px" class="TableStyle-TableStandard-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-TableStandard-Head-Header1">
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Objekttyp</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadE-Column1-Header1">
+                        <p class="CellCaption">Attribut</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-HeadD-Column1-Header1">
+                        <p class="CellCaption">Bemerkung</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Knoten</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">OSM_NODE_ID</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Original-ID des korrespondierenden OSM-Nodes</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Knoten</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">XCoord, YCoord</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Direkt aus OSM</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Strecken</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">OSM_WAY_ID</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Original-ID des korrespondierenden OSM-Ways</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Strecken</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">O2V_WAYSECIDX</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Laufende Nummer des Abschnitts auf dem korrespondierenden OSM-Way</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Strecken </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Name</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Direkt aus OSM</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Strecken </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">TypeNo</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">Direkt aus OSM</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Strecken </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">WKT (Streckenpolygon)</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">Direkt aus OSM</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Strecken </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">TSysSet</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">aus Streckentyp und in benutzerdefiniertem Attribut „O2V_TSYSSET“</p>
+                        <p class="CellText">Bei Einbahnstraßen nur für die befahrbare Richtung </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Strecken</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">CapPrT</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">aus Streckentyp</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">Strecken </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body2">
+                        <p class="CellText">NumLanes</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body2">
+                        <p class="CellText">aus Streckentyp und in benutzerdefiniertem Attribut „O2V_LANES“</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body1">
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">Strecken </p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyE-Column1-Body1">
+                        <p class="CellText">V0PrT</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyD-Column1-Body1">
+                        <p class="CellText">aus Streckentyp und in benutzerdefiniertem Attribut „O2V_MAXSPEED“</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-TableStandard-Body-Body2">
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">Abbieger</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyB-Column1-Body2">
+                        <p class="CellText">TSysSet</p>
+                    </td>
+                    <td class="TableStyle-TableStandard-BodyA-Column1-Body2">
+                        <p class="CellText">Direkt aus OSM (nur gesperrte) </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Beim Import werden in <MadCap:variable name="PTV_Manual.Programmname" /> die folgenden Schritte durchgeführt:</h5>
+        <ul>
+            <LI class="List0">Einlesen und Prüfen der Konfigurationsdateien</LI>
+            <LI class="List0">Einlesen der OSM-Dateien</LI>
+            <LI class="List0">Vorfiltern der relevanten OSM-Objekte</LI>
+            <LI class="List0">Setzen von Standardwerten für Tags (zur Verwendung in Filtern)</LI>
+            <LI class="List0">Überschreiben der Standardwerte mit konkreten Daten der Objekte, sofern vorhanden</LI>
+            <LI class="List0">Ermittlung abgeleiteter Informationen wie Befahrbarkeit durch Verkehrssysteme, Zuweisung des Streckentyps</LI>
+            <LI class="List0">ggf. Übertragung weiterer Attribute</LI>
+            <LI class="List0">Aufbereitung der Streckentopologie</LI>
+            <LI class="List0">Ermittlung von Abbiegeverboten</LI>
+            <LI class="List0">Netzdatei schreiben (konvertierte Objekte und Vorlage mit Definitionen von VSys, Streckentypen etc.)</LI>
+            <LI class="List0">Netzdatei in <MadCap:variable name="PTV_Manual.Programmname" /> einlesen</LI>
+            <LI class="List0">Nach dem Einlesen der Netzdatei in <MadCap:variable name="PTV_Manual.Programmname" /> berechnet der Importer die Gehzeiten t-ÖVSys an den Strecken. Das Streckenattribut Länge wird auf den von <MadCap:variable name="PTV_Manual.Programmname" /> berechneten Wert aus LängePoly gesetzt.</LI>
+        </ul>
+        <table style="caption-side: top;mc-table-style: url('../Resources/TableStyles/TipHint2.css');" class="TableStyle-TipHint2" cellspacing="0">
+            <col style="width: 477px;" class="TableStyle-TipHint2-Column-Column1" />
+            <tbody>
+                <tr class="TableStyle-TipHint2-Body-Body1">
+                    <td class="TableStyle-TipHint2-BodyA-Column1-Body1">
+                        <p class="Hint" MadCap:autonum="Hinweis: ">Über die Option <span class="gui_element">Die temporäre *.net Datei behalten</span> können Sie beim Import die erzeugte Netzdatei speichern <MadCap:xref href="2_13_Importprozess mit einer vordefinierten Konfiguration durchführen.htm" class="sieheUeberschrSeite">(siehe „Importprozess mit einer vordefinierten Konfiguration durchführen“ auf Seite&#160;1)</MadCap:xref>. In dieser Netzdatei sind die Gehzeiten noch nicht enthalten. Öffnen Sie diese Datei in <MadCap:variable name="PTV_Manual.Programmname" />, werden die Gehzeiten nicht nachträglich berechnet.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

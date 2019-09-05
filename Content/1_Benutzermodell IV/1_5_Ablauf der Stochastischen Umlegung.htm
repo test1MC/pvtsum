@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="Grundlagen" MadCap:lastBlockDepth="4" MadCap:lastHeight="1597" MadCap:lastWidth="688" MadCap:fileTags="MyStatusFileTagSet.DO NOT TRANSLATE" MadCap:conditions="PTV_Manual.Topic&#160;Grundlagen" MadCap:ignoredWords="ij;ijr;max;rel">
+    <head>
+        <link href="../Resources/Stylesheets/PTV_Standard.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3>
+            <a name="1_benutzermodell_iv_2033098965_1223708">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_37868">
+            </a>Ablauf der Stochastischen Umlegung</h3>
+        <p class="Text">
+            <MadCap:keyword term="Stochastische Umlegung:Ablauf" />Das Verfahren gliedert sich in eine äußere und in eine innere Iteration (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1558056">Abbildung 1</MadCap:xref>).</p>
+        <ul>
+            <LI class="List0">Die äußere (globale) Iteration mit dem Iterator <span class="formula">n</span> dient zur Routensuche. Diese Schleife wird so oft durchgeführt, bis entweder <span class="formula">n = N</span> oder bis keine neuen kürzesten Routen gefunden werden.</LI>
+            <LI class="List0">Die innere Iteration mit dem Iterator <span class="formula">m</span> dient zur Aufteilung der Belastung auf die Routen. Diese Schleife wird so oft durchgeführt, bis entweder <span class="formula">m = M</span> oder bis die Abweichungen der Widerstände auf den Netzobjekten und die Abweichung der Belastungen auf den Routen zwischen zwei Iterationsschritten sehr klein wird.</LI>
+        </ul>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Flow_Stochastic_1.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 1, 000028px;margin-bottom: 0, 9997538px;" />
+        </p>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Flow_Stochastic_2.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997538px;margin-bottom: 1, 000028px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 1: ">
+            <a name="1_benutzermodell_iv_2033098965_1558056">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_72111">
+            </a>Ablauf der Stochastischen Umlegung</p>
+        <p class="Text">Die Alternativroutensuche durch stochastische Variation der Widerstände ist eng verwandt mit anderen Verfahren zur Bestimmung k-kürzester Wege und hat mit diesen den Nachteil gemeinsam, dass oft neue Routen gefunden werden, die sich nur unwesentlich von vorherigen Routen unterscheiden. Solche Routen sind unerwünscht, da sie die Belastungssituation im Netz kaum verändern und lediglich die Routenmenge aufblähen, was zu verlängerter Rechenzeit und höherem Speicherbedarf führt. Im Rahmen der Stochastischen Umlegung wird deshalb ein Umwegtest angeboten, der eine Route <span class="formula">r</span><span class="formula_subscript">2</span> verwirft, wenn bereits eine Route <span class="formula">r</span><span class="formula_subscript">1</span> existiert, die bis auf ein Teilstück mit <span class="formula">r</span><span class="formula_subscript">2</span> übereinstimmt, und dieses Teilstück in <span class="formula">r</span><span class="formula_subscript">2</span> wesentlich länger ist als in <span class="formula">r</span><span class="formula_subscript">1</span>. Genauer gesagt, wird <span class="formula">r</span><span class="formula_subscript">2</span> gegenüber <span class="formula">r</span><span class="formula_subscript">1</span> verworfen, wenn Folgendes gilt (<MadCap:xref class="Label_Image" href="#1_benutzermodell_iv_2033098965_1225565">Abbildung 2</MadCap:xref>):</p>
+        <ul>
+            <LI class="List0">
+                <span class="formula">r</span>
+                <span class="formula_subscript">1</span> = <span class="formula">AT</span><span class="formula_subscript">1</span><span class="formula">B</span></LI>
+            <LI class="List0">
+                <span class="formula">r</span>
+                <span class="formula_subscript">2</span> = <span class="formula">AT</span><span class="formula_subscript">2</span><span class="formula">B</span></LI>
+            <LI class="List0">
+                <span class="formula">Länge</span>(<span class="formula">T</span><span class="formula_subscript">2</span>) &gt; Faktor • <span class="formula">Länge</span>(<span class="formula">T</span><span class="formula_subscript">1</span>)</LI>
+        </ul>
+        <p class="ImageOH">
+            <img src="../Resources/Images/DIAG_Alternative_Routes.png" style="margin-left: 1, 000063px;margin-top: 1, 000063px;margin-right: 0, 9997844px;margin-bottom: 1, 000059px;" />
+        </p>
+        <p class="Label_images" MadCap:autonum=" Abbildung 2: ">
+            <a name="1_benutzermodell_iv_2033098965_1225565">
+            </a>
+            <a name="1_benutzermodell_iv_2033098965_69998">
+            </a>Verwerfen von Routen</p>
+        <p class="Text">Die Teilrouten A, B können leer sein, falls sich das Teilstück am Anfang oder am Ende der Routen befindet.</p>
+    </body>
+</html>
